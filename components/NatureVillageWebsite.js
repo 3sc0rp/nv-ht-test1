@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MapPin, Phone, Clock, Star, Filter, Globe, Facebook, Instagram, Twitter, MessageCircle } from 'lucide-react';
+import { useRouter } from 'next/router';
 
 const NatureVillageWebsite = () => {
   const [currentSection, setCurrentSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [language, setLanguage] = useState('en');
   const [activeFilter, setActiveFilter] = useState('all');
+  const router = useRouter();
 
   // Language options
   const languages = {
@@ -147,7 +149,9 @@ const NatureVillageWebsite = () => {
         menu: 'Menu',
         about: 'About Us',
         gallery: 'Gallery',
-        visit: 'Visit Us'
+        visit: 'Visit Us',
+        reservations: 'Reservations',
+        catering: 'Catering'
       },
       hero: {
         title: 'Nature Village',
@@ -206,7 +210,9 @@ const NatureVillageWebsite = () => {
         menu: 'خۆراک',
         about: 'دەربارەمان',
         gallery: 'وێنەکان',
-        visit: 'سەردانمان بکەن'
+        visit: 'سەردانمان بکەن',
+        reservations: 'جێگە حیجازکردن',
+        catering: 'کاتەرینگ'
       },
       hero: {
         title: 'گوندی سروشت',
@@ -265,7 +271,9 @@ const NatureVillageWebsite = () => {
         menu: 'القائمة',
         about: 'من نحن',
         gallery: 'المعرض',
-        visit: 'زورونا'
+        visit: 'زورونا',
+        reservations: 'الحجوزات',
+        catering: 'خدمات الطعام'
       },
       hero: {
         title: 'قرية الطبيعة',
@@ -323,6 +331,16 @@ const NatureVillageWebsite = () => {
   const t = translations[language];
 
   const scrollToSection = (sectionId) => {
+    // Check if it's a page navigation
+    if (sectionId === 'reservations') {
+      router.push('/reservations');
+      return;
+    }
+    if (sectionId === 'catering') {
+      router.push('/catering');
+      return;
+    }
+
     setCurrentSection(sectionId);
     setIsMenuOpen(false);
     const element = document.getElementById(sectionId);
@@ -457,7 +475,10 @@ const NatureVillageWebsite = () => {
             >
               {t.hero.cta1}
             </button>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-amber-800 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
+            <button 
+              onClick={() => router.push('/reservations')}
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-amber-800 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105"
+            >
               {t.hero.cta2}
             </button>
           </div>
@@ -633,6 +654,50 @@ const NatureVillageWebsite = () => {
         </div>
       </section>
 
+      {/* Call to Action Section */}
+      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600" style={{ direction: languages[language].dir }}>
+        <div className="max-w-7xl mx-auto px-4 text-center text-white">
+          <h2 className="text-4xl font-serif font-bold mb-4">
+            {language === 'ar' ? 'جاهز للاستمتاع بتجربة طعام أصيلة؟' : 
+             language === 'ku' ? 'ئامادەیت بۆ تامکردنی ئەزموونی خۆراکی ڕەسەن؟' : 
+             'Ready to Experience Authentic Kurdish Flavors?'}
+          </h2>
+          <p className="text-xl mb-8 text-amber-100">
+            {language === 'ar' ? 'احجز طاولتك اليوم أو استفسر عن خدمات الطعام الخاصة بنا' : 
+             language === 'ku' ? 'ئەمڕۆ جێگەکەت حیجاز بکە یان دەربارەی کاتەرینگەکانمان پرسیار بکە' : 
+             'Book your table today or inquire about our catering services'}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
+            <button 
+              onClick={() => router.push('/reservations')}
+              className="bg-white text-amber-600 hover:bg-amber-50 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-xl flex items-center justify-center space-x-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>
+                {language === 'ar' ? 'احجز طاولة' : 
+                 language === 'ku' ? 'جێگە حیجازکردن' : 
+                 'Book a Table'}
+              </span>
+            </button>
+            <button 
+              onClick={() => router.push('/catering')}
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-amber-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 flex items-center justify-center space-x-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span>
+                {language === 'ar' ? 'خدمات الطعام' : 
+                 language === 'ku' ? 'کاتەرینگ' : 
+                 'Catering Services'}
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Visit Us Section */}
       <section id="visit" className="py-20 bg-white" style={{ direction: languages[language].dir }}>
         <div className="max-w-7xl mx-auto px-4">
@@ -722,11 +787,19 @@ const NatureVillageWebsite = () => {
               </div>
 
               <div className="flex space-x-4">
-                <button className="flex-1 bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
+                <button 
+                  onClick={() => {
+                    window.open('https://wa.me/15551234567', '_blank');
+                  }}
+                  className="flex-1 bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+                >
                   <MessageCircle className="w-5 h-5" />
                   <span>{t.visit.whatsappUs}</span>
                 </button>
-                <button className="flex-1 bg-amber-600 hover:bg-amber-700 text-white py-4 px-6 rounded-lg font-semibold transition-colors">
+                <button 
+                  onClick={() => router.push('/reservations')}
+                  className="flex-1 bg-amber-600 hover:bg-amber-700 text-white py-4 px-6 rounded-lg font-semibold transition-colors"
+                >
                   {t.visit.makeReservation}
                 </button>
               </div>
@@ -821,15 +894,52 @@ const NatureVillageWebsite = () => {
               <div className="text-amber-200 text-sm">
                 {t.footer.poweredBy} <span className="font-semibold text-white">Blunari</span> & MenuIQ
               </div>
+              {/* Admin Link - Hidden */}
+              <button 
+                onClick={() => router.push('/admin')}
+                className="text-amber-800 hover:text-amber-600 text-xs opacity-50 hover:opacity-100 transition-opacity"
+                title="Admin Access"
+              >
+                •
+              </button>
             </div>
           </div>
         </div>
       </footer>
 
-      {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 right-6 z-40">
-        <button className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all transform hover:scale-110">
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
+        {/* WhatsApp Button */}
+        <button 
+          onClick={() => {
+            window.open('https://wa.me/15551234567', '_blank');
+          }}
+          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all transform hover:scale-110"
+          title="WhatsApp"
+        >
           <MessageCircle className="w-6 h-6" />
+        </button>
+        
+        {/* Reservations Button */}
+        <button 
+          onClick={() => router.push('/reservations')}
+          className="bg-amber-600 hover:bg-amber-700 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all transform hover:scale-110"
+          title="Make Reservation"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </button>
+        
+        {/* Catering Button */}
+        <button 
+          onClick={() => router.push('/catering')}
+          className="bg-purple-600 hover:bg-purple-700 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all transform hover:scale-110"
+          title="Catering Services"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
         </button>
       </div>
     </div>
