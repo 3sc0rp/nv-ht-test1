@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://naturevillage.vercel.app/sitemap.xml
+
+# Disallow admin paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow important pages
+Allow: /
+Allow: /menu
+Allow: /about  
+Allow: /gallery
+Allow: /contact
