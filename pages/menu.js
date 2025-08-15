@@ -17,24 +17,32 @@ const FullMenuPage = () => {
   }
 
   const translations = {
-    en: { title: 'Full Menu', subtitle: 'Explore all our dishes powered by MenuIQ', filters: { all: 'All Items', traditional: 'Traditional', vegan: 'Vegan & Vegetarian', soup: 'Soups', dessert: 'Desserts', popular: 'Most Popular' } },
-    ku: { title: 'هەموو خۆراکەکان', subtitle: 'هه‌موو خۆراكه‌كانمان ببینە به‌ MenuIQ', filters: { all: 'هەموو', traditional: 'نەریتی', vegan: 'ڕووەکی و ڤێگان', soup: 'شۆربە', dessert: 'شیرینی', popular: 'بەناوبانگترین' } },
-    ar: { title: 'القائمة الكاملة', subtitle: 'استكشف جميع أطباقنا مدعومة بـ MenuIQ', filters: { all: 'الكل', traditional: 'تقليدي', vegan: 'نباتي ونباتي صرف', soup: 'شوربات', dessert: 'حلويات', popular: 'الأكثر شهرة' } },
-    fa: { title: 'منوی کامل', subtitle: 'همه غذاهای ما با MenuIQ', filters: { all: 'همه موارد', traditional: 'سنتی', vegan: 'گیاهی و وجترین', soup: 'سوپ‌ها', dessert: 'دسرها', popular: 'محبوب‌ترین' } },
-    tr: { title: 'Tam Menü', subtitle: 'Tüm yemeklerimiz MenuIQ ile', filters: { all: 'Tümü', traditional: 'Geleneksel', vegan: 'Vegan & Vejetaryen', soup: 'Çorbalar', dessert: 'Tatlılar', popular: 'En Popüler' } },
-    ur: { title: 'مکمل مینیو', subtitle: 'تمام ڈشز MenuIQ کے ساتھ', filters: { all: 'سب', traditional: 'روایتی', vegan: 'ویگن و ویجیٹرین', soup: 'سوپس', dessert: 'میٹھائیاں', popular: 'سب سے مقبول' } },
-    kmr: { title: 'Hemû Menû', subtitle: 'Hemû xwarinên me bi MenuIQ', filters: { all: 'Hemû', traditional: 'Kevnebûyî', vegan: 'Vegan û Wejetaryen', soup: 'Şorbeyên', dessert: 'Şîrînî', popular: 'Herî Bilind' } }
+    en: { title: 'Full Menu', subtitle: 'Explore all our dishes powered by MenuIQ', filters: { all: 'All Items', appetizers: 'Appetizers', salads: 'Salads', traditional: 'Traditional', vegan: 'Vegan & Vegetarian', soup: 'Soups', dessert: 'Desserts', popular: 'Most Popular' } },
+    ku: { title: 'هەموو خۆراکەکان', subtitle: 'هه‌موو خۆراكه‌كانمان ببینە به‌ MenuIQ', filters: { all: 'هەموو', appetizers: 'خۆراکی پێش‌خواردن', salads: 'لەواشەکان', traditional: 'نەریتی', vegan: 'ڕووەکی و ڤێگان', soup: 'شۆربە', dessert: 'شیرینی', popular: 'بەناوبانگترین' } },
+    ar: { title: 'القائمة الكاملة', subtitle: 'استكشف جميع أطباقنا مدعومة بـ MenuIQ', filters: { all: 'الكل', appetizers: 'مقبلات', salads: 'سلطات', traditional: 'تقليدي', vegan: 'نباتي ونباتي صرف', soup: 'شوربات', dessert: 'حلويات', popular: 'الأكثر شهرة' } },
+    fa: { title: 'منوی کامل', subtitle: 'همه غذاهای ما با MenuIQ', filters: { all: 'همه موارد', appetizers: 'پیش‌غذاها', salads: 'سالادها', traditional: 'سنتی', vegan: 'گیاهی و وجترین', soup: 'سوپ‌ها', dessert: 'دسرها', popular: 'محبوب‌ترین' } },
+    tr: { title: 'Tam Menü', subtitle: 'Tüm yemeklerimiz MenuIQ ile', filters: { all: 'Tümü', appetizers: 'Başlangıçlar', salads: 'Salatalar', traditional: 'Geleneksel', vegan: 'Vegan & Vejetaryen', soup: 'Çorbalar', dessert: 'Tatlılar', popular: 'En Popüler' } },
+    ur: { title: 'مکمل مینیو', subtitle: 'تمام ڈشز MenuIQ کے ساتھ', filters: { all: 'سب', appetizers: 'سٹارٹرز', salads: 'سلادز', traditional: 'روایتی', vegan: 'ویگن و ویجیٹرین', soup: 'سوپس', dessert: 'میٹھائیاں', popular: 'سب سے مقبول' } },
+    kmr: { title: 'Hemû Menû', subtitle: 'Hemû xwarinên me bi MenuIQ', filters: { all: 'Hemû', appetizers: 'Destpêk', salads: 'Salatan', traditional: 'Kevnebûyî', vegan: 'Vegan û Wejetaryen', soup: 'Şorbeyên', dessert: 'Şîrînî', popular: 'Herî Bilind' } }
   }
   const t = translations[language] || translations.en
   const getText = (obj) => (obj && (obj[language] || obj.en)) || ''
 
   const menuItems = [
-    { id: 1, name: { en: 'Kebab-e Kubideh', ku: 'کەباب کوبیده', ar: 'كباب كوبيده' }, description: { en: 'Traditional ground lamb kebab with aromatic spices, served with basmati rice and grilled tomatoes', ku: 'کەبابی نەریتی لە گۆشتی بەرخی هاڕاو لەگەڵ بۆنوبێرینی جۆراوجۆر، لەگەڵ برنجی باسماتی و تەماتەی برژاو', ar: 'كباب لحم الخروف المفروم التقليدي مع التوابل العطرة، يُقدم مع أرز البسمتي والطماطم المشوية' }, price: '$18.99', category: 'traditional', popular: true, image: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=300&h=200&fit=crop', tags: ['spicy', 'grilled'] },
-    { id: 2, name: { en: 'Dolma', ku: 'دۆڵمە', ar: 'دولمة' }, description: { en: 'Grape leaves stuffed with rice, herbs, and spices - a Kurdish family recipe', ku: 'گەڵای مێو پڕکراو لە برنج و ڕووەک و بۆنوبێرین - ڕیسەتی خێزانی کوردی', ar: 'أوراق العنب محشوة بالأرز والأعشاب والتوابل - وصفة عائلية كردية' }, price: '$14.99', category: 'vegan', popular: false, image: 'https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?w=300&h=200&fit=crop', tags: ['vegetarian', 'traditional'] },
-    { id: 3, name: { en: 'Yaprakh', ku: 'یاپراخ', ar: 'يبرق' }, description: { en: 'Cabbage rolls filled with rice, meat, and Kurdish spices in tomato sauce', ku: 'لەتی کەلەرم پڕکراو لە برنج و گۆشت و بۆنوبێرینی کوردی لە سۆسی تەماتە', ar: 'لفائف الملفوف محشوة بالأرز واللحم والتوابل الكردية في صلصة الطماطم' }, price: '$16.99', category: 'traditional', popular: true, image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=300&h=200&fit=crop', tags: ['comfort food'] },
-    { id: 4, name: { en: 'Ash-e Reshteh', ku: 'ئاشی ڕەشتە', ar: 'آش رشتة' }, description: { en: 'Hearty Kurdish noodle soup with beans, herbs, and yogurt', ku: 'شۆربای ڕەشتەی کوردی لەگەڵ لۆبیا و ڕووەک و ماست', ar: 'حساء الشعيرية الكردي المغذي مع الفاصولياء والأعشاب واللبن' }, price: '$12.99', category: 'soup', popular: false, image: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=300&h=200&fit=crop', tags: ['soup', 'comfort food'] },
-    { id: 5, name: { en: 'Khorak-e Bademjan', ku: 'خۆراکی بادەمجان', ar: 'خوراك الباذنجان' }, description: { en: 'Slow-cooked eggplant stew with tomatoes and Kurdish herbs', ku: 'خۆراکی بادەمجانی هێواش لێنراو لەگەڵ تەماتە و ڕووەکی کوردی', ar: 'يخنة الباذنجان المطبوخة ببطء مع الطماطم والأعشاب الكردية' }, price: '$15.99', category: 'vegan', popular: true, image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop', tags: ['vegan', 'stew'] },
-    { id: 6, name: { en: 'Baklava Kurdistan', ku: 'بەقڵاوای کوردستان', ar: 'بقلاوة كردستان' }, description: { en: 'Traditional Kurdish baklava with pistachios and rose water', ku: 'بەقڵاوای نەریتی کوردی لەگەڵ فستق و ئاوی گوڵ', ar: 'بقلاوة كردية تقليدية بالفستق وماء الورد' }, price: '$8.99', category: 'dessert', popular: true, image: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=300&h=200&fit=crop', tags: ['sweet', 'traditional'] }
+    // Appetizers
+    { id: 1001, name: { en: 'Hummus' }, description: { en: 'A classic Middle Eastern dip made from mashed chickpeas, tahini, olive oil, lemon juice, and garlic.' }, price: '$8.50', category: 'appetizers', popular: true, image: 'https://images.unsplash.com/photo-1604908176997-4319b0600b3a?w=300&h=200&fit=crop', tags: ['vegetarian', 'vegan'] },
+    { id: 1002, name: { en: 'Baba Ghanoush' }, description: { en: 'A Kurdish dip made from roasted eggplant, roasted tomatoes, peppers, fresh onions, parsley, mint, and pomegranate molasses dressing.' }, price: '$8.50', category: 'appetizers', popular: true, image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=300&h=200&fit=crop', tags: ['vegetarian', 'vegan'] },
+    { id: 1003, name: { en: 'Cool Bulgur Garden' }, description: { en: 'A light and nutritious dip made with yogurt, bulgur, tahini, lemon juice, and lettuce.' }, price: '$8.50', category: 'appetizers', popular: false, image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=300&h=200&fit=crop', tags: ['vegetarian'] },
+    { id: 1004, name: { en: 'Kibbeh' }, description: { en: 'A Middle Eastern classic with a crispy outer shell made from finely ground rice and spices, encasing a flavorful minced meat filling. Fried to perfection.' }, price: '$9.99', category: 'appetizers', popular: true, image: 'https://images.unsplash.com/photo-1604908554027-8f9e0d5302c0?w=300&h=200&fit=crop', tags: ['fried'] },
+    { id: 1005, name: { en: 'Falafels' }, description: { en: 'Chickpea patties seasoned with aromatic spices and fried to a golden, crispy exterior. Served with fresh greens and a drizzle of olive oil.' }, price: '$9.99', category: 'appetizers', popular: false, image: 'https://images.unsplash.com/photo-1542834369-f10ebf06d3cb?w=300&h=200&fit=crop', tags: ['vegetarian', 'vegan'] },
+    { id: 1006, name: { en: "Nature's Blend" }, description: { en: 'A fresh dip made with avocados, fresh thyme, walnuts, mint, and olive oil.' }, price: '$8.99', category: 'appetizers', popular: false, image: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=300&h=200&fit=crop', tags: ['vegetarian'] },
+    { id: 1007, name: { en: 'Borek' }, description: { en: 'Handmade beef börek crafted with a rich filling and served with a special sauce. Crispy pastry with unforgettable taste.' }, price: '$9.99', category: 'appetizers', popular: false, image: 'https://images.unsplash.com/photo-1514512364185-4c77e1f9cf3a?w=300&h=200&fit=crop', tags: [] },
+    { id: 1008, name: { en: 'Appetizers Combo' }, description: { en: 'A platter of four beloved mezze flavors from the Middle East, with delicious falafel pastries. Elegant presentation and aromas.' }, price: '$25.99', category: 'appetizers', popular: true, image: 'https://images.unsplash.com/photo-1543339318-b43dc53d1d9d?w=300&h=200&fit=crop', tags: [] },
+    // Salads
+    { id: 1101, name: { en: 'Greek Salad' }, description: { en: 'Tomatoes, cucumbers, green peppers, onions, olives, feta cheese, mixed greens, and olive oil.' }, price: '$13.99', category: 'salads', popular: true, image: 'https://images.unsplash.com/photo-1569058242567-93de6f168329?w=300&h=200&fit=crop', tags: ['vegetarian'], addOns: { title: 'Add Protein', options: [ { name: 'Beef', price: '$7.99' }, { name: 'Chicken', price: '$6.99' }, { name: 'Falafel', price: '$4.99' }, { name: 'Shrimp', price: '$5.99' } ] } },
+    { id: 1102, name: { en: 'Fattoush Salad' }, description: { en: 'Lettuce, tomatoes, cucumbers, green peppers, fresh mint, parsley, crispy pita bread, and pomegranate molasses dressing.' }, price: '$13.99', category: 'salads', popular: false, image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=300&h=200&fit=crop', tags: ['vegetarian'], addOns: { title: 'Add Protein', options: [ { name: 'Beef', price: '$7.99' }, { name: 'Chicken', price: '$6.99' }, { name: 'Falafel', price: '$4.99' }, { name: 'Shrimp', price: '$5.99' } ] } },
+    { id: 1103, name: { en: 'Shwan Salad' }, description: { en: 'Tomatoes, cucumbers, green peppers, onions, parsley, walnuts, olive oil and lemon juice.' }, price: '$13.99', category: 'salads', popular: false, image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop', tags: ['vegetarian'], addOns: { title: 'Add Protein', options: [ { name: 'Beef', price: '$7.99' }, { name: 'Chicken', price: '$6.99' }, { name: 'Falafel', price: '$4.99' }, { name: 'Shrimp', price: '$5.99' } ] } },
+    { id: 1104, name: { en: 'Suwanee Salad' }, description: { en: 'Boiled beets, tomatoes, bell peppers, cucumber, onions, and seasonal fruits. Colorful and refreshing.' }, price: '$14.99', category: 'salads', popular: false, image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=300&h=200&fit=crop', tags: ['vegetarian'], addOns: { title: 'Add Protein', options: [ { name: 'Beef', price: '$7.99' }, { name: 'Chicken', price: '$6.99' }, { name: 'Falafel', price: '$4.99' }, { name: 'Shrimp', price: '$5.99' } ] } },
   ]
 
   const filteredMenuItems = activeFilter === 'all'
@@ -101,6 +109,18 @@ const FullMenuPage = () => {
                       <span className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-xs">{t.filters.popular}</span>
                     )}
                   </div>
+                  {item.addOns && (
+                    <div className="mt-3 text-sm">
+                      <div className="font-semibold text-amber-800 mb-1">{item.addOns.title}</div>
+                      <div className={`flex flex-wrap gap-2 ${isRTL ? 'justify-end' : 'justify-start'}`}>
+                        {item.addOns.options.map((opt, idx) => (
+                          <span key={idx} className="bg-amber-50 text-amber-700 border border-amber-200 px-2 py-1 rounded-full">
+                            {opt.name} {opt.price}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
