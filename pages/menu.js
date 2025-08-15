@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { Filter } from 'lucide-react'
+import { useRouter } from 'next/router'
 
 const FullMenuPage = () => {
+  const router = useRouter()
   const [language, setLanguage] = useState('en')
   const [activeFilter, setActiveFilter] = useState('all')
 
@@ -26,6 +28,26 @@ const FullMenuPage = () => {
     kmr: { title: 'Hemû Menû', subtitle: 'Hemû xwarinên me bi MenuIQ', filters: { all: 'Hemû', appetizers: 'Destpêk', salads: 'Salatan', sandwich_platter: 'Sandwîç û Plater', naan: 'Nan', pizza: 'Pizza', fish: 'Masî', grill: 'Platerên Grill', specialty: 'Xwarinên Taybet', kids: 'Menûya Zarokan', drinks_cold: 'Vexwarin (Sarî)', drinks_hot: 'Vexwarin (Germ)', soup: 'Şorbeyên', dessert: 'Şîrînî', popular: 'Herî Bilind' } }
   }
   const t = translations[language] || translations.en
+  // Sync language with query param (?lang=xx) and propagate changes sitewide
+  useEffect(() => {
+    const qpLang = typeof router.query.lang === 'string' ? router.query.lang : undefined
+    if (qpLang && languages[qpLang]) {
+      setLanguage(qpLang)
+      document.documentElement.setAttribute('dir', languages[qpLang].dir)
+      document.documentElement.lang = qpLang
+    } else {
+      document.documentElement.setAttribute('dir', languages[language].dir)
+      document.documentElement.lang = language
+    }
+  }, [router.query.lang])
+
+  const handleLanguageChange = (next) => {
+    setLanguage(next)
+    document.documentElement.setAttribute('dir', languages[next].dir)
+    document.documentElement.lang = next
+    const url = { pathname: router.pathname, query: { ...router.query, lang: next } }
+    router.replace(url, undefined, { shallow: true })
+  }
   // Fallback name translations by English key → localized value
   const NAME_TRANSLATIONS = {
     ar: {
@@ -326,7 +348,7 @@ const FullMenuPage = () => {
             <div className="relative">
               <select
                 value={language}
-                onChange={(e) => setLanguage(e.target.value)}
+                onChange={(e) => handleLanguageChange(e.target.value)}
                 className={`appearance-none bg-white text-amber-800 border border-amber-200 rounded-md px-3 py-2 ${isRTL ? 'pl-8 pr-3' : 'pr-8'}`}
                 style={dirStyle}
               >
