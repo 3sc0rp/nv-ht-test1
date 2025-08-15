@@ -6,7 +6,7 @@ const NatureVillageWebsite = () => {
   const [currentSection, setCurrentSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [language, setLanguage] = useState('en');
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState('popular');
   const router = useRouter();
 
   // Language options
@@ -340,6 +340,10 @@ const NatureVillageWebsite = () => {
       router.push('/catering');
       return;
     }
+    if (sectionId === 'menu') {
+      router.push('/menu');
+      return;
+    }
 
     setCurrentSection(sectionId);
     setIsMenuOpen(false);
@@ -529,22 +533,29 @@ const NatureVillageWebsite = () => {
             <div className="w-24 h-1 bg-amber-600 mx-auto"></div>
           </div>
 
-          {/* Menu Filters */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {Object.entries(t.menu.filters).map(([key, label]) => (
-              <button
-                key={key}
-                onClick={() => setActiveFilter(key)}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all ${
-                  activeFilter === key
-                    ? 'bg-amber-600 text-white shadow-lg'
-                    : 'bg-white text-amber-800 hover:bg-amber-100'
-                }`}
-              >
-                <Filter className="w-4 h-4 inline mr-2" />
-                {label}
-              </button>
-            ))}
+          {/* Menu Filters (Only Most Popular on Homepage) */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <button
+              onClick={() => setActiveFilter('popular')}
+              className={`px-6 py-3 rounded-full text-sm font-medium transition-all ${
+                activeFilter === 'popular'
+                  ? 'bg-amber-600 text-white shadow-lg'
+                  : 'bg-white text-amber-800 hover:bg-amber-100'
+              }`}
+            >
+              <Filter className="w-4 h-4 inline mr-2" />
+              {t.menu.filters.popular}
+            </button>
+          </div>
+
+          {/* View Full Menu Button */}
+          <div className="text-center mb-12">
+            <button
+              onClick={() => router.push('/menu')}
+              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg text-sm font-semibold transition-colors"
+            >
+              {language === 'ar' ? 'عرض القائمة الكاملة' : language === 'ku' ? 'بینینی هەموو خۆراکەکان' : 'View Full Menu'}
+            </button>
           </div>
 
           {/* Menu Grid */}
