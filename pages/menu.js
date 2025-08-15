@@ -273,85 +273,6 @@ const FullMenuPage = () => {
       tags: ['vegetarian', 'vegan'] 
     },
     { 
-      id: 1003, 
-      name: { 
-        en: 'Cool Bulgur Garden',
-        ar: 'سلطة البرغل بالبن',
-        fa: 'باغ بلغور خنک',
-        ku: 'باخی بولگوری سارد',
-        tr: 'Serinletici Bulgur Bahçesi',
-        ur: 'ٹھنڈا بلغور باغ',
-        kmr: 'Baxça Bulgura Sar'
-      }, 
-      description: { 
-        en: 'A light and nutritious dip made with yogurt, bulgur, tahini, lemon juice, and lettuce.',
-        ar: 'غموس خفيف ومغذي مصنوع من اللبن والبرغل والطحينة وعصير الليمون والخس.',
-        fa: 'یک دیپ سبک و مغذی از ماست، بلغور، طحینی، آب لیمو و کاهو.',
-        ku: 'دیپێکی سووک و خۆراکی لە ماست، بولگور، تەحینی، شیری لیمۆ و کاهو.',
-        tr: 'Yoğurt, bulgur, tahin, limon suyu ve maruldan yapılan hafif ve besleyici bir meze.',
-        ur: 'دہی، بلغور، تل کا پیسٹ، لیموں کا رس اور سلاد سے بنا ہلکا اور غذائیت سے بھرپور ڈپ۔',
-        kmr: 'Mezeyeke sivik û xwarina ku ji mastê, bulgur, tahînî, ava lîmonê û kahuyê tê çêkirin.'
-      }, 
-      price: '$8.50', 
-      category: 'appetizers', 
-      popular: false, 
-      image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=300&h=200&fit=crop', 
-      tags: ['vegetarian'] 
-    },
-    { 
-      id: 1004, 
-      name: { 
-        en: 'Kibbeh',
-        ar: 'كبة',
-        fa: 'کبه',
-        ku: 'کوبە',
-        tr: 'İçli Köfte',
-        ur: 'کبی',
-        kmr: 'Kibê'
-      }, 
-      description: { 
-        en: 'A Middle Eastern classic with a crispy outer shell made from finely ground rice and spices, encasing a flavorful minced meat filling. Fried to perfection.',
-        ar: 'طبق شرق أوسطي كلاسيكي بقشرة خارجية مقرمشة مصنوعة من الأرز المطحون ناعماً والتوابل، تحتوي على حشوة لحم مفروم لذيذة. مقلية إلى الكمال.',
-        fa: 'یک کلاسیک خاورمیانه‌ای با پوسته بیرونی ترد از برنج نرم آسیاب شده و ادویه‌جات، حاوی گوشت چرخ کرده طعم‌دار. به کمال سرخ شده.',
-        ku: 'کلاسیکێکی ڕۆژهەڵاتی ناوەڕاست بە قەڵفێکی دەرەوەی ترسکە لە برنجی ورد کراو و بەهارات، پڕ لە گۆشتی هاڕاو بە تام. بە تەواوی سووتراو.',
-        tr: 'İnce çekilmiş pirinç ve baharatlardan yapılan çıtır dış kabuğu olan, içinde lezzetli kıyma dolgulu Orta Doğu klasiği. Mükemmel kızartılmış.',
-        ur: 'باریک پسے چاول اور مصالحوں سے بنے کرکرے باہری خول کے ساتھ مشرق وسطیٰ کا کلاسک، جس میں لذیذ قیمہ کی فلنگ ہے۔ مکمل طور پر تلا ہوا۔',
-        kmr: 'Klasîkeke Rojhilatê Navîn a ku qişra derveyî ya çitir ji brincê hindir hatî û baharatan çêkirî, dagirê tijahiya goştê hêşkirî ya xweştam e. Bi temamî sorkirî.'
-      }, 
-      price: '$9.99', 
-      category: 'appetizers', 
-      popular: true, 
-      image: 'https://images.unsplash.com/photo-1604908554027-8f9e0d5302c0?w=300&h=200&fit=crop', 
-      tags: ['fried'] 
-    },
-    { 
-      id: 1005, 
-      name: { 
-        en: 'Falafels',
-        ar: 'فلافل',
-        fa: 'فلافل',
-        ku: 'فەلەفڵ',
-        tr: 'Falafel',
-        ur: 'فلافل',
-        kmr: 'Falafel'
-      }, 
-      description: { 
-        en: 'Chickpea patties seasoned with aromatic spices and fried to a golden, crispy exterior. Served with fresh greens and a drizzle of olive oil.',
-        ar: 'كرات الحمص المتبلة بالتوابل العطرية والمقلية حتى تصبح ذهبية ومقرمشة من الخارج. تُقدم مع الخضروات الطازجة ورذاذ من زيت الزيتون.',
-        fa: 'کوفته‌های نخود چاشنی شده با ادویه‌جات معطر و سرخ شده تا بیرون طلایی و ترد شود. با سبزیجات تازه و کمی روغن زیتون سرو می‌شود.',
-        ku: 'کێکی نۆک بە بەهاراتی بۆنخۆش و سووتراو تا ببێتە زێڕین و ترسکە لە دەرەوە. لەگەڵ سەوزەی تازە و دڵۆپەی زەیتی زەیتوون دەخرێتە سەر.',
-        tr: 'Aromatik baharatlarla baharatlanmış ve altın sarısı, çıtır bir dış yüzey elde edene kadar kızartılmış nohut köftesi. Taze yeşillikler ve zeytinyağı çiselemeleri ile servis edilir.',
-        ur: 'خوشبودار مصالحوں سے سیزن کیے گئے چنے کے کٹلٹ جو سنہری، کرکرے بیرونی حصے تک تلے گئے ہیں۔ تازہ سبزیوں اور زیتون کے تیل کے ساتھ پیش کیا جاتا ہے۔',
-        kmr: 'Kofteyên kurskotên bi baharatên bêhnxweş hatine amade kirin û heta ku derve zêrî û çitir bibin sorkirine. Bi sebzeyên taze û zeyta zeytûnê tê pêşkêşkirin.'
-      }, 
-      price: '$9.99', 
-      category: 'appetizers', 
-      popular: false, 
-      image: 'https://images.unsplash.com/photo-1542834369-f10ebf06d3cb?w=300&h=200&fit=crop', 
-      tags: ['vegetarian', 'vegan'] 
-    },
-    // Greek Salad
-    { 
       id: 1101, 
       name: { 
         en: 'Greek Salad',
@@ -394,7 +315,6 @@ const FullMenuPage = () => {
         ] 
       } 
     },
-    // Masgouf
     { 
       id: 1601, 
       name: { 
@@ -424,7 +344,6 @@ const FullMenuPage = () => {
       image: 'https://images.unsplash.com/photo-1553621042-f6e147245754?w=300&h=200&fit=crop', 
       tags: [] 
     },
-    // Margherita Pizza
     { 
       id: 1501, 
       name: { 
@@ -451,7 +370,6 @@ const FullMenuPage = () => {
       image: 'https://images.unsplash.com/photo-1548365328-9f547fb0953b?w=300&h=200&fit=crop', 
       tags: [] 
     },
-    // Baklava
     { 
       id: 2201, 
       name: { 
@@ -478,7 +396,6 @@ const FullMenuPage = () => {
       image: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=300&h=200&fit=crop', 
       tags: ['sweet', 'traditional'] 
     },
-    // Water
     { 
       id: 2001, 
       name: { 
@@ -496,7 +413,6 @@ const FullMenuPage = () => {
       image: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=300&h=200&fit=crop', 
       tags: [] 
     },
-    // Arabic Coffee
     { 
       id: 2101, 
       name: { 
@@ -529,7 +445,7 @@ const FullMenuPage = () => {
       document.documentElement.setAttribute('dir', languages[language].dir)
       document.documentElement.lang = language
     }
-  }, [router.query.lang])
+  }, [router.query.lang, language])
 
   const handleLanguageChange = (next) => {
     setLanguage(next)
@@ -554,6 +470,76 @@ const FullMenuPage = () => {
     return fallbackKey || ''
   }
 
+  const getTagTranslation = (tag) => {
+    const tagTranslations = {
+      vegetarian: {
+        en: '🌱 Vegetarian',
+        ar: '🌱 نباتي',
+        fa: '🌱 گیاهی',
+        ku: '🌱 ڕووەکی',
+        tr: '🌱 Vejetaryen',
+        ur: '🌱 سبزی خور',
+        kmr: '🌱 Nebatî'
+      },
+      vegan: {
+        en: '🌿 Vegan',
+        ar: '🌿 نباتي صرف',
+        fa: '🌿 وگان',
+        ku: '🌿 ڕووەکی ڕەها',
+        tr: '🌿 Vegan',
+        ur: '🌿 ویگن',
+        kmr: '🌿 Vegan'
+      },
+      spicy: {
+        en: '🌶️ Spicy',
+        ar: '🌶️ حار',
+        fa: '🌶️ تند',
+        ku: '🌶️ تیژ',
+        tr: '🌶️ Acılı',
+        ur: '🌶️ تیز',
+        kmr: '🌶️ Tûj'
+      },
+      sweet: {
+        en: '🍯 Sweet',
+        ar: '🍯 حلو',
+        fa: '🍯 شیرین',
+        ku: '🍯 شیرین',
+        tr: '🍯 Tatlı',
+        ur: '🍯 میٹھا',
+        kmr: '🍯 Şîrîn'
+      },
+      traditional: {
+        en: '🏛️ Traditional',
+        ar: '🏛️ تقليدي',
+        fa: '🏛️ سنتی',
+        ku: '🏛️ نەریتی',
+        tr: '🏛️ Geleneksel',
+        ur: '🏛️ روایتی',
+        kmr: '🏛️ Kevneşopî'
+      },
+      grilled: {
+        en: '🔥 Grilled',
+        ar: '🔥 مشوي',
+        fa: '🔥 کبابی',
+        ku: '🔥 برژاو',
+        tr: '🔥 Izgara',
+        ur: '🔥 گرل شدہ',
+        kmr: '🔥 Şewitî'
+      },
+      fried: {
+        en: '🍳 Fried',
+        ar: '🍳 مقلي',
+        fa: '🍳 سرخ شده',
+        ku: '🍳 سووتراو',
+        tr: '🍳 Kızartılmış',
+        ur: '🍳 تلا ہوا',
+        kmr: '🍳 Sorkirî'
+      }
+    }
+    
+    return tagTranslations[tag] ? getText(tagTranslations[tag]) : tag
+  }
+
   const filteredMenuItems = activeFilter === 'all'
     ? menuItems
     : activeFilter === 'popular'
@@ -569,62 +555,117 @@ const FullMenuPage = () => {
         <title>Nature Village - {t.title}</title>
         <meta name="description" content={t.subtitle} />
       </Head>
-      <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50" style={dirStyle}>
-        <div className="max-w-7xl mx-auto px-4 pt-24">
-          <div className={`flex ${isRTL ? 'flex-row-reverse' : 'flex-row'} justify-between items-center mb-8`}>
-            <div>
-              <h1 className="text-4xl font-serif font-bold text-amber-800">{t.title}</h1>
-              <p className="text-amber-700 mt-2">{t.subtitle}</p>
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100" style={dirStyle}>
+        {/* Decorative header pattern */}
+        <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-br from-amber-100/30 to-orange-100/30 opacity-50">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f59e0b' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 pt-24">
+          {/* Enhanced Header */}
+          <div className={`flex ${isRTL ? 'flex-row-reverse' : 'flex-row'} justify-between items-center mb-12`}>
+            <div className="space-y-2">
+              <h1 className="text-5xl font-serif font-bold bg-gradient-to-r from-amber-800 to-orange-700 bg-clip-text text-transparent">
+                {t.title}
+              </h1>
+              <p className="text-amber-700 text-lg max-w-2xl leading-relaxed">{t.subtitle}</p>
+              <div className={`flex items-center ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'} text-amber-600`}>
+                <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium">
+                  {language === 'ar' ? 'قائمة محدثة مباشرة' :
+                   language === 'fa' ? 'منوی به‌روزرسانی زنده' :
+                   language === 'ku' ? 'مێنیوی نوێکراوەی ڕاستەوخۆ' :
+                   language === 'tr' ? 'Canlı güncellenmiş menü' :
+                   language === 'ur' ? 'براہ راست اپڈیٹ شدہ مینو' :
+                   language === 'kmr' ? 'Menuya nûkirî ya zindî' :
+                   'Live updated menu'}
+                </span>
+              </div>
             </div>
-            <div className="relative">
+            
+            {/* Enhanced Language Selector */}
+            <div className="relative group">
               <select
                 value={language}
                 onChange={(e) => handleLanguageChange(e.target.value)}
-                className={`appearance-none bg-white text-amber-800 border border-amber-200 rounded-md px-3 py-2 ${isRTL ? 'pl-8 pr-3' : 'pr-8'}`}
+                className={`appearance-none bg-white/90 backdrop-blur-sm text-amber-800 border-2 border-amber-200 rounded-xl px-4 py-3 font-medium shadow-lg hover:shadow-xl transition-all duration-300 focus:ring-4 focus:ring-amber-200 focus:border-amber-400 ${isRTL ? 'pl-10 pr-4' : 'pr-10'}`}
                 style={dirStyle}
               >
                 {Object.entries(languages).map(([code, lang]) => (
                   <option key={code} value={code}>{lang.name}</option>
                 ))}
               </select>
+              <div className={`absolute ${isRTL ? 'left-3' : 'right-3'} top-1/2 transform -translate-y-1/2 pointer-events-none`}>
+                <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                </svg>
+              </div>
             </div>
           </div>
 
-          {/* Filters */}
-          <div className={`flex flex-wrap ${isRTL ? 'justify-end' : 'justify-center'} gap-3 mb-10`} style={dirStyle}>
+          {/* Enhanced Filters */}
+          <div className={`flex flex-wrap ${isRTL ? 'justify-end' : 'justify-center'} gap-4 mb-12 p-6 bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg border border-amber-100`} style={dirStyle}>
             {Object.entries(t.filters).map(([key, label]) => (
               <button
                 key={key}
                 onClick={() => setActiveFilter(key)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
-                  activeFilter === key ? 'bg-amber-600 text-white shadow-lg' : 'bg-white text-amber-800 hover:bg-amber-100'
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap flex items-center ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'} ${
+                  activeFilter === key 
+                    ? 'bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow-lg transform scale-105' 
+                    : 'bg-white text-amber-800 hover:bg-amber-50 hover:shadow-md border border-amber-200'
                 }`}
               >
-                <Filter className="w-4 h-4 inline mr-2" />{label}
+                <Filter className="w-4 h-4" />
+                <span>{label}</span>
+                {activeFilter === key && (
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                )}
               </button>
             ))}
           </div>
 
           {/* Menu Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" style={dirStyle}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" style={dirStyle}>
             {filteredMenuItems.map(item => (
-              <div key={item.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all">
-                <img src={item.image} alt={getText(item.name)} className="w-full h-48 object-cover" />
+              <div key={item.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div className="relative overflow-hidden">
+                  <img src={item.image} alt={getText(item.name)} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" />
+                  {item.popular && (
+                    <div className="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                      ⭐ {t.filters.popular}
+                    </div>
+                  )}
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
                 <div className={`${isRTL ? 'text-right' : 'text-left'} p-6`}>
-                  <h3 className="text-xl font-serif font-bold text-amber-800 mb-1">
+                  <h3 className="text-xl font-serif font-bold text-amber-800 mb-2 group-hover:text-amber-900 transition-colors">
                     {getText(item.name)}
                   </h3>
                   {item.description && (
-                    <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                       {getText(item.description)}
                     </p>
+                  )}
+                  
+                  {/* Tags */}
+                  {item.tags && item.tags.length > 0 && (
+                    <div className={`flex flex-wrap gap-2 mb-3 ${isRTL ? 'justify-end' : 'justify-start'}`}>
+                      {item.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium">
+                          {getTagTranslation(tag)}
+                        </span>
+                      ))}
+                    </div>
                   )}
                   
                   {/* Handle variants */}
                   {item.variants ? (
                     <div className={`flex ${isRTL ? 'justify-end' : 'justify-start'} gap-3 mb-2 flex-wrap`}>
                       {item.variants.map((variant, i) => (
-                        <span key={i} className="bg-amber-50 text-amber-700 border border-amber-200 px-3 py-1 rounded-full text-sm font-semibold">
+                        <span key={i} className="bg-amber-50 text-amber-700 border border-amber-200 px-3 py-2 rounded-full text-sm font-semibold hover:bg-amber-100 transition-colors">
                           {getText(variant.label)}: {variant.price}
                         </span>
                       ))}
@@ -632,23 +673,18 @@ const FullMenuPage = () => {
                   ) : (
                     <div className={`flex ${isRTL ? 'flex-row-reverse' : 'flex-row'} justify-between items-center mb-2`}>
                       <span className="text-2xl font-bold text-amber-600">{item.price}</span>
-                      {item.popular && (
-                        <span className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-xs">
-                          {t.filters.popular}
-                        </span>
-                      )}
                     </div>
                   )}
                   
                   {/* Handle add-ons */}
                   {item.addOns && (
-                    <div className="mt-3 text-sm">
-                      <div className="font-semibold text-amber-800 mb-1">
+                    <div className="mt-4 p-3 bg-gray-50 rounded-lg">
+                      <div className="font-semibold text-amber-800 mb-2 text-sm">
                         {getText(item.addOns.title)}
                       </div>
                       <div className={`flex flex-wrap gap-2 ${isRTL ? 'justify-end' : 'justify-start'}`}>
                         {item.addOns.options.map((option, idx) => (
-                          <span key={idx} className="bg-amber-50 text-amber-700 border border-amber-200 px-2 py-1 rounded-full">
+                          <span key={idx} className="bg-white text-amber-700 border border-amber-200 px-2 py-1 rounded-full text-xs hover:bg-amber-50 transition-colors">
                             {getText(option.name)} {option.price}
                           </span>
                         ))}
@@ -675,6 +711,208 @@ const FullMenuPage = () => {
             </div>
           )}
         </div>
+        
+        {/* Enhanced Footer */}
+        <footer className="mt-20 bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-full h-full bg-repeat opacity-20" 
+                 style={{
+                   backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20v-40c11.046 0 20 8.954 20 20z'/%3E%3C/g%3E%3C/svg%3E")`,
+                 }}>
+            </div>
+          </div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 py-16">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-12 ${isRTL ? 'text-right' : 'text-left'}`}>
+              
+              {/* Restaurant Info */}
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
+                    {language === 'ar' ? 'قرية الطبيعة' :
+                     language === 'fa' ? 'دهکده طبیعت' :
+                     language === 'ku' ? 'گوندی سروشت' :
+                     language === 'tr' ? 'Doğa Köyü' :
+                     language === 'ur' ? 'فطرت کا گاؤں' :
+                     language === 'kmr' ? 'Gundê Xwezayê' :
+                     "Nature's Village"}
+                  </h3>
+                  <p className="text-amber-200 leading-relaxed">
+                    {language === 'ar' ? 'تجربة طعام كردية أصيلة في قلب أتلانتا. نقدم أطباق تقليدية بنكهات حديثة.' :
+                     language === 'fa' ? 'تجربه غذای کردی اصیل در قلب آتلانتا. غذاهای سنتی با طعم‌های مدرن ارائه می‌دهیم.' :
+                     language === 'ku' ? 'ئەزموونی خواردنی کوردی ڕەسەن لە دڵی ئەتلانتا. خواردنی نەریتی بە تامی نوێ پێشکەش دەکەین.' :
+                     language === 'tr' ? 'Atlanta\'nın kalbinde otantik Kürt yemek deneyimi. Geleneksel yemekleri modern lezzetlerle sunuyoruz.' :
+                     language === 'ur' ? 'اٹلانٹا کے دل میں اصل کردش کھانے کا تجربہ۔ ہم روایتی کھانے جدید ذائقوں کے ساتھ پیش کرتے ہیں۔' :
+                     language === 'kmr' ? 'Ezmûna xwarinê ya Kurdî ya orîjînal li dil Atlanta. Em xwarinên kevneşopî bi tamên nû pêşkêş dikin.' :
+                     'Authentic Kurdish dining experience in the heart of Atlanta. We serve traditional dishes with modern flavors.'}
+                  </p>
+                </div>
+                
+                {/* Contact Info */}
+                <div className="space-y-3">
+                  <div className={`flex items-center ${isRTL ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
+                    <div className="w-5 h-5 bg-amber-400 rounded-full flex-shrink-0"></div>
+                    <span className="text-amber-200">123 Kurdish Lane, Atlanta, GA 30309</span>
+                  </div>
+                  <div className={`flex items-center ${isRTL ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
+                    <div className="w-5 h-5 bg-amber-400 rounded-full flex-shrink-0"></div>
+                    <span className="text-amber-200">(404) 555-KURD</span>
+                  </div>
+                  <div className={`flex items-center ${isRTL ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
+                    <div className="w-5 h-5 bg-amber-400 rounded-full flex-shrink-0"></div>
+                    <span className="text-amber-200">info@naturesvillage.com</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Quick Links */}
+              <div className="space-y-6">
+                <h3 className="text-xl font-semibold text-amber-100">
+                  {language === 'ar' ? 'روابط سريعة' :
+                   language === 'fa' ? 'لینک‌های سریع' :
+                   language === 'ku' ? 'بەستەری خێرا' :
+                   language === 'tr' ? 'Hızlı Bağlantılar' :
+                   language === 'ur' ? 'فوری لنکس' :
+                   language === 'kmr' ? 'Girêdanên Bilez' :
+                   'Quick Links'}
+                </h3>
+                <div className="space-y-3">
+                  {[
+                    { en: 'Home', ar: 'الرئيسية', fa: 'خانه', ku: 'سەرەتا', tr: 'Ana Sayfa', ur: 'ہوم', kmr: 'Serûpel' },
+                    { en: 'About Us', ar: 'من نحن', fa: 'درباره ما', ku: 'دەربارەمان', tr: 'Hakkımızda', ur: 'ہمارے بارے میں', kmr: 'Derbarê Me' },
+                    { en: 'Reservations', ar: 'الحجوزات', fa: 'رزرو', ku: 'حیجز', tr: 'Rezervasyon', ur: 'بکنگ', kmr: 'Rezervasyon' },
+                    { en: 'Contact', ar: 'اتصل بنا', fa: 'تماس', ku: 'پەیوەندی', tr: 'İletişim', ur: 'رابطہ', kmr: 'Têkilî' }
+                  ].map((link, index) => (
+                    <a key={index} href="#" className="block text-amber-200 hover:text-amber-100 transition-colors hover:translate-x-1 transform duration-200">
+                      {getText(link)}
+                    </a>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Hours & Social */}
+              <div className="space-y-6">
+                <h3 className="text-xl font-semibold text-amber-100">
+                  {language === 'ar' ? 'ساعات العمل' :
+                   language === 'fa' ? 'ساعات کاری' :
+                   language === 'ku' ? 'کاتی کارکردن' :
+                   language === 'tr' ? 'Çalışma Saatleri' :
+                   language === 'ur' ? 'کام کے اوقات' :
+                   language === 'kmr' ? 'Demên Xebatê' :
+                   'Opening Hours'}
+                </h3>
+                <div className="space-y-2 text-amber-200">
+                  <div className="flex justify-between">
+                    <span>{language === 'ar' ? 'الإثنين - الخميس' :
+                           language === 'fa' ? 'دوشنبه - پنج‌شنبه' :
+                           language === 'ku' ? 'دووشەممە - پێنجشەممە' :
+                           language === 'tr' ? 'Pazartesi - Perşembe' :
+                           language === 'ur' ? 'پیر - جمعرات' :
+                           language === 'kmr' ? 'Duşem - Pêncşem' :
+                           'Mon - Thu'}</span>
+                    <span>11:00 AM - 10:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>{language === 'ar' ? 'الجمعة - السبت' :
+                           language === 'fa' ? 'جمعه - شنبه' :
+                           language === 'ku' ? 'هەینی - شەممە' :
+                           language === 'tr' ? 'Cuma - Cumartesi' :
+                           language === 'ur' ? 'جمعہ - ہفتہ' :
+                           language === 'kmr' ? 'În - Şemî' :
+                           'Fri - Sat'}</span>
+                    <span>11:00 AM - 11:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>{language === 'ar' ? 'الأحد' :
+                           language === 'fa' ? 'یکشنبه' :
+                           language === 'ku' ? 'یەکشەممە' :
+                           language === 'tr' ? 'Pazar' :
+                           language === 'ur' ? 'اتوار' :
+                           language === 'kmr' ? 'Yekşem' :
+                           'Sunday'}</span>
+                    <span>12:00 PM - 9:00 PM</span>
+                  </div>
+                </div>
+                
+                {/* Social Media */}
+                <div className="pt-4">
+                  <h4 className="text-lg text-amber-100 mb-3">
+                    {language === 'ar' ? 'تابعنا' :
+                     language === 'fa' ? 'ما را دنبال کنید' :
+                     language === 'ku' ? 'شوێنمان بکەون' :
+                     language === 'tr' ? 'Bizi Takip Edin' :
+                     language === 'ur' ? 'ہمیں فالو کریں' :
+                     language === 'kmr' ? 'Me Bişopînin' :
+                     'Follow Us'}
+                  </h4>
+                  <div className={`flex ${isRTL ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
+                    {['facebook', 'instagram', 'twitter'].map((social) => (
+                      <a key={social} href="#" className="w-10 h-10 bg-amber-600 hover:bg-amber-500 rounded-full flex items-center justify-center transition-all transform hover:scale-110 hover:shadow-lg">
+                        <div className="w-5 h-5 bg-white rounded-sm"></div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Bottom Section */}
+            <div className="border-t border-amber-700 mt-12 pt-8">
+              <div className={`flex flex-col md:flex-row ${isRTL ? 'md:flex-row-reverse' : ''} justify-between items-center space-y-4 md:space-y-0`}>
+                
+                {/* Copyright */}
+                <div className="text-amber-300 text-sm">
+                  © 2024 Nature's Village. {language === 'ar' ? 'جميع الحقوق محفوظة' :
+                                          language === 'fa' ? 'تمام حقوق محفوظ است' :
+                                          language === 'ku' ? 'هەموو مافەکان پارێزراون' :
+                                          language === 'tr' ? 'Tüm hakları saklıdır' :
+                                          language === 'ur' ? 'تمام حقوق محفوظ ہیں' :
+                                          language === 'kmr' ? 'Hemû maf parastî ne' :
+                                          'All rights reserved'}.
+                </div>
+                
+                {/* Powered by Blunari - Enhanced */}
+                <div className={`flex items-center group ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'}`}>
+                  <span className="text-amber-300 text-sm">
+                    {language === 'ar' ? 'مدعوم بـ' :
+                     language === 'fa' ? 'قدرت گرفته از' :
+                     language === 'ku' ? 'پشتگیری کراو لەلایەن' :
+                     language === 'tr' ? 'Destekleyen' :
+                     language === 'ur' ? 'سپورٹ کردہ' :
+                     language === 'kmr' ? 'Piştgirî kirin ji alî' :
+                     'Powered by'}
+                  </span>
+                  <a 
+                    href="https://blunari.ai" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="relative inline-flex items-center"
+                  >
+                    {/* Glowing background effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-30 group-hover:opacity-50 transition-opacity animate-pulse"></div>
+                    
+                    {/* Main button */}
+                    <div className={`relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl hover:from-blue-500 hover:to-purple-500 ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'}`}>
+                      {/* AI Icon */}
+                      <div className="w-5 h-5 bg-white rounded-sm flex items-center justify-center">
+                        <div className="w-3 h-3 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full animate-pulse"></div>
+                      </div>
+                      <span className="font-bold tracking-wide">Blunari</span>
+                      {/* Arrow icon */}
+                      <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Decorative bottom border */}
+          <div className="h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
+        </footer>
       </div>
     </>
   )
