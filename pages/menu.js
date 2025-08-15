@@ -26,7 +26,204 @@ const FullMenuPage = () => {
     kmr: { title: 'Hemû Menû', subtitle: 'Hemû xwarinên me bi MenuIQ', filters: { all: 'Hemû', appetizers: 'Destpêk', salads: 'Salatan', sandwich_platter: 'Sandwîç û Plater', naan: 'Nan', pizza: 'Pizza', fish: 'Masî', grill: 'Platerên Grill', specialty: 'Xwarinên Taybet', kids: 'Menûya Zarokan', drinks_cold: 'Vexwarin (Sarî)', drinks_hot: 'Vexwarin (Germ)', soup: 'Şorbeyên', dessert: 'Şîrînî', popular: 'Herî Bilind' } }
   }
   const t = translations[language] || translations.en
-  const getText = (obj) => (obj && (obj[language] || obj.en)) || ''
+  // Fallback name translations by English key → localized value
+  const NAME_TRANSLATIONS = {
+    ar: {
+      'Hummus': 'حمص',
+      'Baba Ghanoush': 'بابا غنوج',
+      'Cool Bulgur Garden': 'سلطة البرغل باللبن',
+      'Kibbeh': 'كبة',
+      'Falafels': 'فلافل',
+      'Borek': 'بوريك',
+      'Appetizers Combo': 'تشكيلة مقبلات',
+      'Greek Salad': 'سلطة يونانية',
+      'Fattoush Salad': 'فتوش',
+      'Shwan Salad': 'سلطة شوان',
+      'Suwanee Salad': 'سلطة سواني',
+      'Lentil Soup': 'شوربة عدس',
+      'Iraqi Guss Platter': 'صحن كص عراقي',
+      'Chicken Platter': 'صحن دجاج',
+      'Falafels Platter': 'صحن فلافل',
+      'Hawrami Naan': 'نان هورامي',
+      'Samoon': 'سمون',
+      'Sesame Kulera': 'كوليرة بالسمسم',
+      'Margherita Pizza': 'بيتزا مارجريتا',
+      'Kabab Pizza': 'بيتزا كباب',
+      'Chicken Pizza': 'بيتزا دجاج',
+      'Lahmacun': 'لحم بعجين',
+      'Boat': 'بيتزا القارب',
+      'Veggie Pizza': 'بيتزا خضار',
+      'Masgouf': 'مسكوف',
+      'Parda Biryani': 'بيراني برده',
+      'Quzi': 'قوزي',
+      'Mandi': 'مندي',
+      'Nature Kabab': 'كباب الطبيعة',
+      'Qaliya': 'قاليه',
+      'Butter Shrimp': 'روبيان بالزبدة',
+      'Village Carnival': 'كرنفال القرية',
+      'Erbil Shish Kabab': 'شيش كباب أربيل',
+      'Mahshi Kabab': 'محشي كباب',
+      'Chicken Kabab': 'كباب دجاج',
+      'Cokertme Kabab': 'جوكيرتما كباب',
+      'Wings': 'أجنحة',
+      'Beef Ribeye Tikka': 'تيكا ريب آي لحم',
+      'Chicken Tikka': 'تيكا دجاج',
+      'Lamb Chops': 'ضلوع خروف',
+      "Nature's Village Special Platter": 'صحن مشاوي خاص',
+      "Kid's Pizza": 'بيتزا أطفال',
+      'Chicken Tenders': 'قطع دجاج',
+      'Fries': 'بطاطا مقلية',
+      'Water': 'ماء',
+      'Sparkling Water': 'ماء غازي',
+      'Soda': 'مشروبات غازية',
+      'Erbil Yogurt Drink': 'دوغ أربيل',
+      'Arabic Coffee': 'قهوة عربية',
+      'Kurdish Qazwan Coffee': 'قهوة قازوان الكردية',
+      'Turkish Pistachio Coffee': 'قهوة تركية بالفستق',
+      'Karak Chai': 'شاي كرك',
+      'Persian Tea': 'شاي فارسي',
+      'Green Tea': 'شاي أخضر',
+      'Baklava': 'بقلاوة',
+      'Tiramisu': 'تيراميسو',
+      'Khash Khash': 'خشخش',
+      'Oven Rice Pudding': 'أرز بالحليب بالفرن',
+      'Ice Cream': 'آيس كريم'
+    },
+    fa: {
+      'Hummus': 'حمص',
+      'Baba Ghanoush': 'باباغنوش',
+      'Kibbeh': 'کبه',
+      'Falafels': 'فلافل',
+      'Borek': 'بورک',
+      'Greek Salad': 'سالاد یونانی',
+      'Fattoush Salad': 'فتوش',
+      'Lentil Soup': 'سوپ عدس',
+      'Hawrami Naan': 'نان هورامی',
+      'Samoon': 'سمون',
+      'Sesame Kulera': 'کولره کنجدی',
+      'Margherita Pizza': 'پیتزا مارگاریتا',
+      'Kabab Pizza': 'پیتزا کباب',
+      'Chicken Pizza': 'پیتزا مرغ',
+      'Lahmacun': 'لهمجون',
+      'Veggie Pizza': 'پیتزا سبزیجات',
+      'Masgouf': 'مسگوف',
+      'Quzi': 'قوزی',
+      'Mandi': 'مندی',
+      'Chicken Tenders': 'استریپس مرغ',
+      'Fries': 'سیب‌زمینی سرخ‌کرده',
+      'Water': 'آب',
+      'Sparkling Water': 'آب گازدار',
+      'Soda': 'نوشابه',
+      'Arabic Coffee': 'قهوه عربی',
+      'Green Tea': 'چای سبز',
+      'Baklava': 'بقلاوا',
+      'Tiramisu': 'تیرامیسو',
+      'Oven Rice Pudding': 'شیر برنج تنوری',
+      'Ice Cream': 'بستنی'
+    },
+    tr: {
+      'Hummus': 'Humus',
+      'Baba Ghanoush': 'Babaganuş',
+      'Kibbeh': 'İçli Köfte',
+      'Falafels': 'Falafel',
+      'Borek': 'Börek',
+      'Greek Salad': 'Yunan Salatası',
+      'Fattoush Salad': 'Fettuş',
+      'Lentil Soup': 'Mercimek Çorbası',
+      'Hawrami Naan': 'Hewramî Naan',
+      'Samoon': 'Samun',
+      'Sesame Kulera': 'Susamlı Kulera',
+      'Margherita Pizza': 'Margarita Pizza',
+      'Kabab Pizza': 'Kebap Pizza',
+      'Chicken Pizza': 'Tavuklu Pizza',
+      'Lahmacun': 'Lahmacun',
+      'Veggie Pizza': 'Sebzeli Pizza',
+      'Masgouf': 'Masguf',
+      'Quzi': 'Kuzu Tandır',
+      'Mandi': 'Mendi',
+      'Chicken Tenders': 'Tavuk Şeritleri',
+      'Fries': 'Patates Kızartması',
+      'Water': 'Su',
+      'Sparkling Water': 'Soda',
+      'Soda': 'Kola/Meşrubat',
+      'Arabic Coffee': 'Arap Kahvesi',
+      'Green Tea': 'Yeşil Çay',
+      'Baklava': 'Baklava',
+      'Tiramisu': 'Tiramisu',
+      'Ice Cream': 'Dondurma'
+    },
+    ur: {
+      'Hummus': 'حُمص',
+      'Baba Ghanoush': 'بابا غنوش',
+      'Kibbeh': 'کبہ',
+      'Falafels': 'فلافل',
+      'Borek': 'بوریک',
+      'Greek Salad': 'یونانی سلاد',
+      'Fattoush Salad': 'فتوش سلاد',
+      'Lentil Soup': 'دال کا سوپ',
+      'Margherita Pizza': 'مارگریٹا پیزا',
+      'Kabab Pizza': 'کباب پیزا',
+      'Chicken Pizza': 'چکن پیزا',
+      'Veggie Pizza': 'ویجی پیزا',
+      'Masgouf': 'مسگوف',
+      "Kid's Pizza": 'بچوں کی پیزا',
+      'Chicken Tenders': 'چکن ٹینڈرز',
+      'Fries': 'فرائز',
+      'Water': 'پانی',
+      'Sparkling Water': 'سوڈا واٹر',
+      'Soda': 'سافٹ ڈرنکس',
+      'Arabic Coffee': 'عربی کافی',
+      'Green Tea': 'سبز چائے',
+      'Baklava': 'بقلاوہ',
+      'Tiramisu': 'تیرامیسو',
+      'Ice Cream': 'آئس کریم'
+    },
+    ku: {
+      'Hummus': 'حەممەس',
+      'Baba Ghanoush': 'بابا غنوش',
+      'Kibbeh': 'کوبە',
+      'Falafels': 'فەلەفڵ',
+      'Borek': 'بورێک',
+      'Greek Salad': 'سالادی یونانی',
+      'Fattoush Salad': 'فتوش',
+      'Lentil Soup': 'شۆربی عدس',
+      'Margherita Pizza': 'پیتزای مارگەرێتا',
+      'Kabab Pizza': 'پیتزای کەباب',
+      'Chicken Pizza': 'پیتزای مرۆڤ',
+      'Masgouf': 'مەسگووف',
+      'Fries': 'پیتاتی بەرژاو',
+      'Water': 'ئاو',
+      'Soda': 'شرۆبە',
+      'Baklava': 'بەقڵاڤا'
+    },
+    kmr: {
+      'Hummus': 'Humus',
+      'Baba Ghanoush': 'Babeganûş',
+      'Kibbeh': 'Kibê',
+      'Falafels': 'Falafel',
+      'Borek': 'Börek',
+      'Greek Salad': 'Salata Yewnanî',
+      'Fattoush Salad': 'Fettûş',
+      'Lentil Soup': 'Şorbeyê Mercimekê',
+      'Margherita Pizza': 'Pizza Margherita',
+      'Kabab Pizza': 'Pizza Kebap',
+      'Chicken Pizza': 'Pizza Mirîşkê',
+      'Masgouf': 'Masgûf',
+      'Fries': 'Patatesê Birîn',
+      'Water': 'Av',
+      'Soda': 'Şerbet',
+      'Baklava': 'Baklawa'
+    }
+  }
+
+  const getText = (obj, englishKey) => {
+    const direct = (obj && (obj[language] || obj.en)) || ''
+    if (direct) return direct
+    if (englishKey && NAME_TRANSLATIONS[language] && NAME_TRANSLATIONS[language][englishKey]) {
+      return NAME_TRANSLATIONS[language][englishKey]
+    }
+    return englishKey || ''
+  }
 
   const menuItems = [
     // Appetizers
@@ -159,10 +356,10 @@ const FullMenuPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" style={dirStyle}>
             {filteredMenuItems.map(item => (
               <div key={item.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all">
-                <img src={item.image} alt={getText(item.name)} className="w-full h-48 object-cover" />
+                <img src={item.image} alt={getText(item.name, item.name?.en)} className="w-full h-48 object-cover" />
                 <div className={`${isRTL ? 'text-right' : 'text-left'} p-6`}>
-                  <h3 className="text-xl font-serif font-bold text-amber-800 mb-1">{getText(item.name)}</h3>
-                  <p className="text-gray-700 mb-4 text-sm leading-relaxed">{getText(item.description)}</p>
+                  <h3 className="text-xl font-serif font-bold text-amber-800 mb-1">{getText(item.name, item.name?.en)}</h3>
+                  <p className="text-gray-700 mb-4 text-sm leading-relaxed">{getText(item.description, item.description?.en)}</p>
                   {item.variants ? (
                     <div className={`flex ${isRTL ? 'justify-end' : 'justify-start'} gap-3 mb-2`}>
                       {item.variants.map((v, i) => (
