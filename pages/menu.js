@@ -96,6 +96,12 @@ const FullMenuPage = () => {
     { id: 2104, name: { en: 'Karak Chai' }, price: '$2.99', category: 'drinks_hot', popular: false, image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?w=300&h=200&fit=crop', tags: [] },
     { id: 2105, name: { en: 'Persian Tea' }, price: '$2.50', category: 'drinks_hot', popular: false, image: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=300&h=200&fit=crop', tags: [] },
     { id: 2106, name: { en: 'Green Tea' }, price: '$2.50', category: 'drinks_hot', popular: false, image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=300&h=200&fit=crop', tags: [] },
+    // Desserts
+    { id: 2201, name: { en: 'Baklava' }, description: { en: 'A sweet pastry with layers of nuts and honey.' }, price: '$6.99', category: 'dessert', popular: true, image: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=300&h=200&fit=crop', tags: ['sweet', 'traditional'] },
+    { id: 2202, name: { en: 'Tiramisu' }, description: { en: 'Sweetened whipped cream and a rich mascarpone.' }, price: '$5.99', category: 'dessert', popular: false, image: 'https://images.unsplash.com/photo-1586985289906-406988974504?w=300&h=200&fit=crop', tags: ['sweet'] },
+    { id: 2203, name: { en: 'Khash Khash' }, description: { en: 'Delicious dessert with layers of cream and crunchy vermicelli.' }, price: '$5.99', category: 'dessert', popular: false, image: 'https://images.unsplash.com/photo-1547496502-affa22d38842?w=300&h=200&fit=crop', tags: ['sweet'] },
+    { id: 2204, name: { en: 'Oven Rice Pudding' }, description: { en: 'Creamy Middle Eastern milk pudding.' }, price: '$5.99', category: 'dessert', popular: false, image: 'https://images.unsplash.com/photo-1541782814455-cf97b06a8a12?w=300&h=200&fit=crop', tags: ['sweet'] },
+    { id: 2205, name: { en: 'Ice Cream' }, description: { en: 'Choose from 3 flavors: Strawberry, Chocolate, Vanilla. Single scoop.' }, category: 'dessert', popular: false, variants: [ { label: 'Single Scoop', price: '$2.99' } ], image: 'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=300&h=200&fit=crop', tags: ['sweet'] },
   ]
 
   const filteredMenuItems = activeFilter === 'all'
