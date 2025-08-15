@@ -17,13 +17,13 @@ const FullMenuPage = () => {
   }
 
   const translations = {
-    en: { title: 'Full Menu', subtitle: 'Explore all our dishes powered by MenuIQ', filters: { all: 'All Items', appetizers: 'Appetizers', salads: 'Salads', sandwich_platter: 'Sandwich & Platter', naan: 'Naan', pizza: 'Pizza', fish: 'Fish', grill: 'Grill Platters', specialty: 'Specialty Dishes', kids: "Kid's Menu", drinks_cold: 'Drinks (Cold)', drinks_hot: 'Drinks (Hot)', traditional: 'Traditional', vegan: 'Vegan & Vegetarian', soup: 'Soups', dessert: 'Desserts', popular: 'Most Popular' } },
-    ku: { title: 'هەموو خۆراکەکان', subtitle: 'هه‌موو خۆراكه‌كانمان ببینە به‌ MenuIQ', filters: { all: 'هەموو', appetizers: 'خۆراکی پێش‌خواردن', salads: 'لەواشەکان', sandwich_platter: 'ساندویچ و پلیتەر', naan: 'نان', pizza: 'پیتزا', fish: 'ماسی', grill: 'پلیتەری گرێل', specialty: 'خۆراکی تایبەتی', kids: 'مێنیوی منداڵان', drinks_cold: 'خواردنەوەکان (سارد)', drinks_hot: 'خواردنەوەکان (گەرەم)', traditional: 'نەریتی', vegan: 'ڕووەکی و ڤێگان', soup: 'شۆربە', dessert: 'شیرینی', popular: 'بەناوبانگترین' } },
-    ar: { title: 'القائمة الكاملة', subtitle: 'استكشف جميع أطباقنا مدعومة بـ MenuIQ', filters: { all: 'الكل', appetizers: 'مقبلات', salads: 'سلطات', sandwich_platter: 'سندويش وصحن', naan: 'نان', pizza: 'بيتزا', fish: 'سمك', grill: 'مشاوي', specialty: 'أطباق مميزة', kids: 'قائمة الأطفال', drinks_cold: 'المشروبات (باردة)', drinks_hot: 'المشروبات (ساخنة)', traditional: 'تقليدي', vegan: 'نباتي ونباتي صرف', soup: 'شوربات', dessert: 'حلويات', popular: 'الأكثر شهرة' } },
-    fa: { title: 'منوی کامل', subtitle: 'همه غذاهای ما با MenuIQ', filters: { all: 'همه موارد', appetizers: 'پیش‌غذاها', salads: 'سالادها', sandwich_platter: 'ساندویچ و پلاتر', naan: 'نان', pizza: 'پیتزا', fish: 'ماهی', grill: 'کباب و گریل', specialty: 'غذاهای ویژه', kids: 'منوی کودکان', drinks_cold: 'نوشیدنی‌ها (سرد)', drinks_hot: 'نوشیدنی‌ها (گرم)', traditional: 'سنتی', vegan: 'گیاهی و وجترین', soup: 'سوپ‌ها', dessert: 'دسرها', popular: 'محبوب‌ترین' } },
-    tr: { title: 'Tam Menü', subtitle: 'Tüm yemeklerimiz MenuIQ ile', filters: { all: 'Tümü', appetizers: 'Başlangıçlar', salads: 'Salatalar', sandwich_platter: 'Sandviç & Tabak', naan: 'Naan', pizza: 'Pizza', fish: 'Balık', grill: 'Izgara Tabaklar', specialty: 'Özel Yemekler', kids: 'Çocuk Menüsü', drinks_cold: 'İçecekler (Soğuk)', drinks_hot: 'İçecekler (Sıcak)', traditional: 'Geleneksel', vegan: 'Vegan & Vejetaryen', soup: 'Çorbalar', dessert: 'Tatlılar', popular: 'En Popüler' } },
-    ur: { title: 'مکمل مینیو', subtitle: 'تمام ڈشز MenuIQ کے ساتھ', filters: { all: 'سب', appetizers: 'سٹارٹرز', salads: 'سلادز', sandwich_platter: 'سینڈوچ اور پلیٹر', naan: 'نان', pizza: 'پیزا', fish: 'مچھلی', grill: 'گرل پلیٹرز', specialty: 'خصوصی ڈشز', kids: 'بچوں کا مینیو', drinks_cold: 'مشروبات (سرد)', drinks_hot: 'مشروبات (گرم)', traditional: 'روایتی', vegan: 'ویگن و ویجیٹرین', soup: 'سوپس', dessert: 'میٹھائیاں', popular: 'سب سے مقبول' } },
-    kmr: { title: 'Hemû Menû', subtitle: 'Hemû xwarinên me bi MenuIQ', filters: { all: 'Hemû', appetizers: 'Destpêk', salads: 'Salatan', sandwich_platter: 'Sandwîç û Plater', naan: 'Nan', pizza: 'Pizza', fish: 'Masî', grill: 'Platerên Grill', specialty: 'Xwarinên Taybet', kids: 'Menûya Zarokan', drinks_cold: 'Vexwarin (Sarî)', drinks_hot: 'Vexwarin (Germ)', traditional: 'Kevnebûyî', vegan: 'Vegan û Wejetaryen', soup: 'Şorbeyên', dessert: 'Şîrînî', popular: 'Herî Bilind' } }
+    en: { title: 'Full Menu', subtitle: 'Explore all our dishes powered by MenuIQ', filters: { all: 'All Items', appetizers: 'Appetizers', salads: 'Salads', sandwich_platter: 'Sandwich & Platter', naan: 'Naan', pizza: 'Pizza', fish: 'Fish', grill: 'Grill Platters', specialty: 'Specialty Dishes', kids: "Kid's Menu", drinks_cold: 'Drinks (Cold)', drinks_hot: 'Drinks (Hot)', soup: 'Soups', dessert: 'Desserts', popular: 'Most Popular' } },
+    ku: { title: 'هەموو خۆراکەکان', subtitle: 'هه‌موو خۆراكه‌كانمان ببینە به‌ MenuIQ', filters: { all: 'هەموو', appetizers: 'خۆراکی پێش‌خواردن', salads: 'لەواشەکان', sandwich_platter: 'ساندویچ و پلیتەر', naan: 'نان', pizza: 'پیتزا', fish: 'ماسی', grill: 'پلیتەری گرێل', specialty: 'خۆراکی تایبەتی', kids: 'مێنیوی منداڵان', drinks_cold: 'خواردنەوەکان (سارد)', drinks_hot: 'خواردنەوەکان (گەرەم)', soup: 'شۆربە', dessert: 'شیرینی', popular: 'بەناوبانگترین' } },
+    ar: { title: 'القائمة الكاملة', subtitle: 'استكشف جميع أطباقنا مدعومة بـ MenuIQ', filters: { all: 'الكل', appetizers: 'مقبلات', salads: 'سلطات', sandwich_platter: 'سندويش وصحن', naan: 'نان', pizza: 'بيتزا', fish: 'سمك', grill: 'مشاوي', specialty: 'أطباق مميزة', kids: 'قائمة الأطفال', drinks_cold: 'المشروبات (باردة)', drinks_hot: 'المشروبات (ساخنة)', soup: 'شوربات', dessert: 'حلويات', popular: 'الأكثر شهرة' } },
+    fa: { title: 'منوی کامل', subtitle: 'همه غذاهای ما با MenuIQ', filters: { all: 'همه موارد', appetizers: 'پیش‌غذاها', salads: 'سالادها', sandwich_platter: 'ساندویچ و پلاتر', naan: 'نان', pizza: 'پیتزا', fish: 'ماهی', grill: 'کباب و گریل', specialty: 'غذاهای ویژه', kids: 'منوی کودکان', drinks_cold: 'نوشیدنی‌ها (سرد)', drinks_hot: 'نوشیدنی‌ها (گرم)', soup: 'سوپ‌ها', dessert: 'دسرها', popular: 'محبوب‌ترین' } },
+    tr: { title: 'Tam Menü', subtitle: 'Tüm yemeklerimiz MenuIQ ile', filters: { all: 'Tümü', appetizers: 'Başlangıçlar', salads: 'Salatalar', sandwich_platter: 'Sandviç & Tabak', naan: 'Naan', pizza: 'Pizza', fish: 'Balık', grill: 'Izgara Tabaklar', specialty: 'Özel Yemekler', kids: 'Çocuk Menüsü', drinks_cold: 'İçecekler (Soğuk)', drinks_hot: 'İçecekler (Sıcak)', soup: 'Çorbalar', dessert: 'Tatlılar', popular: 'En Popüler' } },
+    ur: { title: 'مکمل مینیو', subtitle: 'تمام ڈشز MenuIQ کے ساتھ', filters: { all: 'سب', appetizers: 'سٹارٹرز', salads: 'سلادز', sandwich_platter: 'سینڈوچ اور پلیٹر', naan: 'نان', pizza: 'پیزا', fish: 'مچھلی', grill: 'گرل پلیٹرز', specialty: 'خصوصی ڈشز', kids: 'بچوں کا مینیو', drinks_cold: 'مشروبات (سرد)', drinks_hot: 'مشروبات (گرم)', soup: 'سوپس', dessert: 'میٹھائیاں', popular: 'سب سے مقبول' } },
+    kmr: { title: 'Hemû Menû', subtitle: 'Hemû xwarinên me bi MenuIQ', filters: { all: 'Hemû', appetizers: 'Destpêk', salads: 'Salatan', sandwich_platter: 'Sandwîç û Plater', naan: 'Nan', pizza: 'Pizza', fish: 'Masî', grill: 'Platerên Grill', specialty: 'Xwarinên Taybet', kids: 'Menûya Zarokan', drinks_cold: 'Vexwarin (Sarî)', drinks_hot: 'Vexwarin (Germ)', soup: 'Şorbeyên', dessert: 'Şîrînî', popular: 'Herî Bilind' } }
   }
   const t = translations[language] || translations.en
   const getText = (obj) => (obj && (obj[language] || obj.en)) || ''
@@ -111,6 +111,7 @@ const FullMenuPage = () => {
       : menuItems.filter(item => item.category === activeFilter)
 
   const isRTL = languages[language].dir === 'rtl'
+  const dirStyle = { direction: languages[language].dir }
 
   return (
     <>
@@ -118,9 +119,9 @@ const FullMenuPage = () => {
         <title>Nature Village - Full Menu</title>
         <meta name="description" content="Explore the full menu of Nature Village Kurdish Restaurant." />
       </Head>
-      <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
+      <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50" style={dirStyle}>
         <div className="max-w-7xl mx-auto px-4 pt-24">
-          <div className="flex justify-between items-center mb-8" style={{ direction: languages[language].dir }}>
+          <div className={`flex ${isRTL ? 'flex-row-reverse' : 'flex-row'} justify-between items-center mb-8`}>
             <div>
               <h1 className="text-4xl font-serif font-bold text-amber-800">{t.title}</h1>
               <p className="text-amber-700 mt-2">{t.subtitle}</p>
@@ -129,8 +130,8 @@ const FullMenuPage = () => {
               <select
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
-                className="appearance-none bg-white text-amber-800 border border-amber-200 rounded-md px-3 py-2 pr-8"
-                style={{ direction: languages[language].dir }}
+                className={`appearance-none bg-white text-amber-800 border border-amber-200 rounded-md px-3 py-2 ${isRTL ? 'pl-8 pr-3' : 'pr-8'}`}
+                style={dirStyle}
               >
                 {Object.entries(languages).map(([code, lang]) => (
                   <option key={code} value={code}>{lang.name}</option>
@@ -140,12 +141,12 @@ const FullMenuPage = () => {
           </div>
 
           {/* Filters */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10" style={{ direction: languages[language].dir }}>
+          <div className={`flex flex-wrap ${isRTL ? 'justify-end' : 'justify-center'} gap-3 mb-10`} style={dirStyle}>
             {Object.entries(t.filters).map(([key, label]) => (
               <button
                 key={key}
                 onClick={() => setActiveFilter(key)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
                   activeFilter === key ? 'bg-amber-600 text-white shadow-lg' : 'bg-white text-amber-800 hover:bg-amber-100'
                 }`}
               >
@@ -155,7 +156,7 @@ const FullMenuPage = () => {
           </div>
 
           {/* Menu Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ direction: languages[language].dir }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" style={dirStyle}>
             {filteredMenuItems.map(item => (
               <div key={item.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all">
                 <img src={item.image} alt={getText(item.name)} className="w-full h-48 object-cover" />
