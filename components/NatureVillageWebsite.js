@@ -8,6 +8,25 @@ const NatureVillageWebsite = () => {
   const [language, setLanguage] = useState('en');
   const [activeFilter, setActiveFilter] = useState('popular');
   const router = useRouter();
+  useEffect(() => {
+    const qpLang = typeof router.query.lang === 'string' ? router.query.lang : undefined;
+    if (qpLang && languages[qpLang]) {
+      setLanguage(qpLang);
+      document.documentElement.setAttribute('dir', languages[qpLang].dir);
+      document.documentElement.lang = qpLang;
+    } else {
+      document.documentElement.setAttribute('dir', languages[language].dir);
+      document.documentElement.lang = language;
+    }
+  }, [router.query.lang]);
+
+  const handleLanguageChange = (next) => {
+    setLanguage(next);
+    document.documentElement.setAttribute('dir', languages[next].dir);
+    document.documentElement.lang = next;
+    const url = { pathname: router.pathname, query: { ...router.query, lang: next } };
+    router.replace(url, undefined, { shallow: true });
+  };
 
   // Language options
   const languages = {
@@ -389,7 +408,7 @@ const NatureVillageWebsite = () => {
       return;
     }
     if (sectionId === 'menu') {
-      router.push('/menu');
+      router.push({ pathname: '/menu', query: { lang: language } });
       return;
     }
 
@@ -451,7 +470,7 @@ const NatureVillageWebsite = () => {
               <div className="relative">
                 <select
                   value={language}
-                  onChange={(e) => setLanguage(e.target.value)}
+                  onChange={(e) => handleLanguageChange(e.target.value)}
                   className="appearance-none bg-transparent text-amber-800 hover:text-amber-600 font-medium text-sm border-none outline-none cursor-pointer pr-6"
                   style={{ direction: languages[language].dir }}
                 >
@@ -599,7 +618,7 @@ const NatureVillageWebsite = () => {
           {/* View Full Menu Button */}
           <div className="text-center mb-12">
             <button 
-              onClick={() => router.push('/menu')}
+              onClick={() => router.push({ pathname: '/menu', query: { lang: language } })}
               className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg text-sm font-semibold transition-colors"
             >
               {t.menu.viewFull}
