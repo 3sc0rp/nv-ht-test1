@@ -9,26 +9,24 @@ const FullMenuPage = () => {
   const languages = {
     en: { name: 'English', code: 'en', dir: 'ltr' },
     ku: { name: 'کوردی', code: 'ku', dir: 'rtl' },
-    ar: { name: 'العربية', code: 'ar', dir: 'rtl' }
+    ar: { name: 'العربية', code: 'ar', dir: 'rtl' },
+    fa: { name: 'فارسی', code: 'fa', dir: 'rtl' },
+    tr: { name: 'Türkçe', code: 'tr', dir: 'ltr' },
+    ur: { name: 'اردو', code: 'ur', dir: 'rtl' },
+    kmr: { name: 'Kurdî (Kurmancî)', code: 'kmr', dir: 'ltr' }
   }
 
-  const t = {
-    en: {
-      title: 'Full Menu',
-      subtitle: 'Explore all our dishes powered by MenuIQ',
-      filters: { all: 'All Items', traditional: 'Traditional', vegan: 'Vegan & Vegetarian', soup: 'Soups', dessert: 'Desserts', popular: 'Most Popular' }
-    },
-    ku: {
-      title: 'هەموو خۆراکەکان',
-      subtitle: 'هه‌موو خۆراكه‌كانمان ببینە به‌ MenuIQ',
-      filters: { all: 'هەموو', traditional: 'نەریتی', vegan: 'ڕووەکی و ڤێگان', soup: 'شۆربە', dessert: 'شیرینی', popular: 'بەناوبانگترین' }
-    },
-    ar: {
-      title: 'القائمة الكاملة',
-      subtitle: 'استكشف جميع أطباقنا مدعومة بـ MenuIQ',
-      filters: { all: 'الكل', traditional: 'تقليدي', vegan: 'نباتي ونباتي صرف', soup: 'شوربات', dessert: 'حلويات', popular: 'الأكثر شهرة' }
-    }
-  }[language]
+  const translations = {
+    en: { title: 'Full Menu', subtitle: 'Explore all our dishes powered by MenuIQ', filters: { all: 'All Items', traditional: 'Traditional', vegan: 'Vegan & Vegetarian', soup: 'Soups', dessert: 'Desserts', popular: 'Most Popular' } },
+    ku: { title: 'هەموو خۆراکەکان', subtitle: 'هه‌موو خۆراكه‌كانمان ببینە به‌ MenuIQ', filters: { all: 'هەموو', traditional: 'نەریتی', vegan: 'ڕووەکی و ڤێگان', soup: 'شۆربە', dessert: 'شیرینی', popular: 'بەناوبانگترین' } },
+    ar: { title: 'القائمة الكاملة', subtitle: 'استكشف جميع أطباقنا مدعومة بـ MenuIQ', filters: { all: 'الكل', traditional: 'تقليدي', vegan: 'نباتي ونباتي صرف', soup: 'شوربات', dessert: 'حلويات', popular: 'الأكثر شهرة' } },
+    fa: { title: 'منوی کامل', subtitle: 'همه غذاهای ما با MenuIQ', filters: { all: 'همه موارد', traditional: 'سنتی', vegan: 'گیاهی و وجترین', soup: 'سوپ‌ها', dessert: 'دسرها', popular: 'محبوب‌ترین' } },
+    tr: { title: 'Tam Menü', subtitle: 'Tüm yemeklerimiz MenuIQ ile', filters: { all: 'Tümü', traditional: 'Geleneksel', vegan: 'Vegan & Vejetaryen', soup: 'Çorbalar', dessert: 'Tatlılar', popular: 'En Popüler' } },
+    ur: { title: 'مکمل مینیو', subtitle: 'تمام ڈشز MenuIQ کے ساتھ', filters: { all: 'سب', traditional: 'روایتی', vegan: 'ویگن و ویجیٹرین', soup: 'سوپس', dessert: 'میٹھائیاں', popular: 'سب سے مقبول' } },
+    kmr: { title: 'Hemû Menû', subtitle: 'Hemû xwarinên me bi MenuIQ', filters: { all: 'Hemû', traditional: 'Kevnebûyî', vegan: 'Vegan û Wejetaryen', soup: 'Şorbeyên', dessert: 'Şîrînî', popular: 'Herî Bilind' } }
+  }
+  const t = translations[language] || translations.en
+  const getText = (obj) => (obj && (obj[language] || obj.en)) || ''
 
   const menuItems = [
     { id: 1, name: { en: 'Kebab-e Kubideh', ku: 'کەباب کوبیده', ar: 'كباب كوبيده' }, description: { en: 'Traditional ground lamb kebab with aromatic spices, served with basmati rice and grilled tomatoes', ku: 'کەبابی نەریتی لە گۆشتی بەرخی هاڕاو لەگەڵ بۆنوبێرینی جۆراوجۆر، لەگەڵ برنجی باسماتی و تەماتەی برژاو', ar: 'كباب لحم الخروف المفروم التقليدي مع التوابل العطرة، يُقدم مع أرز البسمتي والطماطم المشوية' }, price: '$18.99', category: 'traditional', popular: true, image: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=300&h=200&fit=crop', tags: ['spicy', 'grilled'] },
@@ -93,10 +91,10 @@ const FullMenuPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ direction: languages[language].dir }}>
             {filteredMenuItems.map(item => (
               <div key={item.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all">
-                <img src={item.image} alt={item.name[language]} className="w-full h-48 object-cover" />
+                <img src={item.image} alt={getText(item.name)} className="w-full h-48 object-cover" />
                 <div className={`${isRTL ? 'text-right' : 'text-left'} p-6`}>
-                  <h3 className="text-xl font-serif font-bold text-amber-800 mb-1">{item.name[language]}</h3>
-                  <p className="text-gray-700 mb-4 text-sm leading-relaxed">{item.description[language]}</p>
+                  <h3 className="text-xl font-serif font-bold text-amber-800 mb-1">{getText(item.name)}</h3>
+                  <p className="text-gray-700 mb-4 text-sm leading-relaxed">{getText(item.description)}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-amber-600">{item.price}</span>
                     {item.popular && (

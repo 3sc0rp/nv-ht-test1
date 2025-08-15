@@ -13,7 +13,11 @@ const NatureVillageWebsite = () => {
   const languages = {
     en: { name: 'English', code: 'en', dir: 'ltr' },
     ku: { name: 'کوردی', code: 'ku', dir: 'rtl' },
-    ar: { name: 'العربية', code: 'ar', dir: 'rtl' }
+    ar: { name: 'العربية', code: 'ar', dir: 'rtl' },
+    fa: { name: 'فارسی', code: 'fa', dir: 'rtl' },
+    tr: { name: 'Türkçe', code: 'tr', dir: 'ltr' },
+    ur: { name: 'اردو', code: 'ur', dir: 'rtl' },
+    kmr: { name: 'Kurdî (Kurmancî)', code: 'kmr', dir: 'ltr' }
   };
 
   // Kurdish pattern SVG for decorative elements
@@ -168,7 +172,8 @@ const NatureVillageWebsite = () => {
           traditional: 'Traditional',
           vegan: 'Vegan & Vegetarian',
           popular: 'Most Popular'
-        }
+        },
+        viewFull: 'View Full Menu'
       },
       about: {
         title: 'Our Story',
@@ -202,7 +207,7 @@ const NatureVillageWebsite = () => {
       featured: {
         title: 'Featured Dishes',
         subtitle: 'Discover our most beloved Kurdish specialties, crafted with traditional recipes and modern presentation'
-      }
+      },
     },
     ku: {
       nav: {
@@ -229,7 +234,8 @@ const NatureVillageWebsite = () => {
           traditional: 'نەریتی',
           vegan: 'ڕووەکی و ڤێگان',
           popular: 'بەناوبانگترین'
-        }
+        },
+        viewFull: 'بینینی هەموو خۆراکەکان'
       },
       about: {
         title: 'چیرۆکەکەمان',
@@ -290,7 +296,8 @@ const NatureVillageWebsite = () => {
           traditional: 'تقليدي',
           vegan: 'نباتي ونباتي صرف',
           popular: 'الأكثر شهرة'
-        }
+        },
+        viewFull: 'عرض القائمة الكاملة'
       },
       about: {
         title: 'قصتنا',
@@ -325,10 +332,51 @@ const NatureVillageWebsite = () => {
         title: 'الأطباق المميزة',
         subtitle: 'اكتشف أحب الأطباق الكردية لدينا، المحضرة بوصفات تقليدية وعرض عصري'
       }
+    },
+    fa: {
+      nav: { home: 'خانه', menu: 'منو', about: 'درباره ما', gallery: 'گالری', visit: 'دیدار از ما', reservations: 'رزرو', catering: 'کترینگ' },
+      hero: { title: 'روستای طبیعت', subtitle: 'طعم کردستان در هر لقمه', description: 'طعم‌های اصیل کردی را در فضایی گرم و سنتی تجربه کنید؛ هر بشقاب روایت‌گر میراث فرهنگی ماست.', cta1: 'مشاهده منو', cta2: 'رزرو میز' },
+      menu: { title: 'منوی ما', subtitle: 'با MenuIQ - تجربه غذا با هوش مصنوعی', filters: { all: 'همه موارد', traditional: 'سنتی', vegan: 'گیاهی و وجترین', popular: 'محبوب‌ترین' }, viewFull: 'مشاهده منوی کامل' },
+      about: { title: 'داستان ما', content: 'روستای طبیعت با رویای به‌اشتراک‌گذاری طعم‌های اصیل و مهمان‌نوازی گرم کردستان با جهان شکل گرفت.', experience: 'سال تجربه', recipes: 'دستورهای سنتی' },
+      gallery: { title: 'گالری', subtitle: 'سفر تصویری در میراث آشپزی ما' },
+      visit: { title: 'دیدار از ما', subtitle: 'ما را در قلب شهر پیدا کنید', hours: 'ساعات کاری', contact: 'ارتباط', address: 'نشانی', phone: 'تلفن', whatsapp: 'واتس‌اپ', makeReservation: 'رزرو میز', whatsappUs: 'در واتس‌اپ پیام دهید' },
+      footer: { description: 'طعم‌های اصیل و مهمان‌نوازی گرم کردستان را به میز شما می‌آوریم.', quickLinks: 'لینک‌های سریع', contactInfo: 'اطلاعات تماس', openDaily: 'روزانه از ساعت ۱۱:۰۰ باز است', poweredBy: 'قدرت گرفته از', copyright: '© 2024 رستوران کردی روستای طبیعت. همه حقوق محفوظ است.' },
+      featured: { title: 'غذاهای ویژه', subtitle: 'محبوب‌ترین غذاهای کردی ما' }
+    },
+    tr: {
+      nav: { home: 'Ana Sayfa', menu: 'Menü', about: 'Hakkımızda', gallery: 'Galeri', visit: 'Bizi Ziyaret Edin', reservations: 'Rezervasyon', catering: 'Catering' },
+      hero: { title: 'Nature Village', subtitle: 'Her Lokmada Kürdistan’ın Tadı', description: 'Sıcak ve geleneksel bir ortamda, her tabakta zengin kültürel mirasımızın hikâyesini anlatan özgün Kürt lezzetleri.', cta1: 'Menüyü Görüntüle', cta2: 'Rezervasyon Yap' },
+      menu: { title: 'Menümüz', subtitle: 'MenuIQ ile güçlendirildi', filters: { all: 'Tüm Ürünler', traditional: 'Geleneksel', vegan: 'Vegan & Vejetaryen', popular: 'En Popüler' }, viewFull: 'Tüm Menüyü Gör' },
+      about: { title: 'Hikayemiz', content: 'Nature Village, Kürdistan’ın özgün lezzetlerini ve sıcak misafirperverliğini dünyayla paylaşma hayaliyle doğdu.', experience: 'Yıl Deneyim', recipes: 'Geleneksel Tarifler' },
+      gallery: { title: 'Galeri', subtitle: 'Mutfak mirasımıza görsel bir yolculuk' },
+      visit: { title: 'Bizi Ziyaret Edin', subtitle: 'Şehrin kalbinde bizi bulun', hours: 'Saatler', contact: 'İletişim', address: 'Adres', phone: 'Telefon', whatsapp: 'WhatsApp', makeReservation: 'Rezervasyon Yap', whatsappUs: 'WhatsApp’tan Yazın' },
+      footer: { description: 'Kürdistan’ın özgün lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz.', quickLinks: 'Hızlı Bağlantılar', contactInfo: 'İletişim Bilgileri', openDaily: 'Her gün 11:00 Açık', poweredBy: 'Altyapı:', copyright: '© 2024 Nature Village Kürt Restoranı. Tüm hakları saklıdır.' },
+      featured: { title: 'Öne Çıkan Yemekler', subtitle: 'En sevilen Kürt lezzetlerimizi keşfedin' }
+    },
+    ur: {
+      nav: { home: 'ہوم', menu: 'مینیو', about: 'ہمارے بارے میں', gallery: 'گیلری', visit: 'ہم سے ملیں', reservations: 'بکنگ', catering: 'کیٹرنگ' },
+      hero: { title: 'نیچر ولیج', subtitle: 'ہر نوالے میں کردستان کا ذائقہ', description: 'روایتی اور گرم ماحول میں خالص کرد ذائقوں کا تجربہ کریں جہاں ہر ڈش ہماری ثقافتی میراث کی کہانی سناتی ہے۔', cta1: 'مینیو دیکھیں', cta2: 'میز بُک کریں' },
+      menu: { title: 'ہمارا مینیو', subtitle: 'MenuIQ کے ساتھ بہتر بنایا گیا', filters: { all: 'تمام آئٹمز', traditional: 'روایتی', vegan: 'ویگن و ویجیٹرین', popular: 'سب سے مقبول' }, viewFull: 'مکمل مینیو دیکھیں' },
+      about: { title: 'ہماری کہانی', content: 'نیچر ولیج کا مقصد کردستان کے خالص ذائقے اور گرم میزبانی کو دنیا تک پہنچانا ہے۔', experience: 'سالہ تجربہ', recipes: 'روایتی تراکیب' },
+      gallery: { title: 'گیلری', subtitle: 'ہماری کھانوں کی میراث کا بصری سفر' },
+      visit: { title: 'ہم سے ملیں', subtitle: 'شہر کے مرکز میں ہمیں تلاش کریں', hours: 'اوقات', contact: 'رابطہ', address: 'پتہ', phone: 'فون', whatsapp: 'واٹس ایپ', makeReservation: 'میز بُک کریں', whatsappUs: 'واٹس ایپ پر رابطہ کریں' },
+      footer: { description: 'ہم کردستان کے خالص ذائقے اور گرم میزبانی آپ کی میز تک لاتے ہیں۔', quickLinks: 'فوری روابط', contactInfo: 'رابطہ کی معلومات', openDaily: 'روزانہ 11:00 بجے سے کھلا', poweredBy: 'طاقت ور بنائے گئے', copyright: '© 2024 نیچر ولیج کرد ریستوراں۔ تمام حقوق محفوظ ہیں۔' },
+      featured: { title: 'نمایاں ڈشز', subtitle: 'ہماری پسندیدہ کرد خاص ڈشز دریافت کریں' }
+    },
+    kmr: {
+      nav: { home: 'Mal', menu: 'Menû', about: 'Derbarê Me', gallery: 'Galerî', visit: 'Me Sêr Bikin', reservations: 'Rezervasyon', catering: 'Catering' },
+      hero: { title: 'Gundê Sînor (Nature Village)', subtitle: 'Sewiya Kurdistanê di her lokmeyê de', description: 'Di atmosferêk germ û kevnebûyî de xwendevan têkçûnên rastîn ên kurdî biceribînin; her xwarinek çîroka mirasa me ya çandî dibe.', cta1: 'Menû Bibîne', cta2: 'Maseyeke Rezerve Bike' },
+      menu: { title: 'Menûya Me', subtitle: 'Bi MenuIQ hêzdar kirî', filters: { all: 'Hemû Hêmber', traditional: 'Kevnebûyî', vegan: 'Vegan û Wejetaryen', popular: 'Herî Bilind' }, viewFull: 'Hemû Menûyê Bibîne' },
+      about: { title: 'Çîroka Me', content: 'Nature Village bi xuyakirina daxuyaniya têkçûnên rastîn ên Kurdistanê û mêvanperweriya germ ji bo cîhanê hatiye afirandin.', experience: 'Salên Tecrûbe', recipes: 'Recepeyên Kevnebûyî' },
+      gallery: { title: 'Galerî', subtitle: 'Geroka dîtbarî di mirasê xwarinê de' },
+      visit: { title: 'Me Sêr Bikin', subtitle: 'Em li navenda bajarê ne', hours: 'Demjimêr', contact: 'Têkiliye', address: 'Navnîşan', phone: 'Telefûn', whatsapp: 'WhatsApp', makeReservation: 'Rezerve Bike', whatsappUs: 'Li ser WhatsApp binivîse' },
+      footer: { description: 'Em têkçûnên rastîn ên Kurdistanê û mêvanperweriyê li ser maseya we dihênin.', quickLinks: 'Girêdanên Lez', contactInfo: 'Agahiyên Têkiliyê', openDaily: 'Her roj di 11:00 ê nava rojan de vekirî ye', poweredBy: 'Bi hêza', copyright: '© 2024 Nature Village, Xwarinxaneyê Kurdî. Hemû maf parastî ye.' },
+      featured: { title: 'Xwarinên Taybet', subtitle: 'Xasiyên me yên herî hez şûnde nas bikin' }
     }
   };
 
-  const t = translations[language];
+  const t = translations[language] || translations.en;
+  const getText = (obj) => (obj && (obj[language] || obj.en)) || '';
 
   const scrollToSection = (sectionId) => {
     // Check if it's a page navigation
@@ -503,12 +551,12 @@ const NatureVillageWebsite = () => {
               <div key={item.id} className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:scale-105">
                 <img 
                   src={item.image} 
-                  alt={item.name[language]}
+                  alt={getText(item.name)}
                   className="w-full h-48 object-cover"
                 />
                 <div className={`p-6 ${isRTL ? 'text-right' : 'text-left'}`} style={{ direction: languages[language].dir }}>
-                  <h3 className="text-xl font-serif font-bold text-amber-800 mb-2">{item.name[language]}</h3>
-                  <p className="text-gray-700 mb-4">{item.description[language]}</p>
+                  <h3 className="text-xl font-serif font-bold text-amber-800 mb-2">{getText(item.name)}</h3>
+                  <p className="text-gray-700 mb-4">{getText(item.description)}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-amber-600">{item.price}</span>
                     <div className="flex items-center space-x-1 text-yellow-500">
@@ -550,11 +598,11 @@ const NatureVillageWebsite = () => {
 
           {/* View Full Menu Button */}
           <div className="text-center mb-12">
-            <button
+            <button 
               onClick={() => router.push('/menu')}
               className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg text-sm font-semibold transition-colors"
             >
-              {language === 'ar' ? 'عرض القائمة الكاملة' : language === 'ku' ? 'بینینی هەموو خۆراکەکان' : 'View Full Menu'}
+              {t.menu.viewFull}
             </button>
           </div>
 
@@ -565,7 +613,7 @@ const NatureVillageWebsite = () => {
                 <div className="relative">
                   <img 
                     src={item.image} 
-                    alt={item.name[language]}
+                    alt={getText(item.name)}
                     className="w-full h-48 object-cover"
                   />
                   {item.popular && (
@@ -575,8 +623,8 @@ const NatureVillageWebsite = () => {
                   )}
                 </div>
                 <div className={`p-6 ${isRTL ? 'text-right' : 'text-left'}`} style={{ direction: languages[language].dir }}>
-                  <h3 className="text-xl font-serif font-bold text-amber-800 mb-1">{item.name[language]}</h3>
-                  <p className="text-gray-700 mb-4 text-sm leading-relaxed">{item.description[language]}</p>
+                  <h3 className="text-xl font-serif font-bold text-amber-800 mb-1">{getText(item.name)}</h3>
+                  <p className="text-gray-700 mb-4 text-sm leading-relaxed">{getText(item.description)}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-amber-600">{item.price}</span>
                     <button className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
