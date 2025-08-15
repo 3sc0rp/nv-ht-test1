@@ -17,13 +17,13 @@ const FullMenuPage = () => {
   }
 
   const translations = {
-    en: { title: 'Full Menu', subtitle: 'Explore all our dishes powered by MenuIQ', filters: { all: 'All Items', appetizers: 'Appetizers', salads: 'Salads', traditional: 'Traditional', vegan: 'Vegan & Vegetarian', soup: 'Soups', dessert: 'Desserts', popular: 'Most Popular' } },
-    ku: { title: 'هەموو خۆراکەکان', subtitle: 'هه‌موو خۆراكه‌كانمان ببینە به‌ MenuIQ', filters: { all: 'هەموو', appetizers: 'خۆراکی پێش‌خواردن', salads: 'لەواشەکان', traditional: 'نەریتی', vegan: 'ڕووەکی و ڤێگان', soup: 'شۆربە', dessert: 'شیرینی', popular: 'بەناوبانگترین' } },
-    ar: { title: 'القائمة الكاملة', subtitle: 'استكشف جميع أطباقنا مدعومة بـ MenuIQ', filters: { all: 'الكل', appetizers: 'مقبلات', salads: 'سلطات', traditional: 'تقليدي', vegan: 'نباتي ونباتي صرف', soup: 'شوربات', dessert: 'حلويات', popular: 'الأكثر شهرة' } },
-    fa: { title: 'منوی کامل', subtitle: 'همه غذاهای ما با MenuIQ', filters: { all: 'همه موارد', appetizers: 'پیش‌غذاها', salads: 'سالادها', traditional: 'سنتی', vegan: 'گیاهی و وجترین', soup: 'سوپ‌ها', dessert: 'دسرها', popular: 'محبوب‌ترین' } },
-    tr: { title: 'Tam Menü', subtitle: 'Tüm yemeklerimiz MenuIQ ile', filters: { all: 'Tümü', appetizers: 'Başlangıçlar', salads: 'Salatalar', traditional: 'Geleneksel', vegan: 'Vegan & Vejetaryen', soup: 'Çorbalar', dessert: 'Tatlılar', popular: 'En Popüler' } },
-    ur: { title: 'مکمل مینیو', subtitle: 'تمام ڈشز MenuIQ کے ساتھ', filters: { all: 'سب', appetizers: 'سٹارٹرز', salads: 'سلادز', traditional: 'روایتی', vegan: 'ویگن و ویجیٹرین', soup: 'سوپس', dessert: 'میٹھائیاں', popular: 'سب سے مقبول' } },
-    kmr: { title: 'Hemû Menû', subtitle: 'Hemû xwarinên me bi MenuIQ', filters: { all: 'Hemû', appetizers: 'Destpêk', salads: 'Salatan', traditional: 'Kevnebûyî', vegan: 'Vegan û Wejetaryen', soup: 'Şorbeyên', dessert: 'Şîrînî', popular: 'Herî Bilind' } }
+    en: { title: 'Full Menu', subtitle: 'Explore all our dishes powered by MenuIQ', filters: { all: 'All Items', appetizers: 'Appetizers', salads: 'Salads', sandwich_platter: 'Sandwich & Platter', naan: 'Naan', traditional: 'Traditional', vegan: 'Vegan & Vegetarian', soup: 'Soups', dessert: 'Desserts', popular: 'Most Popular' } },
+    ku: { title: 'هەموو خۆراکەکان', subtitle: 'هه‌موو خۆراكه‌كانمان ببینە به‌ MenuIQ', filters: { all: 'هەموو', appetizers: 'خۆراکی پێش‌خواردن', salads: 'لەواشەکان', sandwich_platter: 'ساندویچ و پلیتەر', naan: 'نان', traditional: 'نەریتی', vegan: 'ڕووەکی و ڤێگان', soup: 'شۆربە', dessert: 'شیرینی', popular: 'بەناوبانگترین' } },
+    ar: { title: 'القائمة الكاملة', subtitle: 'استكشف جميع أطباقنا مدعومة بـ MenuIQ', filters: { all: 'الكل', appetizers: 'مقبلات', salads: 'سلطات', sandwich_platter: 'سندويش وصحن', naan: 'نان', traditional: 'تقليدي', vegan: 'نباتي ونباتي صرف', soup: 'شوربات', dessert: 'حلويات', popular: 'الأكثر شهرة' } },
+    fa: { title: 'منوی کامل', subtitle: 'همه غذاهای ما با MenuIQ', filters: { all: 'همه موارد', appetizers: 'پیش‌غذاها', salads: 'سالادها', sandwich_platter: 'ساندویچ و پلاتر', naan: 'نان', traditional: 'سنتی', vegan: 'گیاهی و وجترین', soup: 'سوپ‌ها', dessert: 'دسرها', popular: 'محبوب‌ترین' } },
+    tr: { title: 'Tam Menü', subtitle: 'Tüm yemeklerimiz MenuIQ ile', filters: { all: 'Tümü', appetizers: 'Başlangıçlar', salads: 'Salatalar', sandwich_platter: 'Sandviç & Tabak', naan: 'Naan', traditional: 'Geleneksel', vegan: 'Vegan & Vejetaryen', soup: 'Çorbalar', dessert: 'Tatlılar', popular: 'En Popüler' } },
+    ur: { title: 'مکمل مینیو', subtitle: 'تمام ڈشز MenuIQ کے ساتھ', filters: { all: 'سب', appetizers: 'سٹارٹرز', salads: 'سلادز', sandwich_platter: 'سینڈوچ اور پلیٹر', naan: 'نان', traditional: 'روایتی', vegan: 'ویگن و ویجیٹرین', soup: 'سوپس', dessert: 'میٹھائیاں', popular: 'سب سے مقبول' } },
+    kmr: { title: 'Hemû Menû', subtitle: 'Hemû xwarinên me bi MenuIQ', filters: { all: 'Hemû', appetizers: 'Destpêk', salads: 'Salatan', sandwich_platter: 'Sandwîç û Plater', naan: 'Nan', traditional: 'Kevnebûyî', vegan: 'Vegan û Wejetaryen', soup: 'Şorbeyên', dessert: 'Şîrînî', popular: 'Herî Bilind' } }
   }
   const t = translations[language] || translations.en
   const getText = (obj) => (obj && (obj[language] || obj.en)) || ''
@@ -43,6 +43,16 @@ const FullMenuPage = () => {
     { id: 1102, name: { en: 'Fattoush Salad' }, description: { en: 'Lettuce, tomatoes, cucumbers, green peppers, fresh mint, parsley, crispy pita bread, and pomegranate molasses dressing.' }, price: '$13.99', category: 'salads', popular: false, image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=300&h=200&fit=crop', tags: ['vegetarian'], addOns: { title: 'Add Protein', options: [ { name: 'Beef', price: '$7.99' }, { name: 'Chicken', price: '$6.99' }, { name: 'Falafel', price: '$4.99' }, { name: 'Shrimp', price: '$5.99' } ] } },
     { id: 1103, name: { en: 'Shwan Salad' }, description: { en: 'Tomatoes, cucumbers, green peppers, onions, parsley, walnuts, olive oil and lemon juice.' }, price: '$13.99', category: 'salads', popular: false, image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop', tags: ['vegetarian'], addOns: { title: 'Add Protein', options: [ { name: 'Beef', price: '$7.99' }, { name: 'Chicken', price: '$6.99' }, { name: 'Falafel', price: '$4.99' }, { name: 'Shrimp', price: '$5.99' } ] } },
     { id: 1104, name: { en: 'Suwanee Salad' }, description: { en: 'Boiled beets, tomatoes, bell peppers, cucumber, onions, and seasonal fruits. Colorful and refreshing.' }, price: '$14.99', category: 'salads', popular: false, image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=300&h=200&fit=crop', tags: ['vegetarian'], addOns: { title: 'Add Protein', options: [ { name: 'Beef', price: '$7.99' }, { name: 'Chicken', price: '$6.99' }, { name: 'Falafel', price: '$4.99' }, { name: 'Shrimp', price: '$5.99' } ] } },
+    // Soups
+    { id: 1201, name: { en: 'Lentil Soup' }, description: { en: 'A hearty and nutritious soup made with red lentils, onions, carrots, potatoes, and a blend of spices.' }, price: '$6.99', category: 'soup', popular: true, image: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=300&h=200&fit=crop', tags: ['vegetarian'] },
+    // Sandwich & Platter (variants)
+    { id: 1301, name: { en: 'Iraqi Guss Platter' }, description: { en: 'Beef wrap, thinly sliced and seasoned. Served with a fresh salad or fries upon choice.' }, category: 'sandwich_platter', popular: true, variants: [ { label: 'Sandwich', price: '$15.99' }, { label: 'Platter', price: '$17.99' } ], image: 'https://images.unsplash.com/photo-1604908177111-19441f4e0f88?w=300&h=200&fit=crop', tags: [] },
+    { id: 1302, name: { en: 'Chicken Platter' }, description: { en: 'Sliced, seasoned chicken wrap. Served with a side salad or fries upon choice.' }, category: 'sandwich_platter', popular: false, variants: [ { label: 'Sandwich', price: '$14.99' }, { label: 'Platter', price: '$16.99' } ], image: 'https://images.unsplash.com/photo-1604908177222-7a0d2a8f4f54?w=300&h=200&fit=crop', tags: [] },
+    { id: 1303, name: { en: 'Falafels Platter' }, description: { en: 'Special chef made crispy falafel balls. Wrapped in soft pita bread, with fresh vegetables.' }, category: 'sandwich_platter', popular: false, variants: [ { label: 'Sandwich', price: '$14.99' }, { label: 'Platter', price: '$16.99' } ], image: 'https://images.unsplash.com/photo-1542834369-f10ebf06d3cb?w=300&h=200&fit=crop', tags: ['vegetarian', 'vegan'] },
+    // Naan
+    { id: 1401, name: { en: 'Hawrami Naan' }, description: { en: 'A delightful flatbread originating from Hawraman, traditionally baked to perfection and served warm.' }, price: '$2.99', category: 'naan', popular: true, image: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300&h=200&fit=crop', tags: [] },
+    { id: 1402, name: { en: 'Samoon' }, description: { en: 'A delicious Middle Eastern bread, known for its soft and slightly chewy texture, often enjoyed with a variety of savory and sweet toppings.' }, price: '$2.99', category: 'naan', popular: false, image: 'https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=300&h=200&fit=crop', tags: [] },
+    { id: 1403, name: { en: 'Sesame Kulera' }, description: { en: 'A type of flatbread made without the need for extensive kneading. Known for its simplicity and soft, chewy texture.' }, price: '$3.99', category: 'naan', popular: false, image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=300&h=200&fit=crop', tags: [] },
   ]
 
   const filteredMenuItems = activeFilter === 'all'
@@ -103,12 +113,22 @@ const FullMenuPage = () => {
                 <div className={`${isRTL ? 'text-right' : 'text-left'} p-6`}>
                   <h3 className="text-xl font-serif font-bold text-amber-800 mb-1">{getText(item.name)}</h3>
                   <p className="text-gray-700 mb-4 text-sm leading-relaxed">{getText(item.description)}</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-amber-600">{item.price}</span>
-                    {item.popular && (
-                      <span className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-xs">{t.filters.popular}</span>
-                    )}
-                  </div>
+                  {item.variants ? (
+                    <div className={`flex ${isRTL ? 'justify-end' : 'justify-start'} gap-3 mb-2`}>
+                      {item.variants.map((v, i) => (
+                        <span key={i} className="bg-amber-50 text-amber-700 border border-amber-200 px-3 py-1 rounded-full text-sm font-semibold">
+                          {v.label}: {v.price}
+                        </span>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex justify-between items-center">
+                      <span className="text-2xl font-bold text-amber-600">{item.price}</span>
+                      {item.popular && (
+                        <span className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-xs">{t.filters.popular}</span>
+                      )}
+                    </div>
+                  )}
                   {item.addOns && (
                     <div className="mt-3 text-sm">
                       <div className="font-semibold text-amber-800 mb-1">{item.addOns.title}</div>
