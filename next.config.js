@@ -6,10 +6,11 @@ const nextConfig = {
       'images.unsplash.com',
       'naturevillagerestaurant.com'
     ],
-    unoptimized: true
+    unoptimized: false,
+    formats: ['image/webp', 'image/avif']
   },
   i18n: {
-    locales: ['en', 'ku', 'ar'],
+    locales: ['en', 'ku', 'ar', 'fa', 'tr', 'ur', 'kmr'],
     defaultLocale: 'en',
     localeDetection: false
   },
