@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { Menu, X, MapPin, Phone, Clock, Star, Filter, Globe, Facebook, Instagram, Twitter, MessageCircle, ChefHat, Users, Calendar, Award } from 'lucide-react';
+import { Menu, X, MapPin, Phone, Clock, Star, Filter, Globe, Facebook, Instagram, Twitter, MessageCircle, ChefHat, Users, Calendar, Award, ChevronRight, Home, Utensils, Info, Camera, ExternalLink, Share2, ChevronDown } from 'lucide-react';
 import { useRouter } from 'next/router';
 
 const NatureVillageWebsite = () => {
@@ -9,6 +9,8 @@ const NatureVillageWebsite = () => {
   const [activeFilter, setActiveFilter] = useState('popular');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+  const [showOrderModal, setShowOrderModal] = useState(false);
   const router = useRouter();
 
   // Language options with proper Unicode characters
@@ -36,6 +38,21 @@ const NatureVillageWebsite = () => {
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  // Handle click outside to close dropdowns
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (showLanguageDropdown && !event.target.closest('.language-dropdown')) {
+        setShowLanguageDropdown(false);
+      }
+      if (showOrderModal && !event.target.closest('.order-modal')) {
+        setShowOrderModal(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showLanguageDropdown, showOrderModal]);
 
   // Sync language with query param and handle document attributes safely
   useEffect(() => {
@@ -266,7 +283,8 @@ const NatureVillageWebsite = () => {
         gallery: 'Gallery',
         visit: 'Visit Us',
         reservations: 'Reservations',
-        catering: 'Catering'
+        catering: 'Catering',
+        orderOnline: 'Order'
       },
       hero: {
         title: 'Nature Village',
@@ -322,7 +340,7 @@ const NatureVillageWebsite = () => {
         openDaily: 'Open Daily 11:00 AM - 11:00 PM',
         poweredBy: 'Powered by',
         blunari: 'Blunari AI',
-        copyright: '© 2024 Nature Village Kurdish Restaurant. All rights reserved.',
+        copyright: `© ${new Date().getFullYear()} Nature Village Kurdish Restaurant. All rights reserved.`,
         privacy: 'Privacy Policy',
         terms: 'Terms of Service'
       },
@@ -354,7 +372,8 @@ const NatureVillageWebsite = () => {
         gallery: 'وێنەکان',
         visit: 'سەردانمان بکەن',
         reservations: 'جێگە حیجازکردن',
-        catering: 'کاتەرینگ'
+        catering: 'کاتەرینگ',
+        orderOnline: 'داواکاری'
       },
       hero: {
         title: 'گوندی سروشت',
@@ -410,7 +429,7 @@ const NatureVillageWebsite = () => {
         openDaily: 'ڕۆژانە کراوەیە ١١:٠٠ی بەیانی - ١١:٠٠ی شەو',
         poweredBy: 'هێزی لەلایەن',
         blunari: 'بلوناری AI',
-        copyright: '© ٢٠٢٤ گوندی سروشت چێشتخانەی کوردی. هەموو مافەکان پارێزراون.',
+        copyright: `© ${new Date().getFullYear()} گوندی سروشت چێشتخانەی کوردی. هەموو مافەکان پارێزراون.`,
         privacy: 'سیاسەتی تایبەتی',
         terms: 'مەرجەکانی خزمەتگوزاری'
       },
@@ -442,7 +461,8 @@ const NatureVillageWebsite = () => {
         gallery: 'المعرض',
         visit: 'زورونا',
         reservations: 'الحجوزات',
-        catering: 'خدمات الطعام'
+        catering: 'خدمات الطعام',
+        orderOnline: 'اطلب'
       },
       hero: {
         title: 'قرية الطبيعة',
@@ -498,7 +518,7 @@ const NatureVillageWebsite = () => {
         openDaily: 'مفتوح يومياً ١١:٠٠ ص - ١١:٠٠ م',
         poweredBy: 'مدعوم من',
         blunari: 'بلوناري AI',
-        copyright: '© ٢٠٢٤ قرية الطبيعة مطعم كردي. جميع الحقوق محفوظة.',
+        copyright: `© ${new Date().getFullYear()} قرية الطبيعة مطعم كردي. جميع الحقوق محفوظة.`,
         privacy: 'سياسة الخصوصية',
         terms: 'شروط الخدمة'
       },
@@ -530,7 +550,8 @@ const NatureVillageWebsite = () => {
         gallery: 'گالری',
         visit: 'بازدید از ما',
         reservations: 'رزرو',
-        catering: 'کیترینگ'
+        catering: 'کیترینگ',
+        orderOnline: 'سفارش'
       },
       hero: {
         title: 'دهکده طبیعت',
@@ -586,7 +607,7 @@ const NatureVillageWebsite = () => {
         openDaily: 'روزانه باز ۱۱:۰۰ صبح - ۱۱:۰۰ شب',
         poweredBy: 'قدرت گرفته از',
         blunari: 'بلوناری AI',
-        copyright: '© ۲۰۲۴ دهکده طبیعت رستوران کردی. تمام حقوق محفوظ است.',
+        copyright: `© ${new Date().getFullYear()} دهکده طبیعت رستوران کردی. تمام حقوق محفوظ است.`,
         privacy: 'سیاست حفظ حریم خصوصی',
         terms: 'شرایط خدمات'
       },
@@ -618,7 +639,8 @@ const NatureVillageWebsite = () => {
         gallery: 'Galeri',
         visit: 'Bizi Ziyaret Edin',
         reservations: 'Rezervasyon',
-        catering: 'Catering'
+        catering: 'Catering',
+        orderOnline: 'Sipariş'
       },
       hero: {
         title: 'Nature Village',
@@ -674,7 +696,7 @@ const NatureVillageWebsite = () => {
         openDaily: 'Her Gün Açık 11:00 - 23:00',
         poweredBy: 'Destekleyen',
         blunari: 'Blunari AI',
-        copyright: '© 2024 Nature Village Kürt Restoranı. Tüm hakları saklıdır.',
+        copyright: `© ${new Date().getFullYear()} Nature Village Kürt Restoranı. Tüm hakları saklıdır.`,
         privacy: 'Gizlilik Politikası',
         terms: 'Hizmet Şartları'
       },
@@ -706,7 +728,8 @@ const NatureVillageWebsite = () => {
         gallery: 'گیلری',
         visit: 'ہمیں ملیں',
         reservations: 'بکنگ',
-        catering: 'کیٹرنگ'
+        catering: 'کیٹرنگ',
+        orderOnline: 'آرڈر'
       },
       hero: {
         title: 'نیچر ولیج',
@@ -762,7 +785,7 @@ const NatureVillageWebsite = () => {
         openDaily: 'روزانہ کھلا ۱۱:۰۰ صبح - ۱۱:۰۰ رات',
         poweredBy: 'طاقت فراہم کنندہ',
         blunari: 'بلوناری AI',
-        copyright: '© ۲۰۲۴ نیچر ولیج کرد ریسٹوران۔ تمام حقوق محفوظ ہیں۔',
+        copyright: `© ${new Date().getFullYear()} نیچر ولیج کرد ریسٹوران۔ تمام حقوق محفوظ ہیں۔`,
         privacy: 'پرائیویسی پالیسی',
         terms: 'سروس کی شرائط'
       },
@@ -794,7 +817,8 @@ const NatureVillageWebsite = () => {
         gallery: 'Galerî',
         visit: 'Serdana Me Bikin',
         reservations: 'Rezervasyon',
-        catering: 'Katering'
+        catering: 'Katering',
+        orderOnline: 'Sifariş'
       },
       hero: {
         title: 'Gundê Xwezayê',
@@ -850,7 +874,7 @@ const NatureVillageWebsite = () => {
         openDaily: 'Rojane Vekirî 11:00 - 23:00',
         poweredBy: 'Ji aliyê ve tê piştgirîkirin',
         blunari: 'Blunari AI',
-        copyright: '© 2024 Gundê Xwezayê Xwarinxaneya Kurdî. Hemû maf parastî ne.',
+        copyright: `© ${new Date().getFullYear()} Gundê Xwezayê Xwarinxaneya Kurdî. Hemû maf parastî ne.`,
         privacy: 'Polîtikaya Nihêniyê',
         terms: 'Mercên Karûbarê'
       },
@@ -989,6 +1013,42 @@ const NatureVillageWebsite = () => {
     }
   }, []);
 
+  // Online order handler
+  const handleOrderOnline = useCallback(() => {
+    setShowOrderModal(true);
+  }, []);
+
+  // Delivery platform handlers
+  const handleUberEats = useCallback(() => {
+    try {
+      // Replace with your actual Uber Eats restaurant URL
+      window.open('https://www.ubereats.com/store/nature-village', '_blank', 'noopener,noreferrer');
+      setShowOrderModal(false);
+    } catch (error) {
+      console.error('Error opening Uber Eats:', error);
+    }
+  }, []);
+
+  const handleDoorDash = useCallback(() => {
+    try {
+      // Replace with your actual DoorDash restaurant URL
+      window.open('https://www.doordash.com/store/nature-village', '_blank', 'noopener,noreferrer');
+      setShowOrderModal(false);
+    } catch (error) {
+      console.error('Error opening DoorDash:', error);
+    }
+  }, []);
+
+  const handleSlice = useCallback(() => {
+    try {
+      // Replace with your actual Slice restaurant URL
+      window.open('https://slicelife.com/restaurants/nature-village', '_blank', 'noopener,noreferrer');
+      setShowOrderModal(false);
+    } catch (error) {
+      console.error('Error opening Slice:', error);
+    }
+  }, []);
+
   // Simplified className helper function
   const cn = (...classes) => {
     return classes.filter(Boolean).join(' ');
@@ -1008,78 +1068,226 @@ const NatureVillageWebsite = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50" style={{ direction: languages[language]?.dir || 'ltr' }}>
+    <>
+      <style jsx>{`
+        /* Mobile menu animations */
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInLeft {
+          from {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-out;
+        }
+
+        .animate-slideInLeft {
+          animation: slideInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .animate-slideInRight {
+          animation: slideInRight 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+      `}</style>
+      <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50" style={{ direction: languages[language]?.dir || 'ltr' }}>
       {/* Navigation */}
       <nav className={cn(
         'fixed top-0 w-full z-50 border-b-2 border-amber-200 transition-all duration-300',
         isScrolled ? 'bg-white shadow-xl py-2' : 'bg-white/95 backdrop-blur-md shadow-lg py-4'
       )}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={cn('flex justify-between items-center h-16', isRTL && 'flex-row-reverse')}>
-            {/* Logo Section */}
-            <div className={cn('flex items-center', isRTL && 'flex-row-reverse')}>
+          <div className={cn('flex items-center justify-between h-16', isRTL && 'flex-row-reverse')}>
+            {/* Logo Section - Enhanced with accessibility */}
+            <div className={cn('flex items-center flex-shrink-0', isRTL && 'flex-row-reverse')}>
               <img 
                 src="https://naturevillagerestaurant.com/wp-content/uploads/2024/09/cropped-NatureVillage-Logo_circle-1222-2048x2048-1.webp" 
                 alt="Nature Village Restaurant Logo" 
-                className={cn('w-10 h-10 sm:w-12 sm:h-12 object-contain', rtlClass('mr-3', 'ml-3'))}
+                className={cn('w-10 h-10 sm:w-12 sm:h-12 object-contain transition-transform duration-200 hover:scale-105', rtlClass('mr-3', 'ml-3'))}
                 onError={(e) => {
-                  e.target.style.display = 'none';
+                  e.currentTarget.style.display = 'none';
                 }}
               />
               <div className="flex flex-col">
-                <div className="text-lg sm:text-2xl font-serif font-bold text-amber-800">Nature Village</div>
-                <div className="text-xs text-amber-600 font-sans hidden sm:block">Kurdish Restaurant</div>
+                <div className="text-lg sm:text-2xl font-serif font-bold text-amber-800 transition-colors duration-200 hover:text-amber-700">Nature Village</div>
+                <div className="text-xs text-amber-600 font-sans hidden sm:block">Restaurant</div>
               </div>
             </div>
             
-            {/* Desktop Navigation */}
-            <div className="hidden lg:block">
-              <div className={cn('flex items-baseline space-x-4', isRTL && 'space-x-reverse')}>
-                {Object.entries(t.nav || {}).map(([key, value]) => (
+            {/* Desktop Navigation - Enhanced with accessibility */}
+            <div className="hidden lg:flex lg:items-center lg:justify-center lg:flex-1">
+              <nav className={cn('flex items-center justify-center space-x-1', isRTL && 'space-x-reverse')} role="navigation" aria-label="Main navigation">
+                <div className={cn('flex items-center space-x-1', isRTL && 'space-x-reverse')}>
+                  {Object.entries(t.nav || {})
+                    .filter(([key]) => key !== 'orderOnline')
+                    .map(([key, value]) => (
+                    <button
+                      key={key}
+                      onClick={() => scrollToSection(key)}
+                      className={cn(
+                        'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2',
+                        'whitespace-nowrap relative group',
+                        currentSection === key 
+                          ? 'bg-amber-800 text-white shadow-lg' 
+                          : 'text-amber-800 hover:bg-amber-100 hover:text-amber-900'
+                      )}
+                      aria-current={currentSection === key ? 'page' : undefined}
+                      tabIndex={0}
+                    >
+                      {value}
+                      {currentSection !== key && (
+                        <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-amber-600 transition-all duration-200 group-hover:w-full group-hover:left-0"></span>
+                      )}
+                    </button>
+                  ))}
+                  
+                  {/* Order Online CTA Button */}
                   <button
-                    key={key}
-                    onClick={() => scrollToSection(key)}
+                    onClick={handleOrderOnline}
                     className={cn(
-                      'px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105',
-                      currentSection === key 
-                        ? 'bg-amber-800 text-white shadow-md' 
-                        : 'text-amber-800 hover:bg-amber-100'
+                      'flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
+                      isRTL && 'space-x-reverse'
                     )}
+                    aria-label={t.nav?.orderOnline || 'Order'}
                   >
-                    {value}
+                    <ChefHat className="w-4 h-4" aria-hidden="true" />
+                    <span className="font-medium text-xs uppercase tracking-wide whitespace-nowrap">{t.nav?.orderOnline || 'Order'}</span>
                   </button>
-                ))}
-              </div>
+                </div>
+              </nav>
             </div>
 
-            {/* Language Toggle & Mobile Menu */}
-            <div className={cn('flex items-center space-x-3', isRTL && 'space-x-reverse')}>
-              {/* Language Selector */}
-              <div className="relative">
-                <select
-                  value={language}
-                  onChange={(e) => handleLanguageChange(e.target.value)}
+            {/* Social Media Links - Minimal Design */}
+            <div className="hidden lg:flex items-center space-x-2 flex-shrink-0">
+              <a 
+                href="https://facebook.com/naturevillagerestaurant" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg text-amber-700 hover:text-amber-800 hover:bg-amber-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1"
+                aria-label="Follow us on Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://instagram.com/naturevillagerestaurant" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg text-amber-700 hover:text-amber-800 hover:bg-amber-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Language Toggle & Mobile Menu - Enhanced */}
+            <div className={cn('flex items-center space-x-3 flex-shrink-0', isRTL && 'space-x-reverse')}>
+              {/* Order Online Button for Mobile */}
+              <button
+                onClick={handleOrderOnline}
+                className={cn(
+                  'lg:hidden flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
+                  isRTL && 'space-x-reverse'
+                )}
+                aria-label={t.nav?.orderOnline || 'Order'}
+              >
+                <ChefHat className="w-4 h-4" aria-hidden="true" />
+                <span className="hidden sm:inline font-medium text-xs uppercase tracking-wide whitespace-nowrap">{t.nav?.orderOnline || 'Order'}</span>
+              </button>
+
+              {/* Language Selector - Minimal Design */}
+              <div className="relative language-dropdown">
+                <button
+                  onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
                   className={cn(
-                    'appearance-none bg-transparent text-amber-800 hover:text-amber-600 font-medium text-sm border border-amber-200 rounded-md px-3 py-1 outline-none cursor-pointer transition-colors',
-                    'focus:border-amber-500 focus:ring-1 focus:ring-amber-500'
+                    'flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white/90 hover:bg-white border border-amber-200 hover:border-amber-300 text-amber-800 hover:text-amber-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1',
+                    isRTL && 'space-x-reverse'
                   )}
-                  style={{ direction: languages[language]?.dir || 'ltr' }}
+                  aria-expanded={showLanguageDropdown}
+                  aria-haspopup="listbox"
+                  aria-label="Select language"
                 >
-                  {Object.entries(languages).map(([code, lang]) => (
-                    <option key={code} value={code} className="bg-white text-amber-800">
-                      {lang.flag} {lang.name}
-                    </option>
-                  ))}
-                </select>
-                <Globe className="w-4 h-4 absolute right-1 top-1/2 transform -translate-y-1/2 pointer-events-none text-amber-600" />
+                  <Globe className="w-4 h-4" aria-hidden="true" />
+                  <span className="font-medium text-xs uppercase tracking-wide">
+                    {language === 'en' ? 'EN' :
+                     language === 'ku' ? 'KU' :
+                     language === 'ar' ? 'AR' :
+                     language === 'fa' ? 'FA' :
+                     language === 'tr' ? 'TR' :
+                     language === 'ur' ? 'UR' :
+                     'KMR'}
+                  </span>
+                </button>
+
+                {showLanguageDropdown && (
+                  <div className={cn(
+                    'absolute mt-1 w-44 bg-white rounded-lg shadow-lg border border-amber-200 z-[9999] overflow-hidden',
+                    isRTL ? 'right-0' : 'left-0',
+                    'max-h-72 overflow-y-auto'
+                  )}>
+                    {[
+                      { code: 'en', name: 'English' },
+                      { code: 'ku', name: 'کوردی' },
+                      { code: 'ar', name: 'العربية' },
+                      { code: 'fa', name: 'فارسی' },
+                      { code: 'tr', name: 'Türkçe' },
+                      { code: 'ur', name: 'اردو' },
+                      { code: 'kmr', name: 'Kurmancî' }
+                    ].map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          handleLanguageChange(lang.code);
+                          setShowLanguageDropdown(false);
+                        }}
+                        className={cn(
+                          'w-full px-3 py-2.5 hover:bg-amber-50 transition-colors duration-150 flex items-center space-x-2.5 text-sm',
+                          isRTL && 'space-x-reverse text-right',
+                          !isRTL && 'text-left',
+                          language === lang.code ? 'bg-amber-100 text-amber-800 font-medium' : 'text-gray-700 hover:text-amber-800'
+                        )}
+                      >
+                        <div className={cn(
+                          'w-1.5 h-1.5 rounded-full transition-colors duration-150',
+                          language === lang.code ? 'bg-amber-500' : 'bg-gray-300'
+                        )}></div>
+                        <span>{lang.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Mobile menu button */}
               <div className="lg:hidden">
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="text-amber-800 hover:text-amber-600 p-2 rounded-md hover:bg-amber-100 transition-colors"
+                  className="text-amber-800 hover:text-amber-600 p-2 rounded-md hover:bg-amber-100 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
                   aria-label="Toggle menu"
+                  aria-expanded={isMenuOpen}
                 >
                   {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </button>
@@ -1087,23 +1295,208 @@ const NatureVillageWebsite = () => {
             </div>
           </div>
 
-          {/* Mobile Navigation */}
+          {/* Enhanced Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden bg-white border-t border-amber-200 mt-2 rounded-b-lg shadow-lg">
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                {Object.entries(t.nav || {}).map(([key, value]) => (
+            <div 
+              className="lg:hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm animate-fadeIn" 
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <div 
+                className={cn(
+                  'absolute top-0 w-80 sm:w-96 h-screen min-h-screen bg-white shadow-2xl transform transition-all duration-500 ease-out border-r border-amber-200 flex flex-col',
+                  isRTL ? 'right-0 animate-slideInRight' : 'left-0 animate-slideInLeft'
+                )} 
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Mobile Menu Header with enhanced design */}
+                <div className="relative flex items-center justify-between p-6 border-b border-amber-200 bg-white shadow-sm flex-shrink-0">
+                  <div className={cn('flex items-center', isRTL && 'flex-row-reverse')}>
+                    <div className="relative">
+                      <div className={cn('w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center shadow-md', rtlClass('mr-3', 'ml-3'))}>
+                        <span className="text-white font-bold text-lg">N</span>
+                      </div>
+                      <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-xl font-serif font-bold text-amber-800">Nature Village</span>
+                      <span className="text-xs text-amber-600 font-medium">Restaurant</span>
+                    </div>
+                  </div>
                   <button
-                    key={key}
-                    onClick={() => scrollToSection(key)}
-                    className={cn(
-                      'block px-3 py-3 text-base font-medium text-amber-800 hover:bg-amber-100 w-full rounded-md transition-colors',
-                      rtlClass('text-left', 'text-right'),
-                      currentSection === key && 'bg-amber-800 text-white'
-                    )}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="relative p-3 rounded-full text-amber-800 hover:text-amber-900 hover:bg-amber-100/50 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-amber-400"
+                    aria-label="Close mobile menu"
                   >
-                    {value}
+                    <X className="w-6 h-6 transition-transform duration-200 group-hover:rotate-90" />
+                    <div className="absolute inset-0 rounded-full bg-amber-200/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </button>
-                ))}
+                </div>
+
+                {/* Mobile Menu Navigation with enhanced animations */}
+                <nav className="flex flex-col py-6 px-4 space-y-1 overflow-y-auto flex-1 bg-white" role="navigation" aria-label="Mobile navigation">
+                  {Object.entries(t.nav || {})
+                    .filter(([key]) => key !== 'orderOnline')
+                    .map(([key, value], index) => (
+                    <button
+                      key={key}
+                      onClick={() => {
+                        scrollToSection(key);
+                        setIsMenuOpen(false);
+                      }}
+                      className={cn(
+                        'group relative flex items-center justify-between px-5 py-4 rounded-xl text-amber-800 hover:text-amber-900 transition-all duration-300 font-medium text-lg border border-transparent',
+                        'hover:bg-gradient-to-r hover:from-amber-50 hover:to-orange-50 hover:border-amber-200/50 hover:shadow-md hover:scale-[1.02]',
+                        'focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2',
+                        currentSection === key && 'bg-gradient-to-r from-amber-100 to-orange-100 text-amber-900 border-amber-300/50 shadow-sm scale-[1.02]'
+                      )}
+                      style={{ animationDelay: `${index * 50}ms` }}
+                    >
+                      <span className="flex items-center">
+                        {/* Add navigation icons */}
+                        {key === 'home' && <Home className="w-5 h-5 mr-3 opacity-70" />}
+                        {key === 'menu' && <Utensils className="w-5 h-5 mr-3 opacity-70" />}
+                        {key === 'about' && <Info className="w-5 h-5 mr-3 opacity-70" />}
+                        {key === 'gallery' && <Camera className="w-5 h-5 mr-3 opacity-70" />}
+                        {key === 'visit' && <MapPin className="w-5 h-5 mr-3 opacity-70" />}
+                        {key === 'reservations' && <Calendar className="w-5 h-5 mr-3 opacity-70" />}
+                        {key === 'catering' && <Users className="w-5 h-5 mr-3 opacity-70" />}
+                        {value}
+                      </span>
+                      <ChevronRight className={cn(
+                        'w-5 h-5 opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-1',
+                        isRTL && 'rotate-180'
+                      )} />
+                      
+                      {/* Active indicator */}
+                      {currentSection === key && (
+                        <div className={cn(
+                          'absolute top-1/2 -translate-y-1/2 w-1 h-8 bg-gradient-to-b from-amber-500 to-orange-500 rounded-full',
+                          isRTL ? 'right-0' : 'left-0'
+                        )}></div>
+                      )}
+                    </button>
+                  ))}
+                  
+                  {/* Enhanced Mobile Order Online Button */}
+                  <div className="mt-6 pt-4 border-t border-amber-200/70">
+                    <button
+                      onClick={() => {
+                        handleOrderOnline();
+                        setIsMenuOpen(false);
+                      }}
+                      className="group relative w-full flex items-center justify-center space-x-3 px-6 py-4 rounded-xl bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 overflow-hidden"
+                    >
+                      {/* Shimmer effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                      
+                      <ChefHat className="w-6 h-6 group-hover:animate-bounce" />
+                      <span className="relative z-10">{t.nav?.orderOnline || 'Order'}</span>
+                      <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+                    </button>
+                  </div>
+
+                  {/* Enhanced Mobile Language Selector */}
+                  <div className="mt-6 pt-6 border-t border-amber-200/70">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-lg font-semibold text-amber-800 flex items-center">
+                        <Globe className="w-5 h-5 mr-2" />
+                        Language
+                      </h3>
+                      <span className="text-sm text-amber-600 font-medium px-3 py-1 bg-amber-100 rounded-full">
+                        {language.toUpperCase()}
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      {Object.entries(languages).map(([code, lang], index) => (
+                        <button
+                          key={code}
+                          onClick={() => {
+                            handleLanguageChange(code);
+                            setIsMenuOpen(false);
+                          }}
+                          className={cn(
+                            'group relative px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 border focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1',
+                            language === code 
+                              ? 'bg-gradient-to-r from-amber-100 to-orange-100 text-amber-900 border-amber-300 shadow-md scale-[1.05]' 
+                              : 'text-amber-700 hover:text-amber-900 hover:bg-amber-50 border-amber-200/50 hover:border-amber-300 hover:shadow-sm hover:scale-[1.02]'
+                          )}
+                          style={{ animationDelay: `${index * 30}ms` }}
+                        >
+                          <span className="relative z-10 flex items-center justify-center">
+                            {/* Add flag emojis for visual appeal */}
+                            <span className="text-lg mr-2">
+                              {code === 'en' && '🇺🇸'}
+                              {code === 'ku' && '☀️'}
+                              {code === 'ar' && '🌙'}
+                              {code === 'fa' && '🇮🇷'}
+                              {code === 'tr' && '🇹🇷'}
+                              {code === 'ur' && '🇵🇰'}
+                              {code === 'kmr' && '⭐'}
+                            </span>
+                            {lang.name}
+                          </span>
+                          
+                          {/* Selection indicator */}
+                          {language === code && (
+                            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Mobile Phone Section with enhanced styling */}
+                  <div className="mt-6 pt-6 border-t border-amber-200/70">
+                    <a 
+                      href="tel:4045554873" 
+                      className="group relative w-full flex items-center justify-center space-x-3 px-6 py-4 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 text-white hover:from-amber-700 hover:to-orange-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
+                      aria-label="Call us at (404) 555-KURD"
+                    >
+                      <Phone className="w-5 h-5 group-hover:animate-pulse" />
+                      <span>(404) 555-KURD</span>
+                    </a>
+                  </div>
+
+                  {/* Additional mobile menu footer */}
+                  <div className="mt-8 pt-6 border-t border-amber-200/70">
+                    <div className="flex items-center justify-center space-x-6">
+                      <a 
+                        href="https://facebook.com/naturevillagerestaurant" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="group p-3 rounded-full text-amber-700 hover:text-white hover:bg-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        aria-label="Follow us on Facebook"
+                      >
+                        <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+                      </a>
+                      <a 
+                        href="https://instagram.com/naturevillagerestaurant" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="group p-3 rounded-full text-amber-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                        aria-label="Follow us on Instagram"
+                      >
+                        <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+                      </a>
+                      <button
+                        onClick={() => {
+                          if (navigator.share) {
+                            navigator.share({
+                              title: 'Nature Village Restaurant',
+                              text: 'Check out this amazing restaurant!',
+                              url: window.location.href,
+                            });
+                          }
+                          setIsMenuOpen(false);
+                        }}
+                        className="group p-3 rounded-full text-amber-700 hover:text-white hover:bg-green-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+                        aria-label="Share restaurant"
+                      >
+                        <Share2 className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+                      </button>
+                    </div>
+                  </div>
+                </nav>
               </div>
             </div>
           )}
@@ -1548,7 +1941,81 @@ const NatureVillageWebsite = () => {
           </svg>
         </button>
       )}
-    </div>
+
+      {/* Order Modal */}
+      {showOrderModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999] p-4">
+          <div className="order-modal bg-white rounded-xl shadow-2xl max-w-md w-full mx-auto transform transition-all duration-300 scale-100">
+            <div className="p-6">
+              {/* Modal Header */}
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-xl font-bold text-gray-900">Order Online</h3>
+                <button
+                  onClick={() => setShowOrderModal(false)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                  aria-label="Close modal"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Modal Content */}
+              <div className="space-y-4">
+                <p className="text-gray-600 text-center mb-6">Choose your preferred delivery platform for pickup or delivery:</p>
+                
+                {/* Delivery Platform Buttons */}
+                <div className="space-y-3">
+                  {/* Uber Eats Button */}
+                  <button
+                    onClick={handleUberEats}
+                    className={cn(
+                      'w-full flex items-center justify-center space-x-3 px-4 py-3 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
+                      isRTL && 'space-x-reverse'
+                    )}
+                  >
+                    <div className="w-6 h-6 bg-black rounded-sm flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">UE</span>
+                    </div>
+                    <span className="font-medium text-sm">Uber Eats</span>
+                  </button>
+
+                  {/* DoorDash Button */}
+                  <button
+                    onClick={handleDoorDash}
+                    className={cn(
+                      'w-full flex items-center justify-center space-x-3 px-4 py-3 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
+                      isRTL && 'space-x-reverse'
+                    )}
+                  >
+                    <div className="w-6 h-6 bg-red-500 rounded-sm flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">DD</span>
+                    </div>
+                    <span className="font-medium text-sm">DoorDash</span>
+                  </button>
+
+                  {/* Slice Button */}
+                  <button
+                    onClick={handleSlice}
+                    className={cn(
+                      'w-full flex items-center justify-center space-x-3 px-4 py-3 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
+                      isRTL && 'space-x-reverse'
+                    )}
+                  >
+                    <div className="w-6 h-6 bg-orange-500 rounded-sm flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">SL</span>
+                    </div>
+                    <span className="font-medium text-sm">Slice</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      </div>
+    </>
   );
 };
 

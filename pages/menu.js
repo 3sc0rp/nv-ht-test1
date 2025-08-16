@@ -9,7 +9,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Menu, X, Globe, Filter, Phone, Search, Clock, Star, MapPin } from 'lucide-react'
+import { Menu, X, Globe, Filter, Phone, Search, Clock, Star, MapPin, Facebook, Instagram, MessageCircle, ChefHat, ChevronDown, ChevronRight, Home, Utensils, Info, Camera, Calendar, Users, ExternalLink, Share2 } from 'lucide-react'
 import { useRouter } from 'next/router'
 import { LANGUAGES, getText as tGet, updateDocumentLanguage, generateHreflangAlternates } from '../lib/menu/i18n'
 import { useReducedMotion } from '../lib/menu/useReducedMotion'
@@ -25,10 +25,40 @@ const FullMenuPage = () => {
   const [isMounted, setIsMounted] = useState(false)
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
+  const [showOrderModal, setShowOrderModal] = useState(false)
   const reducedMotion = useReducedMotion()
 
   // Use shared language config
   const languages = LANGUAGES
+
+  // Handle order online navigation
+  const handleOrderOnline = () => {
+    setShowOrderModal(true)
+  }
+
+  // Handle delivery platform selection
+  const handleDeliveryPlatform = (platform) => {
+    try {
+      let url = ''
+      switch (platform) {
+        case 'ubereats':
+          url = 'https://www.ubereats.com/store/nature-village-restaurant'
+          break
+        case 'doordash':
+          url = 'https://www.doordash.com/store/nature-village-restaurant'
+          break
+        case 'slice':
+          url = 'https://www.slice.com/nature-village-restaurant'
+          break
+        default:
+          url = 'https://your-online-ordering-url.com'
+      }
+      window.open(url, '_blank', 'noopener,noreferrer')
+      setShowOrderModal(false)
+    } catch (error) {
+      console.error('Error opening delivery platform:', error)
+    }
+  }
 
   // Enhanced scroll effects with error handling
   useEffect(() => {
@@ -132,7 +162,6 @@ const FullMenuPage = () => {
         return;
       }
       
-      console.log('Changing language from', language, 'to', next);
       setLanguage(next);
       updateDocumentLanguage(next);
       const url = { pathname: router.pathname, query: { ...router.query, lang: next } };
@@ -145,6 +174,12 @@ const FullMenuPage = () => {
   // Navigation handler for menu page
   const scrollToSection = useCallback((sectionId) => {
     try {
+      // Handle order online button
+      if (sectionId === 'orderOnline') {
+        handleOrderOnline();
+        return;
+      }
+      
       // Handle navigation to other pages
       if (sectionId === 'home') {
         router.push({ pathname: '/', query: { lang: language } });
@@ -685,8 +720,9 @@ const FullMenuPage = () => {
 
   const translations = {
     en: { 
-      title: 'Our Culinary Journey', 
-      subtitle: 'Discover authentic flavors crafted with passion and tradition',
+      title: 'A World of Flavors on One Menu', 
+      subtitle: 'Taste tradition, discover variety, and explore our most loved dishes.',
+      restaurantBadge: 'Authentic Kurdish Restaurant',
       loading: 'Loading...',
       searchPlaceholder: 'Search dishes...',
       noResults: 'No dishes found matching your search.',
@@ -697,7 +733,8 @@ const FullMenuPage = () => {
         gallery: 'Gallery',
         visit: 'Visit Us',
         reservations: 'Reservations',
-        catering: 'Catering'
+        catering: 'Catering',
+        orderOnline: 'Order'
       },
       filters: { 
         all: 'All Items', 
@@ -722,11 +759,19 @@ const FullMenuPage = () => {
         sandwich: 'Sandwich',
         platter: 'Platter',
         singleScoop: 'Single Scoop'
-      }
+      },
+      stats: {
+        dishes: 'Delicious Dishes',
+        categories: 'Diverse Categories',
+        languages: 'Global Languages'
+      },
+      popularSectionTitle: 'Our Most Popular Dishes',
+      scrollDownText: 'Scroll down to explore menu'
     },
     ku: { 
       title: 'گەشتی خۆراکی ئێمە', 
       subtitle: 'تامە ڕەسەنەکان بدۆزەرەوە کە بە خۆشەویستی و نەریت دروستکراون',
+      restaurantBadge: 'چێشتخانەی ڕەسەنی کوردی',
       loading: 'بارکردن...',
       searchPlaceholder: 'گەڕان بۆ خۆراک...',
       noResults: 'هیچ خۆراکێک نەدۆزرایەوە.',
@@ -737,7 +782,8 @@ const FullMenuPage = () => {
         gallery: 'وێنەکان',
         visit: 'سەردانمان بکە',
         reservations: 'حجزکردن',
-        catering: 'خزمەتگوزاری'
+        catering: 'خزمەتگوزاری',
+        orderOnline: 'داواکاری'
       },
       filters: { 
         all: 'هەموو', 
@@ -762,11 +808,19 @@ const FullMenuPage = () => {
         sandwich: 'ساندویچ',
         platter: 'پلێتەر',
         singleScoop: 'یەک گۆپکە'
-      }
+      },
+      stats: {
+        dishes: 'خواردنی خۆش',
+        categories: 'جۆرە جیاوازەکان',
+        languages: 'زمانی جیهانی'
+      },
+      popularSectionTitle: 'بەناوبانگترین خۆراکەکانمان',
+      scrollDownText: 'بۆ گەڕان لە مێنیو بەرەو خوارەوە بچۆ'
     },
     ar: { 
       title: 'رحلتنا الطهوية', 
       subtitle: 'اكتشف النكهات الأصيلة المُحضرة بشغف وتقليد',
+      restaurantBadge: 'مطعم أصيل كردي',
       loading: 'جاري التحميل...',
       searchPlaceholder: 'البحث عن الأطباق...',
       noResults: 'لم يتم العثور على أطباق مطابقة لبحثك.',
@@ -777,7 +831,8 @@ const FullMenuPage = () => {
         gallery: 'المعرض',
         visit: 'زورونا',
         reservations: 'الحجوزات',
-        catering: 'التموين'
+        catering: 'التموين',
+        orderOnline: 'اطلب'
       },
       filters: { 
         all: 'الكل', 
@@ -802,11 +857,19 @@ const FullMenuPage = () => {
         sandwich: 'سندويش',
         platter: 'صحن',
         singleScoop: 'كرة واحدة'
-      }
+      },
+      stats: {
+        dishes: 'أطباق شهية',
+        categories: 'تصنيفات متنوعة',
+        languages: 'لغات عالمية'
+      },
+      popularSectionTitle: 'أطباقنا الأكثر شهرة',
+      scrollDownText: 'مرر لأسفل لاستكشاف القائمة'
     },
     fa: { 
       title: 'سفر آشپزی ما', 
       subtitle: 'طعم‌های اصیل ساخته شده با عشق و سنت را کشف کنید',
+      restaurantBadge: 'رستوران اصیل کردی',
       loading: 'در حال بارگذاری...',
       searchPlaceholder: 'جستجوی غذاها...',
       noResults: 'هیچ غذایی با جستجوی شما یافت نشد.',
@@ -817,7 +880,8 @@ const FullMenuPage = () => {
         gallery: 'گالری',
         visit: 'بازدید از ما',
         reservations: 'رزرو',
-        catering: 'پذیرایی'
+        catering: 'پذیرایی',
+        orderOnline: 'سفارش'
       },
       filters: { 
         all: 'همه موارد', 
@@ -842,11 +906,19 @@ const FullMenuPage = () => {
         sandwich: 'ساندویچ',
         platter: 'پلاتر',
         singleScoop: 'یک اسکوپ'
-      }
+      },
+      stats: {
+        dishes: 'غذاهای لذیذ',
+        categories: 'دسته‌های متنوع',
+        languages: 'زبان‌های جهانی'
+      },
+      popularSectionTitle: 'محبوب‌ترین غذاهای ما',
+      scrollDownText: 'برای کاوش منو پایین بروید'
     },
     tr: { 
       title: 'Mutfak Yolculuğumuz', 
       subtitle: 'Tutku ve gelenekle hazırlanmış otantik lezzetleri keşfedin',
+      restaurantBadge: 'Otantik Kürt Restoranı',
       loading: 'Yükleniyor...',
       searchPlaceholder: 'Yemek ara...',
       noResults: 'Aramanızla eşleşen yemek bulunamadı.',
@@ -857,7 +929,8 @@ const FullMenuPage = () => {
         gallery: 'Galeri',
         visit: 'Ziyaret Edin',
         reservations: 'Rezervasyonlar',
-        catering: 'Catering'
+        catering: 'Catering',
+        orderOnline: 'Sipariş'
       },
       filters: { 
         all: 'Tümü', 
@@ -882,11 +955,19 @@ const FullMenuPage = () => {
         sandwich: 'Sandviç',
         platter: 'Tabak',
         singleScoop: 'Tek Top'
-      }
+      },
+      stats: {
+        dishes: 'Lezzetli Yemek',
+        categories: 'Çeşitli Kategori',
+        languages: 'Küresel Dil'
+      },
+      popularSectionTitle: 'En Popüler Yemeklerimiz',
+      scrollDownText: 'Menüyü keşfetmek için aşağı kaydırın'
     },
     ur: { 
       title: 'ہمارا پکوان کا سفر', 
       subtitle: 'جذبے اور روایت سے تیار کردہ اصل ذائقوں کو دریافت کریں',
+      restaurantBadge: 'اصل کرد ریستوران',
       loading: 'لوڈ ہو رہا ہے...',
       searchPlaceholder: 'ڈش تلاش کریں...',
       noResults: 'آپ کی تلاش سے کوئی ڈش نہیں ملی۔',
@@ -897,7 +978,8 @@ const FullMenuPage = () => {
         gallery: 'گیلری',
         visit: 'ہمیں ملیں',
         reservations: 'بکنگ',
-        catering: 'کیٹرنگ'
+        catering: 'کیٹرنگ',
+        orderOnline: 'آرڈر'
       },
       filters: { 
         all: 'سب', 
@@ -922,11 +1004,19 @@ const FullMenuPage = () => {
         sandwich: 'سینڈوچ',
         platter: 'پلیٹر',
         singleScoop: 'ایک اسکوپ'
-      }
+      },
+      stats: {
+        dishes: 'لذیذ ڈشز',
+        categories: 'مختلف اقسام',
+        languages: 'عالمی زبانیں'
+      },
+      popularSectionTitle: 'ہمارے سب سے مقبول کھانے',
+      scrollDownText: 'مینو دیکھنے کے لیے نیچے سکرول کریں'
     },
     kmr: { 
       title: 'Rêwîtiya Aşpêjiya Me', 
       subtitle: 'Tamên orijînal ên bi hez û nerdî hatine çêkirin keşf bikin',
+      restaurantBadge: 'Xwaringeha Kurd a Resen',
       loading: 'Tê barkirin...',
       searchPlaceholder: 'Li xwarinan bigerin...',
       noResults: 'Tu xwarineke li gor lêgerîna te nehat dîtin.',
@@ -937,7 +1027,8 @@ const FullMenuPage = () => {
         gallery: 'Gallerî',
         visit: 'Serdana me bikin',
         reservations: 'Rezervasyon',
-        catering: 'Xizmetguzarî'
+        catering: 'Xizmetguzarî',
+        orderOnline: 'Sîpariş'
       },
       filters: { 
         all: 'Hemû', 
@@ -962,12 +1053,19 @@ const FullMenuPage = () => {
         sandwich: 'Sandwîç',
         platter: 'Plater',
         singleScoop: 'Yek Top'
-      }
+      },
+      stats: {
+        dishes: 'Xwarinên Xweş',
+        categories: 'Kategoriyên Cûda',
+        languages: 'Zimanên Cîhanî'
+      },
+      popularSectionTitle: 'Xwarinên Me yên Herî Populer',
+      scrollDownText: 'Ji bo keşfkirina menûyê berbi jêr ve biçin'
     }
   }
 
   // Complete menu items with full translations - Nature's Village Menu
-  const menuItems = [
+  const menuItems = useMemo(() => [
     // APPETIZERS
     { 
       id: 1001, 
@@ -2496,7 +2594,7 @@ const FullMenuPage = () => {
       tags: ['vegetarian', 'vegan'] 
     },
     // Note: Removed duplicate entries to prevent data inconsistencies
-  ]
+  ], []) // Empty dependency array since menu items are static
 
   const t = translations[language] || translations.en
 
@@ -3012,6 +3110,50 @@ const FullMenuPage = () => {
           0%, 100% { transform: translateX(0px); }
           50% { transform: translateX(4px); }
         }
+
+        /* Mobile menu animations */
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInLeft {
+          from {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-out;
+        }
+
+        .animate-slideInLeft {
+          animation: slideInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .animate-slideInRight {
+          animation: slideInRight 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
         
         .carousel-active {
           animation: carousel-float 3s ease-in-out infinite, carousel-glow 2s ease-in-out infinite;
@@ -3065,7 +3207,7 @@ const FullMenuPage = () => {
           -webkit-backface-visibility: hidden;
         }
       `}</style>
-      <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50 pt-20 sm:pt-24" style={{ direction: languages[language]?.dir || 'ltr' }}>
+      <div className="min-h-screen bg-white pt-20 sm:pt-24" style={{ direction: languages[language]?.dir || 'ltr' }}>
         
         {/* Header + Navigation */}
         <header className={cn(
@@ -3086,137 +3228,351 @@ const FullMenuPage = () => {
                 />
                 <div className="flex flex-col">
                   <div className="text-lg sm:text-2xl font-serif font-bold text-amber-800 transition-colors duration-200 hover:text-amber-700">Nature Village</div>
-                  <div className="text-xs text-amber-600 font-sans hidden sm:block">Kurdish Restaurant</div>
+                  <div className="text-xs text-amber-600 font-sans hidden sm:block">Restaurant</div>
                 </div>
               </div>
               
               {/* Desktop Navigation - Enhanced with accessibility */}
-              <div className="hidden lg:block">
-                <nav className={cn('flex items-baseline space-x-4', isRTL && 'space-x-reverse')} role="navigation" aria-label="Main navigation">
-                  {Object.entries(t.nav || {}).map(([key, value]) => (
+              <div className="hidden lg:flex lg:items-center lg:justify-center lg:flex-1">
+                <nav className={cn('flex items-center justify-center space-x-1', isRTL && 'space-x-reverse')} role="navigation" aria-label="Main navigation">
+                  <div className={cn('flex items-center space-x-1', isRTL && 'space-x-reverse')}>
+                    {Object.entries(t.nav || {})
+                      .filter(([key]) => key !== 'orderOnline')
+                      .map(([key, value]) => (
+                      <button
+                        key={key}
+                        onClick={() => scrollToSection(key)}
+                        className={cn(
+                          'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2',
+                          'whitespace-nowrap relative group',
+                          currentSection === key 
+                            ? 'bg-amber-800 text-white shadow-lg' 
+                            : 'text-amber-800 hover:bg-amber-100 hover:text-amber-900'
+                        )}
+                        aria-current={currentSection === key ? 'page' : undefined}
+                        tabIndex={0}
+                      >
+                        {value}
+                        {currentSection !== key && (
+                          <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-amber-600 transition-all duration-200 group-hover:w-full group-hover:left-0"></span>
+                        )}
+                      </button>
+                    ))}
+                    
+                    {/* Order Online CTA Button */}
                     <button
-                      key={key}
-                      onClick={() => scrollToSection(key)}
+                      onClick={handleOrderOnline}
                       className={cn(
-                        'px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2',
-                        currentSection === key 
-                          ? 'bg-amber-800 text-white shadow-md' 
-                          : 'text-amber-800 hover:bg-amber-100'
+                        'flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
+                        isRTL && 'space-x-reverse'
                       )}
-                      aria-current={currentSection === key ? 'page' : undefined}
-                      tabIndex={0}
+                      aria-label={t.nav?.orderOnline || 'Order'}
                     >
-                      {value}
+                      <ChefHat className="w-4 h-4" aria-hidden="true" />
+                      <span className="font-medium text-xs uppercase tracking-wide whitespace-nowrap">{t.nav?.orderOnline || 'Order'}</span>
                     </button>
-                  ))}
+                  </div>
                 </nav>
               </div>
 
-              {/* Contact Info - Phone Number - Enhanced with accessibility */}
-              <div className="hidden xl:flex items-center text-amber-800">
-                <Phone className="w-4 h-4 mr-2" aria-hidden="true" />
-                <a href="tel:4045554873" className="font-medium hover:text-amber-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 rounded-md px-1 py-1" aria-label="Call us at (404) 555-KURD">
-                  (404) 555-KURD
+              {/* Social Media Links - Minimal Design */}
+              <div className="hidden lg:flex items-center space-x-2 flex-shrink-0">
+                <a 
+                  href="https://facebook.com/naturevillagerestaurant" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg text-amber-700 hover:text-amber-800 hover:bg-amber-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1"
+                  aria-label="Follow us on Facebook"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a 
+                  href="https://instagram.com/naturevillagerestaurant" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg text-amber-700 hover:text-amber-800 hover:bg-amber-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1"
+                  aria-label="Follow us on Instagram"
+                >
+                  <Instagram className="w-4 h-4" />
                 </a>
               </div>
 
               {/* Language Toggle & Mobile Menu - Enhanced */}
-              <div className={cn('flex items-center space-x-3', isRTL && 'space-x-reverse')}>
-                {/* Language Selector - Enhanced with accessibility */}
+              <div className={cn('flex items-center space-x-3 flex-shrink-0', isRTL && 'space-x-reverse')}>
+                {/* Order Online Button for Mobile */}
+                <button
+                  onClick={handleOrderOnline}
+                  className={cn(
+                    'lg:hidden flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
+                    isRTL && 'space-x-reverse'
+                  )}
+                  aria-label={t.nav?.orderOnline || 'Order'}
+                >
+                  <ChefHat className="w-4 h-4" aria-hidden="true" />
+                  <span className="hidden sm:inline font-medium text-xs uppercase tracking-wide whitespace-nowrap">{t.nav?.orderOnline || 'Order'}</span>
+                </button>
+
+                {/* Language Selector - Minimal Design */}
                 <div className="relative language-dropdown">
                   <button
                     onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
                     className={cn(
-                      'flex items-center space-x-2 p-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500',
+                      'flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white/90 hover:bg-white border border-amber-200 hover:border-amber-300 text-amber-800 hover:text-amber-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1',
                       isRTL && 'space-x-reverse'
                     )}
                     aria-expanded={showLanguageDropdown}
                     aria-haspopup="listbox"
                     aria-label="Select language"
                   >
-                    <Globe className="w-5 h-5" aria-hidden="true" />
-                    <span className="font-medium text-sm">
-                      {language === 'en' ? 'EN' :
-                       language === 'ku' ? 'KU' :
-                       language === 'ar' ? 'AR' :
-                       language === 'fa' ? 'FA' :
-                       language === 'tr' ? 'TR' :
-                       language === 'ur' ? 'UR' :
-                       'KMR'}
-                    </span>
+                    <Globe className="w-4 h-4" aria-hidden="true" />
+                    <span className="hidden sm:inline font-medium text-xs uppercase tracking-wide">{language.toUpperCase()}</span>
+                    <ChevronDown className={cn('w-3 h-3 transition-transform duration-200', showLanguageDropdown && 'rotate-180')} aria-hidden="true" />
                   </button>
 
+                  {/* Language Dropdown */}
                   {showLanguageDropdown && (
                     <div className={cn(
-                      'absolute mt-2 w-48 bg-white rounded-xl shadow-2xl border border-amber-200 z-[9999] overflow-hidden',
-                      isRTL ? 'right-0' : 'left-0', // Fixed positioning to prevent cutoff
-                      'max-h-80 overflow-y-auto' // Add scrolling for better mobile experience
-                    )}>
-                      {[
-                        { code: 'en', name: 'English' },
-                        { code: 'ku', name: 'کوردی' },
-                        { code: 'ar', name: 'العربية' },
-                        { code: 'fa', name: 'فارسی' },
-                        { code: 'tr', name: 'Türkçe' },
-                        { code: 'ur', name: 'اردو' },
-                        { code: 'kmr', name: 'Kurmancî' }
-                      ].map((lang) => (
+                      'absolute mt-2 py-2 w-20 bg-white border border-amber-200 rounded-lg shadow-lg z-50',
+                      isRTL ? 'left-0' : 'right-0'
+                    )} role="listbox">
+                      {Object.entries(languages).map(([code, lang]) => (
                         <button
-                          key={lang.code}
+                          key={code}
                           onClick={() => {
-                            handleLanguageChange(lang.code);
-                            setShowLanguageDropdown(false);
+                            handleLanguageChange(code)
+                            setShowLanguageDropdown(false)
                           }}
                           className={cn(
-                            'w-full px-4 py-3 hover:bg-amber-50 transition-colors duration-200 flex items-center space-x-3',
-                            isRTL && 'space-x-reverse text-right',
-                            !isRTL && 'text-left',
-                            language === lang.code ? 'bg-amber-100 text-amber-800' : 'text-gray-700'
+                            'w-full px-3 py-2 text-left text-sm hover:bg-amber-50 focus:outline-none focus:bg-amber-50 transition-colors duration-200',
+                            language === code ? 'bg-amber-100 text-amber-900 font-medium' : 'text-amber-700'
                           )}
+                          role="option"
+                          aria-selected={language === code}
                         >
-                          <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-                          <span className="font-medium">{lang.name}</span>
+                          {lang.name}
                         </button>
                       ))}
                     </div>
                   )}
                 </div>
 
-                {/* Mobile menu button */}
-                <div className="lg:hidden">
-                  <button
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="text-amber-800 hover:text-amber-600 p-2 rounded-md hover:bg-amber-100 transition-colors"
-                    aria-label="Toggle menu"
-                  >
-                    {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                  </button>
-                </div>
+                {/* Mobile Menu Toggle */}
+                <button
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  className="lg:hidden p-2 rounded-lg text-amber-800 hover:text-amber-900 hover:bg-amber-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1"
+                  aria-expanded={isMenuOpen}
+                  aria-controls="mobile-menu"
+                  aria-label="Toggle mobile menu"
+                >
+                  {isMenuOpen ? (
+                    <X className="w-6 h-6" aria-hidden="true" />
+                  ) : (
+                    <Menu className="w-6 h-6" aria-hidden="true" />
+                  )}
+                </button>
               </div>
             </div>
-
-            {/* Mobile Navigation */}
-            {isMenuOpen && (
-              <div className="lg:hidden bg-white border-t border-amber-200 mt-2 rounded-b-lg shadow-lg">
-                <div className="px-2 pt-2 pb-3 space-y-1">
-                  {Object.entries(t.nav || {}).map(([key, value]) => (
-                    <button
-                      key={key}
-                      onClick={() => scrollToSection(key)}
-                      className={cn(
-                        'block px-3 py-3 text-base font-medium text-amber-800 hover:bg-amber-100 w-full rounded-md transition-colors',
-                        rtlClass('text-left', 'text-right'),
-                        currentSection === key && 'bg-amber-800 text-white'
-                      )}
-                    >
-                      {value}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
         </header>
+
+        {/* Enhanced Mobile Menu Overlay */}
+        {isMenuOpen && (
+          <div 
+            className="lg:hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm animate-fadeIn" 
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <div 
+              className={cn(
+                'absolute top-0 w-80 sm:w-96 h-full bg-white shadow-2xl transform transition-all duration-500 ease-out border-r border-amber-200',
+                isRTL ? 'right-0 animate-slideInRight' : 'left-0 animate-slideInLeft'
+              )} 
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Mobile Menu Header with enhanced design */}
+              <div className="relative flex items-center justify-between p-6 border-b border-amber-200 bg-white shadow-sm">
+                <div className={cn('flex items-center', isRTL && 'flex-row-reverse')}>
+                  <div className="relative">
+                    <img 
+                      src="https://naturevillagerestaurant.com/wp-content/uploads/2024/09/cropped-NatureVillage-Logo_circle-1222-2048x2048-1.webp" 
+                      alt="Nature Village Restaurant Logo" 
+                      className={cn('w-10 h-10 object-contain rounded-full shadow-md', rtlClass('mr-3', 'ml-3'))}
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xl font-serif font-bold text-amber-800">Nature Village</span>
+                    <span className="text-xs text-amber-600 font-medium">Restaurant</span>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="relative p-3 rounded-full text-amber-800 hover:text-amber-900 hover:bg-amber-100/50 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  aria-label="Close mobile menu"
+                >
+                  <X className="w-6 h-6 transition-transform duration-200 group-hover:rotate-90" />
+                  <div className="absolute inset-0 rounded-full bg-amber-200/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                </button>
+              </div>
+
+              {/* Mobile Menu Navigation with enhanced animations */}
+              <nav className="flex flex-col py-6 px-4 space-y-1 overflow-y-auto max-h-[calc(100vh-200px)] bg-white" role="navigation" aria-label="Mobile navigation">
+                {Object.entries(t.nav || {})
+                  .filter(([key]) => key !== 'orderOnline')
+                  .map(([key, value], index) => (
+                  <button
+                    key={key}
+                    onClick={() => {
+                      scrollToSection(key);
+                      setIsMenuOpen(false);
+                    }}
+                    className={cn(
+                      'group relative flex items-center justify-between px-5 py-4 rounded-xl text-amber-800 hover:text-amber-900 transition-all duration-300 font-medium text-lg border border-transparent',
+                      'hover:bg-gradient-to-r hover:from-amber-50 hover:to-orange-50 hover:border-amber-200/50 hover:shadow-md hover:scale-[1.02]',
+                      'focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2',
+                      currentSection === key && 'bg-gradient-to-r from-amber-100 to-orange-100 text-amber-900 border-amber-300/50 shadow-sm scale-[1.02]'
+                    )}
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <span className="flex items-center">
+                      {/* Add navigation icons */}
+                      {key === 'home' && <Home className="w-5 h-5 mr-3 opacity-70" />}
+                      {key === 'menu' && <Utensils className="w-5 h-5 mr-3 opacity-70" />}
+                      {key === 'about' && <Info className="w-5 h-5 mr-3 opacity-70" />}
+                      {key === 'gallery' && <Camera className="w-5 h-5 mr-3 opacity-70" />}
+                      {key === 'visit' && <MapPin className="w-5 h-5 mr-3 opacity-70" />}
+                      {key === 'reservations' && <Calendar className="w-5 h-5 mr-3 opacity-70" />}
+                      {key === 'catering' && <Users className="w-5 h-5 mr-3 opacity-70" />}
+                      {value}
+                    </span>
+                    <ChevronRight className={cn(
+                      'w-5 h-5 opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-1',
+                      isRTL && 'rotate-180'
+                    )} />
+                    
+                    {/* Active indicator */}
+                    {currentSection === key && (
+                      <div className={cn(
+                        'absolute top-1/2 -translate-y-1/2 w-1 h-8 bg-gradient-to-b from-amber-500 to-orange-500 rounded-full',
+                        isRTL ? 'right-0' : 'left-0'
+                      )}></div>
+                    )}
+                  </button>
+                ))}
+                
+                {/* Enhanced Mobile Order Online Button */}
+                <div className="mt-6 pt-4 border-t border-amber-200/70">
+                  <button
+                    onClick={() => {
+                      handleOrderOnline();
+                      setIsMenuOpen(false);
+                    }}
+                    className="group relative w-full flex items-center justify-center space-x-3 px-6 py-4 rounded-xl bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 overflow-hidden"
+                  >
+                    {/* Shimmer effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    
+                    <ChefHat className="w-6 h-6 group-hover:animate-bounce" />
+                    <span className="relative z-10">{t.nav?.orderOnline || 'Order'}</span>
+                    <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+                  </button>
+                </div>
+
+                {/* Enhanced Mobile Language Selector */}
+                <div className="mt-6 pt-6 border-t border-amber-200/70">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-semibold text-amber-800 flex items-center">
+                      <Globe className="w-5 h-5 mr-2" />
+                      Language
+                    </h3>
+                    <span className="text-sm text-amber-600 font-medium px-3 py-1 bg-amber-100 rounded-full">
+                      {language.toUpperCase()}
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    {Object.entries(languages).map(([code, lang], index) => (
+                      <button
+                        key={code}
+                        onClick={() => {
+                          handleLanguageChange(code);
+                          setIsMenuOpen(false);
+                        }}
+                        className={cn(
+                          'group relative px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 border focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1',
+                          language === code 
+                            ? 'bg-gradient-to-r from-amber-100 to-orange-100 text-amber-900 border-amber-300 shadow-md scale-[1.05]' 
+                            : 'text-amber-700 hover:text-amber-900 hover:bg-amber-50 border-amber-200/50 hover:border-amber-300 hover:shadow-sm hover:scale-[1.02]'
+                        )}
+                        style={{ animationDelay: `${index * 30}ms` }}
+                      >
+                        <span className="relative z-10 flex items-center justify-center">
+                          {/* Add flag emojis for visual appeal */}
+                          <span className="text-lg mr-2">
+                            {code === 'en' && '🇺🇸'}
+                            {code === 'ku' && '☀️'}
+                            {code === 'ar' && '🌙'}
+                            {code === 'fa' && '🇮🇷'}
+                            {code === 'tr' && '🇹🇷'}
+                            {code === 'ur' && '🇵🇰'}
+                            {code === 'kmr' && '⭐'}
+                          </span>
+                          {lang.name}
+                        </span>
+                        
+                        {/* Selection indicator */}
+                        {language === code && (
+                          <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Additional mobile menu footer */}
+                <div className="mt-8 pt-6 border-t border-amber-200/70">
+                  <div className="flex items-center justify-center space-x-6">
+                    <a 
+                      href="https://facebook.com/naturevillagerestaurant" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="group p-3 rounded-full text-amber-700 hover:text-white hover:bg-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      aria-label="Follow us on Facebook"
+                    >
+                      <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+                    </a>
+                    <a 
+                      href="https://instagram.com/naturevillagerestaurant" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="group p-3 rounded-full text-amber-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                      aria-label="Follow us on Instagram"
+                    >
+                      <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+                    </a>
+                    <button
+                      onClick={() => {
+                        if (navigator.share) {
+                          navigator.share({
+                            title: 'Nature Village Restaurant',
+                            text: 'Check out this amazing restaurant!',
+                            url: window.location.href,
+                          });
+                        }
+                        setIsMenuOpen(false);
+                      }}
+                      className="group p-3 rounded-full text-amber-700 hover:text-white hover:bg-green-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+                      aria-label="Share restaurant"
+                    >
+                      <Share2 className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+                    </button>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        )}
 
         {/* Rest of the menu page content */}
         <main id="main-content" className="relative" role="main">
@@ -3246,13 +3602,7 @@ const FullMenuPage = () => {
                 {/* Restaurant Badge */}
                 <div className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 shadow-lg">
                   <span className="text-xs sm:text-sm font-semibold text-amber-200 tracking-wide uppercase">
-                    {language === 'ar' ? 'مطعم أصيل كردي' :
-                     language === 'fa' ? 'رستوران اصیل کردی' :
-                     language === 'ku' ? 'چێشتخانەی ڕەسەنی کوردی' :
-                     language === 'tr' ? 'Otantik Kürt Restoranı' :
-                     language === 'ur' ? 'اصل کرد ریستوران' :
-                     language === 'kmr' ? 'Xwaringeha Kurd a Resen' :
-                     'Authentic Kurdish Restaurant'}
+                    {t.restaurantBadge || 'Authentic Kurdish Restaurant'}
                   </span>
                 </div>
 
@@ -3283,13 +3633,7 @@ const FullMenuPage = () => {
                           {menuItems.length}<span className="text-sm sm:text-base md:text-lg align-top">+</span>
                         </div>
                         <div className="text-xs sm:text-sm md:text-base text-amber-200/80 font-semibold tracking-wide">
-                          {language === 'ar' ? 'أطباق شهية' :
-                           language === 'fa' ? 'غذاهای لذیذ' :
-                           language === 'ku' ? 'خواردنی خۆش' :
-                           language === 'tr' ? 'Lezzetli Yemek' :
-                           language === 'ur' ? 'لذیذ ڈشز' :
-                           language === 'kmr' ? 'Xwarinên Xweş' :
-                           'Delicious Dishes'}
+                          {t.stats?.dishes || 'Delicious Dishes'}
                         </div>
                       </div>
                     </div>
@@ -3301,13 +3645,7 @@ const FullMenuPage = () => {
                           {Object.keys(t.filters).length - 2}
                         </div>
                         <div className="text-xs sm:text-sm md:text-base text-orange-200/80 font-semibold tracking-wide">
-                          {language === 'ar' ? 'تصنيفات متنوعة' :
-                           language === 'fa' ? 'دسته‌های متنوع' :
-                           language === 'ku' ? 'جۆرە جیاوازەکان' :
-                           language === 'tr' ? 'Çeşitli Kategori' :
-                           language === 'ur' ? 'مختلف اقسام' :
-                           language === 'kmr' ? 'Kategoriyên Cûda' :
-                           'Diverse Categories'}
+                          {t.stats?.categories || 'Diverse Categories'}
                         </div>
                       </div>
                     </div>
@@ -3319,13 +3657,7 @@ const FullMenuPage = () => {
                           7
                         </div>
                         <div className="text-xs sm:text-sm md:text-base text-yellow-200/80 font-semibold tracking-wide">
-                          {language === 'ar' ? 'لغات عالمية' :
-                           language === 'fa' ? 'زبان‌های جهانی' :
-                           language === 'ku' ? 'زمانی جیهانی' :
-                           language === 'tr' ? 'Küresel Dil' :
-                           language === 'ur' ? 'عالمی زبانیں' :
-                           language === 'kmr' ? 'Zimanên Cîhanî' :
-                           'Global Languages'}
+                          {t.stats?.languages || 'Global Languages'}
                         </div>
                       </div>
                     </div>
@@ -3339,13 +3671,7 @@ const FullMenuPage = () => {
                   {/* Section Header */}
                   <div className="text-center mb-8 sm:mb-12">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-3 sm:mb-4">
-                      {language === 'ar' ? 'أطباقنا الأكثر شهرة' :
-                       language === 'fa' ? 'محبوب‌ترین غذاهای ما' :
-                       language === 'ku' ? 'بەناوبانگترین خۆراکەکانمان' :
-                       language === 'tr' ? 'En Popüler Yemeklerimiz' :
-                       language === 'ur' ? 'ہمارے سب سے مقبول کھانے' :
-                       language === 'kmr' ? 'Xwarinên Me yên Herî Populer' :
-                       'Our Most Popular Dishes'}
+                      {t.popularSectionTitle || 'Our Most Popular Dishes'}
                     </h2>
                     <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-amber-400 to-orange-400 mx-auto rounded-full"></div>
                   </div>
@@ -3549,13 +3875,7 @@ const FullMenuPage = () => {
                       </svg>
                     </div>
                     <p className="text-xs sm:text-sm text-amber-200 font-medium tracking-wide">
-                      {language === 'ar' ? 'مرر لأسفل لاستكشاف القائمة' :
-                       language === 'fa' ? 'برای کاوش منو پایین بروید' :
-                       language === 'ku' ? 'بۆ گەڕان لە مێنیو بەرەو خوارەوە بچۆ' :
-                       language === 'tr' ? 'Menüyü keşfetmek için aşağı kaydırın' :
-                       language === 'ur' ? 'مینو دیکھنے کے لیے نیچے سکرول کریں' :
-                       language === 'kmr' ? 'Ji bo keşfkirina menûyê berbi jêr ve biçin' :
-                       'Scroll down to explore menu'}
+                      {t.scrollDownText || 'Scroll down to explore menu'}
                     </p>
                   </div>
                 </div>
@@ -3564,7 +3884,7 @@ const FullMenuPage = () => {
 
             {/* Enhanced waves animation at bottom of hero */}
             <div className="absolute bottom-0 left-0 w-full">
-              <svg className="w-full h-8 sm:h-12 md:h-16 text-amber-50 transform scale-x-[-1]" 
+              <svg className="w-full h-8 sm:h-12 md:h-16 text-white transform rotate-180" 
                    preserveAspectRatio="none" 
                    viewBox="0 0 1200 120" 
                    xmlns="http://www.w3.org/2000/svg">
@@ -3575,7 +3895,8 @@ const FullMenuPage = () => {
           </div>
 
           {/* Enhanced Menu Section with improved UX */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-gradient-to-b from-amber-50 to-orange-50">
+          <div className="bg-white relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
 
           {/* Enhanced Search Bar with better accessibility */}
           <div className="mb-8 sm:mb-12">
@@ -3832,6 +4153,7 @@ const FullMenuPage = () => {
             </div>
           )}
           </div>
+          </div>
         </main>
         
         {/* Enhanced Footer - same as homepage */}
@@ -4025,6 +4347,52 @@ const FullMenuPage = () => {
           {/* Decorative bottom border */}
           <div className="h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
         </footer>
+
+        {/* Order Online Modal */}
+        {showOrderModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 transform transition-all">
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-2xl font-bold text-gray-800">Order Online</h3>
+                  <button
+                    onClick={() => setShowOrderModal(false)}
+                    className="text-gray-400 hover:text-gray-600 transition-colors"
+                  >
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+                
+                <p className="text-gray-600 mb-6 text-center">
+                  Choose your preferred delivery platform for pickup or delivery
+                </p>
+                
+                <div className="space-y-3">
+                  <button
+                    onClick={() => handleDeliveryPlatform('ubereats')}
+                    className="w-full bg-black text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+                  >
+                    Uber Eats
+                  </button>
+                  
+                  <button
+                    onClick={() => handleDeliveryPlatform('doordash')}
+                    className="w-full bg-red-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+                  >
+                    DoorDash
+                  </button>
+                  
+                  <button
+                    onClick={() => handleDeliveryPlatform('slice')}
+                    className="w-full bg-orange-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+                  >
+                    Slice
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Scroll to top button */}
         {isScrolled && (
