@@ -42,13 +42,13 @@ const FullMenuPage = () => {
       let url = ''
       switch (platform) {
         case 'ubereats':
-          url = 'https://www.ubereats.com/store/nature-village-restaurant'
+          url = 'https://www.ubereats.com/store/nature-village-restaurant/dR5RyEoLXtarbrxoIn-nqw'
           break
         case 'doordash':
-          url = 'https://www.doordash.com/store/nature-village-restaurant'
+          url = 'https://www.doordash.com/store/nature-village-restaurant-suwanee-28955148/36933361/'
           break
         case 'slice':
-          url = 'https://www.slice.com/nature-village-restaurant'
+          url = 'https://slicelife.com/restaurants/ga/suwanee/30024/nature-village-restaurant/menu'
           break
         default:
           url = 'https://your-online-ordering-url.com'
@@ -216,6 +216,29 @@ const FullMenuPage = () => {
     }
   }, [router, language]);
 
+  // Privacy Policy handler
+  const handlePrivacyClick = useCallback(() => {
+    // For now, scroll to footer - you can later add a dedicated privacy page
+    scrollToSection('footer');
+  }, [scrollToSection]);
+
+  // Terms of Service handler
+  const handleTermsClick = useCallback(() => {
+    // For now, scroll to footer - you can later add a dedicated terms page
+    scrollToSection('footer');
+  }, [scrollToSection]);
+
+  // Safe Blunari link handler
+  const handleBlunariClick = useCallback(() => {
+    try {
+      if (typeof window !== 'undefined') {
+        window.open('https://blunari.ai', '_blank', 'noopener,noreferrer');
+      }
+    } catch (error) {
+      console.error('Error opening Blunari link:', error);
+    }
+  }, []);
+
   // Helper functions
   const cn = (...classes) => {
     return classes.filter(Boolean).join(' ');
@@ -243,6 +266,20 @@ const FullMenuPage = () => {
   const [touchEnd, setTouchEnd] = useState(null);
   const [viewportWidth, setViewportWidth] = useState(1024); // Default fallback
   const [isMobile, setIsMobile] = useState(false);
+
+  // Kurdish pattern SVG for decorative elements
+  const KurdishPattern = () => (
+    <svg className="absolute opacity-5 w-full h-full" viewBox="0 0 400 400">
+      <defs>
+        <pattern id="kurdishPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+          <rect width="50" height="50" fill="#8B4513"/>
+          <polygon points="25,5 45,25 25,45 5,25" fill="#D2B48C"/>
+          <circle cx="25" cy="25" r="8" fill="#6B8E23"/>
+        </pattern>
+      </defs>
+      <rect width="400" height="400" fill="url(#kurdishPattern)"/>
+    </svg>
+  );
 
   // Enhanced dish data with more properties - INTERNATIONALIZED
   // Curated selection of featured dishes from the complete menu for the carousel
@@ -766,7 +803,18 @@ const FullMenuPage = () => {
         languages: 'Global Languages'
       },
       popularSectionTitle: 'Our Most Popular Dishes',
-      scrollDownText: 'Scroll down to explore menu'
+      scrollDownText: 'Scroll down to explore menu',
+      footer: {
+        description: 'Bringing the authentic flavors and warm hospitality of Kurdistan to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.',
+        quickLinks: 'Quick Links',
+        contactInfo: 'Contact Information',
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Service',
+        openDaily: 'SUN - THU: 12 AM - 10 PM\nFRI - SAT: 12 AM - 11 PM',
+        copyright: '© 2025 Nature Village Kurdish Restaurant. All rights reserved.',
+        poweredBy: 'Powered by',
+        blunari: 'Blunari AI'
+      }
     },
     ku: { 
       title: 'گەشتی خۆراکی ئێمە', 
@@ -815,7 +863,18 @@ const FullMenuPage = () => {
         languages: 'زمانی جیهانی'
       },
       popularSectionTitle: 'بەناوبانگترین خۆراکەکانمان',
-      scrollDownText: 'بۆ گەڕان لە مێنیو بەرەو خوارەوە بچۆ'
+      scrollDownText: 'بۆ گەڕان لە مێنیو بەرەو خوارەوە بچۆ',
+      footer: {
+        description: 'تامە ڕەسەنەکان و میوانداری گەرمی کوردستان بۆ مێزەکەتان دەهێنین. هەر خۆراکێک ئاهەنگێکە بۆ میراتی دەوڵەمەندی کولتوریمان و باشی ئاشپەزییەکەمان.',
+        quickLinks: 'بەستەری خێرا',
+        contactInfo: 'زانیاری پەیوەندی',
+        privacy: 'سیاسەتی تایبەتایەتی',
+        terms: 'مەرجەکانی خزمەتگوزاری',
+        openDaily: 'یەکشەممە - پێنجشەممە: ١٢ شەو - ١٠ شەو\nهەینی - شەممە: ١٢ شەو - ١١ شەو',
+        copyright: '© ٢٠٢٥ چێشتخانەی کوردی گوندی سروشت. هەموو مافەکان پارێزراون.',
+        poweredBy: 'پشتگیری کراو لەلایەن',
+        blunari: 'بلوناری ئای ئای'
+      }
     },
     ar: { 
       title: 'رحلتنا الطهوية', 
@@ -864,7 +923,18 @@ const FullMenuPage = () => {
         languages: 'لغات عالمية'
       },
       popularSectionTitle: 'أطباقنا الأكثر شهرة',
-      scrollDownText: 'مرر لأسفل لاستكشاف القائمة'
+      scrollDownText: 'مرر لأسفل لاستكشاف القائمة',
+      footer: {
+        description: 'نقدم النكهات الأصيلة والضيافة الدافئة من كردستان إلى طاولتك. كل طبق هو احتفال بتراثنا الثقافي الغني وتميزنا في الطهي.',
+        quickLinks: 'روابط سريعة',
+        contactInfo: 'معلومات الاتصال',
+        privacy: 'سياسة الخصوصية',
+        terms: 'شروط الخدمة',
+        openDaily: 'الأحد - الخميس: ١٢ صباحاً - ١٠ مساءً\nالجمعة - السبت: ١٢ صباحاً - ١١ مساءً',
+        copyright: '© ٢٠٢٥ مطعم قرية الطبيعة الكردي. جميع الحقوق محفوظة.',
+        poweredBy: 'مدعوم بـ',
+        blunari: 'بلوناري الذكي'
+      }
     },
     fa: { 
       title: 'سفر آشپزی ما', 
@@ -913,7 +983,18 @@ const FullMenuPage = () => {
         languages: 'زبان‌های جهانی'
       },
       popularSectionTitle: 'محبوب‌ترین غذاهای ما',
-      scrollDownText: 'برای کاوش منو پایین بروید'
+      scrollDownText: 'برای کاوش منو پایین بروید',
+      footer: {
+        description: 'طعم‌های اصیل و مهمان‌نوازی گرم کردستان را به میز شما می‌آوریم. هر غذا جشنی از میراث فرهنگی غنی و تعالی آشپزی ماست.',
+        quickLinks: 'لینک‌های سریع',
+        contactInfo: 'اطلاعات تماس',
+        privacy: 'سیاست حریم خصوصی',
+        terms: 'شرایط خدمات',
+        openDaily: 'یکشنبه - پنج‌شنبه: ۱۲ شب - ۱۰ شب\nجمعه - شنبه: ۱۲ شب - ۱۱ شب',
+        copyright: '© ۲۰۲۵ رستوران کردی دهکده طبیعت. تمام حقوق محفوظ است.',
+        poweredBy: 'قدرت گرفته از',
+        blunari: 'بلوناری هوشمند'
+      }
     },
     tr: { 
       title: 'Mutfak Yolculuğumuz', 
@@ -962,7 +1043,18 @@ const FullMenuPage = () => {
         languages: 'Küresel Dil'
       },
       popularSectionTitle: 'En Popüler Yemeklerimiz',
-      scrollDownText: 'Menüyü keşfetmek için aşağı kaydırın'
+      scrollDownText: 'Menüyü keşfetmek için aşağı kaydırın',
+      footer: {
+        description: 'Kürdistan\'ın özgün lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz. Her yemek zengin kültürel mirasımızın ve mutfak mükemmelliğimizin bir kutlamasıdır.',
+        quickLinks: 'Hızlı Bağlantılar',
+        contactInfo: 'İletişim Bilgileri',
+        privacy: 'Gizlilik Politikası',
+        terms: 'Hizmet Şartları',
+        openDaily: 'Pazar - Perşembe: 12:00 - 22:00\nCuma - Cumartesi: 12:00 - 23:00',
+        copyright: '© 2025 Nature Village Kürt Restoranı. Tüm hakları saklıdır.',
+        poweredBy: 'Destekçisi',
+        blunari: 'Blunari Akıllı'
+      }
     },
     ur: { 
       title: 'ہمارا پکوان کا سفر', 
@@ -1011,7 +1103,18 @@ const FullMenuPage = () => {
         languages: 'عالمی زبانیں'
       },
       popularSectionTitle: 'ہمارے سب سے مقبول کھانے',
-      scrollDownText: 'مینو دیکھنے کے لیے نیچے سکرول کریں'
+      scrollDownText: 'مینو دیکھنے کے لیے نیچے سکرول کریں',
+      footer: {
+        description: 'ہم کردستان کے اصل ذائقے اور گرم مہمان نوازی آپ کے میز تک لاتے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور کھانا پکانے کی مہارت کا جشن ہے۔',
+        quickLinks: 'فوری روابط',
+        contactInfo: 'رابطہ کی معلومات',
+        privacy: 'پرائیویسی پالیسی',
+        terms: 'خدمات کی شرائط',
+        openDaily: 'اتوار - جمعرات: 12 بجے - 10 بجے\nجمعہ - ہفتہ: 12 بجے - 11 بجے',
+        copyright: '© 2025 Nature Village کرد ریسٹورنٹ۔ تمام حقوق محفوظ ہیں۔',
+        poweredBy: 'تعاون یافتہ',
+        blunari: 'Blunari سمارٹ'
+      }
     },
     kmr: { 
       title: 'Rêwîtiya Aşpêjiya Me', 
@@ -1060,7 +1163,18 @@ const FullMenuPage = () => {
         languages: 'Zimanên Cîhanî'
       },
       popularSectionTitle: 'Xwarinên Me yên Herî Populer',
-      scrollDownText: 'Ji bo keşfkirina menûyê berbi jêr ve biçin'
+      scrollDownText: 'Ji bo keşfkirina menûyê berbi jêr ve biçin',
+      footer: {
+        description: 'Em tamên resen û mêvandariya germ a Kurdistanê diînin li masaya we. Her xwarineke pîrozbahiyek e ji mîrata me ya dewlemend a çandî û helbesta aşpêjiyê.',
+        quickLinks: 'Girêdanên Bilez',
+        contactInfo: 'Agahiyên Têkiliyê',
+        privacy: 'Siyaseta Nehêniyê',
+        terms: 'Mercên Karûbarê',
+        openDaily: 'Yekşem - Pêncşem: 12:00 - 22:00\nÎn - Şem: 12:00 - 23:00',
+        copyright: '© 2025 Xwaringeha Kurdî ya Gundê Xwezayê. Hemû maf parastî ne.',
+        poweredBy: 'Destekkirî bi',
+        blunari: 'Blunari Smart'
+      }
     }
   }
 
@@ -3278,7 +3392,7 @@ const FullMenuPage = () => {
               {/* Social Media Links - Minimal Design */}
               <div className="hidden lg:flex items-center space-x-2 flex-shrink-0">
                 <a 
-                  href="https://facebook.com/naturevillagerestaurant" 
+                  href="https://www.facebook.com/profile.php?id=61553675771574" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg text-amber-700 hover:text-amber-800 hover:bg-amber-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1"
@@ -3287,7 +3401,7 @@ const FullMenuPage = () => {
                   <Facebook className="w-4 h-4" />
                 </a>
                 <a 
-                  href="https://instagram.com/naturevillagerestaurant" 
+                  href="https://www.instagram.com/naturevillageatl" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg text-amber-700 hover:text-amber-800 hover:bg-amber-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1"
@@ -3534,7 +3648,7 @@ const FullMenuPage = () => {
                 <div className="mt-8 pt-6 border-t border-amber-200/70">
                   <div className="flex items-center justify-center space-x-6">
                     <a 
-                      href="https://facebook.com/naturevillagerestaurant" 
+                      href="https://www.facebook.com/profile.php?id=61553675771574" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="group p-3 rounded-full text-amber-700 hover:text-white hover:bg-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -3543,7 +3657,7 @@ const FullMenuPage = () => {
                       <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
                     </a>
                     <a 
-                      href="https://instagram.com/naturevillagerestaurant" 
+                      href="https://www.instagram.com/naturevillageatl" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="group p-3 rounded-full text-amber-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
@@ -4156,196 +4270,136 @@ const FullMenuPage = () => {
           </div>
         </main>
         
-        {/* Enhanced Footer - same as homepage */}
-        <footer className="mt-20 bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white relative overflow-hidden">
-          <div className="relative max-w-7xl mx-auto px-4 py-16">
-            <div className={`grid grid-cols-1 md:grid-cols-3 gap-12 ${isRTL ? 'text-right' : 'text-left'}`}>
-              
-              {/* Restaurant Info */}
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
-                    {language === 'ar' ? 'قرية الطبيعة' :
-                     language === 'fa' ? 'دهکده طبیعت' :
-                     language === 'ku' ? 'گوندی سروشت' :
-                     language === 'tr' ? 'Doğa Köyü' :
-                     language === 'ur' ? 'فطرت کا گاؤں' :
-                     language === 'kmr' ? 'Gundê Xwezayê' :
-                     "Nature's Village"}
-                  </h3>
-                  <p className="text-amber-200 leading-relaxed">
-                    {language === 'ar' ? 'تجربة طعام كردية أصيلة في قلب أتلانتا. نقدم أطباق تقليدية بنكهات حديثة.' :
-                     language === 'fa' ? 'تجربه غذای کردی اصیل در قلب آتلانتا. غذاهای سنتی با طعم‌های مدرن ارائه می‌دهیم.' :
-                     language === 'ku' ? 'ئەزموونی خواردنی کوردی ڕەسەن لە دڵی ئەتلانتا. خواردنی نەریتی بە تامی نوێ پێشکەش دەکەین.' :
-                     language === 'tr' ? 'Atlanta\'nın kalbinde otantik Kürt yemek deneyimi. Geleneksel yemekleri modern lezzetlerle sunuyoruz.' :
-                     language === 'ur' ? 'اٹلانٹا کے دل میں اصل کردش کھانے کا تجربہ۔ ہم روایتی کھانے جدید ذائقوں کے ساتھ پیش کرتے ہیں۔' :
-                     language === 'kmr' ? 'Ezmûna xwarinê ya Kurdî ya orîjînal li dil Atlanta. Em xwarinên kevneşopî bi tamên nû pêşkêş dikin.' :
-                     'Authentic Kurdish dining experience in the heart of Atlanta. We serve traditional dishes with modern flavors.'}
-                  </p>
+        {/* Footer */}
+        <footer className="bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white relative overflow-hidden">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div className={cn('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8', rtlClass('text-left', 'text-right'))}>
+              {/* Company Info */}
+              <div className="sm:col-span-2">
+                <div className={cn('flex items-center mb-4', isRTL && 'flex-row-reverse')}>
+                  <img 
+                    src="https://naturevillagerestaurant.com/wp-content/uploads/2024/09/cropped-NatureVillage-Logo_circle-1222-2048x2048-1.webp" 
+                    alt="Nature Village Logo" 
+                    className={cn('w-10 h-10 sm:w-12 sm:h-12 object-contain', rtlClass('mr-3', 'ml-3'))}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold">Nature Village</h3>
                 </div>
-                
-                {/* Contact Info */}
-                <div className="space-y-3">
-                  <div className={`flex items-center ${isRTL ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
-                    <div className="w-5 h-5 bg-amber-400 rounded-full flex-shrink-0"></div>
-                    <span className="text-amber-200">123 Kurdish Lane, Atlanta, GA 30309</span>
-                  </div>
-                  <div className={`flex items-center ${isRTL ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
-                    <div className="w-5 h-5 bg-amber-400 rounded-full flex-shrink-0"></div>
-                    <span className="text-amber-200">(404) 555-KURD</span>
-                  </div>
-                  <div className={`flex items-center ${isRTL ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
-                    <div className="w-5 h-5 bg-amber-400 rounded-full flex-shrink-0"></div>
-                    <span className="text-amber-200">info@naturesvillage.com</span>
-                  </div>
+                <p className="text-amber-200 mb-6 leading-relaxed text-sm sm:text-base">
+                  {getText(translations[language]?.footer?.description) || 'Bringing authentic Kurdish flavors to your table.'}
+                </p>
+                <div className={cn('flex space-x-4', isRTL && 'space-x-reverse')}>
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61553675771574" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-amber-200 hover:text-white transition-colors p-2 hover:bg-amber-700 rounded-full"
+                    aria-label="Follow us on Facebook"
+                  >
+                    <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/naturevillageatl" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-amber-200 hover:text-white transition-colors p-2 hover:bg-amber-700 rounded-full"
+                    aria-label="Follow us on Instagram"
+                  >
+                    <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </a>
                 </div>
               </div>
-              
+
               {/* Quick Links */}
-              <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-amber-100">
-                  {language === 'ar' ? 'روابط سريعة' :
-                   language === 'fa' ? 'لینک‌های سریع' :
-                   language === 'ku' ? 'بەستەری خێرا' :
-                   language === 'tr' ? 'Hızlı Bağlantılar' :
-                   language === 'ur' ? 'فوری لنکس' :
-                   language === 'kmr' ? 'Girêdanên Bilez' :
-                   'Quick Links'}
-                </h3>
-                <div className="space-y-3">
-                  {Object.entries(t.nav || {}).map(([key, value]) => (
-                    <button
-                      key={key}
-                      onClick={() => scrollToSection(key)}
-                      className="block text-amber-200 hover:text-amber-100 transition-colors hover:translate-x-1 transform duration-200"
-                    >
-                      {value}
-                    </button>
+              <div>
+                <h4 className="text-lg font-semibold mb-4">
+                  {getText(translations[language]?.footer?.quickLinks) || 'Quick Links'}
+                </h4>
+                <ul className="space-y-2">
+                  {Object.entries(translations[language]?.nav || {}).map(([key, value]) => (
+                    <li key={key}>
+                      <button 
+                        onClick={() => scrollToSection(key)}
+                        className="text-amber-200 hover:text-white transition-colors text-sm block"
+                      >
+                        {value}
+                      </button>
+                    </li>
                   ))}
-                </div>
+                  <li>
+                    <button 
+                      onClick={handlePrivacyClick}
+                      className="text-amber-200 hover:text-white transition-colors text-sm block"
+                    >
+                      {getText(translations[language]?.footer?.privacy) || 'Privacy Policy'}
+                    </button>
+                  </li>
+                  <li>
+                    <button 
+                      onClick={handleTermsClick}
+                      className="text-amber-200 hover:text-white transition-colors text-sm block"
+                    >
+                      {getText(translations[language]?.footer?.terms) || 'Terms of Service'}
+                    </button>
+                  </li>
+                </ul>
               </div>
-              
-              {/* Hours & Social */}
-              <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-amber-100">
-                  {language === 'ar' ? 'ساعات العمل' :
-                   language === 'fa' ? 'ساعات کاری' :
-                   language === 'ku' ? 'کاتی کارکردن' :
-                   language === 'tr' ? 'Çalışma Saatleri' :
-                   language === 'ur' ? 'کام کے اوقات' :
-                   language === 'kmr' ? 'Demên Xebatê' :
-                   'Opening Hours'}
-                </h3>
-                <div className="space-y-2 text-amber-200">
-                  <div className="flex justify-between">
-                    <span>{language === 'ar' ? 'الإثنين - الخميس' :
-                           language === 'fa' ? 'دوشنبه - پنج‌شنبه' :
-                           language === 'ku' ? 'دووشەممە - پێنجشەممە' :
-                           language === 'tr' ? 'Pazartesi - Perşembe' :
-                           language === 'ur' ? 'پیر - جمعرات' :
-                           language === 'kmr' ? 'Duşem - Pêncşem' :
-                           'Mon - Thu'}</span>
-                    <span>11:00 AM - 10:00 PM</span>
+
+              {/* Contact Info */}
+              <div>
+                <h4 className="text-lg font-semibold mb-4">
+                  {getText(translations[language]?.footer?.contactInfo) || 'Contact Information'}
+                </h4>
+                <div className="space-y-2 text-amber-200 text-sm">
+                  <div className="flex items-start">
+                    <MapPin className="w-4 h-4 mr-2 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <div>302 Satellite Blvd NE STE 125,</div>
+                      <div>Suwanee, GA 30024</div>
+                    </div>
                   </div>
-                  <div className="flex justify-between">
-                    <span>{language === 'ar' ? 'الجمعة - السبت' :
-                           language === 'fa' ? 'جمعه - شنبه' :
-                           language === 'ku' ? 'هەینی - شەممە' :
-                           language === 'tr' ? 'Cuma - Cumartesi' :
-                           language === 'ur' ? 'جمعہ - ہفتہ' :
-                           language === 'kmr' ? 'În - Şemî' :
-                           'Fri - Sat'}</span>
-                    <span>11:00 AM - 11:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>{language === 'ar' ? 'الأحد' :
-                           language === 'fa' ? 'یکشنبه' :
-                           language === 'ku' ? 'یەکشەممە' :
-                           language === 'tr' ? 'Pazar' :
-                           language === 'ur' ? 'اتوار' :
-                           language === 'kmr' ? 'Yekşem' :
-                           'Sunday'}</span>
-                    <span>12:00 PM - 9:00 PM</span>
-                  </div>
-                </div>
-                
-                {/* Social Media */}
-                <div className="pt-4">
-                  <h4 className="text-lg text-amber-100 mb-3">
-                    {language === 'ar' ? 'تابعنا' :
-                     language === 'fa' ? 'ما را دنبال کنید' :
-                     language === 'ku' ? 'شوێنمان بکەون' :
-                     language === 'tr' ? 'Bizi Takip Edin' :
-                     language === 'ur' ? 'ہمیں فالو کریں' :
-                     language === 'kmr' ? 'Me Bişopînin' :
-                     'Follow Us'}
-                  </h4>
-                  <div className={`flex ${isRTL ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
-                    {['facebook', 'instagram', 'twitter'].map((social) => (
-                      <a key={social} href="#" className="w-10 h-10 bg-amber-600 hover:bg-amber-500 rounded-full flex items-center justify-center transition-all transform hover:scale-110 hover:shadow-lg">
-                        <div className="w-5 h-5 bg-white rounded-sm"></div>
-                      </a>
-                    ))}
+                  <p className="flex items-center">
+                    <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <a href="tel:+14703501019" className="hover:text-white transition-colors">
+                      (470) 350-1019
+                    </a>
+                  </p>
+                  <div className="flex items-start">
+                    <Clock className="w-4 h-4 mr-2 flex-shrink-0 mt-0.5" />
+                    <div className="text-sm">
+                      <div>{getText(translations[language]?.footer?.openDaily?.split('\n')[0]) || 'SUN - THU: 12 AM - 10 PM'}</div>
+                      <div>{getText(translations[language]?.footer?.openDaily?.split('\n')[1]) || 'FRI - SAT: 12 AM - 11 PM'}</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             {/* Bottom Section */}
-            <div className="border-t border-amber-700 mt-12 pt-8">
-              <div className={`flex flex-col md:flex-row ${isRTL ? 'md:flex-row-reverse' : ''} justify-between items-center space-y-4 md:space-y-0`}>
-                
-                {/* Copyright */}
-                <div className="text-amber-300 text-sm">
-                  © 2024 Nature's Village. {language === 'ar' ? 'جميع الحقوق محفوظة' :
-                                          language === 'fa' ? 'تمام حقوق محفوظ است' :
-                                          language === 'ku' ? 'هەموو مافەکان پارێزراون' :
-                                          language === 'tr' ? 'Tüm hakları saklıdır' :
-                                          language === 'ur' ? 'تمام حقوق محفوظ ہیں' :
-                                          language === 'kmr' ? 'Hemû maf parastî ne' :
-                                          'All rights reserved'}.
-                </div>
-                
-                {/* Powered by Blunari - Enhanced */}
-                <div className={`flex items-center group ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'}`}>
-                  <span className="text-amber-300 text-sm">
-                    {language === 'ar' ? 'مدعوم بـ' :
-                     language === 'fa' ? 'قدرت گرفته از' :
-                     language === 'ku' ? 'پشتگیری کراو لەلایەن' :
-                     language === 'tr' ? 'Destekleyen' :
-                     language === 'ur' ? 'سپورٹ کردہ' :
-                     language === 'kmr' ? 'Piştgirî kirin ji alî' :
-                     'Powered by'}
-                  </span>
-                  <a 
-                    href="https://blunari.ai" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="relative inline-flex items-center"
+            <div className="border-t border-amber-700 mt-8 sm:mt-12 pt-6 sm:pt-8">
+              <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                <p className="text-amber-200 text-sm text-center sm:text-left">
+                  {getText(translations[language]?.footer?.copyright) || '© 2025 Nature Village Kurdish Restaurant. All rights reserved.'}
+                </p>
+                <div className="flex items-center space-x-2 text-amber-300 text-sm">
+                  <span>{getText(translations[language]?.footer?.poweredBy) || 'Powered by'}</span>
+                  <button 
+                    onClick={handleBlunariClick}
+                    className="hover:text-white transition-colors font-medium underline decoration-dotted underline-offset-4"
                   >
-                    {/* Glowing background effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-30 group-hover:opacity-50 transition-opacity animate-pulse"></div>
-                    
-                    {/* Main button */}
-                    <div className={`relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl hover:from-blue-500 hover:to-purple-500 ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'}`}>
-                      {/* AI Icon */}
-                      <div className="w-5 h-5 bg-white rounded-sm flex items-center justify-center">
-                        <div className="w-3 h-3 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full animate-pulse"></div>
-                      </div>
-                      <span className="font-bold tracking-wide">Blunari</span>
-                      {/* Arrow icon */}
-                      <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </div>
-                  </a>
+                    {getText(translations[language]?.footer?.blunari) || 'Blunari AI'}
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-          
-          {/* Decorative bottom border */}
-          <div className="h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
+
+          {/* Background decoration */}
+          <div className="absolute top-0 right-0 opacity-5">
+            <KurdishPattern />
+          </div>
         </footer>
 
         {/* Order Online Modal */}

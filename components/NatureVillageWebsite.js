@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { Menu, X, MapPin, Phone, Clock, Star, Filter, Globe, Facebook, Instagram, Twitter, MessageCircle, ChefHat, Users, Calendar, Award, ChevronRight, Home, Utensils, Info, Camera, ExternalLink, Share2, ChevronDown } from 'lucide-react';
+import { Menu, X, MapPin, Phone, Clock, Star, Filter, Globe, Facebook, Instagram, ChefHat, Users, Calendar, Award, ChevronRight, Home, Utensils, Info, Camera, ExternalLink, Share2, ChevronDown, Grid, Heart, Eye, Share, ZoomIn, Download } from 'lucide-react';
 import { useRouter } from 'next/router';
 
 const NatureVillageWebsite = () => {
@@ -11,6 +11,22 @@ const NatureVillageWebsite = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
   const [showOrderModal, setShowOrderModal] = useState(false);
+  
+  // Enhanced Gallery State Variables
+  const [galleryFilter, setGalleryFilter] = useState('all');
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [galleryView, setGalleryView] = useState('grid'); // 'grid' or 'masonry'
+  
+  // Live Restaurant Status State
+  const [restaurantStatus, setRestaurantStatus] = useState({
+    isOpen: true,
+    busyLevel: 'medium', // 'low', 'medium', 'high', 'very-high'
+    waitTime: '15-20',
+    nextClosing: '10:00 PM',
+    deliveryTime: '25-35'
+  });
+  
   const router = useRouter();
 
   // Language options with proper Unicode characters
@@ -37,6 +53,67 @@ const NatureVillageWebsite = () => {
   // Handle component mounting
   useEffect(() => {
     setIsMounted(true);
+    
+    // Simulate live status updates
+    const updateRestaurantStatus = () => {
+      const now = new Date();
+      const hour = now.getHours();
+      const day = now.getDay();
+      
+      // Determine if restaurant is open (12 PM - 10 PM Sunday-Thursday, 12 PM - 11 PM Friday-Saturday)
+      const isWeekend = day === 5 || day === 6; // Friday or Saturday
+      const closingHour = isWeekend ? 23 : 22; // 11 PM or 10 PM
+      const isOpen = hour >= 12 && hour < closingHour;
+      
+      // Simulate busy levels based on time and day
+      let busyLevel = 'low';
+      let waitTime = '5-10';
+      let deliveryTime = '20-25';
+      
+      if (isOpen) {
+        // Peak hours logic
+        if ((hour >= 12 && hour <= 14) || (hour >= 18 && hour <= 21)) {
+          // Lunch and dinner rush
+          if (isWeekend) {
+            busyLevel = Math.random() > 0.3 ? 'very-high' : 'high';
+            waitTime = busyLevel === 'very-high' ? '45-60' : '30-40';
+            deliveryTime = busyLevel === 'very-high' ? '45-55' : '35-45';
+          } else {
+            busyLevel = Math.random() > 0.5 ? 'high' : 'medium';
+            waitTime = busyLevel === 'high' ? '25-35' : '15-25';
+            deliveryTime = busyLevel === 'high' ? '35-45' : '25-35';
+          }
+        } else if (hour >= 15 && hour <= 17) {
+          // Afternoon lull
+          busyLevel = 'low';
+          waitTime = '5-10';
+          deliveryTime = '20-25';
+        } else {
+          // Regular hours
+          busyLevel = 'medium';
+          waitTime = '15-20';
+          deliveryTime = '25-35';
+        }
+      }
+      
+      const nextClosing = isWeekend ? '11:00 PM' : '10:00 PM';
+      
+      setRestaurantStatus({
+        isOpen,
+        busyLevel,
+        waitTime,
+        nextClosing,
+        deliveryTime
+      });
+    };
+    
+    // Initial status update
+    updateRestaurantStatus();
+    
+    // Update status every 2 minutes
+    const statusInterval = setInterval(updateRestaurantStatus, 120000);
+    
+    return () => clearInterval(statusInterval);
   }, []);
 
   // Handle click outside to close dropdowns
@@ -112,6 +189,174 @@ const NatureVillageWebsite = () => {
       <rect width="400" height="400" fill="url(#kurdishPattern)"/>
     </svg>
   );
+
+  // Enhanced Gallery Data Structure
+  const galleryImages = useMemo(() => [
+    {
+      id: 1,
+      src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop',
+      thumbnail: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop',
+      alt: { en: 'Elegant Restaurant Interior', ku: 'ناوەوەی چێشتخانەی جوان', ar: 'داخل المطعم الأنيق' },
+      category: 'atmosphere',
+      tags: ['interior', 'ambiance', 'dining'],
+      likes: 127,
+      featured: true,
+      story: {
+        en: 'Our warm and inviting dining space reflects Kurdish hospitality',
+        ku: 'شوێنی خواردنی گەرم و بانگهێشتکارمان ڕەنگدانەوەی میوانداری کوردی دەکات'
+      }
+    },
+    {
+      id: 2,
+      src: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&h=600&fit=crop',
+      thumbnail: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&h=300&fit=crop',
+      alt: { en: 'Authentic Kurdish Kebab', ku: 'کەبابی ڕەسەنی کوردی', ar: 'كباب كردي أصيل' },
+      category: 'dishes',
+      tags: ['kebab', 'grilled', 'signature'],
+      likes: 245,
+      featured: true,
+      story: {
+        en: 'Hand-crafted kebabs using traditional Kurdish spices and techniques',
+        ku: 'کەبابی دەستکرد بە بەکارهێنانی بەهارات و تەکنیکی نەریتی کوردی'
+      }
+    },
+    {
+      id: 3,
+      src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
+      thumbnail: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop',
+      alt: { en: 'Fresh Hummus with Pita', ku: 'حومسی تازە لەگەڵ نانی پیتا', ar: 'حمص طازج مع الخبز' },
+      category: 'dishes',
+      tags: ['hummus', 'appetizer', 'vegetarian'],
+      likes: 189,
+      featured: false,
+      story: {
+        en: 'Creamy hummus made fresh daily with tahini and olive oil',
+        ku: 'حومسی کرێمی کە ڕۆژانە بە تەحینە و زەیتی زەیتوون تازە دروست دەکرێت'
+      }
+    },
+    {
+      id: 4,
+      src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop',
+      thumbnail: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
+      alt: { en: 'Traditional Kurdish Platter', ku: 'پلێتەری نەریتی کوردی', ar: 'طبق كردي تقليدي' },
+      category: 'dishes',
+      tags: ['traditional', 'mixed', 'authentic'],
+      likes: 156,
+      featured: true,
+      story: {
+        en: 'A celebration of Kurdish culinary heritage in one beautiful platter',
+        ku: 'ئاهەنگێک بۆ میراتی چێشتلێنانی کوردی لە یەک پلێتەری جوان'
+      }
+    },
+    {
+      id: 5,
+      src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop',
+      thumbnail: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop',
+      alt: { en: 'Kurdish Vegetable Medley', ku: 'تێکەڵەی سەوزەی کوردی', ar: 'خليط الخضار الكردي' },
+      category: 'dishes',
+      tags: ['vegetables', 'healthy', 'colorful'],
+      likes: 134,
+      featured: false,
+      story: {
+        en: 'Fresh seasonal vegetables prepared with Kurdish herbs and spices',
+        ku: 'سەوزەی وەرزیی تازە کە بە گیا و بەهاراتی کوردی ئامادە کراوە'
+      }
+    },
+    {
+      id: 6,
+      src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=800&h=600&fit=crop',
+      thumbnail: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop',
+      alt: { en: 'Traditional Baklava', ku: 'بەقڵاوای نەریتی', ar: 'بقلاوة تقليدية' },
+      category: 'desserts',
+      tags: ['baklava', 'sweet', 'pastry'],
+      likes: 201,
+      featured: true,
+      story: {
+        en: 'Delicate layers of phyllo pastry filled with nuts and sweetened with honey',
+        ku: 'چینە چینە فیلۆی ناسک پڕکراو لە گوێز و بە هەنگوین شیرین کراوە'
+      }
+    },
+    {
+      id: 7,
+      src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
+      thumbnail: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&h=300&fit=crop',
+      alt: { en: 'Kurdish Dolma', ku: 'دۆڵمەی کوردی', ar: 'دولمة كردية' },
+      category: 'dishes',
+      tags: ['dolma', 'stuffed', 'traditional'],
+      likes: 178,
+      featured: false,
+      story: {
+        en: 'Grape leaves stuffed with rice, herbs, and spices - a family recipe',
+        ku: 'گەڵای مێو پڕکراو لە برنج و گیا و بەهارات - ڕێسەتێکی خێزانی'
+      }
+    },
+    {
+      id: 8,
+      src: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=800&h=600&fit=crop',
+      thumbnail: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop',
+      alt: { en: 'Hearty Kurdish Soup', ku: 'شۆربەی بەهێزی کوردی', ar: 'حساء كردي مغذي' },
+      category: 'dishes',
+      tags: ['soup', 'comfort', 'warm'],
+      likes: 143,
+      featured: false,
+      story: {
+        en: 'Warming soup made with traditional Kurdish ingredients and love',
+        ku: 'شۆربەی گەرمکەرەوە کە بە پێکهاتەی نەریتی کوردی و خۆشەویستی دروست کراوە'
+      }
+    }
+  ], []);
+
+  // Gallery Categories
+  const galleryCategories = useMemo(() => ({
+    all: { en: 'All Photos', ku: 'هەموو وێنەکان', ar: 'جميع الصور', icon: Grid },
+    dishes: { en: 'Signature Dishes', ku: 'خۆراکی تایبەت', ar: 'الأطباق المميزة', icon: ChefHat },
+    atmosphere: { en: 'Restaurant Atmosphere', ku: 'کەشوهەوای چێشتخانە', ar: 'أجواء المطعم', icon: Home },
+    desserts: { en: 'Sweet Treats', ku: 'شیرینی', ar: 'الحلويات', icon: Heart }
+  }), []);
+
+  // Filter functionality
+  const filteredGalleryImages = useMemo(() => {
+    let filtered = galleryImages;
+    
+    // Filter by category
+    if (galleryFilter !== 'all') {
+      filtered = filtered.filter(image => image.category === galleryFilter);
+    }
+    
+    return filtered;
+  }, [galleryImages, galleryFilter]);
+
+  // Lightbox functionality
+  const openLightbox = useCallback((image) => {
+    setSelectedImage(image);
+    setLightboxOpen(true);
+    document.body.style.overflow = 'hidden';
+  }, []);
+
+  const closeLightbox = useCallback(() => {
+    setLightboxOpen(false);
+    setSelectedImage(null);
+    document.body.style.overflow = 'unset';
+  }, []);
+
+  // Social sharing functionality
+  const shareImage = useCallback(async (image) => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `${image.alt.en} - Nature Village Restaurant`,
+          text: image.story.en,
+          url: window.location.href
+        });
+      } catch (err) {
+        console.log('Error sharing:', err);
+      }
+    } else {
+      // Fallback to copying link
+      navigator.clipboard.writeText(window.location.href);
+      // You could show a toast notification here
+    }
+  }, []);
 
   // Enhanced menu data with complete multilingual support
   const menuItems = [
@@ -327,9 +572,7 @@ const NatureVillageWebsite = () => {
         contact: 'Contact Information',
         address: 'Address',
         phone: 'Phone',
-        whatsapp: 'WhatsApp',
         makeReservation: 'Make Reservation',
-        whatsappUs: 'WhatsApp Us',
         getDirections: 'Get Directions'
       },
       footer: {
@@ -337,7 +580,7 @@ const NatureVillageWebsite = () => {
         quickLinks: 'Quick Links',
         contactInfo: 'Contact Information',
         followUs: 'Follow Us',
-        openDaily: 'Open Daily 11:00 AM - 11:00 PM',
+        openDaily: 'SUN - THU: 12 AM - 10 PM\nFRI - SAT: 12 AM - 11 PM',
         poweredBy: 'Powered by',
         blunari: 'Blunari AI',
         copyright: `© ${new Date().getFullYear()} Nature Village Kurdish Restaurant. All rights reserved.`,
@@ -347,6 +590,33 @@ const NatureVillageWebsite = () => {
       featured: {
         title: 'Featured Dishes',
         subtitle: 'Discover our most beloved Kurdish specialties, crafted with traditional recipes and modern presentation'
+      },
+      celebration: {
+        title: 'Celebrate Your Special Moments',
+        subtitle: 'Make your birthdays, anniversaries, and special occasions unforgettable with authentic Kurdish hospitality',
+        birthday: {
+          title: 'Birthday Celebrations',
+          tagline: 'Make it a day to remember',
+          feature1: 'Complimentary birthday cake & candles',
+          feature2: 'Traditional Kurdish birthday songs',
+          feature3: 'Professional photo memories',
+          feature4: 'Special birthday decorations',
+          special: 'Perfect for birthday parties of all sizes'
+        },
+        anniversary: {
+          title: 'Anniversary Dinners',
+          tagline: 'Celebrate your love story',
+          feature1: 'Romantic table setup with roses',
+          feature2: 'Complimentary dessert for two',
+          feature3: 'Candlelit dining experience',
+          feature4: 'Personalized anniversary card',
+          special: '25+ years together? Special surprise awaits!'
+        },
+        cta: {
+          title: 'Ready to Celebrate?',
+          subtitle: 'Let us make your special day extraordinary with authentic Kurdish hospitality and unforgettable flavors',
+          reserve: 'Call for special reservation'
+        }
       },
       tags: {
         vegetarian: '🌱 Vegetarian',
@@ -416,9 +686,7 @@ const NatureVillageWebsite = () => {
         contact: 'زانیاری پەیوەندی',
         address: 'ناونیشان',
         phone: 'تەلەفۆن',
-        whatsapp: 'واتساپ',
         makeReservation: 'جێگە حیجازکردن',
-        whatsappUs: 'واتساپمان بکە',
         getDirections: 'ڕێنمایی وەربگرە'
       },
       footer: {
@@ -426,7 +694,7 @@ const NatureVillageWebsite = () => {
         quickLinks: 'لینکە خێراکان',
         contactInfo: 'زانیاری پەیوەندی',
         followUs: 'شوێنمان بکەون',
-        openDaily: 'ڕۆژانە کراوەیە ١١:٠٠ی بەیانی - ١١:٠٠ی شەو',
+        openDaily: 'یەکشەممە - پێنجشەممە: ١٢:٠٠ ی بەیانی - ١٠:٠٠ ی شەو\nهەینی - شەممە: ١٢:٠٠ ی بەیانی - ١١:٠٠ ی شەو',
         poweredBy: 'هێزی لەلایەن',
         blunari: 'بلوناری AI',
         copyright: `© ${new Date().getFullYear()} گوندی سروشت چێشتخانەی کوردی. هەموو مافەکان پارێزراون.`,
@@ -436,6 +704,33 @@ const NatureVillageWebsite = () => {
       featured: {
         title: 'خۆراکی نمایشکراو',
         subtitle: 'خۆراکە خۆشەویستەکانی کوردی بناسە کە بە ڕێسەتی نەریتی و پێشکەشکردنی نوێ دروست کراون'
+      },
+      celebration: {
+        title: 'ئاهەنگەکانتان لێرە بگێڕن',
+        subtitle: 'ڕۆژە تایبەتەکانتان وەک ڕۆژی لەدایکبوون و ساڵیادەکان لەگەڵ میوانداری کوردی نەویست بکەن',
+        birthday: {
+          title: 'ئاهەنگی ڕۆژی لەدایکبوون',
+          tagline: 'ڕۆژێک بیکەن بەیادماوی',
+          feature1: 'کەیکی ڕۆژی لەدایکبوون و مۆمەکان بەخۆڕایی',
+          feature2: 'گۆرانی نەریتی کوردی بۆ ڕۆژی لەدایکبوون',
+          feature3: 'وێنەگرتنی پیشەیی بۆ یادگارییەکان',
+          feature4: 'ڕازاندنەوەی تایبەت بۆ ڕۆژی لەدایکبوون',
+          special: 'کۆمەڵی ڕۆژی لەدایکبوون ٦+ کەس ١٥٪ داشکاندن'
+        },
+        anniversary: {
+          title: 'نانی شەو ساڵیاد',
+          tagline: 'چیرۆکی خۆشەویستیتان ئاهەنگ بکەن',
+          feature1: 'ڕێکخستنی مێزی خۆشەویستی لەگەڵ گوڵ',
+          feature2: 'شیرینی بەخۆڕایی بۆ دوو کەس',
+          feature3: 'ئەزموونی نانخواردن لەگەڵ مۆم',
+          feature4: 'کارتی ساڵیاد تایبەتی',
+          special: '٢٥+ ساڵ پێکەوە؟ سەرپرایزی تایبەت چاوەڕوانتانە!'
+        },
+        cta: {
+          title: 'ئامادەن بۆ ئاهەنگ؟',
+          subtitle: 'ڕای لێبدەن ڕۆژی تایبەتتان بکەینە نائاسایی لەگەڵ میوانداری کوردی و تامە نەویستەکان',
+          reserve: 'پەیوەندی بکەن بۆ حیجازی تایبەت'
+        }
       },
       tags: {
         vegetarian: '🌱 ڕووەکی',
@@ -505,9 +800,7 @@ const NatureVillageWebsite = () => {
         contact: 'معلومات الاتصال',
         address: 'العنوان',
         phone: 'الهاتف',
-        whatsapp: 'واتساب',
         makeReservation: 'احجز طاولة',
-        whatsappUs: 'راسلنا على واتساب',
         getDirections: 'احصل على الاتجاهات'
       },
       footer: {
@@ -515,7 +808,7 @@ const NatureVillageWebsite = () => {
         quickLinks: 'روابط سريعة',
         contactInfo: 'معلومات الاتصال',
         followUs: 'تابعونا',
-        openDaily: 'مفتوح يومياً ١١:٠٠ ص - ١١:٠٠ م',
+        openDaily: 'الأحد - الخميس: ١٢:٠٠ ص - ١٠:٠٠ م\nالجمعة - السبت: ١٢:٠٠ ص - ١١:٠٠ م',
         poweredBy: 'مدعوم من',
         blunari: 'بلوناري AI',
         copyright: `© ${new Date().getFullYear()} قرية الطبيعة مطعم كردي. جميع الحقوق محفوظة.`,
@@ -525,6 +818,33 @@ const NatureVillageWebsite = () => {
       featured: {
         title: 'الأطباق المميزة',
         subtitle: 'اكتشف أحب الأطباق الكردية لدينا، المحضرة بوصفات تقليدية وعرض عصري'
+      },
+      celebration: {
+        title: 'احتفل بلحظاتك الخاصة',
+        subtitle: 'اجعل أعياد ميلادك وذكرياتك السنوية والمناسبات الخاصة لا تُنسى مع الضيافة الكردية الأصيلة',
+        birthday: {
+          title: 'احتفالات أعياد الميلاد',
+          tagline: 'اجعلها يوماً لا يُنسى',
+          feature1: 'كعكة عيد ميلاد مجانية مع الشموع',
+          feature2: 'أغاني عيد ميلاد كردية تقليدية',
+          feature3: 'ذكريات التصوير الاحترافي',
+          feature4: 'زينة عيد ميلاد خاصة',
+          special: 'مجموعات أعياد الميلاد ٦+ أشخاص خصم ١٥٪'
+        },
+        anniversary: {
+          title: 'عشاء الذكرى السنوية',
+          tagline: 'احتفل بقصة حبك',
+          feature1: 'إعداد طاولة رومانسية مع الورود',
+          feature2: 'حلوى مجانية لشخصين',
+          feature3: 'تجربة طعام على ضوء الشموع',
+          feature4: 'بطاقة ذكرى سنوية شخصية',
+          special: '٢٥+ سنة معاً؟ مفاجأة خاصة تنتظركم!'
+        },
+        cta: {
+          title: 'مستعد للاحتفال؟',
+          subtitle: 'دعنا نجعل يومك الخاص استثنائياً مع الضيافة الكردية الأصيلة والنكهات التي لا تُنسى',
+          reserve: 'اتصل للحجز الخاص'
+        }
       },
       tags: {
         vegetarian: '🌱 نباتي',
@@ -594,9 +914,7 @@ const NatureVillageWebsite = () => {
         contact: 'اطلاعات تماس',
         address: 'آدرس',
         phone: 'تلفن',
-        whatsapp: 'واتساپ',
         makeReservation: 'رزرو میز',
-        whatsappUs: 'واتساپ کنید',
         getDirections: 'مسیریابی'
       },
       footer: {
@@ -604,7 +922,7 @@ const NatureVillageWebsite = () => {
         quickLinks: 'لینک‌های سریع',
         contactInfo: 'اطلاعات تماس',
         followUs: 'ما را دنبال کنید',
-        openDaily: 'روزانه باز ۱۱:۰۰ صبح - ۱۱:۰۰ شب',
+        openDaily: 'یکشنبه - پنج‌شنبه: ۱۲:۰۰ ظهر - ۱۰:۰۰ شب\nجمعه - شنبه: ۱۲:۰۰ ظهر - ۱۱:۰۰ شب',
         poweredBy: 'قدرت گرفته از',
         blunari: 'بلوناری AI',
         copyright: `© ${new Date().getFullYear()} دهکده طبیعت رستوران کردی. تمام حقوق محفوظ است.`,
@@ -683,9 +1001,7 @@ const NatureVillageWebsite = () => {
         contact: 'İletişim Bilgileri',
         address: 'Adres',
         phone: 'Telefon',
-        whatsapp: 'WhatsApp',
         makeReservation: 'Rezervasyon Yap',
-        whatsappUs: 'WhatsApp ile Ulaşın',
         getDirections: 'Yol Tarifi Al'
       },
       footer: {
@@ -693,7 +1009,7 @@ const NatureVillageWebsite = () => {
         quickLinks: 'Hızlı Bağlantılar',
         contactInfo: 'İletişim Bilgileri',
         followUs: 'Bizi Takip Edin',
-        openDaily: 'Her Gün Açık 11:00 - 23:00',
+        openDaily: 'PAZAR - PERŞEMBE: 12:00 - 22:00\nCUMA - CUMARTESİ: 12:00 - 23:00',
         poweredBy: 'Destekleyen',
         blunari: 'Blunari AI',
         copyright: `© ${new Date().getFullYear()} Nature Village Kürt Restoranı. Tüm hakları saklıdır.`,
@@ -772,9 +1088,7 @@ const NatureVillageWebsite = () => {
         contact: 'رابطے کی معلومات',
         address: 'پتہ',
         phone: 'فون',
-        whatsapp: 'واٹس ایپ',
         makeReservation: 'بکنگ کریں',
-        whatsappUs: 'واٹس ایپ کریں',
         getDirections: 'راستہ حاصل کریں'
       },
       footer: {
@@ -782,7 +1096,7 @@ const NatureVillageWebsite = () => {
         quickLinks: 'فوری لنکس',
         contactInfo: 'رابطے کی معلومات',
         followUs: 'ہمیں فالو کریں',
-        openDaily: 'روزانہ کھلا ۱۱:۰۰ صبح - ۱۱:۰۰ رات',
+        openDaily: 'اتوار - جمعرات: ۱۲:۰۰ دوپہر - ۱۰:۰۰ رات\nجمعہ - ہفتہ: ۱۲:۰۰ دوپہر - ۱۱:۰۰ رات',
         poweredBy: 'طاقت فراہم کنندہ',
         blunari: 'بلوناری AI',
         copyright: `© ${new Date().getFullYear()} نیچر ولیج کرد ریسٹوران۔ تمام حقوق محفوظ ہیں۔`,
@@ -861,9 +1175,7 @@ const NatureVillageWebsite = () => {
         contact: 'Agahiyên Têkiliyê',
         address: 'Navnîşan',
         phone: 'Telefon',
-        whatsapp: 'WhatsApp',
         makeReservation: 'Rezervasyon Bikin',
-        whatsappUs: 'WhatsApp Bikin',
         getDirections: 'Rê Bistînin'
       },
       footer: {
@@ -871,7 +1183,7 @@ const NatureVillageWebsite = () => {
         quickLinks: 'Lînkên Bilez',
         contactInfo: 'Agahiyên Têkiliyê',
         followUs: 'Şopa Me Bikin',
-        openDaily: 'Rojane Vekirî 11:00 - 23:00',
+        openDaily: 'YEKŞEM - PÊNCŞEM: 12:00 - 22:00\nÎN - ŞEMÎ: 12:00 - 23:00',
         poweredBy: 'Ji aliyê ve tê piştgirîkirin',
         blunari: 'Blunari AI',
         copyright: `© ${new Date().getFullYear()} Gundê Xwezayê Xwarinxaneya Kurdî. Hemû maf parastî ne.`,
@@ -943,6 +1255,10 @@ const NatureVillageWebsite = () => {
         router.push({ pathname: '/menu', query: { lang: language } });
         return;
       }
+      if (sectionId === 'gallery') {
+        router.push({ pathname: '/gallery', query: { lang: language } });
+        return;
+      }
 
       setCurrentSection(sectionId);
       setIsMenuOpen(false);
@@ -991,17 +1307,6 @@ const NatureVillageWebsite = () => {
 
   const isRTL = languages[language]?.dir === 'rtl';
 
-  // Safe WhatsApp handler
-  const handleWhatsAppClick = useCallback(() => {
-    try {
-      if (typeof window !== 'undefined') {
-        window.open('https://wa.me/15551234567', '_blank', 'noopener,noreferrer');
-      }
-    } catch (error) {
-      console.error('Error opening WhatsApp:', error);
-    }
-  }, []);
-
   // Safe Blunari link handler
   const handleBlunariClick = useCallback(() => {
     try {
@@ -1013,6 +1318,18 @@ const NatureVillageWebsite = () => {
     }
   }, []);
 
+  // Privacy Policy handler
+  const handlePrivacyClick = useCallback(() => {
+    // For now, scroll to footer - you can later add a dedicated privacy page
+    scrollToSection('footer');
+  }, []);
+
+  // Terms of Service handler
+  const handleTermsClick = useCallback(() => {
+    // For now, scroll to footer - you can later add a dedicated terms page
+    scrollToSection('footer');
+  }, []);
+
   // Online order handler
   const handleOrderOnline = useCallback(() => {
     setShowOrderModal(true);
@@ -1021,8 +1338,8 @@ const NatureVillageWebsite = () => {
   // Delivery platform handlers
   const handleUberEats = useCallback(() => {
     try {
-      // Replace with your actual Uber Eats restaurant URL
-      window.open('https://www.ubereats.com/store/nature-village', '_blank', 'noopener,noreferrer');
+      // Uber Eats restaurant URL for Nature Village Restaurant
+      window.open('https://www.ubereats.com/store/nature-village-restaurant/dR5RyEoLXtarbrxoIn-nqw', '_blank', 'noopener,noreferrer');
       setShowOrderModal(false);
     } catch (error) {
       console.error('Error opening Uber Eats:', error);
@@ -1031,8 +1348,8 @@ const NatureVillageWebsite = () => {
 
   const handleDoorDash = useCallback(() => {
     try {
-      // Replace with your actual DoorDash restaurant URL
-      window.open('https://www.doordash.com/store/nature-village', '_blank', 'noopener,noreferrer');
+      // DoorDash restaurant URL for Nature Village Restaurant
+      window.open('https://www.doordash.com/store/nature-village-restaurant-suwanee-28955148/36933361/', '_blank', 'noopener,noreferrer');
       setShowOrderModal(false);
     } catch (error) {
       console.error('Error opening DoorDash:', error);
@@ -1041,8 +1358,8 @@ const NatureVillageWebsite = () => {
 
   const handleSlice = useCallback(() => {
     try {
-      // Replace with your actual Slice restaurant URL
-      window.open('https://slicelife.com/restaurants/nature-village', '_blank', 'noopener,noreferrer');
+      // Slice restaurant URL for Nature Village Restaurant
+      window.open('https://slicelife.com/restaurants/ga/suwanee/30024/nature-village-restaurant/menu', '_blank', 'noopener,noreferrer');
       setShowOrderModal(false);
     } catch (error) {
       console.error('Error opening Slice:', error);
@@ -1058,6 +1375,52 @@ const NatureVillageWebsite = () => {
   const rtlClass = (ltrClass, rtlClass = '') => {
     return isRTL ? rtlClass : ltrClass;
   };
+
+  // Live status helper functions
+  const getBusyLevelText = useCallback((level) => {
+    const busyTexts = {
+      en: {
+        low: 'Not busy',
+        medium: 'Moderately busy',
+        high: 'Busy',
+        'very-high': 'Very busy'
+      },
+      ku: {
+        low: 'قەرەباڵغی نییە',
+        medium: 'قەرەباڵغی مامناوەند',
+        high: 'قەرەباڵغی',
+        'very-high': 'زۆر قەرەباڵغی'
+      },
+      ar: {
+        low: 'غير مزدحم',
+        medium: 'مزدحم قليلاً',
+        high: 'مزدحم',
+        'very-high': 'مزدحم جداً'
+      }
+    };
+    return busyTexts[language]?.[level] || busyTexts.en[level] || 'Unknown';
+  }, [language]);
+
+  const getBusyLevelColor = useCallback((level) => {
+    const colors = {
+      low: 'text-green-600 bg-green-100',
+      medium: 'text-yellow-600 bg-yellow-100', 
+      high: 'text-orange-600 bg-orange-100',
+      'very-high': 'text-red-600 bg-red-100'
+    };
+    return colors[level] || colors.medium;
+  }, []);
+
+  const getStatusIcon = useCallback((isOpen, busyLevel) => {
+    if (!isOpen) return '🔴';
+    switch (busyLevel) {
+      case 'low': return '🟢';
+      case 'medium': return '🟡';
+      case 'high': return '🟠';
+      case 'very-high': return '🔴';
+      default: return '🟡';
+    }
+  }, []);
 
   if (!isMounted) {
     return (
@@ -1078,6 +1441,47 @@ const NatureVillageWebsite = () => {
           to {
             opacity: 1;
           }
+        }
+        
+        /* Celebration title animation */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Floating animation for celebration elements */
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+
+        /* Slow spin animation */
+        @keyframes spin-slow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        /* Custom utility classes */
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-spin-slow {
+          animation: spin-slow 8s linear infinite;
         }
 
         @keyframes slideInLeft {
@@ -1184,7 +1588,7 @@ const NatureVillageWebsite = () => {
             {/* Social Media Links - Minimal Design */}
             <div className="hidden lg:flex items-center space-x-2 flex-shrink-0">
               <a 
-                href="https://facebook.com/naturevillagerestaurant" 
+                href="https://www.facebook.com/profile.php?id=61553675771574" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg text-amber-700 hover:text-amber-800 hover:bg-amber-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1"
@@ -1193,7 +1597,7 @@ const NatureVillageWebsite = () => {
                 <Facebook className="w-4 h-4" />
               </a>
               <a 
-                href="https://instagram.com/naturevillagerestaurant" 
+                href="https://www.instagram.com/naturevillageatl" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg text-amber-700 hover:text-amber-800 hover:bg-amber-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1"
@@ -1461,7 +1865,7 @@ const NatureVillageWebsite = () => {
                   <div className="mt-8 pt-6 border-t border-amber-200/70">
                     <div className="flex items-center justify-center space-x-6">
                       <a 
-                        href="https://facebook.com/naturevillagerestaurant" 
+                        href="https://www.facebook.com/profile.php?id=61553675771574" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="group p-3 rounded-full text-amber-700 hover:text-white hover:bg-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -1470,7 +1874,7 @@ const NatureVillageWebsite = () => {
                         <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
                       </a>
                       <a 
-                        href="https://instagram.com/naturevillagerestaurant" 
+                        href="https://www.instagram.com/naturevillageatl" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="group p-3 rounded-full text-amber-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
@@ -1504,43 +1908,100 @@ const NatureVillageWebsite = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        {/* Background Pattern */}
+      <section id="home" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
+        {/* Video Background */}
         <div className="absolute inset-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{
+              filter: 'brightness(0.4)',
+            }}
+          >
+            <source src="/hero.mp4" type="video/mp4" />
+            {/* Fallback image if video fails to load */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full"
+              style={{
+                backgroundImage: 'linear-gradient(rgba(139, 69, 19, 0.4), rgba(139, 69, 19, 0.6)), url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&h=1080&fit=crop")'
+              }}
+            />
+          </video>
+          
+          {/* Additional overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30" />
+        </div>
+        
+        {/* Background Pattern (subtle overlay) */}
+        <div className="absolute inset-0 opacity-10">
           <KurdishPattern />
         </div>
         
-        {/* Hero Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'linear-gradient(rgba(139, 69, 19, 0.4), rgba(139, 69, 19, 0.6)), url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&h=1080&fit=crop")'
-          }}
-        />
-        
-        <div className={cn('relative z-10 text-center text-white max-w-6xl mx-auto px-4 sm:px-6', rtlClass('', 'text-right'))}>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 drop-shadow-2xl">
+        <div className={cn('relative z-10 text-center text-white max-w-6xl mx-auto px-4 sm:px-6 mt-16', rtlClass('', 'text-right'))}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 drop-shadow-2xl">
             {t.hero?.title || 'Nature Village'}
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl font-light mb-8 text-amber-100">
+          <p className="text-lg sm:text-xl md:text-2xl font-light mb-4 text-amber-100">
             {t.hero?.subtitle || 'A Taste of Kurdistan in Every Bite'}
           </p>
-          <p className="text-base sm:text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed text-amber-50">
+          <p className="text-sm sm:text-base md:text-lg mb-8 max-w-3xl mx-auto leading-relaxed text-amber-50">
             {t.hero?.description || 'Experience authentic Kurdish flavors in a warm, traditional setting.'}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          
+          {/* Enhanced Mobile CTAs - Reorganized Layout */}
+          <div className="flex flex-col gap-3 items-center justify-center">
+            {/* Top row - Menu and Reservation buttons side by side */}
+            <div className="flex flex-row gap-3 items-center justify-center">
+              <button 
+                onClick={() => scrollToSection('menu')}
+                className="group w-28 sm:w-auto bg-transparent border-2 border-amber-400/80 text-amber-200 hover:bg-amber-400/10 hover:border-amber-300 hover:text-amber-100 px-3 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-medium backdrop-blur-sm transition-all duration-200 flex items-center justify-center gap-1.5 min-h-[40px]"
+              >
+                <ChefHat className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <span>Menu</span>
+              </button>
+              
+              <button 
+                onClick={() => router.push('/reservations')}
+                className="group w-28 sm:w-auto bg-transparent border-2 border-white/60 text-white hover:bg-white/10 hover:border-white hover:text-white px-3 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-medium backdrop-blur-sm transition-all duration-200 flex items-center justify-center gap-1.5 min-h-[40px]"
+              >
+                <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <span>Reserve</span>
+              </button>
+            </div>
+            
+            {/* Bottom row - Call Now button */}
             <button 
-              onClick={() => scrollToSection('menu')}
-              className="w-full sm:w-auto bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-xl"
+              onClick={() => window.open('tel:+1234567890', '_self')}
+              className="group w-28 sm:w-auto bg-transparent border-2 border-green-400/80 text-green-200 hover:bg-green-400/10 hover:border-green-300 hover:text-green-100 px-3 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-medium backdrop-blur-sm transition-all duration-200 flex items-center justify-center gap-1.5 min-h-[40px]"
             >
-              {t.hero?.cta1 || 'View Menu'}
+              <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <span>Call Now</span>
             </button>
-            <button 
-              onClick={() => router.push('/reservations')}
-              className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white hover:text-amber-800 px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105"
-            >
-              {t.hero?.cta2 || 'Make Reservation'}
-            </button>
+          </div>
+        </div>
+        
+        {/* Minimal Status Indicator - Bottom */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+          <div className="bg-black/30 backdrop-blur-md rounded-full px-3 py-1.5 border border-white/20">
+            <div className="flex items-center gap-1.5 text-xs text-white">
+              <span className="text-xs">{getStatusIcon(restaurantStatus.isOpen, restaurantStatus.busyLevel)}</span>
+              <span className="font-medium">
+                {restaurantStatus.isOpen ? (
+                  <span className="text-green-400">Open</span>
+                ) : (
+                  <span className="text-red-400">Closed</span>
+                )}
+              </span>
+              {restaurantStatus.isOpen && (
+                <>
+                  <span className="text-white/50">•</span>
+                  <span className="text-white/80">{restaurantStatus.nextClosing}</span>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -1594,139 +2055,616 @@ const NatureVillageWebsite = () => {
         </div>
       </section>
 
-      {/* Menu Section */}
-      <section id="menu" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-amber-50 to-orange-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* About Us Section - Clean & Mobile-Friendly */}
+      <section id="about" className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+        {/* Subtle Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <KurdishPattern />
+        </div>
+        
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Clean Header */}
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-amber-800 mb-4">
-              {t.menu?.title || 'Our Menu'}
+            <div className="inline-flex items-center gap-2 bg-amber-50 px-4 py-2 rounded-full mb-6">
+              <Star className="w-4 h-4 text-amber-500 fill-current" />
+              <span className="text-amber-700 font-medium text-sm">Our Story</span>
+              <Star className="w-4 h-4 text-amber-500 fill-current" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-4">
+              {t.about?.title || 'About Nature Village'}
             </h2>
-            <p className="text-base sm:text-lg text-amber-600 mb-2">
-              {t.menu?.subtitle || 'Powered by MenuIQ'}
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Bringing authentic Kurdish flavors and warm hospitality to our community
             </p>
-            <div className="w-24 h-1 bg-amber-600 mx-auto"></div>
           </div>
-
-          {/* Menu Filters */}
-          <div className="flex flex-wrap gap-2 sm:gap-4 mb-8 sm:mb-12 justify-center">
-            {Object.entries(t.menu?.filters || {}).map(([filterKey, filterLabel]) => (
-              <button
-                key={filterKey}
-                onClick={() => setActiveFilter(filterKey)}
-                className={cn(
-                  'px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium transition-all flex items-center space-x-1 sm:space-x-2',
-                  isRTL && 'space-x-reverse',
-                  activeFilter === filterKey 
-                    ? 'bg-amber-600 text-white shadow-lg scale-105' 
-                    : 'bg-white text-amber-800 hover:bg-amber-100 hover:scale-105'
-                )}
-              >
-                <Filter className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span>{filterLabel}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* View Full Menu Button */}
-          <div className="text-center mb-8 sm:mb-12">
-            <button 
-              onClick={() => router.push({ pathname: '/menu', query: { lang: language } })}
-              className="bg-amber-600 hover:bg-amber-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-all transform hover:scale-105 shadow-lg"
-            >
-              {t.menu?.viewFull || 'View Full Menu'}
-            </button>
-          </div>
-
-          {/* Menu Grid */}
-          {filteredMenuItems.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {filteredMenuItems.map((item) => (
-                <div key={item.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={item.image} 
-                      alt={getText(item.name)}
-                      className="w-full h-48 sm:h-56 object-cover transition-transform duration-300 group-hover:scale-110"
-                      onError={(e) => {
-                        e.target.src = 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop';
-                      }}
-                    />
-                    {item.popular && (
-                      <div className="absolute top-4 right-4 bg-amber-600 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">
-                        ⭐ {t.menu?.filters?.popular || 'Popular'}
-                      </div>
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  <div className={cn('p-4 sm:p-6', rtlClass('text-left', 'text-right'))}>
-                    <h3 className="text-lg sm:text-xl font-serif font-bold text-amber-800 mb-1">
-                      {getText(item.name)}
-                    </h3>
-                    <p className="text-gray-700 mb-4 text-xs sm:text-sm leading-relaxed line-clamp-3">
-                      {getText(item.description)}
-                    </p>
-                    <div className={cn('flex justify-between items-center mb-3', isRTL && 'flex-row-reverse')}>
-                      <span className="text-xl sm:text-2xl font-bold text-amber-600">{t.currency}{item.price.replace('$', '')}</span>
-                      <button className="bg-amber-600 hover:bg-amber-700 text-white px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-colors">
-                        {t.addToCart || 'Add to Cart'}
-                      </button>
-                    </div>
-                    {item.tags && item.tags.length > 0 && (
-                      <div className={cn('flex gap-1 flex-wrap', rtlClass('justify-start', 'justify-end'))}>
-                        {item.tags.slice(0, 3).map((tag) => (
-                          <span key={tag} className="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium">
-                            {getTagTranslation(tag)}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+          
+          {/* Main Content - Simple Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
+            {/* Image Side - Left on desktop */}
+            <div className="order-1">
+              <div className="relative">
+                <div className="aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src="/team.jpg"
+                    alt="Nature Village restaurant team"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              ))}
+                {/* Simple decorative elements */}
+                <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-amber-400 rounded-full opacity-20"></div>
+                <div className="absolute -top-4 -left-4 w-6 h-6 bg-orange-400 rounded-full opacity-30"></div>
+              </div>
             </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-xl text-amber-600">{t.menu?.noItems || 'No items found in this category.'}</p>
+            
+            {/* Content Side - Right on desktop */}
+            <div className="order-2">
+              <div className="space-y-6">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  {t.about?.story1 || 'Nature Village is dedicated to bringing you the authentic flavors of Kurdish cuisine in a warm and welcoming atmosphere where every guest feels like family.'}
+                </p>
+                
+                <p className="text-base text-gray-600 leading-relaxed">
+                  {t.about?.story2 || 'Our chefs are passionate about preparing traditional Kurdish dishes using the finest ingredients and time-honored cooking techniques that celebrate our rich culinary heritage.'}
+                </p>
+                
+                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
+                  <p className="text-amber-800 italic font-medium">
+                    "Every dish is crafted with care and served with the warmth of Kurdish hospitality."
+                  </p>
+                </div>
+              </div>
+              
+              {/* Simple Feature Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+                <div className="bg-gray-50 rounded-xl p-4 text-center hover:bg-amber-50 transition-colors duration-200">
+                  <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <ChefHat className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Expert Chefs</h4>
+                  <p className="text-sm text-gray-600">Authentic Kurdish cuisine</p>
+                </div>
+                
+                <div className="bg-gray-50 rounded-xl p-4 text-center hover:bg-orange-50 transition-colors duration-200">
+                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Heart className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Fresh Ingredients</h4>
+                  <p className="text-sm text-gray-600">Quality sourced daily</p>
+                </div>
+                
+                <div className="bg-gray-50 rounded-xl p-4 text-center hover:bg-red-50 transition-colors duration-200">
+                  <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Warm Service</h4>
+                  <p className="text-sm text-gray-600">Kurdish hospitality</p>
+                </div>
+              </div>
             </div>
-          )}
+          </div>
+          
+          {/* Clean Statistics */}
+          <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 sm:p-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">1000+</div>
+                <div className="text-sm font-medium text-gray-700">Happy Customers</div>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold text-orange-600 mb-1">50+</div>
+                <div className="text-sm font-medium text-gray-700">Authentic Dishes</div>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold text-red-600 mb-1">4.8★</div>
+                <div className="text-sm font-medium text-gray-700">Customer Rating</div>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">100%</div>
+                <div className="text-sm font-medium text-gray-700">Fresh Ingredients</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-16 sm:py-20 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            <div className={cn('order-2 lg:order-1', isRTL && 'lg:order-2')}>
-              <img 
-                src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=800&h=600&fit=crop"
-                alt="Kurdish Restaurant Interior"
-                className="rounded-lg shadow-xl w-full h-64 sm:h-80 lg:h-96 object-cover"
-                onError={(e) => {
-                  e.target.src = 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop';
-                }}
-              />
+      {/* Celebrate Your Special Moments Section */}
+      <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
+        {/* Top Curve */}
+        <div className="absolute top-0 left-0 w-full h-20 z-10">
+          <svg 
+            viewBox="0 0 1200 120" 
+            preserveAspectRatio="none" 
+            className="w-full h-full"
+          >
+            <path 
+              d="M0,0 C300,80 600,80 900,40 C1050,20 1150,40 1200,60 L1200,0 Z" 
+              fill="white"
+              className="drop-shadow-sm"
+            />
+          </svg>
+        </div>
+        {/* Video Background */}
+        <div className="absolute inset-0">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/bday.mp4" type="video/mp4" />
+          </video>
+          {/* Elegant Dark Overlay */}
+          <div className="absolute inset-0 bg-black/70"></div>
+          {/* Dynamic Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-amber-900/20 animate-pulse"></div>
+        </div>
+
+        {/* Floating Celebration Elements - positioned to avoid text overlap */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden hidden lg:block">
+          <div className="absolute top-16 left-8 text-3xl opacity-20 animate-float" style={{animationDelay: '0s'}}>🎈</div>
+          <div className="absolute top-32 right-16 text-2xl opacity-30 animate-float" style={{animationDelay: '2s'}}>🎊</div>
+          <div className="absolute bottom-40 left-1/6 text-xl opacity-40 animate-float" style={{animationDelay: '4s'}}>✨</div>
+          <div className="absolute bottom-24 right-1/4 text-2xl opacity-25 animate-float" style={{animationDelay: '1s'}}>🌟</div>
+          <div className="absolute top-1/4 left-3/4 text-xl opacity-20 animate-float" style={{animationDelay: '3s'}}>💫</div>
+        </div>
+
+        <div className="relative z-10 w-full h-full flex flex-col max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          {/* Compact Header */}
+          <div className="text-center mb-8">
+            <div className="inline-block mb-6">
+              <span className="text-4xl">�</span>
             </div>
-            <div className={cn('order-1 lg:order-2', isRTL && 'lg:order-1 text-right', !isRTL && 'text-left')}>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-amber-800 mb-6">
-                {t.about?.title || 'Our Story'}
+            
+            <div className="relative">
+              {/* Decorative top line */}
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-32 h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
+              
+              <h2 className="relative text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white mb-4">
+                <span className="relative inline-block">
+                  {/* Subtle glow effect behind text */}
+                  <span className="absolute inset-0 text-white/10 blur-lg -z-10">{t.celebration?.title || 'Celebrate Your Special Moments'}</span>
+                  
+                  {/* Main text with elegant styling */}
+                  <span className="relative z-10 text-white drop-shadow-lg">
+                    {(t.celebration?.title || 'Celebrate Your Special Moments').split(' ').map((word, index) => (
+                      <span 
+                        key={index} 
+                        className="inline-block mr-3 hover:scale-105 transition-transform duration-300 opacity-0 bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text"
+                        style={{
+                          animationDelay: `${index * 300}ms`,
+                          animation: 'fadeInUp 0.8s ease-out forwards'
+                        }}
+                      >
+                        {word}
+                      </span>
+                    ))}
+                  </span>
+                  
+                  {/* Subtle sparkles - positioned away from text */}
+                  <span className="absolute -top-6 -right-8 text-amber-300 text-xl animate-pulse opacity-70 hidden sm:block">✨</span>
+                  <span className="absolute -bottom-6 -left-8 text-amber-300 text-lg animate-pulse opacity-50 hidden sm:block" style={{animationDelay: '1s'}}>✨</span>
+                </span>
               </h2>
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-8">
-                {t.about?.content || 'Nature Village was born from a dream to share authentic Kurdish flavors with the world.'}
-              </p>
-              <div className="grid grid-cols-2 gap-4 sm:gap-8">
-                <div className="text-center p-4 bg-amber-50 rounded-lg">
-                  <div className="flex items-center justify-center mb-2">
-                    <Award className="w-8 h-8 text-amber-600" />
+              
+              {/* Decorative bottom line */}
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-amber-300/70 to-transparent"></div>
+            </div>
+            
+            <p className="text-sm lg:text-base text-white/80 max-w-2xl mx-auto">
+              {t.celebration?.subtitle || 'Make your birthdays, anniversaries, and special occasions unforgettable with authentic Kurdish hospitality'}
+            </p>
+          </div>
+
+          {/* Enhanced Celebration Options - Optimized for 80vh */}
+          <div className="flex-1 flex flex-col justify-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mb-4">
+              {/* Birthday Celebrations */}
+              <div className="group text-center transform hover:scale-105 transition-all duration-500">
+                <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-6 border border-white/20 hover:border-amber-400/50 transition-all duration-500 overflow-hidden">
+                  {/* Floating particles inside card - positioned in corners away from text */}
+                  <div className="absolute top-3 right-3 text-amber-300 text-xs opacity-40 animate-float hidden sm:block">🎈</div>
+                  <div className="absolute bottom-3 left-3 text-yellow-300 text-xs opacity-30 animate-float hidden sm:block" style={{animationDelay: '1s'}}>✨</div>
+                  
+                  {/* Enhanced icon with glow */}
+                  <div className="relative mb-3">
+                    <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-orange-400 rounded-full blur-2xl opacity-20 scale-150"></div>
+                    <div className="relative text-4xl lg:text-5xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 filter drop-shadow-2xl">🎂</div>
                   </div>
-                  <div className="text-2xl sm:text-4xl font-bold text-amber-600 mb-2">10K+</div>
-                  <div className="text-sm sm:text-base text-gray-600">{t.about?.customers || 'Happy Customers'}</div>
+                  
+                  <h3 className="text-xl lg:text-2xl font-serif font-bold text-white mb-2 group-hover:text-amber-200 transition-colors duration-300">
+                    {t.celebration?.birthday?.title || 'Birthday Celebrations'}
+                  </h3>
+                  <p className="text-white/70 mb-4 text-base italic">
+                    {t.celebration?.birthday?.tagline || 'Make it a day to remember'}
+                  </p>
+                  
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                      <span className="text-amber-300">🎈</span>
+                      <span className="text-xs">{t.celebration?.birthday?.feature1 || 'Complimentary birthday cake & candles'}</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                      <span className="text-amber-300">🎵</span>
+                      <span className="text-xs">{t.celebration?.birthday?.feature2 || 'Traditional Kurdish birthday songs'}</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                      <span className="text-amber-300">📸</span>
+                      <span className="text-xs">{t.celebration?.birthday?.feature3 || 'Professional photo memories'}</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                      <span className="text-amber-300">🎁</span>
+                      <span className="text-xs">{t.celebration?.birthday?.feature4 || 'Special birthday decorations'}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="relative bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-2xl p-2 border border-amber-400/30 group-hover:border-amber-400/60 transition-all duration-300 backdrop-blur-sm">
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-400/10 to-orange-400/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <p className="relative text-amber-200 font-medium group-hover:text-amber-100 transition-colors duration-300 text-xs">
+                      <span className="text-yellow-300">🌟 </span>
+                      {t.celebration?.birthday?.special || 'Perfect for birthday parties of all sizes'}
+                      <span className="text-yellow-300"> 🌟</span>
+                    </p>
+                  </div>
                 </div>
-                <div className="text-center p-4 bg-amber-50 rounded-lg">
-                  <div className="flex items-center justify-center mb-2">
-                    <Star className="w-8 h-8 text-amber-600" />
+              </div>
+
+              {/* Anniversary Celebrations */}
+              <div className="group text-center transform hover:scale-105 transition-all duration-500">
+                <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:border-rose-400/50 transition-all duration-500 overflow-hidden">
+                  {/* Floating particles inside card */}
+                  <div className="absolute top-4 right-4 text-rose-300 text-sm opacity-50 animate-float" style={{animationDelay: '0.5s'}}>🌹</div>
+                  <div className="absolute bottom-6 left-6 text-pink-300 text-xs opacity-40 animate-float" style={{animationDelay: '1.5s'}}>💕</div>
+                  
+                  {/* Enhanced icon with glow */}
+                  <div className="relative mb-4">
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-2xl opacity-20 scale-150"></div>
+                    <div className="relative text-5xl lg:text-6xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 filter drop-shadow-2xl">�</div>
                   </div>
-                  <div className="text-2xl sm:text-4xl font-bold text-amber-600 mb-2">15+</div>
-                  <div className="text-sm sm:text-base text-gray-600">{t.about?.awards || 'Awards Won'}</div>
+                  
+                  <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-3 group-hover:text-rose-200 transition-colors duration-300">
+                    {t.celebration?.anniversary?.title || 'Anniversary Dinners'}
+                  </h3>
+                  <p className="text-white/70 mb-6 text-lg italic">
+                    {t.celebration?.anniversary?.tagline || 'Celebrate your love story'}
+                  </p>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                      <span className="text-rose-300">🌹</span>
+                      <span className="text-sm">{t.celebration?.anniversary?.feature1 || 'Romantic table setup with roses'}</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                      <span className="text-rose-300">🥂</span>
+                      <span className="text-sm">{t.celebration?.anniversary?.feature2 || 'Complimentary dessert for two'}</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                      <span className="text-rose-300">🕯️</span>
+                      <span className="text-sm">{t.celebration?.anniversary?.feature3 || 'Candlelit dining experience'}</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                      <span className="text-rose-300">💌</span>
+                      <span className="text-sm">{t.celebration?.anniversary?.feature4 || 'Personalized anniversary card'}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="relative bg-gradient-to-r from-rose-500/20 to-pink-500/20 rounded-2xl p-3 border border-rose-400/30 group-hover:border-rose-400/60 transition-all duration-300 backdrop-blur-sm">
+                    <div className="absolute inset-0 bg-gradient-to-r from-rose-400/10 to-pink-400/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <p className="relative text-rose-200 font-medium group-hover:text-rose-100 transition-colors duration-300 text-sm">
+                      <span className="text-pink-300">💖 </span>
+                      {t.celebration?.anniversary?.special || '25+ years together? Special surprise awaits!'}
+                      <span className="text-pink-300"> 💖</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Enhanced Other Celebrations Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              <div className="group text-center p-5 bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 hover:border-amber-400/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                <div className="relative mb-3">
+                  <div className="absolute inset-0 bg-amber-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative text-2xl lg:text-3xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🎓</div>
+                </div>
+                <div className="text-white font-medium group-hover:text-amber-200 transition-colors duration-300 text-sm">Graduations</div>
+              </div>
+              <div className="group text-center p-5 bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 hover:border-pink-400/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                <div className="relative mb-3">
+                  <div className="absolute inset-0 bg-pink-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative text-2xl lg:text-3xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">💍</div>
+                </div>
+                <div className="text-white font-medium group-hover:text-pink-200 transition-colors duration-300 text-sm">Engagements</div>
+              </div>
+              <div className="group text-center p-5 bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 hover:border-blue-400/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                <div className="relative mb-3">
+                  <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative text-2xl lg:text-3xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">👨‍👩‍👧‍👦</div>
+                </div>
+                <div className="text-white font-medium group-hover:text-blue-200 transition-colors duration-300 text-sm">Family Reunions</div>
+              </div>
+              <div className="group text-center p-5 bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 hover:border-green-400/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                <div className="relative mb-3">
+                  <div className="absolute inset-0 bg-green-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative text-2xl lg:text-3xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🎄</div>
+                </div>
+                <div className="text-white font-medium group-hover:text-green-200 transition-colors duration-300 text-sm">Holidays</div>
+              </div>
+            </div>
+
+            {/* Enhanced Call to Action */}
+            <div className="text-center relative">
+              {/* Background glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-red-500/10 rounded-3xl blur-3xl"></div>
+              
+              <div className="relative bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-6 border border-white/20 backdrop-blur-lg">
+                {/* Floating particles around CTA - positioned in safe corners */}
+                <div className="absolute top-3 left-3 text-amber-300 text-sm opacity-25 animate-float hidden sm:block">✨</div>
+                <div className="absolute top-3 right-3 text-orange-300 text-sm opacity-30 animate-float hidden sm:block" style={{animationDelay: '1s'}}>�</div>
+                <div className="absolute bottom-3 left-3 text-yellow-300 text-xs opacity-20 animate-float hidden sm:block" style={{animationDelay: '2s'}}>💫</div>
+                <div className="absolute bottom-3 right-3 text-red-300 text-xs opacity-25 animate-float hidden sm:block" style={{animationDelay: '0.5s'}}>✨</div>
+                
+                <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-4 transform hover:scale-105 transition-transform duration-300">
+                  {t.celebration?.cta?.title || 'Ready to Celebrate?'}
+                </h3>
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto text-base lg:text-lg leading-relaxed">
+                  {t.celebration?.cta?.subtitle || 'Let us make your special day extraordinary with authentic Kurdish hospitality and unforgettable flavors'}
+                </p>
+                
+                <div className="text-white text-lg lg:text-xl font-semibold">
+                  📞 {t.celebration?.cta?.reserve || 'Call for special reservation'} 📞
+                </div>
+                
+                <p className="text-white/60 text-sm mt-4 flex items-center justify-center gap-2">
+                  <span className="text-amber-300">💡</span>
+                  <span>Book 48 hours in advance for the best celebration experience</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        {/* Bottom Curve */}
+        <div className="absolute bottom-0 left-0 w-full h-20 z-10">
+          <svg 
+            viewBox="0 0 1200 120" 
+            preserveAspectRatio="none" 
+            className="w-full h-full"
+          >
+            <path 
+              d="M0,120 C300,40 600,40 900,80 C1050,100 1150,80 1200,60 L1200,120 Z" 
+              fill="white"
+              className="drop-shadow-sm"
+            />
+          </svg>
+        </div>
+      </section>
+
+      {/* Customer Reviews Section - Enhanced */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-amber-50 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <KurdishPattern />
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 sm:mb-20">
+            {/* Google Badge */}
+            <div className="inline-flex items-center bg-white rounded-full px-4 py-2 shadow-lg mb-6">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 rounded-sm flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">G</span>
+                </div>
+                <span className="text-sm font-medium text-gray-700">Google Reviews</span>
+                <div className="flex items-center gap-1 ml-2">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" />
+                    ))}
+                  </div>
+                  <span className="text-sm font-bold text-gray-900">4.8</span>
+                </div>
+              </div>
+            </div>
+            
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-serif font-bold text-amber-800 mb-6">
+              {t.reviews?.title || 'What Our Guests Say'}
+            </h2>
+            <p className="text-lg sm:text-xl text-amber-600 max-w-4xl mx-auto leading-relaxed">
+              {t.reviews?.subtitle || 'Rated 4.8/5 stars by 572+ happy customers on Google Reviews'}
+            </p>
+            <div className="w-32 h-1.5 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto mt-8 rounded-full"></div>
+            
+            {/* Stats */}
+            <div className="flex flex-wrap justify-center gap-8 sm:gap-12 mt-12">
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl font-bold text-amber-800">572+</div>
+                <div className="text-sm sm:text-base text-amber-600 font-medium">Happy Customers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl font-bold text-amber-800">4.8★</div>
+                <div className="text-sm sm:text-base text-amber-600 font-medium">Average Rating</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl font-bold text-amber-800">93%</div>
+                <div className="text-sm sm:text-base text-amber-600 font-medium">5-Star Reviews</div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+            {/* Review 1 - Karen Cardenas - Featured Review */}
+            <div className="group bg-white rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 relative overflow-hidden border border-amber-100">
+              {/* Featured Badge */}
+              <div className="absolute top-0 right-0 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-bl-2xl text-xs font-bold">
+                FEATURED
+              </div>
+              
+              <div className="flex items-center mb-6">
+                <div className="flex text-yellow-400 mr-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+                <span className="text-lg font-bold text-gray-800">5.0</span>
+                <span className="text-sm text-gray-500 ml-2">• 1 week ago</span>
+              </div>
+              
+              <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-medium">
+                {t.reviews?.review1?.text || '"I\'ve been coming here for about a year, and it\'s hands down my favorite restaurant! The food is authentic and absolutely delicious—every dish is full of flavor, the specialty teas and coffees are amazing, and the desserts are the perfect ending to any meal."'}
+              </blockquote>
+              
+              <div className="flex items-center">
+                <div className="w-14 h-14 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                  <span className="text-white font-bold text-lg">K</span>
+                </div>
+                <div>
+                  <div className="font-bold text-gray-900 text-lg">
+                    {t.reviews?.review1?.name || 'Karen Cardenas'}
+                  </div>
+                  <div className="text-amber-600 text-sm font-medium">
+                    {t.reviews?.review1?.location || 'Verified Google Review'}
+                  </div>
+                  <div className="flex items-center gap-1 mt-1">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span className="text-xs text-gray-500">Verified Purchase</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Review 2 - Ruth Cornea */}
+            <div className="group bg-white rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 relative overflow-hidden border border-green-100">
+              {/* Local Guide Badge */}
+              <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                <Users className="w-3 h-3" />
+                LOCAL GUIDE
+              </div>
+              
+              <div className="flex items-center mb-6">
+                <div className="flex text-yellow-400 mr-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+                <span className="text-lg font-bold text-gray-800">5.0</span>
+                <span className="text-sm text-gray-500 ml-2">• 2 months ago</span>
+              </div>
+              
+              <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-medium">
+                {t.reviews?.review2?.text || '"We had a wonderful time at Nature Village Restaurant tonight! Everything was absolutely perfect! The food, atmosphere, decor and service is all top notch. This is definitely our new favorite spot for authentic Middle Eastern cuisine."'}
+              </blockquote>
+              
+              <div className="flex items-center">
+                <div className="w-14 h-14 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                  <span className="text-white font-bold text-lg">R</span>
+                </div>
+                <div>
+                  <div className="font-bold text-gray-900 text-lg">
+                    {t.reviews?.review2?.name || 'Ruth Cornea'}
+                  </div>
+                  <div className="text-green-600 text-sm font-medium flex items-center gap-1">
+                    <Star className="w-3 h-3 fill-current text-yellow-400" />
+                    {t.reviews?.review2?.location || 'Local Guide • 29 reviews'}
+                  </div>
+                  <div className="flex items-center gap-1 mt-1">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <span className="text-xs text-gray-500">Trusted Reviewer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Review 3 - Enhanced with Food Focus */}
+            <div className="group bg-white rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 relative overflow-hidden border border-purple-100">
+              {/* Dish Highlight */}
+              <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                <ChefHat className="w-3 h-3" />
+                QUZI LOVER
+              </div>
+              
+              <div className="flex items-center mb-6">
+                <div className="flex text-yellow-400 mr-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+                <span className="text-lg font-bold text-gray-800">5.0</span>
+                <span className="text-sm text-gray-500 ml-2">• Recent</span>
+              </div>
+              
+              <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-medium">
+                {t.reviews?.review3?.text || '"I ordered the Quzi, a rice and lamb dish, it was very filling and delicious. The pizza was of a good size filled with gyro meat, cheese and a nice sauce. The authentic Middle Eastern flavors really impressed me and my family!"'}
+              </blockquote>
+              
+              <div className="flex items-center">
+                <div className="w-14 h-14 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                  <span className="text-white font-bold text-lg">G</span>
+                </div>
+                <div>
+                  <div className="font-bold text-gray-900 text-lg">
+                    {t.reviews?.review3?.name || 'Google Customer'}
+                  </div>
+                  <div className="text-purple-600 text-sm font-medium">
+                    {t.reviews?.review3?.location || 'Verified Google Review'}
+                  </div>
+                  <div className="flex items-center gap-2 mt-1">
+                    <div className="flex items-center gap-1">
+                      <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                      <span className="text-xs text-gray-500">Food Enthusiast</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Enhanced Call to Action */}
+          <div className="text-center mt-16 sm:mt-20">
+            <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-8 sm:p-12 border border-amber-200 shadow-lg">
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-amber-800 mb-4">
+                Ready to Create Your Own 5-Star Experience?
+              </h3>
+              <p className="text-base sm:text-lg text-amber-700 mb-8 max-w-2xl mx-auto">
+                {t.reviews?.cta || 'Join 572+ satisfied customers who love our authentic cuisine! Book your table today and taste the difference that authentic Kurdish hospitality makes.'}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button 
+                  onClick={() => setCurrentSection('reservations')}
+                  className="group bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-4 rounded-2xl text-base font-bold transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-3"
+                >
+                  <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  <span>{t.reviews?.ctaButton || 'Book Your Table Now'}</span>
+                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+                
+                <a 
+                  href="tel:+14703501019"
+                  className="group bg-white hover:bg-gray-50 text-amber-700 border-2 border-amber-300 hover:border-amber-400 px-8 py-4 rounded-2xl text-base font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3"
+                >
+                  <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  <span>Call (470) 350-1019</span>
+                </a>
+              </div>
+              
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap justify-center items-center gap-6 mt-8 text-sm text-amber-600">
+                <div className="flex items-center gap-2">
+                  <Award className="w-4 h-4" />
+                  <span>4.8★ Google Rating</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Users className="w-4 h-4" />
+                  <span>572+ Reviews</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Heart className="w-4 h-4" />
+                  <span>Family Owned</span>
                 </div>
               </div>
             </div>
@@ -1754,7 +2692,12 @@ const NatureVillageWebsite = () => {
                 {t.visit?.hours || 'Opening Hours'}
               </h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                {t.footer?.openDaily || 'Open Daily 11:00 AM - 11:00 PM'}
+                <span className="block">
+                  {t.footer?.openDaily?.split('\n')[0] || 'SUN - THU: 12 AM - 10 PM'}
+                </span>
+                <span className="block">
+                  {t.footer?.openDaily?.split('\n')[1] || 'FRI - SAT: 12 AM - 11 PM'}
+                </span>
                 <br />
                 <span className="text-amber-600 font-medium">7 Days a Week</span>
               </p>
@@ -1766,10 +2709,10 @@ const NatureVillageWebsite = () => {
                 {t.visit?.address || 'Address'}
               </h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                123 Kurdistan Street<br />
-                Downtown, City 12345<br />
+                302 Satellite Blvd NE STE 125<br />
+                Suwanee, GA 30024<br />
                 <button 
-                  onClick={() => window.open('https://maps.google.com', '_blank')}
+                  onClick={() => window.open('https://maps.app.goo.gl/4rmfzb2YM4Usx8CQ9', '_blank')}
                   className="text-amber-600 hover:text-amber-800 transition-colors mt-2 font-medium"
                 >
                   {t.visit?.getDirections || 'Get Directions'}
@@ -1785,16 +2728,8 @@ const NatureVillageWebsite = () => {
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 {t.visit?.phone || 'Phone'}: 
                 <a href="tel:+15551234567" className="text-amber-600 hover:text-amber-800 transition-colors ml-1">
-                  (555) 123-4567
+                  (470) 350-1019
                 </a>
-                <br />
-                <button 
-                  onClick={handleWhatsAppClick}
-                  className="text-amber-600 hover:text-amber-800 transition-colors mt-2 font-medium inline-flex items-center"
-                >
-                  <MessageCircle className="w-4 h-4 mr-1" />
-                  {t.visit?.whatsappUs || 'WhatsApp Us'}
-                </button>
               </p>
             </div>
           </div>
@@ -1832,21 +2767,24 @@ const NatureVillageWebsite = () => {
                 {t.footer?.description || 'Bringing authentic Kurdish flavors to your table.'}
               </p>
               <div className={cn('flex space-x-4', isRTL && 'space-x-reverse')}>
-                <button className="text-amber-200 hover:text-white transition-colors p-2 hover:bg-amber-700 rounded-full">
-                  <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
-                </button>
-                <button className="text-amber-200 hover:text-white transition-colors p-2 hover:bg-amber-700 rounded-full">
-                  <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
-                </button>
-                <button className="text-amber-200 hover:text-white transition-colors p-2 hover:bg-amber-700 rounded-full">
-                  <Twitter className="w-5 h-5 sm:w-6 sm:h-6" />
-                </button>
-                <button 
-                  onClick={handleWhatsAppClick}
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61553675771574" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="text-amber-200 hover:text-white transition-colors p-2 hover:bg-amber-700 rounded-full"
+                  aria-label="Follow us on Facebook"
                 >
-                  <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-                </button>
+                  <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/naturevillageatl" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-amber-200 hover:text-white transition-colors p-2 hover:bg-amber-700 rounded-full"
+                  aria-label="Follow us on Instagram"
+                >
+                  <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
+                </a>
               </div>
             </div>
 
@@ -1867,12 +2805,18 @@ const NatureVillageWebsite = () => {
                   </li>
                 ))}
                 <li>
-                  <button className="text-amber-200 hover:text-white transition-colors text-sm block">
+                  <button 
+                    onClick={handlePrivacyClick}
+                    className="text-amber-200 hover:text-white transition-colors text-sm block"
+                  >
                     {t.footer?.privacy || 'Privacy Policy'}
                   </button>
                 </li>
                 <li>
-                  <button className="text-amber-200 hover:text-white transition-colors text-sm block">
+                  <button 
+                    onClick={handleTermsClick}
+                    className="text-amber-200 hover:text-white transition-colors text-sm block"
+                  >
                     {t.footer?.terms || 'Terms of Service'}
                   </button>
                 </li>
@@ -1885,21 +2829,26 @@ const NatureVillageWebsite = () => {
                 {t.footer?.contactInfo || 'Contact Information'}
               </h4>
               <div className="space-y-2 text-amber-200 text-sm">
-                <p className="flex items-center">
-                  <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
-                  123 Kurdistan Street<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Downtown, City 12345
-                </p>
+                <div className="flex items-start">
+                  <MapPin className="w-4 h-4 mr-2 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div>302 Satellite Blvd NE STE 125,</div>
+                    <div>Suwanee, GA 30024</div>
+                  </div>
+                </div>
                 <p className="flex items-center">
                   <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
-                  <a href="tel:+15551234567" className="hover:text-white transition-colors">
-                    (555) 123-4567
+                  <a href="tel:+14703501019" className="hover:text-white transition-colors">
+                    (470) 350-1019
                   </a>
                 </p>
-                <p className="flex items-center">
-                  <Clock className="w-4 h-4 mr-2 flex-shrink-0" />
-                  {t.footer?.openDaily || 'Open Daily 11:00 AM - 11:00 PM'}
-                </p>
+                <div className="flex items-start">
+                  <Clock className="w-4 h-4 mr-2 flex-shrink-0 mt-0.5" />
+                  <div className="text-sm">
+                    <div>{t.footer?.openDaily?.split('\n')[0] || 'SUN - THU: 12 AM - 10 PM'}</div>
+                    <div>{t.footer?.openDaily?.split('\n')[1] || 'FRI - SAT: 12 AM - 11 PM'}</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1908,7 +2857,7 @@ const NatureVillageWebsite = () => {
           <div className="border-t border-amber-700 mt-8 sm:mt-12 pt-6 sm:pt-8">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <p className="text-amber-200 text-sm text-center sm:text-left">
-                {t.footer?.copyright || '© 2024 Nature Village Kurdish Restaurant. All rights reserved.'}
+                {t.footer?.copyright || '© 2025 Nature Village Kurdish Restaurant. All rights reserved.'}
               </p>
               <div className="flex items-center space-x-2 text-amber-300 text-sm">
                 <span>{t.footer?.poweredBy || 'Powered by'}</span>
@@ -1945,11 +2894,11 @@ const NatureVillageWebsite = () => {
       {/* Order Modal */}
       {showOrderModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999] p-4">
-          <div className="order-modal bg-white rounded-xl shadow-2xl max-w-md w-full mx-auto transform transition-all duration-300 scale-100">
+          <div className="order-modal bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 transform transition-all duration-300 scale-100">
             <div className="p-6">
               {/* Modal Header */}
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="text-xl font-bold text-gray-900">Order Online</h3>
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-2xl font-bold text-gray-800">Order Online</h3>
                 <button
                   onClick={() => setShowOrderModal(false)}
                   className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
@@ -1962,53 +2911,35 @@ const NatureVillageWebsite = () => {
               </div>
 
               {/* Modal Content */}
-              <div className="space-y-4">
-                <p className="text-gray-600 text-center mb-6">Choose your preferred delivery platform for pickup or delivery:</p>
-                
-                {/* Delivery Platform Buttons */}
-                <div className="space-y-3">
-                  {/* Uber Eats Button */}
-                  <button
-                    onClick={handleUberEats}
-                    className={cn(
-                      'w-full flex items-center justify-center space-x-3 px-4 py-3 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
-                      isRTL && 'space-x-reverse'
-                    )}
-                  >
-                    <div className="w-6 h-6 bg-black rounded-sm flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">UE</span>
-                    </div>
-                    <span className="font-medium text-sm">Uber Eats</span>
-                  </button>
+              <p className="text-gray-600 mb-6 text-center">
+                Choose your preferred delivery platform for pickup or delivery
+              </p>
+              
+              {/* Delivery Platform Buttons */}
+              <div className="space-y-3">
+                {/* Uber Eats Button */}
+                <button
+                  onClick={handleUberEats}
+                  className="w-full bg-black text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+                >
+                  Uber Eats
+                </button>
 
-                  {/* DoorDash Button */}
-                  <button
-                    onClick={handleDoorDash}
-                    className={cn(
-                      'w-full flex items-center justify-center space-x-3 px-4 py-3 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
-                      isRTL && 'space-x-reverse'
-                    )}
-                  >
-                    <div className="w-6 h-6 bg-red-500 rounded-sm flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">DD</span>
-                    </div>
-                    <span className="font-medium text-sm">DoorDash</span>
-                  </button>
+                {/* DoorDash Button */}
+                <button
+                  onClick={handleDoorDash}
+                  className="w-full bg-red-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+                >
+                  DoorDash
+                </button>
 
-                  {/* Slice Button */}
-                  <button
-                    onClick={handleSlice}
-                    className={cn(
-                      'w-full flex items-center justify-center space-x-3 px-4 py-3 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
-                      isRTL && 'space-x-reverse'
-                    )}
-                  >
-                    <div className="w-6 h-6 bg-orange-500 rounded-sm flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">SL</span>
-                    </div>
-                    <span className="font-medium text-sm">Slice</span>
-                  </button>
-                </div>
+                {/* Slice Button */}
+                <button
+                  onClick={handleSlice}
+                  className="w-full bg-orange-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+                >
+                  Slice
+                </button>
               </div>
             </div>
           </div>
