@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Menu, X, MapPin, Phone, Clock, Star, Filter, Globe, Facebook, Instagram, ChefHat, Users, Calendar, Award, ChevronRight, Home, Utensils, Info, Camera, ExternalLink, Share2, ChevronDown, Grid, Heart, Eye, Share, ZoomIn, Download } from 'lucide-react';
 import { useRouter } from 'next/router';
+import { LANGUAGES, getText, updateDocumentLanguage } from '../lib/i18n';
 
 const NatureVillageWebsite = () => {
   const [currentSection, setCurrentSection] = useState('home');
@@ -28,17 +29,6 @@ const NatureVillageWebsite = () => {
   });
   
   const router = useRouter();
-
-  // Language options with proper Unicode characters
-  const languages = {
-    en: { name: 'English', code: 'en', dir: 'ltr', flag: '🇺🇸' },
-    ku: { name: 'کوردی', code: 'ku', dir: 'rtl', flag: 'ku' },
-    ar: { name: 'العربية', code: 'ar', dir: 'rtl', flag: '🇸🇦' },
-    fa: { name: 'فارسی', code: 'fa', dir: 'rtl', flag: '🇮🇷' },
-    tr: { name: 'Türkçe', code: 'tr', dir: 'ltr', flag: '🇹🇷' },
-    ur: { name: 'اردو', code: 'ur', dir: 'rtl', flag: '🇵🇰' },
-    kmr: { name: 'Kurdî (Kurmanî)', code: 'kmr', dir: 'ltr', flag: 'ku' }
-  };
 
   // Handle scroll effects
   useEffect(() => {
@@ -137,20 +127,11 @@ const NatureVillageWebsite = () => {
     
     try {
       const qpLang = typeof router.query.lang === 'string' ? router.query.lang : undefined;
-      if (qpLang && languages[qpLang]) {
+      if (qpLang && LANGUAGES[qpLang]) {
         setLanguage(qpLang);
-        if (typeof document !== 'undefined') {
-          document.documentElement.setAttribute('dir', languages[qpLang].dir);
-          document.documentElement.lang = qpLang;
-          document.body.style.fontFamily = languages[qpLang].dir === 'rtl' ? 
-            '"Noto Sans Arabic", "Noto Sans", system-ui, -apple-system, sans-serif' : 
-            '"Inter", "Noto Sans", system-ui, -apple-system, sans-serif';
-        }
+        updateDocumentLanguage(qpLang);
       } else {
-        if (typeof document !== 'undefined') {
-          document.documentElement.setAttribute('dir', languages[language].dir);
-          document.documentElement.lang = language;
-        }
+        updateDocumentLanguage(language);
       }
     } catch (error) {
       console.error('Error setting language:', error);
@@ -159,16 +140,10 @@ const NatureVillageWebsite = () => {
 
   const handleLanguageChange = useCallback((next) => {
     try {
-      if (!languages[next]) return;
+      if (!LANGUAGES[next]) return;
       
       setLanguage(next);
-      if (typeof document !== 'undefined') {
-        document.documentElement.setAttribute('dir', languages[next].dir);
-        document.documentElement.lang = next;
-        document.body.style.fontFamily = languages[next].dir === 'rtl' ? 
-          '"Noto Sans Arabic", "Noto Sans", system-ui, -apple-system, sans-serif' : 
-          '"Inter", "Noto Sans", system-ui, -apple-system, sans-serif';
-      }
+      updateDocumentLanguage(next);
       const url = { pathname: router.pathname, query: { ...router.query, lang: next } };
       router.replace(url, undefined, { shallow: true });
     } catch (error) {
@@ -344,8 +319,8 @@ const NatureVillageWebsite = () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: `${image.alt.en} - Nature Village Restaurant`,
-          text: image.story.en,
+          title: `${getText(image.alt, language)} - Nature Village Restaurant`,
+          text: getText(image.story, language),
           url: window.location.href
         });
       } catch (err) {
@@ -356,165 +331,87 @@ const NatureVillageWebsite = () => {
       navigator.clipboard.writeText(window.location.href);
       // You could show a toast notification here
     }
-  }, []);
+  }, [language]);
 
   // Enhanced menu data with complete multilingual support
   const menuItems = [
     {
-      id: 1,
+      id: 1502,
       name: {
-        en: 'Kebab-e Kubideh',
-        ku: 'کەباب کوبیده',
-        ar: 'كباب كوبیده',
-        fa: 'کباب کوبیده',
-        tr: 'Kebap Kubide',
-        ur: 'کباب کوبیده',
-        kmr: 'Kebab Kubîde'
+        en: 'Kabab Pizza',
+        ar: 'بيتزا الكباب',
+        fa: 'پیتزا کباب',
+        ku: 'پیتزای کەباب',
+        tr: 'Kebap Pizza',
+        ur: 'کباب پیزا',
+        kmr: 'Pizza Kebab'
       },
       description: {
-        en: 'Traditional ground lamb kebab with aromatic spices, served with basmati rice and grilled tomatoes',
-        ku: 'کەبابی نەریتی لە گۆشتی بەرخی هاڕاو لەگەڵ بۆنوبێرینی جۆراوجۆر، لەگەڵ برنجی باسماتی و تەماتەی برژاو',
-        ar: 'كباب لحم الخروف المفروم التقليدي مع التوابل العطرة، يُقدم مع أرز البسمتي والطماطم المشوية',
-        fa: 'کباب کوبیده سنتی از گوشت بره چرخ‌کرده با ادویه‌جات معطر، همراه با برنج باسماتی و گوجه کبابی',
-        tr: 'Aromatik baharatlarla hazırlanmış geleneksel kıyma kebabı, basmati pilav ve ızgara domates ile servis edilir',
-        ur: 'روایتی بھیڑ کے قیمے کا کباب خوشبودار مصالحوں کے ساتھ، باسمتی چاول اور گرل شدہ ٹماٹر کے ساتھ',
-        kmr: 'Kebaba kevneşopî ya goştê berxê hêşkirî bi baharatên bêhnxweş, bi brincê basmati û firangoşên şewitî tê pêşkêşkirin'
-      },
-      price: '$18.99',
-      category: 'traditional',
-      popular: true,
-      image: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600&h=400&fit=crop',
-      tags: ['spicy', 'grilled']
-    },
-    {
-      id: 2,
-      name: {
-        en: 'Dolma',
-        ku: 'دۆڵمە',
-        ar: 'دولمة',
-        fa: 'دولمه',
-        tr: 'Dolma',
-        ur: 'دولمہ',
-        kmr: 'Dolme'
-      },
-      description: {
-        en: 'Grape leaves stuffed with rice, herbs, and spices - a Kurdish family recipe passed down for generations',
-        ku: 'گەڵای مێو پڕکراو لە برنج و ڕووەک و بۆنوبێرین - ڕێسەتی خێزانی کوردی لە نەوەوە بۆ نەوە',
-        ar: 'أوراق العنب محشوة بالأرز والأعشاب والتوابل - وصفة عائلية كردية تتوارث عبر الأجيال',
-        fa: 'برگ انگور پر شده با برنج، سبزیجات و ادویه‌جات - دستور پخت خانوادگی کردی از نسل به نسل',
-        tr: 'Pirinç, otlar ve baharatlarla doldurulmuş asma yaprağı - Nesilden nesile aktarılan Kürt aile tarifi',
-        ur: 'انگور کے پتے چاول، جڑی بوٹیوں اور مصالحوں سے بھرے ہوئے - نسل در نسل کرد خاندانی نسخہ',
-        kmr: 'Pelên mîyê dagirî bi brinc, riwekên taze û baharan - rûpela malbata Kurdî ya ji nifş bo nifş derbas dibe'
-      },
-      price: '$14.99',
-      category: 'vegetarian',
-      popular: false,
-      image: 'https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?w=600&h=400&fit=crop',
-      tags: ['vegetarian', 'traditional']
-    },
-    {
-      id: 3,
-      name: {
-        en: 'Yaprakh',
-        ku: 'یاپراخ',
-        ar: 'یبرق',
-        fa: 'یپرق',
-        tr: 'Yaprak',
-        ur: 'یپرق',
-        kmr: 'Yaprax'
-      },
-      description: {
-        en: 'Tender cabbage rolls filled with seasoned rice, meat, and Kurdish spices simmered in rich tomato sauce',
-        ku: 'لەتی کەلەرمی نەرم پڕکراو لە برنج و گۆشت و بۆنوبێرینی کوردی لە سۆسی تەماتەی دەوڵەمەند',
-        ar: 'لفائف الملفوف الطرية محشوة بالأرز المتبل واللحم والتوابل الكردية في صلصة الطماطم الغنية',
-        fa: 'کلم پیچ نرم پر شده با برنج ادویه دار، گوشت و ادویه‌جات کردی در سس گوجه‌فرنگی غنی',
-        tr: 'Baharatli pirinç, et ve Kürt baharatları ile doldurulmuş yumuşak lahana sarması, zengin domates sosunda',
-        ur: 'نرم بند گوبھی کے رولز مصالحہ دار چاول، گوشت اور کرد مصالحوں سے بھرے، بھرپور ٹماٹر کی چٹنی میں',
-        kmr: 'Pelên kelemê ya nerm dagirî bi brincê baharatî, goşt û baharatên Kurdî di soşa firangoşê ya dewlemend de'
+        en: 'A savory pizza topped with thin slices of beef kabab, special sauce, iceberg lettuce, onions, cucumbers, and tomatoes. The crispy crust provides a perfect base for this fresh and flavorful combination.',
+        ar: 'بيتزا مالحة مغطاة بشرائح رقيقة من كباب اللحم البقري وصلصة خاصة وخس الجبل الجليدي والبصل والخيار والطماطم. القشرة المقرمشة توفر قاعدة مثالية لهذا المزيج الطازج واللذيذ.',
+        fa: 'پیتزای خوشمزه با برش‌های نازک کباب گوشت گاو، سس مخصوص، کاهو یخی، پیاز، خیار و گوجه‌فرنگی. خمیر ترد پایه‌ای عالی برای این ترکیب تازه و طعم‌دار فراهم می‌کند.',
+        ku: 'پیتزایەکی خۆش بە پارچە باریکەکانی کەبابی گۆشتی گا، سۆسی تایبەت، خسی قەڵەمی، پیاز، خیار و تەماتە. قاڵبە ترسکەکە بنکەیەکی تەواو دابین دەکات بۆ ئەم تێکەڵە تازە و خۆشە.',
+        tr: 'İnce dana kebap dilimleri, özel sos, buzdolabı marulu, soğan, salatalık ve domatesle kaplanmış lezzetli pizza. Çıtır hamur, bu taze ve lezzetli kombinasyon için mükemmel bir taban sağlar.',
+        ur: 'بیف کباب کے پتلے ٹکڑوں، خاص ساس، آئس برگ لیٹس، پیاز، کھیرا اور ٹماٹر کے ساتھ لذیذ پیزا۔ کرسپی کرسٹ اس تازہ اور ذائقہ دار امتزاج کے لیے بہترین بیس فراہم کرتا ہے۔',
+        kmr: 'Pizzayek bi tam ku bi perçeyên zok ên kebabê goştê ga, soşa taybet, salata qelemî, pîvaz, xiyar û firangoşan hatiye daxuyandin. Hevîrê çitir bingeheke temam ji bo vê tevahiya taze û bi tam peyda dike.'
       },
       price: '$16.99',
-      category: 'traditional',
+      category: 'pizza',
       popular: true,
-      image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&h=400&fit=crop',
-      tags: ['comfort food', 'traditional']
+      image: '/kpizza.jpg',
+      tags: []
     },
     {
-      id: 4,
+      id: 1707,
       name: {
-        en: 'Ash-e Reshteh',
-        ku: 'ئاشی ڕەشتە',
-        ar: 'آش رشته',
-        fa: 'آش رشته',
-        tr: 'Aş-i Reşte',
-        ur: 'آش رشتہ',
-        kmr: 'Aşê Reştê'
+        en: 'Village Carnival',
+        ar: 'كرنفال القرية',
+        fa: 'کارناوال روستا',
+        ku: 'کارنیڤاڵی گوند',
+        tr: 'Köy Karnavalı',
+        ur: 'ولیج کارنیول',
+        kmr: 'Karnavala Gund'
       },
       description: {
-        en: 'Hearty Kurdish noodle soup with beans, fresh herbs, and creamy yogurt - perfect comfort food',
-        ku: 'شۆربای ڕەشتەی کوردی مەزن لەگەڵ لۆبیا و ڕووەکی تازە و ماستی کرێمی - خۆراکی ئاسووەیی تەواو',
-        ar: 'حساء الشعيرية الكردي المغذي مع الفاصولياء والأعشاب الطازجة واللبن الكريمي - طعام مريح مثالي',
-        fa: 'سوپ رشته کردی مقوی با لوبیا، سبزیجات تازه و ماست کرمی - غذای راحتی عالی',
-        tr: 'Fasulye, taze otlar ve kremalı yoğurt ile doyurucu Kürt şehriye çorbası - mükemmel rahatlık yemeği',
-        ur: 'دالوں، تازہ جڑی بوٹیوں اور کریمی دہی کے ساتھ بھرپور کرد نوڈل سوپ - بہترین آرام دہ کھانا',
-        kmr: 'Şorbaya reşteyê ya Kurdî ya mijûl bi fasûlyan, riwekên taze û mastê krêmî - xwarinê aram û tewaw'
+        en: 'This best stew is a dish made with carefully selected fresh vegetables and tender pieces of meat. Slowly cooked to perfection. Served with aromatic saffron rice. It creates a memorable and satisfying dining experience.',
+        ar: 'هذا الطبق الأفضل هو طبق مصنوع من خضروات طازجة مختارة بعناية وقطع لحم طرية. مطبوخ ببطء إلى الكمال. يُقدم مع أرز الزعفران العطري. يخلق تجربة طعام لا تُنسى ومُرضية.',
+        fa: 'این بهترین خورشت غذایی است که با سبزیجات تازه به دقت انتخاب شده و تکه‌های نرم گوشت درست شده. آهسته تا کمال پخته شده. با برنج زعفرانی معطر سرو می‌شود. تجربه غذایی فراموش‌نشدنی و رضایت‌بخش ایجاد می‌کند.',
+        ku: 'ئەم باشترین خۆراکە خۆراکێکە کە بە سەوزەی تازەی بە وردی هەڵبژێردراو و پارچە نەرمەکانی گۆشت دروستکراوە. بە هێواشی بە تەواوی لێنراوە. لەگەڵ برنجی زەعفەرانی بۆنخۆش خراوەتە سەر. ئەزموونێکی خواردنی لەبیرنەکراو و دڵخۆشکەر دروست دەکات.',
+        tr: 'Bu en iyi güveç, özenle seçilmiş taze sebzeler ve yumuşak et parçalarıyla yapılan bir yemektir. Mükemmelliğe kadar yavaş pişirilmiştir. Aromatik safran pirinci ile servis edilir. Unutulmaz ve tatmin edici bir yemek deneyimi yaratır.',
+        ur: 'یہ بہترین سٹو ایک ڈش ہے جو احتیاط سے منتخب کردہ تازہ سبزیوں اور گوشت کے نرم ٹکڑوں سے بنائی گئی ہے۔ آہستہ آہستہ کمال تک پکائی گئی۔ خوشبودار زعفرانی چاول کے ساتھ پیش کی جاتی ہے۔ یہ ایک یادگار اور اطمینان بخش کھانے کا تجربہ بناتا ہے۔',
+        kmr: 'Ev xwaştrîn xwarin xwarineke ku bi sebzeyên taze yên bi baldarî hatine hilbijartin û perçeyên nerm ên goştî hatiye çêkirin. Hêdî hêdî heta bi temamî hatiye pijandin. Bi brincê zefranî yê bêhnxweş tê peşkêşkirin. Ezmûnek xwarinê ya jibîrnekirin û şaykirin çêdike.'
       },
-      price: '$12.99',
-      category: 'soup',
-      popular: false,
-      image: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=400&fit=crop',
-      tags: ['soup', 'comfort food', 'vegetarian']
+      price: '$23.99',
+      category: 'specialty',
+      popular: true,
+      image: '/carnival.jpg',
+      tags: []
     },
     {
-      id: 5,
+      id: 1801,
       name: {
-        en: 'Khorak-e Bademjan',
-        ku: 'خۆراکی بادەمجان',
-        ar: 'خوراك الباذنجان',
-        fa: 'خوراک بادمجان',
-        tr: 'Patlıcan Yemeği',
-        ur: 'بینگن کا کھانا',
-        kmr: 'Xwareka Bacanê'
+        en: 'Erbil Shish Kabab',
+        ar: 'شيش كباب أربيل',
+        fa: 'شیش کباب اربیل',
+        ku: 'شیش کەبابی هەولێر',
+        tr: 'Erbil Şiş Kebap',
+        ur: 'اربیل شیش کباب',
+        kmr: 'Şîş Kebaba Hewlêr'
       },
       description: {
-        en: 'Slow-cooked eggplant stew with tomatoes, onions, and aromatic Kurdish herbs in olive oil',
-        ku: 'خۆراکی بادەمجانی هێواش لێنراو لەگەڵ تەماتە و پیاز و ڕووەکی بۆندار کوردی لە زەیتی زەیتوون',
-        ar: 'يخنة الباذنجان المطبوخة ببطء مع الطماطم والبصل والأعشاب الكردية العطرة في زيت الزيتون',
-        fa: 'خوراک بادمجان آهسته پز با گوجه‌فرنگی، پیاز و سبزیجات معطر کردی در روغن زیتون',
-        tr: 'Domates, soğan ve aromatik Kürt otları ile zeytinyağında yavaş pişirilmiş patlıcan yemeği',
-        ur: 'ٹماٹر، پیاز اور خوشبودار کرد جڑی بوٹیوں کے ساتھ زیتون کے تیل میں آہستہ پکایا گیا بینگن کا سالن',
-        kmr: 'Xwareka bacanê ya hêdî pijandin bi firangoş, pîvaz û riwekên bêhnxweş ên Kurdî di zeyta zeytûnê de'
+        en: 'A kabab made with a mix of lamb and beef, grilled to perfection. It is served with saffron rice, seasonal salad, sumac onions, and grilled vegetables.',
+        ar: 'كباب مصنوع من خليط من لحم الخروف ولحم البقر، مشوي إلى الكمال. يُقدم مع أرز الزعفران وسلطة موسمية وبصل السماق والخضروات المشوية.',
+        fa: 'کبابی از ترکیب گوشت بره و گاو، تا کمال کباب شده. با برنج زعفرانی، سالاد فصلی، پیاز سماق و سبزیجات کبابی سرو می‌شود.',
+        ku: 'کەبابێک لە تێکەڵی گۆشتی بەرخ و گا، بە تەواوی گرێلکراوە. لەگەڵ برنجی زەعفەران، سالادی وەرزی، پیازی سوماق و سەوزەی گرێلکراو خراوەتە سەر.',
+        tr: 'Kuzu ve dana eti karışımından yapılan, mükemmelliğe kadar ızgara edilmiş kebap. Safran pirinci, mevsim salatası, sumak soğanı ve ızgara sebzelerle servis edilir.',
+        ur: 'بھیڑ اور گائے کے گوشت کے مکسچر سے بنا کباب، کمال تک گرل کیا گیا۔ زعفرانی چاول، موسمی سلاد، سماق پیاز اور گرل شدہ سبزیوں کے ساتھ پیش کیا جاتا ہے۔',
+        kmr: 'Kebabek ku ji tevahiya goştê berx û ga hatiye çêkirin, heta bi temamî hatiye grîlkirin. Bi brincê zefranî, salata werzeya, pîvazê sumaq û sebzeyên grîlkirî tê peşkêşkirin.'
       },
-      price: '$15.99',
-      category: 'vegan',
+      price: '$21.99',
+      category: 'grill',
       popular: true,
-      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop',
-      tags: ['vegan', 'stew', 'traditional']
-    },
-    {
-      id: 6,
-      name: {
-        en: 'Baklava Kurdistan',
-        ku: 'بەقڵاوای کوردستان',
-        ar: 'بقلاوة كردستان',
-        fa: 'باقلوای کردستان',
-        tr: 'Kürdistan Baklavası',
-        ur: 'کردستان بقلاوہ',
-        kmr: 'Baklawaya Kurdistanê'
-      },
-      description: {
-        en: 'Traditional Kurdish baklava with pistachios, walnuts, and rose water, layered in delicate phyllo pastry',
-        ku: 'بەقڵاوای نەریتی کوردی لەگەڵ فستق و گوێز و ئاوی گوڵ، لە تەباقی نازکی فیلۆ',
-        ar: 'بقلاوة كردية تقليدية بالفستق والجوز وماء الورد، مطبقة في عجين الفيلو الرقيق',
-        fa: 'باقلوای سنتی کردی با پسته، گردو و گلاب، لایه‌بندی شده در خمیر نازک فیلو',
-        tr: 'Fıstık, ceviz ve gül suyu ile geleneksel Kürt baklavası, ince yufka katmanlarında',
-        ur: 'پستے، اخروٹ اور گلاب کے پانی کے ساتھ روایتی کرد بقلاوہ، نازک فلو پیسٹری میں تہہ دار',
-        kmr: 'Baklawaya kevneşopî ya Kurdî bi fistiq, gûz û ava gulê, di qatên nazik ên fîloyê de'
-      },
-      price: '$8.99',
-      category: 'dessert',
-      popular: true,
-      image: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=600&h=400&fit=crop',
-      tags: ['sweet', 'traditional']
+      image: '/Ekabab.jpg',
+      tags: []
     }
   ];
 
@@ -1212,15 +1109,15 @@ const NatureVillageWebsite = () => {
     }
   };
 
-  const t = translations[language] || translations.en;
+  const t = translations[language || 'en'] || translations.en;
   
   // Enhanced getText function with better error handling
-  const getText = useCallback((obj) => {
+  const getLocalText = useCallback((obj) => {
     try {
       if (!obj) return '';
       if (typeof obj === 'string') return obj;
       if (typeof obj === 'object' && obj !== null) {
-        return obj[language] || obj.en || '';
+        return obj[language || 'en'] || obj.en || '';
       }
       return '';
     } catch (error) {
@@ -1305,7 +1202,7 @@ const NatureVillageWebsite = () => {
     }
   }, [activeFilter, menuItems]);
 
-  const isRTL = languages[language]?.dir === 'rtl';
+  const isRTL = LANGUAGES[language || 'en']?.dir === 'rtl';
 
   // Safe Blunari link handler
   const handleBlunariClick = useCallback(() => {
@@ -1398,7 +1295,7 @@ const NatureVillageWebsite = () => {
         'very-high': 'مزدحم جداً'
       }
     };
-    return busyTexts[language]?.[level] || busyTexts.en[level] || 'Unknown';
+    return busyTexts[language || 'en']?.[level] || busyTexts.en[level] || 'Unknown';
   }, [language]);
 
   const getBusyLevelColor = useCallback((level) => {
@@ -1518,7 +1415,7 @@ const NatureVillageWebsite = () => {
           animation: slideInRight 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
       `}</style>
-      <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50" style={{ direction: languages[language]?.dir || 'ltr' }}>
+      <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50" style={{ direction: LANGUAGES[language || 'en']?.dir || 'ltr' }}>
       {/* Navigation */}
       <nav className={cn(
         'fixed top-0 w-full z-50 border-b-2 border-amber-200 transition-all duration-300',
@@ -1811,7 +1708,7 @@ const NatureVillageWebsite = () => {
                       </span>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
-                      {Object.entries(languages).map(([code, lang], index) => (
+                      {Object.entries(LANGUAGES).map(([code, lang], index) => (
                         <button
                           key={code}
                           onClick={() => {
@@ -1852,12 +1749,12 @@ const NatureVillageWebsite = () => {
                   {/* Mobile Phone Section with enhanced styling */}
                   <div className="mt-6 pt-6 border-t border-amber-200/70">
                     <a 
-                      href="tel:4045554873" 
+                      href="tel:4703501019" 
                       className="group relative w-full flex items-center justify-center space-x-3 px-6 py-4 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 text-white hover:from-amber-700 hover:to-orange-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
-                      aria-label="Call us at (404) 555-KURD"
+                      aria-label="Call us at (470) 350-1019"
                     >
                       <Phone className="w-5 h-5 group-hover:animate-pulse" />
-                      <span>(404) 555-KURD</span>
+                      <span>(470) 350-1019</span>
                     </a>
                   </div>
 
@@ -1974,7 +1871,7 @@ const NatureVillageWebsite = () => {
             
             {/* Bottom row - Call Now button */}
             <button 
-              onClick={() => window.open('tel:+1234567890', '_self')}
+              onClick={() => window.open('tel:4703501019', '_self')}
               className="group w-28 sm:w-auto bg-transparent border-2 border-green-400/80 text-green-200 hover:bg-green-400/10 hover:border-green-300 hover:text-green-100 px-3 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-medium backdrop-blur-sm transition-all duration-200 flex items-center justify-center gap-1.5 min-h-[40px]"
             >
               <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -2025,7 +1922,7 @@ const NatureVillageWebsite = () => {
                 <div className="relative overflow-hidden">
                   <img 
                     src={item.image} 
-                    alt={getText(item.name)}
+                    alt={getLocalText(item.name)}
                     className="w-full h-48 sm:h-56 object-cover transition-transform duration-300 group-hover:scale-110"
                     onError={(e) => {
                       e.target.src = 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop';
@@ -2035,10 +1932,10 @@ const NatureVillageWebsite = () => {
                 </div>
                 <div className={cn('p-4 sm:p-6', rtlClass('text-left', 'text-right'))}>
                   <h3 className="text-lg sm:text-xl font-serif font-bold text-amber-800 mb-2">
-                    {getText(item.name)}
+                    {getLocalText(item.name)}
                   </h3>
                   <p className="text-gray-700 mb-4 text-sm leading-relaxed line-clamp-3">
-                    {getText(item.description)}
+                    {getLocalText(item.description)}
                   </p>
                   <div className={cn('flex justify-between items-center', isRTL && 'flex-row-reverse')}>
                     <span className="text-xl sm:text-2xl font-bold text-amber-600">{t.currency}{item.price.replace('$', '')}</span>
@@ -2171,9 +2068,9 @@ const NatureVillageWebsite = () => {
       </section>
 
       {/* Celebrate Your Special Moments Section */}
-      <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
+      <section className="relative min-h-[100vh] py-16 overflow-hidden">
         {/* Top Curve */}
-        <div className="absolute top-0 left-0 w-full h-20 z-10">
+        <div className="absolute top-0 left-0 w-full h-16 z-10">
           <svg 
             viewBox="0 0 1200 120" 
             preserveAspectRatio="none" 
@@ -2205,25 +2102,25 @@ const NatureVillageWebsite = () => {
 
         {/* Floating Celebration Elements - positioned to avoid text overlap */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden hidden lg:block">
-          <div className="absolute top-16 left-8 text-3xl opacity-20 animate-float" style={{animationDelay: '0s'}}>🎈</div>
+          <div className="absolute top-20 left-8 text-3xl opacity-20 animate-float" style={{animationDelay: '0s'}}>🎈</div>
           <div className="absolute top-32 right-16 text-2xl opacity-30 animate-float" style={{animationDelay: '2s'}}>🎊</div>
           <div className="absolute bottom-40 left-1/6 text-xl opacity-40 animate-float" style={{animationDelay: '4s'}}>✨</div>
           <div className="absolute bottom-24 right-1/4 text-2xl opacity-25 animate-float" style={{animationDelay: '1s'}}>🌟</div>
-          <div className="absolute top-1/4 left-3/4 text-xl opacity-20 animate-float" style={{animationDelay: '3s'}}>💫</div>
+          <div className="absolute top-1/3 left-3/4 text-xl opacity-20 animate-float" style={{animationDelay: '3s'}}>💫</div>
         </div>
 
-        <div className="relative z-10 w-full h-full flex flex-col max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="relative z-10 w-full min-h-full flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Compact Header */}
           <div className="text-center mb-8">
             <div className="inline-block mb-6">
-              <span className="text-4xl">�</span>
+              <span className="text-4xl">🎉</span>
             </div>
             
             <div className="relative">
               {/* Decorative top line */}
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-32 h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
               
-              <h2 className="relative text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white mb-4">
+              <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
                 <span className="relative inline-block">
                   {/* Subtle glow effect behind text */}
                   <span className="absolute inset-0 text-white/10 blur-lg -z-10">{t.celebration?.title || 'Celebrate Your Special Moments'}</span>
@@ -2254,56 +2151,58 @@ const NatureVillageWebsite = () => {
               <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-amber-300/70 to-transparent"></div>
             </div>
             
-            <p className="text-sm lg:text-base text-white/80 max-w-2xl mx-auto">
+            <p className="text-base lg:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
               {t.celebration?.subtitle || 'Make your birthdays, anniversaries, and special occasions unforgettable with authentic Kurdish hospitality'}
             </p>
           </div>
 
-          {/* Enhanced Celebration Options - Optimized for 80vh */}
-          <div className="flex-1 flex flex-col justify-center">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mb-4">
+          {/* Enhanced Celebration Options - Full Visibility */}
+          <div className="flex-1">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8">
               {/* Birthday Celebrations */}
               <div className="group text-center transform hover:scale-105 transition-all duration-500">
-                <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-6 border border-white/20 hover:border-amber-400/50 transition-all duration-500 overflow-hidden">
+                <div className="relative bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-amber-400/50 transition-all duration-500 overflow-hidden min-h-[400px] flex flex-col justify-between">
                   {/* Floating particles inside card - positioned in corners away from text */}
-                  <div className="absolute top-3 right-3 text-amber-300 text-xs opacity-40 animate-float hidden sm:block">🎈</div>
-                  <div className="absolute bottom-3 left-3 text-yellow-300 text-xs opacity-30 animate-float hidden sm:block" style={{animationDelay: '1s'}}>✨</div>
+                  <div className="absolute top-4 right-4 text-amber-300 text-lg opacity-40 animate-float hidden sm:block">🎈</div>
+                  <div className="absolute bottom-4 left-4 text-yellow-300 text-sm opacity-30 animate-float hidden sm:block" style={{animationDelay: '1s'}}>✨</div>
                   
-                  {/* Enhanced icon with glow */}
-                  <div className="relative mb-3">
-                    <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-orange-400 rounded-full blur-2xl opacity-20 scale-150"></div>
-                    <div className="relative text-4xl lg:text-5xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 filter drop-shadow-2xl">🎂</div>
+                  <div>
+                    {/* Enhanced icon with glow */}
+                    <div className="relative mb-4">
+                      <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-orange-400 rounded-full blur-2xl opacity-20 scale-150"></div>
+                      <div className="relative text-5xl lg:text-6xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 filter drop-shadow-2xl">🎂</div>
+                    </div>
+                    
+                    <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-3 group-hover:text-amber-200 transition-colors duration-300">
+                      {t.celebration?.birthday?.title || 'Birthday Celebrations'}
+                    </h3>
+                    <p className="text-white/70 mb-6 text-lg italic">
+                      {t.celebration?.birthday?.tagline || 'Make it a day to remember'}
+                    </p>
+                    
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                        <span className="text-amber-300 text-lg">🎈</span>
+                        <span className="text-sm">{t.celebration?.birthday?.feature1 || 'Complimentary birthday cake & candles'}</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                        <span className="text-amber-300 text-lg">🎵</span>
+                        <span className="text-sm">{t.celebration?.birthday?.feature2 || 'Traditional Kurdish birthday songs'}</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                        <span className="text-amber-300 text-lg">📸</span>
+                        <span className="text-sm">{t.celebration?.birthday?.feature3 || 'Professional photo memories'}</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                        <span className="text-amber-300 text-lg">🎁</span>
+                        <span className="text-sm">{t.celebration?.birthday?.feature4 || 'Special birthday decorations'}</span>
+                      </div>
+                    </div>
                   </div>
                   
-                  <h3 className="text-xl lg:text-2xl font-serif font-bold text-white mb-2 group-hover:text-amber-200 transition-colors duration-300">
-                    {t.celebration?.birthday?.title || 'Birthday Celebrations'}
-                  </h3>
-                  <p className="text-white/70 mb-4 text-base italic">
-                    {t.celebration?.birthday?.tagline || 'Make it a day to remember'}
-                  </p>
-                  
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                      <span className="text-amber-300">🎈</span>
-                      <span className="text-xs">{t.celebration?.birthday?.feature1 || 'Complimentary birthday cake & candles'}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                      <span className="text-amber-300">🎵</span>
-                      <span className="text-xs">{t.celebration?.birthday?.feature2 || 'Traditional Kurdish birthday songs'}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                      <span className="text-amber-300">📸</span>
-                      <span className="text-xs">{t.celebration?.birthday?.feature3 || 'Professional photo memories'}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                      <span className="text-amber-300">🎁</span>
-                      <span className="text-xs">{t.celebration?.birthday?.feature4 || 'Special birthday decorations'}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="relative bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-2xl p-2 border border-amber-400/30 group-hover:border-amber-400/60 transition-all duration-300 backdrop-blur-sm">
+                  <div className="relative bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-2xl p-3 border border-amber-400/30 group-hover:border-amber-400/60 transition-all duration-300 backdrop-blur-sm">
                     <div className="absolute inset-0 bg-gradient-to-r from-amber-400/10 to-orange-400/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <p className="relative text-amber-200 font-medium group-hover:text-amber-100 transition-colors duration-300 text-xs">
+                    <p className="relative text-amber-200 font-medium group-hover:text-amber-100 transition-colors duration-300 text-sm">
                       <span className="text-yellow-300">🌟 </span>
                       {t.celebration?.birthday?.special || 'Perfect for birthday parties of all sizes'}
                       <span className="text-yellow-300"> 🌟</span>
@@ -2314,40 +2213,42 @@ const NatureVillageWebsite = () => {
 
               {/* Anniversary Celebrations */}
               <div className="group text-center transform hover:scale-105 transition-all duration-500">
-                <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:border-rose-400/50 transition-all duration-500 overflow-hidden">
+                <div className="relative bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-rose-400/50 transition-all duration-500 overflow-hidden min-h-[400px] flex flex-col justify-between">
                   {/* Floating particles inside card */}
-                  <div className="absolute top-4 right-4 text-rose-300 text-sm opacity-50 animate-float" style={{animationDelay: '0.5s'}}>🌹</div>
-                  <div className="absolute bottom-6 left-6 text-pink-300 text-xs opacity-40 animate-float" style={{animationDelay: '1.5s'}}>💕</div>
+                  <div className="absolute top-4 right-4 text-rose-300 text-lg opacity-50 animate-float" style={{animationDelay: '0.5s'}}>🌹</div>
+                  <div className="absolute bottom-4 left-4 text-pink-300 text-sm opacity-40 animate-float" style={{animationDelay: '1.5s'}}>💕</div>
                   
-                  {/* Enhanced icon with glow */}
-                  <div className="relative mb-4">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-2xl opacity-20 scale-150"></div>
-                    <div className="relative text-5xl lg:text-6xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 filter drop-shadow-2xl">�</div>
-                  </div>
-                  
-                  <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-3 group-hover:text-rose-200 transition-colors duration-300">
-                    {t.celebration?.anniversary?.title || 'Anniversary Dinners'}
-                  </h3>
-                  <p className="text-white/70 mb-6 text-lg italic">
-                    {t.celebration?.anniversary?.tagline || 'Celebrate your love story'}
-                  </p>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                      <span className="text-rose-300">🌹</span>
-                      <span className="text-sm">{t.celebration?.anniversary?.feature1 || 'Romantic table setup with roses'}</span>
+                  <div>
+                    {/* Enhanced icon with glow */}
+                    <div className="relative mb-4">
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-2xl opacity-20 scale-150"></div>
+                      <div className="relative text-5xl lg:text-6xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 filter drop-shadow-2xl">💕</div>
                     </div>
-                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                      <span className="text-rose-300">🥂</span>
-                      <span className="text-sm">{t.celebration?.anniversary?.feature2 || 'Complimentary dessert for two'}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                      <span className="text-rose-300">🕯️</span>
-                      <span className="text-sm">{t.celebration?.anniversary?.feature3 || 'Candlelit dining experience'}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                      <span className="text-rose-300">💌</span>
-                      <span className="text-sm">{t.celebration?.anniversary?.feature4 || 'Personalized anniversary card'}</span>
+                    
+                    <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-3 group-hover:text-rose-200 transition-colors duration-300">
+                      {t.celebration?.anniversary?.title || 'Anniversary Dinners'}
+                    </h3>
+                    <p className="text-white/70 mb-6 text-lg italic">
+                      {t.celebration?.anniversary?.tagline || 'Celebrate your love story'}
+                    </p>
+                    
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                        <span className="text-rose-300 text-lg">🌹</span>
+                        <span className="text-sm">{t.celebration?.anniversary?.feature1 || 'Romantic table setup with roses'}</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                        <span className="text-rose-300 text-lg">🥂</span>
+                        <span className="text-sm">{t.celebration?.anniversary?.feature2 || 'Complimentary dessert for two'}</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                        <span className="text-rose-300 text-lg">🕯️</span>
+                        <span className="text-sm">{t.celebration?.anniversary?.feature3 || 'Candlelit dining experience'}</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
+                        <span className="text-rose-300 text-lg">💌</span>
+                        <span className="text-sm">{t.celebration?.anniversary?.feature4 || 'Personalized anniversary card'}</span>
+                      </div>
                     </div>
                   </div>
                   
@@ -2364,61 +2265,61 @@ const NatureVillageWebsite = () => {
             </div>
 
             {/* Enhanced Other Celebrations Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-              <div className="group text-center p-5 bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 hover:border-amber-400/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-                <div className="relative mb-3">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-8">
+              <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-amber-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                <div className="relative mb-4">
                   <div className="absolute inset-0 bg-amber-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative text-2xl lg:text-3xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🎓</div>
+                  <div className="relative text-3xl lg:text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🎓</div>
                 </div>
-                <div className="text-white font-medium group-hover:text-amber-200 transition-colors duration-300 text-sm">Graduations</div>
+                <div className="text-white font-medium group-hover:text-amber-200 transition-colors duration-300 text-sm lg:text-base">Graduations</div>
               </div>
-              <div className="group text-center p-5 bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 hover:border-pink-400/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-                <div className="relative mb-3">
+              <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-pink-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                <div className="relative mb-4">
                   <div className="absolute inset-0 bg-pink-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative text-2xl lg:text-3xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">💍</div>
+                  <div className="relative text-3xl lg:text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">💍</div>
                 </div>
-                <div className="text-white font-medium group-hover:text-pink-200 transition-colors duration-300 text-sm">Engagements</div>
+                <div className="text-white font-medium group-hover:text-pink-200 transition-colors duration-300 text-sm lg:text-base">Engagements</div>
               </div>
-              <div className="group text-center p-5 bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 hover:border-blue-400/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-                <div className="relative mb-3">
+              <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-blue-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                <div className="relative mb-4">
                   <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative text-2xl lg:text-3xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">👨‍👩‍👧‍👦</div>
+                  <div className="relative text-3xl lg:text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">👨‍👩‍👧‍👦</div>
                 </div>
-                <div className="text-white font-medium group-hover:text-blue-200 transition-colors duration-300 text-sm">Family Reunions</div>
+                <div className="text-white font-medium group-hover:text-blue-200 transition-colors duration-300 text-sm lg:text-base">Family Reunions</div>
               </div>
-              <div className="group text-center p-5 bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 hover:border-green-400/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-                <div className="relative mb-3">
+              <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-green-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                <div className="relative mb-4">
                   <div className="absolute inset-0 bg-green-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative text-2xl lg:text-3xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🎄</div>
+                  <div className="relative text-3xl lg:text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🎄</div>
                 </div>
-                <div className="text-white font-medium group-hover:text-green-200 transition-colors duration-300 text-sm">Holidays</div>
+                <div className="text-white font-medium group-hover:text-green-200 transition-colors duration-300 text-sm lg:text-base">Holidays</div>
               </div>
             </div>
 
             {/* Enhanced Call to Action */}
             <div className="text-center relative">
               {/* Background glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-red-500/10 rounded-3xl blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/15 via-orange-500/15 to-red-500/15 rounded-3xl blur-3xl"></div>
               
-              <div className="relative bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-6 border border-white/20 backdrop-blur-lg">
+              <div className="relative bg-gradient-to-br from-white/15 to-white/10 rounded-3xl p-6 lg:p-8 border border-white/25 backdrop-blur-lg">
                 {/* Floating particles around CTA - positioned in safe corners */}
-                <div className="absolute top-3 left-3 text-amber-300 text-sm opacity-25 animate-float hidden sm:block">✨</div>
-                <div className="absolute top-3 right-3 text-orange-300 text-sm opacity-30 animate-float hidden sm:block" style={{animationDelay: '1s'}}>�</div>
-                <div className="absolute bottom-3 left-3 text-yellow-300 text-xs opacity-20 animate-float hidden sm:block" style={{animationDelay: '2s'}}>💫</div>
-                <div className="absolute bottom-3 right-3 text-red-300 text-xs opacity-25 animate-float hidden sm:block" style={{animationDelay: '0.5s'}}>✨</div>
+                <div className="absolute top-4 left-4 text-amber-300 text-lg opacity-30 animate-float hidden sm:block">✨</div>
+                <div className="absolute top-4 right-4 text-orange-300 text-lg opacity-35 animate-float hidden sm:block" style={{animationDelay: '1s'}}>🎊</div>
+                <div className="absolute bottom-4 left-4 text-yellow-300 text-base opacity-25 animate-float hidden sm:block" style={{animationDelay: '2s'}}>💫</div>
+                <div className="absolute bottom-4 right-4 text-red-300 text-base opacity-30 animate-float hidden sm:block" style={{animationDelay: '0.5s'}}>✨</div>
                 
                 <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-4 transform hover:scale-105 transition-transform duration-300">
                   {t.celebration?.cta?.title || 'Ready to Celebrate?'}
                 </h3>
-                <p className="text-white/80 mb-6 max-w-2xl mx-auto text-base lg:text-lg leading-relaxed">
+                <p className="text-white/90 mb-6 max-w-3xl mx-auto text-base lg:text-lg leading-relaxed">
                   {t.celebration?.cta?.subtitle || 'Let us make your special day extraordinary with authentic Kurdish hospitality and unforgettable flavors'}
                 </p>
                 
-                <div className="text-white text-lg lg:text-xl font-semibold">
+                <div className="text-white text-lg lg:text-xl font-semibold mb-4">
                   📞 {t.celebration?.cta?.reserve || 'Call for special reservation'} 📞
                 </div>
                 
-                <p className="text-white/60 text-sm mt-4 flex items-center justify-center gap-2">
+                <p className="text-white/70 text-sm flex items-center justify-center gap-2">
                   <span className="text-amber-300">💡</span>
                   <span>Book 48 hours in advance for the best celebration experience</span>
                 </p>
@@ -2429,7 +2330,7 @@ const NatureVillageWebsite = () => {
         </div>
         
         {/* Bottom Curve */}
-        <div className="absolute bottom-0 left-0 w-full h-20 z-10">
+        <div className="absolute bottom-0 left-0 w-full h-16 z-10">
           <svg 
             viewBox="0 0 1200 120" 
             preserveAspectRatio="none" 
@@ -2644,7 +2545,7 @@ const NatureVillageWebsite = () => {
                 </button>
                 
                 <a 
-                  href="tel:+14703501019"
+                  href="tel:4703501019"
                   className="group bg-white hover:bg-gray-50 text-amber-700 border-2 border-amber-300 hover:border-amber-400 px-8 py-4 rounded-2xl text-base font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3"
                 >
                   <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -2727,7 +2628,7 @@ const NatureVillageWebsite = () => {
               </h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 {t.visit?.phone || 'Phone'}: 
-                <a href="tel:+15551234567" className="text-amber-600 hover:text-amber-800 transition-colors ml-1">
+                <a href="tel:4703501019" className="text-amber-600 hover:text-amber-800 transition-colors ml-1">
                   (470) 350-1019
                 </a>
               </p>
