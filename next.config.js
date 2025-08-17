@@ -2,9 +2,19 @@
 const nextConfig = {
   output: 'standalone',
   images: {
-    domains: [
-      'images.unsplash.com',
-      'naturevillagerestaurant.com'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'naturevillagerestaurant.com',
+        port: '',
+        pathname: '/**',
+      }
     ],
     unoptimized: false,
     formats: ['image/webp', 'image/avif']
@@ -15,7 +25,6 @@ const nextConfig = {
     localeDetection: false
   },
   trailingSlash: true,
-
 }
 
 module.exports = nextConfig

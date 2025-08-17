@@ -1,4 +1,7 @@
-import { LanguageCode, getText } from './i18n'
+import { getText } from '../i18n'
+
+// Type definition for language code
+type LanguageCode = 'en' | 'ku' | 'ar' | 'fa' | 'tr' | 'ur' | 'kmr';
 
 interface MenuItem {
   id: number
@@ -44,7 +47,7 @@ export function generateMenuJsonLD(menuSections: MenuSection[], language: Langua
     },
     hasMenu: {
       '@type': 'Menu',
-      name: getText({ en: 'Our Menu', ar: 'قائمتنا', fa: 'منوی ما', ku: 'مێنیوی ئێمە', tr: 'Menümüz', ur: 'ہمارا مینیو', kmr: 'Menûya Me' }, language),
+      name: getText({ en: 'Our Menu', ar: 'قائمتنا', fa: 'منوی ما', ku: 'مێنیوی ئێمە', tr: 'Menümüz', ur: 'ہمارا مینیو', kmr: 'Menûya Me' }, language, 'Our Menu'),
       hasMenuSection: menuSections.map(section => ({
         '@type': 'MenuSection',
         name: getText({
@@ -55,12 +58,12 @@ export function generateMenuJsonLD(menuSections: MenuSection[], language: Langua
           tr: getCategoryTranslation(section.category, 'tr'),
           ur: getCategoryTranslation(section.category, 'ur'),
           kmr: getCategoryTranslation(section.category, 'kmr'),
-        }, language),
+        }, language, section.category),
         hasMenuItem: section.items.map(item => {
           const menuItem: any = {
             '@type': 'MenuItem',
-            name: getText(item.name, language),
-            description: getText(item.description, language),
+            name: getText(item.name, language, 'Menu Item'),
+            description: getText(item.description, language, 'Description'),
             menuAddOn: item.tags?.map(tag => ({
               '@type': 'MenuSection',
               name: tag

@@ -11,7 +11,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Menu, X, Globe, Filter, Phone, Search, Clock, Star, MapPin, Facebook, Instagram, MessageCircle, ChefHat, ChevronDown, ChevronRight, Home, Utensils, Info, Camera, Calendar, Users, ExternalLink, Share2 } from 'lucide-react'
 import { useRouter } from 'next/router'
-import { LANGUAGES, getText as tGet, updateDocumentLanguage, generateHreflangAlternates } from '../lib/menu/i18n'
+import { LANGUAGES, getText as tGet, updateDocumentLanguage, generateHreflangAlternates } from '../lib/i18n'
 import { useReducedMotion } from '../lib/menu/useReducedMotion'
 import { generateMenuJsonLD } from '../lib/menu/jsonld'
 
@@ -3497,13 +3497,13 @@ const FullMenuPage = () => {
           >
             <div 
               className={cn(
-                'absolute top-0 w-80 sm:w-96 h-full bg-white shadow-2xl transform transition-all duration-500 ease-out border-r border-amber-200',
+                'absolute top-0 w-80 sm:w-96 h-screen min-h-screen bg-white shadow-2xl transform transition-all duration-500 ease-out border-r border-amber-200 flex flex-col',
                 isRTL ? 'right-0 animate-slideInRight' : 'left-0 animate-slideInLeft'
               )} 
               onClick={(e) => e.stopPropagation()}
             >
               {/* Mobile Menu Header with enhanced design */}
-              <div className="relative flex items-center justify-between p-6 border-b border-amber-200 bg-white shadow-sm">
+              <div className="relative flex items-center justify-between p-6 border-b border-amber-200 bg-white shadow-sm flex-shrink-0">
                 <div className={cn('flex items-center', isRTL && 'flex-row-reverse')}>
                   <div className="relative">
                     <img 
@@ -3532,7 +3532,7 @@ const FullMenuPage = () => {
               </div>
 
               {/* Mobile Menu Navigation with enhanced animations */}
-              <nav className="flex flex-col py-6 px-4 space-y-1 overflow-y-auto max-h-[calc(100vh-200px)] bg-white" role="navigation" aria-label="Mobile navigation">
+              <nav className="flex flex-col py-6 px-4 space-y-1 overflow-y-auto flex-1 bg-white" role="navigation" aria-label="Mobile navigation">
                 {Object.entries(t.nav || {})
                   .filter(([key]) => key !== 'orderOnline')
                   .map(([key, value], index) => (
@@ -3642,6 +3642,18 @@ const FullMenuPage = () => {
                       </button>
                     ))}
                   </div>
+                </div>
+
+                {/* Mobile Phone Section with enhanced styling */}
+                <div className="mt-6 pt-6 border-t border-amber-200/70">
+                  <a 
+                    href="tel:4703501019" 
+                    className="group relative w-full flex items-center justify-center space-x-3 px-6 py-4 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 text-white hover:from-amber-700 hover:to-orange-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
+                    aria-label="Call us at (470) 350-1019"
+                  >
+                    <Phone className="w-5 h-5 group-hover:animate-pulse" />
+                    <span>(470) 350-1019</span>
+                  </a>
                 </div>
 
                 {/* Additional mobile menu footer */}
