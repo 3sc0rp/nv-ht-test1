@@ -282,8 +282,9 @@ const Footer = ({ language = 'en' }) => {
               <button 
                 onClick={handleBlunariClick}
                 className="hover:text-white transition-colors font-medium underline decoration-dotted underline-offset-4"
+                aria-label="Blunari"
               >
-                {getFooterText('blunari')}
+                Blunari
               </button>
             </div>
           </div>
