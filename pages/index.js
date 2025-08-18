@@ -40,7 +40,7 @@ export default function Home() {
       <NatureVillageWebsite />
       {/* Add shared Footer component to homepage */}
       <div style={{marginTop: 32}}>
-        {require('../components/Footer').default()}
+        <Footer language="en" />
       </div>
     </>
   )
