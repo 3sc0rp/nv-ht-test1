@@ -505,10 +505,7 @@ const NatureVillageWebsite = () => {
         followUs: 'Follow Us',
         openDaily: 'SUN - THU: 12 AM - 10 PM\nFRI - SAT: 12 AM - 11 PM',
         poweredBy: 'Powered by',
-
         blunari: 'Blunari',
-
-        blunari: 'Blunari AI',
 
         copyright: `© ${new Date().getFullYear()} Nature Village Kurdish Restaurant. All rights reserved.`,
         privacy: 'Privacy Policy',
@@ -1264,10 +1261,7 @@ const NatureVillageWebsite = () => {
         followUs: 'Bizi Takip Edin',
         openDaily: 'PAZAR - PERŞEMBE: 12:00 - 22:00\nCUMA - CUMARTESİ: 12:00 - 23:00',
         poweredBy: 'Destekleyen',
-
         blunari: 'Blunari',
-
-        blunari: 'Blunari AI',
 
         copyright: `© ${new Date().getFullYear()} Nature Village Kürt Restoranı. Tüm hakları saklıdır.`,
         privacy: 'Gizlilik Politikası',
