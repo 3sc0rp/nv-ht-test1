@@ -294,11 +294,23 @@ const Header = ({ language, setLanguage, currentPage = '' }) => {
                 aria-haspopup="listbox"
                 aria-label="Select language"
               >
+<<<<<<< HEAD
                 <span className="text-base" aria-hidden="true">
                   {LANGUAGES[language]?.flag || '🌐'}
                 </span>
                 <span className="font-medium text-xs uppercase tracking-wide">
                   {language.toUpperCase()}
+=======
+                <Globe className="w-4 h-4" aria-hidden="true" />
+                <span className="font-medium text-xs uppercase tracking-wide">
+                  {language === 'en' ? 'EN' :
+                   language === 'ku' ? 'KU' :
+                   language === 'ar' ? 'AR' :
+                   language === 'fa' ? 'FA' :
+                   language === 'tr' ? 'TR' :
+                   language === 'ur' ? 'UR' :
+                   'KMR'}
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
                 </span>
               </button>
 
@@ -322,11 +334,19 @@ const Header = ({ language, setLanguage, currentPage = '' }) => {
                         language === code ? 'bg-amber-100 text-amber-800 font-medium' : 'text-gray-700 hover:text-amber-800'
                       )}
                     >
+<<<<<<< HEAD
                       <span className="text-base mr-2">{config.flag}</span>
                       <span>{config.name}</span>
                       {language === code && (
                         <div className="ml-auto w-2 h-2 bg-amber-500 rounded-full"></div>
                       )}
+=======
+                      <div className={cn(
+                        'w-1.5 h-1.5 rounded-full transition-colors duration-150',
+                        language === code ? 'bg-amber-500' : 'bg-gray-300'
+                      )}></div>
+                      <span>{config.name}</span>
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
                     </button>
                   ))}
                 </div>

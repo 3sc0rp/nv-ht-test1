@@ -14,7 +14,10 @@ import { useRouter } from 'next/router'
 import { LANGUAGES, getText as tGet, updateDocumentLanguage, generateHreflangAlternates } from '../lib/i18n'
 import { useReducedMotion } from '../lib/menu/useReducedMotion'
 import { generateMenuJsonLD } from '../lib/menu/jsonld'
+<<<<<<< HEAD
 import Footer from '../components/Footer'
+=======
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
 
 const FullMenuPage = () => {
   const router = useRouter()

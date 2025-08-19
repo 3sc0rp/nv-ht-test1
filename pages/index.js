@@ -38,6 +38,13 @@ export default function Home() {
         />
       </Head>
       <NatureVillageWebsite />
+<<<<<<< HEAD
+=======
+      {/* Add shared Footer component to homepage */}
+      <div style={{marginTop: 32}}>
+        <Footer language="en" />
+      </div>
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
     </>
   )
 }

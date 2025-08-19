@@ -22,7 +22,11 @@ const Footer = ({ language = 'en' }) => {
   const getFooterText = (key) => {
     const footerTranslations = {
       en: {
+<<<<<<< HEAD
         description: 'Bringing the authentic flavors and warm hospitality of Kurdistan to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.',
+=======
+        description: 'Bringing authentic Kurdish flavors to your table.',
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'Quick Links',
         contactInfo: 'Contact Information',
         openDaily: 'SUN - THU: 12 PM - 10 PM\nFRI - SAT: 12 PM - 11 PM',
@@ -38,7 +42,11 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'Gallery'
       },
       ku: {
+<<<<<<< HEAD
         description: 'تامە ڕەسەنەکان و پێشوازی گەرمی کوردستان بۆ مێزەکەتان دەهێنین. هەر خۆراکێک ئاهەنگێکە بۆ میراتی دەوڵەمەند و باشی چێشتلێنانمان.',
+=======
+        description: 'تامی ڕەسەنی کوردی بۆ مێزەکەتان دەهێنین.',
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'بەستەرە خێراکان',
         contactInfo: 'زانیاری پەیوەندی',
         openDaily: 'یەکشەممە - پێنجشەممە: ١٢ - ١٠ شەو\nهەینی - شەممە: ١٢ - ١١ شەو',
@@ -54,7 +62,11 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'وێنەکان'
       },
       ar: {
+<<<<<<< HEAD
         description: 'نجلب النكهات الأصيلة والضيافة الدافئة من كردستان إلى طاولتك. كل طبق احتفال بتراثنا الثقافي الغني وتميزنا الطهوي.',
+=======
+        description: 'نقدم النكهات الكردية الأصيلة إلى طاولتكم.',
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'روابط سريعة',
         contactInfo: 'معلومات الاتصال',
         openDaily: 'الأحد - الخميس: ١٢ ظهراً - ١٠ مساءً\nالجمعة - السبت: ١٢ ظهراً - ١١ مساءً',
@@ -70,7 +82,11 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'المعرض'
       },
       fa: {
+<<<<<<< HEAD
         description: 'طعم‌های اصیل و مهمان‌نوازی گرم کردستان را به میز شما می‌آوریم. هر غذا جشنی از میراث فرهنگی غنی و برتری آشپزی ما است.',
+=======
+        description: 'طعم‌های اصیل کردی را به میز شما می‌آوریم.',
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'لینک‌های سریع',
         contactInfo: 'اطلاعات تماس',
         openDaily: 'یکشنبه - پنج‌شنبه: ١٢ - ١٠ شب\nجمعه - شنبه: ١٢ - ١١ شب',
@@ -86,7 +102,11 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'گالری'
       },
       tr: {
+<<<<<<< HEAD
         description: 'Kürdistan\'ın otantik lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz. Her yemek, zengin kültürel mirasımızın ve mutfak mükemmelliğimizin bir kutlamasıdır.',
+=======
+        description: 'Otantik Kürt lezzetlerini masanıza getiriyoruz.',
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'Hızlı Bağlantılar',
         contactInfo: 'İletişim Bilgileri',
         openDaily: 'PAZ - PER: 12:00 - 22:00\nCUM - CTS: 12:00 - 23:00',
@@ -102,7 +122,11 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'Galeri'
       },
       ur: {
+<<<<<<< HEAD
         description: 'کردستان کے اصل ذائقے اور گرم مہمان نوازی آپ کی میز تک لا رہے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور پاک فن کی بہترین مثال ہے۔',
+=======
+        description: 'آپ کی میز پر کردی کے اصل ذائقے لاتے ہیں۔',
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'فوری لنکس',
         contactInfo: 'رابطہ کی معلومات',
         openDaily: 'اتوار - جمعرات: ١٢ دوپہر - ١٠ رات\nجمعہ - ہفتہ: ١٢ دوپہر - ١١ رات',
@@ -118,7 +142,11 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'گیلری'
       },
       kmr: {
+<<<<<<< HEAD
         description: 'Tamên resen û mêvandariya germ a Kurdistanê tînin ser maseyê we. Her xwarinê pîrozbahiya çanda me ya dewlemend û başiya çêştlênanê ye.',
+=======
+        description: 'Tama Kurdî ya resen ji maseyê re tînin.',
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'Girêdanên Bilez',
         contactInfo: 'Agahdariya Têkiliyê',
         openDaily: 'YEK - PÊN: 12:00 - 22:00\nÎN - ŞEM: 12:00 - 23:00',
@@ -162,7 +190,11 @@ const Footer = ({ language = 'en' }) => {
   };
 
   const handleBlunariClick = () => {
+<<<<<<< HEAD
     window.open('https://blunari.ai', '_blank');
+=======
+    window.open('https://blunari.com', '_blank');
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
   };
 
   return (
@@ -278,6 +310,7 @@ const Footer = ({ language = 'en' }) => {
               {getFooterText('copyright')}
             </p>
             <div className="flex items-center space-x-2 text-amber-300 text-sm">
+<<<<<<< HEAD
               <span className="opacity-80">{getFooterText('poweredBy')}</span>
               <button 
                 onClick={handleBlunariClick}
@@ -293,6 +326,15 @@ const Footer = ({ language = 'en' }) => {
                 <svg className="w-3 h-3 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
+=======
+              <span>{getFooterText('poweredBy')}</span>
+              <button 
+                onClick={handleBlunariClick}
+                className="hover:text-white transition-colors font-medium underline decoration-dotted underline-offset-4"
+                aria-label="Blunari"
+              >
+                Blunari
+>>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
               </button>
             </div>
           </div>
