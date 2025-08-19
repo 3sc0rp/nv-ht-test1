@@ -452,7 +452,7 @@ const NatureVillageWebsite = () => {
       },
       about: {
         title: 'Our Story',
-<<<<<<< HEAD
+
         badge: 'Our Story',
         subtitle: 'Bringing authentic Kurdish flavors and warm hospitality to our community',
         content: 'Nature Village was born from a dream to share the authentic flavors and warm hospitality of Kurdistan with the world. Our family recipes have been passed down through generations, each dish crafted with love and respect for our cultural traditions. We source the finest ingredients and prepare every meal with the same care and attention that has defined Kurdish hospitality for centuries.',
@@ -482,14 +482,13 @@ const NatureVillageWebsite = () => {
           authenticDishes: 'Authentic Dishes',
           customerRating: 'Customer Rating',
           freshIngredients: 'Fresh Ingredients'
-        }
-=======
+        },
         content: 'Nature Village was born from a dream to share the authentic flavors and warm hospitality of Kurdistan with the world. Our family recipes have been passed down through generations, each dish crafted with love and respect for our cultural traditions. We source the finest ingredients and prepare every meal with the same care and attention that has defined Kurdish hospitality for centuries.',
         experience: 'Years Experience',
         recipes: 'Traditional Recipes',
         customers: 'Happy Customers',
         awards: 'Awards Won'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
       },
       gallery: {
         title: 'Gallery',
@@ -512,16 +511,16 @@ const NatureVillageWebsite = () => {
         followUs: 'Follow Us',
         openDaily: 'SUN - THU: 12 AM - 10 PM\nFRI - SAT: 12 AM - 11 PM',
         poweredBy: 'Powered by',
-<<<<<<< HEAD
+
         blunari: 'Blunari',
-=======
+
         blunari: 'Blunari AI',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         copyright: `© ${new Date().getFullYear()} Nature Village Kurdish Restaurant. All rights reserved.`,
         privacy: 'Privacy Policy',
         terms: 'Terms of Service'
       },
-<<<<<<< HEAD
+
       ui: {
         callNow: 'Call Now',
         orderOnline: 'Order Online',
@@ -568,8 +567,8 @@ const NatureVillageWebsite = () => {
           quziLover: 'QUZI LOVER'
         }
       },
-=======
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
+
       featured: {
         title: 'Featured Dishes',
         subtitle: 'Discover our most beloved Kurdish specialties, crafted with traditional recipes and modern presentation'
@@ -577,7 +576,7 @@ const NatureVillageWebsite = () => {
       celebration: {
         title: 'Celebrate Your Special Moments',
         subtitle: 'Make your birthdays, anniversaries, and special occasions unforgettable with authentic Kurdish hospitality',
-<<<<<<< HEAD
+
         familyReunions: 'Family Reunions',
         birthday: {
           title: 'Birthday Celebrations',
@@ -586,16 +585,6 @@ const NatureVillageWebsite = () => {
           feature2: 'Happy birthday song & wishes',
           feature3: 'Memorable dining experience',
           special: 'Perfect for celebrating another year of life'
-=======
-        birthday: {
-          title: 'Birthday Celebrations',
-          tagline: 'Make it a day to remember',
-          feature1: 'Complimentary birthday cake & candles',
-          feature2: 'Traditional Kurdish birthday songs',
-          feature3: 'Professional photo memories',
-          feature4: 'Special birthday decorations',
-          special: 'Perfect for birthday parties of all sizes'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         },
         anniversary: {
           title: 'Anniversary Dinners',
@@ -635,11 +624,11 @@ const NatureVillageWebsite = () => {
         about: 'دەربارەمان',
         gallery: 'وێنەکان',
         visit: 'سەردانمان بکەن',
-<<<<<<< HEAD
+
         reservations: 'جێگە حیجزکردن',
-=======
+
         reservations: 'جێگە حیجازکردن',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         catering: 'کاتەرینگ',
         orderOnline: 'داواکاری'
       },
@@ -648,11 +637,8 @@ const NatureVillageWebsite = () => {
         subtitle: 'تامی کوردستان لە هەر پارووەکدا',
         description: 'تامی ڕەسەنی کوردی بچێژن لە ژینگەیەکی گەرم و نەریتیدا کە هەر خۆراکێک چیرۆکی دەوڵەمەندی کولتووری میراتمان و نەریتە چێشتلێنانەکانمان دەگێڕێتەوە کە لە نەوەوە بۆ نەوە دەردەچن.',
         cta1: 'بینینی خۆراک',
-<<<<<<< HEAD
         cta2: 'جێگە حیجزکردن'
-=======
-        cta2: 'جێگە حیجازکردن'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
       },
       menu: {
         title: 'خۆراکەکانمان',
@@ -671,7 +657,7 @@ const NatureVillageWebsite = () => {
       },
       about: {
         title: 'چیرۆکەکەمان',
-<<<<<<< HEAD
+
         badge: 'چیرۆکەکەمان',
         subtitle: 'تامە ڕەسەنەکان و پێشوازی گەرمی کوردستان بۆ کۆمەڵگاکەمان دەهێنین',
         content: 'گوندی سروشت لە خەونێکەوە لەدایک بووە بۆ هاوبەشکردنی تامە ڕەسەنەکان و پێشوازی گەرمی کوردستان لەگەڵ جیهان. ڕێسەتە خێزانییەکانمان لە نەوەوە بۆ نەوە دەردەچن، هەر خۆراکێک بە خۆشەویستی و ڕێزگرتن لە نەریتە کولتوورییەکانمان دروست دەکرێت.',
@@ -702,13 +688,13 @@ const NatureVillageWebsite = () => {
           customerRating: 'هەڵسەنگاندنی کڕیار',
           freshIngredients: 'پێکهاتە تازەکان'
         }
-=======
+
         content: 'گوندی سروشت لە خەونێکەوە لەدایک بووە بۆ هاوبەشکردنی تامە ڕەسەنەکان و پێشوازی گەرمی کوردستان لەگەڵ جیهان. ڕێسەتە خێزانییەکانمان لە نەوەوە بۆ نەوە دەردەچن، هەر خۆراکێک بە خۆشەویستی و ڕێزگرتن لە نەریتە کولتوورییەکانمان دروست دەکرێت.',
         experience: 'ساڵ ئەزموون',
         recipes: 'ڕێسەتی نەریتی',
         customers: 'کڕیاری دڵخۆش',
         awards: 'خەڵاتی بەدەستهێنراو'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
       },
       gallery: {
         title: 'گالەری',
@@ -721,11 +707,9 @@ const NatureVillageWebsite = () => {
         contact: 'زانیاری پەیوەندی',
         address: 'ناونیشان',
         phone: 'تەلەفۆن',
-<<<<<<< HEAD
+
         makeReservation: 'جێگە حیجزکردن',
-=======
-        makeReservation: 'جێگە حیجازکردن',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         getDirections: 'ڕێنمایی وەربگرە'
       },
       footer: {
@@ -735,16 +719,16 @@ const NatureVillageWebsite = () => {
         followUs: 'شوێنمان بکەون',
         openDaily: 'یەکشەممە - پێنجشەممە: ١٢:٠٠ ی بەیانی - ١٠:٠٠ ی شەو\nهەینی - شەممە: ١٢:٠٠ ی بەیانی - ١١:٠٠ ی شەو',
         poweredBy: 'هێزی لەلایەن',
-<<<<<<< HEAD
+
         blunari: 'بلوناری',
-=======
+
         blunari: 'بلوناری AI',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         copyright: `© ${new Date().getFullYear()} گوندی سروشت چێشتخانەی کوردی. هەموو مافەکان پارێزراون.`,
         privacy: 'سیاسەتی تایبەتی',
         terms: 'مەرجەکانی خزمەتگوزاری'
       },
-<<<<<<< HEAD
+
       ui: {
         callNow: 'ئێستا پەیوەندی بکە',
         orderOnline: 'داواکاری ئۆنلاین',
@@ -791,8 +775,8 @@ const NatureVillageWebsite = () => {
           quziLover: 'حەزلێکەری کووزی'
         }
       },
-=======
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
+
       featured: {
         title: 'خۆراکی نمایشکراو',
         subtitle: 'خۆراکە خۆشەویستەکانی کوردی بناسە کە بە ڕێسەتی نەریتی و پێشکەشکردنی نوێ دروست کراون'
@@ -800,7 +784,7 @@ const NatureVillageWebsite = () => {
       celebration: {
         title: 'ئاهەنگەکانتان لێرە بگێڕن',
         subtitle: 'ڕۆژە تایبەتەکانتان وەک ڕۆژی لەدایکبوون و ساڵیادەکان لەگەڵ میوانداری کوردی نەویست بکەن',
-<<<<<<< HEAD
+
         familyReunions: 'کۆبوونەوەی خێزانی',
         birthday: {
           title: 'ئاهەنگی ڕۆژی لەدایکبوون',
@@ -809,7 +793,7 @@ const NatureVillageWebsite = () => {
           feature2: 'گۆرانی ڕۆژی لەدایکبوون و داواکاری',
           feature3: 'ئەزموونی نانخواردنی یادماوی',
           special: 'باشترین بۆ ئاهەنگگێڕان بۆ ساڵێکی تر لە ژیان'
-=======
+
         birthday: {
           title: 'ئاهەنگی ڕۆژی لەدایکبوون',
           tagline: 'ڕۆژێک بیکەن بەیادماوی',
@@ -818,7 +802,7 @@ const NatureVillageWebsite = () => {
           feature3: 'وێنەگرتنی پیشەیی بۆ یادگارییەکان',
           feature4: 'ڕازاندنەوەی تایبەت بۆ ڕۆژی لەدایکبوون',
           special: 'کۆمەڵی ڕۆژی لەدایکبوون ٦+ کەس ١٥٪ داشکاندن'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         },
         anniversary: {
           title: 'نانی شەو ساڵیاد',
@@ -832,11 +816,11 @@ const NatureVillageWebsite = () => {
         cta: {
           title: 'ئامادەن بۆ ئاهەنگ؟',
           subtitle: 'ڕای لێبدەن ڕۆژی تایبەتتان بکەینە نائاسایی لەگەڵ میوانداری کوردی و تامە نەویستەکان',
-<<<<<<< HEAD
+
           reserve: 'پەیوەندی بکەن بۆ حیجزی تایبەت'
-=======
+
           reserve: 'پەیوەندی بکەن بۆ حیجازی تایبەت'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         }
       },
       tags: {
@@ -890,7 +874,7 @@ const NatureVillageWebsite = () => {
       },
       about: {
         title: 'قصتنا',
-<<<<<<< HEAD
+
         badge: 'قصتنا',
         subtitle: 'نجلب النكهات الكردية الأصيلة والضيافة الدافئة إلى مجتمعنا',
         content: 'ولدت قرية الطبيعة من حلم مشاركة النكهات الأصيلة والضيافة الدافئة لكردستان مع العالم. وصفات عائلتنا تتوارث عبر الأجيال، كل طبق يُحضر بحب واحترام لتقاليدنا الثقافية.',
@@ -921,13 +905,13 @@ const NatureVillageWebsite = () => {
           customerRating: 'تقييم العملاء',
           freshIngredients: 'مكونات طازجة'
         }
-=======
+
         content: 'ولدت قرية الطبيعة من حلم مشاركة النكهات الأصيلة والضيافة الدافئة لكردستان مع العالم. وصفات عائلتنا تتوارث عبر الأجيال، كل طبق يُحضر بحب واحترام لتقاليدنا الثقافية.',
         experience: 'سنوات خبرة',
         recipes: 'وصفات تقليدية',
         customers: 'عملاء سعداء',
         awards: 'جوائز حاصلة عليها'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
       },
       gallery: {
         title: 'المعرض',
@@ -955,7 +939,7 @@ const NatureVillageWebsite = () => {
         privacy: 'سياسة الخصوصية',
         terms: 'شروط الخدمة'
       },
-<<<<<<< HEAD
+
       ui: {
         callNow: 'اتصل الآن',
         orderOnline: 'اطلب أونلاين',
@@ -1002,8 +986,8 @@ const NatureVillageWebsite = () => {
           quziLover: 'عاشق الكوزي'
         }
       },
-=======
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
+
       featured: {
         title: 'الأطباق المميزة',
         subtitle: 'اكتشف أحب الأطباق الكردية لدينا، المحضرة بوصفات تقليدية وعرض عصري'
@@ -1011,7 +995,7 @@ const NatureVillageWebsite = () => {
       celebration: {
         title: 'احتفل بلحظاتك الخاصة',
         subtitle: 'اجعل أعياد ميلادك وذكرياتك السنوية والمناسبات الخاصة لا تُنسى مع الضيافة الكردية الأصيلة',
-<<<<<<< HEAD
+
         familyReunions: 'لقاءات العائلة',
         birthday: {
           title: 'احتفالات أعياد الميلاد',
@@ -1020,7 +1004,7 @@ const NatureVillageWebsite = () => {
           feature2: 'أغنية عيد ميلاد سعيد وتهاني',
           feature3: 'تجربة طعام لا تُنسى',
           special: 'مثالي للاحتفال بسنة أخرى من الحياة'
-=======
+
         birthday: {
           title: 'احتفالات أعياد الميلاد',
           tagline: 'اجعلها يوماً لا يُنسى',
@@ -1029,7 +1013,7 @@ const NatureVillageWebsite = () => {
           feature3: 'ذكريات التصوير الاحترافي',
           feature4: 'زينة عيد ميلاد خاصة',
           special: 'مجموعات أعياد الميلاد ٦+ أشخاص خصم ١٥٪'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         },
         anniversary: {
           title: 'عشاء الذكرى السنوية',
@@ -1097,7 +1081,7 @@ const NatureVillageWebsite = () => {
       },
       about: {
         title: 'داستان ما',
-<<<<<<< HEAD
+
         badge: 'داستان ما',
         subtitle: 'طعم‌های اصیل کردی و مهمان‌نوازی گرم را به جامعه‌مان می‌آوریم',
         content: 'دهکده طبیعت از رویای به اشتراک گذاشتن طعم‌های اصیل و مهمان‌نوازی گرم کردستان با جهان متولد شد.',
@@ -1128,13 +1112,13 @@ const NatureVillageWebsite = () => {
           customerRating: 'امتیاز مشتریان',
           freshIngredients: 'مواد اولیه تازه'
         }
-=======
+
         content: 'دهکده طبیعت از رویای به اشتراک گذاشتن طعم‌های اصیل و مهمان‌نوازی گرم کردستان با جهان متولد شد.',
         experience: 'سال تجربه',
         recipes: 'دستور پخت سنتی',
         customers: 'مشتری راضی',
         awards: 'جایزه کسب شده'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
       },
       gallery: {
         title: 'گالری',
@@ -1151,26 +1135,26 @@ const NatureVillageWebsite = () => {
         getDirections: 'مسیریابی'
       },
       footer: {
-<<<<<<< HEAD
+
         description: 'طعم‌های اصیل و مهمان‌نوازی گرم کردستان را به میز شما می‌آوریم. هر غذا جشنی از میراث فرهنگی غنی و برتری آشپزی ما است.',
-=======
+
         description: 'طعم‌های اصیل و مهمان‌نوازی گرم کردستان را به میز شما می‌آوریم.',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         quickLinks: 'لینک‌های سریع',
         contactInfo: 'اطلاعات تماس',
         followUs: 'ما را دنبال کنید',
         openDaily: 'یکشنبه - پنج‌شنبه: ۱۲:۰۰ ظهر - ۱۰:۰۰ شب\nجمعه - شنبه: ۱۲:۰۰ ظهر - ۱۱:۰۰ شب',
         poweredBy: 'قدرت گرفته از',
-<<<<<<< HEAD
+
         blunari: 'بلوناری',
-=======
+
         blunari: 'بلوناری AI',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         copyright: `© ${new Date().getFullYear()} دهکده طبیعت رستوران کردی. تمام حقوق محفوظ است.`,
         privacy: 'سیاست حفظ حریم خصوصی',
         terms: 'شرایط خدمات'
       },
-<<<<<<< HEAD
+
       ui: {
         callNow: 'همین حالا تماس بگیرید',
         orderOnline: 'سفارش آنلاین',
@@ -1194,8 +1178,8 @@ const NatureVillageWebsite = () => {
           totalReviews: '٥٧٢+ نظر'
         }
       },
-=======
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
+
       featured: {
         title: 'غذاهای ویژه',
         subtitle: 'محبوب‌ترین غذاهای کردی ما را کشف کنید'
@@ -1214,7 +1198,7 @@ const NatureVillageWebsite = () => {
       addToCart: 'اضافه به سبد',
       loading: 'در حال بارگذاری...',
       error: 'خطایی رخ داد. لطفا دوباره تلاش کنید.',
-<<<<<<< HEAD
+
       currency: '$',
       celebration: {
         title: 'لحظات خاص خود را جشن بگیرید',
@@ -1243,9 +1227,9 @@ const NatureVillageWebsite = () => {
           reserve: 'برای رزرو ویژه تماس بگیرید'
         }
       }
-=======
+
       currency: '$'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
     },
     tr: {
       nav: {
@@ -1282,7 +1266,7 @@ const NatureVillageWebsite = () => {
       },
       about: {
         title: 'Hikayemiz',
-<<<<<<< HEAD
+
         badge: 'Hikayemiz',
         subtitle: 'Otantik Kürt lezzetlerini ve sıcak misafirperverliği topluluğumuza getiriyoruz',
         content: 'Nature Village, Kürdistan\'ın otantik lezzetlerini ve sıcak misafirperverliğini dünyayla paylaşma hayalinden doğdu.',
@@ -1313,13 +1297,13 @@ const NatureVillageWebsite = () => {
           customerRating: 'Müşteri Puanı',
           freshIngredients: 'Taze Malzemeler'
         }
-=======
+
         content: 'Nature Village, Kürdistan\'ın otantik lezzetlerini ve sıcak misafirperverliğini dünyayla paylaşma hayalinden doğdu.',
         experience: 'Yıl Deneyim',
         recipes: 'Geleneksel Tarif',
         customers: 'Mutlu Müşteri',
         awards: 'Kazanılan Ödül'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
       },
       gallery: {
         title: 'Galeri',
@@ -1336,26 +1320,26 @@ const NatureVillageWebsite = () => {
         getDirections: 'Yol Tarifi Al'
       },
       footer: {
-<<<<<<< HEAD
+
         description: 'Kürdistan\'ın otantik lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz. Her yemek, zengin kültürel mirasımızın ve mutfak mükemmelliğimizin bir kutlamasıdır.',
-=======
+
         description: 'Kürdistan\'ın otantik lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz.',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         quickLinks: 'Hızlı Bağlantılar',
         contactInfo: 'İletişim Bilgileri',
         followUs: 'Bizi Takip Edin',
         openDaily: 'PAZAR - PERŞEMBE: 12:00 - 22:00\nCUMA - CUMARTESİ: 12:00 - 23:00',
         poweredBy: 'Destekleyen',
-<<<<<<< HEAD
+
         blunari: 'Blunari',
-=======
+
         blunari: 'Blunari AI',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         copyright: `© ${new Date().getFullYear()} Nature Village Kürt Restoranı. Tüm hakları saklıdır.`,
         privacy: 'Gizlilik Politikası',
         terms: 'Hizmet Şartları'
       },
-<<<<<<< HEAD
+
       ui: {
         callNow: 'Şimdi Ara',
         orderOnline: 'Online Sipariş',
@@ -1379,8 +1363,8 @@ const NatureVillageWebsite = () => {
           totalReviews: '572+ Yorum'
         }
       },
-=======
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
+
       featured: {
         title: 'Öne Çıkan Yemekler',
         subtitle: 'En sevilen Kürt lezzetlerimizi keşfedin'
@@ -1399,7 +1383,7 @@ const NatureVillageWebsite = () => {
       addToCart: 'Sepete Ekle',
       loading: 'Yükleniyor...',
       error: 'Bir hata oluştu. Lütfen tekrar deneyin.',
-<<<<<<< HEAD
+
       currency: '$',
       celebration: {
         title: 'Özel Anlarınızı Kutlayın',
@@ -1428,9 +1412,9 @@ const NatureVillageWebsite = () => {
           reserve: 'Özel rezervasyon için arayın'
         }
       }
-=======
+
       currency: '$'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
     },
     ur: {
       nav: {
@@ -1467,7 +1451,7 @@ const NatureVillageWebsite = () => {
       },
       about: {
         title: 'ہماری کہانی',
-<<<<<<< HEAD
+
         badge: 'ہماری کہانی',
         subtitle: 'اصل کردی ذائقے اور گرم مہمان نوازی ہماری کمیونٹی میں لا رہے ہیں',
         content: 'نیچر ولیج کردستان کے اصل ذائقوں کو دنیا کے ساتھ بانٹنے کے خواب سے پیدا ہوا۔',
@@ -1498,13 +1482,13 @@ const NatureVillageWebsite = () => {
           customerRating: 'گاہکوں کی درجہ بندی',
           freshIngredients: 'تازہ اجزاء'
         }
-=======
+
         content: 'نیچر ولیج کردستان کے اصل ذائقوں کو دنیا کے ساتھ بانٹنے کے خواب سے پیدا ہوا۔',
         experience: 'سال تجربہ',
         recipes: 'روایتی ترکیبیں',
         customers: 'خوش گاہک',
         awards: 'حاصل شدہ انعامات'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
       },
       gallery: {
         title: 'گیلری',
@@ -1521,26 +1505,26 @@ const NatureVillageWebsite = () => {
         getDirections: 'راستہ حاصل کریں'
       },
       footer: {
-<<<<<<< HEAD
+
         description: 'کردستان کے اصل ذائقے اور گرم مہمان نوازی آپ کی میز تک لا رہے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور پاک فن کی بہترین مثال ہے۔',
-=======
+
         description: 'کردستان کے اصل ذائقے اور گرم مہمان نوازی آپ کی میز تک لا رہے ہیں۔',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         quickLinks: 'فوری لنکس',
         contactInfo: 'رابطے کی معلومات',
         followUs: 'ہمیں فالو کریں',
         openDaily: 'اتوار - جمعرات: ۱۲:۰۰ دوپہر - ۱۰:۰۰ رات\nجمعہ - ہفتہ: ۱۲:۰۰ دوپہر - ۱۱:۰۰ رات',
         poweredBy: 'طاقت فراہم کنندہ',
-<<<<<<< HEAD
+
         blunari: 'بلوناری',
-=======
+
         blunari: 'بلوناری AI',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         copyright: `© ${new Date().getFullYear()} نیچر ولیج کرد ریسٹوران۔ تمام حقوق محفوظ ہیں۔`,
         privacy: 'پرائیویسی پالیسی',
         terms: 'سروس کی شرائط'
       },
-<<<<<<< HEAD
+
       ui: {
         callNow: 'ابھی کال کریں',
         orderOnline: 'آن لائن آرڈر',
@@ -1564,8 +1548,8 @@ const NatureVillageWebsite = () => {
           totalReviews: '٥٧٢+ ریویوز'
         }
       },
-=======
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
+
       featured: {
         title: 'خصوصی پکوان',
         subtitle: 'ہمارے مشہور کرد کھانوں کو دریافت کریں'
@@ -1584,7 +1568,7 @@ const NatureVillageWebsite = () => {
       addToCart: 'ٹوکری میں ڈالیں',
       loading: 'لوڈ ہو رہا ہے...',
       error: 'کچھ غلط ہوا۔ دوبارہ کوشش کریں۔',
-<<<<<<< HEAD
+
       currency: '$',
       celebration: {
         title: 'اپنے خاص لمحات منائیں',
@@ -1613,9 +1597,9 @@ const NatureVillageWebsite = () => {
           reserve: 'خاص بکنگ کے لیے کال کریں'
         }
       }
-=======
+
       currency: '$'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
     },
     kmr: {
       nav: {
@@ -1652,7 +1636,7 @@ const NatureVillageWebsite = () => {
       },
       about: {
         title: 'Çîroka Me',
-<<<<<<< HEAD
+
         badge: 'Çîroka Me',
         subtitle: 'Tamên resen ên Kurdî û mêvandariya germ bo civata me tînin',
         content: 'Gundê Xwezayê ji xewna parvekirina tamên resen û mêvandariya germ a Kurdistanê bi cîhanê re hate dayîn.',
@@ -1683,13 +1667,13 @@ const NatureVillageWebsite = () => {
           customerRating: 'Nirxandina Xerîdaran',
           freshIngredients: 'Pêkhateyen Taze'
         }
-=======
+
         content: 'Gundê Xwezayê ji xewna parvekirina tamên resen û mêvandariya germ a Kurdistanê bi cîhanê re hate dayîn.',
         experience: 'Sal Ezmûn',
         recipes: 'Rêsetên Kevneşopî',
         customers: 'Xerîdarên Kêfxweş',
         awards: 'Xelatan Bi Dest Xistin'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
       },
       gallery: {
         title: 'Galerî',
@@ -1706,26 +1690,26 @@ const NatureVillageWebsite = () => {
         getDirections: 'Rê Bistînin'
       },
       footer: {
-<<<<<<< HEAD
+
         description: 'Tamên resen û mêvandariya germ a Kurdistanê tînin ser maseyê we. Her xwarinê pîrozbahiya çanda me ya dewlemend û başiya çêştlênanê ye.',
-=======
+
         description: 'Tamên resen û mêvandariya germ a Kurdistanê tînin ser maseyê we.',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         quickLinks: 'Lînkên Bilez',
         contactInfo: 'Agahiyên Têkiliyê',
         followUs: 'Şopa Me Bikin',
         openDaily: 'YEKŞEM - PÊNCŞEM: 12:00 - 22:00\nÎN - ŞEMÎ: 12:00 - 23:00',
         poweredBy: 'Ji aliyê ve tê piştgirîkirin',
-<<<<<<< HEAD
+
         blunari: 'Blunari',
-=======
+
         blunari: 'Blunari AI',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
         copyright: `© ${new Date().getFullYear()} Gundê Xwezayê Xwarinxaneya Kurdî. Hemû maf parastî ne.`,
         privacy: 'Polîtikaya Nihêniyê',
         terms: 'Mercên Karûbarê'
       },
-<<<<<<< HEAD
+
       ui: {
         callNow: 'Niha Bang Bike',
         orderOnline: 'Sîparîşa Onlîne',
@@ -1749,8 +1733,8 @@ const NatureVillageWebsite = () => {
           totalReviews: '572+ Nirxandin'
         }
       },
-=======
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
+
       featured: {
         title: 'Xwarinên Taybetî',
         subtitle: 'Xwarinên Kurdî yên me ên herî dilxwaz nas bikin'
@@ -1769,7 +1753,7 @@ const NatureVillageWebsite = () => {
       addToCart: 'Li Sepetê Zêde Bike',
       loading: 'Tê barkirin...',
       error: 'Tiştek çewt çû. Ji kerema xwe dîsa biceribîne.',
-<<<<<<< HEAD
+
       currency: '$',
       celebration: {
         title: 'Demên Xwe ên Taybetî Pîroz Bikin',
@@ -2168,9 +2152,9 @@ const NatureVillageWebsite = () => {
       loading: 'लोड हो रहा है...',
       error: 'कुछ गलत हुआ। कृपया फिर से कोशिश करें।',
       currency: '₹'
-=======
+
       currency: '$'
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
     }
   };
 
@@ -2500,11 +2484,11 @@ const NatureVillageWebsite = () => {
               />
               <div className="flex flex-col">
                 <div className="text-lg sm:text-2xl font-serif font-bold text-amber-800 transition-colors duration-200 hover:text-amber-700">Nature Village</div>
-<<<<<<< HEAD
+
                 <div className="text-xs text-amber-600 font-sans hidden sm:block">{t.ui?.restaurant || 'Restaurant'}</div>
-=======
+
                 <div className="text-xs text-amber-600 font-sans hidden sm:block">Restaurant</div>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
             </div>
             
@@ -2600,13 +2584,13 @@ const NatureVillageWebsite = () => {
                   aria-haspopup="listbox"
                   aria-label="Select language"
                 >
-<<<<<<< HEAD
+
                   <span className="text-base" aria-hidden="true">
                     {LANGUAGES[language]?.flag || '🌐'}
                   </span>
                   <span className="font-medium text-xs uppercase tracking-wide">
                     {language.toUpperCase()}
-=======
+
                   <Globe className="w-4 h-4" aria-hidden="true" />
                   <span className="font-medium text-xs uppercase tracking-wide">
                     {language === 'en' ? 'EN' :
@@ -2616,7 +2600,7 @@ const NatureVillageWebsite = () => {
                      language === 'tr' ? 'TR' :
                      language === 'ur' ? 'UR' :
                      'KMR'}
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                   </span>
                 </button>
 
@@ -2626,13 +2610,13 @@ const NatureVillageWebsite = () => {
                     isRTL ? 'right-0' : 'left-0',
                     'max-h-72 overflow-y-auto'
                   )}>
-<<<<<<< HEAD
+
                     {Object.entries(LANGUAGES).map(([code, lang]) => (
                       <button
                         key={code}
                         onClick={() => {
                           handleLanguageChange(code);
-=======
+
                     {[
                       { code: 'en', name: 'English' },
                       { code: 'ku', name: 'کوردی' },
@@ -2646,14 +2630,14 @@ const NatureVillageWebsite = () => {
                         key={lang.code}
                         onClick={() => {
                           handleLanguageChange(lang.code);
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                           setShowLanguageDropdown(false);
                         }}
                         className={cn(
                           'w-full px-3 py-2.5 hover:bg-amber-50 transition-colors duration-150 flex items-center space-x-2.5 text-sm',
                           isRTL && 'space-x-reverse text-right',
                           !isRTL && 'text-left',
-<<<<<<< HEAD
+
                           language === code ? 'bg-amber-100 text-amber-800 font-medium' : 'text-gray-700 hover:text-amber-800'
                         )}
                       >
@@ -2662,7 +2646,7 @@ const NatureVillageWebsite = () => {
                         {language === code && (
                           <div className="ml-auto w-2 h-2 bg-amber-500 rounded-full"></div>
                         )}
-=======
+
                           language === lang.code ? 'bg-amber-100 text-amber-800 font-medium' : 'text-gray-700 hover:text-amber-800'
                         )}
                       >
@@ -2671,7 +2655,7 @@ const NatureVillageWebsite = () => {
                           language === lang.code ? 'bg-amber-500' : 'bg-gray-300'
                         )}></div>
                         <span>{lang.name}</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                       </button>
                     ))}
                   </div>
@@ -2716,11 +2700,11 @@ const NatureVillageWebsite = () => {
                     </div>
                     <div className="flex flex-col">
                       <span className="text-xl font-serif font-bold text-amber-800">Nature Village</span>
-<<<<<<< HEAD
+
                       <span className="text-xs text-amber-600 font-medium">{t.ui?.restaurant || 'Restaurant'}</span>
-=======
+
                       <span className="text-xs text-amber-600 font-medium">Restaurant</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                     </div>
                   </div>
                   <button
@@ -2803,12 +2787,12 @@ const NatureVillageWebsite = () => {
                         <Globe className="w-5 h-5 mr-2" />
                         Language
                       </h3>
-<<<<<<< HEAD
+
                       <span className="text-sm text-amber-600 font-medium px-3 py-1 bg-amber-100 rounded-full flex items-center gap-2">
                         <span className="text-base">{LANGUAGES[language]?.flag || '🌐'}</span>
-=======
+
                       <span className="text-sm text-amber-600 font-medium px-3 py-1 bg-amber-100 rounded-full">
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                         {language.toUpperCase()}
                       </span>
                     </div>
@@ -2830,9 +2814,9 @@ const NatureVillageWebsite = () => {
                         >
                           <span className="relative z-10 flex items-center justify-center">
                             {/* Add flag emojis for visual appeal */}
-<<<<<<< HEAD
+
                             <span className="text-lg mr-2">{lang.flag}</span>
-=======
+
                             <span className="text-lg mr-2">
                               {code === 'en' && '🇺🇸'}
                               {code === 'ku' && '☀️'}
@@ -2842,7 +2826,7 @@ const NatureVillageWebsite = () => {
                               {code === 'ur' && '🇵🇰'}
                               {code === 'kmr' && '⭐'}
                             </span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                             {lang.name}
                           </span>
                           
@@ -2984,11 +2968,11 @@ const NatureVillageWebsite = () => {
               className="group w-28 sm:w-auto bg-transparent border-2 border-green-400/80 text-green-200 hover:bg-green-400/10 hover:border-green-300 hover:text-green-100 px-3 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-medium backdrop-blur-sm transition-all duration-200 flex items-center justify-center gap-1.5 min-h-[40px]"
             >
               <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-<<<<<<< HEAD
+
               <span>{t.ui?.callNow || 'Call Now'}</span>
-=======
+
               <span>Call Now</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
             </button>
           </div>
         </div>
@@ -3077,22 +3061,22 @@ const NatureVillageWebsite = () => {
           <div className="text-center mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 bg-amber-50 px-4 py-2 rounded-full mb-6">
               <Star className="w-4 h-4 text-amber-500 fill-current" />
-<<<<<<< HEAD
+
               <span className="text-amber-700 font-medium text-sm">{t.about?.badge || 'Our Story'}</span>
-=======
+
               <span className="text-amber-700 font-medium text-sm">Our Story</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               <Star className="w-4 h-4 text-amber-500 fill-current" />
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-4">
               {t.about?.title || 'About Nature Village'}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
+
               {t.about?.subtitle || 'Bringing authentic Kurdish flavors and warm hospitality to our community'}
-=======
+
               Bringing authentic Kurdish flavors and warm hospitality to our community
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
             </p>
           </div>
           
@@ -3127,11 +3111,11 @@ const NatureVillageWebsite = () => {
                 
                 <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
                   <p className="text-amber-800 italic font-medium">
-<<<<<<< HEAD
+
                     "{t.about?.quote || 'Every dish is crafted with care and served with the warmth of Kurdish hospitality.'}"
-=======
+
                     "Every dish is crafted with care and served with the warmth of Kurdish hospitality."
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                   </p>
                 </div>
               </div>
@@ -3142,39 +3126,39 @@ const NatureVillageWebsite = () => {
                   <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <ChefHat className="w-6 h-6 text-white" />
                   </div>
-<<<<<<< HEAD
+
                   <h4 className="font-semibold text-gray-900 mb-1">{t.about?.features?.chefs?.title || 'Expert Chefs'}</h4>
                   <p className="text-sm text-gray-600">{t.about?.features?.chefs?.description || 'Authentic Kurdish cuisine'}</p>
-=======
+
                   <h4 className="font-semibold text-gray-900 mb-1">Expert Chefs</h4>
                   <p className="text-sm text-gray-600">Authentic Kurdish cuisine</p>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                 </div>
                 
                 <div className="bg-gray-50 rounded-xl p-4 text-center hover:bg-orange-50 transition-colors duration-200">
                   <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Heart className="w-6 h-6 text-white" />
                   </div>
-<<<<<<< HEAD
+
                   <h4 className="font-semibold text-gray-900 mb-1">{t.about?.features?.ingredients?.title || 'Fresh Ingredients'}</h4>
                   <p className="text-sm text-gray-600">{t.about?.features?.ingredients?.description || 'Quality sourced daily'}</p>
-=======
+
                   <h4 className="font-semibold text-gray-900 mb-1">Fresh Ingredients</h4>
                   <p className="text-sm text-gray-600">Quality sourced daily</p>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                 </div>
                 
                 <div className="bg-gray-50 rounded-xl p-4 text-center hover:bg-red-50 transition-colors duration-200">
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Users className="w-6 h-6 text-white" />
                   </div>
-<<<<<<< HEAD
+
                   <h4 className="font-semibold text-gray-900 mb-1">{t.about?.features?.service?.title || 'Warm Service'}</h4>
                   <p className="text-sm text-gray-600">{t.about?.features?.service?.description || 'Kurdish hospitality'}</p>
-=======
+
                   <h4 className="font-semibold text-gray-900 mb-1">Warm Service</h4>
                   <p className="text-sm text-gray-600">Kurdish hospitality</p>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                 </div>
               </div>
             </div>
@@ -3185,38 +3169,38 @@ const NatureVillageWebsite = () => {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">1000+</div>
-<<<<<<< HEAD
+
                 <div className="text-sm font-medium text-gray-700">{t.about?.stats?.happyCustomers || 'Happy Customers'}</div>
-=======
+
                 <div className="text-sm font-medium text-gray-700">Happy Customers</div>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
               
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-orange-600 mb-1">50+</div>
-<<<<<<< HEAD
+
                 <div className="text-sm font-medium text-gray-700">{t.about?.stats?.authenticDishes || 'Authentic Dishes'}</div>
-=======
+
                 <div className="text-sm font-medium text-gray-700">Authentic Dishes</div>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
               
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-red-600 mb-1">4.8★</div>
-<<<<<<< HEAD
+
                 <div className="text-sm font-medium text-gray-700">{t.about?.stats?.customerRating || 'Customer Rating'}</div>
-=======
+
                 <div className="text-sm font-medium text-gray-700">Customer Rating</div>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
               
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">100%</div>
-<<<<<<< HEAD
+
                 <div className="text-sm font-medium text-gray-700">{t.about?.stats?.freshIngredients || 'Fresh Ingredients'}</div>
-=======
+
                 <div className="text-sm font-medium text-gray-700">Fresh Ingredients</div>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
             </div>
           </div>
@@ -3333,17 +3317,17 @@ const NatureVillageWebsite = () => {
                       {t.celebration?.birthday?.title || 'Birthday Celebrations'}
                     </h3>
                     <p className="text-white/70 mb-6 text-lg italic">
-<<<<<<< HEAD
+
                       {t.celebration?.birthday?.tagline || 'Sweet moments made special'}
-=======
+
                       {t.celebration?.birthday?.tagline || 'Make it a day to remember'}
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                     </p>
                     
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
                         <span className="text-amber-300 text-lg">🎈</span>
-<<<<<<< HEAD
+
                         <span className="text-sm">{t.celebration?.birthday?.feature1 || 'Complimentary birthday dessert'}</span>
                       </div>
                       <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
@@ -3353,7 +3337,7 @@ const NatureVillageWebsite = () => {
                       <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
                         <span className="text-amber-300 text-lg">🎁</span>
                         <span className="text-sm">{t.celebration?.birthday?.feature3 || 'Memorable dining experience'}</span>
-=======
+
                         <span className="text-sm">{t.celebration?.birthday?.feature1 || 'Complimentary birthday cake & candles'}</span>
                       </div>
                       <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
@@ -3367,7 +3351,7 @@ const NatureVillageWebsite = () => {
                       <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
                         <span className="text-amber-300 text-lg">🎁</span>
                         <span className="text-sm">{t.celebration?.birthday?.feature4 || 'Special birthday decorations'}</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                       </div>
                     </div>
                   </div>
@@ -3457,11 +3441,11 @@ const NatureVillageWebsite = () => {
                   <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative text-3xl lg:text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">👨‍👩‍👧‍👦</div>
                 </div>
-<<<<<<< HEAD
+
                 <div className="text-white font-medium group-hover:text-blue-200 transition-colors duration-300 text-sm lg:text-base">{t.celebration?.familyReunions || 'Family Reunions'}</div>
-=======
+
                 <div className="text-white font-medium group-hover:text-blue-200 transition-colors duration-300 text-sm lg:text-base">Family Reunions</div>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
               <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-green-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                 <div className="relative mb-4">
@@ -3536,11 +3520,11 @@ const NatureVillageWebsite = () => {
                 <div className="w-6 h-6 bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 rounded-sm flex items-center justify-center">
                   <span className="text-white text-xs font-bold">G</span>
                 </div>
-<<<<<<< HEAD
+
                 <span className="text-sm font-medium text-gray-700">{t.ui?.googleReviews || 'Google Reviews'}</span>
-=======
+
                 <span className="text-sm font-medium text-gray-700">Google Reviews</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                 <div className="flex items-center gap-1 ml-2">
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
@@ -3568,19 +3552,19 @@ const NatureVillageWebsite = () => {
               </div>
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-amber-800">4.8★</div>
-<<<<<<< HEAD
+
                 <div className="text-sm sm:text-base text-amber-600 font-medium">{t.ui?.averageRating || 'Average Rating'}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-amber-800">93%</div>
                 <div className="text-sm sm:text-base text-amber-600 font-medium">{t.ui?.fiveStarReviews || '5-Star Reviews'}</div>
-=======
+
                 <div className="text-sm sm:text-base text-amber-600 font-medium">Average Rating</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-amber-800">93%</div>
                 <div className="text-sm sm:text-base text-amber-600 font-medium">5-Star Reviews</div>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
             </div>
           </div>
@@ -3590,11 +3574,11 @@ const NatureVillageWebsite = () => {
             <div className="group bg-white rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 relative overflow-hidden border border-amber-100">
               {/* Featured Badge */}
               <div className="absolute top-0 right-0 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-bl-2xl text-xs font-bold">
-<<<<<<< HEAD
+
                 {t.reviews?.badges?.featured || 'FEATURED'}
-=======
+
                 FEATURED
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
               
               <div className="flex items-center mb-6">
@@ -3604,11 +3588,11 @@ const NatureVillageWebsite = () => {
                   ))}
                 </div>
                 <span className="text-lg font-bold text-gray-800">5.0</span>
-<<<<<<< HEAD
+
                 <span className="text-sm text-gray-500 ml-2">• {t.reviews?.review1?.time || '1 week ago'}</span>
-=======
+
                 <span className="text-sm text-gray-500 ml-2">• 1 week ago</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
               
               <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-medium">
@@ -3628,11 +3612,11 @@ const NatureVillageWebsite = () => {
                   </div>
                   <div className="flex items-center gap-1 mt-1">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-<<<<<<< HEAD
+
                     <span className="text-xs text-gray-500">{t.ui?.verifiedPurchase || 'Verified Purchase'}</span>
-=======
+
                     <span className="text-xs text-gray-500">Verified Purchase</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                   </div>
                 </div>
               </div>
@@ -3643,11 +3627,11 @@ const NatureVillageWebsite = () => {
               {/* Local Guide Badge */}
               <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                 <Users className="w-3 h-3" />
-<<<<<<< HEAD
+
                 {t.reviews?.badges?.localGuide || 'LOCAL GUIDE'}
-=======
+
                 LOCAL GUIDE
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
               
               <div className="flex items-center mb-6">
@@ -3657,11 +3641,11 @@ const NatureVillageWebsite = () => {
                   ))}
                 </div>
                 <span className="text-lg font-bold text-gray-800">5.0</span>
-<<<<<<< HEAD
+
                 <span className="text-sm text-gray-500 ml-2">• {t.reviews?.review2?.time || '2 months ago'}</span>
-=======
+
                 <span className="text-sm text-gray-500 ml-2">• 2 months ago</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
               
               <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-medium">
@@ -3682,11 +3666,11 @@ const NatureVillageWebsite = () => {
                   </div>
                   <div className="flex items-center gap-1 mt-1">
                     <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-<<<<<<< HEAD
+
                     <span className="text-xs text-gray-500">{t.ui?.trustedReviewer || 'Trusted Reviewer'}</span>
-=======
+
                     <span className="text-xs text-gray-500">Trusted Reviewer</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                   </div>
                 </div>
               </div>
@@ -3697,11 +3681,11 @@ const NatureVillageWebsite = () => {
               {/* Dish Highlight */}
               <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                 <ChefHat className="w-3 h-3" />
-<<<<<<< HEAD
+
                 {t.reviews?.badges?.quziLover || 'QUZI LOVER'}
-=======
+
                 QUZI LOVER
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
               
               <div className="flex items-center mb-6">
@@ -3711,11 +3695,11 @@ const NatureVillageWebsite = () => {
                   ))}
                 </div>
                 <span className="text-lg font-bold text-gray-800">5.0</span>
-<<<<<<< HEAD
+
                 <span className="text-sm text-gray-500 ml-2">• {t.reviews?.review3?.time || 'Recent'}</span>
-=======
+
                 <span className="text-sm text-gray-500 ml-2">• Recent</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </div>
               
               <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-medium">
@@ -3736,11 +3720,11 @@ const NatureVillageWebsite = () => {
                   <div className="flex items-center gap-2 mt-1">
                     <div className="flex items-center gap-1">
                       <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-<<<<<<< HEAD
+
                       <span className="text-xs text-gray-500">{t.ui?.foodEnthusiast || 'Food Enthusiast'}</span>
-=======
+
                       <span className="text-xs text-gray-500">Food Enthusiast</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                     </div>
                   </div>
                 </div>
@@ -3752,11 +3736,11 @@ const NatureVillageWebsite = () => {
           <div className="text-center mt-16 sm:mt-20">
             <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-8 sm:p-12 border border-amber-200 shadow-lg">
               <h3 className="text-2xl sm:text-3xl font-serif font-bold text-amber-800 mb-4">
-<<<<<<< HEAD
+
                 {t.reviews?.ctaTitle || 'Ready to Create Your Own 5-Star Experience?'}
-=======
+
                 Ready to Create Your Own 5-Star Experience?
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </h3>
               <p className="text-base sm:text-lg text-amber-700 mb-8 max-w-2xl mx-auto">
                 {t.reviews?.cta || 'Join 572+ satisfied customers who love our authentic cuisine! Book your table today and taste the difference that authentic Kurdish hospitality makes.'}
@@ -3785,7 +3769,7 @@ const NatureVillageWebsite = () => {
               <div className="flex flex-wrap justify-center items-center gap-6 mt-8 text-sm text-amber-600">
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4" />
-<<<<<<< HEAD
+
                   <span>{t.reviews?.trustIndicators?.googleRating || '4.8★ Google Rating'}</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -3795,7 +3779,7 @@ const NatureVillageWebsite = () => {
                 <div className="flex items-center gap-2">
                   <Heart className="w-4 h-4" />
                   <span>{t.ui?.familyOwned || 'Family Owned'}</span>
-=======
+
                   <span>4.8★ Google Rating</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -3805,7 +3789,7 @@ const NatureVillageWebsite = () => {
                 <div className="flex items-center gap-2">
                   <Heart className="w-4 h-4" />
                   <span>Family Owned</span>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                 </div>
               </div>
             </div>
@@ -3905,11 +3889,11 @@ const NatureVillageWebsite = () => {
                 <h3 className="text-xl sm:text-2xl font-serif font-bold">Nature Village</h3>
               </div>
               <p className="text-amber-200 mb-6 leading-relaxed text-sm sm:text-base">
-<<<<<<< HEAD
+
                 {t.footer?.description || 'Bringing the authentic flavors and warm hospitality of Kurdistan to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.'}
-=======
+
                 {t.footer?.description || 'Bringing authentic Kurdish flavors to your table.'}
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
               </p>
               <div className={cn('flex space-x-4', isRTL && 'space-x-reverse')}>
                 <a 
@@ -4005,7 +3989,7 @@ const NatureVillageWebsite = () => {
                 {t.footer?.copyright || '© 2025 Nature Village Kurdish Restaurant. All rights reserved.'}
               </p>
               <div className="flex items-center space-x-2 text-amber-300 text-sm">
-<<<<<<< HEAD
+
                 <span className="opacity-80">{t.footer?.poweredBy || 'Powered by'}</span>
                 <button 
                   onClick={handleBlunariClick}
@@ -4020,14 +4004,14 @@ const NatureVillageWebsite = () => {
                   <svg className="w-3 h-3 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-=======
+
                 <span>{t.footer?.poweredBy || 'Powered by'}</span>
                 <button 
                   onClick={handleBlunariClick}
                   className="hover:text-white transition-colors font-medium underline decoration-dotted underline-offset-4"
                 >
                   {t.footer?.blunari || 'Blunari AI'}
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                 </button>
               </div>
             </div>
@@ -4060,11 +4044,11 @@ const NatureVillageWebsite = () => {
             <div className="p-6">
               {/* Modal Header */}
               <div className="flex justify-between items-center mb-4">
-<<<<<<< HEAD
+
                 <h3 className="text-2xl font-bold text-gray-800">{t.ui?.orderOnline || 'Order Online'}</h3>
-=======
+
                 <h3 className="text-2xl font-bold text-gray-800">Order Online</h3>
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
+
                 <button
                   onClick={() => setShowOrderModal(false)}
                   className="text-gray-400 hover:text-gray-600 transition-colors duration-200"

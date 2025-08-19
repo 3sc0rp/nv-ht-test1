@@ -22,11 +22,7 @@ const Footer = ({ language = 'en' }) => {
   const getFooterText = (key) => {
     const footerTranslations = {
       en: {
-<<<<<<< HEAD
         description: 'Bringing the authentic flavors and warm hospitality of Kurdistan to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.',
-=======
-        description: 'Bringing authentic Kurdish flavors to your table.',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'Quick Links',
         contactInfo: 'Contact Information',
         openDaily: 'SUN - THU: 12 PM - 10 PM\nFRI - SAT: 12 PM - 11 PM',
@@ -34,7 +30,7 @@ const Footer = ({ language = 'en' }) => {
         terms: 'Terms of Service',
         copyright: '© 2025 Nature Village Kurdish Restaurant. All rights reserved.',
         poweredBy: 'Powered by',
-    blunari: 'Blunari',
+        blunari: 'Blunari',
         home: 'Home',
         menu: 'Menu',
         reservations: 'Reservations',
@@ -42,11 +38,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'Gallery'
       },
       ku: {
-<<<<<<< HEAD
         description: 'تامە ڕەسەنەکان و پێشوازی گەرمی کوردستان بۆ مێزەکەتان دەهێنین. هەر خۆراکێک ئاهەنگێکە بۆ میراتی دەوڵەمەند و باشی چێشتلێنانمان.',
-=======
-        description: 'تامی ڕەسەنی کوردی بۆ مێزەکەتان دەهێنین.',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'بەستەرە خێراکان',
         contactInfo: 'زانیاری پەیوەندی',
         openDaily: 'یەکشەممە - پێنجشەممە: ١٢ - ١٠ شەو\nهەینی - شەممە: ١٢ - ١١ شەو',
@@ -54,7 +46,7 @@ const Footer = ({ language = 'en' }) => {
         terms: 'مەرجەکانی خزمەتگوزاری',
         copyright: '© ٢٠٢٥ چێشتخانەی کوردی Nature Village. هەموو مافەکان پارێزراون.',
         poweredBy: 'پشتگیری لەلایەن',
-    blunari: 'Blunari',
+        blunari: 'Blunari',
         home: 'ماڵەوە',
         menu: 'مێنیو',
         reservations: 'حجز میز',
@@ -62,11 +54,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'وێنەکان'
       },
       ar: {
-<<<<<<< HEAD
         description: 'نجلب النكهات الأصيلة والضيافة الدافئة من كردستان إلى طاولتك. كل طبق احتفال بتراثنا الثقافي الغني وتميزنا الطهوي.',
-=======
-        description: 'نقدم النكهات الكردية الأصيلة إلى طاولتكم.',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'روابط سريعة',
         contactInfo: 'معلومات الاتصال',
         openDaily: 'الأحد - الخميس: ١٢ ظهراً - ١٠ مساءً\nالجمعة - السبت: ١٢ ظهراً - ١١ مساءً',
@@ -74,7 +62,7 @@ const Footer = ({ language = 'en' }) => {
         terms: 'شروط الخدمة',
         copyright: '© ٢٠٢٥ مطعم نيتشر فيلاج الكردي. جميع الحقوق محفوظة.',
         poweredBy: 'مدعوم من',
-    blunari: 'Blunari',
+        blunari: 'Blunari',
         home: 'الرئيسية',
         menu: 'القائمة',
         reservations: 'الحجوزات',
@@ -82,11 +70,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'المعرض'
       },
       fa: {
-<<<<<<< HEAD
         description: 'طعم‌های اصیل و مهمان‌نوازی گرم کردستان را به میز شما می‌آوریم. هر غذا جشنی از میراث فرهنگی غنی و برتری آشپزی ما است.',
-=======
-        description: 'طعم‌های اصیل کردی را به میز شما می‌آوریم.',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'لینک‌های سریع',
         contactInfo: 'اطلاعات تماس',
         openDaily: 'یکشنبه - پنج‌شنبه: ١٢ - ١٠ شب\nجمعه - شنبه: ١٢ - ١١ شب',
@@ -94,7 +78,7 @@ const Footer = ({ language = 'en' }) => {
         terms: 'شرایط خدمات',
         copyright: '© ٢٠٢٥ رستوران کردی Nature Village. تمامی حقوق محفوظ است.',
         poweredBy: 'قدرت گرفته از',
-    blunari: 'Blunari',
+        blunari: 'Blunari',
         home: 'خانه',
         menu: 'منو',
         reservations: 'رزرو میز',
@@ -102,11 +86,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'گالری'
       },
       tr: {
-<<<<<<< HEAD
         description: 'Kürdistan\'ın otantik lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz. Her yemek, zengin kültürel mirasımızın ve mutfak mükemmelliğimizin bir kutlamasıdır.',
-=======
-        description: 'Otantik Kürt lezzetlerini masanıza getiriyoruz.',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'Hızlı Bağlantılar',
         contactInfo: 'İletişim Bilgileri',
         openDaily: 'PAZ - PER: 12:00 - 22:00\nCUM - CTS: 12:00 - 23:00',
@@ -114,7 +94,7 @@ const Footer = ({ language = 'en' }) => {
         terms: 'Hizmet Şartları',
         copyright: '© 2025 Nature Village Kürt Restoranı. Tüm hakları saklıdır.',
         poweredBy: 'Destekleyen',
-    blunari: 'Blunari',
+        blunari: 'Blunari',
         home: 'Ana Sayfa',
         menu: 'Menü',
         reservations: 'Rezervasyon',
@@ -122,11 +102,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'Galeri'
       },
       ur: {
-<<<<<<< HEAD
         description: 'کردستان کے اصل ذائقے اور گرم مہمان نوازی آپ کی میز تک لا رہے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور پاک فن کی بہترین مثال ہے۔',
-=======
-        description: 'آپ کی میز پر کردی کے اصل ذائقے لاتے ہیں۔',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'فوری لنکس',
         contactInfo: 'رابطہ کی معلومات',
         openDaily: 'اتوار - جمعرات: ١٢ دوپہر - ١٠ رات\nجمعہ - ہفتہ: ١٢ دوپہر - ١١ رات',
@@ -134,7 +110,7 @@ const Footer = ({ language = 'en' }) => {
         terms: 'خدمات کی شرائط',
         copyright: '© ٢٠٢٥ نیچر ولیج کردی ریسٹورنٹ۔ تمام حقوق محفوظ ہیں۔',
         poweredBy: 'تعاون',
-    blunari: 'Blunari',
+        blunari: 'Blunari',
         home: 'ہوم',
         menu: 'مینو',
         reservations: 'بکنگز',
@@ -142,28 +118,56 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'گیلری'
       },
       kmr: {
-<<<<<<< HEAD
         description: 'Tamên resen û mêvandariya germ a Kurdistanê tînin ser maseyê we. Her xwarinê pîrozbahiya çanda me ya dewlemend û başiya çêştlênanê ye.',
-=======
-        description: 'Tama Kurdî ya resen ji maseyê re tînin.',
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
         quickLinks: 'Girêdanên Bilez',
         contactInfo: 'Agahdariya Têkiliyê',
         openDaily: 'YEK - PÊN: 12:00 - 22:00\nÎN - ŞEM: 12:00 - 23:00',
-        privacy: 'Siyaseta Nepenîtiyê',
-        terms: 'Mercên Karûbarê',
+        privacy: 'Polîtîkaya Tixûbariyê',
+        terms: 'Şertên Xizmetê',
         copyright: '© 2025 Xwaringeha Kurdî ya Nature Village. Hemû maf parastî ne.',
         poweredBy: 'Piştgirî ji aliyê',
-    blunari: 'Blunari',
+        blunari: 'Blunari',
         home: 'Destpêk',
         menu: 'Menû',
         reservations: 'Rezervasyon',
         catering: 'Catering',
-        gallery: 'Galeri'
+        gallery: 'Galerî'
+      },
+      ru: {
+        description: 'Приносим аутентичные вкусы и теплое гостеприимство Курдистана к вашему столу. Каждое блюдо - это праздник нашего богатого культурного наследия и кулинарного мастерства.',
+        quickLinks: 'Быстрые ссылки',
+        contactInfo: 'Контактная информация',
+        openDaily: 'ВС - ЧТ: 12:00 - 22:00\nПТ - СБ: 12:00 - 23:00',
+        privacy: 'Политика конфиденциальности',
+        terms: 'Условия обслуживания',
+        copyright: '© 2025 Курдский ресторан Nature Village. Все права защищены.',
+        poweredBy: 'Работает на',
+        blunari: 'Blunari',
+        home: 'Главная',
+        menu: 'Меню',
+        reservations: 'Бронирование',
+        catering: 'Кейтеринг',
+        gallery: 'Галерея'
+      },
+      hi: {
+        description: 'कुर्दिस्तान के प्रामाणिक स्वाद और गर्मजोशी भरी मेहमाननवाजी को आपकी मेज तक ला रहे हैं। हर पकवान हमारी समृद्ध सांस्कृतिक विरासत और पाक कला की उत्कृष्टता का उत्सव है।',
+        quickLinks: 'त्वरित लिंक',
+        contactInfo: 'संपर्क जानकारी',
+        openDaily: 'रवि - गुरु: 12:00 - 22:00\nशुक्र - शनि: 12:00 - 23:00',
+        privacy: 'गोपनीयता नीति',
+        terms: 'सेवा की शर्तें',
+        copyright: '© 2025 Nature Village कुर्द रेस्तरां। सर्वाधिकार सुरक्षित।',
+        poweredBy: 'संचालित',
+        blunari: 'Blunari',
+        home: 'होम',
+        menu: 'मेनू',
+        reservations: 'आरक्षण',
+        catering: 'केटरिंग',
+        gallery: 'गैलरी'
       }
     };
 
-    return footerTranslations[language]?.[key] || footerTranslations.en[key];
+    return footerTranslations[language]?.[key] || footerTranslations.en[key] || key;
   };
 
   // Navigation items for footer
@@ -190,11 +194,7 @@ const Footer = ({ language = 'en' }) => {
   };
 
   const handleBlunariClick = () => {
-<<<<<<< HEAD
     window.open('https://blunari.ai', '_blank');
-=======
-    window.open('https://blunari.com', '_blank');
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
   };
 
   return (
@@ -310,7 +310,7 @@ const Footer = ({ language = 'en' }) => {
               {getFooterText('copyright')}
             </p>
             <div className="flex items-center space-x-2 text-amber-300 text-sm">
-<<<<<<< HEAD
+
               <span className="opacity-80">{getFooterText('poweredBy')}</span>
               <button 
                 onClick={handleBlunariClick}
@@ -326,15 +326,6 @@ const Footer = ({ language = 'en' }) => {
                 <svg className="w-3 h-3 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-=======
-              <span>{getFooterText('poweredBy')}</span>
-              <button 
-                onClick={handleBlunariClick}
-                className="hover:text-white transition-colors font-medium underline decoration-dotted underline-offset-4"
-                aria-label="Blunari"
-              >
-                Blunari
->>>>>>> 6b1e82d30c554e74ebeaaf8dcc10c4bdcec0d333
               </button>
             </div>
           </div>
