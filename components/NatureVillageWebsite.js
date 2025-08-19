@@ -379,7 +379,7 @@ const NatureVillageWebsite = () => {
         ku: 'ئەم باشترین خۆراکە خۆراکێکە کە بە سەوزەی تازەی بە وردی هەڵبژێردراو و پارچە نەرمەکانی گۆشت دروستکراوە. بە هێواشی بە تەواوی لێنراوە. لەگەڵ برنجی زەعفەرانی بۆنخۆش خراوەتە سەر. ئەزموونێکی خواردنی لەبیرنەکراو و دڵخۆشکەر دروست دەکات.',
         tr: 'Bu en iyi güveç, özenle seçilmiş taze sebzeler ve yumuşak et parçalarıyla yapılan bir yemektir. Mükemmelliğe kadar yavaş pişirilmiştir. Aromatik safran pirinci ile servis edilir. Unutulmaz ve tatmin edici bir yemek deneyimi yaratır.',
         ur: 'یہ بہترین سٹو ایک ڈش ہے جو احتیاط سے منتخب کردہ تازہ سبزیوں اور گوشت کے نرم ٹکڑوں سے بنائی گئی ہے۔ آہستہ آہستہ کمال تک پکائی گئی۔ خوشبودار زعفرانی چاول کے ساتھ پیش کی جاتی ہے۔ یہ ایک یادگار اور اطمینان بخش کھانے کا تجربہ بناتا ہے۔',
-        kmr: 'Ev xwaştrîn xwarin xwarineke ku bi sebzeyên taze yên bi baldarî hatine hilbijartin û perçeyên nerm ên goştî hatiye çêkirin. Hêdî hêdî heta bi temamî hatiye pijandin. Bi brincê zefranî yê bêhnxweş tê peşkêşkirin. Ezmûnek xwarinê ya jibîrnekirin û şaykirin çêdike.'
+        kmr: 'Ev xwaştrîn xwarin xwarineke ku bi sebzeyên taze yên bi baldarî hatine hilbijartin û perçeyên nerm ên goştî hatiye çêkirin. Hêdî hêdî heta bi temamî hatiye pijandin. Bi brincê zefranî, salata werzeya, pîvazê sumaq û sebzeyên grîlkirî tê peşkêşkirin. Ezmûnek xwarinê ya jibîrnekirin û şaykirin çêdike.'
       },
       price: '$23.99',
       category: 'specialty',
@@ -414,7 +414,6 @@ const NatureVillageWebsite = () => {
       tags: []
     }
   ];
-
   // Complete translations object with comprehensive coverage
   const translations = {
     en: {
@@ -482,12 +481,7 @@ const NatureVillageWebsite = () => {
           authenticDishes: 'Authentic Dishes',
           customerRating: 'Customer Rating',
           freshIngredients: 'Fresh Ingredients'
-        },
-        content: 'Nature Village was born from a dream to share the authentic flavors and warm hospitality of Kurdistan with the world. Our family recipes have been passed down through generations, each dish crafted with love and respect for our cultural traditions. We source the finest ingredients and prepare every meal with the same care and attention that has defined Kurdish hospitality for centuries.',
-        experience: 'Years Experience',
-        recipes: 'Traditional Recipes',
-        customers: 'Happy Customers',
-        awards: 'Awards Won'
+        }
 
       },
       gallery: {
@@ -627,8 +621,6 @@ const NatureVillageWebsite = () => {
 
         reservations: 'جێگە حیجزکردن',
 
-        reservations: 'جێگە حیجازکردن',
-
         catering: 'کاتەرینگ',
         orderOnline: 'داواکاری'
       },
@@ -688,13 +680,6 @@ const NatureVillageWebsite = () => {
           customerRating: 'هەڵسەنگاندنی کڕیار',
           freshIngredients: 'پێکهاتە تازەکان'
         }
-
-        content: 'گوندی سروشت لە خەونێکەوە لەدایک بووە بۆ هاوبەشکردنی تامە ڕەسەنەکان و پێشوازی گەرمی کوردستان لەگەڵ جیهان. ڕێسەتە خێزانییەکانمان لە نەوەوە بۆ نەوە دەردەچن، هەر خۆراکێک بە خۆشەویستی و ڕێزگرتن لە نەریتە کولتوورییەکانمان دروست دەکرێت.',
-        experience: 'ساڵ ئەزموون',
-        recipes: 'ڕێسەتی نەریتی',
-        customers: 'کڕیاری دڵخۆش',
-        awards: 'خەڵاتی بەدەستهێنراو'
-
       },
       gallery: {
         title: 'گالەری',
@@ -709,7 +694,6 @@ const NatureVillageWebsite = () => {
         phone: 'تەلەفۆن',
 
         makeReservation: 'جێگە حیجزکردن',
-
         getDirections: 'ڕێنمایی وەربگرە'
       },
       footer: {
@@ -719,10 +703,7 @@ const NatureVillageWebsite = () => {
         followUs: 'شوێنمان بکەون',
         openDaily: 'یەکشەممە - پێنجشەممە: ١٢:٠٠ ی بەیانی - ١٠:٠٠ ی شەو\nهەینی - شەممە: ١٢:٠٠ ی بەیانی - ١١:٠٠ ی شەو',
         poweredBy: 'هێزی لەلایەن',
-
         blunari: 'بلوناری',
-
-        blunari: 'بلوناری AI',
 
         copyright: `© ${new Date().getFullYear()} گوندی سروشت چێشتخانەی کوردی. هەموو مافەکان پارێزراون.`,
         privacy: 'سیاسەتی تایبەتی',
@@ -793,16 +774,6 @@ const NatureVillageWebsite = () => {
           feature2: 'گۆرانی ڕۆژی لەدایکبوون و داواکاری',
           feature3: 'ئەزموونی نانخواردنی یادماوی',
           special: 'باشترین بۆ ئاهەنگگێڕان بۆ ساڵێکی تر لە ژیان'
-
-        birthday: {
-          title: 'ئاهەنگی ڕۆژی لەدایکبوون',
-          tagline: 'ڕۆژێک بیکەن بەیادماوی',
-          feature1: 'کەیکی ڕۆژی لەدایکبوون و مۆمەکان بەخۆڕایی',
-          feature2: 'گۆرانی نەریتی کوردی بۆ ڕۆژی لەدایکبوون',
-          feature3: 'وێنەگرتنی پیشەیی بۆ یادگارییەکان',
-          feature4: 'ڕازاندنەوەی تایبەت بۆ ڕۆژی لەدایکبوون',
-          special: 'کۆمەڵی ڕۆژی لەدایکبوون ٦+ کەس ١٥٪ داشکاندن'
-
         },
         anniversary: {
           title: 'نانی شەو ساڵیاد',
@@ -818,8 +789,6 @@ const NatureVillageWebsite = () => {
           subtitle: 'ڕای لێبدەن ڕۆژی تایبەتتان بکەینە نائاسایی لەگەڵ میوانداری کوردی و تامە نەویستەکان',
 
           reserve: 'پەیوەندی بکەن بۆ حیجزی تایبەت'
-
-          reserve: 'پەیوەندی بکەن بۆ حیجازی تایبەت'
 
         }
       },
@@ -905,13 +874,6 @@ const NatureVillageWebsite = () => {
           customerRating: 'تقييم العملاء',
           freshIngredients: 'مكونات طازجة'
         }
-
-        content: 'ولدت قرية الطبيعة من حلم مشاركة النكهات الأصيلة والضيافة الدافئة لكردستان مع العالم. وصفات عائلتنا تتوارث عبر الأجيال، كل طبق يُحضر بحب واحترام لتقاليدنا الثقافية.',
-        experience: 'سنوات خبرة',
-        recipes: 'وصفات تقليدية',
-        customers: 'عملاء سعداء',
-        awards: 'جوائز حاصلة عليها'
-
       },
       gallery: {
         title: 'المعرض',
@@ -934,7 +896,7 @@ const NatureVillageWebsite = () => {
         followUs: 'تابعونا',
         openDaily: 'الأحد - الخميس: ١٢:٠٠ ص - ١٠:٠٠ م\nالجمعة - السبت: ١٢:٠٠ ص - ١١:٠٠ م',
         poweredBy: 'مدعوم من',
-        blunari: 'بلوناري AI',
+        blunari: 'بلوناري',
         copyright: `© ${new Date().getFullYear()} قرية الطبيعة مطعم كردي. جميع الحقوق محفوظة.`,
         privacy: 'سياسة الخصوصية',
         terms: 'شروط الخدمة'
@@ -1004,16 +966,6 @@ const NatureVillageWebsite = () => {
           feature2: 'أغنية عيد ميلاد سعيد وتهاني',
           feature3: 'تجربة طعام لا تُنسى',
           special: 'مثالي للاحتفال بسنة أخرى من الحياة'
-
-        birthday: {
-          title: 'احتفالات أعياد الميلاد',
-          tagline: 'اجعلها يوماً لا يُنسى',
-          feature1: 'كعكة عيد ميلاد مجانية مع الشموع',
-          feature2: 'أغاني عيد ميلاد كردية تقليدية',
-          feature3: 'ذكريات التصوير الاحترافي',
-          feature4: 'زينة عيد ميلاد خاصة',
-          special: 'مجموعات أعياد الميلاد ٦+ أشخاص خصم ١٥٪'
-
         },
         anniversary: {
           title: 'عشاء الذكرى السنوية',
@@ -1112,13 +1064,6 @@ const NatureVillageWebsite = () => {
           customerRating: 'امتیاز مشتریان',
           freshIngredients: 'مواد اولیه تازه'
         }
-
-        content: 'دهکده طبیعت از رویای به اشتراک گذاشتن طعم‌های اصیل و مهمان‌نوازی گرم کردستان با جهان متولد شد.',
-        experience: 'سال تجربه',
-        recipes: 'دستور پخت سنتی',
-        customers: 'مشتری راضی',
-        awards: 'جایزه کسب شده'
-
       },
       gallery: {
         title: 'گالری',
@@ -1137,8 +1082,6 @@ const NatureVillageWebsite = () => {
       footer: {
 
         description: 'طعم‌های اصیل و مهمان‌نوازی گرم کردستان را به میز شما می‌آوریم. هر غذا جشنی از میراث فرهنگی غنی و برتری آشپزی ما است.',
-
-        description: 'طعم‌های اصیل و مهمان‌نوازی گرم کردستان را به میز شما می‌آوریم.',
 
         quickLinks: 'لینک‌های سریع',
         contactInfo: 'اطلاعات تماس',
@@ -1227,9 +1170,6 @@ const NatureVillageWebsite = () => {
           reserve: 'برای رزرو ویژه تماس بگیرید'
         }
       }
-
-      currency: '$'
-
     },
     tr: {
       nav: {
@@ -1298,12 +1238,6 @@ const NatureVillageWebsite = () => {
           freshIngredients: 'Taze Malzemeler'
         }
 
-        content: 'Nature Village, Kürdistan\'ın otantik lezzetlerini ve sıcak misafirperverliğini dünyayla paylaşma hayalinden doğdu.',
-        experience: 'Yıl Deneyim',
-        recipes: 'Geleneksel Tarif',
-        customers: 'Mutlu Müşteri',
-        awards: 'Kazanılan Ödül'
-
       },
       gallery: {
         title: 'Galeri',
@@ -1323,7 +1257,7 @@ const NatureVillageWebsite = () => {
 
         description: 'Kürdistan\'ın otantik lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz. Her yemek, zengin kültürel mirasımızın ve mutfak mükemmelliğimizin bir kutlamasıdır.',
 
-        description: 'Kürdistan\'ın otantik lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz.',
+        
 
         quickLinks: 'Hızlı Bağlantılar',
         contactInfo: 'İletişim Bilgileri',
@@ -1411,8 +1345,7 @@ const NatureVillageWebsite = () => {
           subtitle: 'Özel gününüzü otantik Kürt misafirperverliği ve unutulmaz lezzetlerle olağanüstü kılalım',
           reserve: 'Özel rezervasyon için arayın'
         }
-      }
-
+      },
       currency: '$'
 
     },
@@ -1483,12 +1416,6 @@ const NatureVillageWebsite = () => {
           freshIngredients: 'تازہ اجزاء'
         }
 
-        content: 'نیچر ولیج کردستان کے اصل ذائقوں کو دنیا کے ساتھ بانٹنے کے خواب سے پیدا ہوا۔',
-        experience: 'سال تجربہ',
-        recipes: 'روایتی ترکیبیں',
-        customers: 'خوش گاہک',
-        awards: 'حاصل شدہ انعامات'
-
       },
       gallery: {
         title: 'گیلری',
@@ -1508,8 +1435,6 @@ const NatureVillageWebsite = () => {
 
         description: 'کردستان کے اصل ذائقے اور گرم مہمان نوازی آپ کی میز تک لا رہے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور پاک فن کی بہترین مثال ہے۔',
 
-        description: 'کردستان کے اصل ذائقے اور گرم مہمان نوازی آپ کی میز تک لا رہے ہیں۔',
-
         quickLinks: 'فوری لنکس',
         contactInfo: 'رابطے کی معلومات',
         followUs: 'ہمیں فالو کریں',
@@ -1517,8 +1442,6 @@ const NatureVillageWebsite = () => {
         poweredBy: 'طاقت فراہم کنندہ',
 
         blunari: 'بلوناری',
-
-        blunari: 'بلوناری AI',
 
         copyright: `© ${new Date().getFullYear()} نیچر ولیج کرد ریسٹوران۔ تمام حقوق محفوظ ہیں۔`,
         privacy: 'پرائیویسی پالیسی',
@@ -1596,10 +1519,8 @@ const NatureVillageWebsite = () => {
           subtitle: 'آئیے آپ کے خاص دن کو اصل کردی مہمان نوازی اور یادگار ذائقوں کے ساتھ غیر معمولی بنائیں',
           reserve: 'خاص بکنگ کے لیے کال کریں'
         }
-      }
-
+      },
       currency: '$'
-
     },
     kmr: {
       nav: {
@@ -1668,12 +1589,6 @@ const NatureVillageWebsite = () => {
           freshIngredients: 'Pêkhateyen Taze'
         }
 
-        content: 'Gundê Xwezayê ji xewna parvekirina tamên resen û mêvandariya germ a Kurdistanê bi cîhanê re hate dayîn.',
-        experience: 'Sal Ezmûn',
-        recipes: 'Rêsetên Kevneşopî',
-        customers: 'Xerîdarên Kêfxweş',
-        awards: 'Xelatan Bi Dest Xistin'
-
       },
       gallery: {
         title: 'Galerî',
@@ -1693,7 +1608,7 @@ const NatureVillageWebsite = () => {
 
         description: 'Tamên resen û mêvandariya germ a Kurdistanê tînin ser maseyê we. Her xwarinê pîrozbahiya çanda me ya dewlemend û başiya çêştlênanê ye.',
 
-        description: 'Tamên resen û mêvandariya germ a Kurdistanê tînin ser maseyê we.',
+        
 
         quickLinks: 'Lînkên Bilez',
         contactInfo: 'Agahiyên Têkiliyê',
@@ -1702,8 +1617,6 @@ const NatureVillageWebsite = () => {
         poweredBy: 'Ji aliyê ve tê piştgirîkirin',
 
         blunari: 'Blunari',
-
-        blunari: 'Blunari AI',
 
         copyright: `© ${new Date().getFullYear()} Gundê Xwezayê Xwarinxaneya Kurdî. Hemû maf parastî ne.`,
         privacy: 'Polîtikaya Nihêniyê',
@@ -2152,9 +2065,180 @@ const NatureVillageWebsite = () => {
       loading: 'लोड हो रहा है...',
       error: 'कुछ गलत हुआ। कृपया फिर से कोशिश करें।',
       currency: '₹'
+    },
+    kmr: {
+      nav: {
+        home: 'Malper',
+        menu: 'Menû',
+        about: 'Derbarê Me',
+        gallery: 'Galerî',
+        visit: 'Serdana Me Bikin',
+        reservations: 'Rezervasyon',
+        catering: 'Katering',
+        orderOnline: 'Sifariş'
+      },
+      hero: {
+        title: 'Gundê Xwezayê',
+        subtitle: 'Di Her Qurçikê de Tama Kurdistanê',
+        description: 'Tamên resen ên Kurdî di hawîrdorekî germ û kevneşopî de biceribînin.',
+        cta1: 'Menûyê Bibînin',
+        cta2: 'Rezervasyon Bikin'
+      },
+      menu: {
+        title: 'Menûya Me',
+        subtitle: 'Bi MenuIQ ve têk tê - Ezmûna Xwarinê ya Baştirkirî bi AI',
+        filters: {
+          all: 'Hemû Tişt',
+          traditional: 'Kevneşopî',
+          vegetarian: 'Riwekî',
+          vegan: 'Vegan',
+          soup: 'Şorbe',
+          dessert: 'Şîrînî',
+          popular: 'Herî Navdar'
+        },
+        viewFull: 'Menûya Tevayî Bibînin',
+        noItems: 'Di vê kategoriyê de tu tişt nehat dîtin.'
+      },
+      about: {
+        title: 'Çîroka Me',
 
-      currency: '$'
+        badge: 'Çîroka Me',
+        subtitle: 'Tamên resen ên Kurdî û mêvandariya germ bo civata me tînin',
+        content: 'Gundê Xwezayê ji xewna parvekirina tamên resen û mêvandariya germ a Kurdistanê bi cîhanê re hate dayîn.',
+        story1: 'Gundê Xwezayê ji bo pêşkêşkirina tamên resen ên xwarinên Kurdî di hawîrdorekî germ û bi xêrhatin de ku her mêvan wek malbat hîs bike, xwe terxan kiriye.',
+        story2: 'Aşpêjên me bi dilsozî xwarinên kevneşopî yên Kurdî bi karanîna çêtirîn pêkhate û teknîkên kevneşopî yên çêkirina xwarinê amade dikin ku mîrata dewlemend a çêşt lênanê pîroz dikin.',
+        quote: 'Her xwarinê bi baldarî tê amade kirin û bi germiya mêvandariya Kurdî tê pêşkêş kirin.',
+        experience: 'Sal Ezmûn',
+        recipes: 'Rêsetên Kevneşopî',
+        customers: 'Xerîdarên Kêfxweş',
+        awards: 'Xelatan Bi Dest Xistin',
+        features: {
+          chefs: {
+            title: 'Aşpêjên Pispor',
+            description: 'Xwarinên resen ên Kurdî'
+          },
+          ingredients: {
+            title: 'Pêkhateyen Taze',
+            description: 'Kalîteya rojane garantî'
+          },
+          service: {
+            title: 'Karûbarê Germ',
+            description: 'Mêvandariya Kurdî'
+          }
+        },
+        stats: {
+          happyCustomers: 'Xerîdarên Kêfxweş',
+          authenticDishes: 'Xwarinên Resen',
+          customerRating: 'Nirxandina Xerîdaran',
+          freshIngredients: 'Pêkhateyen Taze'
+        }
 
+      },
+      gallery: {
+        title: 'Galerî',
+        subtitle: 'Rêwîtinek dîtbar di mîrata me ya çêkirina xwarinê û hawîrdora xwarinxaneyê de'
+      },
+      visit: {
+        title: 'Serdana Me Bikin',
+        subtitle: 'Li dilê bajêr me bibînin',
+        hours: 'Demên Vebûnê',
+        contact: 'Agahiyên Têkiliyê',
+        address: 'Navnîşan',
+        phone: 'Telefon',
+        makeReservation: 'Rezervasyon Bikin',
+        getDirections: 'Rê Bistînin'
+      },
+      footer: {
+
+        description: 'Tamên resen û mêvandariya germ a Kurdistanê tînin ser maseyê we. Her xwarinê pîrozbahiya çanda me ya dewlemend û başiya çêştlênanê ye.',
+
+        
+
+        quickLinks: 'Lînkên Bilez',
+        contactInfo: 'Agahiyên Têkiliyê',
+        followUs: 'Şopa Me Bikin',
+        openDaily: 'YEKŞEM - PÊNCŞEM: 12:00 - 22:00\nÎN - ŞEMÎ: 12:00 - 23:00',
+        poweredBy: 'Ji aliyê ve tê piştgirîkirin',
+
+        blunari: 'Blunari',
+
+        copyright: `© ${new Date().getFullYear()} Gundê Xwezayê Xwarinxaneya Kurdî. Hemû maf parastî ne.`,
+        privacy: 'Polîtikaya Nihêniyê',
+        terms: 'Mercên Karûbarê'
+      },
+
+      ui: {
+        callNow: 'Niha Bang Bike',
+        orderOnline: 'Sîparîşa Onlîne',
+        restaurant: 'Xwarinxane',
+        familyOwned: 'Xwedîtiya Malbatê',
+        googleReviews: 'Nirxandinên Google',
+        averageRating: 'Nirxandina Navîn',
+        fiveStarReviews: 'Nirxandinên 5 Stêrk',
+        verifiedPurchase: 'Kirîna Piştrastkî',
+        trustedReviewer: 'Nirxandêrê Muteber',
+        foodEnthusiast: 'Hezkara Xwarinê'
+      },
+      reviews: {
+        title: 'Mêvanên Me Çi Dibêjin',
+        subtitle: 'Li ser Google Reviews ji aliyê 572+ xerîdarên kêfxweş ve 4.8/5 stêrk hate nirxandin',
+        cta: 'Beşdarî 572+ xerîdarên razî bibin ku evîna xwarinên me ên resen dikin! Îro maseyê xwe rezerve bikin û cûdahiya ku mêvandariya resen a Kurdî çêdike tam bikin.',
+        ctaButton: 'Niha Maseyê Xwe Rezerve Bikin',
+        ctaTitle: 'Amade ne ku ezmûna xwe ya 5 stêrk çêbikin?',
+        trustIndicators: {
+          googleRating: '4.8★ Nirxandina Google',
+          totalReviews: '572+ Nirxandin'
+        }
+      },
+
+
+      featured: {
+        title: 'Xwarinên Taybetî',
+        subtitle: 'Xwarinên Kurdî yên me ên herî dilxwaz nas bikin'
+      },
+      tags: {
+        vegetarian: '🌱 Riwekî',
+        vegan: '🌿 Vegan',
+        spicy: '🌶️ Tûj',
+        sweet: '🍯 Şîrîn',
+        traditional: '🏛️ Kevneşopî',
+        grilled: '🔥 Brijandin',
+        'comfort food': '🍲 Xwarina Aramiyê',
+        soup: '🍜 Şorbe',
+        stew: '🥘 Xwarin'
+      },
+      addToCart: 'Li Sepetê Zêde Bike',
+      loading: 'Tê barkirin...',
+      error: 'Tiştek çewt çû. Ji kerema xwe dîsa biceribîne.',
+
+      currency: '$',
+      celebration: {
+        title: 'Demên Xwe ên Taybetî Pîroz Bikin',
+        subtitle: 'Rojên welidînê, salvegera û bûyerên xwe ên taybetî bi mêvandariya resen a Kurdî bîrneketî bikin',
+        familyReunions: 'Civîna Malbatê',
+        birthday: {
+          title: 'Pîrozbahiya Rojên Welidînê',
+          tagline: 'Demên şîrîn taybetî bikin',
+          feature1: 'Şîrîniya rojê welidînê belaş',
+          feature2: 'Strana rojê welidînê û xwezî',
+          feature3: 'Ezmûna xwarinê ya bîrneketî',
+          special: 'Ji bo pîrozbahiya salekî din ê jiyanê bêhempa ye'
+        },
+        anniversary: {
+          title: 'Şîvên Salvegerê',
+          tagline: 'Çîroka evîna xwe pîroz bikin',
+          feature1: 'Maseya evîndarî bi gulan',
+          feature2: 'Şîrînî belaş ji bo du kesan',
+          feature3: 'Ezmûna xwarinê di ronahiya mumê de',
+          feature4: 'Karta salvegerê ya kesane',
+          special: '25+ sal bi hev re? Sürprîzek taybetî li bendê we ye!'
+        },
+        cta: {
+          title: 'Ji bo Pîrozbahiyê Amade ne?',
+          subtitle: 'Bila roja we ya taybetî bi mêvandariya resen a Kurdî û tamên bîrneketî awarte bikin',
+          reserve: 'Ji bo rezervasyona taybetî bang bikin'
+        }
+      }
     }
   };
 
@@ -2252,7 +2336,6 @@ const NatureVillageWebsite = () => {
   }, [activeFilter, menuItems]);
 
   const isRTL = LANGUAGES[language || 'en']?.dir === 'rtl';
-
   // Safe Blunari link handler
   const handleBlunariClick = useCallback(() => {
     try {
@@ -2590,7 +2673,7 @@ const NatureVillageWebsite = () => {
                   </span>
                   <span className="font-medium text-xs uppercase tracking-wide">
                     {language.toUpperCase()}
-
+                  </span>
                   <Globe className="w-4 h-4" aria-hidden="true" />
                   <span className="font-medium text-xs uppercase tracking-wide">
                     {language === 'en' ? 'EN' :
@@ -2599,7 +2682,7 @@ const NatureVillageWebsite = () => {
                      language === 'fa' ? 'FA' :
                      language === 'tr' ? 'TR' :
                      language === 'ur' ? 'UR' :
-                     'KMR'}
+                      'KMR'}
 
                   </span>
                 </button>
@@ -2610,12 +2693,6 @@ const NatureVillageWebsite = () => {
                     isRTL ? 'right-0' : 'left-0',
                     'max-h-72 overflow-y-auto'
                   )}>
-
-                    {Object.entries(LANGUAGES).map(([code, lang]) => (
-                      <button
-                        key={code}
-                        onClick={() => {
-                          handleLanguageChange(code);
 
                     {[
                       { code: 'en', name: 'English' },
@@ -2637,25 +2714,14 @@ const NatureVillageWebsite = () => {
                           'w-full px-3 py-2.5 hover:bg-amber-50 transition-colors duration-150 flex items-center space-x-2.5 text-sm',
                           isRTL && 'space-x-reverse text-right',
                           !isRTL && 'text-left',
-
-                          language === code ? 'bg-amber-100 text-amber-800 font-medium' : 'text-gray-700 hover:text-amber-800'
+                          language === lang.code ? 'bg-amber-100 text-amber-800 font-medium' : 'text-gray-700 hover:text-amber-800'
                         )}
                       >
                         <span className="text-base mr-2">{lang.flag}</span>
                         <span>{lang.name}</span>
-                        {language === code && (
+                        {language === lang.code && (
                           <div className="ml-auto w-2 h-2 bg-amber-500 rounded-full"></div>
                         )}
-
-                          language === lang.code ? 'bg-amber-100 text-amber-800 font-medium' : 'text-gray-700 hover:text-amber-800'
-                        )}
-                      >
-                        <div className={cn(
-                          'w-1.5 h-1.5 rounded-full transition-colors duration-150',
-                          language === lang.code ? 'bg-amber-500' : 'bg-gray-300'
-                        )}></div>
-                        <span>{lang.name}</span>
-
                       </button>
                     ))}
                   </div>
@@ -2790,10 +2856,9 @@ const NatureVillageWebsite = () => {
 
                       <span className="text-sm text-amber-600 font-medium px-3 py-1 bg-amber-100 rounded-full flex items-center gap-2">
                         <span className="text-base">{LANGUAGES[language]?.flag || '🌐'}</span>
-
-                      <span className="text-sm text-amber-600 font-medium px-3 py-1 bg-amber-100 rounded-full">
-
-                        {language.toUpperCase()}
+                        <span className="text-sm text-amber-600 font-medium">
+                          {language.toUpperCase()}
+                        </span>
                       </span>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
@@ -2896,7 +2961,6 @@ const NatureVillageWebsite = () => {
           )}
         </div>
       </nav>
-
       {/* Hero Section */}
       <section id="home" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
         {/* Video Background */}
@@ -3304,7 +3368,7 @@ const NatureVillageWebsite = () => {
                 <div className="relative bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-amber-400/50 transition-all duration-500 overflow-hidden min-h-[400px] flex flex-col justify-between">
                   {/* Floating particles inside card - positioned in corners away from text */}
                   <div className="absolute top-4 right-4 text-amber-300 text-lg opacity-40 animate-float hidden sm:block">🎈</div>
-                  <div className="absolute bottom-4 left-4 text-yellow-300 text-sm opacity-30 animate-float hidden sm:block" style={{animationDelay: '1s'}}>✨</div>
+                  <div className="absolute bottom-4 left-4 text-yellow-300 text-sm opacity-30 animate-float hidden sm:block">✨</div>
                   
                   <div>
                     {/* Enhanced icon with glow */}
@@ -3504,7 +3568,6 @@ const NatureVillageWebsite = () => {
           </svg>
         </div>
       </section>
-
       {/* Customer Reviews Section - Enhanced */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-amber-50 relative overflow-hidden">
         {/* Background Pattern */}
@@ -3989,9 +4052,8 @@ const NatureVillageWebsite = () => {
                 {t.footer?.copyright || '© 2025 Nature Village Kurdish Restaurant. All rights reserved.'}
               </p>
               <div className="flex items-center space-x-2 text-amber-300 text-sm">
-
                 <span className="opacity-80">{t.footer?.poweredBy || 'Powered by'}</span>
-                <button 
+                <button
                   onClick={handleBlunariClick}
                   className="group flex items-center space-x-1.5 hover:text-white transition-all duration-300 font-semibold bg-gradient-to-r from-amber-600/20 to-orange-600/20 hover:from-amber-500/30 hover:to-orange-500/30 px-3 py-1.5 rounded-lg border border-amber-600/30 hover:border-amber-500/50 hover:scale-105 transform"
                 >
@@ -4004,14 +4066,6 @@ const NatureVillageWebsite = () => {
                   <svg className="w-3 h-3 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-
-                <span>{t.footer?.poweredBy || 'Powered by'}</span>
-                <button 
-                  onClick={handleBlunariClick}
-                  className="hover:text-white transition-colors font-medium underline decoration-dotted underline-offset-4"
-                >
-                  {t.footer?.blunari || 'Blunari AI'}
-
                 </button>
               </div>
             </div>
@@ -4046,8 +4100,6 @@ const NatureVillageWebsite = () => {
               <div className="flex justify-between items-center mb-4">
 
                 <h3 className="text-2xl font-bold text-gray-800">{t.ui?.orderOnline || 'Order Online'}</h3>
-
-                <h3 className="text-2xl font-bold text-gray-800">Order Online</h3>
 
                 <button
                   onClick={() => setShowOrderModal(false)}
