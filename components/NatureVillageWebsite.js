@@ -3401,21 +3401,6 @@ const NatureVillageWebsite = () => {
                       <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
                         <span className="text-amber-300 text-lg">🎁</span>
                         <span className="text-sm">{t.celebration?.birthday?.feature3 || 'Memorable dining experience'}</span>
-
-                        <span className="text-sm">{t.celebration?.birthday?.feature1 || 'Complimentary birthday cake & candles'}</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                        <span className="text-amber-300 text-lg">🎵</span>
-                        <span className="text-sm">{t.celebration?.birthday?.feature2 || 'Traditional Kurdish birthday songs'}</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                        <span className="text-amber-300 text-lg">📸</span>
-                        <span className="text-sm">{t.celebration?.birthday?.feature3 || 'Professional photo memories'}</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                        <span className="text-amber-300 text-lg">🎁</span>
-                        <span className="text-sm">{t.celebration?.birthday?.feature4 || 'Special birthday decorations'}</span>
-
                       </div>
                     </div>
                   </div>
