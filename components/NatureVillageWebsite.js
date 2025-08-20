@@ -3491,11 +3491,7 @@ const NatureVillageWebsite = () => {
               {t.about?.title || 'About Nature Village'}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-
-              {t.about?.subtitle || 'Bringing authentic Kurdish flavors and warm hospitality to our community'}
-
-              Bringing authentic Kurdish flavors and warm hospitality to our community
-
+              {t.about?.subtitle || 'Bringing authentic Middle Eastern flavors and warm hospitality to our community'}
             </p>
           </div>
           
