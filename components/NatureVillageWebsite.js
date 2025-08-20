@@ -3480,11 +3480,7 @@ const NatureVillageWebsite = () => {
           <div className="text-center mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 bg-amber-50 px-4 py-2 rounded-full mb-6">
               <Star className="w-4 h-4 text-amber-500 fill-current" />
-
               <span className="text-amber-700 font-medium text-sm">{t.about?.badge || 'Our Story'}</span>
-
-              <span className="text-amber-700 font-medium text-sm">Our Story</span>
-
               <Star className="w-4 h-4 text-amber-500 fill-current" />
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-4">
