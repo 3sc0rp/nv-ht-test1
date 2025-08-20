@@ -3695,28 +3695,8 @@ const NatureVillageWebsite = () => {
                       {t.celebration?.birthday?.title || 'Birthday Celebrations'}
                     </h3>
                     <p className="text-white/70 mb-6 text-lg italic">
-
                       {t.celebration?.birthday?.tagline || 'Sweet moments made special'}
-
-                      {t.celebration?.birthday?.tagline || 'Make it a day to remember'}
-
                     </p>
-                    
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                        <span className="text-amber-300 text-lg">🎈</span>
-
-                        <span className="text-sm">{t.celebration?.birthday?.feature1 || 'Complimentary birthday dessert'}</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                        <span className="text-amber-300 text-lg">🎵</span>
-                        <span className="text-sm">{t.celebration?.birthday?.feature2 || 'Happy birthday song & wishes'}</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                        <span className="text-amber-300 text-lg">🎁</span>
-                        <span className="text-sm">{t.celebration?.birthday?.feature3 || 'Memorable dining experience'}</span>
-                      </div>
-                    </div>
                   </div>
                   
                   <div className="relative bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-2xl p-3 border border-amber-400/30 group-hover:border-amber-400/60 transition-all duration-300 backdrop-blur-sm">
@@ -3750,25 +3730,6 @@ const NatureVillageWebsite = () => {
                     <p className="text-white/70 mb-6 text-lg italic">
                       {t.celebration?.anniversary?.tagline || 'Celebrate your love story'}
                     </p>
-                    
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                        <span className="text-rose-300 text-lg">🌹</span>
-                        <span className="text-sm">{t.celebration?.anniversary?.feature1 || 'Romantic table setup with roses'}</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                        <span className="text-rose-300 text-lg">🥂</span>
-                        <span className="text-sm">{t.celebration?.anniversary?.feature2 || 'Complimentary dessert for two'}</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                        <span className="text-rose-300 text-lg">🕯️</span>
-                        <span className="text-sm">{t.celebration?.anniversary?.feature3 || 'Candlelit dining experience'}</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-3 text-white/90 group-hover:text-white transition-colors duration-300">
-                        <span className="text-rose-300 text-lg">💌</span>
-                        <span className="text-sm">{t.celebration?.anniversary?.feature4 || 'Personalized anniversary card'}</span>
-                      </div>
-                    </div>
                   </div>
                   
                   <div className="relative bg-gradient-to-r from-rose-500/20 to-pink-500/20 rounded-2xl p-3 border border-rose-400/30 group-hover:border-rose-400/60 transition-all duration-300 backdrop-blur-sm">
