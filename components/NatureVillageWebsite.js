@@ -3674,78 +3674,29 @@ const NatureVillageWebsite = () => {
             </p>
           </div>
 
-          {/* Enhanced Celebration Options - Full Visibility */}
+          {/* Enhanced Celebration Options - All Same Size */}
           <div className="flex-1">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8">
+            {/* Enhanced Celebrations Grid - All Cards Same Size */}
+            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 lg:gap-6 mb-8">
               {/* Birthday Celebrations */}
-              <div className="group text-center transform hover:scale-105 transition-all duration-500">
-                <div className="relative bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-amber-400/50 transition-all duration-500 overflow-hidden flex flex-col justify-between">
-                  {/* Floating particles inside card - positioned in corners away from text */}
-                  <div className="absolute top-4 right-4 text-amber-300 text-lg opacity-40 animate-float hidden sm:block">🎈</div>
-                  <div className="absolute bottom-4 left-4 text-yellow-300 text-sm opacity-30 animate-float hidden sm:block">✨</div>
-                  
-                  <div className="mb-6">
-                    {/* Enhanced icon with glow */}
-                    <div className="relative mb-4">
-                      <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-orange-400 rounded-full blur-2xl opacity-20 scale-150"></div>
-                      <div className="relative text-5xl lg:text-6xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 filter drop-shadow-2xl">🎂</div>
-                    </div>
-                    
-                    <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-3 group-hover:text-amber-200 transition-colors duration-300">
-                      {t.celebration?.birthday?.title || 'Birthday Celebrations'}
-                    </h3>
-                    <p className="text-white/70 text-lg italic">
-                      {t.celebration?.birthday?.tagline || 'Sweet moments made special'}
-                    </p>
-                  </div>
-                  
-                  <div className="relative bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-2xl p-3 border border-amber-400/30 group-hover:border-amber-400/60 transition-all duration-300 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-r from-amber-400/10 to-orange-400/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <p className="relative text-amber-200 font-medium group-hover:text-amber-100 transition-colors duration-300 text-sm">
-                      <span className="text-yellow-300">🌟 </span>
-                      {t.celebration?.birthday?.special || 'Perfect for birthday parties of all sizes'}
-                      <span className="text-yellow-300"> 🌟</span>
-                    </p>
-                  </div>
+              <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-amber-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                <div className="relative mb-4">
+                  <div className="absolute inset-0 bg-amber-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative text-3xl lg:text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">�</div>
                 </div>
+                <div className="text-white font-medium group-hover:text-amber-200 transition-colors duration-300 text-sm lg:text-base">{t.celebration?.birthday?.title || 'Birthday Celebrations'}</div>
               </div>
 
-              {/* Anniversary Celebrations */}
-              <div className="group text-center transform hover:scale-105 transition-all duration-500">
-                <div className="relative bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-rose-400/50 transition-all duration-500 overflow-hidden flex flex-col justify-between">
-                  {/* Floating particles inside card */}
-                  <div className="absolute top-4 right-4 text-rose-300 text-lg opacity-50 animate-float" style={{animationDelay: '0.5s'}}>🌹</div>
-                  <div className="absolute bottom-4 left-4 text-pink-300 text-sm opacity-40 animate-float" style={{animationDelay: '1.5s'}}>💕</div>
-                  
-                  <div className="mb-6">
-                    {/* Enhanced icon with glow */}
-                    <div className="relative mb-4">
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-2xl opacity-20 scale-150"></div>
-                      <div className="relative text-5xl lg:text-6xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 filter drop-shadow-2xl">💕</div>
-                    </div>
-                    
-                    <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-3 group-hover:text-rose-200 transition-colors duration-300">
-                      {t.celebration?.anniversary?.title || 'Anniversary Dinners'}
-                    </h3>
-                    <p className="text-white/70 text-lg italic">
-                      {t.celebration?.anniversary?.tagline || 'Celebrate your love story'}
-                    </p>
-                  </div>
-                  
-                  <div className="relative bg-gradient-to-r from-rose-500/20 to-pink-500/20 rounded-2xl p-3 border border-rose-400/30 group-hover:border-rose-400/60 transition-all duration-300 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-r from-rose-400/10 to-pink-400/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <p className="relative text-rose-200 font-medium group-hover:text-rose-100 transition-colors duration-300 text-sm">
-                      <span className="text-pink-300">💖 </span>
-                      {t.celebration?.anniversary?.special || '25+ years together? Special surprise awaits!'}
-                      <span className="text-pink-300"> 💖</span>
-                    </p>
-                  </div>
+              {/* Anniversary Dinners */}
+              <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-rose-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                <div className="relative mb-4">
+                  <div className="absolute inset-0 bg-rose-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative text-3xl lg:text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">�</div>
                 </div>
+                <div className="text-white font-medium group-hover:text-rose-200 transition-colors duration-300 text-sm lg:text-base">{t.celebration?.anniversary?.title || 'Anniversary Dinners'}</div>
               </div>
-            </div>
 
-            {/* Enhanced Other Celebrations Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-8">
+              {/* Graduations */}
               <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-amber-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                 <div className="relative mb-4">
                   <div className="absolute inset-0 bg-amber-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -3753,6 +3704,8 @@ const NatureVillageWebsite = () => {
                 </div>
                 <div className="text-white font-medium group-hover:text-amber-200 transition-colors duration-300 text-sm lg:text-base">Graduations</div>
               </div>
+
+              {/* Engagements */}
               <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-pink-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                 <div className="relative mb-4">
                   <div className="absolute inset-0 bg-pink-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -3760,17 +3713,17 @@ const NatureVillageWebsite = () => {
                 </div>
                 <div className="text-white font-medium group-hover:text-pink-200 transition-colors duration-300 text-sm lg:text-base">Engagements</div>
               </div>
+
+              {/* Family Reunions */}
               <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-blue-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                 <div className="relative mb-4">
                   <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative text-3xl lg:text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">👨‍👩‍👧‍👦</div>
                 </div>
-
                 <div className="text-white font-medium group-hover:text-blue-200 transition-colors duration-300 text-sm lg:text-base">{t.celebration?.familyReunions || 'Family Reunions'}</div>
-
-                <div className="text-white font-medium group-hover:text-blue-200 transition-colors duration-300 text-sm lg:text-base">Family Reunions</div>
-
               </div>
+
+              {/* Holidays */}
               <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-green-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                 <div className="relative mb-4">
                   <div className="absolute inset-0 bg-green-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
