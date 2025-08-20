@@ -415,16 +415,6 @@ const NatureVillageWebsite = () => {
     }
   ];
   // Complete translations object with comprehensive coverage
-
-  // Header JSX (fixes double 'Restaurant' and improves layout)
-  const Header = () => (
-    <header className="flex items-center space-x-4 py-4 px-6 bg-[#f7f7f5]">
-      <img src="/logo.png" alt="Nature Village Logo" className="h-12 w-12 rounded-full border border-[#8B4513]" />
-      <div>
-        <h1 className="text-3xl font-bold text-[#8B4513]">Nature Village Restaurant</h1>
-      </div>
-    </header>
-  );
   const translations = {
     en: {
       nav: {
@@ -2771,8 +2761,6 @@ const NatureVillageWebsite = () => {
                       <span className="text-xl font-serif font-bold text-amber-800">Nature Village</span>
 
                       <span className="text-xs text-amber-600 font-medium">{t.ui?.restaurant || 'Restaurant'}</span>
-
-                      <span className="text-xs text-amber-600 font-medium">Restaurant</span>
 
                     </div>
                   </div>
