@@ -487,7 +487,7 @@ const NatureVillageWebsite = () => {
       featured: true,
       story: {
         en: 'Our warm and inviting dining space reflects Middle Eastern hospitality',
-        ku: 'شوێنی خواردنی گەرم و بانگهێشتکارمان ڕەنگدانەوەی میوانداری کوردی دەکات'
+        ku: 'شوێنی خواردنی گەرم و بانگهێشتکارمان ڕەنگدانەوەی میوانداری ناوەڕاستی ئاسیا دەکات'
       }
     },
     {
@@ -501,7 +501,7 @@ const NatureVillageWebsite = () => {
       featured: true,
       story: {
         en: 'Hand-crafted kebabs using traditional Middle Eastern spices and techniques',
-        ku: 'کەبابی دەستکرد بە بەکارهێنانی بەهارات و تەکنیکی نەریتی کوردی'
+        ku: 'کەبابی دەستکرد بە بەکارهێنانی بەهارات و تەکنیکی نەریتی ناوەڕاستی ئاسیا'
       }
     },
     {
@@ -529,7 +529,7 @@ const NatureVillageWebsite = () => {
       featured: true,
       story: {
         en: 'A celebration of Middle Eastern culinary heritage in one beautiful platter',
-        ku: 'ئاهەنگێک بۆ میراتی چێشتلێنانی کوردی لە یەک پلێتەری جوان'
+        ku: 'ئاهەنگێک بۆ میراتی چێشتلێنانی ناوەڕاستی ئاسیا لە یەک پلێتەری جوان'
       }
     },
     {
@@ -543,7 +543,7 @@ const NatureVillageWebsite = () => {
       featured: false,
       story: {
         en: 'Fresh seasonal vegetables prepared with Middle Eastern herbs and spices',
-        ku: 'سەوزەی وەرزیی تازە کە بە گیا و بەهاراتی کوردی ئامادە کراوە'
+        ku: 'سەوزەی وەرزیی تازە کە بە گیا و بەهاراتی ناوەڕاستی ئاسیا ئامادە کراوە'
       }
     },
     {
@@ -585,7 +585,7 @@ const NatureVillageWebsite = () => {
       featured: false,
       story: {
         en: 'Warming soup made with traditional Middle Eastern ingredients and love',
-        ku: 'شۆربەی گەرمکەرەوە کە بە پێکهاتەی نەریتی کوردی و خۆشەویستی دروست کراوە'
+        ku: 'شۆربەی گەرمکەرەوە کە بە پێکهاتەی نەریتی ناوەڕاستی ئاسیا و خۆشەویستی دروست کراوە'
       }
     }
   ], []);
@@ -3427,7 +3427,7 @@ const NatureVillageWebsite = () => {
               {t.featured?.title || 'Featured Dishes'}
             </h2>
             <p className="text-lg sm:text-xl text-amber-600 max-w-3xl mx-auto">
-              {t.featured?.subtitle || 'Discover our most beloved Kurdish specialties'}
+              {t.featured?.subtitle || 'Discover our most beloved Middle Eastern specialties'}
             </p>
             <div className="w-24 h-1 bg-amber-600 mx-auto mt-6"></div>
           </div>
@@ -3670,7 +3670,7 @@ const NatureVillageWebsite = () => {
             </div>
             
             <p className="text-base lg:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
-              {t.celebration?.subtitle || 'Make your birthdays, anniversaries, and special occasions unforgettable with authentic Kurdish hospitality'}
+              {t.celebration?.subtitle || 'Make your birthdays, anniversaries, and special occasions unforgettable with authentic Middle Eastern hospitality'}
             </p>
           </div>
 
@@ -3835,7 +3835,7 @@ const NatureVillageWebsite = () => {
                   {t.celebration?.cta?.title || 'Ready to Celebrate?'}
                 </h3>
                 <p className="text-white/90 mb-6 max-w-3xl mx-auto text-base lg:text-lg leading-relaxed">
-                  {t.celebration?.cta?.subtitle || 'Let us make your special day extraordinary with authentic Kurdish hospitality and unforgettable flavors'}
+                  {t.celebration?.cta?.subtitle || 'Let us make your special day extraordinary with authentic Middle Eastern hospitality and unforgettable flavors'}
                 </p>
                 
                 <div className="text-white text-lg lg:text-xl font-semibold mb-4">
@@ -4105,7 +4105,7 @@ const NatureVillageWebsite = () => {
 
               </h3>
               <p className="text-base sm:text-lg text-amber-700 mb-8 max-w-2xl mx-auto">
-                {t.reviews?.cta || 'Join 572+ satisfied customers who love our authentic cuisine! Book your table today and taste the difference that authentic Kurdish hospitality makes.'}
+                {t.reviews?.cta || 'Join 572+ satisfied customers who love our authentic cuisine! Book your table today and taste the difference that authentic Middle Eastern hospitality makes.'}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -4252,7 +4252,7 @@ const NatureVillageWebsite = () => {
               </div>
               <p className="text-amber-200 mb-6 leading-relaxed text-sm sm:text-base">
 
-                {t.footer?.description || 'Bringing the authentic flavors and warm hospitality of Kurdistan to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.'}
+                {t.footer?.description || 'Bringing the authentic flavors and warm hospitality of the Middle East to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.'}
 
                 {t.footer?.description || 'Bringing authentic Kurdish flavors to your table.'}
 
