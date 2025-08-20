@@ -11,7 +11,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Arabic and Kurdish text support */
+/* Arabic and Middle Eastern text support */
 [dir="rtl"] {
   font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
 }
@@ -45,8 +45,8 @@ body {
   -webkit-backdrop-filter: blur(12px);
 }
 
-/* Kurdish pattern styles */
-.kurdish-border {
+/* Middle Eastern pattern styles */
+.middle-eastern-border {
   border-image: linear-gradient(45deg, #8B4513, #D2B48C, #6B8E23) 1;
   border-width: 3px;
   border-style: solid;

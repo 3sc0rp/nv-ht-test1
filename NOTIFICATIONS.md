@@ -102,7 +102,7 @@ The system supports multiple notification services:
 
 ### **Template System**
 - 📝 **Database-stored templates** for consistency
-- 🌐 **Multilingual support** (English, Kurdish, Arabic)
+- 🌐 **Multilingual support** (English, Arabic)
 - 🎨 **Branded HTML emails** with restaurant styling
 - 🔧 **Dynamic placeholder replacement**
 

@@ -60,7 +60,7 @@ const CateringPage = () => {
   return (
     <>
       <Head>
-        <title>{t.title} - {t.subtitle} - Nature Village Kurdish Restaurant</title>
+        <title>{t.title} - {t.subtitle} - Nature Village Middle Eastern Restaurant</title>
         <meta name="description" content="Nature Village catering services are temporarily under maintenance. We'll be back online soon!" />
         <meta name="robots" content="noindex, nofollow" />
       </Head>

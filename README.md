@@ -1,13 +1,13 @@
-# Nature Village - Kurdish Restaurant Website
+# Nature Village - Middle Eastern Restaurant Website
 
-A modern, multilingual website for Nature Village Kurdish Restaurant built with Next.js and Tailwind CSS.
+A modern, multilingual website for Nature Village Middle Eastern Restaurant built with Next.js and Tailwind CSS.
 
 ## Features
 
-- 🌍 **Multilingual Support**: English, Kurdish (کوردی), and Arabic (العربية)
+- 🌍 **Multilingual Support**: English and Arabic (العربية)
 - 📱 **Responsive Design**: Mobile-first approach with modern UI/UX
 - 🍽️ **MenuIQ Integration**: AI-enhanced menu management system
-- 🎨 **Kurdish Cultural Elements**: Traditional patterns and cultural design
+- 🎨 **Middle Eastern Cultural Elements**: Traditional patterns and cultural design
 - ⚡ **Performance Optimized**: Fast loading with Next.js optimization
 - 🔒 **Security Headers**: Enhanced security with proper headers configuration
 
@@ -76,12 +76,12 @@ npm start
 ## Features Overview
 
 ### Multilingual Support
-- RTL (Right-to-Left) support for Arabic and Kurdish
+- RTL (Right-to-Left) support for Arabic
 - Dynamic language switching
 - Culturally appropriate typography and layouts
 
 ### Sections
-- **Hero**: Eye-catching banner with Kurdish patterns
+- **Hero**: Eye-catching banner with Middle Eastern patterns
 - **Featured Dishes**: Showcase of popular menu items
 - **Menu**: Complete menu with filtering options
 - **About**: Restaurant story and heritage
@@ -166,4 +166,4 @@ For support or questions, please contact the development team or create an issue
 
 ---
 
-Built with ❤️ for Nature Village Kurdish Restaurant
+Built with ❤️ for Nature Village Middle Eastern Restaurant

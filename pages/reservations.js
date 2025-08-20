@@ -59,7 +59,7 @@ const ReservationPage = () => {
   return (
     <>
       <Head>
-        <title>{t.title} - {t.subtitle} - Nature Village Kurdish Restaurant</title>
+        <title>{t.title} - {t.subtitle} - Nature Village Middle Eastern Restaurant</title>
         <meta name="description" content="Nature Village reservation system is temporarily under maintenance. We'll be back online soon!" />
         <meta name="robots" content="noindex, nofollow" />
       </Head>

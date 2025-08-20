@@ -271,17 +271,17 @@ const FullMenuPage = () => {
   const [viewportWidth, setViewportWidth] = useState(1024); // Default fallback
   const [isMobile, setIsMobile] = useState(false);
 
-  // Kurdish pattern SVG for decorative elements
-  const KurdishPattern = () => (
+  // Middle Eastern pattern SVG for decorative elements
+  const MiddleEasternPattern = () => (
     <svg className="absolute opacity-5 w-full h-full" viewBox="0 0 400 400">
       <defs>
-        <pattern id="kurdishPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+        <pattern id="middleEasternPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
           <rect width="50" height="50" fill="#8B4513"/>
           <polygon points="25,5 45,25 25,45 5,25" fill="#D2B48C"/>
           <circle cx="25" cy="25" r="8" fill="#6B8E23"/>
         </pattern>
       </defs>
-      <rect width="400" height="400" fill="url(#kurdishPattern)"/>
+      <rect width="400" height="400" fill="url(#middleEasternPattern)"/>
     </svg>
   );
 

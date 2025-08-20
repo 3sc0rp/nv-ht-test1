@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { Menu, X, MapPin, Phone, Clock, Star, Filter, Globe, Facebook, Instagram, ChefHat, Users, Calendar, Award, ChevronRight, Home, Utensils, Info, Camera, ExternalLink, Share2, ChevronDown, Grid, Heart, Eye, Share, ZoomIn, Download } from 'lucide-react';
+import { Menu, X, MapPin, Phone, Clock, Star, Filter, Globe, Facebook, Instagram, ChefHat, Users, Calendar, Award, ChevronRight, Home, Utensils, Info, Camera, ExternalLink, Share2, ChevronDown, Grid, Heart, Eye, Share, ZoomIn, Download, Truck } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { LANGUAGES, getText, updateDocumentLanguage } from '../lib/i18n';
 
@@ -11,7 +11,6 @@ const NatureVillageWebsite = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
-  const [showOrderModal, setShowOrderModal] = useState(false);
   
   // Enhanced Gallery State Variables
   const [galleryFilter, setGalleryFilter] = useState('all');
@@ -19,16 +18,329 @@ const NatureVillageWebsite = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [galleryView, setGalleryView] = useState('grid'); // 'grid' or 'masonry'
   
-  // Live Restaurant Status State
+  // Live Restaurant Status State with Real Data Integration
   const [restaurantStatus, setRestaurantStatus] = useState({
-    isOpen: true,
-    busyLevel: 'medium', // 'low', 'medium', 'high', 'very-high'
-    waitTime: '15-20',
-    nextClosing: '10:00 PM',
-    deliveryTime: '25-35'
+    isOpen: false,
+    busyLevel: 'low',
+    nextClosing: '',
+    nextOpening: '',
+    currentTime: new Date(),
+    liveData: false, // Indicates if using real data
+    lastUpdated: null
   });
+
+  // Configuration for real data sources
+  const DATA_SOURCES = {
+    // Google Places API for real-time business hours and popular times
+    googlePlaces: {
+      apiKey: process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY,
+      placeId: process.env.NEXT_PUBLIC_RESTAURANT_PLACE_ID, // Your restaurant's Google Place ID
+      enabled: false // Will be enabled when API keys are provided
+    },
+    
+    // Yelp Fusion API for business info and busy times
+    yelp: {
+      apiKey: process.env.NEXT_PUBLIC_YELP_API_KEY,
+      businessId: process.env.NEXT_PUBLIC_YELP_BUSINESS_ID,
+      enabled: false
+    },
+    
+    // Custom restaurant POS/management system webhook
+    posSystem: {
+      webhookUrl: process.env.NEXT_PUBLIC_POS_WEBHOOK_URL,
+      apiKey: process.env.NEXT_PUBLIC_POS_API_KEY,
+      enabled: false
+    },
+    
+    // Real-time analytics from website traffic
+    analytics: {
+      enabled: true // This we can implement with client-side data
+    }
+  };
+
+  // Check which data sources are available
+  useEffect(() => {
+    // Enable data sources based on available environment variables
+    if (DATA_SOURCES.googlePlaces.apiKey && DATA_SOURCES.googlePlaces.placeId) {
+      DATA_SOURCES.googlePlaces.enabled = true;
+    }
+    if (DATA_SOURCES.yelp.apiKey && DATA_SOURCES.yelp.businessId) {
+      DATA_SOURCES.yelp.enabled = true;
+    }
+    if (DATA_SOURCES.posSystem.webhookUrl && DATA_SOURCES.posSystem.apiKey) {
+      DATA_SOURCES.posSystem.enabled = true;
+    }
+  }, []);
+
+  // Fetch real data from Google Places API
+  const fetchGooglePlacesData = useCallback(async () => {
+    if (!DATA_SOURCES.googlePlaces.enabled) return null;
+    
+    try {
+      const response = await fetch('/api/restaurant-status/google-places', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          placeId: DATA_SOURCES.googlePlaces.placeId,
+          apiKey: DATA_SOURCES.googlePlaces.apiKey
+        })
+      });
+      
+      const data = await response.json();
+      return {
+        isOpen: data.opening_hours?.open_now || false,
+        hours: data.opening_hours?.weekday_text || [],
+        busyTimes: data.popular_times || null,
+        source: 'google-places'
+      };
+    } catch (error) {
+      console.error('Google Places API error:', error);
+      return null;
+    }
+  }, []);
+
+  // Fetch data from Yelp API
+  const fetchYelpData = useCallback(async () => {
+    if (!DATA_SOURCES.yelp.enabled) return null;
+    
+    try {
+      const response = await fetch('/api/restaurant-status/yelp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          businessId: DATA_SOURCES.yelp.businessId,
+          apiKey: DATA_SOURCES.yelp.apiKey
+        })
+      });
+      
+      const data = await response.json();
+      return {
+        isOpen: data.is_open_now || false,
+        hours: data.hours || [],
+        source: 'yelp'
+      };
+    } catch (error) {
+      console.error('Yelp API error:', error);
+      return null;
+    }
+  }, []);
+
+  // Fetch data from POS system
+  const fetchPOSData = useCallback(async () => {
+    if (!DATA_SOURCES.posSystem.enabled) return null;
+    
+    try {
+      const response = await fetch(DATA_SOURCES.posSystem.webhookUrl, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${DATA_SOURCES.posSystem.apiKey}`,
+          'Content-Type': 'application/json',
+        }
+      });
+      
+      const data = await response.json();
+      return {
+        isOpen: data.status === 'open',
+        currentOrders: data.current_orders || 0,
+        avgWaitTime: data.avg_wait_time || 0,
+        busyLevel: data.busy_level || 'low',
+        source: 'pos-system'
+      };
+    } catch (error) {
+      console.error('POS System API error:', error);
+      return null;
+    }
+  }, []);
+
+  // Calculate busy level from real website analytics
+  const calculateAnalyticsBusyLevel = useCallback(() => {
+    if (typeof window === 'undefined') return 'low';
+    
+    // Get current website traffic indicators
+    const currentVisitors = sessionStorage.getItem('currentVisitors') || '1';
+    const pageViews = sessionStorage.getItem('pageViews') || '1';
+    const orderClicks = sessionStorage.getItem('orderClicks') || '0';
+    
+    const visitors = parseInt(currentVisitors);
+    const views = parseInt(pageViews);
+    const clicks = parseInt(orderClicks);
+    
+    // Simple algorithm based on website activity
+    let busyLevel = 'low';
+    if (visitors > 10 || views > 50 || clicks > 5) {
+      busyLevel = 'very-high';
+    } else if (visitors > 5 || views > 25 || clicks > 2) {
+      busyLevel = 'high';
+    } else if (visitors > 2 || views > 10 || clicks > 0) {
+      busyLevel = 'medium';
+    }
+    
+    return busyLevel;
+  }, []);
+
+  // Main function to fetch and combine real data
+  const fetchRealRestaurantData = useCallback(async () => {
+    console.log('Fetching real restaurant data...');
+    
+    try {
+      // Attempt to fetch from all available sources
+      const [googleData, yelpData, posData] = await Promise.allSettled([
+        fetchGooglePlacesData(),
+        fetchYelpData(),
+        fetchPOSData()
+      ]);
+
+      // Get analytics data
+      const analyticsBusyLevel = calculateAnalyticsBusyLevel();
+      
+      let finalStatus = {
+        isOpen: false,
+        busyLevel: analyticsBusyLevel,
+        nextClosing: '',
+        nextOpening: '',
+        currentTime: new Date(),
+        liveData: false,
+        lastUpdated: new Date(),
+        dataSources: []
+      };
+
+      // Prioritize POS system data (most accurate)
+      if (posData.status === 'fulfilled' && posData.value) {
+        const pos = posData.value;
+        finalStatus = {
+          ...finalStatus,
+          isOpen: pos.isOpen,
+          busyLevel: pos.busyLevel,
+          liveData: true,
+          dataSources: [...finalStatus.dataSources, 'pos-system']
+        };
+        console.log('Using POS system data');
+      }
+      
+      // Fallback to Google Places data
+      else if (googleData.status === 'fulfilled' && googleData.value) {
+        const google = googleData.value;
+        finalStatus = {
+          ...finalStatus,
+          isOpen: google.isOpen,
+          liveData: true,
+          dataSources: [...finalStatus.dataSources, 'google-places']
+        };
+        console.log('Using Google Places data');
+      }
+      
+      // Fallback to Yelp data
+      else if (yelpData.status === 'fulfilled' && yelpData.value) {
+        const yelp = yelpData.value;
+        finalStatus = {
+          ...finalStatus,
+          isOpen: yelp.isOpen,
+          liveData: true,
+          dataSources: [...finalStatus.dataSources, 'yelp']
+        };
+        console.log('Using Yelp data');
+      }
+      
+      // If no real data available, fall back to time-based logic
+      if (!finalStatus.liveData) {
+        console.log('No real data available, using time-based fallback');
+        finalStatus = await getFallbackStatus();
+      }
+
+      return finalStatus;
+      
+    } catch (error) {
+      console.error('Error fetching real restaurant data:', error);
+      return await getFallbackStatus();
+    }
+  }, [fetchGooglePlacesData, fetchYelpData, fetchPOSData, calculateAnalyticsBusyLevel]);
+
+  // Fallback to time-based calculation when no real data is available
+  const getFallbackStatus = useCallback(async () => {
+    const now = new Date();
+    const currentHour = now.getHours();
+    const currentMinute = now.getMinutes();
+    const currentTime = currentHour + (currentMinute / 60);
+    
+    // Restaurant hours: 11:00 AM to 10:00 PM
+    const openingTime = 11.0;
+    const closingTime = 22.0;
+    const isCurrentlyOpen = currentTime >= openingTime && currentTime < closingTime;
+    
+    let nextClosing = '';
+    let nextOpening = '';
+    
+    if (isCurrentlyOpen) {
+      nextClosing = '10:00 PM';
+    } else if (currentTime < openingTime) {
+      nextOpening = '11:00 AM';
+    } else {
+      nextOpening = '11:00 AM Tomorrow';
+    }
+
+    // Simple busy level based on time
+    let busyLevel = 'low';
+    if (isCurrentlyOpen) {
+      if ((currentTime >= 12.0 && currentTime <= 14.0) || 
+          (currentTime >= 18.0 && currentTime <= 20.0)) {
+        busyLevel = 'high';
+      } else if ((currentTime >= 11.0 && currentTime < 12.0) ||
+                 (currentTime >= 14.0 && currentTime < 18.0) ||
+                 (currentTime >= 20.0 && currentTime < 22.0)) {
+        busyLevel = 'medium';
+      }
+    }
+
+    return {
+      isOpen: isCurrentlyOpen,
+      busyLevel,
+      nextClosing,
+      nextOpening,
+      currentTime: now,
+      liveData: false,
+      lastUpdated: new Date(),
+      dataSources: ['time-based-fallback']
+    };
+  }, []);
+
+  // Real-time restaurant status updates
+  useEffect(() => {
+    const updateRestaurantStatus = async () => {
+      const status = await fetchRealRestaurantData();
+      setRestaurantStatus(status);
+    };
+
+    // Update immediately
+    updateRestaurantStatus();
+    
+    // Update every 2 minutes when using real data, every 5 minutes for fallback
+    const updateInterval = DATA_SOURCES.googlePlaces.enabled || 
+                          DATA_SOURCES.yelp.enabled || 
+                          DATA_SOURCES.posSystem.enabled ? 120000 : 300000;
+    
+    const interval = setInterval(updateRestaurantStatus, updateInterval);
+    
+    return () => clearInterval(interval);
+  }, [fetchRealRestaurantData]);
   
   const router = useRouter();
+
+  // Get real-time status icon based on current status
+  const getStatusIcon = useCallback((isOpen, busyLevel) => {
+    if (!isOpen) return '🔴'; // Closed
+    
+    switch (busyLevel) {
+      case 'low': return '🟢'; // Green - Low activity
+      case 'medium': return '🟡'; // Yellow - Medium activity  
+      case 'high': return '🟠'; // Orange - High activity
+      case 'very-high': return '🔴'; // Red - Very high activity
+      default: return '🟢';
+    }
+  }, []);
 
   // Handle scroll effects
   useEffect(() => {
@@ -112,14 +424,11 @@ const NatureVillageWebsite = () => {
       if (showLanguageDropdown && !event.target.closest('.language-dropdown')) {
         setShowLanguageDropdown(false);
       }
-      if (showOrderModal && !event.target.closest('.order-modal')) {
-        setShowOrderModal(false);
-      }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [showLanguageDropdown, showOrderModal]);
+  }, [showLanguageDropdown]);
 
   // Sync language with query param and handle document attributes safely
   useEffect(() => {
@@ -151,17 +460,17 @@ const NatureVillageWebsite = () => {
     }
   }, [router]);
 
-  // Kurdish pattern SVG for decorative elements
-  const KurdishPattern = () => (
+  // Middle Eastern pattern SVG for decorative elements
+  const MiddleEasternPattern = () => (
     <svg className="absolute opacity-5 w-full h-full" viewBox="0 0 400 400">
       <defs>
-        <pattern id="kurdishPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+        <pattern id="middleEasternPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
           <rect width="50" height="50" fill="#8B4513"/>
           <polygon points="25,5 45,25 25,45 5,25" fill="#D2B48C"/>
           <circle cx="25" cy="25" r="8" fill="#6B8E23"/>
         </pattern>
       </defs>
-      <rect width="400" height="400" fill="url(#kurdishPattern)"/>
+      <rect width="400" height="400" fill="url(#middleEasternPattern)"/>
     </svg>
   );
 
@@ -177,7 +486,7 @@ const NatureVillageWebsite = () => {
       likes: 127,
       featured: true,
       story: {
-        en: 'Our warm and inviting dining space reflects Kurdish hospitality',
+        en: 'Our warm and inviting dining space reflects Middle Eastern hospitality',
         ku: 'شوێنی خواردنی گەرم و بانگهێشتکارمان ڕەنگدانەوەی میوانداری کوردی دەکات'
       }
     },
@@ -185,13 +494,13 @@ const NatureVillageWebsite = () => {
       id: 2,
       src: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&h=300&fit=crop',
-      alt: { en: 'Authentic Kurdish Kebab', ku: 'کەبابی ڕەسەنی کوردی', ar: 'كباب كردي أصيل' },
+      alt: { en: 'Authentic Middle Eastern Kebab', ku: 'کەبابی ڕەسەنی ناوەڕاستی ئاسیا', ar: 'كباب شرق أوسطي أصيل' },
       category: 'dishes',
       tags: ['kebab', 'grilled', 'signature'],
       likes: 245,
       featured: true,
       story: {
-        en: 'Hand-crafted kebabs using traditional Kurdish spices and techniques',
+        en: 'Hand-crafted kebabs using traditional Middle Eastern spices and techniques',
         ku: 'کەبابی دەستکرد بە بەکارهێنانی بەهارات و تەکنیکی نەریتی کوردی'
       }
     },
@@ -213,13 +522,13 @@ const NatureVillageWebsite = () => {
       id: 4,
       src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
-      alt: { en: 'Traditional Kurdish Platter', ku: 'پلێتەری نەریتی کوردی', ar: 'طبق كردي تقليدي' },
+      alt: { en: 'Traditional Middle Eastern Platter', ku: 'پلێتەری نەریتی ناوەڕاستی ئاسیا', ar: 'طبق شرق أوسطي تقليدي' },
       category: 'dishes',
       tags: ['traditional', 'mixed', 'authentic'],
       likes: 156,
       featured: true,
       story: {
-        en: 'A celebration of Kurdish culinary heritage in one beautiful platter',
+        en: 'A celebration of Middle Eastern culinary heritage in one beautiful platter',
         ku: 'ئاهەنگێک بۆ میراتی چێشتلێنانی کوردی لە یەک پلێتەری جوان'
       }
     },
@@ -227,13 +536,13 @@ const NatureVillageWebsite = () => {
       id: 5,
       src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop',
-      alt: { en: 'Kurdish Vegetable Medley', ku: 'تێکەڵەی سەوزەی کوردی', ar: 'خليط الخضار الكردي' },
+      alt: { en: 'Middle Eastern Vegetable Medley', ku: 'تێکەڵەی سەوزەی ناوەڕاستی ئاسیا', ar: 'خليط الخضار الشرق أوسطي' },
       category: 'dishes',
       tags: ['vegetables', 'healthy', 'colorful'],
       likes: 134,
       featured: false,
       story: {
-        en: 'Fresh seasonal vegetables prepared with Kurdish herbs and spices',
+        en: 'Fresh seasonal vegetables prepared with Middle Eastern herbs and spices',
         ku: 'سەوزەی وەرزیی تازە کە بە گیا و بەهاراتی کوردی ئامادە کراوە'
       }
     },
@@ -255,7 +564,7 @@ const NatureVillageWebsite = () => {
       id: 7,
       src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&h=300&fit=crop',
-      alt: { en: 'Kurdish Dolma', ku: 'دۆڵمەی کوردی', ar: 'دولمة كردية' },
+      alt: { en: 'Middle Eastern Dolma', ku: 'دۆڵمەی ناوەڕاستی ئاسیا', ar: 'دولمة شرق أوسطية' },
       category: 'dishes',
       tags: ['dolma', 'stuffed', 'traditional'],
       likes: 178,
@@ -269,13 +578,13 @@ const NatureVillageWebsite = () => {
       id: 8,
       src: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop',
-      alt: { en: 'Hearty Kurdish Soup', ku: 'شۆربەی بەهێزی کوردی', ar: 'حساء كردي مغذي' },
+      alt: { en: 'Hearty Middle Eastern Soup', ku: 'شۆربەی بەهێزی ناوەڕاستی ئاسیا', ar: 'حساء شرق أوسطي مغذي' },
       category: 'dishes',
       tags: ['soup', 'comfort', 'warm'],
       likes: 143,
       featured: false,
       story: {
-        en: 'Warming soup made with traditional Kurdish ingredients and love',
+        en: 'Warming soup made with traditional Middle Eastern ingredients and love',
         ku: 'شۆربەی گەرمکەرەوە کە بە پێکهاتەی نەریتی کوردی و خۆشەویستی دروست کراوە'
       }
     }
@@ -429,8 +738,8 @@ const NatureVillageWebsite = () => {
       },
       hero: {
         title: 'Nature Village',
-        subtitle: 'A Taste of Kurdistan in Every Bite',
-        description: 'Experience authentic Kurdish flavors in a warm, traditional setting where every dish tells a story of our rich cultural heritage and culinary traditions passed down through generations.',
+        subtitle: 'A Taste of Middle East in Every Bite',
+        description: 'Experience authentic Middle Eastern flavors in a warm, traditional setting where every dish tells a story of our rich cultural heritage and culinary traditions passed down through generations.',
         cta1: 'View Menu',
         cta2: 'Make Reservation'
       },
@@ -453,11 +762,11 @@ const NatureVillageWebsite = () => {
         title: 'Our Story',
 
         badge: 'Our Story',
-        subtitle: 'Bringing authentic Kurdish flavors and warm hospitality to our community',
-        content: 'Nature Village was born from a dream to share the authentic flavors and warm hospitality of Kurdistan with the world. Our family recipes have been passed down through generations, each dish crafted with love and respect for our cultural traditions. We source the finest ingredients and prepare every meal with the same care and attention that has defined Kurdish hospitality for centuries.',
-        story1: 'Nature Village is dedicated to bringing you the authentic flavors of Kurdish cuisine in a warm and welcoming atmosphere where every guest feels like family.',
-        story2: 'Our chefs are passionate about preparing traditional Kurdish dishes using the finest ingredients and time-honored cooking techniques that celebrate our rich culinary heritage.',
-        quote: 'Every dish is crafted with care and served with the warmth of Kurdish hospitality.',
+        subtitle: 'Bringing authentic Middle Eastern flavors and warm hospitality to our community',
+        content: 'Nature Village was born from a dream to share the authentic flavors and warm hospitality of the Middle East with the world. Our family recipes have been passed down through generations, each dish crafted with love and respect for our cultural traditions. We source the finest ingredients and prepare every meal with the same care and attention that has defined Middle Eastern hospitality for centuries.',
+        story1: 'Nature Village is dedicated to bringing you the authentic flavors of Middle Eastern cuisine in a warm and welcoming atmosphere where every guest feels like family.',
+        story2: 'Our chefs are passionate about preparing traditional Middle Eastern dishes using the finest ingredients and time-honored cooking techniques that celebrate our rich culinary heritage.',
+        quote: 'Every dish is crafted with care and served with the warmth of Middle Eastern hospitality.',
         experience: 'Years Experience',
         recipes: 'Traditional Recipes',
         customers: 'Happy Customers',
@@ -465,7 +774,7 @@ const NatureVillageWebsite = () => {
         features: {
           chefs: {
             title: 'Expert Chefs',
-            description: 'Authentic Kurdish cuisine'
+            description: 'Authentic Middle Eastern cuisine'
           },
           ingredients: {
             title: 'Fresh Ingredients',
@@ -473,7 +782,7 @@ const NatureVillageWebsite = () => {
           },
           service: {
             title: 'Warm Service',
-            description: 'Kurdish hospitality'
+            description: 'Middle Eastern hospitality'
           }
         },
         stats: {
@@ -499,7 +808,7 @@ const NatureVillageWebsite = () => {
         getDirections: 'Get Directions'
       },
       footer: {
-        description: 'Bringing the authentic flavors and warm hospitality of Kurdistan to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.',
+        description: 'Bringing the authentic flavors and warm hospitality of the Middle East to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.',
         quickLinks: 'Quick Links',
         contactInfo: 'Contact Information',
         followUs: 'Follow Us',
@@ -507,7 +816,7 @@ const NatureVillageWebsite = () => {
         poweredBy: 'Powered by',
         blunari: 'Blunari',
 
-        copyright: `© ${new Date().getFullYear()} Nature Village Kurdish Restaurant. All rights reserved.`,
+        copyright: `© ${new Date().getFullYear()} Nature Village Middle Eastern Restaurant. All rights reserved.`,
         privacy: 'Privacy Policy',
         terms: 'Terms of Service'
       },
@@ -527,7 +836,7 @@ const NatureVillageWebsite = () => {
       reviews: {
         title: 'What Our Guests Say',
         subtitle: 'Rated 4.8/5 stars by 572+ happy customers on Google Reviews',
-        cta: 'Join 572+ satisfied customers who love our authentic cuisine! Book your table today and taste the difference that authentic Kurdish hospitality makes.',
+        cta: 'Join 572+ satisfied customers who love our authentic cuisine! Book your table today and taste the difference that authentic Middle Eastern hospitality makes.',
         ctaButton: 'Book Your Table Now',
         ctaTitle: 'Ready to Create Your Own 5-Star Experience?',
         trustIndicators: {
@@ -562,11 +871,11 @@ const NatureVillageWebsite = () => {
 
       featured: {
         title: 'Featured Dishes',
-        subtitle: 'Discover our most beloved Kurdish specialties, crafted with traditional recipes and modern presentation'
+        subtitle: 'Discover our most beloved Middle Eastern specialties, crafted with traditional recipes and modern presentation'
       },
       celebration: {
         title: 'Celebrate Your Special Moments',
-        subtitle: 'Make your birthdays, anniversaries, and special occasions unforgettable with authentic Kurdish hospitality',
+        subtitle: 'Make your birthdays, anniversaries, and special occasions unforgettable with authentic Middle Eastern hospitality',
 
         familyReunions: 'Family Reunions',
         birthday: {
@@ -588,7 +897,7 @@ const NatureVillageWebsite = () => {
         },
         cta: {
           title: 'Ready to Celebrate?',
-          subtitle: 'Let us make your special day extraordinary with authentic Kurdish hospitality and unforgettable flavors',
+          subtitle: 'Let us make your special day extraordinary with authentic Middle Eastern hospitality and unforgettable flavors',
           reserve: 'Call for special reservation'
         }
       },
@@ -623,8 +932,8 @@ const NatureVillageWebsite = () => {
       },
       hero: {
         title: 'گوندی سروشت',
-        subtitle: 'تامی کوردستان لە هەر پارووەکدا',
-        description: 'تامی ڕەسەنی کوردی بچێژن لە ژینگەیەکی گەرم و نەریتیدا کە هەر خۆراکێک چیرۆکی دەوڵەمەندی کولتووری میراتمان و نەریتە چێشتلێنانەکانمان دەگێڕێتەوە کە لە نەوەوە بۆ نەوە دەردەچن.',
+        subtitle: 'تامی ڕۆژهەڵاتی ناوەڕاست لە هەر پارووەکدا',
+        description: 'تامی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست بچێژن لە ژینگەیەکی گەرم و نەریتیدا کە هەر خۆراکێک چیرۆکی دەوڵەمەندی کولتووری میراتمان و نەریتە چێشتلێنانەکانمان دەگێڕێتەوە کە لە نەوەوە بۆ نەوە دەردەچن.',
         cta1: 'بینینی خۆراک',
         cta2: 'جێگە حیجزکردن'
 
@@ -650,8 +959,8 @@ const NatureVillageWebsite = () => {
         badge: 'چیرۆکەکەمان',
         subtitle: 'تامە ڕەسەنەکان و پێشوازی گەرمی کوردستان بۆ کۆمەڵگاکەمان دەهێنین',
         content: 'گوندی سروشت لە خەونێکەوە لەدایک بووە بۆ هاوبەشکردنی تامە ڕەسەنەکان و پێشوازی گەرمی کوردستان لەگەڵ جیهان. ڕێسەتە خێزانییەکانمان لە نەوەوە بۆ نەوە دەردەچن، هەر خۆراکێک بە خۆشەویستی و ڕێزگرتن لە نەریتە کولتوورییەکانمان دروست دەکرێت.',
-        story1: 'گوندی سروشت بەرپرسە لە هێنانی تامە ڕەسەنەکانی چێشتی کوردی لە کەشێکی گەرم و بەخێرهاتووەوە کە هەر میوانێک وەک خێزان هەست دەکات.',
-        story2: 'چێشتلێنەرەکانمان دڵسۆزن لە ئامادەکردنی خۆراکە نەریتییە کوردییەکان بە بەکارهێنانی باشترین پێکهاتەکان و تەکنیکە کۆنەکانی چێشتلێنان کە میراتی دەوڵەمەندی چێشتلێنانمان ئاهەنگ دەگێڕن.',
+        story1: 'گوندی سروشت بەرپرسە لە هێنانی تامە ڕەسەنەکانی چێشتی ناوەڕاستی ئاسیا لە کەشێکی گەرم و بەخێرهاتووەوە کە هەر میوانێک وەک خێزان هەست دەکات.',
+        story2: 'چێشتلێنەرەکانمان دڵسۆزن لە ئامادەکردنی خۆراکە نەریتییەکانی ناوەڕاستی ئاسیا بە بەکارهێنانی باشترین پێکهاتەکان و تەکنیکە کۆنەکانی چێشتلێنان کە میراتی دەوڵەمەندی چێشتلێنانمان ئاهەنگ دەگێڕن.',
         quote: 'هەر خۆراکێک بە خەمخۆریەوە دروست دەکرێت و بە گەرمی پێشوازی کوردی پێشکەش دەکرێت.',
         experience: 'ساڵ ئەزموون',
         recipes: 'ڕێسەتی نەریتی',
@@ -818,8 +1127,8 @@ const NatureVillageWebsite = () => {
       },
       hero: {
         title: 'قرية الطبيعة',
-        subtitle: 'طعم كردستان في كل قضمة',
-        description: 'اختبر النكهات الكردية الأصيلة في جو دافئ وتقليدي حيث يحكي كل طبق قصة من تراثنا الثقافي الغني وتقاليدنا الطهوية التي تنتقل عبر الأجيال.',
+        subtitle: 'طعم الشرق الأوسط في كل قضمة',
+        description: 'اختبر النكهات الشرق أوسطية الأصيلة في جو دافئ وتقليدي حيث يحكي كل طبق قصة من تراثنا الثقافي الغني وتقاليدنا الطهوية التي تنتقل عبر الأجيال.',
         cta1: 'عرض القائمة',
         cta2: 'حجز طاولة'
       },
@@ -844,8 +1153,8 @@ const NatureVillageWebsite = () => {
         badge: 'قصتنا',
         subtitle: 'نجلب النكهات الكردية الأصيلة والضيافة الدافئة إلى مجتمعنا',
         content: 'ولدت قرية الطبيعة من حلم مشاركة النكهات الأصيلة والضيافة الدافئة لكردستان مع العالم. وصفات عائلتنا تتوارث عبر الأجيال، كل طبق يُحضر بحب واحترام لتقاليدنا الثقافية.',
-        story1: 'قرية الطبيعة مكرسة لتقديم النكهات الأصيلة للمطبخ الكردي في جو دافئ ومرحب حيث يشعر كل ضيف وكأنه في بيته.',
-        story2: 'طهاتنا شغوفون بإعداد الأطباق الكردية التقليدية باستخدام أجود المكونات وتقنيات الطبخ العريقة التي تحتفي بتراثنا الطهوي الغني.',
+        story1: 'قرية الطبيعة مكرسة لتقديم النكهات الأصيلة للمطبخ الشرق أوسطي في جو دافئ ومرحب حيث يشعر كل ضيف وكأنه في بيته.',
+        story2: 'طهاتنا شغوفون بإعداد الأطباق الشرق أوسطية التقليدية باستخدام أجود المكونات وتقنيات الطبخ العريقة التي تحتفي بتراثنا الطهوي الغني.',
         quote: 'كل طبق يُحضر بعناية ويُقدم بدفء الضيافة الكردية.',
         experience: 'سنوات خبرة',
         recipes: 'وصفات تقليدية',
@@ -1008,8 +1317,8 @@ const NatureVillageWebsite = () => {
       },
       hero: {
         title: 'دهکده طبیعت',
-        subtitle: 'طعم کردستان در هر لقمه',
-        description: 'طعم‌های اصیل کردی را در محیطی گرم و سنتی تجربه کنید که هر غذا داستانی از میراث فرهنگی غنی و سنت‌های آشپزی ما می‌گوید.',
+        subtitle: 'طعم خاورمیانه در هر لقمه',
+        description: 'طعم‌های اصیل خاورمیانه را در محیطی گرم و سنتی تجربه کنید که هر غذا داستانی از میراث فرهنگی غنی و سنت‌های آشپزی ما می‌گوید.',
         cta1: 'مشاهده منو',
         cta2: 'رزرو میز'
       },
@@ -1181,8 +1490,8 @@ const NatureVillageWebsite = () => {
       },
       hero: {
         title: 'Nature Village',
-        subtitle: 'Her Lokmada Kürdistan Tadı',
-        description: 'Otantik Kürt lezzetlerini sıcak, geleneksel bir ortamda deneyimleyin.',
+        subtitle: 'Her Lokmada Orta Doğu Tadı',
+        description: 'Otantik Orta Doğu lezzetlerini sıcak, geleneksel bir ortamda deneyimleyin.',
         cta1: 'Menüyü Görüntüle',
         cta2: 'Rezervasyon Yap'
       },
@@ -1356,8 +1665,8 @@ const NatureVillageWebsite = () => {
       },
       hero: {
         title: 'نیچر ولیج',
-        subtitle: 'ہر لقمے میں کردستان کا ذائقہ',
-        description: 'روایتی ماحول میں اصل کرد کھانوں کا تجربہ کریں۔',
+        subtitle: 'ہر لقمے میں مشرق وسطیٰ کا ذائقہ',
+        description: 'روایتی ماحول میں اصل مشرق وسطیٰ کھانوں کا تجربہ کریں۔',
         cta1: 'مینو دیکھیں',
         cta2: 'بکنگ کریں'
       },
@@ -1529,8 +1838,8 @@ const NatureVillageWebsite = () => {
       },
       hero: {
         title: 'Gundê Xwezayê',
-        subtitle: 'Di Her Qurçikê de Tama Kurdistanê',
-        description: 'Tamên resen ên Kurdî di hawîrdorekî germ û kevneşopî de biceribînin.',
+        subtitle: 'Di Her Qurçikê de Tama Rojhilatê Navîn',
+        description: 'Tamên resen ên Rojhilatê Navîn di hawîrdorekî germ û kevneşopî de biceribînin.',
         cta1: 'Menûyê Bibînin',
         cta2: 'Rezervasyon Bikin'
       },
@@ -2073,8 +2382,8 @@ const NatureVillageWebsite = () => {
       },
       hero: {
         title: 'Gundê Xwezayê',
-        subtitle: 'Di Her Qurçikê de Tama Kurdistanê',
-        description: 'Tamên resen ên Kurdî di hawîrdorekî germ û kevneşopî de biceribînin.',
+        subtitle: 'Di Her Qurçikê de Tama Rojhilatê Navîn',
+        description: 'Tamên resen ên Rojhilatê Navîn di hawîrdorekî germ û kevneşopî de biceribînin.',
         cta1: 'Menûyê Bibînin',
         cta2: 'Rezervasyon Bikin'
       },
@@ -2353,9 +2662,13 @@ const NatureVillageWebsite = () => {
     scrollToSection('footer');
   }, []);
 
-  // Online order handler
+  // Online order handler - redirects directly to Slice
   const handleOrderOnline = useCallback(() => {
-    setShowOrderModal(true);
+    try {
+      window.open('https://slicelife.com/restaurants/ga/suwanee/30024/nature-village-restaurant/menu', '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error('Error opening Slice:', error);
+    }
   }, []);
 
   // Delivery platform handlers
@@ -2363,7 +2676,6 @@ const NatureVillageWebsite = () => {
     try {
       // Uber Eats restaurant URL for Nature Village Restaurant
       window.open('https://www.ubereats.com/store/nature-village-restaurant/dR5RyEoLXtarbrxoIn-nqw', '_blank', 'noopener,noreferrer');
-      setShowOrderModal(false);
     } catch (error) {
       console.error('Error opening Uber Eats:', error);
     }
@@ -2373,7 +2685,6 @@ const NatureVillageWebsite = () => {
     try {
       // DoorDash restaurant URL for Nature Village Restaurant
       window.open('https://www.doordash.com/store/nature-village-restaurant-suwanee-28955148/36933361/', '_blank', 'noopener,noreferrer');
-      setShowOrderModal(false);
     } catch (error) {
       console.error('Error opening DoorDash:', error);
     }
@@ -2383,7 +2694,6 @@ const NatureVillageWebsite = () => {
     try {
       // Slice restaurant URL for Nature Village Restaurant
       window.open('https://slicelife.com/restaurants/ga/suwanee/30024/nature-village-restaurant/menu', '_blank', 'noopener,noreferrer');
-      setShowOrderModal(false);
     } catch (error) {
       console.error('Error opening Slice:', error);
     }
@@ -2432,17 +2742,6 @@ const NatureVillageWebsite = () => {
       'very-high': 'text-red-600 bg-red-100'
     };
     return colors[level] || colors.medium;
-  }, []);
-
-  const getStatusIcon = useCallback((isOpen, busyLevel) => {
-    if (!isOpen) return '🔴';
-    switch (busyLevel) {
-      case 'low': return '🟢';
-      case 'medium': return '🟡';
-      case 'high': return '🟠';
-      case 'very-high': return '🔴';
-      default: return '🟡';
-    }
   }, []);
 
   if (!isMounted) {
@@ -2635,11 +2934,11 @@ const NatureVillageWebsite = () => {
 
             {/* Language Toggle & Mobile Menu - Enhanced */}
             <div className={cn('flex items-center space-x-3 flex-shrink-0', isRTL && 'space-x-reverse')}>
-              {/* Order Online Button for Mobile */}
+              {/* Order Online Button for Mobile - HIDDEN (available in burger menu) */}
               <button
                 onClick={handleOrderOnline}
                 className={cn(
-                  'lg:hidden flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
+                  'hidden flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
                   isRTL && 'space-x-reverse'
                 )}
                 aria-label={t.nav?.orderOnline || 'Order'}
@@ -2648,27 +2947,22 @@ const NatureVillageWebsite = () => {
                 <span className="hidden sm:inline font-medium text-xs uppercase tracking-wide whitespace-nowrap">{t.nav?.orderOnline || 'Order'}</span>
               </button>
 
-              {/* Language Selector - Minimal Design */}
+              {/* Language Selector - Visible on all devices */}
               <div className="relative language-dropdown">
                 <button
                   onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
                   className={cn(
-                    'flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white/90 hover:bg-white border border-amber-200 hover:border-amber-300 text-amber-800 hover:text-amber-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1',
+                    'flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-50/90 to-orange-50/90 backdrop-blur-sm hover:bg-white border border-amber-200/60 hover:border-amber-300 text-amber-800 hover:text-amber-900 transition-all duration-300 shadow-sm hover:shadow-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1',
                     isRTL && 'space-x-reverse'
                   )}
                   aria-expanded={showLanguageDropdown}
                   aria-haspopup="listbox"
                   aria-label="Select language"
                 >
-
-                  <span className="text-base" aria-hidden="true">
+                  <span className="text-base drop-shadow-sm" aria-hidden="true">
                     {LANGUAGES[language]?.flag || '🌐'}
                   </span>
-                  <span className="font-medium text-xs uppercase tracking-wide">
-                    {language.toUpperCase()}
-                  </span>
-                  <Globe className="w-4 h-4" aria-hidden="true" />
-                  <span className="font-medium text-xs uppercase tracking-wide">
+                  <span className="font-semibold text-xs uppercase tracking-wide drop-shadow-sm">
                     {language === 'en' ? 'EN' :
                      language === 'ku' ? 'KU' :
                      language === 'ar' ? 'AR' :
@@ -2676,8 +2970,10 @@ const NatureVillageWebsite = () => {
                      language === 'tr' ? 'TR' :
                      language === 'ur' ? 'UR' :
                       'KMR'}
-
                   </span>
+                  <svg className="w-3 h-3 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
                 </button>
 
                 {showLanguageDropdown && (
@@ -2873,16 +3169,6 @@ const NatureVillageWebsite = () => {
 
                             <span className="text-lg mr-2">{lang.flag}</span>
 
-                            <span className="text-lg mr-2">
-                              {code === 'en' && '🇺🇸'}
-                              {code === 'ku' && '☀️'}
-                              {code === 'ar' && '🌙'}
-                              {code === 'fa' && '🇮🇷'}
-                              {code === 'tr' && '🇹🇷'}
-                              {code === 'ur' && '🇵🇰'}
-                              {code === 'kmr' && '⭐'}
-                            </span>
-
                             {lang.name}
                           </span>
                           
@@ -2982,7 +3268,7 @@ const NatureVillageWebsite = () => {
         
         {/* Background Pattern (subtle overlay) */}
         <div className="absolute inset-0 opacity-10">
-          <KurdishPattern />
+          <MiddleEasternPattern />
         </div>
         
         <div className={cn('relative z-10 text-center text-white max-w-6xl mx-auto px-4 sm:px-6 mt-16', rtlClass('', 'text-right'))}>
@@ -2990,10 +3276,10 @@ const NatureVillageWebsite = () => {
             {t.hero?.title || 'Nature Village'}
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl font-light mb-4 text-amber-100">
-            {t.hero?.subtitle || 'A Taste of Kurdistan in Every Bite'}
+            {t.hero?.subtitle || 'A Taste of Middle East in Every Bite'}
           </p>
           <p className="text-sm sm:text-base md:text-lg mb-8 max-w-3xl mx-auto leading-relaxed text-amber-50">
-            {t.hero?.description || 'Experience authentic Kurdish flavors in a warm, traditional setting.'}
+            {t.hero?.description || 'Experience authentic Middle Eastern flavors in a warm, traditional setting.'}
           </p>
           
           {/* Enhanced Mobile CTAs - Reorganized Layout */}
@@ -3026,28 +3312,106 @@ const NatureVillageWebsite = () => {
 
               <span>{t.ui?.callNow || 'Call Now'}</span>
 
-              <span>Call Now</span>
-
             </button>
           </div>
         </div>
-        
-        {/* Minimal Status Indicator - Bottom */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20">
-          <div className="bg-black/30 backdrop-blur-md rounded-full px-3 py-1.5 border border-white/20">
-            <div className="flex items-center gap-1.5 text-xs text-white">
-              <span className="text-xs">{getStatusIcon(restaurantStatus.isOpen, restaurantStatus.busyLevel)}</span>
-              <span className="font-medium">
-                {restaurantStatus.isOpen ? (
-                  <span className="text-green-400">Open</span>
-                ) : (
-                  <span className="text-red-400">Closed</span>
-                )}
-              </span>
+      </section>
+
+      {/* Restaurant Status Indicator Section */}
+      <section className="py-4 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center">
+            <div className="flex items-center gap-6 bg-white/90 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg border border-amber-100/50 hover:shadow-xl transition-all duration-300">
+              
+              {/* Status Indicator */}
+              <div className="flex items-center gap-3">
+                <div className="relative">
+                  <div className={cn(
+                    "w-3 h-3 rounded-full shadow-sm",
+                    restaurantStatus.isOpen ? "bg-green-500" : "bg-red-500"
+                  )}></div>
+                  {restaurantStatus.isOpen && (
+                    <div className={cn(
+                      "absolute inset-0 w-3 h-3 rounded-full animate-ping",
+                      "bg-green-400 opacity-75"
+                    )}></div>
+                  )}
+                  {restaurantStatus.liveData && (
+                    <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full border border-white"></div>
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  <div className="flex items-center gap-2">
+                    <span className={cn(
+                      "font-semibold text-sm",
+                      restaurantStatus.isOpen ? "text-green-700" : "text-red-700"
+                    )}>
+                      {restaurantStatus.isOpen ? 'We\'re Open' : 'Currently Closed'}
+                    </span>
+                    {restaurantStatus.liveData && (
+                      <span className="text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full font-medium">
+                        LIVE
+                      </span>
+                    )}
+                  </div>
+                  {restaurantStatus.isOpen && restaurantStatus.nextClosing && (
+                    <span className="text-xs text-gray-500">
+                      Until {restaurantStatus.nextClosing}
+                    </span>
+                  )}
+                  {!restaurantStatus.isOpen && restaurantStatus.nextOpening && (
+                    <span className="text-xs text-gray-500">
+                      Opens {restaurantStatus.nextOpening}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              {/* Activity Level */}
               {restaurantStatus.isOpen && (
                 <>
-                  <span className="text-white/50">•</span>
-                  <span className="text-white/80">{restaurantStatus.nextClosing}</span>
+                  <div className="w-px h-8 bg-gray-200"></div>
+                  <div className="flex items-center gap-3">
+                    <div className="flex flex-col items-center">
+                      <span className="text-xs text-gray-500 mb-1">Activity</span>
+                      <div className="flex gap-1">
+                        {[1,2,3,4].map((level) => (
+                          <div 
+                            key={level}
+                            className={cn(
+                              "w-1.5 h-4 rounded-full transition-all duration-500 ease-out",
+                              (restaurantStatus.busyLevel === 'low' && level <= 1) ||
+                              (restaurantStatus.busyLevel === 'medium' && level <= 2) ||
+                              (restaurantStatus.busyLevel === 'high' && level <= 3) ||
+                              (restaurantStatus.busyLevel === 'very-high' && level <= 4)
+                                ? "bg-gradient-to-t from-amber-400 via-orange-400 to-red-400 shadow-sm" 
+                                : "bg-gray-200"
+                            )}
+                            style={{
+                              animationDelay: `${level * 100}ms`
+                            }}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className={cn(
+                        "text-sm font-medium capitalize",
+                        restaurantStatus.busyLevel === 'low' && "text-green-600",
+                        restaurantStatus.busyLevel === 'medium' && "text-yellow-600",
+                        restaurantStatus.busyLevel === 'high' && "text-orange-600",
+                        restaurantStatus.busyLevel === 'very-high' && "text-red-600"
+                      )}>
+                        {restaurantStatus.busyLevel.replace('-', ' ')}
+                      </span>
+                      <span className="text-xs text-gray-400">
+                        {restaurantStatus.busyLevel === 'low' && 'Perfect time to visit'}
+                        {restaurantStatus.busyLevel === 'medium' && 'Moderate crowd'}
+                        {restaurantStatus.busyLevel === 'high' && 'Quite busy'}
+                        {restaurantStatus.busyLevel === 'very-high' && 'Very busy period'}
+                      </span>
+                    </div>
+                  </div>
                 </>
               )}
             </div>
@@ -3108,7 +3472,7 @@ const NatureVillageWebsite = () => {
       <section id="about" className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <KurdishPattern />
+          <MiddleEasternPattern />
         </div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -3157,20 +3521,16 @@ const NatureVillageWebsite = () => {
             <div className="order-2">
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  {t.about?.story1 || 'Nature Village is dedicated to bringing you the authentic flavors of Kurdish cuisine in a warm and welcoming atmosphere where every guest feels like family.'}
+                  {t.about?.story1 || 'Nature Village is dedicated to bringing you the authentic flavors of Middle Eastern cuisine in a warm and welcoming atmosphere where every guest feels like family.'}
                 </p>
                 
                 <p className="text-base text-gray-600 leading-relaxed">
-                  {t.about?.story2 || 'Our chefs are passionate about preparing traditional Kurdish dishes using the finest ingredients and time-honored cooking techniques that celebrate our rich culinary heritage.'}
+                  {t.about?.story2 || 'Our chefs are passionate about preparing traditional Middle Eastern dishes using the finest ingredients and time-honored cooking techniques that celebrate our rich culinary heritage.'}
                 </p>
                 
                 <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
                   <p className="text-amber-800 italic font-medium">
-
-                    "{t.about?.quote || 'Every dish is crafted with care and served with the warmth of Kurdish hospitality.'}"
-
-                    "Every dish is crafted with care and served with the warmth of Kurdish hospitality."
-
+                    "{t.about?.quote || 'Every dish is crafted with care and served with the warmth of Middle Eastern hospitality.'}"
                   </p>
                 </div>
               </div>
@@ -3181,81 +3541,52 @@ const NatureVillageWebsite = () => {
                   <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <ChefHat className="w-6 h-6 text-white" />
                   </div>
-
                   <h4 className="font-semibold text-gray-900 mb-1">{t.about?.features?.chefs?.title || 'Expert Chefs'}</h4>
-                  <p className="text-sm text-gray-600">{t.about?.features?.chefs?.description || 'Authentic Kurdish cuisine'}</p>
-
-                  <h4 className="font-semibold text-gray-900 mb-1">Expert Chefs</h4>
-                  <p className="text-sm text-gray-600">Authentic Kurdish cuisine</p>
-
+                  <p className="text-sm text-gray-600">{t.about?.features?.chefs?.description || 'Authentic Middle Eastern cuisine'}</p>
                 </div>
                 
                 <div className="bg-gray-50 rounded-xl p-4 text-center hover:bg-orange-50 transition-colors duration-200">
                   <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Heart className="w-6 h-6 text-white" />
                   </div>
-
                   <h4 className="font-semibold text-gray-900 mb-1">{t.about?.features?.ingredients?.title || 'Fresh Ingredients'}</h4>
                   <p className="text-sm text-gray-600">{t.about?.features?.ingredients?.description || 'Quality sourced daily'}</p>
-
-                  <h4 className="font-semibold text-gray-900 mb-1">Fresh Ingredients</h4>
-                  <p className="text-sm text-gray-600">Quality sourced daily</p>
-
                 </div>
                 
                 <div className="bg-gray-50 rounded-xl p-4 text-center hover:bg-red-50 transition-colors duration-200">
                   <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Users className="w-6 h-6 text-white" />
                   </div>
-
                   <h4 className="font-semibold text-gray-900 mb-1">{t.about?.features?.service?.title || 'Warm Service'}</h4>
-                  <p className="text-sm text-gray-600">{t.about?.features?.service?.description || 'Kurdish hospitality'}</p>
-
-                  <h4 className="font-semibold text-gray-900 mb-1">Warm Service</h4>
-                  <p className="text-sm text-gray-600">Kurdish hospitality</p>
-
+                  <p className="text-sm text-gray-600">{t.about?.features?.service?.description || 'Middle Eastern hospitality'}</p>
                 </div>
               </div>
             </div>
           </div>
-          
-          {/* Clean Statistics */}
+        </div>
+        
+        {/* Clean Statistics */}
+        <div className="mt-16">
           <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 sm:p-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">1000+</div>
-
                 <div className="text-sm font-medium text-gray-700">{t.about?.stats?.happyCustomers || 'Happy Customers'}</div>
-
-                <div className="text-sm font-medium text-gray-700">Happy Customers</div>
-
               </div>
               
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-orange-600 mb-1">50+</div>
-
                 <div className="text-sm font-medium text-gray-700">{t.about?.stats?.authenticDishes || 'Authentic Dishes'}</div>
-
-                <div className="text-sm font-medium text-gray-700">Authentic Dishes</div>
-
               </div>
               
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-red-600 mb-1">4.8★</div>
-
                 <div className="text-sm font-medium text-gray-700">{t.about?.stats?.customerRating || 'Customer Rating'}</div>
-
-                <div className="text-sm font-medium text-gray-700">Customer Rating</div>
-
               </div>
               
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">100%</div>
-
                 <div className="text-sm font-medium text-gray-700">{t.about?.stats?.freshIngredients || 'Fresh Ingredients'}</div>
-
-                <div className="text-sm font-medium text-gray-700">Fresh Ingredients</div>
-
               </div>
             </div>
           </div>
@@ -3548,7 +3879,7 @@ const NatureVillageWebsite = () => {
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-amber-50 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <KurdishPattern />
+          <MiddleEasternPattern />
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -4050,7 +4381,7 @@ const NatureVillageWebsite = () => {
 
         {/* Background decoration */}
         <div className="absolute top-0 right-0 opacity-5">
-          <KurdishPattern />
+          <MiddleEasternPattern />
         </div>
       </footer>
 
@@ -4065,63 +4396,6 @@ const NatureVillageWebsite = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
           </svg>
         </button>
-      )}
-
-      {/* Order Modal */}
-      {showOrderModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999] p-4">
-          <div className="order-modal bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 transform transition-all duration-300 scale-100">
-            <div className="p-6">
-              {/* Modal Header */}
-              <div className="flex justify-between items-center mb-4">
-
-                <h3 className="text-2xl font-bold text-gray-800">{t.ui?.orderOnline || 'Order Online'}</h3>
-
-                <button
-                  onClick={() => setShowOrderModal(false)}
-                  className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
-                  aria-label="Close modal"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Modal Content */}
-              <p className="text-gray-600 mb-6 text-center">
-                Choose your preferred delivery platform for pickup or delivery
-              </p>
-              
-              {/* Delivery Platform Buttons */}
-              <div className="space-y-3">
-                {/* Uber Eats Button */}
-                <button
-                  onClick={handleUberEats}
-                  className="w-full bg-black text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
-                >
-                  Uber Eats
-                </button>
-
-                {/* DoorDash Button */}
-                <button
-                  onClick={handleDoorDash}
-                  className="w-full bg-red-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-                >
-                  DoorDash
-                </button>
-
-                {/* Slice Button */}
-                <button
-                  onClick={handleSlice}
-                  className="w-full bg-orange-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
-                >
-                  Slice
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       )}
       </div>
     </>

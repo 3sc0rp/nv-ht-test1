@@ -36,7 +36,7 @@ export function generateMenuJsonLD(menuSections: MenuSection[], language: Langua
     description: 'Authentic Middle Eastern cuisine with traditional flavors and modern presentation',
     url: `${baseUrl}/menu${language !== 'en' ? `?lang=${language}` : ''}`,
     telephone: '+1-xxx-xxx-xxxx',
-    servesCuisine: ['Middle Eastern', 'Kurdish', 'Turkish', 'Arabic'],
+    servesCuisine: ['Middle Eastern', 'Turkish', 'Arabic'],
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Your Street Address',
