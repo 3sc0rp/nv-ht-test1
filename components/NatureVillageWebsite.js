@@ -3679,12 +3679,12 @@ const NatureVillageWebsite = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8">
               {/* Birthday Celebrations */}
               <div className="group text-center transform hover:scale-105 transition-all duration-500">
-                <div className="relative bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-amber-400/50 transition-all duration-500 overflow-hidden min-h-[400px] flex flex-col justify-between">
+                <div className="relative bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-amber-400/50 transition-all duration-500 overflow-hidden flex flex-col justify-between">
                   {/* Floating particles inside card - positioned in corners away from text */}
                   <div className="absolute top-4 right-4 text-amber-300 text-lg opacity-40 animate-float hidden sm:block">🎈</div>
                   <div className="absolute bottom-4 left-4 text-yellow-300 text-sm opacity-30 animate-float hidden sm:block">✨</div>
                   
-                  <div>
+                  <div className="mb-6">
                     {/* Enhanced icon with glow */}
                     <div className="relative mb-4">
                       <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-orange-400 rounded-full blur-2xl opacity-20 scale-150"></div>
@@ -3694,7 +3694,7 @@ const NatureVillageWebsite = () => {
                     <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-3 group-hover:text-amber-200 transition-colors duration-300">
                       {t.celebration?.birthday?.title || 'Birthday Celebrations'}
                     </h3>
-                    <p className="text-white/70 mb-6 text-lg italic">
+                    <p className="text-white/70 text-lg italic">
                       {t.celebration?.birthday?.tagline || 'Sweet moments made special'}
                     </p>
                   </div>
@@ -3712,12 +3712,12 @@ const NatureVillageWebsite = () => {
 
               {/* Anniversary Celebrations */}
               <div className="group text-center transform hover:scale-105 transition-all duration-500">
-                <div className="relative bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-rose-400/50 transition-all duration-500 overflow-hidden min-h-[400px] flex flex-col justify-between">
+                <div className="relative bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-rose-400/50 transition-all duration-500 overflow-hidden flex flex-col justify-between">
                   {/* Floating particles inside card */}
                   <div className="absolute top-4 right-4 text-rose-300 text-lg opacity-50 animate-float" style={{animationDelay: '0.5s'}}>🌹</div>
                   <div className="absolute bottom-4 left-4 text-pink-300 text-sm opacity-40 animate-float" style={{animationDelay: '1.5s'}}>💕</div>
                   
-                  <div>
+                  <div className="mb-6">
                     {/* Enhanced icon with glow */}
                     <div className="relative mb-4">
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-2xl opacity-20 scale-150"></div>
@@ -3727,7 +3727,7 @@ const NatureVillageWebsite = () => {
                     <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-3 group-hover:text-rose-200 transition-colors duration-300">
                       {t.celebration?.anniversary?.title || 'Anniversary Dinners'}
                     </h3>
-                    <p className="text-white/70 mb-6 text-lg italic">
+                    <p className="text-white/70 text-lg italic">
                       {t.celebration?.anniversary?.tagline || 'Celebrate your love story'}
                     </p>
                   </div>
