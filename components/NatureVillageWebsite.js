@@ -488,21 +488,21 @@ const NatureVillageWebsite = () => {
       featured: true,
       story: {
         en: 'Our warm and inviting dining space reflects Middle Eastern hospitality',
-        ku: 'شوێنی خواردنی گەرم و بانگهێشتکارمان ڕەنگدانەوەی میوانداری ناوەڕاستی ئاسیا دەکات'
+        ku: 'شوێنی خواردنی گەرم و بانگهێشتکارمان ڕەنگدانەوەی میوانداری ڕۆژهەڵاتی ناوەڕاست دەکات'
       }
     },
     {
       id: 2,
       src: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&h=300&fit=crop',
-      alt: { en: 'Authentic Middle Eastern Kebab', ku: 'کەبابی ڕەسەنی ناوەڕاستی ئاسیا', ar: 'كباب شرق أوسطي أصيل' },
+      alt: { en: 'Authentic Middle Eastern Kebab', ku: 'کەبابی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست', ar: 'كباب شرق أوسطي أصيل' },
       category: 'dishes',
       tags: ['kebab', 'grilled', 'signature'],
       likes: 245,
       featured: true,
       story: {
         en: 'Hand-crafted kebabs using traditional Middle Eastern spices and techniques',
-        ku: 'کەبابی دەستکرد بە بەکارهێنانی بەهارات و تەکنیکی نەریتی ناوەڕاستی ئاسیا'
+        ku: 'کەبابی دەستکرد بە بەکارهێنانی بەهارات و تەکنیکی نەریتی ڕۆژهەڵاتی ناوەڕاست'
       }
     },
     {
@@ -523,28 +523,28 @@ const NatureVillageWebsite = () => {
       id: 4,
       src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
-      alt: { en: 'Traditional Middle Eastern Platter', ku: 'پلێتەری نەریتی ناوەڕاستی ئاسیا', ar: 'طبق شرق أوسطي تقليدي' },
+      alt: { en: 'Traditional Middle Eastern Platter', ku: 'پلێتەری نەریتی ڕۆژهەڵاتی ناوەڕاست', ar: 'طبق شرق أوسطي تقليدي' },
       category: 'dishes',
       tags: ['traditional', 'mixed', 'authentic'],
       likes: 156,
       featured: true,
       story: {
         en: 'A celebration of Middle Eastern culinary heritage in one beautiful platter',
-        ku: 'ئاهەنگێک بۆ میراتی چێشتلێنانی ناوەڕاستی ئاسیا لە یەک پلێتەری جوان'
+        ku: 'ئاهەنگێک بۆ میراتی چێشتلێنانی ڕۆژهەڵاتی ناوەڕاست لە یەک پلێتەری جوان'
       }
     },
     {
       id: 5,
       src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop',
-      alt: { en: 'Middle Eastern Vegetable Medley', ku: 'تێکەڵەی سەوزەی ناوەڕاستی ئاسیا', ar: 'خليط الخضار الشرق أوسطي' },
+      alt: { en: 'Middle Eastern Vegetable Medley', ku: 'تێکەڵەی سەوزەی ڕۆژهەڵاتی ناوەڕاست', ar: 'خليط الخضار الشرق أوسطي' },
       category: 'dishes',
       tags: ['vegetables', 'healthy', 'colorful'],
       likes: 134,
       featured: false,
       story: {
         en: 'Fresh seasonal vegetables prepared with Middle Eastern herbs and spices',
-        ku: 'سەوزەی وەرزیی تازە کە بە گیا و بەهاراتی ناوەڕاستی ئاسیا ئامادە کراوە'
+        ku: 'سەوزەی وەرزیی تازە کە بە گیا و بەهاراتی ڕۆژهەڵاتی ناوەڕاست ئامادە کراوە'
       }
     },
     {
@@ -565,7 +565,7 @@ const NatureVillageWebsite = () => {
       id: 7,
       src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&h=300&fit=crop',
-      alt: { en: 'Middle Eastern Dolma', ku: 'دۆڵمەی ناوەڕاستی ئاسیا', ar: 'دولمة شرق أوسطية' },
+      alt: { en: 'Middle Eastern Dolma', ku: 'دۆڵمەی ڕۆژهەڵاتی ناوەڕاست', ar: 'دولمة شرق أوسطية' },
       category: 'dishes',
       tags: ['dolma', 'stuffed', 'traditional'],
       likes: 178,
@@ -579,14 +579,14 @@ const NatureVillageWebsite = () => {
       id: 8,
       src: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop',
-      alt: { en: 'Hearty Middle Eastern Soup', ku: 'شۆربەی بەهێزی ناوەڕاستی ئاسیا', ar: 'حساء شرق أوسطي مغذي' },
+      alt: { en: 'Hearty Middle Eastern Soup', ku: 'شۆربەی بەهێزی ڕۆژهەڵاتی ناوەڕاست', ar: 'حساء شرق أوسطي مغذي' },
       category: 'dishes',
       tags: ['soup', 'comfort', 'warm'],
       likes: 143,
       featured: false,
       story: {
         en: 'Warming soup made with traditional Middle Eastern ingredients and love',
-        ku: 'شۆربەی گەرمکەرەوە کە بە پێکهاتەی نەریتی ناوەڕاستی ئاسیا و خۆشەویستی دروست کراوە'
+        ku: 'شۆربەی گەرمکەرەوە کە بە پێکهاتەی نەریتی ڕۆژهەڵاتی ناوەڕاست و خۆشەویستی دروست کراوە'
       }
     }
   ], []);
@@ -946,10 +946,10 @@ const NatureVillageWebsite = () => {
         title: 'چیرۆکەکەمان',
 
         badge: 'چیرۆکەکەمان',
-        subtitle: 'تامە ڕەسەنەکان و پێشوازی گەرمی ناوەڕاستی ئاسیا بۆ کۆمەڵگاکەمان دەهێنین',
-        content: 'گوندی سروشت لە خەونێکەوە لەدایک بووە بۆ هاوبەشکردنی تامە ڕەسەنەکان و پێشوازی گەرمی ناوەڕاستی ئاسیا لەگەڵ جیهان. ڕێسەتە خێزانییەکانمان لە نەوەوە بۆ نەوە دەردەچن، هەر خۆراکێک بە خۆشەویستی و ڕێزگرتن لە نەریتە کولتوورییەکانمان دروست دەکرێت.',
-        story1: 'گوندی سروشت بەرپرسە لە هێنانی تامە ڕەسەنەکانی چێشتی ناوەڕاستی ئاسیا لە کەشێکی گەرم و بەخێرهاتووەوە کە هەر میوانێک وەک خێزان هەست دەکات.',
-        story2: 'چێشتلێنەرەکانمان دڵسۆزن لە ئامادەکردنی خۆراکە نەریتییەکانی ناوەڕاستی ئاسیا بە بەکارهێنانی باشترین پێکهاتەکان و تەکنیکە کۆنەکانی چێشتلێنان کە میراتی دەوڵەمەندی چێشتلێنانمان ئاهەنگ دەگێڕن.',
+        subtitle: 'تامە ڕەسەنەکان و پێشوازی گەرمی ڕۆژهەڵاتی ناوەڕاست بۆ کۆمەڵگاکەمان دەهێنین',
+        content: 'گوندی سروشت لە خەونێکەوە لەدایک بووە بۆ هاوبەشکردنی تامە ڕەسەنەکان و پێشوازی گەرمی ڕۆژهەڵاتی ناوەڕاست لەگەڵ جیهان. ڕێسەتە خێزانییەکانمان لە نەوەوە بۆ نەوە دەردەچن، هەر خۆراکێک بە خۆشەویستی و ڕێزگرتن لە نەریتە کولتوورییەکانمان دروست دەکرێت.',
+        story1: 'گوندی سروشت بەرپرسە لە هێنانی تامە ڕەسەنەکانی چێشتی ڕۆژهەڵاتی ناوەڕاست لە کەشێکی گەرم و بەخێرهاتووەوە کە هەر میوانێک وەک خێزان هەست دەکات.',
+        story2: 'چێشتلێنەرەکانمان دڵسۆزن لە ئامادەکردنی خۆراکە نەریتییەکانی ڕۆژهەڵاتی ناوەڕاست بە بەکارهێنانی باشترین پێکهاتەکان و تەکنیکە کۆنەکانی چێشتلێنان کە میراتی دەوڵەمەندی چێشتلێنانمان ئاهەنگ دەگێڕن.',
         quote: 'هەر خۆراکێک بە خەمخۆریەوە دروست دەکرێت و بە گەرمی پێشوازی کوردی پێشکەش دەکرێت.',
         experience: 'ساڵ ئەزموون',
         recipes: 'ڕێسەتی نەریتی',
