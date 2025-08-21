@@ -38,7 +38,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'Gallery'
       },
       ku: {
-        description: 'تامە ڕەسەنەکان و پێشوازی گەرمی کوردستان بۆ مێزەکەتان دەهێنین. هەر خۆراکێک ئاهەنگێکە بۆ میراتی دەوڵەمەند و باشی چێشتلێنانمان.',
+        description: 'تامە ڕەسەنەکان و پێشوازی گەرمی ناوەڕاستی ئاسیا بۆ مێزەکەتان دەهێنین. هەر خۆراکێک ئاهەنگێکە بۆ میراتی دەوڵەمەند و باشی چێشتلێنانمان.',
         quickLinks: 'بەستەرە خێراکان',
         contactInfo: 'زانیاری پەیوەندی',
         openDaily: 'یەکشەممە - پێنجشەممە: ١٢ - ١٠ شەو\nهەینی - شەممە: ١٢ - ١١ شەو',
@@ -54,7 +54,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'وێنەکان'
       },
       ar: {
-        description: 'نجلب النكهات الأصيلة والضيافة الدافئة من كردستان إلى طاولتك. كل طبق احتفال بتراثنا الثقافي الغني وتميزنا الطهوي.',
+        description: 'نجلب النكهات الأصيلة والضيافة الدافئة من الشرق الأوسط إلى طاولتك. كل طبق احتفال بتراثنا الثقافي الغني وتميزنا الطهوي.',
         quickLinks: 'روابط سريعة',
         contactInfo: 'معلومات الاتصال',
         openDaily: 'الأحد - الخميس: ١٢ ظهراً - ١٠ مساءً\nالجمعة - السبت: ١٢ ظهراً - ١١ مساءً',
@@ -70,7 +70,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'المعرض'
       },
       fa: {
-        description: 'طعم‌های اصیل و مهمان‌نوازی گرم کردستان را به میز شما می‌آوریم. هر غذا جشنی از میراث فرهنگی غنی و برتری آشپزی ما است.',
+        description: 'طعم‌های اصیل و مهمان‌نوازی گرم خاورمیانه را به میز شما می‌آوریم. هر غذا جشنی از میراث فرهنگی غنی و برتری آشپزی ما است.',
         quickLinks: 'لینک‌های سریع',
         contactInfo: 'اطلاعات تماس',
         openDaily: 'یکشنبه - پنج‌شنبه: ١٢ - ١٠ شب\nجمعه - شنبه: ١٢ - ١١ شب',
@@ -86,7 +86,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'گالری'
       },
       tr: {
-        description: 'Kürdistan\'ın otantik lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz. Her yemek, zengin kültürel mirasımızın ve mutfak mükemmelliğimizin bir kutlamasıdır.',
+        description: 'Orta Doğu\'nun otantik lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz. Her yemek, zengin kültürel mirasımızın ve mutfak mükemmelliğimizin bir kutlamasıdır.',
         quickLinks: 'Hızlı Bağlantılar',
         contactInfo: 'İletişim Bilgileri',
         openDaily: 'PAZ - PER: 12:00 - 22:00\nCUM - CTS: 12:00 - 23:00',
@@ -102,7 +102,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'Galeri'
       },
       ur: {
-        description: 'کردستان کے اصل ذائقے اور گرم مہمان نوازی آپ کی میز تک لا رہے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور پاک فن کی بہترین مثال ہے۔',
+        description: 'مشرق وسطیٰ کے اصل ذائقے اور گرم مہمان نوازی آپ کی میز تک لا رہے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور پاک فن کی بہترین مثال ہے۔',
         quickLinks: 'فوری لنکس',
         contactInfo: 'رابطہ کی معلومات',
         openDaily: 'اتوار - جمعرات: ١٢ دوپہر - ١٠ رات\nجمعہ - ہفتہ: ١٢ دوپہر - ١١ رات',
@@ -118,7 +118,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'گیلری'
       },
       kmr: {
-        description: 'Tamên resen û mêvandariya germ a Kurdistanê tînin ser maseyê we. Her xwarinê pîrozbahiya çanda me ya dewlemend û başiya çêştlênanê ye.',
+        description: 'Tamên resen û mêvandariya germ a Rojhilata Navîn tînin ser maseyê we. Her xwarinê pîrozbahiya çanda me ya dewlemend û başiya çêştlênanê ye.',
         quickLinks: 'Girêdanên Bilez',
         contactInfo: 'Agahdariya Têkiliyê',
         openDaily: 'YEK - PÊN: 12:00 - 22:00\nÎN - ŞEM: 12:00 - 23:00',
@@ -134,7 +134,7 @@ const Footer = ({ language = 'en' }) => {
         gallery: 'Galerî'
       },
       ru: {
-        description: 'Приносим аутентичные вкусы и теплое гостеприимство Курдистана к вашему столу. Каждое блюдо - это праздник нашего богатого культурного наследия и кулинарного мастерства.',
+        description: 'Приносим аутентичные вкусы и теплое гостеприимство Ближнего Востока к вашему столу. Каждое блюдо - это праздник нашего богатого культурного наследия и кулинарного мастерства.',
         quickLinks: 'Быстрые ссылки',
         contactInfo: 'Контактная информация',
         openDaily: 'ВС - ЧТ: 12:00 - 22:00\nПТ - СБ: 12:00 - 23:00',
