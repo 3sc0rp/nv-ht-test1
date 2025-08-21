@@ -22,7 +22,7 @@ const Footer = ({ language = 'en' }) => {
   const getFooterText = (key) => {
     const footerTranslations = {
       en: {
-        description: 'Bringing the authentic flavors and warm hospitality of Kurdistan to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.',
+        description: 'Bringing the authentic flavors and warm hospitality of the Middle East to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.',
         quickLinks: 'Quick Links',
         contactInfo: 'Contact Information',
         openDaily: 'SUN - THU: 12 PM - 10 PM\nFRI - SAT: 12 PM - 11 PM',
@@ -219,7 +219,7 @@ const Footer = ({ language = 'en' }) => {
             </p>
             <div className={cn('flex space-x-4', isRTL && 'space-x-reverse')}>
               <a 
-                href="https://www.facebook.com/profile.php?id=61553675771574" 
+                href="https://www.facebook.com/profile.php?id=61579243538732" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-amber-200 hover:text-white transition-colors p-2 hover:bg-amber-700 rounded-full"

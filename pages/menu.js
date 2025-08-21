@@ -16,6 +16,7 @@ import { useReducedMotion } from '../lib/menu/useReducedMotion'
 import { generateMenuJsonLD } from '../lib/menu/jsonld'
 
 import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 
 
@@ -809,7 +810,7 @@ const FullMenuPage = () => {
       popularSectionTitle: 'Our Most Popular Dishes',
       scrollDownText: 'Scroll down to explore menu',
       footer: {
-        description: 'Bringing the authentic flavors and warm hospitality of Kurdistan to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.',
+        description: 'Bringing the authentic flavors and warm hospitality of the Middle East to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.',
         quickLinks: 'Quick Links',
         contactInfo: 'Contact Information',
         privacy: 'Privacy Policy',
@@ -3396,7 +3397,7 @@ const FullMenuPage = () => {
               {/* Social Media Links - Minimal Design */}
               <div className="hidden lg:flex items-center space-x-2 flex-shrink-0">
                 <a 
-                  href="https://www.facebook.com/profile.php?id=61553675771574" 
+                  href="https://www.facebook.com/profile.php?id=61579243538732" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg text-amber-700 hover:text-amber-800 hover:bg-amber-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1"
@@ -3664,7 +3665,7 @@ const FullMenuPage = () => {
                 <div className="mt-8 pt-6 border-t border-amber-200/70">
                   <div className="flex items-center justify-center space-x-6">
                     <a 
-                      href="https://www.facebook.com/profile.php?id=61553675771574" 
+                      href="https://www.facebook.com/profile.php?id=61579243538732" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="group p-3 rounded-full text-amber-700 hover:text-white hover:bg-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
