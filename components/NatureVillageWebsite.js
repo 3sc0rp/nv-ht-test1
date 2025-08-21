@@ -3785,9 +3785,9 @@ const NatureVillageWebsite = () => {
                   <span>📞</span>
                 </div>
                 
-                <div className="text-white/70 text-sm flex items-center justify-center gap-2">
-                  <span className="text-amber-300">💡</span>
-                  <span>Book 48 hours in advance for the best celebration experience</span>
+                <div className="text-white/70 text-sm sm:text-base flex items-center justify-center gap-2 px-4">
+                  <span className="text-amber-300 text-base sm:text-lg flex-shrink-0">💡</span>
+                  <span className="text-center">Book 48 hours in advance for the best celebration experience</span>
                 </div>
               </div>
             </div>
