@@ -3768,8 +3768,6 @@ const NatureVillageWebsite = () => {
 
                 <div className="text-white font-medium group-hover:text-blue-200 transition-colors duration-300 text-sm lg:text-base">{t.celebration?.familyReunions || 'Family Reunions'}</div>
 
-                <div className="text-white font-medium group-hover:text-blue-200 transition-colors duration-300 text-sm lg:text-base">Family Reunions</div>
-
               </div>
               <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-green-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                 <div className="relative mb-4">
