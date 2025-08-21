@@ -440,7 +440,15 @@ const Header = ({ currentPage = '' }) => {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-semibold text-amber-800 flex items-center">
                       <Globe className="w-5 h-5 mr-2" />
-                      Language
+                      {language === 'ar' ? 'اللغة' :
+                       language === 'ku' ? 'زمان' :
+                       language === 'fa' ? 'زبان' :
+                       language === 'tr' ? 'Dil' :
+                       language === 'ur' ? 'زبان' :
+                       language === 'kmr' ? 'Ziman' :
+                       language === 'ru' ? 'Язык' :
+                       language === 'hi' ? 'भाषा' :
+                       'Language'}
                     </h3>
                     <span className="text-sm text-amber-600 font-medium px-3 py-1 bg-amber-100 rounded-full">
                       {language.toUpperCase()}

@@ -817,7 +817,8 @@ const NatureVillageWebsite = () => {
         currentlyClosed: 'Currently Closed',
         live: 'LIVE',
         until: 'Until',
-        opens: 'Opens'
+        opens: 'Opens',
+        activity: 'Activity'
       },
       reviews: {
         title: 'What Our Guests Say',
@@ -864,6 +865,9 @@ const NatureVillageWebsite = () => {
         subtitle: 'Make your birthdays, anniversaries, and special occasions unforgettable with authentic Middle Eastern hospitality',
 
         familyReunions: 'Family Reunions',
+        graduations: 'Graduations',
+        engagements: 'Engagements', 
+        holidays: 'Holidays',
         birthday: {
           title: 'Birthday Celebrations',
           tagline: 'Sweet moments made special',
@@ -2993,7 +2997,7 @@ const NatureVillageWebsite = () => {
                   <div className="w-px h-8 bg-gray-200"></div>
                   <div className="flex items-center gap-3">
                     <div className="flex flex-col items-center">
-                      <span className="text-xs text-gray-500 mb-1">Activity</span>
+                      <span className="text-xs text-gray-500 mb-1">{t.ui?.activity || 'Activity'}</span>
                       <div className="flex gap-1">
                         {[1,2,3,4].map((level) => (
                           <div 
@@ -3353,14 +3357,14 @@ const NatureVillageWebsite = () => {
                   <div className="absolute inset-0 bg-amber-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative text-3xl lg:text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🎓</div>
                 </div>
-                <div className="text-white font-medium group-hover:text-amber-200 transition-colors duration-300 text-sm lg:text-base">Graduations</div>
+                <div className="text-white font-medium group-hover:text-amber-200 transition-colors duration-300 text-sm lg:text-base">{t.celebration?.graduations || 'Graduations'}</div>
               </div>
               <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-pink-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                 <div className="relative mb-4">
                   <div className="absolute inset-0 bg-pink-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative text-3xl lg:text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">💍</div>
                 </div>
-                <div className="text-white font-medium group-hover:text-pink-200 transition-colors duration-300 text-sm lg:text-base">Engagements</div>
+                <div className="text-white font-medium group-hover:text-pink-200 transition-colors duration-300 text-sm lg:text-base">{t.celebration?.engagements || 'Engagements'}</div>
               </div>
               <div className="group text-center p-5 lg:p-6 bg-gradient-to-br from-white/10 to-white/15 rounded-2xl border border-white/15 hover:border-blue-400/40 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                 <div className="relative mb-4">
@@ -3376,7 +3380,7 @@ const NatureVillageWebsite = () => {
                   <div className="absolute inset-0 bg-green-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative text-3xl lg:text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🎄</div>
                 </div>
-                <div className="text-white font-medium group-hover:text-green-200 transition-colors duration-300 text-sm lg:text-base">Holidays</div>
+                <div className="text-white font-medium group-hover:text-green-200 transition-colors duration-300 text-sm lg:text-base">{t.celebration?.holidays || 'Holidays'}</div>
               </div>
             </div>
 
@@ -3471,7 +3475,7 @@ const NatureVillageWebsite = () => {
             <div className="flex flex-wrap justify-center gap-8 sm:gap-12 mt-12">
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-amber-800">572+</div>
-                <div className="text-sm sm:text-base text-amber-600 font-medium">Happy Customers</div>
+                <div className="text-sm sm:text-base text-amber-600 font-medium">{t.about?.stats?.happyCustomers || 'Happy Customers'}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-amber-800">4.8★</div>
