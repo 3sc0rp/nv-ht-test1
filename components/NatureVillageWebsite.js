@@ -809,7 +809,14 @@ const NatureVillageWebsite = () => {
         fiveStarReviews: '5-Star Reviews',
         verifiedPurchase: 'Verified Purchase',
         trustedReviewer: 'Trusted Reviewer',
-        foodEnthusiast: 'Food Enthusiast'
+        foodEnthusiast: 'Food Enthusiast',
+        menu: 'Menu',
+        reserve: 'Reserve',
+        weAreOpen: 'We\'re Open',
+        currentlyClosed: 'Currently Closed',
+        live: 'LIVE',
+        until: 'Until',
+        opens: 'Opens'
       },
       reviews: {
         title: 'What Our Guests Say',
@@ -992,7 +999,14 @@ const NatureVillageWebsite = () => {
         fiveStarReviews: 'پێداچوونەوەی ٥ ئەستێرە',
         verifiedPurchase: 'کڕینی دڵنیاکراو',
         trustedReviewer: 'پێداچوونەوەی متمانەپێکراو',
-        foodEnthusiast: 'حەزلێکەری خۆراک'
+        foodEnthusiast: 'حەزلێکەری خۆراک',
+        menu: 'خۆراک',
+        reserve: 'حیجزکردن',
+        weAreOpen: 'کراوەین',
+        currentlyClosed: 'ئێستا داخراوین',
+        live: 'زیندوو',
+        until: 'تا',
+        opens: 'دەکرێتەوە'
       },
       reviews: {
         title: 'میوانەکانمان چی دەڵێن',
@@ -1173,7 +1187,14 @@ const NatureVillageWebsite = () => {
         fiveStarReviews: 'مراجعات ٥ نجوم',
         verifiedPurchase: 'شراء موثق',
         trustedReviewer: 'مراجع موثوق',
-        foodEnthusiast: 'عاشق الطعام'
+        foodEnthusiast: 'عاشق الطعام',
+        menu: 'القائمة',
+        reserve: 'احجز',
+        weAreOpen: 'نحن مفتوحون',
+        currentlyClosed: 'مغلق حالياً',
+        live: 'مباشر',
+        until: 'حتى',
+        opens: 'يفتح'
       },
       reviews: {
         title: 'ماذا يقول ضيوفنا',
@@ -2821,7 +2842,7 @@ const NatureVillageWebsite = () => {
                 className="group w-28 sm:w-auto bg-transparent border-2 border-amber-400/80 text-amber-200 hover:bg-amber-400/10 hover:border-amber-300 hover:text-amber-100 px-3 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-medium backdrop-blur-sm transition-all duration-200 flex items-center justify-center gap-1.5 min-h-[40px]"
               >
                 <ChefHat className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                <span>Menu</span>
+                <span>{t.ui?.menu || 'Menu'}</span>
               </button>
               
               <button 
@@ -2829,7 +2850,7 @@ const NatureVillageWebsite = () => {
                 className="group w-28 sm:w-auto bg-transparent border-2 border-white/60 text-white hover:bg-white/10 hover:border-white hover:text-white px-3 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-medium backdrop-blur-sm transition-all duration-200 flex items-center justify-center gap-1.5 min-h-[40px]"
               >
                 <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                <span>Reserve</span>
+                <span>{t.ui?.reserve || 'Reserve'}</span>
               </button>
             </div>
             
@@ -2876,22 +2897,22 @@ const NatureVillageWebsite = () => {
                       "font-semibold text-sm",
                       restaurantStatus.isOpen ? "text-green-700" : "text-red-700"
                     )}>
-                      {restaurantStatus.isOpen ? 'We\'re Open' : 'Currently Closed'}
+                      {restaurantStatus.isOpen ? (t.ui?.weAreOpen || 'We\'re Open') : (t.ui?.currentlyClosed || 'Currently Closed')}
                     </span>
                     {restaurantStatus.liveData && (
                       <span className="text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full font-medium">
-                        LIVE
+                        {t.ui?.live || 'LIVE'}
                       </span>
                     )}
                   </div>
                   {restaurantStatus.isOpen && restaurantStatus.nextClosing && (
                     <span className="text-xs text-gray-500">
-                      Until {restaurantStatus.nextClosing}
+                      {t.ui?.until || 'Until'} {restaurantStatus.nextClosing}
                     </span>
                   )}
                   {!restaurantStatus.isOpen && restaurantStatus.nextOpening && (
                     <span className="text-xs text-gray-500">
-                      Opens {restaurantStatus.nextOpening}
+                      {t.ui?.opens || 'Opens'} {restaurantStatus.nextOpening}
                     </span>
                   )}
                 </div>
