@@ -6,14 +6,14 @@ import {
   Home, Utensils, Info, Camera, MapPin, Calendar, Users, Phone, ExternalLink, Share2
 } from 'lucide-react';
 import { LANGUAGES, getText, updateDocumentLanguage } from '../lib/i18n';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const Header = ({ language, setLanguage, currentPage = '' }) => {
+const Header = ({ currentPage = '' }) => {
+  const { language, setLanguage, isRTL } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
-
-  const isRTL = LANGUAGES[language]?.dir === 'rtl';
 
   // Handle scroll effects
   useEffect(() => {
@@ -24,17 +24,6 @@ const Header = ({ language, setLanguage, currentPage = '' }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Handle language change
-  const handleLanguageChange = (newLanguage) => {
-    setLanguage(newLanguage);
-    updateDocumentLanguage(newLanguage);
-    
-    // Update URL with language parameter
-    const currentPath = router.asPath.split('?')[0];
-    const newUrl = newLanguage === 'en' ? currentPath : `${currentPath}?lang=${newLanguage}`;
-    router.replace(newUrl, undefined, { shallow: true });
-  };
 
   // Navigation items
   const navigationItems = [
@@ -313,7 +302,7 @@ const Header = ({ language, setLanguage, currentPage = '' }) => {
                     <button
                       key={code}
                       onClick={() => {
-                        handleLanguageChange(code);
+                        setLanguage(code);
                         setShowLanguageDropdown(false);
                       }}
                       className={cn(

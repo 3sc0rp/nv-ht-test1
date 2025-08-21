@@ -12,6 +12,7 @@ import Image from 'next/image'
 import { Menu, X, Globe, Filter, Phone, Search, Clock, Star, MapPin, Facebook, Instagram, MessageCircle, ChefHat, ChevronDown, ChevronRight, Home, Utensils, Info, Camera, Calendar, Users, ExternalLink, Share2 } from 'lucide-react'
 import { useRouter } from 'next/router'
 import { LANGUAGES, getText as tGet, updateDocumentLanguage, generateHreflangAlternates } from '../lib/i18n'
+import { useLanguage } from '../contexts/LanguageContext'
 import { useReducedMotion } from '../lib/menu/useReducedMotion'
 import { generateMenuJsonLD } from '../lib/menu/jsonld'
 
@@ -21,8 +22,8 @@ import Header from '../components/Header'
 
 
 const FullMenuPage = () => {
+  const { language, setLanguage, isRTL } = useLanguage();
   const router = useRouter()
-  const [language, setLanguage] = useState('en')
   const [activeFilter, setActiveFilter] = useState('all')
   const [currentSection, setCurrentSection] = useState('menu')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -160,22 +161,6 @@ const FullMenuPage = () => {
     }
   }, [router.query.lang, language, isMounted]);
 
-  const handleLanguageChange = useCallback((next) => {
-    try {
-      if (!languages[next]) {
-        console.warn('Invalid language code:', next);
-        return;
-      }
-      
-      setLanguage(next);
-      updateDocumentLanguage(next);
-      const url = { pathname: router.pathname, query: { ...router.query, lang: next } };
-      router.replace(url, undefined, { shallow: true });
-    } catch (error) {
-      console.error('Error changing language:', error);
-    }
-  }, [router, language]);
-
   // Navigation handler for menu page
   const scrollToSection = useCallback((sectionId) => {
     try {
@@ -248,8 +233,6 @@ const FullMenuPage = () => {
   const cn = (...classes) => {
     return classes.filter(Boolean).join(' ');
   };
-
-  const isRTL = languages[language]?.dir === 'rtl';
 
   const rtlClass = (ltrClass, rtlClass = '') => {
     return isRTL ? rtlClass : ltrClass;
@@ -3327,7 +3310,7 @@ const FullMenuPage = () => {
         }
       `}</style>
       <div className="min-h-screen bg-white pt-20 sm:pt-24" style={{ direction: languages[language]?.dir || 'ltr' }}>
-        <Header language={language} setLanguage={setLanguage} currentPage="menu" />
+        <Header currentPage="menu" />
 
         {/* Rest of the menu page content */}
         <main id="main-content" className="relative" role="main">
@@ -3913,7 +3896,7 @@ const FullMenuPage = () => {
         
         {/* Footer */}
   {/* Shared Footer */}
-  <Footer language={language} />
+  <Footer />
 
         {/* Order Online Modal */}
         {showOrderModal && (

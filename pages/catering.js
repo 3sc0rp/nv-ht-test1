@@ -9,20 +9,14 @@ import {
   Phone as PhoneIcon,
   ChefHat
 } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // Import components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-// Language configuration
-const LANGUAGES = {
-  en: { name: 'English', dir: 'ltr' },
-  ku: { name: 'کوردی', dir: 'rtl' },
-  ar: { name: 'العربية', dir: 'rtl' }
-};
-
 const CateringPage = () => {
-  const [language, setLanguage] = useState('en');
+  const { language, isRTL } = useLanguage();
 
   const translations = {
     en: {
@@ -55,7 +49,6 @@ const CateringPage = () => {
   };
 
   const t = translations[language];
-  const isRTL = LANGUAGES[language].dir === 'rtl';
 
   return (
     <>
@@ -65,8 +58,8 @@ const CateringPage = () => {
         <meta name="robots" content="noindex, nofollow" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100" style={{ direction: LANGUAGES[language].dir }}>
-        <Header language={language} setLanguage={setLanguage} currentPage="catering" />
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100" style={{ direction: isRTL ? 'rtl' : 'ltr' }}>
+        <Header currentPage="catering" />
 
         <div className="pt-24 pb-12">
           <div className="max-w-2xl mx-auto px-4">
@@ -139,7 +132,7 @@ const CateringPage = () => {
           </div>
         </div>
 
-        <Footer language={language} />
+        <Footer />
       </div>
     </>
   );

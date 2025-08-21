@@ -2,13 +2,14 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Menu, X, MapPin, Phone, Clock, Star, Filter, Globe, Facebook, Instagram, ChefHat, Users, Calendar, Award, ChevronRight, Home, Utensils, Info, Camera, ExternalLink, Share2, ChevronDown, Grid, Heart, Eye, Share, ZoomIn, Download, Truck, Shield } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { LANGUAGES, getText, updateDocumentLanguage } from '../lib/i18n';
+import { useLanguage } from '../contexts/LanguageContext';
 import Footer from './Footer';
 import Header from './Header';
 
 const NatureVillageWebsite = () => {
+  const { language, setLanguage, isRTL } = useLanguage();
   const [currentSection, setCurrentSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('en');
   const [activeFilter, setActiveFilter] = useState('popular');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -448,19 +449,6 @@ const NatureVillageWebsite = () => {
       console.error('Error setting language:', error);
     }
   }, [router.query.lang, language, isMounted]);
-
-  const handleLanguageChange = useCallback((next) => {
-    try {
-      if (!LANGUAGES[next]) return;
-      
-      setLanguage(next);
-      updateDocumentLanguage(next);
-      const url = { pathname: router.pathname, query: { ...router.query, lang: next } };
-      router.replace(url, undefined, { shallow: true });
-    } catch (error) {
-      console.error('Error changing language:', error);
-    }
-  }, [router]);
 
   // Middle Eastern pattern SVG for decorative elements
   const MiddleEasternPattern = () => (
@@ -2589,8 +2577,6 @@ const NatureVillageWebsite = () => {
       return [];
     }
   }, [activeFilter, menuItems]);
-
-  const isRTL = LANGUAGES[language || 'en']?.dir === 'rtl';
   // Safe Blunari link handler
   const handleBlunariClick = useCallback(() => {
     try {
@@ -2781,7 +2767,7 @@ const NatureVillageWebsite = () => {
         }
       `}</style>
       <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50" style={{ direction: LANGUAGES[language || 'en']?.dir || 'ltr' }}>
-      <Header language={language} setLanguage={setLanguage} currentPage="home" />
+      <Header currentPage="home" />
       {/* Hero Section */}
       <section id="home" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
         {/* Video Background */}
@@ -3066,7 +3052,7 @@ const NatureVillageWebsite = () => {
                 
                 <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
                   <p className="text-amber-800 italic font-medium">
-                    "{t.about?.quote || 'Every dish is crafted with care and served with the warmth of Middle Eastern hospitality.'}"
+                    &quot;{t.about?.quote || 'Every dish is crafted with care and served with the warmth of Middle Eastern hospitality.'}&quot;
                   </p>
                 </div>
               </div>
@@ -3663,7 +3649,7 @@ const NatureVillageWebsite = () => {
       </section>
 
       {/* Universal Footer Component */}
-      <Footer language={language} />
+      <Footer />
 
       {/* Scroll to top button */}
       {isScrolled && (

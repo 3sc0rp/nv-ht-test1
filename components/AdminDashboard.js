@@ -138,7 +138,7 @@ const AdminDashboard = () => {
         <div className="bg-white p-6 rounded-lg shadow border">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-600">Today's Reservations</p>
+              <p className="text-sm font-medium text-gray-600">Today&apos;s Reservations</p>
               <p className="text-2xl font-bold text-gray-900">{stats.todayReservations || 0}</p>
             </div>
             <Calendar className="w-8 h-8 text-blue-600" />

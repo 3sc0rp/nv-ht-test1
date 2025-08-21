@@ -8,20 +8,14 @@ import {
   Clock,
   Phone as PhoneIcon
 } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // Import components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-// Language configuration
-const LANGUAGES = {
-  en: { name: 'English', dir: 'ltr' },
-  ku: { name: 'کوردی', dir: 'rtl' },
-  ar: { name: 'العربية', dir: 'rtl' }
-};
-
 const ReservationPage = () => {
-  const [language, setLanguage] = useState('en');
+  const { language, isRTL } = useLanguage();
 
   const translations = {
     en: {
@@ -54,7 +48,6 @@ const ReservationPage = () => {
   };
 
   const t = translations[language];
-  const isRTL = LANGUAGES[language].dir === 'rtl';
 
   return (
     <>
@@ -64,8 +57,8 @@ const ReservationPage = () => {
         <meta name="robots" content="noindex, nofollow" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100" style={{ direction: LANGUAGES[language].dir }}>
-        <Header language={language} setLanguage={setLanguage} currentPage="reservations" />
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100" style={{ direction: isRTL ? 'rtl' : 'ltr' }}>
+        <Header currentPage="reservations" />
 
         <div className="pt-24 pb-12">
           <div className="max-w-2xl mx-auto px-4">
@@ -138,7 +131,7 @@ const ReservationPage = () => {
           </div>
         </div>
 
-        <Footer language={language} />
+        <Footer />
       </div>
     </>
   );

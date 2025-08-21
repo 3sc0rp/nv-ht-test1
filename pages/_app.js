@@ -1,9 +1,10 @@
 import '../styles/globals.css'
 import Head from 'next/head'
+import { LanguageProvider } from '../contexts/LanguageContext'
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <LanguageProvider>
       <Head>
         <title>Nature Village - Middle Eastern Restaurant</title>
         <meta name="description" content="Experience authentic Middle Eastern flavors at Nature Village. Traditional recipes, warm hospitality, and cultural heritage in every dish." />
@@ -15,6 +16,6 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="website" />
       </Head>
       <Component {...pageProps} />
-    </>
+    </LanguageProvider>
   )
 }

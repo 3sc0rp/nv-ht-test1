@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Facebook, Instagram, MapPin, Phone, Clock } from 'lucide-react';
 import { LANGUAGES, getText } from '../lib/i18n';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const KurdishPattern = () => (
   <svg width="200" height="200" viewBox="0 0 200 200" className="opacity-20">
@@ -15,8 +16,8 @@ const KurdishPattern = () => (
   </svg>
 );
 
-const Footer = ({ language = 'en' }) => {
-  const isRTL = LANGUAGES[language]?.dir === 'rtl';
+const Footer = () => {
+  const { language, isRTL } = useLanguage();
 
   // Footer translations
   const getFooterText = (key) => {
