@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { Menu, X, MapPin, Phone, Clock, Star, Filter, Globe, Facebook, Instagram, ChefHat, Users, Calendar, Award, ChevronRight, Home, Utensils, Info, Camera, ExternalLink, Share2, ChevronDown, Grid, Heart, Eye, Share, ZoomIn, Download, Truck } from 'lucide-react';
+import { Menu, X, MapPin, Phone, Clock, Star, Filter, Globe, Facebook, Instagram, ChefHat, Users, Calendar, Award, ChevronRight, Home, Utensils, Info, Camera, ExternalLink, Share2, ChevronDown, Grid, Heart, Eye, Share, ZoomIn, Download, Truck, Shield } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { LANGUAGES, getText, updateDocumentLanguage } from '../lib/i18n';
 
@@ -826,6 +826,7 @@ const NatureVillageWebsite = () => {
         orderOnline: 'Order Online',
         restaurant: 'Restaurant',
         familyOwned: 'Family Owned',
+        halalCertified: 'Halal Certified',
         googleReviews: 'Google Reviews',
         averageRating: 'Average Rating',
         fiveStarReviews: '5-Star Reviews',
@@ -1021,6 +1022,7 @@ const NatureVillageWebsite = () => {
         orderOnline: 'داواکاری ئۆنلاین',
         restaurant: 'چێشتخانە',
         familyOwned: 'خاوەن خێزانی',
+        halalCertified: 'بەڵگەنامەی حەلاڵ',
         googleReviews: 'پێداچوونەوەی گووگڵ',
         averageRating: 'ناوەندی هەڵسەنگاندن',
         fiveStarReviews: 'پێداچوونەوەی ٥ ئەستێرە',
@@ -1213,6 +1215,7 @@ const NatureVillageWebsite = () => {
         orderOnline: 'اطلب أونلاين',
         restaurant: 'مطعم',
         familyOwned: 'مملوك عائلياً',
+        halalCertified: 'معتمد حلال',
         googleReviews: 'مراجعات جوجل',
         averageRating: 'متوسط التقييم',
         fiveStarReviews: 'مراجعات ٥ نجوم',
@@ -1409,6 +1412,7 @@ const NatureVillageWebsite = () => {
         orderOnline: 'سفارش آنلاین',
         restaurant: 'رستوران',
         familyOwned: 'خانوادگی',
+        halalCertified: 'گواهی حلال',
         googleReviews: 'نظرات گوگل',
         averageRating: 'میانگین امتیاز',
         fiveStarReviews: 'نظرات ۵ ستاره',
@@ -1582,6 +1586,7 @@ const NatureVillageWebsite = () => {
         orderOnline: 'Online Sipariş',
         restaurant: 'Restoran',
         familyOwned: 'Aile İşletmesi',
+        halalCertified: 'Helal Sertifikalı',
         googleReviews: 'Google Yorumları',
         averageRating: 'Ortalama Puan',
         fiveStarReviews: '5 Yıldız Yorumlar',
@@ -1756,6 +1761,7 @@ const NatureVillageWebsite = () => {
         orderOnline: 'آن لائن آرڈر',
         restaurant: 'ریسٹوران',
         familyOwned: 'خاندانی ملکیت',
+        halalCertified: 'حلال سرٹیفائیڈ',
         googleReviews: 'گوگل ریویوز',
         averageRating: 'اوسط درجہ بندی',
         fiveStarReviews: '۵ ستارہ ریویوز',
@@ -3779,15 +3785,15 @@ const NatureVillageWebsite = () => {
                   {t.celebration?.cta?.subtitle || 'Let us make your special day extraordinary with authentic Middle Eastern hospitality and unforgettable flavors'}
                 </p>
                 
-                <div className="text-white text-lg lg:text-xl font-semibold mb-4 flex items-center justify-center gap-2">
+                <div className="text-white text-lg lg:text-xl font-semibold mb-6 flex items-center justify-center gap-2">
                   <span>📞</span>
                   <span>{t.celebration?.cta?.reserve || 'Call for special reservation'}</span>
                   <span>📞</span>
                 </div>
                 
-                <div className="text-white/70 text-xs sm:text-sm md:text-base flex items-start justify-center gap-3 px-6 max-w-md mx-auto">
-                  <span className="text-amber-300 text-lg sm:text-xl flex-shrink-0 mt-0.5">💡</span>
-                  <span className="text-left leading-relaxed">Book 48 hours in advance for the best celebration experience</span>
+                <div className="text-white/70 text-xs sm:text-sm flex items-center justify-center gap-2 px-2 sm:px-4 max-w-full">
+                  <span className="text-amber-300 text-base sm:text-lg flex-shrink-0">💡</span>
+                  <span className="whitespace-nowrap text-center">Book 48 hours in advance for the best celebration experience</span>
                 </div>
               </div>
             </div>
@@ -3828,8 +3834,6 @@ const NatureVillageWebsite = () => {
 
                 <span className="text-sm font-medium text-gray-700">{t.ui?.googleReviews || 'Google Reviews'}</span>
 
-                <span className="text-sm font-medium text-gray-700">Google Reviews</span>
-
                 <div className="flex items-center gap-1 ml-2">
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
@@ -3857,19 +3861,11 @@ const NatureVillageWebsite = () => {
               </div>
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-amber-800">4.8★</div>
-
                 <div className="text-sm sm:text-base text-amber-600 font-medium">{t.ui?.averageRating || 'Average Rating'}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-amber-800">93%</div>
                 <div className="text-sm sm:text-base text-amber-600 font-medium">{t.ui?.fiveStarReviews || '5-Star Reviews'}</div>
-
-                <div className="text-sm sm:text-base text-amber-600 font-medium">Average Rating</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-amber-800">93%</div>
-                <div className="text-sm sm:text-base text-amber-600 font-medium">5-Star Reviews</div>
-
               </div>
             </div>
           </div>
@@ -3879,11 +3875,7 @@ const NatureVillageWebsite = () => {
             <div className="group bg-white rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 relative overflow-hidden border border-amber-100">
               {/* Featured Badge */}
               <div className="absolute top-0 right-0 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-bl-2xl text-xs font-bold">
-
                 {t.reviews?.badges?.featured || 'FEATURED'}
-
-                FEATURED
-
               </div>
               
               <div className="flex items-center mb-6">
@@ -3893,11 +3885,7 @@ const NatureVillageWebsite = () => {
                   ))}
                 </div>
                 <span className="text-lg font-bold text-gray-800">5.0</span>
-
                 <span className="text-sm text-gray-500 ml-2">• {t.reviews?.review1?.time || '1 week ago'}</span>
-
-                <span className="text-sm text-gray-500 ml-2">• 1 week ago</span>
-
               </div>
               
               <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-medium">
@@ -3917,11 +3905,7 @@ const NatureVillageWebsite = () => {
                   </div>
                   <div className="flex items-center gap-1 mt-1">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-
                     <span className="text-xs text-gray-500">{t.ui?.verifiedPurchase || 'Verified Purchase'}</span>
-
-                    <span className="text-xs text-gray-500">Verified Purchase</span>
-
                   </div>
                 </div>
               </div>
@@ -3932,11 +3916,7 @@ const NatureVillageWebsite = () => {
               {/* Local Guide Badge */}
               <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                 <Users className="w-3 h-3" />
-
                 {t.reviews?.badges?.localGuide || 'LOCAL GUIDE'}
-
-                LOCAL GUIDE
-
               </div>
               
               <div className="flex items-center mb-6">
@@ -3946,11 +3926,7 @@ const NatureVillageWebsite = () => {
                   ))}
                 </div>
                 <span className="text-lg font-bold text-gray-800">5.0</span>
-
                 <span className="text-sm text-gray-500 ml-2">• {t.reviews?.review2?.time || '2 months ago'}</span>
-
-                <span className="text-sm text-gray-500 ml-2">• 2 months ago</span>
-
               </div>
               
               <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-medium">
@@ -3971,11 +3947,7 @@ const NatureVillageWebsite = () => {
                   </div>
                   <div className="flex items-center gap-1 mt-1">
                     <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-
                     <span className="text-xs text-gray-500">{t.ui?.trustedReviewer || 'Trusted Reviewer'}</span>
-
-                    <span className="text-xs text-gray-500">Trusted Reviewer</span>
-
                   </div>
                 </div>
               </div>
@@ -3986,11 +3958,7 @@ const NatureVillageWebsite = () => {
               {/* Dish Highlight */}
               <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                 <ChefHat className="w-3 h-3" />
-
                 {t.reviews?.badges?.quziLover || 'QUZI LOVER'}
-
-                QUZI LOVER
-
               </div>
               
               <div className="flex items-center mb-6">
@@ -4000,11 +3968,7 @@ const NatureVillageWebsite = () => {
                   ))}
                 </div>
                 <span className="text-lg font-bold text-gray-800">5.0</span>
-
                 <span className="text-sm text-gray-500 ml-2">• {t.reviews?.review3?.time || 'Recent'}</span>
-
-                <span className="text-sm text-gray-500 ml-2">• Recent</span>
-
               </div>
               
               <blockquote className="text-gray-800 text-base leading-relaxed mb-8 font-medium">
@@ -4025,11 +3989,7 @@ const NatureVillageWebsite = () => {
                   <div className="flex items-center gap-2 mt-1">
                     <div className="flex items-center gap-1">
                       <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-
                       <span className="text-xs text-gray-500">{t.ui?.foodEnthusiast || 'Food Enthusiast'}</span>
-
-                      <span className="text-xs text-gray-500">Food Enthusiast</span>
-
                     </div>
                   </div>
                 </div>
@@ -4041,11 +4001,7 @@ const NatureVillageWebsite = () => {
           <div className="text-center mt-16 sm:mt-20">
             <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-8 sm:p-12 border border-amber-200 shadow-lg">
               <h3 className="text-2xl sm:text-3xl font-serif font-bold text-amber-800 mb-4">
-
                 {t.reviews?.ctaTitle || 'Ready to Create Your Own 5-Star Experience?'}
-
-                Ready to Create Your Own 5-Star Experience?
-
               </h3>
               <p className="text-base sm:text-lg text-amber-700 mb-8 max-w-2xl mx-auto">
                 {t.reviews?.cta || 'Join 572+ satisfied customers who love our authentic cuisine! Book your table today and taste the difference that authentic Middle Eastern hospitality makes.'}
@@ -4074,7 +4030,6 @@ const NatureVillageWebsite = () => {
               <div className="flex flex-wrap justify-center items-center gap-6 mt-8 text-sm text-amber-600">
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4" />
-
                   <span>{t.reviews?.trustIndicators?.googleRating || '4.8★ Google Rating'}</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -4084,17 +4039,10 @@ const NatureVillageWebsite = () => {
                 <div className="flex items-center gap-2">
                   <Heart className="w-4 h-4" />
                   <span>{t.ui?.familyOwned || 'Family Owned'}</span>
-
-                  <span>4.8★ Google Rating</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Users className="w-4 h-4" />
-                  <span>572+ Reviews</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Heart className="w-4 h-4" />
-                  <span>Family Owned</span>
-
+                  <Shield className="w-4 h-4" />
+                  <span>{t.ui?.halalCertified || 'Halal Certified'}</span>
                 </div>
               </div>
             </div>
@@ -4194,11 +4142,7 @@ const NatureVillageWebsite = () => {
                 <h3 className="text-xl sm:text-2xl font-serif font-bold">Nature Village</h3>
               </div>
               <p className="text-amber-200 mb-6 leading-relaxed text-sm sm:text-base">
-
                 {t.footer?.description || 'Bringing the authentic flavors and warm hospitality of the Middle East to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.'}
-
-                {t.footer?.description || 'Bringing authentic Kurdish flavors to your table.'}
-
               </p>
               <div className={cn('flex space-x-4', isRTL && 'space-x-reverse')}>
                 <a 
