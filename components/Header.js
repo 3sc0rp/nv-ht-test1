@@ -269,8 +269,8 @@ const Header = ({ language, setLanguage, currentPage = '' }) => {
 
           {/* Language Toggle & Mobile Menu */}
           <div className={cn('flex items-center space-x-3 flex-shrink-0', isRTL && 'space-x-reverse')}>
-            {/* Order Online Button for Mobile */}
-            <button
+            {/* Order Online Button for Mobile - Hidden since it's in burger menu */}
+            {/* <button
               onClick={handleOrderOnline}
               className={cn(
                 'lg:hidden flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
@@ -280,7 +280,7 @@ const Header = ({ language, setLanguage, currentPage = '' }) => {
             >
               <ChefHat className="w-4 h-4" aria-hidden="true" />
               <span className="hidden sm:inline font-medium text-xs uppercase tracking-wide whitespace-nowrap">{getNavText('orderOnline')}</span>
-            </button>
+            </button> */}
 
             {/* Language Selector */}
             <div className="relative language-dropdown">
