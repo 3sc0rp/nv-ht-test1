@@ -470,35 +470,37 @@ const NatureVillageWebsite = () => {
       id: 1,
       src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop',
-      alt: { en: 'Elegant Restaurant Interior', ku: 'ناوەوەی چێشتخانەی جوان', ar: 'داخل المطعم الأنيق' },
+      alt: { en: 'Elegant Restaurant Interior', ku: 'ناوەوەی چێشتخانەی جوان', ar: 'داخل المطعم الأنيق', es: 'Elegante Interior del Restaurante' },
       category: 'atmosphere',
       tags: ['interior', 'ambiance', 'dining'],
       likes: 127,
       featured: true,
       story: {
         en: 'Our warm and inviting dining space reflects Middle Eastern hospitality',
-        ku: 'شوێنی خواردنی گەرم و بانگهێشتکارمان ڕەنگدانەوەی میوانداری ڕۆژهەڵاتی ناوەڕاست دەکات'
+        ku: 'شوێنی خواردنی گەرم و بانگهێشتکارمان ڕەنگدانەوەی میوانداری ڕۆژهەڵاتی ناوەڕاست دەکات',
+        es: 'Nuestro espacio de comedor cálido y acogedor refleja la hospitalidad del Medio Oriente'
       }
     },
     {
       id: 2,
       src: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&h=300&fit=crop',
-      alt: { en: 'Authentic Middle Eastern Kebab', ku: 'کەبابی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست', ar: 'كباب شرق أوسطي أصيل' },
+      alt: { en: 'Authentic Middle Eastern Kebab', ku: 'کەبابی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست', ar: 'كباب شرق أوسطي أصيل', es: 'Auténtico Kebab del Medio Oriente' },
       category: 'dishes',
       tags: ['kebab', 'grilled', 'signature'],
       likes: 245,
       featured: true,
       story: {
         en: 'Hand-crafted kebabs using traditional Middle Eastern spices and techniques',
-        ku: 'کەبابی دەستکرد بە بەکارهێنانی بەهارات و تەکنیکی نەریتی ڕۆژهەڵاتی ناوەڕاست'
+        ku: 'کەبابی دەستکرد بە بەکارهێنانی بەهارات و تەکنیکی نەریتی ڕۆژهەڵاتی ناوەڕاست',
+        es: 'Kebabs hechos a mano usando especias y técnicas tradicionales del Medio Oriente'
       }
     },
     {
       id: 3,
       src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop',
-      alt: { en: 'Fresh Hummus with Pita', ku: 'حومسی تازە لەگەڵ نانی پیتا', ar: 'حمص طازج مع الخبز' },
+      alt: { en: 'Fresh Hummus with Pita', ku: 'حومسی تازە لەگەڵ نانی پیتا', ar: 'حمص طازج مع الخبز', es: 'Hummus Fresco con Pita' },
       category: 'dishes',
       tags: ['hummus', 'appetizer', 'vegetarian'],
       likes: 189,
@@ -512,7 +514,7 @@ const NatureVillageWebsite = () => {
       id: 4,
       src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
-      alt: { en: 'Traditional Middle Eastern Platter', ku: 'پلێتەری نەریتی ڕۆژهەڵاتی ناوەڕاست', ar: 'طبق شرق أوسطي تقليدي' },
+      alt: { en: 'Traditional Middle Eastern Platter', ku: 'پلێتەری نەریتی ڕۆژهەڵاتی ناوەڕاست', ar: 'طبق شرق أوسطي تقليدي', es: 'Plato Tradicional del Medio Oriente' },
       category: 'dishes',
       tags: ['traditional', 'mixed', 'authentic'],
       likes: 156,
@@ -526,7 +528,7 @@ const NatureVillageWebsite = () => {
       id: 5,
       src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop',
-      alt: { en: 'Middle Eastern Vegetable Medley', ku: 'تێکەڵەی سەوزەی ڕۆژهەڵاتی ناوەڕاست', ar: 'خليط الخضار الشرق أوسطي' },
+      alt: { en: 'Middle Eastern Vegetable Medley', ku: 'تێکەڵەی سەوزەی ڕۆژهەڵاتی ناوەڕاست', ar: 'خليط الخضار الشرق أوسطي', es: 'Mezcla de Vegetales del Medio Oriente' },
       category: 'dishes',
       tags: ['vegetables', 'healthy', 'colorful'],
       likes: 134,
@@ -540,7 +542,7 @@ const NatureVillageWebsite = () => {
       id: 6,
       src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop',
-      alt: { en: 'Traditional Baklava', ku: 'بەقڵاوای نەریتی', ar: 'بقلاوة تقليدية' },
+      alt: { en: 'Traditional Baklava', ku: 'بەقڵاوای نەریتی', ar: 'بقلاوة تقليدية', es: 'Baklava Tradicional' },
       category: 'desserts',
       tags: ['baklava', 'sweet', 'pastry'],
       likes: 201,
@@ -554,7 +556,7 @@ const NatureVillageWebsite = () => {
       id: 7,
       src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&h=300&fit=crop',
-      alt: { en: 'Middle Eastern Dolma', ku: 'دۆڵمەی ڕۆژهەڵاتی ناوەڕاست', ar: 'دولمة شرق أوسطية' },
+      alt: { en: 'Middle Eastern Dolma', ku: 'دۆڵمەی ڕۆژهەڵاتی ناوەڕاست', ar: 'دولمة شرق أوسطية', es: 'Dolma del Medio Oriente' },
       category: 'dishes',
       tags: ['dolma', 'stuffed', 'traditional'],
       likes: 178,
@@ -568,7 +570,7 @@ const NatureVillageWebsite = () => {
       id: 8,
       src: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop',
-      alt: { en: 'Hearty Middle Eastern Soup', ku: 'شۆربەی بەهێزی ڕۆژهەڵاتی ناوەڕاست', ar: 'حساء شرق أوسطي مغذي' },
+      alt: { en: 'Hearty Middle Eastern Soup', ku: 'شۆربەی بەهێزی ڕۆژهەڵاتی ناوەڕاست', ar: 'حساء شرق أوسطي مغذي', es: 'Sopa Sustanciosa del Medio Oriente' },
       category: 'dishes',
       tags: ['soup', 'comfort', 'warm'],
       likes: 143,
@@ -582,10 +584,10 @@ const NatureVillageWebsite = () => {
 
   // Gallery Categories
   const galleryCategories = useMemo(() => ({
-    all: { en: 'All Photos', ku: 'هەموو وێنەکان', ar: 'جميع الصور', icon: Grid },
-    dishes: { en: 'Signature Dishes', ku: 'خۆراکی تایبەت', ar: 'الأطباق المميزة', icon: ChefHat },
-    atmosphere: { en: 'Restaurant Atmosphere', ku: 'کەشوهەوای چێشتخانە', ar: 'أجواء المطعم', icon: Home },
-    desserts: { en: 'Sweet Treats', ku: 'شیرینی', ar: 'الحلويات', icon: Heart }
+    all: { en: 'All Photos', ku: 'هەموو وێنەکان', ar: 'جميع الصور', es: 'Todas las Fotos', icon: Grid },
+    dishes: { en: 'Signature Dishes', ku: 'خۆراکی تایبەت', ar: 'الأطباق المميزة', es: 'Platos Especiales', icon: ChefHat },
+    atmosphere: { en: 'Restaurant Atmosphere', ku: 'کەشوهەوای چێشتخانە', ar: 'أجواء المطعم', es: 'Ambiente del Restaurante', icon: Home },
+    desserts: { en: 'Sweet Treats', ku: 'شیرینی', ar: 'الحلويات', es: 'Dulces Delicias', icon: Heart }
   }), []);
 
   // Filter functionality
@@ -643,7 +645,8 @@ const NatureVillageWebsite = () => {
         ku: 'پیتزای کەباب',
         tr: 'Kebap Pizza',
         ur: 'کباب پیزا',
-        kmr: 'Pizza Kebab'
+        kmr: 'Pizza Kebab',
+        es: 'Pizza de Kabab'
       },
       description: {
         en: 'A savory pizza topped with thin slices of beef kabab, special sauce, iceberg lettuce, onions, cucumbers, and tomatoes. The crispy crust provides a perfect base for this fresh and flavorful combination.',
@@ -652,7 +655,8 @@ const NatureVillageWebsite = () => {
         ku: 'پیتزایەکی خۆش بە پارچە باریکەکانی کەبابی گۆشتی گا، سۆسی تایبەت، خسی قەڵەمی، پیاز، خیار و تەماتە. قاڵبە ترسکەکە بنکەیەکی تەواو دابین دەکات بۆ ئەم تێکەڵە تازە و خۆشە.',
         tr: 'İnce dana kebap dilimleri, özel sos, buzdolabı marulu, soğan, salatalık ve domatesle kaplanmış lezzetli pizza. Çıtır hamur, bu taze ve lezzetli kombinasyon için mükemmel bir taban sağlar.',
         ur: 'بیف کباب کے پتلے ٹکڑوں، خاص ساس، آئس برگ لیٹس، پیاز، کھیرا اور ٹماٹر کے ساتھ لذیذ پیزا۔ کرسپی کرسٹ اس تازہ اور ذائقہ دار امتزاج کے لیے بہترین بیس فراہم کرتا ہے۔',
-        kmr: 'Pizzayek bi tam ku bi perçeyên zok ên kebabê goştê ga, soşa taybet, salata qelemî, pîvaz, xiyar û firangoşan hatiye daxuyandin. Hevîrê çitir bingeheke temam ji bo vê tevahiya taze û bi tam peyda dike.'
+        kmr: 'Pizzayek bi tam ku bi perçeyên zok ên kebabê goştê ga, soşa taybet, salata qelemî, pîvaz, xiyar û firangoşan hatiye daxuyandin. Hevîrê çitir bingeheke temam ji bo vê tevahiya taze û bi tam peyda dike.',
+        es: 'Una pizza sabrosa cubierta con finas rebanadas de kabab de res, salsa especial, lechuga iceberg, cebollas, pepinos y tomates. La base crujiente proporciona una base perfecta para esta combinación fresca y sabrosa.'
       },
       price: '$16.99',
       category: 'pizza',
@@ -669,7 +673,8 @@ const NatureVillageWebsite = () => {
         ku: 'کارنیڤاڵی گوند',
         tr: 'Köy Karnavalı',
         ur: 'ولیج کارنیول',
-        kmr: 'Karnavala Gund'
+        kmr: 'Karnavala Gund',
+        es: 'Carnaval del Pueblo'
       },
       description: {
         en: 'This best stew is a dish made with carefully selected fresh vegetables and tender pieces of meat. Slowly cooked to perfection. Served with aromatic saffron rice. It creates a memorable and satisfying dining experience.',
@@ -678,7 +683,8 @@ const NatureVillageWebsite = () => {
         ku: 'ئەم باشترین خۆراکە خۆراکێکە کە بە سەوزەی تازەی بە وردی هەڵبژێردراو و پارچە نەرمەکانی گۆشت دروستکراوە. بە هێواشی بە تەواوی لێنراوە. لەگەڵ برنجی زەعفەرانی بۆنخۆش خراوەتە سەر. ئەزموونێکی خواردنی لەبیرنەکراو و دڵخۆشکەر دروست دەکات.',
         tr: 'Bu en iyi güveç, özenle seçilmiş taze sebzeler ve yumuşak et parçalarıyla yapılan bir yemektir. Mükemmelliğe kadar yavaş pişirilmiştir. Aromatik safran pirinci ile servis edilir. Unutulmaz ve tatmin edici bir yemek deneyimi yaratır.',
         ur: 'یہ بہترین سٹو ایک ڈش ہے جو احتیاط سے منتخب کردہ تازہ سبزیوں اور گوشت کے نرم ٹکڑوں سے بنائی گئی ہے۔ آہستہ آہستہ کمال تک پکائی گئی۔ خوشبودار زعفرانی چاول کے ساتھ پیش کی جاتی ہے۔ یہ ایک یادگار اور اطمینان بخش کھانے کا تجربہ بناتا ہے۔',
-        kmr: 'Ev xwaştrîn xwarin xwarineke ku bi sebzeyên taze yên bi baldarî hatine hilbijartin û perçeyên nerm ên goştî hatiye çêkirin. Hêdî hêdî heta bi temamî hatiye pijandin. Bi brincê zefranî, salata werzeya, pîvazê sumaq û sebzeyên grîlkirî tê peşkêşkirin. Ezmûnek xwarinê ya jibîrnekirin û şaykirin çêdike.'
+        kmr: 'Ev xwaştrîn xwarin xwarineke ku bi sebzeyên taze yên bi baldarî hatine hilbijartin û perçeyên nerm ên goştî hatiye çêkirin. Hêdî hêdî heta bi temamî hatiye pijandin. Bi brincê zefranî, salata werzeya, pîvazê sumaq û sebzeyên grîlkirî tê peşkêşkirin. Ezmûnek xwarinê ya jibîrnekirin û şaykirin çêdike.',
+        es: 'Este mejor guiso es un plato hecho con verduras frescas cuidadosamente seleccionadas y tiernos trozos de carne. Cocido lentamente a la perfección. Servido con arroz de azafrán aromático. Crea una experiencia gastronómica memorable y satisfactoria.'
       },
       price: '$23.99',
       category: 'specialty',
@@ -695,7 +701,8 @@ const NatureVillageWebsite = () => {
         ku: 'شیش کەبابی هەولێر',
         tr: 'Erbil Şiş Kebap',
         ur: 'اربیل شیش کباب',
-        kmr: 'Şîş Kebaba Hewlêr'
+        kmr: 'Şîş Kebaba Hewlêr',
+        es: 'Shish Kabab de Erbil'
       },
       description: {
         en: 'A kabab made with a mix of lamb and beef, grilled to perfection. It is served with saffron rice, seasonal salad, sumac onions, and grilled vegetables.',
@@ -704,7 +711,8 @@ const NatureVillageWebsite = () => {
         ku: 'کەبابێک لە تێکەڵی گۆشتی بەرخ و گا، بە تەواوی گرێلکراوە. لەگەڵ برنجی زەعفەران، سالادی وەرزی، پیازی سوماق و سەوزەی گرێلکراو خراوەتە سەر.',
         tr: 'Kuzu ve dana eti karışımından yapılan, mükemmelliğe kadar ızgara edilmiş kebap. Safran pirinci, mevsim salatası, sumak soğanı ve ızgara sebzelerle servis edilir.',
         ur: 'بھیڑ اور گائے کے گوشت کے مکسچر سے بنا کباب، کمال تک گرل کیا گیا۔ زعفرانی چاول، موسمی سلاد، سماق پیاز اور گرل شدہ سبزیوں کے ساتھ پیش کیا جاتا ہے۔',
-        kmr: 'Kebabek ku ji tevahiya goştê berx û ga hatiye çêkirin, heta bi temamî hatiye grîlkirin. Bi brincê zefranî, salata werzeya, pîvazê sumaq û sebzeyên grîlkirî tê peşkêşkirin.'
+        kmr: 'Kebabek ku ji tevahiya goştê berx û ga hatiye çêkirin, heta bi temamî hatiye grîlkirin. Bi brincê zefranî, salata werzeya, pîvazê sumaq û sebzeyên grîlkirî tê peşkêşkirin.',
+        es: 'Un kabab hecho con una mezcla de cordero y res, asado a la perfección. Se sirve con arroz de azafrán, ensalada de temporada, cebollas de sumac y verduras asadas.'
       },
       price: '$21.99',
       category: 'grill',
@@ -888,7 +896,8 @@ const NatureVillageWebsite = () => {
         cta: {
           title: 'Ready to Celebrate?',
           subtitle: 'Let us make your special day extraordinary with authentic Middle Eastern hospitality and unforgettable flavors',
-          reserve: 'Call for special reservation'
+          reserve: 'Call for special reservation',
+          bookingAdvice: 'Book 48 hours in advance for the best celebration experience'
         }
       },
       tags: {
@@ -1640,6 +1649,189 @@ const NatureVillageWebsite = () => {
         opens: 'Açılır'
       }
 
+    },
+    es: {
+      nav: {
+        home: 'Inicio',
+        menu: 'Menú',
+        about: 'Nosotros',
+        gallery: 'Galería',
+        visit: 'Visítanos',
+        reservations: 'Reservas',
+        catering: 'Catering',
+        orderOnline: 'Pedido'
+      },
+      hero: {
+        title: 'Nature Village',
+        subtitle: 'Un Sabor del Medio Oriente en Cada Bocado',
+        description: 'Experimenta los auténticos sabores del Medio Oriente en un ambiente cálido y tradicional donde cada plato cuenta la historia de nuestro rico patrimonio cultural y tradiciones culinarias transmitidas a través de generaciones.',
+        cta1: 'Ver Menú',
+        cta2: 'Hacer Reserva'
+      },
+      menu: {
+        title: 'Nuestro Menú',
+        subtitle: 'Impulsado por MenuIQ - Experiencia Gastronómica Mejorada con IA',
+        filters: {
+          all: 'Todos los Platos',
+          traditional: 'Tradicional',
+          vegetarian: 'Vegetariano',
+          vegan: 'Vegano',
+          soup: 'Sopas',
+          dessert: 'Postres',
+          popular: 'Más Popular'
+        },
+        viewFull: 'Ver Menú Completo',
+        noItems: 'No se encontraron artículos en esta categoría.'
+      },
+      about: {
+        title: 'Nuestra Historia',
+        badge: 'Nuestra Historia',
+        subtitle: 'Trayendo sabores auténticos del Medio Oriente y cálida hospitalidad a nuestra comunidad',
+        content: 'Nature Village nació de un sueño de compartir los sabores auténticos y la cálida hospitalidad del Medio Oriente con el mundo. Nuestras recetas familiares han sido transmitidas a través de generaciones, cada plato elaborado con amor y respeto por nuestras tradiciones culturales. Obtenemos los mejores ingredientes y preparamos cada comida con el mismo cuidado y atención que ha definido la hospitalidad del Medio Oriente durante siglos.',
+        story1: 'Nature Village está dedicado a traerte los sabores auténticos de la cocina del Medio Oriente en un ambiente cálido y acogedor donde cada huésped se siente como familia.',
+        story2: 'Nuestros chefs son apasionados de preparar platos tradicionales del Medio Oriente usando los mejores ingredientes y técnicas de cocina consagradas que celebran nuestro rico patrimonio culinario.',
+        quote: 'Cada plato está elaborado con cuidado y servido con la calidez de la hospitalidad del Medio Oriente.',
+        experience: 'Años de Experiencia',
+        recipes: 'Recetas Tradicionales',
+        customers: 'Clientes Satisfechos',
+        awards: 'Premios Ganados',
+        features: {
+          chefs: {
+            title: 'Chefs Expertos',
+            description: 'Auténtica cocina del Medio Oriente'
+          },
+          ingredients: {
+            title: 'Ingredientes Frescos',
+            description: 'Calidad obtenida diariamente'
+          },
+          service: {
+            title: 'Servicio Cálido',
+            description: 'Hospitalidad del Medio Oriente'
+          }
+        },
+        stats: {
+          happyCustomers: 'Clientes Satisfechos',
+          authenticDishes: 'Platos Auténticos',
+          customerRating: 'Calificación de Cliente',
+          freshIngredients: 'Ingredientes Frescos'
+        }
+      },
+      gallery: {
+        title: 'Galería',
+        subtitle: 'Un viaje visual a través de nuestro patrimonio culinario y ambiente del restaurante'
+      },
+      visit: {
+        title: 'Visítanos',
+        subtitle: 'Encuéntranos en el corazón de la ciudad',
+        hours: 'Horarios de Apertura',
+        contact: 'Información de Contacto',
+        address: 'Dirección',
+        phone: 'Teléfono',
+        makeReservation: 'Hacer Reserva',
+        getDirections: 'Obtener Direcciones'
+      },
+      featured: {
+        title: 'Platos Destacados',
+        subtitle: 'Descubre nuestras especialidades del Medio Oriente más queridas, elaboradas con recetas tradicionales y presentación moderna'
+      },
+      celebration: {
+        title: 'Celebra Tus Momentos Especiales',
+        subtitle: 'Haz que tus cumpleaños, aniversarios y ocasiones especiales sean inolvidables con la auténtica hospitalidad del Medio Oriente',
+        familyReunions: 'Reuniones Familiares',
+        graduations: 'Graduaciones',
+        engagements: 'Compromisos',
+        holidays: 'Días Festivos',
+        birthday: {
+          title: 'Celebraciones de Cumpleaños',
+          tagline: 'Momentos dulces hechos especiales',
+          feature1: 'Postre de cumpleaños cortesía',
+          feature2: 'Canción de cumpleaños y deseos',
+          feature3: 'Experiencia gastronómica memorable',
+          special: 'Perfecto para celebrar otro año de vida'
+        },
+        anniversary: {
+          title: 'Cenas de Aniversario',
+          tagline: 'Celebra tu historia de amor',
+          feature1: 'Mesa romántica decorada con rosas',
+          feature2: 'Postre cortesía para dos',
+          feature3: 'Experiencia gastronómica a la luz de las velas',
+          feature4: 'Tarjeta de aniversario personalizada',
+          special: '¿25+ años juntos? ¡Una sorpresa especial te espera!'
+        },
+        cta: {
+          title: '¿Listo para Celebrar?',
+          subtitle: 'Permítenos hacer tu día especial extraordinario con auténtica hospitalidad del Medio Oriente y sabores inolvidables',
+          reserve: 'Llama para reserva especial',
+          bookingAdvice: 'Reserva con 48 horas de anticipación para la mejor experiencia de celebración'
+        }
+      },
+      footer: {
+        openDaily: 'DOM - JUE: 12:00 PM - 10:00 PM\nVIE - SÁB: 12:00 PM - 11:00 PM',
+        poweredBy: 'Desarrollado por',
+        blunari: 'Blunari',
+        copyright: `© ${new Date().getFullYear()} Restaurante Nature Village. Todos los derechos reservados.`,
+        privacy: 'Política de Privacidad',
+        terms: 'Términos de Servicio'
+      },
+      ui: {
+        callNow: 'Llamar Ahora',
+        call: 'Llamar',
+        orderOnline: 'Pedido en Línea',
+        restaurant: 'Restaurante',
+        familyOwned: 'Propiedad Familiar',
+        halalCertified: 'Certificado Halal',
+        googleReviews: 'Reseñas de Google',
+        averageRating: 'Calificación Promedio',
+        fiveStarReviews: 'Reseñas de 5 Estrellas',
+        verifiedPurchase: 'Compra Verificada',
+        trustedReviewer: 'Reseñador Confiable',
+        foodEnthusiast: 'Entusiasta de la Comida',
+        menu: 'Menú',
+        reserve: 'Reservar',
+        weAreOpen: 'Estamos Abiertos',
+        currentlyClosed: 'Actualmente Cerrado',
+        live: 'EN VIVO',
+        until: 'hasta',
+        opens: 'Abre',
+        activity: 'Actividad'
+      },
+      reviews: {
+        title: 'Lo Que Dicen Nuestros Huéspedes',
+        subtitle: 'Calificado 4.8/5 estrellas por 572+ clientes satisfechos en Google Reviews',
+        cta: '¡Únete a 572+ clientes satisfechos que aman nuestra cocina auténtica! Reserva tu mesa hoy y prueba la diferencia que hace la auténtica hospitalidad del Medio Oriente.',
+        ctaButton: 'Reserva Tu Mesa Ahora',
+        ctaTitle: '¿Listo para Crear Tu Propia Experiencia de 5 Estrellas?',
+        trustIndicators: {
+          googleRating: '4.8★ Calificación Google',
+          totalReviews: '572+ Reseñas'
+        },
+        review1: {
+          name: 'Karen Cardenas',
+          text: '"He estado viniendo aquí durante aproximadamente un año, ¡y sin duda es mi restaurante favorito! La comida es auténtica y absolutamente deliciosa: cada plato está lleno de sabor, los tés y cafés especiales son increíbles, y los postres son el final perfecto para cualquier comida."',
+          location: 'Reseña Verificada de Google',
+          time: 'hace 1 semana',
+          badge: 'DESTACADO'
+        },
+        review2: {
+          name: 'Ruth Cornea',
+          text: '"¡Tuvimos un tiempo maravilloso en Nature Village Restaurant esta noche! ¡Todo estuvo absolutamente perfecto! La comida, el ambiente, la decoración y el servicio son de primera calidad. Este es definitivamente nuestro nuevo lugar favorito para cocina auténtica del Medio Oriente."',
+          location: 'Guía Local • 29 reseñas',
+          time: 'hace 2 meses',
+          badge: 'Reseñador Confiable'
+        },
+        review3: {
+          name: 'Cliente de Google',
+          text: '"Pedí el Quzi, un plato de arroz y cordero, era muy abundante y delicioso. La pizza era de buen tamaño llena de carne de gyro, queso y una salsa deliciosa. ¡Los sabores auténticos del Medio Oriente realmente me impresionaron a mí y a mi familia!"',
+          location: 'Reseña Verificada de Google',
+          time: 'Reciente',
+          badge: 'AMANTE DEL QUZI'
+        },
+        badges: {
+          featured: 'DESTACADO',
+          localGuide: 'GUÍA LOCAL',
+          quziLover: 'AMANTE DEL QUZI'
+        }
+      }
     },
     ur: {
       nav: {
@@ -2734,7 +2926,7 @@ const NatureVillageWebsite = () => {
     const busyTexts = {
       en: {
         low: 'Not busy',
-        medium: 'Moderately busy',
+        medium: 'Moderate',
         high: 'Busy',
         'very-high': 'Very busy'
       },
@@ -2749,6 +2941,12 @@ const NatureVillageWebsite = () => {
         medium: 'مزدحم قليلاً',
         high: 'مزدحم',
         'very-high': 'مزدحم جداً'
+      },
+      es: {
+        low: 'No ocupado',
+        medium: 'Moderadamente ocupado',
+        high: 'Ocupado',
+        'very-high': 'Muy ocupado'
       }
     };
     return busyTexts[language || 'en']?.[level] || busyTexts.en[level] || 'Unknown';
@@ -2763,6 +2961,36 @@ const NatureVillageWebsite = () => {
     };
     return colors[level] || colors.medium;
   }, []);
+
+  const getBusyStatusDescription = useCallback((level) => {
+    const statusDescriptions = {
+      en: {
+        low: 'Perfect time to visit',
+        medium: 'Moderate crowd',
+        high: 'Quite busy',
+        'very-high': 'Very busy period'
+      },
+      ku: {
+        low: 'کاتی باش بۆ سەردان',
+        medium: 'قەرەباڵغی مامناوەند',
+        high: 'زۆر قەرەباڵغی',
+        'very-high': 'کاتی زۆر قەرەباڵغی'
+      },
+      ar: {
+        low: 'وقت مثالي للزيارة',
+        medium: 'ازدحام معتدل',
+        high: 'مزدحم نوعا ما',
+        'very-high': 'فترة مزدحمة جدا'
+      },
+      es: {
+        low: 'Momento perfecto para visitar',
+        medium: 'Multitud moderada',
+        high: 'Bastante ocupado',
+        'very-high': 'Período muy ocupado'
+      }
+    };
+    return statusDescriptions[language || 'en']?.[level] || statusDescriptions.en[level] || '';
+  }, [language]);
 
   if (!isMounted) {
     return (
@@ -3026,13 +3254,10 @@ const NatureVillageWebsite = () => {
                         restaurantStatus.busyLevel === 'high' && "text-orange-600",
                         restaurantStatus.busyLevel === 'very-high' && "text-red-600"
                       )}>
-                        {restaurantStatus.busyLevel.replace('-', ' ')}
+                        {getBusyLevelText(restaurantStatus.busyLevel)}
                       </span>
                       <span className="text-xs text-gray-400">
-                        {restaurantStatus.busyLevel === 'low' && 'Perfect time to visit'}
-                        {restaurantStatus.busyLevel === 'medium' && 'Moderate crowd'}
-                        {restaurantStatus.busyLevel === 'high' && 'Quite busy'}
-                        {restaurantStatus.busyLevel === 'very-high' && 'Very busy period'}
+                        {getBusyStatusDescription(restaurantStatus.busyLevel)}
                       </span>
                     </div>
                   </div>
@@ -3411,7 +3636,7 @@ const NatureVillageWebsite = () => {
                 
                 <div className="text-white/70 text-xs sm:text-sm flex items-center justify-center gap-2 px-2 sm:px-4 max-w-full">
                   <span className="text-amber-300 text-base sm:text-lg flex-shrink-0">💡</span>
-                  <span className="whitespace-nowrap text-center">Book 48 hours in advance for the best celebration experience</span>
+                  <span className="whitespace-nowrap text-center">{t.celebration?.cta?.bookingAdvice || 'Book 48 hours in advance for the best celebration experience'}</span>
                 </div>
               </div>
             </div>

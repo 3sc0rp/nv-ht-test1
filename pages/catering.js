@@ -45,6 +45,69 @@ const CateringPage = () => {
       backToHome: 'العودة للرئيسية',
       contact: 'لاستفسارات التقديم الفورية، يرجى الاتصال بنا على',
       phone: '(470) 350-1019'
+    },
+    fa: {
+      title: 'در حال تعمیر',
+      subtitle: 'خدمات پذیرایی',
+      message: 'ما در حال حاضر سیستم پذیرایی خود را برای خدمات بهتر به شما به‌روزرسانی می‌کنیم.',
+      expectedTime: 'به زودی برمی‌گردیم.',
+      backToHome: 'بازگشت به خانه',
+      contact: 'برای سؤالات فوری پذیرایی، لطفاً با ما تماس بگیرید',
+      phone: '(470) 350-1019'
+    },
+    tr: {
+      title: 'Bakım Altında',
+      subtitle: 'Catering Hizmetleri',
+      message: 'Size daha iyi hizmet verebilmek için catering sistemimizi güncelliyoruz.',
+      expectedTime: 'Yakında tekrar online olacak.',
+      backToHome: 'Ana Sayfaya Dön',
+      contact: 'Acil catering sorularınız için lütfen bizi arayın',
+      phone: '(470) 350-1019'
+    },
+    es: {
+      title: 'En Mantenimiento',
+      subtitle: 'Servicios de Catering',
+      message: 'Actualmente estamos actualizando nuestro sistema de catering para servirle mejor.',
+      expectedTime: 'Esperamos estar de vuelta en línea pronto.',
+      backToHome: 'Volver al Inicio',
+      contact: 'Para consultas inmediatas de catering, por favor llámenos al',
+      phone: '(470) 350-1019'
+    },
+    ur: {
+      title: 'دیکھ بھال میں',
+      subtitle: 'کیٹرنگ سروسز',
+      message: 'ہم آپ کو بہتر خدمات فراہم کرنے کے لیے اپنے کیٹرنگ سسٹم کو اپڈیٹ کر رہے ہیں۔',
+      expectedTime: 'جلد ہی واپس آئیں گے۔',
+      backToHome: 'گھر واپس جائیں',
+      contact: 'فوری کیٹرنگ استفسارات کے لیے، براہ کرم ہمیں کال کریں',
+      phone: '(470) 350-1019'
+    },
+    kmr: {
+      title: 'Di Bin Nerîna De',
+      subtitle: 'Xizmetên Catering',
+      message: 'Em niha sîstema catering nû dikin da ku we baştir xizmetê bikin.',
+      expectedTime: 'Zû dê vegere online.',
+      backToHome: 'Vegere Malê',
+      contact: 'Ji bo pirsên catering ya bilez, ji kerema xwe bi me re têkiliyê daynin',
+      phone: '(470) 350-1019'
+    },
+    ru: {
+      title: 'На обслуживании',
+      subtitle: 'Кейтеринг услуги',
+      message: 'Мы обновляем нашу систему кейтеринга, чтобы лучше обслуживать вас.',
+      expectedTime: 'Скоро вернемся в онлайн.',
+      backToHome: 'Вернуться домой',
+      contact: 'По срочным вопросам кейтеринга, пожалуйста, звоните нам',
+      phone: '(470) 350-1019'
+    },
+    hi: {
+      title: 'रखरखाव में',
+      subtitle: 'कैटरिंग सेवाएं',
+      message: 'हम आपको बेहतर सेवा देने के लिए अपना कैटरिंग सिस्टम अपडेट कर रहे हैं।',
+      expectedTime: 'जल्द ही वापस ऑनलाइन आएंगे।',
+      backToHome: 'होम पर वापस जाएं',
+      contact: 'तत्काल कैटरिंग पूछताछ के लिए, कृपया हमें कॉल करें',
+      phone: '(470) 350-1019'
     }
   };
 

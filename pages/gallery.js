@@ -45,6 +45,69 @@ const GalleryPage = () => {
       backToHome: 'العودة للرئيسية',
       contact: 'لمزيد من المعلومات، يرجى الاتصال بنا على',
       phone: '(470) 350-1019'
+    },
+    fa: {
+      title: 'در حال تعمیر',
+      subtitle: 'گالری عکس',
+      message: 'ما در حال حاضر گالری عکس خود را برای نمایش جدیدترین تجربیات خود به‌روزرسانی می‌کنیم.',
+      expectedTime: 'به زودی برمی‌گردیم.',
+      backToHome: 'بازگشت به خانه',
+      contact: 'برای اطلاعات بیشتر، لطفاً با ما تماس بگیرید',
+      phone: '(470) 350-1019'
+    },
+    tr: {
+      title: 'Bakım Altında',
+      subtitle: 'Fotoğraf Galerisi',
+      message: 'En son deneyimlerimizi sergilemek için fotoğraf galerimizi güncelliyoruz.',
+      expectedTime: 'Yakında tekrar online olacak.',
+      backToHome: 'Ana Sayfaya Dön',
+      contact: 'Daha fazla bilgi için lütfen bizi arayın',
+      phone: '(470) 350-1019'
+    },
+    es: {
+      title: 'En Mantenimiento',
+      subtitle: 'Galería de Fotos',
+      message: 'Actualmente estamos actualizando nuestra galería de fotos para mostrar nuestras experiencias más recientes.',
+      expectedTime: 'Esperamos estar de vuelta en línea pronto.',
+      backToHome: 'Volver al Inicio',
+      contact: 'Para más información, por favor llámenos al',
+      phone: '(470) 350-1019'
+    },
+    ur: {
+      title: 'دیکھ بھال میں',
+      subtitle: 'تصاویر کی گیلری',
+      message: 'ہم اپنے جدید ترین تجربات دکھانے کے لیے اپنی تصاویر کی گیلری کو اپڈیٹ کر رہے ہیں۔',
+      expectedTime: 'جلد ہی واپس آئیں گے۔',
+      backToHome: 'گھر واپس جائیں',
+      contact: 'مزید معلومات کے لیے، براہ کرم ہمیں کال کریں',
+      phone: '(470) 350-1019'
+    },
+    kmr: {
+      title: 'Di Bin Nerîna De',
+      subtitle: 'Galeriya Wêneyan',
+      message: 'Em niha galeriya wêneyan nû dikin da ku pêşandana ezmûnên me yên herî nû bidin.',
+      expectedTime: 'Zû dê vegere online.',
+      backToHome: 'Vegere Malê',
+      contact: 'Ji bo zêdetir agahiyan, ji kerema xwe bi me re têkiliyê daynin',
+      phone: '(470) 350-1019'
+    },
+    ru: {
+      title: 'На обслуживании',
+      subtitle: 'Фотогалерея',
+      message: 'Мы обновляем нашу фотогалерею, чтобы показать наши последние впечатления.',
+      expectedTime: 'Скоро вернемся в онлайн.',
+      backToHome: 'Вернуться домой',
+      contact: 'Для получения дополнительной информации, пожалуйста, звоните нам',
+      phone: '(470) 350-1019'
+    },
+    hi: {
+      title: 'रखरखाव में',
+      subtitle: 'फोटो गैलरी',
+      message: 'हम अपने नवीनतम अनुभवों को दिखाने के लिए अपनी फोटो गैलरी को अपडेट कर रहे हैं।',
+      expectedTime: 'जल्द ही वापस ऑनलाइन आएंगे।',
+      backToHome: 'होम पर वापस जाएं',
+      contact: 'अधिक जानकारी के लिए, कृपया हमें कॉल करें',
+      phone: '(470) 350-1019'
     }
   };
 

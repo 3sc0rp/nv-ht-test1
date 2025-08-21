@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Facebook, Instagram, MapPin, Phone, Clock } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, Clock, Mail } from 'lucide-react';
 import { LANGUAGES, getText } from '../lib/i18n';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -150,6 +150,22 @@ const Footer = () => {
         catering: 'Кейтеринг',
         gallery: 'Галерея'
       },
+      es: {
+        description: 'Llevando los sabores auténticos y la cálida hospitalidad del Medio Oriente a tu mesa. Cada plato es una celebración de nuestro rico patrimonio cultural y excelencia culinaria.',
+        quickLinks: 'Enlaces Rápidos',
+        contactInfo: 'Información de Contacto',
+        openDaily: 'DOM - JUE: 12:00 PM - 10:00 PM\nVIE - SÁB: 12:00 PM - 11:00 PM',
+        privacy: 'Política de Privacidad',
+        terms: 'Términos de Servicio',
+        copyright: '© 2025 Restaurante Nature Village. Todos los derechos reservados.',
+        poweredBy: 'Desarrollado por',
+        blunari: 'Blunari',
+        home: 'Inicio',
+        menu: 'Menú',
+        reservations: 'Reservas',
+        catering: 'Catering',
+        gallery: 'Galería'
+      },
       hi: {
         description: 'कुर्दिस्तान के प्रामाणिक स्वाद और गर्मजोशी भरी मेहमाननवाजी को आपकी मेज तक ला रहे हैं। हर पकवान हमारी समृद्ध सांस्कृतिक विरासत और पाक कला की उत्कृष्टता का उत्सव है।',
         quickLinks: 'त्वरित लिंक',
@@ -291,6 +307,12 @@ const Footer = () => {
                 <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
                 <a href="tel:+14703501019" className="hover:text-white transition-colors">
                   (470) 350-1019
+                </a>
+              </p>
+              <p className="flex items-center">
+                <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
+                <a href="mailto:naturevillage2024@gmail.com" className="hover:text-white transition-colors">
+                  naturevillage2024@gmail.com
                 </a>
               </p>
               <div className="flex items-start">

@@ -89,6 +89,16 @@ const Header = ({ currentPage = '' }) => {
         catering: 'Catering',
         orderOnline: 'Online Sipariş'
       },
+      es: {
+        home: 'Inicio',
+        menu: 'Menú',
+        about: 'Nosotros',
+        gallery: 'Galería',
+        visit: 'Visítanos',
+        reservations: 'Reservas',
+        catering: 'Catering',
+        orderOnline: 'Pedido en Línea'
+      },
       ur: {
         home: 'ہوم',
         menu: 'مینو',
@@ -444,6 +454,7 @@ const Header = ({ currentPage = '' }) => {
                        language === 'ku' ? 'زمان' :
                        language === 'fa' ? 'زبان' :
                        language === 'tr' ? 'Dil' :
+                       language === 'es' ? 'Idioma' :
                        language === 'ur' ? 'زبان' :
                        language === 'kmr' ? 'Ziman' :
                        language === 'ru' ? 'Язык' :
@@ -478,6 +489,7 @@ const Header = ({ currentPage = '' }) => {
                             {code === 'ar' && '🌙'}
                             {code === 'fa' && '🇮🇷'}
                             {code === 'tr' && '🇹🇷'}
+                            {code === 'es' && '🇪🇸'}
                             {code === 'ur' && '🇵🇰'}
                             {code === 'kmr' && '⭐'}
                           </span>
