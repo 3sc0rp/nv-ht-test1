@@ -3722,15 +3722,6 @@ const NatureVillageWebsite = () => {
                       {t.celebration?.anniversary?.tagline || 'Celebrate your love story'}
                     </p>
                   </div>
-                  
-                  <div className="relative bg-gradient-to-r from-rose-500/20 to-pink-500/20 rounded-2xl p-3 border border-rose-400/30 group-hover:border-rose-400/60 transition-all duration-300 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-r from-rose-400/10 to-pink-400/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <p className="relative text-rose-200 font-medium group-hover:text-rose-100 transition-colors duration-300 text-sm">
-                      <span className="text-pink-300">💖 </span>
-                      {t.celebration?.anniversary?.special || '25+ years together? Special surprise awaits!'}
-                      <span className="text-pink-300"> 💖</span>
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
