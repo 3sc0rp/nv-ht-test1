@@ -3698,15 +3698,6 @@ const NatureVillageWebsite = () => {
                       {t.celebration?.birthday?.tagline || 'Sweet moments made special'}
                     </p>
                   </div>
-                  
-                  <div className="relative bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-2xl p-3 border border-amber-400/30 group-hover:border-amber-400/60 transition-all duration-300 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-r from-amber-400/10 to-orange-400/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <p className="relative text-amber-200 font-medium group-hover:text-amber-100 transition-colors duration-300 text-sm">
-                      <span className="text-yellow-300">🌟 </span>
-                      {t.celebration?.birthday?.special || 'Perfect for birthday parties of all sizes'}
-                      <span className="text-yellow-300"> 🌟</span>
-                    </p>
-                  </div>
                 </div>
               </div>
 
