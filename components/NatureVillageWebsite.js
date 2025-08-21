@@ -800,6 +800,7 @@ const NatureVillageWebsite = () => {
 
       ui: {
         callNow: 'Call Now',
+        call: 'Call',
         orderOnline: 'Order Online',
         restaurant: 'Restaurant',
         familyOwned: 'Family Owned',
@@ -990,6 +991,7 @@ const NatureVillageWebsite = () => {
 
       ui: {
         callNow: 'ئێستا پەیوەندی بکە',
+        call: 'پەیوەندی',
         orderOnline: 'داواکاری ئۆنلاین',
         restaurant: 'چێشتخانە',
         familyOwned: 'خاوەن خێزانی',
@@ -1178,6 +1180,7 @@ const NatureVillageWebsite = () => {
 
       ui: {
         callNow: 'اتصل الآن',
+        call: 'اتصل',
         orderOnline: 'اطلب أونلاين',
         restaurant: 'مطعم',
         familyOwned: 'مملوك عائلياً',
@@ -1434,6 +1437,17 @@ const NatureVillageWebsite = () => {
           subtitle: 'بگذارید روز خاص شما را با مهمان‌نوازی اصیل کردی و طعم‌های فراموش‌نشدنی فوق‌العاده کنیم',
           reserve: 'برای رزرو ویژه تماس بگیرید'
         }
+      },
+      ui: {
+        menu: 'منو',
+        reserve: 'رزرو',
+        callNow: 'اکنون تماس بگیرید',
+        call: 'تماس',
+        weAreOpen: 'ما باز هستیم',
+        currentlyClosed: 'در حال حاضر بسته',
+        live: 'زنده',
+        until: 'تا',
+        opens: 'باز می‌شود'
       }
     },
     tr: {
@@ -1609,7 +1623,18 @@ const NatureVillageWebsite = () => {
           reserve: 'Özel rezervasyon için arayın'
         }
       },
-      currency: '$'
+      currency: '$',
+      ui: {
+        menu: 'Menü',
+        reserve: 'Rezervasyon',
+        callNow: 'Şimdi Ara',
+        call: 'Ara',
+        weAreOpen: 'Açığız',
+        currentlyClosed: 'Şu anda Kapalı',
+        live: 'Canlı',
+        until: 'kadar',
+        opens: 'Açılır'
+      }
 
     },
     ur: {
@@ -1784,7 +1809,18 @@ const NatureVillageWebsite = () => {
           reserve: 'خاص بکنگ کے لیے کال کریں'
         }
       },
-      currency: '$'
+      currency: '$',
+      ui: {
+        menu: 'مینو',
+        reserve: 'بکنگ',
+        callNow: 'اب کال کریں',
+        call: 'کال',
+        weAreOpen: 'ہم کھلے ہیں',
+        currentlyClosed: 'فی الوقت بند',
+        live: 'زندہ',
+        until: 'تک',
+        opens: 'کھلتا ہے'
+      }
     },
     kmr: {
       nav: {
@@ -1958,6 +1994,17 @@ const NatureVillageWebsite = () => {
           subtitle: 'Bila roja we ya taybetî bi mêvandariya resen a Kurdî û tamên bîrneketî awarte bikin',
           reserve: 'Ji bo rezervasyona taybetî bang bikin'
         }
+      },
+      ui: {
+        menu: 'Menû',
+        reserve: 'Rezervasyon',
+        callNow: 'Niha Bang Bikin',
+        call: 'Bang Bikin',
+        weAreOpen: 'Em Vekirî Ne',
+        currentlyClosed: 'Niha Girtî ye',
+        live: 'Zindî',
+        until: 'heta',
+        opens: 'Vedibe'
       }
     },
     ru: {
@@ -2143,7 +2190,18 @@ const NatureVillageWebsite = () => {
       addToCart: 'Добавить в корзину',
       loading: 'Загрузка...',
       error: 'Что-то пошло не так. Пожалуйста, попробуйте еще раз.',
-      currency: '$'
+      currency: '$',
+      ui: {
+        menu: 'Меню',
+        reserve: 'Бронирование',
+        callNow: 'Звоните сейчас',
+        call: 'Звонить',
+        weAreOpen: 'Мы открыты',
+        currentlyClosed: 'Сейчас закрыто',
+        live: 'Прямой эфир',
+        until: 'до',
+        opens: 'Откроется'
+      }
     },
     hi: {
       nav: {
@@ -2328,7 +2386,18 @@ const NatureVillageWebsite = () => {
       addToCart: 'कार्ट में जोड़ें',
       loading: 'लोड हो रहा है...',
       error: 'कुछ गलत हुआ। कृपया फिर से कोशिश करें।',
-      currency: '₹'
+      currency: '₹',
+      ui: {
+        menu: 'मेन्यू',
+        reserve: 'बुकिंग',
+        callNow: 'अभी कॉल करें',
+        call: 'कॉल करें',
+        weAreOpen: 'हम खुले हैं',
+        currentlyClosed: 'अभी बंद है',
+        live: 'लाइव',
+        until: 'तक',
+        opens: 'खुलता है'
+      }
     },
     kmr: {
       nav: {
@@ -3567,7 +3636,7 @@ const NatureVillageWebsite = () => {
                   className="group bg-white hover:bg-gray-50 text-amber-700 border-2 border-amber-300 hover:border-amber-400 px-8 py-4 rounded-2xl text-base font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3"
                 >
                   <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span>Call (470) 350-1019</span>
+                  <span>{t.ui?.call || 'Call'} (470) 350-1019</span>
                 </a>
               </div>
               
