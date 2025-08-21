@@ -14,16 +14,19 @@ export const useLanguage = () => {
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguageState] = useState('en');
+  const [isInitialized, setIsInitialized] = useState(false);
   const router = useRouter();
 
-  // Initialize language from URL on mount
+  // Initialize language from URL params or localStorage on mount
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const langParam = urlParams.get('lang');
+    if (!router.isReady) return;
+
+    const langParam = router.query.lang;
     
     if (langParam && LANGUAGES[langParam]) {
       setLanguageState(langParam);
       updateDocumentLanguage(langParam);
+      localStorage.setItem('preferredLanguage', langParam);
     } else {
       // Check for saved language preference
       const savedLang = localStorage.getItem('preferredLanguage');
@@ -32,32 +35,53 @@ export const LanguageProvider = ({ children }) => {
         updateDocumentLanguage(savedLang);
       }
     }
-  }, []);
+    
+    setIsInitialized(true);
+  }, [router.isReady, router.query.lang]);
 
-  // Enhanced setLanguage function
+  // Enhanced setLanguage function with better URL handling
   const setLanguage = (newLanguage) => {
     if (!LANGUAGES[newLanguage]) {
       console.warn(`Language ${newLanguage} not supported`);
       return;
     }
 
+    console.log('Changing language to:', newLanguage);
+    
     setLanguageState(newLanguage);
     updateDocumentLanguage(newLanguage);
     
     // Save to localStorage
     localStorage.setItem('preferredLanguage', newLanguage);
     
-    // Update URL with language parameter
+    // Update URL with language parameter - improved handling
     const currentPath = router.asPath.split('?')[0];
-    const newUrl = newLanguage === 'en' ? currentPath : `${currentPath}?lang=${newLanguage}`;
-    router.replace(newUrl, undefined, { shallow: true });
+    const currentQuery = { ...router.query };
+    
+    if (newLanguage === 'en') {
+      // Remove lang parameter for English
+      delete currentQuery.lang;
+    } else {
+      // Set language parameter
+      currentQuery.lang = newLanguage;
+    }
+    
+    const newUrl = {
+      pathname: currentPath,
+      query: currentQuery
+    };
+    
+    // Use router.push instead of router.replace for better reliability
+    router.push(newUrl, undefined, { shallow: true })
+      .catch(err => console.warn('Language switching URL update failed:', err));
   };
 
   const contextValue = {
     language,
     setLanguage,
     isRTL: LANGUAGES[language]?.dir === 'rtl',
-    languageConfig: LANGUAGES[language]
+    languageConfig: LANGUAGES[language],
+    isInitialized
   };
 
   return (
