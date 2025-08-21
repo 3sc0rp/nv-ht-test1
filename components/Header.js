@@ -321,6 +321,20 @@ const Header = ({ currentPage = '' }) => {
 
                     </button>
                   ))}
+                  {/* Temporary debug reset button */}
+                  <button
+                    onClick={() => {
+                      console.log('Force resetting to English...');
+                      localStorage.removeItem('preferredLanguage');
+                      setLanguage('en');
+                      setShowLanguageDropdown(false);
+                      window.location.href = '/';
+                    }}
+                    className="w-full px-3 py-2.5 bg-red-50 hover:bg-red-100 transition-colors duration-150 flex items-center space-x-2.5 text-sm border-t border-red-200 text-red-700 hover:text-red-800"
+                  >
+                    <span className="text-base mr-2">🔄</span>
+                    <span>Reset to English</span>
+                  </button>
                 </div>
               )}
             </div>
@@ -491,6 +505,21 @@ const Header = ({ currentPage = '' }) => {
                       </button>
                     ))}
                   </div>
+                  
+                  {/* Mobile reset button */}
+                  <button
+                    onClick={() => {
+                      console.log('Mobile force reset to English...');
+                      localStorage.removeItem('preferredLanguage');
+                      setLanguage('en');
+                      setIsMenuOpen(false);
+                      window.location.href = '/';
+                    }}
+                    className="w-full mt-4 px-4 py-2 bg-red-50 hover:bg-red-100 transition-colors duration-150 flex items-center justify-center space-x-2 text-sm border border-red-200 rounded-xl text-red-700 hover:text-red-800"
+                  >
+                    <span className="text-base">🔄</span>
+                    <span>Reset to English</span>
+                  </button>
                 </div>
 
                 {/* Mobile Phone Section with enhanced styling */}
