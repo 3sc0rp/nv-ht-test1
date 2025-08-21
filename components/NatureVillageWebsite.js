@@ -3766,11 +3766,11 @@ const NatureVillageWebsite = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-amber-500/15 via-orange-500/15 to-red-500/15 rounded-3xl blur-3xl"></div>
               
               <div className="relative bg-gradient-to-br from-white/15 to-white/10 rounded-3xl p-6 lg:p-8 border border-white/25 backdrop-blur-lg">
-                {/* Floating particles around CTA - positioned in safe corners */}
-                <div className="absolute top-4 left-4 text-amber-300 text-lg opacity-30 animate-float hidden sm:block">✨</div>
-                <div className="absolute top-4 right-4 text-orange-300 text-lg opacity-35 animate-float hidden sm:block" style={{animationDelay: '1s'}}>🎊</div>
-                <div className="absolute bottom-4 left-4 text-yellow-300 text-base opacity-25 animate-float hidden sm:block" style={{animationDelay: '2s'}}>💫</div>
-                <div className="absolute bottom-4 right-4 text-red-300 text-base opacity-30 animate-float hidden sm:block" style={{animationDelay: '0.5s'}}>✨</div>
+                {/* Floating particles around CTA - positioned safely away from text */}
+                <div className="absolute top-3 left-3 text-amber-300 text-base opacity-25 animate-float hidden lg:block">✨</div>
+                <div className="absolute top-3 right-3 text-orange-300 text-base opacity-30 animate-float hidden lg:block" style={{animationDelay: '1s'}}>🎊</div>
+                <div className="absolute bottom-3 left-3 text-yellow-300 text-sm opacity-20 animate-float hidden lg:block" style={{animationDelay: '2s'}}>💫</div>
+                <div className="absolute bottom-3 right-3 text-red-300 text-sm opacity-25 animate-float hidden lg:block" style={{animationDelay: '0.5s'}}>✨</div>
                 
                 <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-4 transform hover:scale-105 transition-transform duration-300">
                   {t.celebration?.cta?.title || 'Ready to Celebrate?'}
@@ -3779,14 +3779,16 @@ const NatureVillageWebsite = () => {
                   {t.celebration?.cta?.subtitle || 'Let us make your special day extraordinary with authentic Middle Eastern hospitality and unforgettable flavors'}
                 </p>
                 
-                <div className="text-white text-lg lg:text-xl font-semibold mb-4">
-                  📞 {t.celebration?.cta?.reserve || 'Call for special reservation'} 📞
+                <div className="text-white text-lg lg:text-xl font-semibold mb-4 flex items-center justify-center gap-2">
+                  <span>📞</span>
+                  <span>{t.celebration?.cta?.reserve || 'Call for special reservation'}</span>
+                  <span>📞</span>
                 </div>
                 
-                <p className="text-white/70 text-sm flex items-center justify-center gap-2">
+                <div className="text-white/70 text-sm flex items-center justify-center gap-2">
                   <span className="text-amber-300">💡</span>
                   <span>Book 48 hours in advance for the best celebration experience</span>
-                </p>
+                </div>
               </div>
             </div>
           </div>
