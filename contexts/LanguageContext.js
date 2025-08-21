@@ -17,27 +17,36 @@ export const LanguageProvider = ({ children }) => {
   const [isInitialized, setIsInitialized] = useState(false);
   const router = useRouter();
 
-  // Initialize language from URL params or localStorage on mount
+  // Initialize language from URL params or localStorage on mount - run only once
   useEffect(() => {
-    if (!router.isReady) return;
+    if (!router.isReady || isInitialized) return;
 
     const langParam = router.query.lang;
     
     if (langParam && LANGUAGES[langParam]) {
+      console.log('Initializing language from URL:', langParam);
       setLanguageState(langParam);
       updateDocumentLanguage(langParam);
       localStorage.setItem('preferredLanguage', langParam);
     } else {
       // Check for saved language preference
       const savedLang = localStorage.getItem('preferredLanguage');
-      if (savedLang && LANGUAGES[savedLang]) {
+      if (savedLang && LANGUAGES[savedLang] && savedLang !== 'en') {
+        console.log('Initializing language from localStorage:', savedLang);
         setLanguageState(savedLang);
         updateDocumentLanguage(savedLang);
+        // Update URL to reflect saved language
+        const currentPath = router.asPath.split('?')[0];
+        router.replace(`${currentPath}?lang=${savedLang}`, undefined, { shallow: true });
+      } else {
+        console.log('Initializing language as English (default)');
+        setLanguageState('en');
+        updateDocumentLanguage('en');
       }
     }
     
     setIsInitialized(true);
-  }, [router.isReady, router.query.lang]);
+  }, [router.isReady, isInitialized]); // Remove router.query.lang dependency to prevent loops
 
   // Enhanced setLanguage function with better URL handling
   const setLanguage = (newLanguage) => {
@@ -46,7 +55,12 @@ export const LanguageProvider = ({ children }) => {
       return;
     }
 
-    console.log('Changing language to:', newLanguage);
+    if (language === newLanguage) {
+      console.log('Language already set to:', newLanguage);
+      return;
+    }
+
+    console.log('Changing language from', language, 'to:', newLanguage);
     
     setLanguageState(newLanguage);
     updateDocumentLanguage(newLanguage);
@@ -54,26 +68,18 @@ export const LanguageProvider = ({ children }) => {
     // Save to localStorage
     localStorage.setItem('preferredLanguage', newLanguage);
     
-    // Update URL with language parameter - improved handling
-    const currentPath = router.asPath.split('?')[0];
-    const currentQuery = { ...router.query };
+    // Update URL with language parameter - simplified approach
+    const currentPath = router.pathname;
     
     if (newLanguage === 'en') {
       // Remove lang parameter for English
-      delete currentQuery.lang;
+      router.push(currentPath, undefined, { shallow: true })
+        .catch(err => console.warn('Language switching URL update failed:', err));
     } else {
       // Set language parameter
-      currentQuery.lang = newLanguage;
+      router.push(`${currentPath}?lang=${newLanguage}`, undefined, { shallow: true })
+        .catch(err => console.warn('Language switching URL update failed:', err));
     }
-    
-    const newUrl = {
-      pathname: currentPath,
-      query: currentQuery
-    };
-    
-    // Use router.push instead of router.replace for better reliability
-    router.push(newUrl, undefined, { shallow: true })
-      .catch(err => console.warn('Language switching URL update failed:', err));
   };
 
   const contextValue = {
