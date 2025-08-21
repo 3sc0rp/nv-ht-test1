@@ -1814,7 +1814,7 @@ const NatureVillageWebsite = () => {
 
         badge: 'Çîroka Me',
         subtitle: 'Tamên resen ên Kurdî û mêvandariya germ bo civata me tînin',
-        content: 'Gundê Xwezayê ji xewna parvekirina tamên resen û mêvandariya germ a Kurdistanê bi cîhanê re hate dayîn.',
+        content: 'Gundê Xwezayê ji xewna parvekirina tamên resen û mêvandariya germ a Rojhilata Navîn bi cîhanê re hate dayîn.',
         story1: 'Gundê Xwezayê ji bo pêşkêşkirina tamên resen ên xwarinên Kurdî di hawîrdorekî germ û bi xêrhatin de ku her mêvan wek malbat hîs bike, xwe terxan kiriye.',
         story2: 'Aşpêjên me bi dilsozî xwarinên kevneşopî yên Kurdî bi karanîna çêtirîn pêkhate û teknîkên kevneşopî yên çêkirina xwarinê amade dikin ku mîrata dewlemend a çêşt lênanê pîroz dikin.',
         quote: 'Her xwarinê bi baldarî tê amade kirin û bi germiya mêvandariya Kurdî tê pêşkêş kirin.',
@@ -1860,7 +1860,7 @@ const NatureVillageWebsite = () => {
       },
       footer: {
 
-        description: 'Tamên resen û mêvandariya germ a Kurdistanê tînin ser maseyê we. Her xwarinê pîrozbahiya çanda me ya dewlemend û başiya çêştlênanê ye.',
+        description: 'Tamên resen û mêvandariya germ a Rojhilata Navîn tînin ser maseyê we. Her xwarinê pîrozbahiya çanda me ya dewlemend û başiya çêştlênanê ye.',
 
         
 
@@ -2358,7 +2358,7 @@ const NatureVillageWebsite = () => {
 
         badge: 'Çîroka Me',
         subtitle: 'Tamên resen ên Kurdî û mêvandariya germ bo civata me tînin',
-        content: 'Gundê Xwezayê ji xewna parvekirina tamên resen û mêvandariya germ a Kurdistanê bi cîhanê re hate dayîn.',
+        content: 'Gundê Xwezayê ji xewna parvekirina tamên resen û mêvandariya germ a Rojhilata Navîn bi cîhanê re hate dayîn.',
         story1: 'Gundê Xwezayê ji bo pêşkêşkirina tamên resen ên xwarinên Kurdî di hawîrdorekî germ û bi xêrhatin de ku her mêvan wek malbat hîs bike, xwe terxan kiriye.',
         story2: 'Aşpêjên me bi dilsozî xwarinên kevneşopî yên Kurdî bi karanîna çêtirîn pêkhate û teknîkên kevneşopî yên çêkirina xwarinê amade dikin ku mîrata dewlemend a çêşt lênanê pîroz dikin.',
         quote: 'Her xwarinê bi baldarî tê amade kirin û bi germiya mêvandariya Kurdî tê pêşkêş kirin.',
@@ -2404,7 +2404,7 @@ const NatureVillageWebsite = () => {
       },
       footer: {
 
-        description: 'Tamên resen û mêvandariya germ a Kurdistanê tînin ser maseyê we. Her xwarinê pîrozbahiya çanda me ya dewlemend û başiya çêştlênanê ye.',
+        description: 'Tamên resen û mêvandariya germ a Rojhilata Navîn tînin ser maseyê we. Her xwarinê pîrozbahiya çanda me ya dewlemend û başiya çêştlênanê ye.',
 
         
 
@@ -4078,3 +4078,4 @@ const NatureVillageWebsite = () => {
 };
 
 export default NatureVillageWebsite;
+
