@@ -870,7 +870,7 @@ const FullMenuPage = () => {
       popularSectionTitle: 'بەناوبانگترین خۆراکەکانمان',
       scrollDownText: 'بۆ گەڕان لە مێنیو بەرەو خوارەوە بچۆ',
       footer: {
-        description: 'تامە ڕەسەنەکان و میوانداری گەرمی کوردستان بۆ مێزەکەتان دەهێنین. هەر خۆراکێک ئاهەنگێکە بۆ میراتی دەوڵەمەندی کولتوریمان و باشی ئاشپەزییەکەمان.',
+        description: 'تامە ڕەسەنەکان و میوانداری گەرمی ناوەڕاستی ئاسیا بۆ مێزەکەتان دەهێنین. هەر خۆراکێک ئاهەنگێکە بۆ میراتی دەوڵەمەندی کولتوریمان و باشی ئاشپەزییەکەمان.',
         quickLinks: 'بەستەری خێرا',
         contactInfo: 'زانیاری پەیوەندی',
         privacy: 'سیاسەتی تایبەتایەتی',
@@ -930,7 +930,7 @@ const FullMenuPage = () => {
       popularSectionTitle: 'أطباقنا الأكثر شهرة',
       scrollDownText: 'مرر لأسفل لاستكشاف القائمة',
       footer: {
-        description: 'نقدم النكهات الأصيلة والضيافة الدافئة من كردستان إلى طاولتك. كل طبق هو احتفال بتراثنا الثقافي الغني وتميزنا في الطهي.',
+        description: 'نقدم النكهات الأصيلة والضيافة الدافئة من الشرق الأوسط إلى طاولتك. كل طبق هو احتفال بتراثنا الثقافي الغني وتميزنا في الطهي.',
         quickLinks: 'روابط سريعة',
         contactInfo: 'معلومات الاتصال',
         privacy: 'سياسة الخصوصية',
@@ -990,7 +990,7 @@ const FullMenuPage = () => {
       popularSectionTitle: 'محبوب‌ترین غذاهای ما',
       scrollDownText: 'برای کاوش منو پایین بروید',
       footer: {
-        description: 'طعم‌های اصیل و مهمان‌نوازی گرم کردستان را به میز شما می‌آوریم. هر غذا جشنی از میراث فرهنگی غنی و تعالی آشپزی ماست.',
+        description: 'طعم‌های اصیل و مهمان‌نوازی گرم خاورمیانه را به میز شما می‌آوریم. هر غذا جشنی از میراث فرهنگی غنی و تعالی آشپزی ماست.',
         quickLinks: 'لینک‌های سریع',
         contactInfo: 'اطلاعات تماس',
         privacy: 'سیاست حریم خصوصی',
@@ -1050,7 +1050,7 @@ const FullMenuPage = () => {
       popularSectionTitle: 'En Popüler Yemeklerimiz',
       scrollDownText: 'Menüyü keşfetmek için aşağı kaydırın',
       footer: {
-        description: 'Kürdistan\'ın özgün lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz. Her yemek zengin kültürel mirasımızın ve mutfak mükemmelliğimizin bir kutlamasıdır.',
+        description: 'Orta Doğu\'nun özgün lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz. Her yemek zengin kültürel mirasımızın ve mutfak mükemmelliğimizin bir kutlamasıdır.',
         quickLinks: 'Hızlı Bağlantılar',
         contactInfo: 'İletişim Bilgileri',
         privacy: 'Gizlilik Politikası',
@@ -1110,7 +1110,7 @@ const FullMenuPage = () => {
       popularSectionTitle: 'ہمارے سب سے مقبول کھانے',
       scrollDownText: 'مینو دیکھنے کے لیے نیچے سکرول کریں',
       footer: {
-        description: 'ہم کردستان کے اصل ذائقے اور گرم مہمان نوازی آپ کے میز تک لاتے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور کھانا پکانے کی مہارت کا جشن ہے۔',
+        description: 'ہم مشرق وسطیٰ کے اصل ذائقے اور گرم مہمان نوازی آپ کے میز تک لاتے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور کھانا پکانے کی مہارت کا جشن ہے۔',
         quickLinks: 'فوری روابط',
         contactInfo: 'رابطہ کی معلومات',
         privacy: 'پرائیویسی پالیسی',
@@ -1170,7 +1170,7 @@ const FullMenuPage = () => {
       popularSectionTitle: 'Xwarinên Me yên Herî Populer',
       scrollDownText: 'Ji bo keşfkirina menûyê berbi jêr ve biçin',
       footer: {
-        description: 'Em tamên resen û mêvandariya germ a Kurdistanê diînin li masaya we. Her xwarineke pîrozbahiyek e ji mîrata me ya dewlemend a çandî û helbesta aşpêjiyê.',
+        description: 'Em tamên resen û mêvandariya germ a Rojhilata Navîn diînin li masaya we. Her xwarineke pîrozbahiyek e ji mîrata me ya dewlemend a çandî û helbesta aşpêjiyê.',
         quickLinks: 'Girêdanên Bilez',
         contactInfo: 'Agahiyên Têkiliyê',
         privacy: 'Siyaseta Nehêniyê',

@@ -17,15 +17,15 @@ export default function Home() {
               "@type": "Restaurant",
               "name": "Nature Village",
               "image": "https://naturevillagerestaurant.com/wp-content/uploads/2024/09/cropped-NatureVillage-Logo_circle-1222-2048x2048-1.webp",
-              "description": "Authentic Kurdish restaurant serving traditional cuisine with modern presentation",
+              "description": "Authentic Middle Eastern restaurant serving traditional cuisine with modern presentation",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "123 Kurdistan Street",
-                "addressLocality": "City Center",
-                "addressRegion": "State",
-                "postalCode": "12345"
+                "streetAddress": "302 Satellite Blvd NE STE 125",
+                "addressLocality": "Suwanee",
+                "addressRegion": "GA",
+                "postalCode": "30024"
               },
-              "telephone": "+1-555-123-4567",
+              "telephone": "+1-470-350-1019",
               "openingHours": [
                 "Mo-Th 11:00-22:00",
                 "Fr-Sa 11:00-23:00", 
