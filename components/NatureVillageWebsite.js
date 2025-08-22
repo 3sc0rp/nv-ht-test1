@@ -470,7 +470,7 @@ const NatureVillageWebsite = () => {
       id: 1,
       src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop',
-      alt: { en: 'Elegant Restaurant Interior', ku: 'ناوەوەی چێشتخانەی جوان', ar: 'داخل المطعم الأنيق', es: 'Elegante Interior del Restaurante', sq: 'Interiori Elegant i Restorantit', fr: 'Intérieur Élégant du Restaurant' },
+      alt: { en: 'Elegant Restaurant Interior', ku: 'ناوەوەی چێشتخانەی جوان', ar: 'داخل المطعم الأنيق', es: 'Elegante Interior del Restaurante', sq: 'Interiori Elegant i Restorantit', fr: 'Intérieur Élégant du Restaurant', de: 'Elegantes Restaurant-Interieur' },
       category: 'atmosphere',
       tags: ['interior', 'ambiance', 'dining'],
       likes: 127,
@@ -480,14 +480,15 @@ const NatureVillageWebsite = () => {
         ku: 'شوێنی خواردنی گەرم و بانگهێشتکارمان ڕەنگدانەوەی میوانداری ڕۆژهەڵاتی ناوەڕاست دەکات',
         es: 'Nuestro espacio de comedor cálido y acogedor refleja la hospitalidad del Medio Oriente',
         sq: 'Hapësira jonë e ngrohtë dhe tërheqëse e të ngrënit reflekton mikpritjen e Lindjes së Mesme',
-        fr: 'Notre espace de restauration chaleureux et accueillant reflète l\'hospitalité du Moyen-Orient'
+        fr: 'Notre espace de restauration chaleureux et accueillant reflète l\'hospitalité du Moyen-Orient',
+        de: 'Unser warmer und einladender Speisebereich spiegelt die Gastfreundschaft des Nahen Ostens wider'
       }
     },
     {
       id: 2,
       src: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&h=300&fit=crop',
-      alt: { en: 'Authentic Middle Eastern Kebab', ku: 'کەبابی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست', ar: 'كباب شرق أوسطي أصيل', es: 'Auténtico Kebab del Medio Oriente', sq: 'Kabab Autentik i Lindjes së Mesme', fr: 'Kebab Authentique du Moyen-Orient' },
+      alt: { en: 'Authentic Middle Eastern Kebab', ku: 'کەبابی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست', ar: 'كباب شرق أوسطي أصيل', es: 'Auténtico Kebab del Medio Oriente', sq: 'Kabab Autentik i Lindjes së Mesme', fr: 'Kebab Authentique du Moyen-Orient', de: 'Authentischer Nahöstlicher Kebab' },
       category: 'dishes',
       tags: ['kebab', 'grilled', 'signature'],
       likes: 245,
@@ -497,14 +498,15 @@ const NatureVillageWebsite = () => {
         ku: 'کەبابی دەستکرد بە بەکارهێنانی بەهارات و تەکنیکی نەریتی ڕۆژهەڵاتی ناوەڕاست',
         es: 'Kebabs hechos a mano usando especias y técnicas tradicionales del Medio Oriente',
         sq: 'Kabab të bërë me dorë duke përdorur erëza dhe teknika tradicionale të Lindjes së Mesme',
-        fr: 'Kebabs faits à la main utilisant des épices et techniques traditionnelles du Moyen-Orient'
+        fr: 'Kebabs faits à la main utilisant des épices et techniques traditionnelles du Moyen-Orient',
+        de: 'Handgefertigte Kebabs mit traditionellen nahöstlichen Gewürzen und Techniken'
       }
     },
     {
       id: 3,
       src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop',
-      alt: { en: 'Fresh Hummus with Pita', ku: 'حومسی تازە لەگەڵ نانی پیتا', ar: 'حمص طازج مع الخبز', es: 'Hummus Fresco con Pita', sq: 'Humus i Freskët me Pita', fr: 'Houmous Frais avec Pita' },
+      alt: { en: 'Fresh Hummus with Pita', ku: 'حومسی تازە لەگەڵ نانی پیتا', ar: 'حمص طازج مع الخبز', es: 'Hummus Fresco con Pita', sq: 'Humus i Freskët me Pita', fr: 'Houmous Frais avec Pita', de: 'Frischer Hummus mit Pita' },
       category: 'dishes',
       tags: ['hummus', 'appetizer', 'vegetarian'],
       likes: 189,
@@ -513,14 +515,15 @@ const NatureVillageWebsite = () => {
         en: 'Creamy hummus made fresh daily with tahini and olive oil',
         ku: 'حومسی کرێمی کە ڕۆژانە بە تەحینە و زەیتی زەیتوون تازە دروست دەکرێت',
         sq: 'Humus kremoz i bërë i freskët çdo ditë me tahini dhe vaj ulliri',
-        fr: 'Houmous crémeux fait frais quotidiennement avec tahini et huile d\'olive'
+        fr: 'Houmous crémeux fait frais quotidiennement avec tahini et huile d\'olive',
+        de: 'Cremiger Hummus, täglich frisch zubereitet mit Tahini und Olivenöl'
       }
     },
     {
       id: 4,
       src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
-      alt: { en: 'Traditional Middle Eastern Platter', ku: 'پلێتەری نەریتی ڕۆژهەڵاتی ناوەڕاست', ar: 'طبق شرق أوسطي تقليدي', es: 'Plato Tradicional del Medio Oriente', sq: 'Pjatë Tradicionale e Lindjes së Mesme', fr: 'Plat Traditionnel du Moyen-Orient' },
+      alt: { en: 'Traditional Middle Eastern Platter', ku: 'پلێتەری نەریتی ڕۆژهەڵاتی ناوەڕاست', ar: 'طبق شرق أوسطي تقليدي', es: 'Plato Tradicional del Medio Oriente', sq: 'Pjatë Tradicionale e Lindjes së Mesme', fr: 'Plat Traditionnel du Moyen-Orient', de: 'Traditionelle Nahöstliche Platte' },
       category: 'dishes',
       tags: ['traditional', 'mixed', 'authentic'],
       likes: 156,
@@ -530,14 +533,15 @@ const NatureVillageWebsite = () => {
         ku: 'ئاهەنگێک بۆ میراتی چێشتلێنانی ڕۆژهەڵاتی ناوەڕاست لە یەک پلێتەری جوان',
         es: 'Una celebración del patrimonio culinario del Medio Oriente en un hermoso plato',
         sq: 'Një festim i trashëgimisë kulinarë të Lindjes së Mesme në një pjatë të bukur',
-        fr: 'Une célébration du patrimoine culinaire du Moyen-Orient dans un magnifique plat'
+        fr: 'Une célébration du patrimoine culinaire du Moyen-Orient dans un magnifique plat',
+        de: 'Eine Feier des nahöstlichen kulinarischen Erbes auf einer wunderschönen Platte'
       }
     },
     {
       id: 5,
       src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop',
-      alt: { en: 'Middle Eastern Vegetable Medley', ku: 'تێکەڵەی سەوزەی ڕۆژهەڵاتی ناوەڕاست', ar: 'خليط الخضار الشرق أوسطي', es: 'Mezcla de Vegetales del Medio Oriente', sq: 'Përzierje Perimesh të Lindjes së Mesme', fr: 'Mélange de Légumes du Moyen-Orient' },
+      alt: { en: 'Middle Eastern Vegetable Medley', ku: 'تێکەڵەی سەوزەی ڕۆژهەڵاتی ناوەڕاست', ar: 'خليط الخضار الشرق أوسطي', es: 'Mezcla de Vegetales del Medio Oriente', sq: 'Përzierje Perimesh të Lindjes së Mesme', fr: 'Mélange de Légumes du Moyen-Orient', de: 'Nahöstliche Gemüse-Medley' },
       category: 'dishes',
       tags: ['vegetables', 'healthy', 'colorful'],
       likes: 134,
@@ -547,14 +551,15 @@ const NatureVillageWebsite = () => {
         ku: 'سەوزەی وەرزیی تازە کە بە گیا و بەهاراتی ڕۆژهەڵاتی ناوەڕاست ئامادە کراوە',
         es: 'Verduras frescas de temporada preparadas con hierbas y especias del Medio Oriente',
         sq: 'Perime të freskëta stinore të përgatitura me bimë dhe erëza të Lindjes së Mesme',
-        fr: 'Légumes frais de saison préparés avec des herbes et épices du Moyen-Orient'
+        fr: 'Légumes frais de saison préparés avec des herbes et épices du Moyen-Orient',
+        de: 'Frisches Saisongemüse zubereitet mit nahöstlichen Kräutern und Gewürzen'
       }
     },
     {
       id: 6,
       src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop',
-      alt: { en: 'Traditional Baklava', ku: 'بەقڵاوای نەریتی', ar: 'بقلاوة تقليدية', es: 'Baklava Tradicional', sq: 'Bakllava Tradicionale', fr: 'Baklava Traditionnel' },
+      alt: { en: 'Traditional Baklava', ku: 'بەقڵاوای نەریتی', ar: 'بقلاوة تقليدية', es: 'Baklava Tradicional', sq: 'Bakllava Tradicionale', fr: 'Baklava Traditionnel', de: 'Traditionelles Baklava' },
       category: 'desserts',
       tags: ['baklava', 'sweet', 'pastry'],
       likes: 201,
@@ -564,14 +569,15 @@ const NatureVillageWebsite = () => {
         ku: 'چینە چینە فیلۆی ناسک پڕکراو لە گوێز و بە هەنگوین شیرین کراوە',
         es: 'Delicadas capas de masa filo rellenas de nueces y endulzadas con miel',
         sq: 'Shtresa delikate brumi fillo të mbushura me arra dhe të ëmbëlsuara me mjaltë',
-        fr: 'Délicates couches de pâte phyllo remplies de noix et sucrées au miel'
+        fr: 'Délicates couches de pâte phyllo remplies de noix et sucrées au miel',
+        de: 'Zarte Schichten von Phyllo-Teig gefüllt mit Nüssen und mit Honig gesüßt'
       }
     },
     {
       id: 7,
       src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&h=300&fit=crop',
-      alt: { en: 'Middle Eastern Dolma', ku: 'دۆڵمەی ڕۆژهەڵاتی ناوەڕاست', ar: 'دولمة شرق أوسطية', es: 'Dolma del Medio Oriente', sq: 'Dollma e Lindjes së Mesme', fr: 'Dolma du Moyen-Orient' },
+      alt: { en: 'Middle Eastern Dolma', ku: 'دۆڵمەی ڕۆژهەڵاتی ناوەڕاست', ar: 'دولمة شرق أوسطية', es: 'Dolma del Medio Oriente', sq: 'Dollma e Lindjes së Mesme', fr: 'Dolma du Moyen-Orient', de: 'Nahöstliche Dolma' },
       category: 'dishes',
       tags: ['dolma', 'stuffed', 'traditional'],
       likes: 178,
@@ -581,14 +587,15 @@ const NatureVillageWebsite = () => {
         ku: 'گەڵای مێو پڕکراو لە برنج و گیا و بەهارات - ڕێسەتێکی خێزانی',
         es: 'Hojas de parra rellenas de arroz, hierbas y especias - una receta familiar',
         sq: 'Gjethe rrushi të mbushura me oriz, bimë dhe erëza - një recetë familjare',
-        fr: 'Feuilles de vigne farcies au riz, herbes et épices - une recette familiale'
+        fr: 'Feuilles de vigne farcies au riz, herbes et épices - une recette familiale',
+        de: 'Weinblätter gefüllt mit Reis, Kräutern und Gewürzen - ein Familienrezept'
       }
     },
     {
       id: 8,
       src: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop',
-      alt: { en: 'Hearty Middle Eastern Soup', ku: 'شۆربەی بەهێزی ڕۆژهەڵاتی ناوەڕاست', ar: 'حساء شرق أوسطي مغذي', es: 'Sopa Sustanciosa del Medio Oriente', sq: 'Supë Ushqyese e Lindjes së Mesme', fr: 'Soupe Nourrissante du Moyen-Orient' },
+      alt: { en: 'Hearty Middle Eastern Soup', ku: 'شۆربەی بەهێزی ڕۆژهەڵاتی ناوەڕاست', ar: 'حساء شرق أوسطي مغذي', es: 'Sopa Sustanciosa del Medio Oriente', sq: 'Supë Ushqyese e Lindjes së Mesme', fr: 'Soupe Nourrissante du Moyen-Orient', de: 'Herzhafte Nahöstliche Suppe' },
       category: 'dishes',
       tags: ['soup', 'comfort', 'warm'],
       likes: 143,
@@ -598,17 +605,18 @@ const NatureVillageWebsite = () => {
         ku: 'شۆربەی گەرمکەرەوە کە بە پێکهاتەی نەریتی ڕۆژهەڵاتی ناوەڕاست و خۆشەویستی دروست کراوە',
         es: 'Sopa reconfortante hecha con ingredientes tradicionales del Medio Oriente y amor',
         sq: 'Supë ngrohtëse e bërë me përbërës tradicionalë të Lindjes së Mesme dhe dashuri',
-        fr: 'Soupe réchauffante faite avec des ingrédients traditionnels du Moyen-Orient et de l\'amour'
+        fr: 'Soupe réchauffante faite avec des ingrédients traditionnels du Moyen-Orient et de l\'amour',
+        de: 'Wärmende Suppe zubereitet mit traditionellen nahöstlichen Zutaten und Liebe'
       }
     }
   ], []);
 
   // Gallery Categories
   const galleryCategories = useMemo(() => ({
-    all: { en: 'All Photos', ku: 'هەموو وێنەکان', ar: 'جميع الصور', es: 'Todas las Fotos', sq: 'Të Gjitha Fotografitë', fr: 'Toutes les Photos', icon: Grid },
-    dishes: { en: 'Signature Dishes', ku: 'خۆراکی تایبەت', ar: 'الأطباق المميزة', es: 'Platos Especiales', sq: 'Pjata Speciale', fr: 'Plats Signature', icon: ChefHat },
-    atmosphere: { en: 'Restaurant Atmosphere', ku: 'کەشوهەوای چێشتخانە', ar: 'أجواء المطعم', es: 'Ambiente del Restaurante', sq: 'Atmosfera e Restorantit', fr: 'Atmosphère du Restaurant', icon: Home },
-    desserts: { en: 'Sweet Treats', ku: 'شیرینی', ar: 'الحلويات', es: 'Dulces Delicias', sq: 'Ëmbëlsira të Shijshme', fr: 'Douceurs Sucrées', icon: Heart }
+    all: { en: 'All Photos', ku: 'هەموو وێنەکان', ar: 'جميع الصور', es: 'Todas las Fotos', sq: 'Të Gjitha Fotografitë', fr: 'Toutes les Photos', de: 'Alle Fotos', icon: Grid },
+    dishes: { en: 'Signature Dishes', ku: 'خۆراکی تایبەت', ar: 'الأطباق المميزة', es: 'Platos Especiales', sq: 'Pjata Speciale', fr: 'Plats Signature', de: 'Signature-Gerichte', icon: ChefHat },
+    atmosphere: { en: 'Restaurant Atmosphere', ku: 'کەشوهەوای چێشتخانە', ar: 'أجواء المطعم', es: 'Ambiente del Restaurante', sq: 'Atmosfera e Restorantit', fr: 'Atmosphère du Restaurant', de: 'Restaurant-Atmosphäre', icon: Home },
+    desserts: { en: 'Sweet Treats', ku: 'شیرینی', ar: 'الحلويات', es: 'Dulces Delicias', sq: 'Ëmbëlsira të Shijshme', fr: 'Douceurs Sucrées', de: 'Süße Leckereien', icon: Heart }
   }), []);
 
   // Filter functionality
@@ -669,7 +677,8 @@ const NatureVillageWebsite = () => {
         kmr: 'Pizza Kebab',
         es: 'Pizza de Kabab',
         sq: 'Pica Kabab',
-        fr: 'Pizza Kebab'
+        fr: 'Pizza Kebab',
+        de: 'Kebab-Pizza'
       },
       description: {
         en: 'A savory pizza topped with thin slices of beef kabab, special sauce, iceberg lettuce, onions, cucumbers, and tomatoes. The crispy crust provides a perfect base for this fresh and flavorful combination.',
@@ -681,7 +690,8 @@ const NatureVillageWebsite = () => {
         kmr: 'Pizzayek bi tam ku bi perçeyên zok ên kebabê goştê ga, soşa taybet, salata qelemî, pîvaz, xiyar û firangoşan hatiye daxuyandin. Hevîrê çitir bingeheke temam ji bo vê tevahiya taze û bi tam peyda dike.',
         es: 'Una pizza sabrosa cubierta con finas rebanadas de kabab de res, salsa especial, lechuga iceberg, cebollas, pepinos y tomates. La base crujiente proporciona una base perfecta para esta combinación fresca y sabrosa.',
         sq: 'Një picë e shijshme e mbuluar me feta të holla kababi viçi, salcë speciale, sallatë ajsbergu, qepë, kastravec dhe domate. Baza e kërcitshme ofron një bazë perfekte për këtë kombinim të freskët dhe plot shije.',
-        fr: 'Une pizza savoureuse garnie de fines tranches de kebab de bœuf, sauce spéciale, laitue iceberg, oignons, concombres et tomates. La pâte croustillante fournit une base parfaite pour cette combinaison fraîche et savoureuse.'
+        fr: 'Une pizza savoureuse garnie de fines tranches de kebab de bœuf, sauce spéciale, laitue iceberg, oignons, concombres et tomates. La pâte croustillante fournit une base parfaite pour cette combinaison fraîche et savoureuse.',
+        de: 'Eine herzhafte Pizza belegt mit dünnen Scheiben Rindfleisch-Kebab, spezieller Sauce, Eisbergsalat, Zwiebeln, Gurken und Tomaten. Der knusprige Boden bietet eine perfekte Basis für diese frische und geschmackvolle Kombination.'
       },
       price: '$16.99',
       category: 'pizza',
@@ -701,7 +711,8 @@ const NatureVillageWebsite = () => {
         kmr: 'Karnavala Gund',
         es: 'Carnaval del Pueblo',
         sq: 'Karnavali i Fshatit',
-        fr: 'Carnaval du Village'
+        fr: 'Carnaval du Village',
+        de: 'Dorf-Karneval'
       },
       description: {
         en: 'This best stew is a dish made with carefully selected fresh vegetables and tender pieces of meat. Slowly cooked to perfection. Served with aromatic saffron rice. It creates a memorable and satisfying dining experience.',
@@ -713,7 +724,8 @@ const NatureVillageWebsite = () => {
         kmr: 'Ev xwaştrîn xwarin xwarineke ku bi sebzeyên taze yên bi baldarî hatine hilbijartin û perçeyên nerm ên goştî hatiye çêkirin. Hêdî hêdî heta bi temamî hatiye pijandin. Bi brincê zefranî, salata werzeya, pîvazê sumaq û sebzeyên grîlkirî tê peşkêşkirin. Ezmûnek xwarinê ya jibîrnekirin û şaykirin çêdike.',
         es: 'Este mejor guiso es un plato hecho con verduras frescas cuidadosamente seleccionadas y tiernos trozos de carne. Cocido lentamente a la perfección. Servido con arroz de azafrán aromático. Crea una experiencia gastronómica memorable y satisfactoria.',
         sq: 'Ky është një zarzavat i përsosur i bërë me perime të freskëta të zgjedhura me kujdes dhe copa të buta mishi. Gatuhet ngadalë deri në përsosuri. Shërbehet me oriz safrani aromatik. Krijon një përvojë ngrënie të paharrueshme dhe kënaqëse.',
-        fr: 'Ce meilleur ragoût est un plat fait avec des légumes frais soigneusement sélectionnés et des morceaux de viande tendres. Cuit lentement à la perfection. Servi avec du riz au safran aromatique. Il crée une expérience culinaire mémorable et satisfaisante.'
+        fr: 'Ce meilleur ragoût est un plat fait avec des légumes frais soigneusement sélectionnés et des morceaux de viande tendres. Cuit lentement à la perfection. Servi avec du riz au safran aromatique. Il crée une expérience culinaire mémorable et satisfaisante.',
+        de: 'Dieser beste Eintopf ist ein Gericht aus sorgfältig ausgewähltem frischem Gemüse und zarten Fleischstücken. Langsam zur Perfektion gekocht. Serviert mit aromatischem Safranreis. Es schafft ein unvergessliches und befriedigendes kulinarisches Erlebnis.'
       },
       price: '$23.99',
       category: 'specialty',
@@ -733,7 +745,8 @@ const NatureVillageWebsite = () => {
         kmr: 'Şîş Kebaba Hewlêr',
         es: 'Shish Kabab de Erbil',
         sq: 'Shish Kabab Erbil',
-        fr: 'Shish Kebab d\'Erbil'
+        fr: 'Shish Kebab d\'Erbil',
+        de: 'Erbil Shish Kebab'
       },
       description: {
         en: 'A kabab made with a mix of lamb and beef, grilled to perfection. It is served with saffron rice, seasonal salad, sumac onions, and grilled vegetables.',
@@ -745,7 +758,8 @@ const NatureVillageWebsite = () => {
         kmr: 'Kebabek ku ji tevahiya goştê berx û ga hatiye çêkirin, heta bi temamî hatiye grîlkirin. Bi brincê zefranî, salata werzeya, pîvazê sumaq û sebzeyên grîlkirî tê peşkêşkirin.',
         es: 'Un kabab hecho con una mezcla de cordero y res, asado a la perfección. Se sirve con arroz de azafrán, ensalada de temporada, cebollas de sumac y verduras asadas.',
         sq: 'Një kabab i bërë me një përzierje dele dhe viçi, i pjekur në përsosuri. Shërbehet me oriz safrani, sallatë stinore, qepë sumaku dhe perime të pjekura në skarë.',
-        fr: 'Un kebab fait avec un mélange d\'agneau et de bœuf, grillé à la perfection. Servi avec du riz au safran, salade de saison, oignons au sumac et légumes grillés.'
+        fr: 'Un kebab fait avec un mélange d\'agneau et de bœuf, grillé à la perfection. Servi avec du riz au safran, salade de saison, oignons au sumac et légumes grillés.',
+        de: 'Ein Kebab aus einer Mischung von Lamm und Rind, perfekt gegrillt. Serviert mit Safranreis, Salat der Saison, Sumach-Zwiebeln und gegrilltem Gemüse.'
       },
       price: '$21.99',
       category: 'grill',
