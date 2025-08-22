@@ -295,7 +295,8 @@ const FullMenuPage = () => {
         ru: 'Парда Бирьяни',
         hi: 'परदा बिरयानी',
         sq: 'Parda Biryani',
-        fr: 'Biryani Parda'
+        fr: 'Biryani Parda',
+        de: 'Parda Biryani'
       }, 
       category: {
         en: 'Specialty',
@@ -309,7 +310,8 @@ const FullMenuPage = () => {
         ru: 'Фирменные блюда',
         hi: 'विशेष व्यंजन',
         sq: 'Specialitetet',
-        fr: 'Spécialités'
+        fr: 'Spécialités',
+        de: 'Spezialitäten'
       }, 
       placeholder: 'biryani', 
       imageUrl: '/pbiryani.png',
@@ -325,7 +327,8 @@ const FullMenuPage = () => {
         ru: 'Традиционное слоёное рисовое блюдо с ароматными специями и нежным мясом',
         hi: 'सुगंधित मसालों और नरम मांस के साथ पारंपरिक परतदार चावल का व्यंजन',
         sq: 'Pjatë tradicionale orizi me shtresa me erëza aromatike dhe mish të butë',
-        fr: 'Plat traditionnel de riz en couches avec des épices aromatiques et de la viande tendre'
+        fr: 'Plat traditionnel de riz en couches avec des épices aromatiques et de la viande tendre',
+        de: 'Traditionelles Schichtreisgericht mit aromatischen Gewürzen und zartem Fleisch'
       },
       color: '#FF6B6B'
     },
@@ -343,7 +346,8 @@ const FullMenuPage = () => {
         ru: 'Махши Кебаб',
         hi: 'महशी कबाब',
         sq: 'Mahshi Kabab',
-        fr: 'Kebab Mahshi'
+        fr: 'Kebab Mahshi',
+        de: 'Mahshi Kebab'
       }, 
       category: {
         en: 'Grill',
@@ -357,7 +361,8 @@ const FullMenuPage = () => {
         ru: 'Гриль',
         hi: 'ग्रिल प्लेटर',
         sq: 'Pjatat e Grilit',
-        fr: 'Plats Grillés'
+        fr: 'Plats Grillés',
+        de: 'Grillgerichte'
       }, 
       placeholder: 'kebab', 
       imageUrl: '/mkabab.jpg',
@@ -373,7 +378,8 @@ const FullMenuPage = () => {
         ru: 'Кебаб из говядины и баранины с чесноком, острым перцем и петрушкой',
         hi: 'लहसुन, तेज़ मिर्च और अजमोद के साथ गोमांस और भेड़ के बच्चे का कबाब',
         sq: 'Kabab viçi dhe deleje me shije hudhra, speca të egos dhe majdanoz',
-        fr: 'Kebab de bœuf et d\'agneau assaisonné à l\'ail, aux piments forts et au persil'
+        fr: 'Kebab de bœuf et d\'agneau assaisonné à l\'ail, aux piments forts et au persil',
+        de: 'Rind- und Lamm-Kebab gewürzt mit Knoblauch, scharfen Paprika und Petersilie'
       },
       color: '#A0522D'
     },
@@ -391,7 +397,8 @@ const FullMenuPage = () => {
         ru: 'Пицца Маргарита',
         hi: 'मार्गेरिटा पिज्जा',
         sq: 'Pica Margherita',
-        fr: 'Pizza Margherita'
+        fr: 'Pizza Margherita',
+        de: 'Margherita Pizza'
       }, 
       category: {
         en: 'Pizza',
@@ -405,7 +412,8 @@ const FullMenuPage = () => {
         ru: 'Пицца',
         hi: 'पिज्जा',
         sq: 'Pica',
-        fr: 'Pizza'
+        fr: 'Pizza',
+        de: 'Pizza'
       }, 
       placeholder: 'pizza', 
       imageUrl: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=300&h=200&fit=crop',
@@ -421,7 +429,8 @@ const FullMenuPage = () => {
         ru: 'Классическая итальянская пицца со свежей моцареллой, помидорами и базиликом',
         hi: 'ताज़ा मोज़ेरेला, टमाटर और तुलसी के साथ क्लासिक इतालवी पिज्जा',
         sq: 'Pica klasike italiane me mozzarella të freskët, domate dhe borzilok',
-        fr: 'Pizza italienne classique avec mozzarella fraîche, tomates et basilic'
+        fr: 'Pizza italienne classique avec mozzarella fraîche, tomates et basilic',
+        de: 'Klassische italienische Pizza mit frischer Mozzarella, Tomaten und Basilikum'
       },
       color: '#FF8C42'
     },
@@ -439,7 +448,8 @@ const FullMenuPage = () => {
         ru: 'Хумус',
         hi: 'हम्मुस',
         sq: 'Humus',
-        fr: 'Houmous'
+        fr: 'Houmous',
+        de: 'Hummus'
       }, 
       category: {
         en: 'Appetizer',
@@ -453,7 +463,8 @@ const FullMenuPage = () => {
         ru: 'Закуски',
         hi: 'स्टार्टर',
         sq: 'Aperitivë',
-        fr: 'Apéritifs'
+        fr: 'Apéritifs',
+        de: 'Vorspeisen'
       }, 
       placeholder: 'hummus', 
       imageUrl: '/hummus.jpg',
@@ -469,7 +480,8 @@ const FullMenuPage = () => {
         ru: 'Кремовая закуска из нута с тахини, оливковым маслом и тёплой питой',
         hi: 'तिल का पेस्ट, जैतून का तेल और गर्म पीटा ब्रेड के साथ मलाईदार चने का डिप',
         sq: 'Sos kremoz me groftha me tahini, vaj ulliri dhe bukë pita të ngrohtë',
-        fr: 'Dip crémeux aux pois chiches avec tahini, huile d\'olive et pain pita chaud'
+        fr: 'Dip crémeux aux pois chiches avec tahini, huile d\'olive et pain pita chaud',
+        de: 'Cremiger Kichererbsen-Dip mit Tahini, Olivenöl und warmem Pita-Brot'
       },
       color: '#D2B48C'
     },
@@ -487,7 +499,8 @@ const FullMenuPage = () => {
         ru: 'Баклава',
         hi: 'बकलावा',
         sq: 'Bakllava',
-        fr: 'Baklava'
+        fr: 'Baklava',
+        de: 'Baklava'
       }, 
       category: {
         en: 'Dessert',
@@ -501,7 +514,8 @@ const FullMenuPage = () => {
         ru: 'Десерты',
         hi: 'मिठाई',
         sq: 'Ëmbëlsira',
-        fr: 'Desserts'
+        fr: 'Desserts',
+        de: 'Desserts'
       }, 
       placeholder: 'baklava', 
       imageUrl: '/baklava.jpg',
@@ -517,7 +531,8 @@ const FullMenuPage = () => {
         ru: 'Сладкое пирожное со слоями орехов и мёда в нежном тесте фило',
         hi: 'नाजुक फिलो में नट्स और शहद की परतों के साथ मीठी पेस्ट्री',
         sq: 'Ëmbëlsirë me shtresa arrash dhe mjaltë në brumë delikat fillo',
-        fr: 'Pâtisserie sucrée avec des couches de noix et de miel dans une délicate pâte phyllo'
+        fr: 'Pâtisserie sucrée avec des couches de noix et de miel dans une délicate pâte phyllo',
+        de: 'Süßes Gebäck mit Nuss- und Honigschichten in zartem Phyllo-Teig'
       },
       color: '#DEB887'
     },
@@ -535,7 +550,8 @@ const FullMenuPage = () => {
         ru: 'Сэндвич с шавармой из курицы',
         hi: 'चिकन शावरमा सैंडविच',
         sq: 'Sandwich Shawarma Pule',
-        fr: 'Sandwich Shawarma au Poulet'
+        fr: 'Sandwich Shawarma au Poulet',
+        de: 'Hähnchen-Schawarma-Sandwich'
       }, 
       category: {
         en: 'Sandwich',
@@ -549,7 +565,8 @@ const FullMenuPage = () => {
         ru: 'Сэндвич',
         hi: 'सैंडविच',
         sq: 'Sandwich',
-        fr: 'Sandwich'
+        fr: 'Sandwich',
+        de: 'Sandwich'
       }, 
       placeholder: 'shawarma', 
       imageUrl: '/chk.jpg',
@@ -562,10 +579,11 @@ const FullMenuPage = () => {
         ur: 'تازہ پیٹا میں سبزیوں اور ساس کے ساتھ لپیٹا گیا نرم میرینیٹ چکن',
         kmr: 'Mirîşkê nerm ê marînekirî di nanê pita yê taze de bi sebze û soşê hatiye pêçandin',
         es: 'Pollo marinado tierno envuelto en pita fresca con verduras y salsa',
-        ru: 'Нежная маринованная курица, завёрнутая в свежую питу с овощами и соусом',
+        ru: 'Нежная маринованная курица, завёrнутая в свежую питу с овощами и соусом',
         hi: 'सब्जियों और सॉस के साथ ताजा पीटा में लपेटा गया नर्म मैरिनेटेड चिकन',
         sq: 'Pulë e butë e marinuar e mbështjellë në pita të freskët me perime dhe salcë',
-        fr: 'Poulet mariné tendre enroulé dans du pain pita frais avec des légumes et de la sauce'
+        fr: 'Poulet mariné tendre enroulé dans du pain pita frais avec des légumes et de la sauce',
+        de: 'Zartes mariniertes Hähnchen in frischem Pita mit Gemüse und Sauce'
       },
       color: '#FFD93D'
     },
@@ -583,7 +601,8 @@ const FullMenuPage = () => {
         ru: 'Карак чай',
         hi: 'करक चाय',
         sq: 'Çaj Karak',
-        fr: 'Thé Karak'
+        fr: 'Thé Karak',
+        de: 'Karak Tee'
       }, 
       category: {
         en: 'Hot Drinks',
@@ -597,7 +616,8 @@ const FullMenuPage = () => {
         ru: 'Горячие напитки',
         hi: 'पेय (गर्म)',
         sq: 'Pije (të Nxehta)',
-        fr: 'Boissons Chaudes'
+        fr: 'Boissons Chaudes',
+        de: 'Heiße Getränke'
       }, 
       placeholder: 'tea', 
       imageUrl: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=300&h=200&fit=crop',
@@ -613,7 +633,8 @@ const FullMenuPage = () => {
         ru: 'Пряный чай с молоком и кардамоном, традиционный ближневосточный фаворит',
         hi: 'दूध और इलायची के साथ मसालेदार चाय, एक पारंपरिक मध्य पूर्वी पसंदीदा',
         sq: 'Çaj me erëza me qumësht dhe hil, një e preferuar tradicionale e Lindjes së Mesme',
-        fr: 'Thé épicé au lait et à la cardamome, un favori traditionnel du Moyen-Orient'
+        fr: 'Thé épicé au lait et à la cardamome, un favori traditionnel du Moyen-Orient',
+        de: 'Gewürztee mit Milch und Kardamom, ein traditioneller Favorit des Nahen Ostens'
       },
       color: '#8B4513'
     }
