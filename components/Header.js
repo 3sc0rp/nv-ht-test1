@@ -99,6 +99,16 @@ const Header = ({ currentPage = '' }) => {
         catering: 'Catering',
         orderOnline: 'Pedido en Línea'
       },
+      sq: {
+        home: 'Kreu',
+        menu: 'Meny',
+        about: 'Rreth Nesh',
+        gallery: 'Galeria',
+        visit: 'Na Vizitoni',
+        reservations: 'Rezervime',
+        catering: 'Katering',
+        orderOnline: 'Porosit Online'
+      },
       ur: {
         home: 'ہوم',
         menu: 'مینو',
@@ -131,7 +141,7 @@ const Header = ({ currentPage = '' }) => {
   // Handle order online
   const handleOrderOnline = () => {
     // You can customize this based on your order system
-    window.open('https://www.ubereats.com/store/nature-village-restaurant/', '_blank');
+    window.open('https://slicelife.com/restaurants/ga/suwanee/30024/nature-village-restaurant/menu', '_blank');
   };
 
   return (
@@ -455,6 +465,7 @@ const Header = ({ currentPage = '' }) => {
                        language === 'fa' ? 'زبان' :
                        language === 'tr' ? 'Dil' :
                        language === 'es' ? 'Idioma' :
+                       language === 'sq' ? 'Gjuha' :
                        language === 'ur' ? 'زبان' :
                        language === 'kmr' ? 'Ziman' :
                        language === 'ru' ? 'Язык' :
@@ -490,8 +501,11 @@ const Header = ({ currentPage = '' }) => {
                             {code === 'fa' && '🇮🇷'}
                             {code === 'tr' && '🇹🇷'}
                             {code === 'es' && '🇪🇸'}
+                            {code === 'sq' && '🇦🇱'}
                             {code === 'ur' && '🇵🇰'}
                             {code === 'kmr' && '⭐'}
+                            {code === 'ru' && '🇷🇺'}
+                            {code === 'hi' && '🇮🇳'}
                           </span>
                           {lang.name}
                         </span>

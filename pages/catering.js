@@ -108,6 +108,15 @@ const CateringPage = () => {
       backToHome: 'होम पर वापस जाएं',
       contact: 'तत्काल कैटरिंग पूछताछ के लिए, कृपया हमें कॉल करें',
       phone: '(470) 350-1019'
+    },
+    sq: {
+      title: 'Në Mirëmbajtje',
+      subtitle: 'Shërbimet e Kateringut',
+      message: 'Aktualisht po përditësojmë sistemin tonë të kateringut për t\'ju shërbejmë më mirë.',
+      expectedTime: 'Presim të jemi të disponueshëm përsëri së shpejti.',
+      backToHome: 'Kthehu në Kreu',
+      contact: 'Për pyetje të menjëhershme për katering, ju lutemi na telefononi në',
+      phone: '(470) 350-1019'
     }
   };
 

@@ -102,6 +102,22 @@ const Footer = () => {
         catering: 'Catering',
         gallery: 'Galeri'
       },
+      sq: {
+        description: 'Ku kuzina kurde takohet me natyrën. Sillim shijet autentike dhe mikpritjen e ngrohtë të Lindjes së Mesme në tavolinën tuaj. Çdo pjatë është një festim i trashëgimisë sonë të pasur kulturore dhe përsosmërisë kulinarë.',
+        quickLinks: 'Lidhje të Shpejta',
+        contactInfo: 'Informacioni i Kontaktit',
+        openDaily: 'DI - ENJ: 12:00 - 22:00\nPRE - SHT: 12:00 - 23:00',
+        privacy: 'Politika e Privatësisë',
+        terms: 'Kushtet e Shërbimit',
+        copyright: '© 2025 Nature Village Restorant Kurd. Të gjitha të drejtat e rezervuara.',
+        poweredBy: 'Fuqizuar nga',
+        blunari: 'Blunari',
+        home: 'Kreu',
+        menu: 'Meny',
+        reservations: 'Rezervime',
+        catering: 'Katering',
+        gallery: 'Galeria'
+      },
       ur: {
         description: 'مشرق وسطیٰ کے اصل ذائقے اور گرم مہمان نوازی آپ کی میز تک لا رہے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور پاک فن کی بہترین مثال ہے۔',
         quickLinks: 'فوری لنکس',

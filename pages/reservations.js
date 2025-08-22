@@ -107,6 +107,15 @@ const ReservationPage = () => {
       backToHome: 'होम पर वापस जाएं',
       contact: 'तत्काल सहायता के लिए, कृपया हमें कॉल करें',
       phone: '(470) 350-1019'
+    },
+    sq: {
+      title: 'Në Mirëmbajtje',
+      subtitle: 'Sistemi i Rezervimeve',
+      message: 'Aktualisht po përditësojmë sistemin tonë të rezervimeve për t\'ju shërbejmë më mirë.',
+      expectedTime: 'Presim të jemi të disponueshëm përsëri së shpejti.',
+      backToHome: 'Kthehu në Kreu',
+      contact: 'Për ndihmë të menjëhershme, ju lutemi na telefononi në',
+      phone: '(470) 350-1019'
     }
   };
 

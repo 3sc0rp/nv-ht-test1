@@ -293,7 +293,8 @@ const FullMenuPage = () => {
         kmr: 'Bîryanî ya Perde',
         es: 'Biryani Parda',
         ru: 'Парда Бирьяни',
-        hi: 'परदा बिरयानी'
+        hi: 'परदा बिरयानी',
+        sq: 'Parda Biryani'
       }, 
       category: {
         en: 'Specialty',
@@ -305,7 +306,8 @@ const FullMenuPage = () => {
         kmr: 'Xwarinên Taybet',
         es: 'Especialidad',
         ru: 'Фирменные блюда',
-        hi: 'विशेष व्यंजन'
+        hi: 'विशेष व्यंजन',
+        sq: 'Specialitetet'
       }, 
       placeholder: 'biryani', 
       imageUrl: '/pbiryani.png',
@@ -319,7 +321,8 @@ const FullMenuPage = () => {
         kmr: 'Xwarinê kevneşopî ya brincê çîndar bi baharatên bêhnxweş û goştê nerm',
         es: 'Plato tradicional de arroz en capas con especias aromáticas y carne tierna',
         ru: 'Традиционное слоёное рисовое блюдо с ароматными специями и нежным мясом',
-        hi: 'सुगंधित मसालों और नरम मांस के साथ पारंपरिक परतदार चावल का व्यंजन'
+        hi: 'सुगंधित मसालों और नरम मांस के साथ पारंपरिक परतदार चावल का व्यंजन',
+        sq: 'Pjatë tradicionale orizi me shtresa me erëza aromatike dhe mish të butë'
       },
       color: '#FF6B6B'
     },
@@ -335,7 +338,8 @@ const FullMenuPage = () => {
         kmr: 'Kebaba Dagirtî',
         es: 'Mahshi Kabab',
         ru: 'Махши Кебаб',
-        hi: 'महशी कबाब'
+        hi: 'महशी कबाब',
+        sq: 'Mahshi Kabab'
       }, 
       category: {
         en: 'Grill',
@@ -347,7 +351,8 @@ const FullMenuPage = () => {
         kmr: 'Platerên Grill',
         es: 'Parrilla',
         ru: 'Гриль',
-        hi: 'ग्रिल प्लेटर'
+        hi: 'ग्रिल प्लेटर',
+        sq: 'Pjatat e Grilit'
       }, 
       placeholder: 'kebab', 
       imageUrl: '/mkabab.jpg',
@@ -361,7 +366,8 @@ const FullMenuPage = () => {
         kmr: 'Kebaba goştê ga û berxî ya bi sîr, biberên tûj û şînî hatiye tamdar kirin',
         es: 'Kabab de carne de res y cordero sazonado con ajo, pimientos picantes y perejil',
         ru: 'Кебаб из говядины и баранины с чесноком, острым перцем и петрушкой',
-        hi: 'लहसुन, तेज़ मिर्च और अजमोद के साथ गोमांस और भेड़ के बच्चे का कबाब'
+        hi: 'लहसुन, तेज़ मिर्च और अजमोद के साथ गोमांस और भेड़ के बच्चे का कबाब',
+        sq: 'Kabab viçi dhe deleje me shije hudhra, speca të egos dhe majdanoz'
       },
       color: '#A0522D'
     },
@@ -377,7 +383,8 @@ const FullMenuPage = () => {
         kmr: 'Pizza Margherita',
         es: 'Pizza Margherita',
         ru: 'Пицца Маргарита',
-        hi: 'मार्गेरिटा पिज्जा'
+        hi: 'मार्गेरिटा पिज्जा',
+        sq: 'Pica Margherita'
       }, 
       category: {
         en: 'Pizza',
@@ -389,7 +396,8 @@ const FullMenuPage = () => {
         kmr: 'Pizza',
         es: 'Pizza',
         ru: 'Пицца',
-        hi: 'पिज्जा'
+        hi: 'पिज्जा',
+        sq: 'Pica'
       }, 
       placeholder: 'pizza', 
       imageUrl: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=300&h=200&fit=crop',
@@ -403,7 +411,8 @@ const FullMenuPage = () => {
         kmr: 'Pizza Îtalî ya klasîk bi mozzarellaya taze, firangoş û rêhanê',
         es: 'Pizza italiana clásica con mozzarella fresca, tomates y albahaca',
         ru: 'Классическая итальянская пицца со свежей моцареллой, помидорами и базиликом',
-        hi: 'ताज़ा मोज़ेरेला, टमाटर और तुलसी के साथ क्लासिक इतालवी पिज्जा'
+        hi: 'ताज़ा मोज़ेरेला, टमाटर और तुलसी के साथ क्लासिक इतालवी पिज्जा',
+        sq: 'Pica klasike italiane me mozzarella të freskët, domate dhe borzilok'
       },
       color: '#FF8C42'
     },
@@ -419,7 +428,8 @@ const FullMenuPage = () => {
         kmr: 'Humus',
         es: 'Hummus',
         ru: 'Хумус',
-        hi: 'हम्मुस'
+        hi: 'हम्मुस',
+        sq: 'Humus'
       }, 
       category: {
         en: 'Appetizer',
@@ -431,7 +441,8 @@ const FullMenuPage = () => {
         kmr: 'Destpêk',
         es: 'Aperitivo',
         ru: 'Закуски',
-        hi: 'स्टार्टर'
+        hi: 'स्टार्टर',
+        sq: 'Aperitivë'
       }, 
       placeholder: 'hummus', 
       imageUrl: '/hummus.jpg',
@@ -445,7 +456,8 @@ const FullMenuPage = () => {
         kmr: 'Dîpa krêmî ya noyan bi tahînî, zeyta zeytûnê û nanê pita yê germ',
         es: 'Salsa cremosa de garbanzos con tahini, aceite de oliva y pan pita caliente',
         ru: 'Кремовая закуска из нута с тахини, оливковым маслом и тёплой питой',
-        hi: 'तिल का पेस्ट, जैतून का तेल और गर्म पीटा ब्रेड के साथ मलाईदार चने का डिप'
+        hi: 'तिल का पेस्ट, जैतून का तेल और गर्म पीटा ब्रेड के साथ मलाईदार चने का डिप',
+        sq: 'Sos kremoz me groftha me tahini, vaj ulliri dhe bukë pita të ngrohtë'
       },
       color: '#D2B48C'
     },
@@ -461,7 +473,8 @@ const FullMenuPage = () => {
         kmr: 'Beqlawa',
         es: 'Baklava',
         ru: 'Баклава',
-        hi: 'बकलावा'
+        hi: 'बकलावा',
+        sq: 'Bakllava'
       }, 
       category: {
         en: 'Dessert',
@@ -473,7 +486,8 @@ const FullMenuPage = () => {
         kmr: 'Şîrînî',
         es: 'Postre',
         ru: 'Десерты',
-        hi: 'मिठाई'
+        hi: 'मिठाई',
+        sq: 'Ëmbëlsira'
       }, 
       placeholder: 'baklava', 
       imageUrl: '/baklava.jpg',
@@ -487,7 +501,8 @@ const FullMenuPage = () => {
         kmr: 'Pîrokek şîrîn bi çînên gûz û hingivê di fîloya nazik de',
         es: 'Dulce hojaldre con capas de nueces y miel en delicada masa filo',
         ru: 'Сладкое пирожное со слоями орехов и мёда в нежном тесте фило',
-        hi: 'नाजुक फिलो में नट्स और शहद की परतों के साथ मीठी पेस्ट्री'
+        hi: 'नाजुक फिलो में नट्स और शहद की परतों के साथ मीठी पेस्ट्री',
+        sq: 'Ëmbëlsirë me shtresa arrash dhe mjaltë në brumë delikat fillo'
       },
       color: '#DEB887'
     },
@@ -503,7 +518,8 @@ const FullMenuPage = () => {
         kmr: 'Sandwîça Şawermaya Mirîşk',
         es: 'Sándwich de Shawarma de Pollo',
         ru: 'Сэндвич с шавармой из курицы',
-        hi: 'चिकन शावरमा सैंडविच'
+        hi: 'चिकन शावरमा सैंडविच',
+        sq: 'Sandwich Shawarma Pule'
       }, 
       category: {
         en: 'Sandwich',
@@ -515,7 +531,8 @@ const FullMenuPage = () => {
         kmr: 'Sandwîç',
         es: 'Sándwich',
         ru: 'Сэндвич',
-        hi: 'सैंडविच'
+        hi: 'सैंडविच',
+        sq: 'Sandwich'
       }, 
       placeholder: 'shawarma', 
       imageUrl: '/chk.jpg',
@@ -529,7 +546,8 @@ const FullMenuPage = () => {
         kmr: 'Mirîşkê nerm ê marînekirî di nanê pita yê taze de bi sebze û soşê hatiye pêçandin',
         es: 'Pollo marinado tierno envuelto en pita fresca con verduras y salsa',
         ru: 'Нежная маринованная курица, завёрнутая в свежую питу с овощами и соусом',
-        hi: 'सब्जियों और सॉस के साथ ताजा पीटा में लपेटा गया नर्म मैरिनेटेड चिकन'
+        hi: 'सब्जियों और सॉस के साथ ताजा पीटा में लपेटा गया नर्म मैरिनेटेड चिकन',
+        sq: 'Pulë e butë e marinuar e mbështjellë në pita të freskët me perime dhe salcë'
       },
       color: '#FFD93D'
     },
@@ -545,7 +563,8 @@ const FullMenuPage = () => {
         kmr: 'Çaya Karak',
         es: 'Té Karak',
         ru: 'Карак чай',
-        hi: 'करक चाय'
+        hi: 'करक चाय',
+        sq: 'Çaj Karak'
       }, 
       category: {
         en: 'Hot Drinks',
@@ -557,7 +576,8 @@ const FullMenuPage = () => {
         kmr: 'Vexwarinên Germ',
         es: 'Bebidas Calientes',
         ru: 'Горячие напитки',
-        hi: 'पेय (गर्म)'
+        hi: 'पेय (गर्म)',
+        sq: 'Pije (të Nxehta)'
       }, 
       placeholder: 'tea', 
       imageUrl: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=300&h=200&fit=crop',
@@ -571,7 +591,8 @@ const FullMenuPage = () => {
         kmr: 'Çaya baharatdar bi şîr û hêl, hezkirina kevneşopî ya Rojhilatê Navîn',
         es: 'Té especiado con leche y cardamomo, un favorito tradicional de Oriente Medio',
         ru: 'Пряный чай с молоком и кардамоном, традиционный ближневосточный фаворит',
-        hi: 'दूध और इलायची के साथ मसालेदार चाय, एक पारंपरिक मध्य पूर्वी पसंदीदा'
+        hi: 'दूध और इलायची के साथ मसालेदार चाय, एक पारंपरिक मध्य पूर्वी पसंदीदा',
+        sq: 'Çaj me erëza me qumësht dhe hil, një e preferuar tradicionale e Lindjes së Mesme'
       },
       color: '#8B4513'
     }
@@ -1382,6 +1403,66 @@ const FullMenuPage = () => {
         poweredBy: 'Desarrollado por',
         blunari: 'Blunari AI'
       }
+    },
+    sq: {
+      title: 'Udhëtimi Ynë Kulinar',
+      subtitle: 'Zbuloni shije autentike të përgatitura me dashuri dhe traditë',
+      restaurantBadge: 'Restorant Autentik i Lindjes së Mesme',
+      loading: 'Po ngarkohet...',
+      searchPlaceholder: 'Kërko ushqime...',
+      noResults: 'Nuk u gjetën ushqime që përputhen me kërkimin tuaj.',
+      nav: {
+        home: 'Kreu',
+        menu: 'Meny',
+        about: 'Rreth Nesh',
+        gallery: 'Galeria',
+        visit: 'Na Vizitoni',
+        reservations: 'Rezervime',
+        catering: 'Katering',
+        orderOnline: 'Porosit'
+      },
+      filters: {
+        all: 'Të Gjitha',
+        appetizers: 'Aperitivë',
+        salads: 'Sallatat',
+        sandwich_platter: 'Sandwich dhe Pjatë',
+        naan: 'Naan',
+        pizza: 'Pica',
+        fish: 'Peshk',
+        grill: 'Pjatat e Grilit',
+        specialty: 'Specialitetet',
+        kids: 'Menyja e Fëmijëve',
+        drinks_cold: 'Pije (të Ftohta)',
+        drinks_hot: 'Pije (të Nxehta)',
+        soup: 'Supa',
+        dessert: 'Ëmbëlsira',
+        popular: 'Më të Popullarit'
+      },
+      addProtein: 'Shto Proteinë',
+      servingFor: 'Për',
+      variants: {
+        sandwich: 'Sandwich',
+        platter: 'Pjatë',
+        singleScoop: 'Një Topth'
+      },
+      stats: {
+        dishes: 'Ushqime të Shijshme',
+        categories: 'Kategori të Ndryshme',
+        languages: 'Gjuhë Globale'
+      },
+      popularSectionTitle: 'Ushqimet Tona Më të Popullarit',
+      scrollDownText: 'Lëviz poshtë për të eksploruar menynë',
+      footer: {
+        description: 'Sjellim shijet autentike dhe mikpritjen e ngrohtë të Lindjes së Mesme në tryezën tuaj. Çdo ushqim është një festë e trashëgimisë sonë kulturore dhe shkëlqimit kulinar.',
+        quickLinks: 'Lidhje të Shpejta',
+        contactInfo: 'Informacione Kontakti',
+        privacy: 'Politika e Privatësisë',
+        terms: 'Kushtet e Shërbimit',
+        openDaily: 'E DI - E EN: 12:00 - 22:00\nE PR - E SH: 12:00 - 23:00',
+        copyright: '© 2025 Restorant Kurd Nature Village. Të gjitha të drejtat e rezervuara.',
+        poweredBy: 'Mundësuar nga',
+        blunari: 'Blunari AI'
+      }
     }
   }
 
@@ -1400,7 +1481,8 @@ const FullMenuPage = () => {
         kmr: 'Humus',
         es: 'Hummus',
         ru: 'Хумус',
-        hi: 'हम्मुस'
+        hi: 'हम्मुस',
+        sq: 'Humus'
       }, 
       description: { 
         en: 'A classic Middle Eastern dip made from mashed chickpeas, tahini, olive oil, lemon juice, and garlic.',
@@ -1412,7 +1494,8 @@ const FullMenuPage = () => {
         kmr: 'Mezeyeke klasîk ya Rojhilatê Navîn ku ji kurskotan, tahînî, zeyta zeytûnê, ava lîmonê û sîr tê çêkirin.',
         es: 'Una salsa clásica de Oriente Medio hecha de garbanzos machacados, tahini, aceite de oliva, jugo de limón y ajo.',
         ru: 'Классическая ближневосточная закуска из измельченного нута, тахини, оливкового масла, лимонного сока и чеснока.',
-        hi: 'मसले हुए छोले, तिल का पेस्ट, जैतून का तेल, नींबू का रस और लहसुन से बना क्लासिक मध्य पूर्वी डिप।'
+        hi: 'मसले हुए छोले, तिल का पेस्ट, जैतून का तेल, नींबू का रस और लहसुन से बना क्लासिक मध्य पूर्वी डिप।',
+        sq: 'Një sos klasik i Lindjes së Mesme i bërë nga grofthat e shtypur, tahini, vaj ulliri, lëng limoni dhe hudhra.'
       }, 
       price: '$8.50', 
       category: 'appetizers', 
@@ -2986,7 +3069,8 @@ const FullMenuPage = () => {
         kmr: 'Beqlawa',
         es: 'Baklava',
         ru: 'Баклава',
-        hi: 'बकलावा'
+        hi: 'बकलावा',
+        sq: 'Bakllava'
       }, 
       description: { 
         en: 'A sweet pastry with layers of nuts and honey.',
@@ -2998,7 +3082,8 @@ const FullMenuPage = () => {
         kmr: 'Pîrokek şîrîn bi çînên gûz û hingivê.',
         es: 'Dulce hojaldre con capas de nueces y miel.',
         ru: 'Сладкое пирожное со слоями орехов и мёда.',
-        hi: 'नट्स और शहद की परतों के साथ मीठी पेस्ट्री।'
+        hi: 'नट्स और शहद की परतों के साथ मीठी पेस्ट्री।',
+        sq: 'Ëmbëlsirë me shtresa arrash dhe mjalti.'
       }, 
       price: '$6.99', 
       category: 'dessert', 

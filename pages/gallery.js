@@ -108,6 +108,15 @@ const GalleryPage = () => {
       backToHome: 'होम पर वापस जाएं',
       contact: 'अधिक जानकारी के लिए, कृपया हमें कॉल करें',
       phone: '(470) 350-1019'
+    },
+    sq: {
+      title: 'Në Mirëmbajtje',
+      subtitle: 'Galeria e Fotografive',
+      message: 'Aktualisht po përditësojmë galerinë tonë të fotografive për të shfaqur përvojat tona më të reja.',
+      expectedTime: 'Presim të jemi të disponueshëm përsëri së shpejti.',
+      backToHome: 'Kthehu në Kreu',
+      contact: 'Për më shumë informacion, ju lutemi na telefononi në',
+      phone: '(470) 350-1019'
     }
   };
 
