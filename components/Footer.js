@@ -213,6 +213,22 @@ const Footer = () => {
         reservations: 'आरक्षण',
         catering: 'केटरिंग',
         gallery: 'गैलरी'
+      },
+      de: {
+        description: 'Wir bringen die authentischen Aromen und warme Gastfreundschaft des Nahen Ostens an Ihren Tisch. Jedes Gericht ist eine Feier unseres reichen kulturellen Erbes und kulinarischen Könnens.',
+        quickLinks: 'Schnelle Links',
+        contactInfo: 'Kontaktinformationen',
+        openDaily: 'SO - DO: 12:00 - 22:00\nFR - SA: 12:00 - 23:00',
+        privacy: 'Datenschutzrichtlinie',
+        terms: 'Nutzungsbedingungen',
+        copyright: '© 2025 Nature Village Kurdisches Restaurant. Alle Rechte vorbehalten.',
+        poweredBy: 'Unterstützt von',
+        blunari: 'Blunari',
+        home: 'Startseite',
+        menu: 'Speisekarte',
+        reservations: 'Reservierungen',
+        catering: 'Catering',
+        gallery: 'Galerie'
       }
     };
 

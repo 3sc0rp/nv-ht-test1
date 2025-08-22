@@ -138,6 +138,16 @@ const Header = ({ currentPage = '' }) => {
         reservations: 'Rezervasyon',
         catering: 'Catering',
         orderOnline: 'Siparîşa Online'
+      },
+      de: {
+        home: 'Startseite',
+        menu: 'Speisekarte',
+        about: 'Über Uns',
+        gallery: 'Galerie',
+        visit: 'Besuchen Sie Uns',
+        reservations: 'Reservierungen',
+        catering: 'Catering',
+        orderOnline: 'Online Bestellen'
       }
     };
 
@@ -480,6 +490,7 @@ const Header = ({ currentPage = '' }) => {
                        language === 'kmr' ? 'Ziman' :
                        language === 'ru' ? 'Язык' :
                        language === 'hi' ? 'भाषा' :
+                       language === 'de' ? 'Sprache' :
                        'Language'}
                     </h3>
                     <span className="text-sm text-amber-600 font-medium px-3 py-1 bg-amber-100 rounded-full">
@@ -516,6 +527,7 @@ const Header = ({ currentPage = '' }) => {
                             {code === 'kmr' && '⭐'}
                             {code === 'ru' && '🇷🇺'}
                             {code === 'hi' && '🇮🇳'}
+                            {code === 'de' && '🇩🇪'}
                           </span>
                           {lang.name}
                         </span>
