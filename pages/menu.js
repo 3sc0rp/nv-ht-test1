@@ -1661,7 +1661,8 @@ const FullMenuPage = () => {
         ru: 'Баба Гануш',
         hi: 'बाबा गनूश',
         sq: 'Baba Ghanoush',
-        fr: 'Baba Ganouch'
+        fr: 'Baba Ganouch',
+        de: 'Baba Ghanoush'
       }, 
       description: { 
         en: 'A Kurdish dip made from roasted eggplant, roasted tomatoes, peppers, fresh onions, parsley, mint, and pomegranate molasses dressing.',
