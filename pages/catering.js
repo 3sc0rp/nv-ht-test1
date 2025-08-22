@@ -126,10 +126,19 @@ const CateringPage = () => {
       backToHome: 'Retour à l\'Accueil',
       contact: 'Pour des demandes urgentes de traiteur, veuillez nous appeler au',
       phone: '(470) 350-1019'
+    },
+    de: {
+      title: 'Wartungsarbeiten',
+      subtitle: 'Catering-Services',
+      message: 'Wir aktualisieren derzeit unser Catering-System, um Sie besser bedienen zu können.',
+      expectedTime: 'Wir erwarten, bald wieder online zu sein.',
+      backToHome: 'Zurück zur Startseite',
+      contact: 'Für dringende Catering-Anfragen rufen Sie uns bitte an unter',
+      phone: '(470) 350-1019'
     }
   };
 
-  const t = translations[language];
+  const t = translations[language] || translations.en;
 
   return (
     <>

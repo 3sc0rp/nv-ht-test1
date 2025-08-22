@@ -126,10 +126,19 @@ const GalleryPage = () => {
       backToHome: 'Retour à l\'Accueil',
       contact: 'Pour plus d\'informations, veuillez nous appeler au',
       phone: '(470) 350-1019'
+    },
+    de: {
+      title: 'Wartungsarbeiten',
+      subtitle: 'Fotogalerie',
+      message: 'Wir aktualisieren derzeit unsere Fotogalerie, um unsere neuesten Erlebnisse zu präsentieren.',
+      expectedTime: 'Wir erwarten, bald wieder online zu sein.',
+      backToHome: 'Zurück zur Startseite',
+      contact: 'Für weitere Informationen rufen Sie uns bitte an unter',
+      phone: '(470) 350-1019'
     }
   };
 
-  const t = translations[language];
+  const t = translations[language] || translations.en;
 
   return (
     <>

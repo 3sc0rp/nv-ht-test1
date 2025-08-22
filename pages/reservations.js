@@ -125,10 +125,19 @@ const ReservationPage = () => {
       backToHome: 'Retour à l\'Accueil',
       contact: 'Pour une assistance immédiate, veuillez nous appeler au',
       phone: '(470) 350-1019'
+    },
+    de: {
+      title: 'Wartungsarbeiten',
+      subtitle: 'Reservierungssystem',
+      message: 'Wir aktualisieren derzeit unser Reservierungssystem, um Sie besser bedienen zu können.',
+      expectedTime: 'Wir erwarten, bald wieder online zu sein.',
+      backToHome: 'Zurück zur Startseite',
+      contact: 'Für sofortige Hilfe rufen Sie uns bitte an unter',
+      phone: '(470) 350-1019'
     }
   };
 
-  const t = translations[language];
+  const t = translations[language] || translations.en;
 
   return (
     <>
