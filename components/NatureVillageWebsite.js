@@ -3186,6 +3186,222 @@ const NatureVillageWebsite = () => {
       loading: 'Duke u ngarkuar...',
       error: 'Ndodhi një gabim. Ju lutemi provoni përsëri.',
       currency: '$'
+    },
+    de: {
+      nav: {
+        home: 'Startseite',
+        menu: 'Speisekarte',
+        about: 'Über Uns',
+        gallery: 'Galerie',
+        visit: 'Besuchen Sie Uns',
+        reservations: 'Reservierungen',
+        catering: 'Catering',
+        orderOnline: 'Bestellen'
+      },
+      hero: {
+        title: 'Nature Village',
+        subtitle: 'Nahöstliche Aromen in jedem Bissen',
+        description: 'Erleben Sie die authentischen Aromen des Nahen Ostens in einer warmen und traditionellen Atmosphäre, wo jedes Gericht die Geschichte unseres reichen kulturellen Erbes und der kulinarischen Traditionen erzählt, die über Generationen weitergegeben wurden.',
+        cta1: 'Speisekarte Ansehen',
+        cta2: 'Reservieren'
+      },
+      menu: {
+        title: 'Unsere Speisekarte',
+        subtitle: 'Powered by MenuIQ - KI-Enhanced Culinary Experience',
+        filters: {
+          all: 'Alle Gerichte',
+          traditional: 'Traditionell',
+          vegetarian: 'Vegetarisch',
+          vegan: 'Vegan',
+          soup: 'Suppen',
+          appetizer: 'Vorspeisen',
+          main: 'Hauptgerichte',
+          dessert: 'Desserts',
+          beverage: 'Getränke',
+          kebab: 'Kebabs',
+          rice: 'Reis',
+          bread: 'Brot',
+          salad: 'Salate',
+          seafood: 'Meeresfrüchte',
+          hot: 'Warme Gerichte',
+          cold: 'Kalte Gerichte',
+          spicy: 'Scharf',
+          mild: 'Mild',
+          popular: 'Am Beliebtesten'
+        },
+        viewFull: 'Vollständige Speisekarte Ansehen',
+        noItems: 'Keine Gerichte in dieser Kategorie gefunden.',
+        cta: 'Jetzt Bestellen'
+      },
+      about: {
+        title: 'Unsere Geschichte',
+        badge: 'Unsere Geschichte',
+        subtitle: 'Wir bringen authentische nahöstliche Aromen und warme Gastfreundschaft in unsere Gemeinschaft',
+        content: 'Nature Village entstand aus dem Traum, authentische Aromen und warme Gastfreundschaft des Nahen Ostens mit der Welt zu teilen. Unsere Familienrezepte werden über Generationen weitergegeben, jedes Gericht wird mit Liebe und Respekt für unsere kulturellen Traditionen zubereitet. Wir verwenden nur Zutaten höchster Qualität und bereiten jede Mahlzeit mit der gleichen Sorgfalt und Aufmerksamkeit zu, die seit Jahrhunderten die nahöstliche Gastfreundschaft definiert.',
+        story1: 'Nature Village widmet sich der Bereitstellung authentischer nahöstlicher Küche in einer warmen und einladenden Atmosphäre, in der sich jeder Gast wie zu Hause fühlt.',
+        story2: 'Unsere Köche sind leidenschaftlich bei der Zubereitung traditioneller nahöstlicher Gerichte mit den besten Zutaten und jahrhundertealten Kochtechniken, die unser reiches kulinarisches Erbe feiern.',
+        quote: 'Jedes Gericht wird mit Sorgfalt zubereitet und mit der Wärme nahöstlicher Gastfreundschaft serviert.',
+        experience: 'Jahre Erfahrung',
+        recipes: 'Traditionelle Rezepte',
+        customers: 'Zufriedene Kunden',
+        awards: 'Auszeichnungen Erhalten',
+        features: {
+          chefs: {
+            title: 'Erfahrene Köche',
+            description: 'Authentische nahöstliche Küche'
+          },
+          ingredients: {
+            title: 'Frische Zutaten',
+            description: 'Täglich garantierte Qualität'
+          },
+          service: {
+            title: 'Herzlicher Service',
+            description: 'Nahöstliche Gastfreundschaft'
+          }
+        },
+        stats: {
+          happyCustomers: 'Zufriedene Kunden',
+          authenticDishes: 'Authentische Gerichte',
+          customerRating: 'Kundenbewertung',
+          freshIngredients: 'Frische Zutaten'
+        }
+      },
+      gallery: {
+        title: 'Galerie',
+        subtitle: 'Eine visuelle Reise durch unsere kulinarische Kunst',
+        viewAll: 'Alle Bilder Anzeigen',
+        close: 'Schließen',
+        previous: 'Zurück',
+        next: 'Weiter',
+        share: 'Teilen'
+      },
+      visit: {
+        title: 'Besuchen Sie Uns',
+        subtitle: 'Erleben Sie authentische nahöstliche Gastfreundschaft im Herzen der Stadt',
+        address: 'Adresse',
+        phone: 'Telefon',
+        hours: 'Öffnungszeiten',
+        getDirections: 'Route Anzeigen',
+        callNow: 'Jetzt Anrufen',
+        openingHours: {
+          monday: 'Montag',
+          tuesday: 'Dienstag',
+          wednesday: 'Mittwoch',
+          thursday: 'Donnerstag',
+          friday: 'Freitag',
+          saturday: 'Samstag',
+          sunday: 'Sonntag',
+          closed: 'Geschlossen'
+        }
+      },
+      ui: {
+        menu: 'Menü',
+        reserve: 'Reservieren',
+        callNow: 'Jetzt Anrufen',
+        call: 'Anrufen',
+        weAreOpen: 'Wir haben geöffnet',
+        currentlyClosed: 'Derzeit geschlossen',
+        live: 'LIVE',
+        until: 'Bis',
+        opens: 'Öffnet',
+        activity: 'Aktivität'
+      },
+      reviews: {
+        title: 'Was Unsere Gäste Sagen',
+        subtitle: 'Bewertet mit 4.8/5 Sternen von über 572 zufriedenen Kunden auf Google-Bewertungen',
+        cta: 'Schließen Sie sich über 572 zufriedenen Kunden an, die unsere authentische Küche lieben! Reservieren Sie heute Ihren Tisch und erleben Sie den Unterschied, den authentische nahöstliche Gastfreundschaft macht.',
+        ctaButton: 'Ihren Tisch Jetzt Reservieren',
+        ctaTitle: 'Bereit, Ihr 5-Sterne-Erlebnis zu Schaffen?',
+        trustIndicators: {
+          googleRating: '4.8★ Google-Bewertung',
+          totalReviews: '572+ Bewertungen'
+        },
+        review1: {
+          name: 'Anna Mueller',
+          text: '"Ich komme seit etwa einem Jahr hierher, und es ist zweifellos mein Lieblingsrestaurant! Das Essen ist authentisch und absolut köstlich - jedes Gericht steckt voller Geschmack, die speziellen Tees und Kaffees sind erstaunlich, und die Desserts sind der perfekte Abschluss jeder Mahlzeit."',
+          location: 'Verifizierte Google-Bewertung',
+          time: 'Vor 1 Woche'
+        },
+        review2: {
+          name: 'Klaus Weber',
+          text: '"Wir hatten heute Abend eine wunderbare Zeit im Restaurant Nature Village! Alles war absolut perfekt! Das Essen, die Atmosphäre, die Dekoration und der Service sind alle auf höchstem Niveau. Das ist definitiv unser neuer Lieblingsort für authentische nahöstliche Küche."',
+          location: 'Lokaler Guide • 29 Bewertungen',
+          time: 'Vor 2 Monaten'
+        },
+        review3: {
+          name: 'Petra Richter',
+          text: '"Ich bestellte Quzi, ein Reis- und Lammgericht, es war sehr sättigend und lecker. Die Pizza war gut bemessen und mit Gyro-Fleisch, Käse und guter Sauce gefüllt. Die authentischen nahöstlichen Aromen haben mich und meine Familie wirklich begeistert!"',
+          location: 'Verifizierte Google-Bewertung',
+          time: 'Kürzlich'
+        },
+        badges: {
+          featured: 'EMPFOHLEN',
+          localGuide: 'LOKALER GUIDE',
+          quziLover: 'QUZI-LIEBHABER'
+        }
+      },
+      featured: {
+        title: 'Empfohlene Gerichte',
+        subtitle: 'Entdecken Sie unsere beliebtesten nahöstlichen Spezialitäten, zubereitet mit traditionellen Rezepten und moderner Präsentation'
+      },
+      celebration: {
+        title: 'Feiern Sie Ihre Besonderen Momente',
+        subtitle: 'Machen Sie Ihre Geburtstage, Jahrestage und besonderen Anlässe unvergesslich mit authentischer nahöstlicher Gastfreundschaft',
+        familyReunions: 'Familientreffen',
+        graduations: 'Abschlussfeiern',
+        engagements: 'Verlobungen', 
+        holidays: 'Feiertage',
+        birthday: {
+          title: 'Geburtstagsfeiern',
+          tagline: 'Süße Momente werden besonders gemacht',
+          feature1: 'Kostenloses Geburtstags-Dessert',
+          feature2: 'Geburtstagslied und Wünsche',
+          feature3: 'Unvergessliches Esserlebnis',
+          special: 'Perfekt zum Feiern eines weiteren Lebensjahres'
+        },
+        anniversary: {
+          title: 'Jubiläums-Dinner',
+          tagline: 'Feiern Sie Ihre Liebesgeschichte',
+          feature1: 'Romantische Tischgestaltung mit Rosen',
+          feature2: 'Kostenloses Dessert für zwei',
+          feature3: 'Kerzenlicht-Dinner-Erlebnis',
+          feature4: 'Personalisierte Jubiläumskarte',
+          special: '25+ Jahre zusammen? Eine besondere Überraschung wartet!'
+        },
+        cta: {
+          title: 'Bereit zu Feiern?',
+          subtitle: 'Lassen Sie uns Ihren besonderen Tag mit authentischer nahöstlicher Gastfreundschaft und unvergesslichen Aromen außergewöhnlich machen',
+          reserve: 'Für spezielle Reservierung anrufen',
+          bookingAdvice: 'Buchen Sie 48 Stunden im Voraus für das beste Feiererlebnis'
+        }
+      },
+      tags: {
+        vegetarian: '🌱 Vegetarisch',
+        vegan: '🌿 Vegan',
+        spicy: '🌶️ Scharf',
+        sweet: '🍯 Süß',
+        traditional: '🏛️ Traditionell',
+        grilled: '🔥 Gegrillt',
+        'comfort food': '🍲 Hausmannskost',
+        soup: '🍜 Suppe',
+        stew: '🥘 Eintopf'
+      },
+      addToCart: 'In den Warenkorb',
+      loading: 'Laden...',
+      error: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.',
+      currency: '$',
+      footer: {
+        description: 'Authentische nahöstliche Aromen und warme Gastfreundschaft an Ihren Tisch bringen. Jedes Gericht ist eine Feier unseres reichen kulturellen Erbes und kulinarischer Exzellenz.',
+        quickLinks: 'Schnelle Links',
+        contactInfo: 'Kontaktinformationen',
+        followUs: 'Folgen Sie Uns',
+        openDaily: 'Sonntag - Donnerstag: 12:00 - 22:00\nFreitag - Samstag: 12:00 - 23:00',
+        poweredBy: 'Powered by',
+        blunari: 'Blunari',
+        copyright: `© ${new Date().getFullYear()} Nature Village Restaurant. Alle Rechte vorbehalten.`,
+        privacy: 'Datenschutzrichtlinie',
+        terms: 'Nutzungsbedingungen'
+      }
     }
   };
 

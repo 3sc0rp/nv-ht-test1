@@ -1544,6 +1544,66 @@ const FullMenuPage = () => {
         poweredBy: 'Propulsé par',
         blunari: 'Blunari IA'
       }
+    },
+    de: { 
+      title: 'Eine Welt voller Geschmäcker auf einer Speisekarte', 
+      subtitle: 'Schmecken Sie Tradition, entdecken Sie Vielfalt und erkunden Sie unsere beliebtesten Gerichte.',
+      restaurantBadge: 'Authentisches Nahöstliches Restaurant',
+      loading: 'Laden...',
+      searchPlaceholder: 'Gerichte suchen...',
+      noResults: 'Keine Gerichte gefunden, die Ihrer Suche entsprechen.',
+      nav: {
+        home: 'Startseite',
+        menu: 'Speisekarte',
+        about: 'Über Uns',
+        gallery: 'Galerie',
+        visit: 'Besuchen Sie Uns',
+        reservations: 'Reservierungen',
+        catering: 'Catering',
+        orderOnline: 'Bestellen'
+      },
+      filters: { 
+        all: 'Alle Gerichte', 
+        appetizers: 'Vorspeisen', 
+        salads: 'Salate', 
+        sandwich_platter: 'Sandwich & Platte', 
+        naan: 'Naan', 
+        pizza: 'Pizza', 
+        fish: 'Fisch', 
+        grill: 'Grillplatten', 
+        specialty: 'Spezialitäten', 
+        kids: "Kindermenü", 
+        drinks_cold: 'Getränke (Kalt)', 
+        drinks_hot: 'Getränke (Heiß)', 
+        soup: 'Suppen', 
+        dessert: 'Desserts', 
+        popular: 'Am Beliebtesten' 
+      },
+      addProtein: 'Protein Hinzufügen',
+      servingFor: 'Für',
+      variants: {
+        sandwich: 'Sandwich',
+        platter: 'Platte',
+        singleScoop: 'Eine Kugel'
+      },
+      stats: {
+        dishes: 'Köstliche Gerichte',
+        categories: 'Vielfältige Kategorien',
+        languages: 'Globale Sprachen'
+      },
+      popularSectionTitle: 'Unsere Beliebtesten Gerichte',
+      scrollDownText: 'Scrollen Sie nach unten, um die Speisekarte zu erkunden',
+      footer: {
+        description: 'Authentische nahöstliche Aromen und warme Gastfreundschaft an Ihren Tisch bringen. Jedes Gericht ist eine Feier unseres reichen kulturellen Erbes und kulinarischer Exzellenz.',
+        quickLinks: 'Schnelle Links',
+        contactInfo: 'Kontaktinformationen',
+        privacy: 'Datenschutzrichtlinie',
+        terms: 'Nutzungsbedingungen',
+        openDaily: 'SO - DO: 12:00 - 22:00\nFR - SA: 12:00 - 23:00',
+        copyright: '© 2025 Nature Village Restaurant. Alle Rechte vorbehalten.',
+        poweredBy: 'Powered by',
+        blunari: 'Blunari KI'
+      }
     }
   }
 
@@ -1562,6 +1622,7 @@ const FullMenuPage = () => {
         kmr: 'Humus',
         es: 'Hummus',
         fr: 'Houmous',
+        de: 'Hummus',
         ru: 'Хумус',
         hi: 'हम्मुस',
         sq: 'Humus'
@@ -1576,6 +1637,7 @@ const FullMenuPage = () => {
         kmr: 'Mezeyeke klasîk ya Rojhilatê Navîn ku ji kurskotan, tahînî, zeyta zeytûnê, ava lîmonê û sîr tê çêkirin.',
         es: 'Una salsa clásica de Oriente Medio hecha de garbanzos machacados, tahini, aceite de oliva, jugo de limón y ajo.',
         fr: 'Une trempette classique du Moyen-Orient à base de pois chiches écrasés, tahini, huile d\'olive, jus de citron et ail.',
+        de: 'Ein klassischer nahöstlicher Dip aus zerdrückten Kichererbsen, Tahini, Olivenöl, Zitronensaft und Knoblauch.',
         ru: 'Классическая ближневосточная закуска из измельченного нута, тахини, оливкового масла, лимонного сока и чеснока.',
         hi: 'मसले हुए छोले, तिल का पेस्ट, जैतून का तेल, नींबू का रस और लहसुन से बना क्लासिक मध्य पूर्वी डिप।',
         sq: 'Një sos klasik i Lindjes së Mesme i bërë nga grofthat e shtypur, tahini, vaj ulliri, lëng limoni dhe hudhra.'
