@@ -2826,38 +2826,151 @@ const NatureVillageWebsite = () => {
           hot: 'Plats Chauds',
           cold: 'Plats Froids',
           spicy: 'Épicé',
-          mild: 'Doux'
+          mild: 'Doux',
+          popular: 'Plus Populaires'
         },
+        viewFull: 'Voir le Menu Complet',
+        noItems: 'Aucun article trouvé dans cette catégorie.',
         cta: 'Commander Maintenant'
       },
       about: {
         title: 'Notre Histoire',
-        subtitle: 'Où la Cuisine Kurde Rencontre la Nature',
-        description: 'Nature Village apporte les saveurs authentiques et la chaleureuse hospitalité du Moyen-Orient dans un cadre naturel magnifique. Notre restaurant célèbre la riche tradition culinaire kurde avec des ingrédients frais, des épices traditionnelles et des recettes transmises de génération en génération.',
-        features: [
-          'Ingrédients frais et locaux',
-          'Recettes familiales authentiques',
-          'Ambiance chaleureuse et accueillante',
-          'Service exceptionnel'
-        ]
+        badge: 'Notre Histoire',
+        subtitle: 'Apporter les saveurs authentiques du Moyen-Orient et une hospitalité chaleureuse à notre communauté',
+        content: 'Nature Village est né d\'un rêve de partager les saveurs authentiques et l\'hospitalité chaleureuse du Moyen-Orient avec le monde. Nos recettes familiales se transmettent de génération en génération, chaque plat préparé avec amour et respect pour nos traditions culturelles. Nous nous approvisionnons en ingrédients de la plus haute qualité et préparons chaque repas avec le même soin et la même attention qui définissent l\'hospitalité du Moyen-Orient depuis des siècles.',
+        story1: 'Nature Village se consacre à vous apporter les saveurs authentiques de la cuisine du Moyen-Orient dans une atmosphère chaleureuse et accueillante où chaque invité se sent comme en famille.',
+        story2: 'Nos chefs sont passionnés par la préparation de plats traditionnels du Moyen-Orient utilisant les meilleurs ingrédients et des techniques de cuisson ancestrales qui célèbrent notre riche patrimoine culinaire.',
+        quote: 'Chaque plat est préparé avec soin et servi avec la chaleur de l\'hospitalité du Moyen-Orient.',
+        experience: 'Années d\'Expérience',
+        recipes: 'Recettes Traditionnelles',
+        customers: 'Clients Satisfaits',
+        awards: 'Prix Remportés',
+        features: {
+          chefs: {
+            title: 'Chefs Experts',
+            description: 'Cuisine authentique du Moyen-Orient'
+          },
+          ingredients: {
+            title: 'Ingrédients Frais',
+            description: 'Qualité garantie quotidiennement'
+          },
+          service: {
+            title: 'Service Chaleureux',
+            description: 'Hospitalité du Moyen-Orient'
+          }
+        },
+        stats: {
+          happyCustomers: 'Clients Satisfaits',
+          authenticDishes: 'Plats Authentiques',
+          customerRating: 'Évaluation Clients',
+          freshIngredients: 'Ingrédients Frais'
+        }
       },
-      specialEvents: {
-        title: 'Événements Spéciaux',
+      gallery: {
+        title: 'Galerie',
+        subtitle: 'Un voyage visuel à travers notre patrimoine culinaire et l\'atmosphère de notre restaurant'
+      },
+      visit: {
+        title: 'Nous Visiter',
+        subtitle: 'Trouvez-nous au cœur de la ville',
+        hours: 'Heures d\'Ouverture',
+        contact: 'Informations de Contact',
+        address: 'Adresse',
+        phone: 'Téléphone',
+        makeReservation: 'Faire une Réservation',
+        getDirections: 'Obtenir des Directions'
+      },
+      ui: {
+        callNow: 'Appeler Maintenant',
+        call: 'Appeler',
+        orderOnline: 'Commander en Ligne',
+        restaurant: 'Restaurant',
+        familyOwned: 'Entreprise Familiale',
+        halalCertified: 'Certifié Halal',
+        googleReviews: 'Avis Google',
+        averageRating: 'Note Moyenne',
+        fiveStarReviews: 'Avis 5 Étoiles',
+        verifiedPurchase: 'Achat Vérifié',
+        trustedReviewer: 'Évaluateur de Confiance',
+        foodEnthusiast: 'Amateur de Cuisine',
+        menu: 'Menu',
+        reserve: 'Réserver',
+        weAreOpen: 'Nous Sommes Ouverts',
+        currentlyClosed: 'Actuellement Fermé',
+        live: 'EN DIRECT',
+        until: 'Jusqu\'à',
+        opens: 'Ouvre',
+        activity: 'Activité'
+      },
+      reviews: {
+        title: 'Ce Que Disent Nos Invités',
+        subtitle: 'Noté 4,8/5 étoiles par plus de 572 clients satisfaits sur les Avis Google',
+        cta: 'Rejoignez plus de 572 clients satisfaits qui adorent notre cuisine authentique ! Réservez votre table dès aujourd\'hui et goûtez la différence que fait l\'hospitalité authentique du Moyen-Orient.',
+        ctaButton: 'Réservez Votre Table Maintenant',
+        ctaTitle: 'Prêt à Créer Votre Propre Expérience 5 Étoiles ?',
+        trustIndicators: {
+          googleRating: '4,8★ Note Google',
+          totalReviews: '+572 Avis'
+        },
+        review1: {
+          name: 'Karen Cardenas',
+          text: '"Je viens ici depuis environ un an, et c\'est sans conteste mon restaurant préféré ! La nourriture est authentique et absolument délicieuse—chaque plat est plein de saveurs, les thés et cafés de spécialité sont incroyables, et les desserts sont la fin parfaite de tout repas."',
+          location: 'Avis Google Vérifié',
+          time: 'Il y a 1 semaine'
+        },
+        review2: {
+          name: 'Ruth Cornea',
+          text: '"Nous avons passé un moment merveilleux au Restaurant Nature Village ce soir ! Tout était absolument parfait ! La nourriture, l\'atmosphère, la décoration et le service sont tous de premier ordre. C\'est définitivement notre nouveau lieu préféré pour la cuisine authentique du Moyen-Orient."',
+          location: 'Guide Local • 29 avis',
+          time: 'Il y a 2 mois'
+        },
+        review3: {
+          name: 'Client Google',
+          text: '"J\'ai commandé le Quzi, un plat de riz et d\'agneau, c\'était très copieux et délicieux. La pizza était de bonne taille remplie de viande gyro, fromage et une belle sauce. Les saveurs authentiques du Moyen-Orient ont vraiment impressionné ma famille et moi !"',
+          location: 'Avis Google Vérifié',
+          time: 'Récent'
+        },
+        badges: {
+          featured: 'EN VEDETTE',
+          localGuide: 'GUIDE LOCAL',
+          quziLover: 'AMATEUR DE QUZI'
+        }
+      },
+      featured: {
+        title: 'Plats Vedettes',
+        subtitle: 'Découvrez nos spécialités du Moyen-Orient les plus appréciées, préparées avec des recettes traditionnelles et une présentation moderne'
+      },
+      celebration: {
+        title: 'Célébrez Vos Moments Spéciaux',
+        subtitle: 'Créez des souvenirs inoubliables avec nos forfaits événements spéciaux',
         valentine: {
           title: 'Soirée Saint-Valentin',
           subtitle: 'Un dîner romantique au cœur de la nature',
           tagline: 'Célébrez votre histoire d\'amour',
           feature1: 'Table romantique avec fleurs',
           feature2: 'Desserts gratuits pour deux',
-          feature3: 'Dîner aux chandelles',
+          feature3: 'Expérience de dîner aux chandelles',
           feature4: 'Carte souvenir personnalisée',
-          special: '25+ ans ensemble? Une surprise spéciale vous attend!'
+          special: '25+ ans ensemble ? Une surprise spéciale vous attend !',
+          bookingAdvice: 'Réservez 48 heures à l\'avance pour la meilleure expérience de célébration'
         },
         cta: {
-          title: 'Prêt à Célébrer?',
+          title: 'Prêt à Célébrer ?',
           subtitle: 'Rendez votre journée spéciale mémorable avec une authentique hospitalité kurde et des saveurs inoubliables',
           reserve: 'Appelez pour une réservation spéciale'
         }
+      },
+      footer: {
+        description: 'Apporter les saveurs authentiques du Kurdistan et une hospitalité chaleureuse à votre table. Chaque repas est un témoignage de notre riche patrimoine culturel et de notre excellence culinaire.',
+        quickLinks: 'Liens Rapides',
+        contactInfo: 'Informations de Contact',
+        followUs: 'Suivez-Nous',
+        openDaily: 'Dimanche - Jeudi : 12h00 - 22h00\nVendredi - Samedi : 12h00 - 23h00',
+        poweredBy: 'Propulsé par',
+        blunari: 'Blunari',
+        copyright: `© ${new Date().getFullYear()} Restaurant Nature Village. Tous droits réservés.`,
+        privacy: 'Politique de Confidentialité',
+        terms: 'Conditions d\'Utilisation'
       }
     },
     sq: {
