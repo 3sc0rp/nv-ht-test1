@@ -2515,7 +2515,8 @@ const FullMenuPage = () => {
         es: 'Camarones con Mantequilla',
         ru: 'Креветки в масле',
         hi: 'बटर श्रिम्प',
-        sq: 'Karkaleca me Gjalpë'
+        sq: 'Karkaleca me Gjalpë',
+        fr: 'Crevettes au Beurre'
       }, 
       description: { 
         en: 'Shrimp sautéed with butter, mushrooms and garlic. Served with special spicy seasoning.',
@@ -2547,7 +2548,8 @@ const FullMenuPage = () => {
         es: 'Carnaval del Pueblo',
         ru: 'Деревенский карнавал',
         hi: 'गांव कार्निवल',
-        sq: 'Karnaval Fshati'
+        sq: 'Karnaval Fshati',
+        fr: 'Carnaval du Village'
       }, 
       description: { 
         en: 'This best stew is a dish made with carefully selected fresh vegetables and tender pieces of meat. Slowly cooked to perfection. Served with aromatic saffron rice. It creates a memorable and satisfying dining experience.',
@@ -2721,7 +2723,8 @@ const FullMenuPage = () => {
         es: 'Alitas',
         ru: 'Крылышки',
         hi: 'विंग्स',
-        sq: 'Krahët'
+        sq: 'Krahët',
+        fr: 'Ailes'
       }, 
       description: { 
         en: 'Grilled Wings a flavor sensation that will delight your taste buds! Served with aromatic saffron rice, fresh green salad, sumac-seasoned onions, and a medley of grilled vegetables. Don\'t miss out on this delectable combination!',
@@ -2789,7 +2792,8 @@ const FullMenuPage = () => {
         es: 'Tikka de Pollo',
         ru: 'Куриная тикка',
         hi: 'चिकन टिक्का',
-        sq: 'Tikka Pule'
+        sq: 'Tikka Pule',
+        fr: 'Tikka de Poulet'
       }, 
       description: { 
         en: 'This dish offers a flavorful experience! Served with aromatic saffron rice, seasonal salad, sumac-seasoned onions, and a medley of grilled vegetables, it creates an unforgettable taste.',
@@ -2856,7 +2860,8 @@ const FullMenuPage = () => {
         es: 'Platillo Especial de Nature Village',
         ru: 'Особое блюдо деревни природы',
         hi: 'नेचर विलेज स्पेशल प्लैटर',
-        sq: 'Pjatë Speciale Nature Village'
+        sq: 'Pjatë Speciale Nature Village',
+        fr: 'Plateau Spécial Nature Village'
       }, 
       description: { 
         en: 'Special Platter Mixed Grill.',
