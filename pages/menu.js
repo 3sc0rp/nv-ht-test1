@@ -1484,6 +1484,66 @@ const FullMenuPage = () => {
         poweredBy: 'Mundësuar nga',
         blunari: 'Blunari AI'
       }
+    },
+    fr: { 
+      title: 'Un Monde de Saveurs sur un Seul Menu', 
+      subtitle: 'Goûtez la tradition, découvrez la variété et explorez nos plats les plus appréciés.',
+      restaurantBadge: 'Restaurant Authentique du Moyen-Orient',
+      loading: 'Chargement...',
+      searchPlaceholder: 'Rechercher des plats...',
+      noResults: 'Aucun plat trouvé correspondant à votre recherche.',
+      nav: {
+        home: 'Accueil',
+        menu: 'Menu',
+        about: 'À Propos',
+        gallery: 'Galerie',
+        visit: 'Nous Visiter',
+        reservations: 'Réservations',
+        catering: 'Traiteur',
+        orderOnline: 'Commander'
+      },
+      filters: { 
+        all: 'Tous les Articles', 
+        appetizers: 'Apéritifs', 
+        salads: 'Salades', 
+        sandwich_platter: 'Sandwich et Plateau', 
+        naan: 'Naan', 
+        pizza: 'Pizza', 
+        fish: 'Poisson', 
+        grill: 'Grillades', 
+        specialty: 'Spécialités', 
+        kids: "Menu Enfants", 
+        drinks_cold: 'Boissons (Fraîches)', 
+        drinks_hot: 'Boissons (Chaudes)', 
+        soup: 'Soupes', 
+        dessert: 'Desserts', 
+        popular: 'Plus Populaires' 
+      },
+      addProtein: 'Ajouter Protéine',
+      servingFor: 'Pour',
+      variants: {
+        sandwich: 'Sandwich',
+        platter: 'Plateau',
+        singleScoop: 'Une Boule'
+      },
+      stats: {
+        dishes: 'Plats Délicieux',
+        categories: 'Catégories Diverses',
+        languages: 'Langues Mondiales'
+      },
+      popularSectionTitle: 'Nos Plats les Plus Populaires',
+      scrollDownText: 'Faites défiler vers le bas pour explorer le menu',
+      footer: {
+        description: 'Apporter les saveurs authentiques et l\'hospitalité chaleureuse du Moyen-Orient à votre table. Chaque plat est une célébration de notre riche patrimoine culturel et de notre excellence culinaire.',
+        quickLinks: 'Liens Rapides',
+        contactInfo: 'Informations de Contact',
+        privacy: 'Politique de Confidentialité',
+        terms: 'Conditions de Service',
+        openDaily: 'DIM - JEU: 12h00 - 22h00\nVEN - SAM: 12h00 - 23h00',
+        copyright: '© 2025 Restaurant Nature Village. Tous droits réservés.',
+        poweredBy: 'Propulsé par',
+        blunari: 'Blunari IA'
+      }
     }
   }
 

@@ -520,80 +520,95 @@ const NatureVillageWebsite = () => {
       id: 4,
       src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
-      alt: { en: 'Traditional Middle Eastern Platter', ku: 'پلێتەری نەریتی ڕۆژهەڵاتی ناوەڕاست', ar: 'طبق شرق أوسطي تقليدي', es: 'Plato Tradicional del Medio Oriente' },
+      alt: { en: 'Traditional Middle Eastern Platter', ku: 'پلێتەری نەریتی ڕۆژهەڵاتی ناوەڕاست', ar: 'طبق شرق أوسطي تقليدي', es: 'Plato Tradicional del Medio Oriente', sq: 'Pjatë Tradicionale e Lindjes së Mesme', fr: 'Plat Traditionnel du Moyen-Orient' },
       category: 'dishes',
       tags: ['traditional', 'mixed', 'authentic'],
       likes: 156,
       featured: true,
       story: {
         en: 'A celebration of Middle Eastern culinary heritage in one beautiful platter',
-        ku: 'ئاهەنگێک بۆ میراتی چێشتلێنانی ڕۆژهەڵاتی ناوەڕاست لە یەک پلێتەری جوان'
+        ku: 'ئاهەنگێک بۆ میراتی چێشتلێنانی ڕۆژهەڵاتی ناوەڕاست لە یەک پلێتەری جوان',
+        es: 'Una celebración del patrimonio culinario del Medio Oriente en un hermoso plato',
+        sq: 'Një festim i trashëgimisë kulinarë të Lindjes së Mesme në një pjatë të bukur',
+        fr: 'Une célébration du patrimoine culinaire du Moyen-Orient dans un magnifique plat'
       }
     },
     {
       id: 5,
       src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop',
-      alt: { en: 'Middle Eastern Vegetable Medley', ku: 'تێکەڵەی سەوزەی ڕۆژهەڵاتی ناوەڕاست', ar: 'خليط الخضار الشرق أوسطي', es: 'Mezcla de Vegetales del Medio Oriente' },
+      alt: { en: 'Middle Eastern Vegetable Medley', ku: 'تێکەڵەی سەوزەی ڕۆژهەڵاتی ناوەڕاست', ar: 'خليط الخضار الشرق أوسطي', es: 'Mezcla de Vegetales del Medio Oriente', sq: 'Përzierje Perimesh të Lindjes së Mesme', fr: 'Mélange de Légumes du Moyen-Orient' },
       category: 'dishes',
       tags: ['vegetables', 'healthy', 'colorful'],
       likes: 134,
       featured: false,
       story: {
         en: 'Fresh seasonal vegetables prepared with Middle Eastern herbs and spices',
-        ku: 'سەوزەی وەرزیی تازە کە بە گیا و بەهاراتی ڕۆژهەڵاتی ناوەڕاست ئامادە کراوە'
+        ku: 'سەوزەی وەرزیی تازە کە بە گیا و بەهاراتی ڕۆژهەڵاتی ناوەڕاست ئامادە کراوە',
+        es: 'Verduras frescas de temporada preparadas con hierbas y especias del Medio Oriente',
+        sq: 'Perime të freskëta stinore të përgatitura me bimë dhe erëza të Lindjes së Mesme',
+        fr: 'Légumes frais de saison préparés avec des herbes et épices du Moyen-Orient'
       }
     },
     {
       id: 6,
       src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop',
-      alt: { en: 'Traditional Baklava', ku: 'بەقڵاوای نەریتی', ar: 'بقلاوة تقليدية', es: 'Baklava Tradicional' },
+      alt: { en: 'Traditional Baklava', ku: 'بەقڵاوای نەریتی', ar: 'بقلاوة تقليدية', es: 'Baklava Tradicional', sq: 'Bakllava Tradicionale', fr: 'Baklava Traditionnel' },
       category: 'desserts',
       tags: ['baklava', 'sweet', 'pastry'],
       likes: 201,
       featured: true,
       story: {
         en: 'Delicate layers of phyllo pastry filled with nuts and sweetened with honey',
-        ku: 'چینە چینە فیلۆی ناسک پڕکراو لە گوێز و بە هەنگوین شیرین کراوە'
+        ku: 'چینە چینە فیلۆی ناسک پڕکراو لە گوێز و بە هەنگوین شیرین کراوە',
+        es: 'Delicadas capas de masa filo rellenas de nueces y endulzadas con miel',
+        sq: 'Shtresa delikate brumi fillo të mbushura me arra dhe të ëmbëlsuara me mjaltë',
+        fr: 'Délicates couches de pâte phyllo remplies de noix et sucrées au miel'
       }
     },
     {
       id: 7,
       src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&h=300&fit=crop',
-      alt: { en: 'Middle Eastern Dolma', ku: 'دۆڵمەی ڕۆژهەڵاتی ناوەڕاست', ar: 'دولمة شرق أوسطية', es: 'Dolma del Medio Oriente' },
+      alt: { en: 'Middle Eastern Dolma', ku: 'دۆڵمەی ڕۆژهەڵاتی ناوەڕاست', ar: 'دولمة شرق أوسطية', es: 'Dolma del Medio Oriente', sq: 'Dollma e Lindjes së Mesme', fr: 'Dolma du Moyen-Orient' },
       category: 'dishes',
       tags: ['dolma', 'stuffed', 'traditional'],
       likes: 178,
       featured: false,
       story: {
         en: 'Grape leaves stuffed with rice, herbs, and spices - a family recipe',
-        ku: 'گەڵای مێو پڕکراو لە برنج و گیا و بەهارات - ڕێسەتێکی خێزانی'
+        ku: 'گەڵای مێو پڕکراو لە برنج و گیا و بەهارات - ڕێسەتێکی خێزانی',
+        es: 'Hojas de parra rellenas de arroz, hierbas y especias - una receta familiar',
+        sq: 'Gjethe rrushi të mbushura me oriz, bimë dhe erëza - një recetë familjare',
+        fr: 'Feuilles de vigne farcies au riz, herbes et épices - une recette familiale'
       }
     },
     {
       id: 8,
       src: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop',
-      alt: { en: 'Hearty Middle Eastern Soup', ku: 'شۆربەی بەهێزی ڕۆژهەڵاتی ناوەڕاست', ar: 'حساء شرق أوسطي مغذي', es: 'Sopa Sustanciosa del Medio Oriente' },
+      alt: { en: 'Hearty Middle Eastern Soup', ku: 'شۆربەی بەهێزی ڕۆژهەڵاتی ناوەڕاست', ar: 'حساء شرق أوسطي مغذي', es: 'Sopa Sustanciosa del Medio Oriente', sq: 'Supë Ushqyese e Lindjes së Mesme', fr: 'Soupe Nourrissante du Moyen-Orient' },
       category: 'dishes',
       tags: ['soup', 'comfort', 'warm'],
       likes: 143,
       featured: false,
       story: {
         en: 'Warming soup made with traditional Middle Eastern ingredients and love',
-        ku: 'شۆربەی گەرمکەرەوە کە بە پێکهاتەی نەریتی ڕۆژهەڵاتی ناوەڕاست و خۆشەویستی دروست کراوە'
+        ku: 'شۆربەی گەرمکەرەوە کە بە پێکهاتەی نەریتی ڕۆژهەڵاتی ناوەڕاست و خۆشەویستی دروست کراوە',
+        es: 'Sopa reconfortante hecha con ingredientes tradicionales del Medio Oriente y amor',
+        sq: 'Supë ngrohtëse e bërë me përbërës tradicionalë të Lindjes së Mesme dhe dashuri',
+        fr: 'Soupe réchauffante faite avec des ingrédients traditionnels du Moyen-Orient et de l\'amour'
       }
     }
   ], []);
 
   // Gallery Categories
   const galleryCategories = useMemo(() => ({
-    all: { en: 'All Photos', ku: 'هەموو وێنەکان', ar: 'جميع الصور', es: 'Todas las Fotos', icon: Grid },
-    dishes: { en: 'Signature Dishes', ku: 'خۆراکی تایبەت', ar: 'الأطباق المميزة', es: 'Platos Especiales', icon: ChefHat },
-    atmosphere: { en: 'Restaurant Atmosphere', ku: 'کەشوهەوای چێشتخانە', ar: 'أجواء المطعم', es: 'Ambiente del Restaurante', icon: Home },
-    desserts: { en: 'Sweet Treats', ku: 'شیرینی', ar: 'الحلويات', es: 'Dulces Delicias', icon: Heart }
+    all: { en: 'All Photos', ku: 'هەموو وێنەکان', ar: 'جميع الصور', es: 'Todas las Fotos', sq: 'Të Gjitha Fotografitë', fr: 'Toutes les Photos', icon: Grid },
+    dishes: { en: 'Signature Dishes', ku: 'خۆراکی تایبەت', ar: 'الأطباق المميزة', es: 'Platos Especiales', sq: 'Pjata Speciale', fr: 'Plats Signature', icon: ChefHat },
+    atmosphere: { en: 'Restaurant Atmosphere', ku: 'کەشوهەوای چێشتخانە', ar: 'أجواء المطعم', es: 'Ambiente del Restaurante', sq: 'Atmosfera e Restorantit', fr: 'Atmosphère du Restaurant', icon: Home },
+    desserts: { en: 'Sweet Treats', ku: 'شیرینی', ar: 'الحلويات', es: 'Dulces Delicias', sq: 'Ëmbëlsira të Shijshme', fr: 'Douceurs Sucrées', icon: Heart }
   }), []);
 
   // Filter functionality
@@ -2942,22 +2957,34 @@ const NatureVillageWebsite = () => {
       },
       celebration: {
         title: 'Célébrez Vos Moments Spéciaux',
-        subtitle: 'Créez des souvenirs inoubliables avec nos forfaits événements spéciaux',
-        valentine: {
-          title: 'Soirée Saint-Valentin',
-          subtitle: 'Un dîner romantique au cœur de la nature',
+        subtitle: 'Rendez vos anniversaires, anniversaires de mariage et occasions spéciales inoubliables avec une authentique hospitalité du Moyen-Orient',
+
+        familyReunions: 'Réunions de Famille',
+        graduations: 'Remises de Diplômes',
+        engagements: 'Fiançailles', 
+        holidays: 'Fêtes',
+        birthday: {
+          title: 'Célébrations d\'Anniversaire',
+          tagline: 'Des moments doux rendus spéciaux',
+          feature1: 'Dessert d\'anniversaire offert',
+          feature2: 'Chanson d\'anniversaire et vœux',
+          feature3: 'Expérience de dîner mémorable',
+          special: 'Parfait pour célébrer une année de plus de vie'
+        },
+        anniversary: {
+          title: 'Dîners d\'Anniversaire de Mariage',
           tagline: 'Célébrez votre histoire d\'amour',
-          feature1: 'Table romantique avec fleurs',
-          feature2: 'Desserts gratuits pour deux',
+          feature1: 'Configuration de table romantique avec roses',
+          feature2: 'Dessert offert pour deux',
           feature3: 'Expérience de dîner aux chandelles',
-          feature4: 'Carte souvenir personnalisée',
-          special: '25+ ans ensemble ? Une surprise spéciale vous attend !',
-          bookingAdvice: 'Réservez 48 heures à l\'avance pour la meilleure expérience de célébration'
+          feature4: 'Carte d\'anniversaire personnalisée',
+          special: '25+ ans ensemble ? Une surprise spéciale vous attend !'
         },
         cta: {
           title: 'Prêt à Célébrer ?',
-          subtitle: 'Rendez votre journée spéciale mémorable avec une authentique hospitalité kurde et des saveurs inoubliables',
-          reserve: 'Appelez pour une réservation spéciale'
+          subtitle: 'Laissez-nous rendre votre journée spéciale extraordinaire avec une authentique hospitalité du Moyen-Orient et des saveurs inoubliables',
+          reserve: 'Appelez pour une réservation spéciale',
+          bookingAdvice: 'Réservez 48 heures à l\'avance pour la meilleure expérience de célébration'
         }
       },
       footer: {
