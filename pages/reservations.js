@@ -116,6 +116,15 @@ const ReservationPage = () => {
       backToHome: 'Kthehu në Kreu',
       contact: 'Për ndihmë të menjëhershme, ju lutemi na telefononi në',
       phone: '(470) 350-1019'
+    },
+    fr: {
+      title: 'En Maintenance',
+      subtitle: 'Système de Réservations',
+      message: 'Nous mettons actuellement à jour notre système de réservations pour mieux vous servir.',
+      expectedTime: 'Nous espérons être de nouveau en ligne bientôt.',
+      backToHome: 'Retour à l\'Accueil',
+      contact: 'Pour une assistance immédiate, veuillez nous appeler au',
+      phone: '(470) 350-1019'
     }
   };
 

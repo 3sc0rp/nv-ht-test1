@@ -118,6 +118,22 @@ const Footer = () => {
         catering: 'Katering',
         gallery: 'Galeria'
       },
+      fr: {
+        description: 'Apportant les saveurs authentiques et la chaleureuse hospitalité du Moyen-Orient à votre table. Chaque plat est une célébration de notre riche héritage culturel et de notre excellence culinaire.',
+        quickLinks: 'Liens Rapides',
+        contactInfo: 'Informations de Contact',
+        openDaily: 'DIM - JEU: 12H00 - 22H00\nVEN - SAM: 12H00 - 23H00',
+        privacy: 'Politique de Confidentialité',
+        terms: 'Conditions de Service',
+        copyright: '© 2025 Restaurant Kurde Nature Village. Tous droits réservés.',
+        poweredBy: 'Propulsé par',
+        blunari: 'Blunari',
+        home: 'Accueil',
+        menu: 'Menu',
+        reservations: 'Réservations',
+        catering: 'Traiteur',
+        gallery: 'Galerie'
+      },
       ur: {
         description: 'مشرق وسطیٰ کے اصل ذائقے اور گرم مہمان نوازی آپ کی میز تک لا رہے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور پاک فن کی بہترین مثال ہے۔',
         quickLinks: 'فوری لنکس',

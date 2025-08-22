@@ -117,6 +117,15 @@ const GalleryPage = () => {
       backToHome: 'Kthehu në Kreu',
       contact: 'Për më shumë informacion, ju lutemi na telefononi në',
       phone: '(470) 350-1019'
+    },
+    fr: {
+      title: 'En Maintenance',
+      subtitle: 'Galerie Photo',
+      message: 'Nous mettons actuellement à jour notre galerie photo pour présenter nos dernières expériences.',
+      expectedTime: 'Nous espérons être de nouveau en ligne bientôt.',
+      backToHome: 'Retour à l\'Accueil',
+      contact: 'Pour plus d\'informations, veuillez nous appeler au',
+      phone: '(470) 350-1019'
     }
   };
 

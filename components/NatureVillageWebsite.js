@@ -470,7 +470,7 @@ const NatureVillageWebsite = () => {
       id: 1,
       src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop',
-      alt: { en: 'Elegant Restaurant Interior', ku: 'ناوەوەی چێشتخانەی جوان', ar: 'داخل المطعم الأنيق', es: 'Elegante Interior del Restaurante', sq: 'Interiori Elegant i Restorantit' },
+      alt: { en: 'Elegant Restaurant Interior', ku: 'ناوەوەی چێشتخانەی جوان', ar: 'داخل المطعم الأنيق', es: 'Elegante Interior del Restaurante', sq: 'Interiori Elegant i Restorantit', fr: 'Intérieur Élégant du Restaurant' },
       category: 'atmosphere',
       tags: ['interior', 'ambiance', 'dining'],
       likes: 127,
@@ -479,14 +479,15 @@ const NatureVillageWebsite = () => {
         en: 'Our warm and inviting dining space reflects Middle Eastern hospitality',
         ku: 'شوێنی خواردنی گەرم و بانگهێشتکارمان ڕەنگدانەوەی میوانداری ڕۆژهەڵاتی ناوەڕاست دەکات',
         es: 'Nuestro espacio de comedor cálido y acogedor refleja la hospitalidad del Medio Oriente',
-        sq: 'Hapësira jonë e ngrohtë dhe tërheqëse e të ngrënit reflekton mikpritjen e Lindjes së Mesme'
+        sq: 'Hapësira jonë e ngrohtë dhe tërheqëse e të ngrënit reflekton mikpritjen e Lindjes së Mesme',
+        fr: 'Notre espace de restauration chaleureux et accueillant reflète l\'hospitalité du Moyen-Orient'
       }
     },
     {
       id: 2,
       src: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&h=300&fit=crop',
-      alt: { en: 'Authentic Middle Eastern Kebab', ku: 'کەبابی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست', ar: 'كباب شرق أوسطي أصيل', es: 'Auténtico Kebab del Medio Oriente', sq: 'Kabab Autentik i Lindjes së Mesme' },
+      alt: { en: 'Authentic Middle Eastern Kebab', ku: 'کەبابی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست', ar: 'كباب شرق أوسطي أصيل', es: 'Auténtico Kebab del Medio Oriente', sq: 'Kabab Autentik i Lindjes së Mesme', fr: 'Kebab Authentique du Moyen-Orient' },
       category: 'dishes',
       tags: ['kebab', 'grilled', 'signature'],
       likes: 245,
@@ -495,14 +496,15 @@ const NatureVillageWebsite = () => {
         en: 'Hand-crafted kebabs using traditional Middle Eastern spices and techniques',
         ku: 'کەبابی دەستکرد بە بەکارهێنانی بەهارات و تەکنیکی نەریتی ڕۆژهەڵاتی ناوەڕاست',
         es: 'Kebabs hechos a mano usando especias y técnicas tradicionales del Medio Oriente',
-        sq: 'Kabab të bërë me dorë duke përdorur erëza dhe teknika tradicionale të Lindjes së Mesme'
+        sq: 'Kabab të bërë me dorë duke përdorur erëza dhe teknika tradicionale të Lindjes së Mesme',
+        fr: 'Kebabs faits à la main utilisant des épices et techniques traditionnelles du Moyen-Orient'
       }
     },
     {
       id: 3,
       src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop',
-      alt: { en: 'Fresh Hummus with Pita', ku: 'حومسی تازە لەگەڵ نانی پیتا', ar: 'حمص طازج مع الخبز', es: 'Hummus Fresco con Pita', sq: 'Humus i Freskët me Pita' },
+      alt: { en: 'Fresh Hummus with Pita', ku: 'حومسی تازە لەگەڵ نانی پیتا', ar: 'حمص طازج مع الخبز', es: 'Hummus Fresco con Pita', sq: 'Humus i Freskët me Pita', fr: 'Houmous Frais avec Pita' },
       category: 'dishes',
       tags: ['hummus', 'appetizer', 'vegetarian'],
       likes: 189,
@@ -510,7 +512,8 @@ const NatureVillageWebsite = () => {
       story: {
         en: 'Creamy hummus made fresh daily with tahini and olive oil',
         ku: 'حومسی کرێمی کە ڕۆژانە بە تەحینە و زەیتی زەیتوون تازە دروست دەکرێت',
-        sq: 'Humus kremoz i bërë i freskët çdo ditë me tahini dhe vaj ulliri'
+        sq: 'Humus kremoz i bërë i freskët çdo ditë me tahini dhe vaj ulliri',
+        fr: 'Houmous crémeux fait frais quotidiennement avec tahini et huile d\'olive'
       }
     },
     {
@@ -650,7 +653,8 @@ const NatureVillageWebsite = () => {
         ur: 'کباب پیزا',
         kmr: 'Pizza Kebab',
         es: 'Pizza de Kabab',
-        sq: 'Pica Kabab'
+        sq: 'Pica Kabab',
+        fr: 'Pizza Kebab'
       },
       description: {
         en: 'A savory pizza topped with thin slices of beef kabab, special sauce, iceberg lettuce, onions, cucumbers, and tomatoes. The crispy crust provides a perfect base for this fresh and flavorful combination.',
@@ -661,7 +665,8 @@ const NatureVillageWebsite = () => {
         ur: 'بیف کباب کے پتلے ٹکڑوں، خاص ساس، آئس برگ لیٹس، پیاز، کھیرا اور ٹماٹر کے ساتھ لذیذ پیزا۔ کرسپی کرسٹ اس تازہ اور ذائقہ دار امتزاج کے لیے بہترین بیس فراہم کرتا ہے۔',
         kmr: 'Pizzayek bi tam ku bi perçeyên zok ên kebabê goştê ga, soşa taybet, salata qelemî, pîvaz, xiyar û firangoşan hatiye daxuyandin. Hevîrê çitir bingeheke temam ji bo vê tevahiya taze û bi tam peyda dike.',
         es: 'Una pizza sabrosa cubierta con finas rebanadas de kabab de res, salsa especial, lechuga iceberg, cebollas, pepinos y tomates. La base crujiente proporciona una base perfecta para esta combinación fresca y sabrosa.',
-        sq: 'Një picë e shijshme e mbuluar me feta të holla kababi viçi, salcë speciale, sallatë ajsbergu, qepë, kastravec dhe domate. Baza e kërcitshme ofron një bazë perfekte për këtë kombinim të freskët dhe plot shije.'
+        sq: 'Një picë e shijshme e mbuluar me feta të holla kababi viçi, salcë speciale, sallatë ajsbergu, qepë, kastravec dhe domate. Baza e kërcitshme ofron një bazë perfekte për këtë kombinim të freskët dhe plot shije.',
+        fr: 'Une pizza savoureuse garnie de fines tranches de kebab de bœuf, sauce spéciale, laitue iceberg, oignons, concombres et tomates. La pâte croustillante fournit une base parfaite pour cette combinaison fraîche et savoureuse.'
       },
       price: '$16.99',
       category: 'pizza',
@@ -680,7 +685,8 @@ const NatureVillageWebsite = () => {
         ur: 'ولیج کارنیول',
         kmr: 'Karnavala Gund',
         es: 'Carnaval del Pueblo',
-        sq: 'Karnavali i Fshatit'
+        sq: 'Karnavali i Fshatit',
+        fr: 'Carnaval du Village'
       },
       description: {
         en: 'This best stew is a dish made with carefully selected fresh vegetables and tender pieces of meat. Slowly cooked to perfection. Served with aromatic saffron rice. It creates a memorable and satisfying dining experience.',
@@ -691,7 +697,8 @@ const NatureVillageWebsite = () => {
         ur: 'یہ بہترین سٹو ایک ڈش ہے جو احتیاط سے منتخب کردہ تازہ سبزیوں اور گوشت کے نرم ٹکڑوں سے بنائی گئی ہے۔ آہستہ آہستہ کمال تک پکائی گئی۔ خوشبودار زعفرانی چاول کے ساتھ پیش کی جاتی ہے۔ یہ ایک یادگار اور اطمینان بخش کھانے کا تجربہ بناتا ہے۔',
         kmr: 'Ev xwaştrîn xwarin xwarineke ku bi sebzeyên taze yên bi baldarî hatine hilbijartin û perçeyên nerm ên goştî hatiye çêkirin. Hêdî hêdî heta bi temamî hatiye pijandin. Bi brincê zefranî, salata werzeya, pîvazê sumaq û sebzeyên grîlkirî tê peşkêşkirin. Ezmûnek xwarinê ya jibîrnekirin û şaykirin çêdike.',
         es: 'Este mejor guiso es un plato hecho con verduras frescas cuidadosamente seleccionadas y tiernos trozos de carne. Cocido lentamente a la perfección. Servido con arroz de azafrán aromático. Crea una experiencia gastronómica memorable y satisfactoria.',
-        sq: 'Ky është një zarzavat i përsosur i bërë me perime të freskëta të zgjedhura me kujdes dhe copa të buta mishi. Gatuhet ngadalë deri në përsosuri. Shërbehet me oriz safrani aromatik. Krijon një përvojë ngrënie të paharrueshme dhe kënaqëse.'
+        sq: 'Ky është një zarzavat i përsosur i bërë me perime të freskëta të zgjedhura me kujdes dhe copa të buta mishi. Gatuhet ngadalë deri në përsosuri. Shërbehet me oriz safrani aromatik. Krijon një përvojë ngrënie të paharrueshme dhe kënaqëse.',
+        fr: 'Ce meilleur ragoût est un plat fait avec des légumes frais soigneusement sélectionnés et des morceaux de viande tendres. Cuit lentement à la perfection. Servi avec du riz au safran aromatique. Il crée une expérience culinaire mémorable et satisfaisante.'
       },
       price: '$23.99',
       category: 'specialty',
@@ -710,7 +717,8 @@ const NatureVillageWebsite = () => {
         ur: 'اربیل شیش کباب',
         kmr: 'Şîş Kebaba Hewlêr',
         es: 'Shish Kabab de Erbil',
-        sq: 'Shish Kabab Erbil'
+        sq: 'Shish Kabab Erbil',
+        fr: 'Shish Kebab d\'Erbil'
       },
       description: {
         en: 'A kabab made with a mix of lamb and beef, grilled to perfection. It is served with saffron rice, seasonal salad, sumac onions, and grilled vegetables.',
@@ -721,7 +729,8 @@ const NatureVillageWebsite = () => {
         ur: 'بھیڑ اور گائے کے گوشت کے مکسچر سے بنا کباب، کمال تک گرل کیا گیا۔ زعفرانی چاول، موسمی سلاد، سماق پیاز اور گرل شدہ سبزیوں کے ساتھ پیش کیا جاتا ہے۔',
         kmr: 'Kebabek ku ji tevahiya goştê berx û ga hatiye çêkirin, heta bi temamî hatiye grîlkirin. Bi brincê zefranî, salata werzeya, pîvazê sumaq û sebzeyên grîlkirî tê peşkêşkirin.',
         es: 'Un kabab hecho con una mezcla de cordero y res, asado a la perfección. Se sirve con arroz de azafrán, ensalada de temporada, cebollas de sumac y verduras asadas.',
-        sq: 'Një kabab i bërë me një përzierje dele dhe viçi, i pjekur në përsosuri. Shërbehet me oriz safrani, sallatë stinore, qepë sumaku dhe perime të pjekura në skarë.'
+        sq: 'Një kabab i bërë me një përzierje dele dhe viçi, i pjekur në përsosuri. Shërbehet me oriz safrani, sallatë stinore, qepë sumaku dhe perime të pjekura në skarë.',
+        fr: 'Un kebab fait avec un mélange d\'agneau et de bœuf, grillé à la perfection. Servi avec du riz au safran, salade de saison, oignons au sumac et légumes grillés.'
       },
       price: '$21.99',
       category: 'grill',
@@ -2775,6 +2784,79 @@ const NatureVillageWebsite = () => {
           title: 'Ji bo Pîrozbahiyê Amade ne?',
           subtitle: 'Bila roja we ya taybetî bi mêvandariya resen a Kurdî û tamên bîrneketî awarte bikin',
           reserve: 'Ji bo rezervasyona taybetî bang bikin'
+        }
+      }
+    },
+    fr: {
+      nav: {
+        home: 'Accueil',
+        menu: 'Menu',
+        about: 'À Propos',
+        gallery: 'Galerie',
+        visit: 'Nous Visiter',
+        reservations: 'Réservations',
+        catering: 'Traiteur',
+        orderOnline: 'Commander'
+      },
+      hero: {
+        title: 'Nature Village',
+        subtitle: 'Saveurs du Moyen-Orient à Chaque Bouchée',
+        description: 'Découvrez les saveurs authentiques du Moyen-Orient dans une ambiance chaleureuse et traditionnelle où chaque plat raconte l\'histoire de notre riche héritage culturel et des traditions culinaires transmises de génération en génération.',
+        cta1: 'Voir le Menu',
+        cta2: 'Réserver'
+      },
+      menu: {
+        title: 'Notre Menu',
+        subtitle: 'Propulsé par MenuIQ - Expérience Culinaire Améliorée par l\'IA',
+        filters: {
+          all: 'Tous les Articles',
+          traditional: 'Traditionnel',
+          vegetarian: 'Végétarien',
+          vegan: 'Végétalien',
+          soup: 'Soupes',
+          appetizer: 'Apéritifs',
+          main: 'Plats Principaux',
+          dessert: 'Desserts',
+          beverage: 'Boissons',
+          kebab: 'Kebabs',
+          rice: 'Riz',
+          bread: 'Pains',
+          salad: 'Salades',
+          seafood: 'Fruits de Mer',
+          hot: 'Plats Chauds',
+          cold: 'Plats Froids',
+          spicy: 'Épicé',
+          mild: 'Doux'
+        },
+        cta: 'Commander Maintenant'
+      },
+      about: {
+        title: 'Notre Histoire',
+        subtitle: 'Où la Cuisine Kurde Rencontre la Nature',
+        description: 'Nature Village apporte les saveurs authentiques et la chaleureuse hospitalité du Moyen-Orient dans un cadre naturel magnifique. Notre restaurant célèbre la riche tradition culinaire kurde avec des ingrédients frais, des épices traditionnelles et des recettes transmises de génération en génération.',
+        features: [
+          'Ingrédients frais et locaux',
+          'Recettes familiales authentiques',
+          'Ambiance chaleureuse et accueillante',
+          'Service exceptionnel'
+        ]
+      },
+      specialEvents: {
+        title: 'Événements Spéciaux',
+        valentine: {
+          title: 'Soirée Saint-Valentin',
+          subtitle: 'Un dîner romantique au cœur de la nature',
+          tagline: 'Célébrez votre histoire d\'amour',
+          feature1: 'Table romantique avec fleurs',
+          feature2: 'Desserts gratuits pour deux',
+          feature3: 'Dîner aux chandelles',
+          feature4: 'Carte souvenir personnalisée',
+          special: '25+ ans ensemble? Une surprise spéciale vous attend!'
+        },
+        cta: {
+          title: 'Prêt à Célébrer?',
+          subtitle: 'Rendez votre journée spéciale mémorable avec une authentique hospitalité kurde et des saveurs inoubliables',
+          reserve: 'Appelez pour une réservation spéciale'
         }
       }
     },

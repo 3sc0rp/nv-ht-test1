@@ -117,6 +117,15 @@ const CateringPage = () => {
       backToHome: 'Kthehu në Kreu',
       contact: 'Për pyetje të menjëhershme për katering, ju lutemi na telefononi në',
       phone: '(470) 350-1019'
+    },
+    fr: {
+      title: 'En Maintenance',
+      subtitle: 'Services de Traiteur',
+      message: 'Nous mettons actuellement à jour notre système de traiteur pour mieux vous servir.',
+      expectedTime: 'Nous espérons être de nouveau en ligne bientôt.',
+      backToHome: 'Retour à l\'Accueil',
+      contact: 'Pour des demandes urgentes de traiteur, veuillez nous appeler au',
+      phone: '(470) 350-1019'
     }
   };
 

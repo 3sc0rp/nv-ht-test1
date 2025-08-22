@@ -99,6 +99,16 @@ const Header = ({ currentPage = '' }) => {
         catering: 'Catering',
         orderOnline: 'Pedido en Línea'
       },
+      fr: {
+        home: 'Accueil',
+        menu: 'Menu',
+        about: 'À Propos',
+        gallery: 'Galerie',
+        visit: 'Nous Visiter',
+        reservations: 'Réservations',
+        catering: 'Traiteur',
+        orderOnline: 'Commander en Ligne'
+      },
       sq: {
         home: 'Kreu',
         menu: 'Meny',
