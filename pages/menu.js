@@ -3165,6 +3165,44 @@ const FullMenuPage = () => {
       tags: ['beef', 'kabab'],
       imageUrl: '/Kids Erbil Shish Kabab.jpg' 
     },
+    { 
+      id: 1904, 
+      name: { 
+        en: 'Chicken Kabab',
+        ar: 'كباب الدجاج',
+        fa: 'کباب مرغ',
+        ku: 'کەبابی مریشک',
+        tr: 'Tavuk Kebab',
+        ur: 'چکن کباب',
+        kmr: 'Kebabê Mirîşk',
+        es: 'Kabab de Pollo',
+        ru: 'Куриный кебаб',
+        hi: 'चिकन कबाब',
+        sq: 'Kebab Pule',
+        fr: 'Brochette de Poulet',
+        de: 'Hähnchen-Kebab'
+      }, 
+      description: { 
+        en: 'Mildly spiced mini chicken kabab skewers specially prepared for kids, served with creamy mashed potatoes.',
+        ar: 'أسياخ كباب الدجاج الصغيرة المتبلة بشكل معتدل والمحضرة خصيصاً للأطفال، تُقدم مع البطاطس المهروسة الكريمية.',
+        fa: 'سیخ‌های کباب مرغ کوچک با طعم ملایم که مخصوص کودکان تهیه شده و با پوره سیب‌زمینی خامه‌ای سرو می‌شود.',
+        ku: 'سیخەکانی کەبابی مریشکی بچووکی بە تامی ملایم کە بە تایبەتی بۆ منداڵان ئامادەکراوە، لەگەڵ پەتاتەی وردکراوی کریمیەوە دەخرێتەڕوو.',
+        tr: 'Çocuklar için özel olarak hazırlanmış hafif baharatlı mini tavuk kebap şişleri, kremalı patates püresiyle servis edilir.',
+        ur: 'ہلکے مسالے والے چھوٹے چکن کباب کے سیخ جو خاص طور پر بچوں کے لیے تیار کیے گئے ہیں، کریمی میش کیے ہوئے آلو کے ساتھ پیش کیا جاتا ہے۔',
+        kmr: 'Şîşên kebabê mirîşk ên piçûk ên bi tatê hênik ê ji bo zarokan bi taybetî hatine amadekirin, bi patatesên şêranî yên qurm re tên pêşkêşkirin.',
+        es: 'Mini brochetas de pollo ligeramente especiadas, especialmente preparadas para niños, servidas con puré de papas cremoso.',
+        ru: 'Слегка приправленные мини-шашлыки из курицы, специально приготовленные для детей, подаются с кремовым картофельным пюре.',
+        hi: 'हल्के मसाले वाले मिनी चिकन कबाब स्किवर जो विशेष रूप से बच्चों के लिए तैयार किए गए हैं, मलाईदार मैश किए गए आलू के साथ परोसे जाते हैं।',
+        sq: 'Shishqebap të vegjël pule me erëza të buta të përgatitura posaçërisht për fëmijë, të shërbyer me pure patate me krem.',
+        fr: 'Mini-brochettes de poulet légèrement épicées spécialement préparées pour les enfants, servies avec une purée de pommes de terre crémeuse.',
+        de: 'Mild gewürzte Mini-Hähnchen-Kebab-Spieße, die speziell für Kinder zubereitet werden, serviert mit cremigem Kartoffelpüree.'
+      }, 
+      price: '$15.99', 
+      category: 'kids', 
+      popular: false, 
+      tags: ['chicken', 'kabab'],
+      imageUrl: '/Kids Chicken Kabab.jpg' 
+    },
 
     // DRINKS (COLD)
     { 
