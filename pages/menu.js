@@ -3451,6 +3451,29 @@ const FullMenuPage = () => {
       category: 'drinks_cold', 
       tags: [] 
     },
+    { 
+      id: 2005, 
+      name: { 
+        en: 'House Special Mint Lemonade',
+        ar: 'عصير الليمون بالنعناع الخاص بالمنزل',
+        fa: 'لیموناد نعنایی ویژه خانه',
+        ku: 'شەربەتی لیمۆی نعناعی تایبەتی ماڵەوە',
+        tr: 'Ev Özel Nane Limonatası',
+        ur: 'گھر کی خاص پودینہ لیمونیڈ',
+        kmr: 'Limonataya Pûngê ya Taybet a Malê',
+        es: 'Limonada de Menta Especial de la Casa',
+        ru: 'Фирменный мятный лимонад',
+        hi: 'हाउस स्पेशल मिंट लेमोनेड',
+        sq: 'Limonadë me Mente Speciale e Shtëpisë',
+        fr: 'Limonade à la Menthe Spéciale Maison',
+        de: 'Hausgemachte Spezial-Minz-Limonade'
+      }, 
+      price: '$4.99', 
+      category: 'drinks_cold', 
+      popular: false, 
+      tags: ['mint', 'lemon', 'refreshing'],
+      imageUrl: '/House Special Mint Lemonade.jpg' 
+    },
 
     // DRINKS (HOT)
     { 
