@@ -693,7 +693,7 @@ const NatureVillageWebsite = () => {
         fr: 'Un plat irakien traditionnel fait avec du riz au safran et du jarret d\'agneau, garni de sauce tomate spéciale et décoré d\'amandes grillées et de persil frais, offre une expérience culinaire unique.',
         de: 'Ein traditionelles irakisches Gericht aus Safranreis und Lammhaxe, mit spezieller Tomatensauce überzogen und mit gerösteten Mandeln und frischer Petersilie garniert, bietet ein einzigartiges kulinarisches Erlebnis.'
       },
-      price: '$16.99',
+      price: '$26.99',
       category: 'specialty',
       popular: true,
       image: '/Quzi.jpg',
@@ -727,7 +727,7 @@ const NatureVillageWebsite = () => {
         fr: 'Filets de bar européen grillés, servis avec des oignons marinés au sumac, salade fraîche, tomate grillée, citron grillé et purée de pommes de terre crémeuse, c\'est un choix délicieux.',
         de: 'Gegrillte europäische Seebarschfilets, serviert mit Sumach-marinierten Zwiebeln, frischem Salat, gegrillten Tomaten, gegrillter Zitrone und cremigem Kartoffelpüree, ist eine köstliche Wahl.'
       },
-      price: '$23.99',
+      price: '$37.99',
       category: 'specialty',
       popular: true,
       image: '/Grilled Branzino Platter.jpg',
@@ -761,7 +761,7 @@ const NatureVillageWebsite = () => {
         fr: 'Un kebab fait avec un mélange d\'agneau et de bœuf, grillé à la perfection. Servi avec du riz au safran, salade de saison, oignons au sumac et légumes grillés.',
         de: 'Ein Kebab aus einer Mischung von Lamm und Rind, perfekt gegrillt. Serviert mit Safranreis, Salat der Saison, Sumach-Zwiebeln und gegrilltem Gemüse.'
       },
-      price: '$21.99',
+      price: '$23.99',
       category: 'grill',
       popular: true,
       image: '/Ekabab.jpg',
