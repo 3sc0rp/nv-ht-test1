@@ -3109,8 +3109,8 @@ const FullMenuPage = () => {
       price: '$9.49', 
       category: 'kids', 
       popular: true, 
-      tags: [],
-      imageUrl: '/Chicken Tenders.jpg' 
+      image: '/Chicken Tenders.jpg',
+      tags: []
     },
     { 
       id: 1903, 
@@ -3146,8 +3146,8 @@ const FullMenuPage = () => {
       price: '$6.99', 
       category: 'kids', 
       popular: true, 
-      tags: [],
-      imageUrl: '/Fries.jpg' 
+      image: '/Fries.jpg',
+      tags: []
     },
     { 
       id: 1901, 
@@ -3184,8 +3184,8 @@ const FullMenuPage = () => {
       price: '$16.99', 
       category: 'kids', 
       popular: false, 
-      tags: ['beef', 'kabab'],
-      imageUrl: '/kids/Kids Erbil Shish Kabab.jpg' 
+      image: '/kids/Kids Erbil Shish Kabab.jpg',
+      tags: ['beef', 'kabab']
     },
     { 
       id: 1904, 
@@ -3222,8 +3222,8 @@ const FullMenuPage = () => {
       price: '$15.99', 
       category: 'kids', 
       popular: false, 
-      tags: ['chicken', 'kabab'],
-      imageUrl: '/kids/Kids Chicken Kabab.jpg' 
+      image: '/kids/Kids Chicken Kabab.jpg',
+      tags: ['chicken', 'kabab']
     },
 
     // SIDES
