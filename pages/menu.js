@@ -1691,6 +1691,7 @@ const FullMenuPage = () => {
       price: '$10.99', 
       category: 'appetizers', 
       popular: true, 
+      image: '/Kibbeh.jpg',
       tags: [] 
     },
     { 
@@ -2261,6 +2262,7 @@ const FullMenuPage = () => {
       price: '$39.99', // Base price for serving2, variants will override
       category: 'fish', 
       popular: true, 
+      image: '/Grilled Branzino Platter.jpg',
       tags: [], 
       variants: [
         {
