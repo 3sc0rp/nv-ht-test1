@@ -1615,6 +1615,7 @@ const FullMenuPage = () => {
       price: '$8.99', 
       category: 'appetizers', 
       popular: true, 
+      image: '/Hummus.jpg',
       tags: ['vegetarian', 'vegan'] 
     },
     { 
@@ -1765,6 +1766,7 @@ const FullMenuPage = () => {
       }, 
       price: '$10.99', 
       category: 'appetizers', 
+      image: '/Nature\'s Garden.jpg',
       tags: ['vegetarian'] 
     },
     { 
@@ -2224,6 +2226,7 @@ const FullMenuPage = () => {
       }, 
       price: '$3.99', 
       category: 'naan', 
+      image: '/Sesame Kulera.jpg',
       tags: ['vegetarian'] 
     },
 
