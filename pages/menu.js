@@ -2513,46 +2513,6 @@ const FullMenuPage = () => {
       tags: ['special-order', 'large-group'] 
     },
 
-    // VEGGIE PLATTER
-    { 
-      id: 1709, 
-      name: { 
-        en: 'Veggie Platter',
-        ar: 'طبق الخضار',
-        fa: 'پلاتر سبزیجات',
-        ku: 'پلێتەری سەوزە',
-        tr: 'Sebze Tabağı',
-        ur: 'ویجی پلیٹر',
-        kmr: 'Plata Sebzan',
-        es: 'Plato de Verduras',
-        ru: 'Овощное блюдо',
-        hi: 'वेजी प्लैटर',
-        sq: 'Pjatë Perimesh',
-        fr: 'Plateau de Légumes',
-        de: 'Gemüse Platte'
-      }, 
-      description: { 
-        en: 'This dish features a stir-fried medley of broccoli, carrots, green beans, onion, snap peas, celery, red bell pepper, and white chestnuts, topped with basil, olive oil, and garlic sauce. It is served with saffron rice, tomato sauce, and mild and hot sauces.',
-        ar: 'يتميز هذا الطبق بخليط مقلي من البروكلي والجزر والفاصولياء الخضراء والبصل وبازلاء الثلج والكرفس والفلفل الأحمر الحلو والكستناء البيضاء، مغطى بالريحان وزيت الزيتون وصلصة الثوم. يُقدم مع أرز الزعفران وصلصة الطماطم والصلصات المعتدلة والحارة.',
-        fa: 'این غذا شامل مخلوطی از کلم بروکلی، هویج، لوبیا سبز، پیاز، نخود فرنگی، کرفس، فلفل قرمز شیرین و شاه بلوط سفید سرخ شده، با ریحان، روغن زیتون و سس سیر تزین شده است. با برنج زعفرانی، سس گوجه فرنگی و سس‌های ملایم و تند سرو می‌شود.',
-        ku: 'ئەم خواردنە تێکەڵەیەکی سورکراوە لە بروکلی، گەزەر، لووبیا سەوز، پیاز، نۆکی کەڵەم، کرفس، فەلفەڵی سوور شیرین و گوێزی سپیەوە پێکهاتووە، بە ڕەیحان، زەیتی زەیتوون و سۆسی سیر ڕازاوەتەوە. لەگەڵ برنجی زەعفەران، سۆسی تەماتە و سۆسی ملایم و تووندەوە دەخرێتەڕوو.',
-        tr: 'Bu yemek brokoli, havuç, yeşil fasulye, soğan, bezelye, kereviz, kırmızı biber ve beyaz kestane karışımından oluşur, fesleğen, zeytinyağı ve sarımsak sosuyla servis edilir. Safran pilavı, domates sosu ve acılı-acısız soslarla birlikte sunulur.',
-        ur: 'یہ ڈش بروکولی، گاجر، ہری پھلیاں، پیاز، مٹر، اجوائن، سرخ شملہ مرچ، اور سفید بادام کا تلا ہوا مکسچر ہے، جس پر تلسی، زیتون کا تیل اور لہسن کی چٹنی ڈالی جاتی ہے۔ یہ زعفرانی چاول، ٹماٹر کی چٹنی، اور ہلکی اور تیز چٹنیوں کے ساتھ پیش کیا جاتا ہے۔',
-        kmr: 'Ev xwarinê tevlîheviya sebzeyan a hate sorîn e ku ji brokolî, gizer, fasûlye kesk, pîvaz, nokê, kerevîz, bibirê sor û qestaneyên spî pêk tê, bi rêhan, zeyta zeytûnê û sosê sîrê hatiye xemilandin. Bi brinca zefranî, sosê firingiyê û sosên hênik û tûj re tê pêşkêşkirin.',
-        es: 'Este plato presenta una mezcla salteada de brócoli, zanahorias, judías verdes, cebolla, guisantes, apio, pimiento rojo y castañas blancas, cubierto con albahaca, aceite de oliva y salsa de ajo. Se sirve con arroz de azafrán, salsa de tomate y salsas suaves y picantes.',
-        ru: 'Это блюдо представляет жареную смесь брокколи, моркови, стручковой фасоли, лука, гороха, сельдерея, красного болгарского перца и белых каштанов, заправленную базиликом, оливковым маслом и чесночным соусом. Подается с шафрановым рисом, томатным соусом и мягкими и острыми соусами.',
-        hi: 'यह डिश ब्रोकली, गाजर, हरी फलियां, प्याज, मटर, अजवाइन, लाल शिमला मिर्च, और सफेद बादाम का तला हुआ मिश्रण है, जिस पर तुलसी, जैतून का तेल और लहसुन की चटनी डाली जाती है। यह केसर चावल, टमाटर की चटनी, और हल्की और तेज चटनी के साथ परोसा जाता है।',
-        sq: 'Kjo pjatë përmban një përzierje të skuqur brokoli, karrota, bishtaja të gjelbra, qepë, bizele, sellino, speca të kuq dhe gështenja të bardha, e mbuluar me borzilok, vaj ulliri dhe salcë hudhra. Shërbehet me oriz me shafran, salcë domatesh dhe salca të buta dhe të forta.',
-        fr: 'Ce plat présente un mélange sauté de brocoli, carottes, haricots verts, oignon, pois mange-tout, céleri, poivron rouge et châtaignes blanches, garni de basilic, huile d\'olive et sauce à l\'ail. Il est servi avec du riz au safran, de la sauce tomate et des sauces douces et épicées.',
-        de: 'Dieses Gericht besteht aus einer gebratenen Mischung aus Brokkoli, Karotten, grünen Bohnen, Zwiebeln, Zuckerschoten, Sellerie, roter Paprika und weißen Kastanien, garniert mit Basilikum, Olivenöl und Knoblauchsauce. Es wird mit Safranreis, Tomatensauce und milden und scharfen Saucen serviert.'
-      }, 
-      price: '$19.99', 
-      category: 'specialty', 
-      popular: false, 
-      tags: ['vegetarian', 'healthy', 'stir-fried'],
-      image: '/Veggie Platter.jpg'
-    },
-
     // GRILL PLATTER SPECIALTIES
     { 
       id: 1801, 
@@ -3049,6 +3009,46 @@ const FullMenuPage = () => {
       popular: false, 
       tags: ['seafood', 'premium', 'european'],
       image: '/Grilled Branzino Platter.jpg'
+    },
+
+    // VEGGIE PLATTER
+    { 
+      id: 1709, 
+      name: { 
+        en: 'Veggie Platter',
+        ar: 'طبق الخضار',
+        fa: 'پلاتر سبزیجات',
+        ku: 'پلێتەری سەوزە',
+        tr: 'Sebze Tabağı',
+        ur: 'ویجی پلیٹر',
+        kmr: 'Plata Sebzan',
+        es: 'Plato de Verduras',
+        ru: 'Овощное блюдо',
+        hi: 'वेजी प्लैटर',
+        sq: 'Pjatë Perimesh',
+        fr: 'Plateau de Légumes',
+        de: 'Gemüse Platte'
+      }, 
+      description: { 
+        en: 'This dish features a stir-fried medley of broccoli, carrots, green beans, onion, snap peas, celery, red bell pepper, and white chestnuts, topped with basil, olive oil, and garlic sauce. It is served with saffron rice, tomato sauce, and mild and hot sauces.',
+        ar: 'يتميز هذا الطبق بخليط مقلي من البروكلي والجزر والفاصولياء الخضراء والبصل وبازلاء الثلج والكرفس والفلفل الأحمر الحلو والكستناء البيضاء، مغطى بالريحان وزيت الزيتون وصلصة الثوم. يُقدم مع أرز الزعفران وصلصة الطماطم والصلصات المعتدلة والحارة.',
+        fa: 'این غذا شامل مخلوطی از کلم بروکلی، هویج، لوبیا سبز، پیاز، نخود فرنگی، کرفس، فلفل قرمز شیرین و شاه بلوط سفید سرخ شده، با ریحان، روغن زیتون و سس سیر تزین شده است. با برنج زعفرانی، سس گوجه فرنگی و سس‌های ملایم و تند سرو می‌شود.',
+        ku: 'ئەم خواردنە تێکەڵەیەکی سورکراوە لە بروکلی، گەزەر، لووبیا سەوز، پیاز، نۆکی کەڵەم، کرفس، فەلفەڵی سوور شیرین و گوێزی سپیەوە پێکهاتووە، بە ڕەیحان، زەیتی زەیتوون و سۆسی سیر ڕازاوەتەوە. لەگەڵ برنجی زەعفەران، سۆسی تەماتە و سۆسی ملایم و تووندەوە دەخرێتەڕوو.',
+        tr: 'Bu yemek brokoli, havuç, yeşil fasulye, soğan, bezelye, kereviz, kırmızı biber ve beyaz kestane karışımından oluşur, fesleğen, zeytinyağı ve sarımsak sosuyla servis edilir. Safran pilavı, domates sosu ve acılı-acısız soslarla birlikte sunulur.',
+        ur: 'یہ ڈش بروکولی، گاجر، ہری پھلیاں، پیاز، مٹر، اجوائن، سرخ شملہ مرچ، اور سفید بادام کا تلا ہوا مکسچر ہے، جس پر تلسی، زیتون کا تیل اور لہسن کی چٹنی ڈالی جاتی ہے۔ یہ زعفرانی چاول، ٹماٹر کی چٹنی، اور ہلکی اور تیز چٹنیوں کے ساتھ پیش کیا جاتا ہے۔',
+        kmr: 'Ev xwarinê tevlîheviya sebzeyan a hate sorîn e ku ji brokolî, gizer, fasûlye kesk, pîvaz, nokê, kerevîz, bibirê sor û qestaneyên spî pêk tê, bi rêhan, zeyta zeytûnê û sosê sîrê hatiye xemilandin. Bi brinca zefranî, sosê firingiyê û sosên hênik û tûj re tê pêşkêşkirin.',
+        es: 'Este plato presenta una mezcla salteada de brócoli, zanahorias, judías verdes, cebolla, guisantes, apio, pimiento rojo y castañas blancas, cubierto con albahaca, aceite de oliva y salsa de ajo. Se sirve con arroz de azafrán, salsa de tomate y salsas suaves y picantes.',
+        ru: 'Это блюдо представляет жареную смесь брокколи, моркови, стручковой фасоли, лука, гороха, сельдерея, красного болгарского перца и белых каштанов, заправленную базиликом, оливковым маслом и чесночным соусом. Подается с шафрановым рисом, томатным соусом и мягкими и острыми соусами.',
+        hi: 'यह डिश ब्रोकली, गाजर, हरी फलियां, प्याज, मटर, अजवाइन, लाल शिमला मिर्च, और सफेद बादाम का तला हुआ मिश्रण है, जिस पर तुलसी, जैतून का तेल और लहसुन की चटनी डाली जाती है। यह केसर चावल, टमाटर की चटनी, और हल्की और तेज चटनी के साथ परोसा जाता है।',
+        sq: 'Kjo pjatë përmban një përzierje të skuqur brokoli, karrota, bishtaja të gjelbra, qepë, bizele, sellino, speca të kuq dhe gështenja të bardha, e mbuluar me borzilok, vaj ulliri dhe salcë hudhra. Shërbehet me oriz me shafran, salcë domatesh dhe salca të buta dhe të forta.',
+        fr: 'Ce plat présente un mélange sauté de brocoli, carottes, haricots verts, oignon, pois mange-tout, céleri, poivron rouge et châtaignes blanches, garni de basilic, huile d\'olive et sauce à l\'ail. Il est servi avec du riz au safran, de la sauce tomate et des sauces douces et épicées.',
+        de: 'Dieses Gericht besteht aus einer gebratenen Mischung aus Brokkoli, Karotten, grünen Bohnen, Zwiebeln, Zuckerschoten, Sellerie, roter Paprika und weißen Kastanien, garniert mit Basilikum, Olivenöl und Knoblauchsauce. Es wird mit Safranreis, Tomatensauce und milden und scharfen Saucen serviert.'
+      }, 
+      price: '$19.99', 
+      category: 'grill', 
+      popular: false, 
+      tags: ['vegetarian', 'healthy', 'grilled'],
+      image: '/Veggie Platter.jpg'
     },
 
     // KID'S MENU
