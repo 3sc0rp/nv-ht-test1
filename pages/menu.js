@@ -3341,7 +3341,7 @@ const FullMenuPage = () => {
         sq: 'Ujë i freskët në shishe.',
         de: 'Frisches Flaschenwasser.'
       }, 
-      price: '$1.50', 
+      price: '$1.49', 
       category: 'drinks_cold', 
       tags: [] 
     },
@@ -3397,19 +3397,19 @@ const FullMenuPage = () => {
         fr: 'Soda'
       }, 
       description: { 
-        en: 'Choice of Coke, Diet Coke, Coke Zero, Sprite, Fanta, or Minute Maid.',
-        ar: 'اختيار من كوكا كولا، دايت كوك، كوك زيرو، سبرايت، فانتا، أو مينيت مايد.',
-        fa: 'انتخاب از کوکا کولا، دایت کوک، کوک زرو، اسپرایت، فانتا یا مینیت مید.',
-        ku: 'هەڵبژاردن لە کۆکا کۆلا، دایەت کۆک، کۆک زیرۆ، سپرایت، فانتا، یان مینت مەید.',
-        tr: 'Kola, Diyet Kola, Kola Zero, Sprite, Fanta veya Minute Maid seçimi.',
-        ur: 'کوک، ڈائٹ کوک، کوک زیرو، سپرائٹ، فانٹا یا منٹ میڈ کا انتخاب۔',
-        kmr: 'Hilbijartina Koke, Diet Koke, Koke Zero, Sprite, Fanta, an Minute Maid.',
-        es: 'Elección de Coca Cola, Coca Cola Light, Coca Cola Zero, Sprite, Fanta o Minute Maid.',
-        ru: 'Выбор из Кока-Колы, Диет-Коки, Кока-Кола Зеро, Спрайта, Фанты или Минут Мейд.',
-        hi: 'कोक, डाइट कोक, कोक जीरो, स्प्राइट, फैंटा या मिनट मेड का विकल्प।',
-        sq: 'Zgjidhje ndërmjet Koka Kola, Diet Koka, Koka Zero, Sprite, Fanta ose Minute Maid.',
-        fr: 'Choix de Coca-Cola, Coca Light, Coca Zéro, Sprite, Fanta ou Minute Maid.',
-        de: 'Auswahl aus Coca Cola, Diet Coke, Coke Zero, Sprite, Fanta oder Minute Maid.'
+        en: 'Choice of Coke, Diet Coke, Coke Zero, Sprite, Fanta, Ginger Ale, or Minute Maid.',
+        ar: 'اختيار من كوكا كولا، دايت كوك، كوك زيرو، سبرايت، فانتا، جنجر ايل، أو مينيت مايد.',
+        fa: 'انتخاب از کوکا کولا، دایت کوک، کوک زرو، اسپرایت، فانتا، زنجبیل ایل یا مینیت مید.',
+        ku: 'هەڵبژاردن لە کۆکا کۆلا، دایەت کۆک، کۆک زیرۆ، سپرایت، فانتا، زەنجەفیل ئەیل، یان مینت مەید.',
+        tr: 'Kola, Diyet Kola, Kola Zero, Sprite, Fanta, Ginger Ale veya Minute Maid seçimi.',
+        ur: 'کوک، ڈائٹ کوک، کوک زیرو، سپرائٹ، فانٹا، جنجر ایل یا منٹ میڈ کا انتخاب۔',
+        kmr: 'Hilbijartina Koke, Diet Koke, Koke Zero, Sprite, Fanta, Ginger Ale, an Minute Maid.',
+        es: 'Elección de Coca Cola, Coca Cola Light, Coca Cola Zero, Sprite, Fanta, Ginger Ale o Minute Maid.',
+        ru: 'Выбор из Кока-Колы, Диет-Коки, Кока-Кола Зеро, Спрайта, Фанты, Имбирного эля или Минут Мейд.',
+        hi: 'कोक, डाइट कोक, कोक जीरो, स्प्राइट, फैंटा, जिंजर एले या मिनट मेड का विकल्प।',
+        sq: 'Zgjidhje ndërmjet Koka Kola, Diet Koka, Koka Zero, Sprite, Fanta, Ginger Ale ose Minute Maid.',
+        fr: 'Choix de Coca-Cola, Coca Light, Coca Zéro, Sprite, Fanta, Ginger Ale ou Minute Maid.',
+        de: 'Auswahl aus Coca Cola, Diet Coke, Coke Zero, Sprite, Fanta, Ginger Ale oder Minute Maid.'
       }, 
       price: '$2.99', 
       category: 'drinks_cold', 
