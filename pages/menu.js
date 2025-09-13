@@ -3127,6 +3127,44 @@ const FullMenuPage = () => {
       tags: [],
       imageUrl: '/Fries.jpg' 
     },
+    { 
+      id: 1901, 
+      name: { 
+        en: 'Erbil Shish Kabab',
+        ar: 'شيش كباب أربيل',
+        fa: 'شیش کباب اربیل',
+        ku: 'شیش کەبابی هەولێر',
+        tr: 'Erbil Şiş Kebab',
+        ur: 'اربیل شیش کباب',
+        kmr: 'Şîş Kebabê Hewlêrê',
+        es: 'Shish Kabab de Erbil',
+        ru: 'Шиш-кебаб Эрбиль',
+        hi: 'एर्बिल शीश कबाब',
+        sq: 'Shish Kabab Erbil',
+        fr: 'Brochette Erbil',
+        de: 'Erbil Spießbraten'
+      }, 
+      description: { 
+        en: 'This dish features mildly spiced mini beef kabab skewers specially prepared for kids, served with creamy mashed potatoes.',
+        ar: 'يتميز هذا الطبق بأسياخ كباب اللحم البقري الصغيرة المتبلة بشكل معتدل والمحضرة خصيصاً للأطفال، تُقدم مع البطاطس المهروسة الكريمية.',
+        fa: 'این غذا شامل سیخ‌های کباب گوشت گاو کوچک با طعم ملایم است که مخصوص کودکان تهیه شده و با پوره سیب‌زمینی خامه‌ای سرو می‌شود.',
+        ku: 'ئەم خواردنە سیخەکانی کەبابی گۆشتی گای بچووکی بە تامی ملایم دەگرێتەوە کە بە تایبەتی بۆ منداڵان ئامادەکراوە، لەگەڵ پەتاتەی وردکراوی کریمیەوە دەخرێتەڕوو.',
+        tr: 'Bu yemek, çocuklar için özel olarak hazırlanmış hafif baharatlı mini sığır et şiş kebapları içerir ve kremalı patates püresiyle servis edilir.',
+        ur: 'یہ ڈش ہلکے مسالے والے چھوٹے بیف کباب کے سیخوں پر مشتمل ہے جو خاص طور پر بچوں کے لیے تیار کیے گئے ہیں، کریمی میش کیے ہوئے آلو کے ساتھ پیش کیا جاتا ہے۔',
+        kmr: 'Ev xwarinê şîşên kebabê goştê gayê yên piçûk ên bi tatê hênik ê ji bo zarokan bi taybetî hatine amadekirin dihewîne, bi patatesên şêranî yên qurm re tê pêşkêşkirin.',
+        es: 'Este plato presenta mini brochetas de carne de res ligeramente especiadas, especialmente preparadas para niños, servidas con puré de papas cremoso.',
+        ru: 'Это блюдо включает слегка приправленные мини-шашлыки из говядины, специально приготовленные для детей, подаются с кремовым картофельным пюре.',
+        hi: 'यह डिश में हल्के मसाले वाले मिनी बीफ कबाब स्किवर हैं जो विशेष रूप से बच्चों के लिए तैयार किए गए हैं, मलाईदार मैश किए गए आलू के साथ परोसे जाते हैं।',
+        sq: 'Kjo pjatë përmban shishqebap të vegjël viçi me erëza të buta të përgatitura posaçërisht për fëmijë, të shërbyer me pure patate me krem.',
+        fr: 'Ce plat présente des mini-brochettes de bœuf légèrement épicées spécialement préparées pour les enfants, servies avec une purée de pommes de terre crémeuse.',
+        de: 'Dieses Gericht bietet mild gewürzte Mini-Rindfleisch-Kebab-Spieße, die speziell für Kinder zubereitet werden, serviert mit cremigem Kartoffelpüree.'
+      }, 
+      price: '$16.99', 
+      category: 'kids', 
+      popular: false, 
+      tags: ['beef', 'kabab'],
+      imageUrl: '/Kids Erbil Shish Kabab.jpg' 
+    },
 
     // DRINKS (COLD)
     { 
