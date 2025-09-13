@@ -4325,7 +4325,7 @@ const NatureVillageWebsite = () => {
             {/* Google Badge */}
             <div className="inline-flex items-center bg-white rounded-full px-4 py-2 shadow-lg mb-6">
               <div className="flex items-center gap-2">
-                <div className="w-6 h-6 bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 rounded-sm flex items-center justify-center">
+                <div className="w-6 h-6 bg-gradient-to-r from-blue-500 via-red-500 to-yellow-500 rounded-sm flex items-center justify-center">
                   <span className="text-white text-xs font-bold">G</span>
                 </div>
 

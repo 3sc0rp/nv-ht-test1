@@ -384,6 +384,57 @@ const FullMenuPage = () => {
       color: '#A0522D'
     },
     { 
+      id: 1301, 
+      name: {
+        en: 'Margherita Pizza',
+        ar: 'بيتزا مارغريتا',
+        fa: 'پیتزا مارگاریتا',
+        ku: 'پیتزای مارگەریتا',
+        tr: 'Margherita Pizza',
+        ur: 'مارگاریٹا پیزا',
+        kmr: 'Pizza Margherita',
+        es: 'Pizza Margherita',
+        ru: 'Пицца Маргарита',
+        hi: 'मार्गेरिटा पिज्जा',
+        sq: 'Pica Margherita',
+        fr: 'Pizza Margherita',
+        de: 'Margherita Pizza'
+      }, 
+      category: {
+        en: 'Pizza',
+        ar: 'بيتزا',
+        fa: 'پیتزا',
+        ku: 'پیتزا',
+        tr: 'Pizza',
+        ur: 'پیزا',
+        kmr: 'Pizza',
+        es: 'Pizza',
+        ru: 'Пицца',
+        hi: 'पिज्जा',
+        sq: 'Pica',
+        fr: 'Pizza',
+        de: 'Pizza'
+      }, 
+      placeholder: 'pizza', 
+      imageUrl: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=300&h=200&fit=crop',
+      description: {
+        en: 'Classic Italian pizza with fresh mozzarella, tomatoes, and basil',
+        ar: 'بيتزا إيطالية كلاسيكية مع موزاريلا طازجة وطماطم وريحان',
+        fa: 'پیتزا کلاسیک ایتالیایی با موتزارلا تازه، گوجه و ریحان',
+        ku: 'پیتزای ئیتاڵی کلاسیک لەگەڵ موزارێلای تازە، تەماتە و ڕێحان',
+        tr: 'Taze mozzarella, domates ve fesleğenle klasik İtalyan pizzası',
+        ur: 'تازہ موزاریلا، ٹماٹر اور تلسی کے ساتھ کلاسک اطالوی پیزا',
+        kmr: 'Pizza Îtalî ya klasîk bi mozzarellaya taze, firangoş û rêhanê',
+        es: 'Pizza italiana clásica con mozzarella fresca, tomates y albahaca',
+        ru: 'Классическая итальянская пицца со свежей моцареллой, помидорами и базиликом',
+        hi: 'ताज़ा मोज़ेरेला, टमाटर और तुलसी के साथ क्लासिक इतालवी पिज्जा',
+        sq: 'Pica klasike italiane me mozzarella të freskët, domate dhe borzilok',
+        fr: 'Pizza italienne classique avec mozzarella fraîche, tomates et basilic',
+        de: 'Klassische italienische Pizza mit frischer Mozzarella, Tomaten und Basilikum'
+      },
+      color: '#FF8C42'
+    },
+    { 
       id: 1001, 
       name: {
         en: 'Hummus',
@@ -818,6 +869,7 @@ const FullMenuPage = () => {
         salads: 'Salads', 
         sandwich_platter: 'Sandwich & Platter', 
         naan: 'Naan', 
+        pizza: 'Pizza', 
         fish: 'Fish', 
         grill: 'Grill Platters', 
         specialty: 'Specialty Dishes', 
@@ -877,6 +929,7 @@ const FullMenuPage = () => {
         salads: 'لەواشەکان', 
         sandwich_platter: 'ساندویچ و پلێتەر', 
         naan: 'نان', 
+        pizza: 'پیتزا', 
         fish: 'ماسی', 
         grill: 'پلێتەری گرێل', 
         specialty: 'خۆراکی تایبەتی', 
@@ -936,6 +989,7 @@ const FullMenuPage = () => {
         salads: 'سلطات', 
         sandwich_platter: 'سندويش وصحن', 
         naan: 'نان', 
+        pizza: 'بيتزا', 
         fish: 'سمك', 
         grill: 'مشاوي', 
         specialty: 'أطباق مميزة', 
@@ -995,6 +1049,7 @@ const FullMenuPage = () => {
         salads: 'سالادها', 
         sandwich_platter: 'ساندویچ و پلاتر', 
         naan: 'نان', 
+        pizza: 'پیتزا', 
         fish: 'ماهی', 
         grill: 'کباب و گریل', 
         specialty: 'غذاهای ویژه', 
@@ -1054,6 +1109,7 @@ const FullMenuPage = () => {
         salads: 'Salatalar', 
         sandwich_platter: 'Sandviç & Tabak', 
         naan: 'Naan', 
+        pizza: 'Pizza', 
         fish: 'Balık', 
         grill: 'Izgara Tabaklar', 
         specialty: 'Özel Yemekler', 
@@ -1113,6 +1169,7 @@ const FullMenuPage = () => {
         salads: 'سلادز', 
         sandwich_platter: 'سینڈوچ اور پلیٹر', 
         naan: 'نان', 
+        pizza: 'پیزا', 
         fish: 'مچھلی', 
         grill: 'گرل پلیٹرز', 
         specialty: 'خصوصی ڈشز', 
@@ -1172,6 +1229,7 @@ const FullMenuPage = () => {
         salads: 'Salatan', 
         sandwich_platter: 'Sandwîç û Plater', 
         naan: 'Nan', 
+        pizza: 'Pizza', 
         fish: 'Masî', 
         grill: 'Platerên Grill', 
         specialty: 'Xwarinên Taybet', 
@@ -1231,6 +1289,7 @@ const FullMenuPage = () => {
         salads: 'Салаты',
         sandwich_platter: 'Сэндвич и блюдо',
         naan: 'Наан',
+        pizza: 'Пицца',
         fish: 'Рыба',
         grill: 'Гриль',
         specialty: 'Фирменные блюда',
@@ -1290,6 +1349,7 @@ const FullMenuPage = () => {
         salads: 'सलाद',
         sandwich_platter: 'सैंडविच और प्लेटर',
         naan: 'नान',
+        pizza: 'पिज्जा',
         fish: 'मछली',
         grill: 'ग्रिल प्लेटर',
         specialty: 'विशेष व्यंजन',
@@ -1349,6 +1409,7 @@ const FullMenuPage = () => {
         salads: 'Ensaladas',
         sandwich_platter: 'Sándwich y Platillo',
         naan: 'Naan',
+        pizza: 'Pizza',
         fish: 'Pescado',
         grill: 'Platillos a la Parrilla',
         specialty: 'Platos Especiales',
@@ -1408,6 +1469,7 @@ const FullMenuPage = () => {
         salads: 'Sallatat',
         sandwich_platter: 'Sandwich dhe Pjatë',
         naan: 'Naan',
+        pizza: 'Pica',
         fish: 'Peshk',
         grill: 'Pjatat e Grilit',
         specialty: 'Specialitetet',
@@ -1467,6 +1529,7 @@ const FullMenuPage = () => {
         salads: 'Salades', 
         sandwich_platter: 'Sandwich et Plateau', 
         naan: 'Naan', 
+        pizza: 'Pizza', 
         fish: 'Poisson', 
         grill: 'Grillades', 
         specialty: 'Spécialités', 
@@ -1526,6 +1589,7 @@ const FullMenuPage = () => {
         salads: 'Salate', 
         sandwich_platter: 'Sandwich & Platte', 
         naan: 'Naan', 
+        pizza: 'Pizza', 
         fish: 'Fisch', 
         grill: 'Grillplatten', 
         specialty: 'Spezialitäten', 
@@ -1585,24 +1649,34 @@ const FullMenuPage = () => {
         sq: 'Humus'
       }, 
       description: { 
-        en: 'A classic Middle Eastern dip made from mashed chickpeas, tahini, olive oil, lemon juice, and garlic.',
-        ar: 'غموس شرق أوسطي كلاسيكي مصنوع من الحمص المهروس والطحينة وزيت الزيتون وعصير الليمون والثوم.',
-        fa: 'یک دیپ کلاسیک خاورمیانه‌ای از نخود له شده، طحینی، روغن زیتون، آب لیمو و سیر.',
-        ku: 'دیپێکی کلاسیکی ڕۆژهەڵاتی ناوەڕاست لە نۆکی کوتراو، تەحینی، زەیتی زەیتوون، شیری لیمۆ و سیر.',
-        tr: 'Ezilmiş nohut, tahin, zeytinyağı, limon suyu ve sarımsaktan yapılan klasik Orta Doğu mezesi.',
-        ur: 'چنے، تل کا پیسٹ، زیتون کا تیل، لیموں کا رس اور لہسن سے بنا کلاسک مشرق وسطیٰ کا ڈپ۔',
-        kmr: 'Mezeyeke klasîk ya Rojhilatê Navîn ku ji kurskotan, tahînî, zeyta zeytûnê, ava lîmonê û sîr tê çêkirin.',
-        es: 'Una salsa clásica de Oriente Medio hecha de garbanzos machacados, tahini, aceite de oliva, jugo de limón y ajo.',
-        fr: 'Une trempette classique du Moyen-Orient à base de pois chiches écrasés, tahini, huile d\'olive, jus de citron et ail.',
-        de: 'Ein klassischer nahöstlicher Dip aus zerdrückten Kichererbsen, Tahini, Olivenöl, Zitronensaft und Knoblauch.',
-        ru: 'Классическая ближневосточная закуска из измельченного нута, тахини, оливкового масла, лимонного сока и чеснока.',
-        hi: 'मसले हुए छोले, तिल का पेस्ट, जैतून का तेल, नींबू का रस और लहसुन से बना क्लासिक मध्य पूर्वी डिप।',
-        sq: 'Një sos klasik i Lindjes së Mesme i bërë nga grofthat e shtypur, tahini, vaj ulliri, lëng limoni dhe hudhra.'
+        en: 'A classic Levantine dip made from mashed chickpeas, tahini, olive oil, lemon juice and garlic.',
+        ar: 'غموس شامي كلاسيكي مصنوع من الحمص المهروس والطحينة وزيت الزيتون وعصير الليمون والثوم.',
+        fa: 'یک دیپ کلاسیک شامی از نخود له شده، طحینی، روغن زیتون، آب لیمو و سیر.',
+        ku: 'دیپێکی کلاسیکی شامی لە نۆکی کوتراو، تەحینی، زەیتی زەیتوون، شیری لیمۆ و سیر.',
+        tr: 'Ezilmiş nohut, tahin, zeytinyağı, limon suyu ve sarımsaktan yapılan klasik Levant mezesi.',
+        ur: 'چنے، تل کا پیسٹ، زیتون کا تیل، لیموں کا رس اور لہسن سے بنا کلاسک شامی ڈپ۔',
+        kmr: 'Mezeyeke klasîk ya Şamî ku ji kurskotan, tahînî, zeyta zeytûnê, ava lîmonê û sîr tê çêkirin.',
+        es: 'Una salsa clásica levantina hecha de garbanzos machacados, tahini, aceite de oliva, jugo de limón y ajo.',
+        fr: 'Une trempette levantine classique à base de pois chiches écrasés, tahini, huile d\'olive, jus de citron et ail.',
+        de: 'Ein klassischer levantinischer Dip aus zerdrückten Kichererbsen, Tahini, Olivenöl, Zitronensaft und Knoblauch.',
+        ru: 'Классическая левантийская закуска из измельченного нута, тахини, оливкового масла, лимонного сока и чеснока.',
+        hi: 'मसले हुए छोले, तिल का पेस्ट, जैतून का तेल, नींबू का रस और लहसुन से बना क्लासिक लेवंतीन डिप।',
+        sq: 'Një sos klasik levantinë i bërë nga grofthat e shtypur, tahini, vaj ulliri, lëng limoni dhe hudhra.'
       }, 
-      price: '$8.50', 
+      price: '$8.99', 
       category: 'appetizers', 
       popular: true, 
-      tags: ['vegetarian', 'vegan'] 
+      available: true,
+      allergens: ['sesame'],
+      nutritionalInfo: {
+        calories: 280,
+        protein: 12,
+        carbs: 24,
+        fat: 18,
+        fiber: 8
+      },
+      dietaryTags: ['vegetarian', 'vegan', 'gluten-free'],      tags: ['customer-favorite', 'healthy', 'traditional', 'sharing'],
+      image: '/hummus.jpg'
     },
     { 
       id: 1002, 
@@ -1622,57 +1696,68 @@ const FullMenuPage = () => {
         de: 'Baba Ghanoush'
       }, 
       description: { 
-        en: 'A Kurdish dip made from roasted eggplant, roasted tomatoes, peppers, fresh onions, parsley, mint, and pomegranate molasses dressing.',
-        ar: 'غموس كردي مصنوع من الباذنجان المشوي والطماطم المشوية والفلفل والبصل الطازج والبقدونس والنعناع وصلصة دبس الرمان.',
-        fa: 'یک دیپ کردی از بادمجان کبابی، گوجه کبابی، فلفل، پیاز تازه، جعفری، نعنا و سس انار.',
-        ku: 'دیپێکی کوردی لە بادەمجانی برژاو، تەماتەی برژاو، بیبەر، پیازی تازە، جەعدە، پونگ و سۆسی هەنار.',
-        tr: 'Közlenmiş patlıcan, közlenmiş domates, biber, taze soğan, maydanoz, nane ve nar ekşisi sosundan yapılan Kürt mezesi.',
-        ur: 'بھنے ہوئے بینگن، بھنے ہوئے ٹماٹر، مرچ، تازہ پیاز، دھنیا، پودینہ اور انار کے شیرے سے بنا کردش ڈپ۔',
-        kmr: 'Mezeyeke Kurdî ya ku ji bacanê şewitî, firangoşê şewitî, biber, pîvazên taze, şînî, pûng û soşa henarê tê çêkirin.',
-        es: 'Una salsa kurda hecha de berenjena asada, tomates asados, pimientos, cebollas frescas, perejil, menta y aderezo de melaza de granada.',
-        ru: 'Курдская закуска из жареных баклажанов, жареных помидоров, перца, свежего лука, петрушки, мяты и заправки из гранатовой патоки.',
-        hi: 'भुने हुए बैंगन, भुने हुए टमाटर, मिर्च, ताज़ा प्याज, अजमोद, पुदीना और अनार के गुड़ की ड्रेसिंग से बना कुर्दिश डिप।',
-        sq: 'Një sos kurd i bërë nga patëllxhanë të pjekura, domate të pjekura, speca, qepë të freskëta, majdanoz, mendër dhe sos melasë shege.',
-        fr: 'Une trempette kurde à base d\'aubergines grillées, tomates grillées, poivrons, oignons frais, persil, menthe et vinaigrette à la mélasse de grenade.'
+        en: 'This Levantine dip, made from roasted eggplant, yogurt, tahini, garlic, lemon juice, is a delicious addition to any meal.',
+        ar: 'هذا الغموس الشامي، المصنوع من الباذنجان المشوي واللبن والطحينة والثوم وعصير الليمون، إضافة لذيذة لأي وجبة.',
+        fa: 'این دیپ شامی، از بادمجان کبابی، ماست، طحینی، سیر، آب لیمو، افزودنی لذیذی به هر وعده غذایی است.',
+        ku: 'ئەم دیپە شامییە، لە بادەمجانی برژاو، مۆست، تەحینی، سیر، شیری لیمۆ، زیادکردنێکی خۆشە بۆ هەر ژەمێک.',
+        tr: 'Közlenmiş patlıcan, yoğurt, tahin, sarımsak, limon suyundan yapılan bu Levant mezesi, her yemeğe lezzetli bir katkıdır.',
+        ur: 'بھنے ہوئے بینگن، دہی، تل کا پیسٹ، لہسن، لیموں کے رس سے بنا یہ شامی ڈپ، کسی بھی کھانے کے لیے لذیذ اضافہ ہے۔',
+        kmr: 'Ev mezeyê Şamî, ku ji bacanê şewitî, mast, tahînî, sîr, ava lîmonê hatiye çêkirin, lêzêdekirinek xweş e ji bo her xwarinê.',
+        es: 'Esta salsa levantina, hecha de berenjena asada, yogur, tahini, ajo, jugo de limón, es una deliciosa adición a cualquier comida.',
+        ru: 'Эта левантийская закуска из жареных баклажанов, йогурта, тахини, чеснока, лимонного сока - вкусное дополнение к любой еде.',
+        hi: 'भुने हुए बैंगन, दही, तिल का पेस्ट, लहसुन, नींबू के रस से बना यह लेवंतीन डिप, किसी भी भोजन के लिए स्वादिष्ट अतिरिक्त है।',
+        sq: 'Kjo salcë levantinë, e bërë nga patëllxhanë të pjekura, kos, tahini, hudhra, lëng limoni, është një shtesë e shijshme për çdo vakt.',
+        fr: 'Cette trempette levantine, faite d\'aubergines grillées, yaourt, tahini, ail, jus de citron, est un délicieux ajout à tout repas.',
+        de: 'Dieser levantinische Dip aus gerösteten Auberginen, Joghurt, Tahini, Knoblauch, Zitronensaft ist eine köstliche Ergänzung zu jeder Mahlzeit.'
       }, 
-      price: '$8.50', 
+      price: '$9.99', 
       category: 'appetizers', 
       popular: true, 
-      tags: ['vegetarian', 'vegan'] 
+      available: true,
+      allergens: ['none'],
+      nutritionalInfo: {
+        calories: 240,
+        protein: 6,
+        carbs: 18,
+        fat: 16,
+        fiber: 12
+      },
+      dietaryTags: ['vegetarian', 'vegan', 'gluten-free'],      tags: ['smoky', 'authentic', 'healthy', 'sharing'],
+      image: '/Baba Ghanoush.jpg'
     },
     { 
       id: 1003, 
       name: { 
-        en: 'Cool Bulgur Garden',
-        ar: 'حديقة البرغل الباردة',
-        fa: 'باغ برغل خنک',
-        ku: 'باخچەی بورگولی ساردەوە',
-        tr: 'Soğuk Bulgur Bahçesi',
-        ur: 'ٹھنڈا بلغور گارڈن',
-        kmr: 'Baxçeya Bulgur ya Sar',
-        es: 'Jardín de Bulgur Fresco',
-        ru: 'Прохладный сад из булгура',
-        hi: 'कूल बुल्गूर गार्डन',
-        sq: 'Kopshti i Bulgur të Freskët',
-        fr: 'Jardin de Boulgour Frais',
-        de: 'Kühler Bulgur Garten'
+        en: "Nature's Garden",
+        ar: 'حديقة الطبيعة',
+        fa: 'باغ طبیعت',
+        ku: 'باخچەی سروشت',
+        tr: 'Doğa Bahçesi',
+        ur: 'فطرت کا باغ',
+        kmr: 'Baxçeya Xwezayê',
+        es: 'Jardín de la Naturaleza',
+        ru: 'Сад природы',
+        hi: 'प्रकृति का बाग',
+        sq: 'Kopshti i Natyrës',
+        fr: 'Jardin de la Nature',
+        de: 'Natur-Garten'
       }, 
       description: { 
-        en: 'A light and nutritious dip made with yogurt, bulgur, tahini, lemon juice, and iceberg lettuce.',
-        ar: 'غموس خفيف ومغذي مصنوع من الزبادي والبرغل والطحينة وعصير الليمون وخس الجبل الجليدي.',
-        fa: 'یک دیپ سبک و مغذی از ماست، برغل، طحینی، آب لیمو و کاهو یخی.',
-        ku: 'دیپێکی سووک و بەهێز لە مۆست، بورگول، تەحینی، شیری لیمۆ و خسی قەڵەمی.',
-        tr: 'Yoğurt, bulgur, tahin, limon suyu ve buzdolabı marulundan yapılan hafif ve besleyici meze.',
-        ur: 'دہی، بلغور، تل کا پیسٹ، لیموں کا رس اور آئس برگ لیٹس سے بنا ہلکا اور غذائیت سے بھرپور ڈپ۔',
-        kmr: 'Mezeyeke sivik û xwînmaye ku ji mastê, bulgur, tahînî, ava lîmonê û salata qelemî tê çêkirin.',
-        es: 'Una salsa ligera y nutritiva hecha con yogur, bulgur, tahini, jugo de limón y lechuga iceberg.',
-        ru: 'Легкая и питательная закуска из йогурта, булгура, тахини, лимонного сока и айсберг-салата.',
-        hi: 'दही, बुल्गूर, तिल का पेस्ट, नींबू का रस और आइसबर्ग लेट्यूस से बना हल्का और पौष्टिक डिप।',
-        sq: 'Një sos i lehtë dhe ushqyes i bërë me kos, bulgur, tahini, lëng limoni dhe sallatë jeshile.',
-        fr: 'Une trempette légère et nutritive à base de yaourt, boulgour, tahini, jus de citron et laitue iceberg.',
-        de: 'Ein leichter und nahrhafter Dip aus Joghurt, Bulgur, Tahini, Zitronensaft und Eisbergsalat.'
+        en: 'A light and nutritious savory dip is made with a base of yogurt, garlic and aromatic spices, and it is topped with dried tomatoes, fresh thyme, walnuts, mint, Kalamata olives and olive oil.',
+        ar: 'غموس مالح خفيف ومغذي مصنوع بقاعدة من الزبادي والثوم والتوابل العطرة، ومزين بالطماطم المجففة والزعتر الطازج والجوز والنعناع وزيتون كالاماتا وزيت الزيتون.',
+        fa: 'دیپ خوشمزه سبک و مغذی با پایه ماست، سیر و ادویه‌های معطر ساخته شده و با گوجه خشک، آویشن تازه، گردو، نعنا، زیتون کالاماتا و روغن زیتون تزیین شده.',
+        ku: 'دیپێکی خۆش و سووک و بەهێز بە بنەڕەتی مۆست و سیر و بەهاراتی بۆنخۆش دروستکراوە، و بە تەماتەی وشک و جەعدەی تازە و گوێز و پونگ و زەیتونی کالاماتا و زەیتی زەیتوون ڕازاوەتەوە.',
+        tr: 'Yoğurt, sarımsak ve aromatik baharatlarla yapılan hafif ve besleyici lezzetli meze, kurutulmuş domates, taze kekik, ceviz, nane, Kalamata zeytini ve zeytinyağı ile süslenmiştir.',
+        ur: 'ہلکا اور غذائیت سے بھرپور لذیذ ڈپ دہی، لہسن اور خوشبودار مصالحوں کی بنیاد پر بنایا گیا ہے، اور اسے خشک ٹماٹر، تازہ جعفری، اخروٹ، پودینہ، کالاماتا زیتون اور زیتون کے تیل سے سجایا گیا ہے۔',
+        kmr: 'Mezeyeke sivik û xwînmaye û bi tam ku bi bingeha mast, sîr û baharatên bêhnxweş hatiye çêkirin, û bi firangoşên ziwa, sîrînkê taze, gihoz, pûng, zeytûnên Kalamata û zeyta zeytûnê hatiye xemilandin.',
+        es: 'Una salsa sabrosa ligera y nutritiva hecha con base de yogur, ajo y especias aromáticas, cubierta con tomates secos, tomillo fresco, nueces, menta, aceitunas Kalamata y aceite de oliva.',
+        ru: 'Легкая и питательная пикантная закуска на основе йогурта, чеснока и ароматных специй, украшенная вялеными томатами, свежим тимьяном, грецкими орехами, мятой, оливками каламата и оливковым маслом.',
+        hi: 'दही, लहसुन और सुगंधित मसालों के आधार से बना हल्का और पौष्टिक स्वादिष्ट डिप, सूखे टमाटर, ताज़ी अजवाइन, अखरोट, पुदीना, कालामाता जैतून और जैतून के तेल से सजाया गया।',
+        sq: 'Një salcë e lehtë dhe ushqyese e shijshme e bërë me bazë kosi, hudhre dhe erëza aromatike, dhe është e mbuluar me domate të thata, rigon të freskët, arra, mendër, ullinj Kalamata dhe vaj ulliri.',
+        fr: 'Une trempette savoureuse légère et nutritive à base de yaourt, ail et épices aromatiques, garnie de tomates séchées, thym frais, noix, menthe, olives de Kalamata et huile d\'olive.',
+        de: 'Ein leichter und nahrhafter würziger Dip auf Basis von Joghurt, Knoblauch und aromatischen Gewürzen, garniert mit getrockneten Tomaten, frischem Thymian, Walnüssen, Minze, Kalamata-Oliven und Olivenöl.'
       }, 
-      price: '$8.50', 
+      price: '$10.99', 
       category: 'appetizers', 
       tags: ['vegetarian'] 
     },
@@ -1708,10 +1793,20 @@ const FullMenuPage = () => {
         fr: 'Un classique du Moyen-Orient avec une coquille extérieure croustillante faite de riz finement moulu et d\'épices, renfermant une farce de viande hachée savoureuse. Frit à la perfection, le Kibbeh ajoute un arôme riche et un goût unique à votre expérience culinaire.',
         de: 'Ein nahöstlicher Klassiker mit knuspriger äußerer Hülle aus fein gemahlenem Reis und Gewürzen, gefüllt mit würzigem Hackfleisch. Perfekt frittiert verleiht Kibbeh Ihrem kulinarischen Erlebnis ein reiches Aroma und einen einzigartigen Geschmack.'
       }, 
-      price: '$9.99', 
+      price: '$10.99', 
       category: 'appetizers', 
       popular: true, 
-      tags: [] 
+      tags: ['traditional', 'crispy', 'chef-special', 'authentic'],
+      nutritionalInfo: {
+        calories: 380,
+        protein: '16g',
+        carbs: '28g', 
+        fat: '22g',
+        fiber: '4g'
+      },
+      allergens: ['Gluten', 'Sesame'],
+      dietaryTags: ['Halal'],      image: '/Kibbeh.jpg',
+      available: true
     },
     { 
       id: 1005, 
@@ -1747,7 +1842,17 @@ const FullMenuPage = () => {
       price: '$9.99', 
       category: 'appetizers', 
       popular: true, 
-      tags: ['vegetarian', 'vegan'] 
+      tags: ['vegetarian', 'vegan'],
+      nutritionalInfo: {
+        calories: 320,
+        protein: '14g',
+        carbs: '35g', 
+        fat: '16g',
+        fiber: '8g'
+      },
+      allergens: ['Sesame'],
+      dietaryTags: ['Vegetarian', 'Vegan', 'Gluten-Free'],      image: '/Falafels.jpg',
+      available: true
     },
     { 
       id: 1006, 
@@ -1783,7 +1888,21 @@ const FullMenuPage = () => {
       }, 
       price: '$8.99', 
       category: 'appetizers', 
-      tags: ['vegetarian'] 
+      tags: ['seasonal', 'summer-special', 'fresh-herbs', 'garden-fresh'],
+      seasonal: {
+        available: ['spring', 'summer'],
+        note: 'Best enjoyed with fresh summer herbs'
+      },
+      nutritionalInfo: {
+        calories: 320,
+        protein: '8g',
+        carbs: '12g',
+        fat: '28g',
+        fiber: '4g'
+      },
+      allergens: ['Nuts'],
+      dietaryTags: ['Vegetarian', 'Gluten-Free'],      image: '/Nature\'s Blend.jpg',
+      available: true 
     },
     { 
       id: 1007, 
@@ -1803,23 +1922,33 @@ const FullMenuPage = () => {
         de: 'Börek'
       }, 
       description: { 
-        en: 'Handmade Beef Borek is crafted with a rich filling and served with a special sauce. This delicious borek, with its crispy pastry and unique sauce, Leaves an unforgettable taste on the palate.',
-        ar: 'البوريك اللحم البقري المصنوع يدوياً مصنوع بحشوة غنية ويُقدم مع صلصة خاصة. هذا البوريك اللذيذ، بمعجنه المقرمش وصلصته الفريدة، يترك طعماً لا ينسى على الحنك.',
-        fa: 'بورک گوشت گاو دستساز با پر کردن غنی ساخته شده و با سس مخصوص سرو می‌شود. این بورک لذیذ با خمیر ترد و سس منحصر به فردش طعمی فراموش‌نشدنی روی کام می‌گذارد.',
-        ku: 'بۆرکی گۆشتی گای دەستکرد بە پڕکردنەوەیەکی دەوڵەمەند دروستکراوە و لەگەڵ سۆسێکی تایبەت خراوەتە سەر. ئەم بۆرکە خۆشە، بە هەویرە ترسکەکەی و سۆسە ناوازەکەی، تامێکی لەبیرنەکراو لەسەر مل جێدەهێڵێت.',
-        tr: 'El yapımı Dana Böreği zengin iç harçla hazırlanır ve özel sosla servis edilir. Çıtır hamuru ve eşsiz sosuyla bu lezzetli börek damakta unutulmaz bir tat bırakır.',
-        ur: 'ہاتھ سے بنا بیف بورک بھرپور بھرائی کے ساتھ تیار کیا جاتا ہے اور خاص ساس کے ساتھ پیش کیا جاتا ہے۔ یہ لذیذ بورک اپنی کرسپی پیسٹری اور منفرد ساس کے ساتھ تالو پر ناقابل فراموش ذائقہ چھوڑتا ہے۔',
-        kmr: 'Boreka Goştê Ga ya bi dest çêkirî bi dagirtineke dewlemend hatiye amade kirin û bi soşeke taybetî tê peşkêşkirin. Ev boreka bi tam, bi hêvîrê xwe yê çitir û soşa xwe ya bêhempa, tamek jibîrnekirin li ser devê dimîne.',
-        es: 'El Borek de carne de res hecho a mano se elabora con un relleno rico y se sirve con una salsa especial. Este delicioso borek, con su masa crujiente y salsa única, deja un sabor inolvidable en el paladar.',
-        ru: 'Домашний говяжий борек изготавливается с богатой начинкой и подается со специальным соусом. Этот вкусный борек с хрустящим тестом и уникальным соусом оставляет незабываемый вкус на небе.',
-        hi: 'हस्तनिर्मित बीफ बोरेक समृद्ध भराव के साथ बनाया जाता है और विशेष सॉस के साथ परोसा जाता है। यह स्वादिष्ट बोरेक अपनी कुरकुरी पेस्ट्री और अनोखी सॉस के साथ तालु पर अविस्मरणीय स्वाद छोड़ता है।',
-        sq: 'Byreku i viçit i bërë me dorë është përgatitur me një mbushje të pasur dhe shërbehet me një salcë të veçantë. Ky byrek i shijshëm, me brumë të krisur dhe salcë të veçantë, lë një shije të paharrueshme në qiell të gojës.',
-        fr: 'Le Börek de bœuf fait main est préparé avec une garniture riche et servi avec une sauce spéciale. Ce délicieux börek, avec sa pâte croustillante et sa sauce unique, laisse un goût inoubliable en bouche.',
-        de: 'Handgemachter Rind-Börek wird mit einer reichhaltigen Füllung zubereitet und mit einer besonderen Sauce serviert. Dieser köstliche Börek hinterlässt mit seinem knusprigen Teig und seiner einzigartigen Sauce einen unvergesslichen Geschmack am Gaumen.'
+        en: 'Turkish pastry stuffed with either four cheeses or spinach, herbs and cheese.',
+        ar: 'معجنات تركية محشوة إما بأربعة أنواع من الجبن أو بالسبانخ والأعشاب والجبن.',
+        fa: 'شیرینی ترکی پر شده با چهار نوع پنیر یا اسفناج، سبزیجات و پنیر.',
+        ku: 'خواردنی تورکی پڕ لە چوار جۆری پەنیر یان ئیسپیناخ و گیاکان و پەنیر.',
+        tr: 'Dört çeşit peynir veya ıspanak, otlar ve peynir ile doldurulmuş Türk böreği.',
+        ur: 'ترکی پیسٹری جو یا تو چار قسم کے پنیر سے بھری ہے یا پالک، جڑی بوٹیوں اور پنیر سے۔',
+        kmr: 'Xwarineka Tirkî ku bi çar cûreyên penîr an jî bi spenax, giya û penîr tê dagirtin.',
+        es: 'Pastelería turca rellena con cuatro quesos o espinacas, hierbas y queso.',
+        ru: 'Турецкая выпечка с начинкой из четырех сыров или шпината, трав и сыра.',
+        hi: 'तुर्की पेस्ट्री जो चार प्रकार के पनीर या पालक, जड़ी-बूटियों और पनीर से भरी है।',
+        sq: 'Pastiçeri turke e mbushur me katër lloje djathash ose spinaq, bimë dhe djathë.',
+        fr: 'Pâtisserie turque farcie de quatre fromages ou d\'épinards, herbes et fromage.',
+        de: 'Türkisches Gebäck gefüllt mit vier Käsesorten oder Spinat, Kräutern und Käse.'
       }, 
-      price: '$9.99', 
+      price: '$10.99', 
       category: 'appetizers', 
-      tags: [] 
+      tags: ['traditional', 'crispy', 'savory', 'handmade', 'turkish', 'popular'],
+      nutritionalInfo: {
+        calories: 420,
+        protein: '18g',
+        carbs: '32g', 
+        fat: '25g',
+        fiber: '3g'
+      },
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+      dietaryTags: ['Halal'],      image: '/Borek.jpg',
+      available: true
     },
     { 
       id: 1008, 
@@ -1853,10 +1982,20 @@ const FullMenuPage = () => {
         fr: 'Cette assiette rassemble quatre des saveurs de mezze les plus appréciées du Moyen-Orient, accompagnées de délicieuses pâtisseries falafel. Avec sa présentation élégante et ses arômes magnifiques, elle ajoutera une touche délicieuse à votre table.',
         de: 'Diese Platte vereint vier der beliebtesten Mezze-Geschmäcker aus dem Nahen Osten zusammen mit köstlichen Falafel-Gebäckstücken. Mit ihrer eleganten Präsentation und herrlichen Aromen verleiht sie Ihrem Tisch eine wunderbare Note.'
       }, 
-      price: '$25.99', 
+      price: '$24.99', 
       category: 'appetizers', 
       popular: true, 
-      tags: ['vegetarian'] 
+      tags: ['vegetarian'],
+      nutritionalInfo: {
+        calories: 680,
+        protein: '24g',
+        carbs: '58g', 
+        fat: '38g',
+        fiber: '12g'
+      },
+      allergens: ['Sesame', 'Tahini'],
+      dietaryTags: ['Vegetarian', 'Vegan', 'Halal'],      image: '/Appetizers Combo.jpg',
+      available: true
     },
 
     // SOUPS
@@ -1895,7 +2034,17 @@ const FullMenuPage = () => {
       price: '$6.99', 
       category: 'soup', 
       popular: true, 
-      tags: ['vegetarian', 'vegan'] 
+      tags: ['vegetarian', 'vegan'],
+      nutritionalInfo: {
+        calories: 220,
+        protein: '12g',
+        carbs: '38g', 
+        fat: '3g',
+        fiber: '8g'
+      },
+      allergens: [],
+      dietaryTags: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Halal'],      image: '/Lentil Soup.jpg',
+      available: true
     },
 
     // SANDWICH & PLATTER
@@ -1932,9 +2081,23 @@ const FullMenuPage = () => {
         de: 'Rind-Wrap, dünn geschnitten und gewürzt. Serviert mit frischem Salat oder Pommes frites nach Ihrer Wahl.'
       }, 
       price: { sandwich: '$15.99', platter: '$17.99' }, 
+      variants: {
+        sandwich: 15.99,
+        platter: 17.99
+      },
       category: 'sandwich_platter', 
       popular: true, 
-      tags: [], 
+      available: true,
+      allergens: ['gluten'],
+      nutritionalInfo: {
+        calories: 520,
+        protein: 28,
+        carbs: 42,
+        fat: 24,
+        fiber: 6
+      },
+      dietaryTags: [],      tags: ['iraqi', 'specialty', 'traditional', 'protein-rich', 'street-food'],
+      image: '/Iraqi Guss Wrap.jpg', 
       variants: ['sandwich', 'platter'] 
     },
     { 
@@ -1972,7 +2135,7 @@ const FullMenuPage = () => {
       price: { sandwich: '$14.99', platter: '$16.99' }, 
       category: 'sandwich_platter', 
       popular: true, 
-      tags: [], 
+      tags: ['grilled', 'seasoned', 'hearty', 'customizable', 'fresh'], 
       variants: ['sandwich', 'platter'] 
     },
     { 
@@ -2050,7 +2213,17 @@ const FullMenuPage = () => {
       price: '$2.99', 
       category: 'naan', 
       popular: true, 
-      tags: ['vegetarian'] 
+      tags: ['vegetarian'],
+      nutritionalInfo: {
+        calories: 180,
+        protein: '6g',
+        carbs: '35g', 
+        fat: '2g',
+        fiber: '2g'
+      },
+      allergens: ['Gluten'],
+      dietaryTags: ['Vegetarian', 'Halal'],      image: '/Hawrami Naan.jpg',
+      available: true
     },
     { 
       id: 1402, 
@@ -2125,6 +2298,284 @@ const FullMenuPage = () => {
       tags: ['vegetarian'] 
     },
 
+    // PIZZA
+    { 
+      id: 1501, 
+      name: { 
+        en: 'Margherita Pizza',
+        ar: 'بيتزا مارغيريتا',
+        fa: 'پیتزا مارگریتا',
+        ku: 'پیتزای مارگەریتا',
+        tr: 'Margherita Pizza',
+        ur: 'مارگیریٹا پیزا',
+        kmr: 'Pizza Margherita',
+        es: 'Pizza Margherita',
+        ru: 'Пицца Маргарита',
+        hi: 'मार्गेरिता पिज़्ज़ा',
+        sq: 'Pica Margherita',
+        fr: 'Pizza Margherita',
+        de: 'Margherita Pizza'
+      }, 
+      description: { 
+        en: 'A classic Italian pizza topped with fresh mozzarella cheese, aromatic basil, and flavorful tomato sauce. The thin and crispy crust is lightly brushed with olive oil.',
+        ar: 'بيتزا إيطالية كلاسيكية مغطاة بجبن الموزاريلا الطازج والريحان العطري وصلصة الطماطم النكهة. القشرة الرقيقة والمقرمشة مدهونة قليلاً بزيت الزيتون.',
+        fa: 'پیتزای کلاسیک ایتالیایی با پنیر موزارلا تازه، ریحان معطر و سس گوجه طعم‌دار. خمیر نازک و ترد کمی با روغن زیتون برس شده.',
+        ku: 'پیتزایەکی کلاسیکی ئیتاڵی بە پەنیری موزارێلای تازە، ڕەیحانی بۆنخۆش و سۆسی تەماتەی خۆش. قاڵبە باریک و ترسکەکە بە کەمێک زەیتی زەیتوون بەرسکراوە.',
+        tr: 'Taze mozzarella peyniri, aromatik fesleğen ve lezzetli domates sosuyla kaplanmış klasik İtalyan pizzası. İnce ve çıtır hamur zeytinyağı ile hafifçe fırçalanmıştır.',
+        ur: 'تازہ موزاریلا چیز، خوشبودار تلسی اور ذائقہ دار ٹماٹر ساس کے ساتھ کلاسک اطالوی پیزا۔ پتلا اور کرسپی کرسٹ ہلکا سا زیتون کے تیل سے برش کیا گیا ہے۔',
+        kmr: 'Pizzayek Îtalî ya klasîk ku bi penîrê mozzarella yê taze, reyhanê bêhnxweş û soşa firangoşê ya bi tam hatiye daxuyandin. Hevîrê zok û çitir bi zeyta zeytûnê kêm hatiye firçekirin.',
+        es: 'Una pizza italiana clásica cubierta con queso mozzarella fresco, albahaca aromática y salsa de tomate sabrosa. La masa delgada y crujiente está ligeramente pincelada con aceite de oliva.',
+        ru: 'Классическая итальянская пицца с свежей моцареллой, ароматным базиликом и вкусным томатным соусом. Тонкое и хрустящее тесто слегка смазано оливковым маслом.',
+        hi: 'ताज़ा मोज़ाज़ेला चीज़, सुगंधित तुलसी और स्वादिष्ट टमाटर सॉस के साथ क्लासिक इतालवी पिज़्ज़ा। पतला और कुरकुरा क्रस्ट हल्का सा जैतून के तेल से ब्रश किया गया है।',
+        sq: 'Një pica klasike italiane e mbuluar me djathë mozzarella të freskët, borzilok aromatik dhe salcë domatesh të shijshme. Brumi i hollë dhe i krisur është i lyer lehtë me vaj ulliri.',
+        fr: 'Une pizza italienne classique garnie de mozzarella fraîche, basilic aromatique et sauce tomate savoureuse. La pâte fine et croustillante est légèrement badigeonnée d\'huile d\'olive.',
+        de: 'Eine klassische italienische Pizza mit frischem Mozzarella-Käse, aromatischem Basilikum und geschmackvoller Tomatensoße. Der dünne und knusprige Teig ist leicht mit Olivenöl bestrichen.'
+      }, 
+      price: '$13.99', 
+      category: 'pizza', 
+      popular: true, 
+      tags: ['vegetarian'],
+      nutritionalInfo: {
+        calories: 380,
+        protein: '16g',
+        carbs: '48g', 
+        fat: '14g',
+        fiber: '3g'
+      },
+      allergens: ['Gluten', 'Dairy'],
+      dietaryTags: ['Vegetarian', 'Halal'],      image: '/pizza.jpg',
+      available: true
+    },
+    { 
+      id: 1502, 
+      name: { 
+        en: 'Kabab Pizza',
+        ar: 'بيتزا الكباب',
+        fa: 'پیتزا کباب',
+        ku: 'پیتزای کەباب',
+        tr: 'Kebap Pizza',
+        ur: 'کباب پیزا',
+        kmr: 'Pizza Kebab',
+        es: 'Pizza Kebab',
+        ru: 'Пицца с кебабом',
+        hi: 'कबाब पिज़्ज़ा',
+        sq: 'Pica Kabab',
+        fr: 'Pizza Kebab',
+        de: 'Kebab Pizza'
+      }, 
+      description: { 
+        en: 'A savory pizza topped with thin slices of beef kabab, special sauce, iceberg lettuce, onions, cucumbers, and tomatoes. The crispy crust provides a perfect base for this fresh and flavorful combination.',
+        ar: 'بيتزا مالحة مغطاة بشرائح رقيقة من كباب اللحم البقري وصلصة خاصة وخس الجبل الجليدي والبصل والخيار والطماطم. القشرة المقرمشة توفر قاعدة مثالية لهذا المزيج الطازج واللذيذ.',
+        fa: 'پیتزای خوشمزه با برش‌های نازک کباب گوشت گاو، سس مخصوص، کاهو یخی، پیاز، خیار و گوجه‌فرنگی. خمیر ترد پایه‌ای عالی برای این ترکیب تازه و طعم‌دار فراهم می‌کند.',
+        ku: 'پیتزایەکی خۆش بە پارچە باریکەکانی کەبابی گۆشتی گا، سۆسی تایبەت، خسی قەڵەمی، پیاز، خیار و تەماتە. قاڵبە ترسکەکە بنکەیەکی تەواو دابین دەکات بۆ ئەم تێکەڵە تازە و خۆشە.',
+        tr: 'İnce dana kebap dilimleri, özel sos, buzdolabı marulu, soğan, salatalık ve domatesle kaplanmış lezzetli pizza. Çıtır hamur, bu taze ve lezzetli kombinasyon için mükemmel bir taban sağlar.',
+        ur: 'بیف کباب کے پتلے ٹکڑوں، خاص ساس، آئس برگ لیٹس، پیاز، کھیرا اور ٹماٹر کے ساتھ لذیذ پیزا۔ کرسپی کرسٹ اس تازہ اور ذائقہ دار امتزاج کے لیے بہترین بیس فراہم کرتا ہے۔',
+        kmr: 'Pizzayek bi tam ku bi perçeyên zok ên kebabê goştê ga, soşa taybet, salata qelemî, pîvaz, xiyar û firangoşan hatiye daxuyandin. Hevîrê çitir bingeheke temam ji bo vê tevahiya taze û bi tam peyda dike.',
+        es: 'Una pizza sabrosa cubierta con rebanadas finas de kebab de res, salsa especial, lechuga iceberg, cebollas, pepinos y tomates. La masa crujiente proporciona una base perfecta para esta combinación fresca y sabrosa.',
+        ru: 'Пряная пицца с тонкими ломтиками говяжьего кебаба, специальным соусом, салатом айсберг, луком, огурцами и помидорами. Хрустящее тесто обеспечивает идеальную основу для этой свежей и вкусной комбинации.',
+        hi: 'पतले बीफ कबाब के टुकड़ों, विशेष सॉस, आइसबर्ग लेट्यूस, प्याज़, खीरा और टमाटर के साथ स्वादिष्ट पिज़्ज़ा। कुरकुरा क्रस्ट इस ताज़े और स्वादिष्ट संयोजन के लिए एक बेहतरीन आधार प्रदान करता है।',
+        sq: 'Një pica e shijshme e mbuluar me copa të holla kebabi viçi, salcë të veçantë, sallatë ajsberg, qepë, kastravec dhe domate. Brumi i krisur siguron një bazë perfekte për këtë kombinim të freskët dhe plot shije.',
+        fr: 'Une pizza savoureuse garnie de fines tranches de kebab de bœuf, sauce spéciale, laitue iceberg, oignons, concombres et tomates. La pâte croustillante fournit une base parfaite pour cette combinaison fraîche et savoureuse.',
+        de: 'Eine herzhafte Pizza mit dünnen Rind-Kebab-Scheiben, spezieller Sauce, Eisbergsalat, Zwiebeln, Gurken und Tomaten. Der knusprige Teig bietet eine perfekte Basis für diese frische und geschmackvolle Kombination.'
+      }, 
+      price: '$16.99', 
+      category: 'pizza', 
+      popular: true, 
+      tags: ['meat-lovers', 'savory', 'fresh-toppings', 'crispy', 'specialty'],
+      nutritionalInfo: {
+        calories: 520,
+        protein: '28g',
+        carbs: '52g', 
+        fat: '22g',
+        fiber: '4g'
+      },
+      allergens: ['Gluten', 'Dairy'],
+      dietaryTags: ['Halal'],      image: '/mkabab.jpg',
+      available: true
+    },
+    { 
+      id: 1503, 
+      name: { 
+        en: 'Chicken Pizza',
+        ar: 'بيتزا الدجاج',
+        fa: 'پیتزا مرغ',
+        ku: 'پیتزای مریشک',
+        tr: 'Tavuk Pizza',
+        ur: 'چکن پیزا',
+        kmr: 'Pizza Mirîşk',
+        es: 'Pizza de Pollo',
+        ru: 'Пицца с курицей',
+        hi: 'चिकन पिज़्ज़ा',
+        sq: 'Pica Pule',
+        fr: 'Pizza au Poulet'
+      }, 
+      description: { 
+        en: 'A delightful pizza featuring tender chicken slices, special sauce, iceberg lettuce, onions, cucumbers, and tomatoes. The crispy crust enhances the fresh and savory flavors of this dish.',
+        ar: 'بيتزا رائعة تحتوي على شرائح دجاج طرية وصلصة خاصة وخس الجبل الجليدي والبصل والخيار والطماطم. القشرة المقرمشة تعزز النكهات الطازجة والمالحة لهذا الطبق.',
+        fa: 'پیتزای لذیذ با برش‌های نرم مرغ، سس مخصوص، کاهو یخی، پیاز، خیار و گوجه‌فرنگی. خمیر ترد طعم‌های تازه و خوشمزه این غذا را تقویت می‌کند.',
+        ku: 'پیتزایەکی خۆش بە پارچە نەرمەکانی مریشک، سۆسی تایبەت، خسی قەڵەمی، پیاز، خیار و تەماتە. قاڵبە ترسکەکە تامە تازە و خۆشەکانی ئەم خۆراکە بەهێز دەکات.',
+        tr: 'Yumuşak tavuk dilimleri, özel sos, buzdolabı marulu, soğan, salatalık ve domatesli keyifli pizza. Çıtır hamur, bu yemeğin taze ve lezzetli tatlarını artırır.',
+        ur: 'نرم چکن کے ٹکڑوں، خاص ساس، آئس برگ لیٹس، پیاز، کھیرا اور ٹماٹر کے ساتھ لذیذ پیزا۔ کرسپی کرسٹ اس ڈش کے تازہ اور لذیذ ذائقوں کو بڑھاتا ہے۔',
+        kmr: 'Pizzayek xweş bi perçeyên nerm ên mirîşk, soşa taybet, salata qelemî, pîvaz, xiyar û firangoşan. Hevîrê çitir tamên taze û xweş ên vê xwarinê zêde dike.',
+        es: 'Una pizza deliciosa con rebanadas tiernas de pollo, salsa especial, lechuga iceberg, cebollas, pepinos y tomates. La masa crujiente realza los sabores frescos y sabrosos de este plato.',
+        ru: 'Восхитительная пицца с нежными кусочками курицы, специальным соусом, салатом айсберг, луком, огурцами и помидорами. Хрустящая корочка подчеркивает свежие и пикантные вкусы этого блюда.',
+        hi: 'नरम चिकन के टुकड़ों, विशेष सॉस, आइसबर्ग लेटस, प्याज़, खीरा और टमाटर के साथ स्वादिष्ट पिज़्ज़ा। कुरकुरा क्रस्ट इस व्यंजन के ताज़े और स्वादिष्ट स्वाद को बढ़ाता है।',
+        sq: 'Një pica e mrekullueshme me copa të buta pule, salcë të veçantë, sallatë ajsberg, qepë, kastravec dhe domate. Brumi i krisur thekson shijët e freskëta dhe të shijshme të këtij pjati.',
+        fr: 'Une pizza délicieuse avec des tranches tendres de poulet, sauce spéciale, laitue iceberg, oignons, concombres et tomates. La pâte croustillante rehausse les saveurs fraîches et savoureuses de ce plat.',
+        de: 'Eine köstliche Pizza mit zarten Hähnchenscheiben, spezieller Sauce, Eisbergsalat, Zwiebeln, Gurken und Tomaten. Der knusprige Boden unterstreicht die frischen und herzhaften Aromen dieses Gerichts.'
+      }, 
+      price: '$15.99', 
+      category: 'pizza', 
+      popular: true, 
+      tags: ['customer-favorite', 'protein-rich', 'fresh-toppings', 'crispy'],
+      nutritionalInfo: {
+        calories: 450,
+        protein: '26g',
+        carbs: '50g', 
+        fat: '16g',
+        fiber: '4g'
+      },
+      allergens: ['Gluten', 'Dairy'],
+      dietaryTags: ['Halal'],      image: '/chk.jpg',
+      available: true
+    },
+    { 
+      id: 1504, 
+      name: { 
+        en: 'Lahmacun',
+        ar: 'لحم بعجين',
+        fa: 'لحم عجین',
+        ku: 'لەحمەعەجین',
+        tr: 'Lahmacun',
+        ur: 'لحم عجین',
+        kmr: 'Lahmacun',
+        es: 'Lahmacun',
+        ru: 'Лахмаджун',
+        hi: 'लहमाजुन',
+        sq: 'Lahmacun',
+        fr: 'Lahmacun'
+      }, 
+      description: { 
+        en: 'A traditional dish made with a thin dough topped with a flavorful mixture of minced meat, onions, peppers, tomatoes, and spices. Served with lettuce, sumac onions, and lemon on the side.',
+        ar: 'طبق تقليدي مصنوع من عجينة رقيقة مغطاة بخليط نكهة من اللحم المفروم والبصل والفلفل والطماطم والتوابل. يُقدم مع الخس وبصل السماق والليمون على الجانب.',
+        fa: 'غذای سنتی با خمیر نازک روکش شده با مخلوط طعم‌دار گوشت چرخ کرده، پیاز، فلفل، گوجه‌فرنگی و ادویه‌جات. با کاهو، پیاز سماق و لیمو در کنار سرو می‌شود.',
+        ku: 'خۆراکێکی نەریتی بە هەویری باریک کە بە تێکەڵەیەکی خۆشی گۆشتی وردکراو، پیاز، بیبەر، تەماتە و بەهارات داپۆشراوە. لەگەڵ خس، پیازی سوماق و لیمۆ لە لاتەنیشتەوە خراوەتە سەر.',
+        tr: 'Kıyma, soğan, biber, domates ve baharat karışımı ile kaplanmış ince hamurdan yapılan geleneksel yemek. Marul, sumak soğanı ve limon ile yan tarafta servis edilir.',
+        ur: 'پتلے آٹے سے بنا روایتی کھانا جس پر قیمہ، پیاز، مرچ، ٹماٹر اور مصالحوں کا ذائقہ دار مکسچر لگایا جاتا ہے۔ لیٹس، سماق پیاز اور لیموں کے ساتھ ساتھ پیش کیا جاتا ہے۔',
+        kmr: 'Xwarineke kevneşopî ku bi hevîreke zok hatiye çêkirin û bi tevahiyek bi tam a goştê hûrkirî, pîvaz, biber, firangoş û baharatan hatiye daxuyandin. Bi salata kesk, pîvazê sumaq û lîmonê li kêleka tê peşkêşkirin.',
+        es: 'Un plato tradicional hecho con masa delgada cubierta con una mezcla sabrosa de carne picada, cebollas, pimientos, tomates y especias. Se sirve con lechuga, cebollas con sumac y limón a un lado.',
+        ru: 'Традиционное блюдо из тонкого теста, покрытое ароматной смесью из рубленого мяса, лука, перца, помидоров и специй. Подается с салатом, луком с сумахом и лимоном.',
+        hi: 'पतले आटे से बना पारंपरिक व्यंजन जिस पर कीमा, प्याज़, मिर्च, टमाटर और मसालों का स्वादिष्ट मिश्रण लगाया गया है। सलाद, सुमाक प्याज़ और नींबू के साथ परोसा जाता है।',
+        sq: 'Një pjatë tradicionale e bërë me brumë të hollë të mbuluar me një përzierje të shijshme mishi të grirë, qepë, spec, domate dhe erëza. Shërbehet me sallatë, qepë sumak dhe limon në krah.',
+        fr: 'Un plat traditionnel fait avec une pâte fine garnie d\'un mélange savoureux de viande hachée, oignons, poivrons, tomates et épices. Servi avec salade, oignons au sumac et citron à côté.',
+        de: 'Ein traditionelles Gericht aus dünnem Teig, belegt mit einer würzigen Mischung aus Hackfleisch, Zwiebeln, Paprika, Tomaten und Gewürzen. Serviert mit Salat, Sumach-Zwiebeln und Zitrone als Beilage.'
+      }, 
+      price: '$15.99', 
+      category: 'pizza', 
+      tags: ['traditional', 'thin-crust', 'spicy', 'middle-eastern', 'authentic'],
+      nutritionalInfo: {
+        calories: 420,
+        protein: '22g',
+        carbs: '45g', 
+        fat: '16g',
+        fiber: '3g'
+      },
+      allergens: ['Gluten'],
+      dietaryTags: ['Halal'],      image: '/Lahmacun.jpg',
+      available: true
+    },
+    { 
+      id: 1505, 
+      name: { 
+        en: 'Boat',
+        ar: 'قارب',
+        fa: 'قایق',
+        ku: 'بەلەم',
+        tr: 'Tekne',
+        ur: 'کشتی',
+        kmr: 'Keştî',
+        es: 'Barco',
+        ru: 'Лодка',
+        hi: 'नौका',
+        sq: 'Varkë',
+        fr: 'Barque'
+      }, 
+      description: { 
+        en: 'A pizza with a boat-shaped crust. Topped with cheese, sauce, and various ingredients. It\'s presented in a unique boat shape and often garnished with a variety of toppings.',
+        ar: 'بيتزا بقشرة على شكل قارب. مغطاة بالجبن والصلصة ومكونات مختلفة. تُقدم في شكل قارب فريد وغالباً ما تُزين بمجموعة متنوعة من الإضافات.',
+        fa: 'پیتزایی با خمیر قایقی شکل. با پنیر، سس و مواد مختلف روکش شده. به شکل قایق منحصر به فرد ارائه می‌شود و اغلب با انواع روکش تزیین می‌شود.',
+        ku: 'پیتزایەک بە قاڵبی شێوەی بەلەم. بە پەنیر، سۆس و پێکهاتە جۆراوجۆرەکان داپۆشراوە. بە شێوەی بەلەمی ناوازە پێشکەش دەکرێت و زۆرجار بە جۆراوجۆری رووپۆش ڕازاوەتەوە.',
+        tr: 'Tekne şeklinde hamurlu pizza. Peynir, sos ve çeşitli malzemelerle kaplanır. Eşsiz bir tekne şeklinde sunulur ve genellikle çeşitli soslarla süslenir.',
+        ur: 'کشتی کی شکل والے کرسٹ کے ساتھ پیزا۔ چیز، ساس اور مختلف اجزاء کے ساتھ ٹاپ کیا گیا۔ یہ منفرد کشتی کی شکل میں پیش کیا جاتا ہے اور اکثر مختلف ٹاپنگز سے سجایا جاتا ہے۔',
+        kmr: 'Pizzayek bi hevîreke wekî keştî. Bi penîr, soş û maddeyên cûrbecûr hatiye daxuyandin. Bi şêweya keştîyeke bêhempa tê peşkêşkirin û pir caran bi cûrbecûr sosên hatiye xemilandin.',
+        es: 'Una pizza con masa en forma de barco. Cubierta con queso, salsa y varios ingredientes. Se presenta en una forma única de barco y a menudo se adorna con una variedad de aderezos.',
+        ru: 'Пицца с корочкой в форме лодки. Покрыта сыром, соусом и различными ингредиентами. Подается в уникальной форме лодки и часто украшается разнообразными начинками.',
+        hi: 'नाव के आकार की क्रस्ट वाला पिज़्ज़ा। चीज़, सॉस और विभिन्न सामग्री के साथ टॉप किया गया। यह अनोखे नाव के आकार में पेश किया जाता है और अक्सर विभिन्न टॉपिंग्स से सजाया जाता है।',
+        sq: 'Një pica me brumë në formë varke. E mbuluar me djathë, salcë dhe përbërës të ndryshëm. Paraqitet në një formë unike varke dhe shpesh zbukurohet me një larmi garniturash.',
+        fr: 'Une pizza avec une pâte en forme de bateau. Garnie de fromage, sauce et divers ingrédients. Présentée dans une forme unique de bateau et souvent décorée avec une variété de garnitures.',
+        de: 'Eine Pizza mit bootsförmigem Teig. Belegt mit Käse, Sauce und verschiedenen Zutaten. Wird in einzigartiger Bootsform präsentiert und oft mit vielfältigen Belägen garniert.'
+      }, 
+      price: { kabab: '$16.99', chicken: '$15.99' }, 
+      category: 'pizza', 
+      tags: ['unique-shape', 'boat-style', 'specialty', 'sharing', 'Instagram-worthy'],
+      nutritionalInfo: {
+        calories: 520,
+        protein: '28g',
+        carbs: '48g',
+        fat: '22g',
+        fiber: '4g'
+      },
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+      dietaryTags: ['Halal'],      image: '/kpizza.jpg',
+      available: true,
+      variants: ['kabab', 'chicken'] 
+    },
+    { 
+      id: 1506, 
+      name: { 
+        en: 'Veggie Pizza',
+        ar: 'بيتزا الخضار',
+        fa: 'پیتزا سبزیجات',
+        ku: 'پیتزای سەوزە',
+        tr: 'Sebzeli Pizza',
+        ur: 'ویجی پیزا',
+        kmr: 'Pizza Sebzeyan',
+        es: 'Pizza Vegetal',
+        ru: 'Овощная пицца',
+        hi: 'वेजी पिज़्ज़ा',
+        sq: 'Pica Perimesh',
+        fr: 'Pizza aux Légumes'
+      }, 
+      description: { 
+        en: 'A delectable pizza loaded with an assortment of fresh, colorful vegetables and your choice of cheese, perfect for veggie lovers.',
+        ar: 'بيتزا لذيذة محملة بتشكيلة من الخضروات الطازجة الملونة واختيارك من الجبن، مثالية لمحبي الخضار.',
+        fa: 'پیتزای لذیذ پر از انواع سبزیجات تازه و رنگارنگ و پنیر انتخابی شما، عالی برای عاشقان سبزیجات.',
+        ku: 'پیتزایەکی خۆش پڕ لە جۆراوجۆری سەوزەی تازە و ڕەنگاوڕەنگ و پەنیری هەڵبژاردەت، تەواو بۆ خۆشەویستانی سەوزە.',
+        tr: 'Taze, renkli sebze çeşitleri ve seçtiğiniz peynirle dolu nefis pizza, sebze severler için mükemmel.',
+        ur: 'تازہ، رنگین سبزیوں کی اقسام اور آپ کی پسند کے چیز سے بھرا لذیذ پیزا، سبزی پسندوں کے لیے بہترین۔',
+        kmr: 'Pizzayek bi tam ku bi cûrbecûr sebzeyên taze û rengîn û penîrê vebijêrka te hatiye barkirî, ji bo hezkiriyanê sebzeyan temam.',
+        es: 'Una pizza deliciosa cargada con un surtido de vegetales frescos y coloridos y queso de tu elección, perfecta para los amantes de las verduras.',
+        ru: 'Восхитительная пицца с ассортиментом свежих, красочных овощей и сыром на ваш выбор, идеальна для любителей овощей.',
+        hi: 'ताज़ी, रंगीन सब्जियों की एक श्रृंखला और आपकी पसंद के चीज़ से भरा स्वादिष्ट पिज़्ज़ा, सब्जी प्रेमियों के लिए बिल्कुल सही।',
+        sq: 'Një pica e shijshme e mbushur me një përzierje perimesh të freskëta dhe me ngjyra dhe djathë sipas zgjedhjes suaj, perfekte për dashamirët e perimeve.',
+        fr: 'Une pizza délicieuse chargée d\'un assortiment de légumes frais et colorés avec le fromage de votre choix, parfaite pour les amateurs de légumes.',
+        de: 'Eine köstliche Pizza beladen mit einer Auswahl frischer, bunter Gemüsesorten und Käse Ihrer Wahl, perfekt für Gemüseliebhaber.'
+      }, 
+      price: '$14.99', 
+      category: 'pizza', 
+      tags: ['vegetarian'],
+      nutritionalInfo: {
+        calories: 390,
+        protein: '18g',
+        carbs: '44g',
+        fat: '15g',
+        fiber: '6g'
+      },
+      allergens: ['Gluten', 'Dairy'],
+      dietaryTags: ['Vegetarian', 'Halal'],      image: '/Veggie Platter.jpg',
+      available: true 
+    },
+
     // FISH
     { 
       id: 1601, 
@@ -2160,7 +2611,7 @@ const FullMenuPage = () => {
       price: { serving2: '$39.99', serving4: '$74.99' }, 
       category: 'fish', 
       popular: true, 
-      tags: [], 
+      tags: ['iraqi-specialty', 'flame-grilled', 'marinated', 'advance-order', 'traditional'], 
       variants: ['serving2', 'serving4'],
       servingFor: { serving2: '2', serving4: '4' } 
     },
@@ -2200,7 +2651,21 @@ const FullMenuPage = () => {
       price: '$21.99', 
       category: 'specialty', 
       popular: true, 
-      tags: [] 
+      tags: ['signature-dish', 'traditional', 'festive', 'aromatic', 'chef-special'],
+      nutritionalInfo: {
+        calories: 680,
+        protein: '32g',
+        carbs: '85g',
+        fat: '18g',
+        fiber: '5g'
+      },
+      allergens: ['Gluten', 'Nuts', 'Dairy'],
+      dietaryTags: ['Halal'],      seasonal: {
+        available: ['autumn', 'winter'],
+        note: 'Perfect for special occasions and celebrations'
+      },
+      image: '/pbiryani.png',
+      available: true 
     },
     { 
       id: 1702, 
@@ -2236,7 +2701,17 @@ const FullMenuPage = () => {
       price: '$24.99', 
       category: 'specialty', 
       popular: true, 
-      tags: [] 
+      tags: ['lamb', 'saffron-rice', 'traditional', 'middle-eastern', 'celebration'],
+      nutritionalInfo: {
+        calories: 720,
+        protein: '38g',
+        carbs: '65g',
+        fat: '28g',
+        fiber: '4g'
+      },
+      allergens: ['Nuts'],
+      dietaryTags: ['Halal'],      image: '/Quzi.jpg',
+      available: true 
     },
     { 
       id: 1703, 
@@ -2272,7 +2747,17 @@ const FullMenuPage = () => {
       price: '$21.99', 
       category: 'specialty', 
       popular: true, 
-      tags: [] 
+      tags: ['spicy', 'aromatic', 'traditional', 'one-pot'],
+      nutritionalInfo: {
+        calories: 650,
+        protein: '35g',
+        carbs: '68g',
+        fat: '18g',
+        fiber: '3g'
+      },
+      allergens: [],
+      dietaryTags: ['Halal'],      image: '/Mandi.jpg',
+      available: true 
     },
     { 
       id: 1704, 
@@ -2307,7 +2792,17 @@ const FullMenuPage = () => {
       }, 
       price: '$25.99', 
       category: 'specialty', 
-      tags: [] 
+      tags: ['roasted-eggplant', 'cheddar', 'garlic', 'grilled-kabab', 'unique'],
+      nutritionalInfo: {
+        calories: 580,
+        protein: '34g',
+        carbs: '12g',
+        fat: '42g',
+        fiber: '8g'
+      },
+      allergens: ['Dairy'],
+      dietaryTags: ['Halal'],      image: '/mkabab.jpg',
+      available: true 
     },
     { 
       id: 1705, 
@@ -2342,7 +2837,17 @@ const FullMenuPage = () => {
       }, 
       price: '$22.99', 
       category: 'specialty', 
-      tags: [] 
+      tags: ['traditional-stew', 'beef', 'onions', 'rich-flavors', 'comfort-food'],
+      nutritionalInfo: {
+        calories: 580,
+        protein: '42g',
+        carbs: '18g', 
+        fat: '36g',
+        fiber: '3g'
+      },
+      allergens: [],
+      dietaryTags: ['Halal', 'Gluten-Free'],      image: '/Village Qaliya.jpg',
+      available: true
     },
     { 
       id: 1706, 
@@ -2376,7 +2881,17 @@ const FullMenuPage = () => {
       }, 
       price: '$22.99', 
       category: 'specialty', 
-      tags: [] 
+      tags: ['seafood', 'butter-garlic', 'mushrooms', 'sauteed', 'spicy'],
+      nutritionalInfo: {
+        calories: 340,
+        protein: '28g',
+        carbs: '8g', 
+        fat: '22g',
+        fiber: '1g'
+      },
+      allergens: ['Shellfish', 'Dairy'],
+      dietaryTags: ['Gluten-Free'],      image: '/Butter Shrimp.jpg',
+      available: true
     },
     { 
       id: 1707, 
@@ -2411,7 +2926,17 @@ const FullMenuPage = () => {
       price: '$23.99', 
       category: 'specialty', 
       popular: true, 
-      tags: [] 
+      tags: ['signature-stew', 'fresh-vegetables', 'tender-meat', 'saffron-rice', 'memorable'],
+      nutritionalInfo: {
+        calories: 620,
+        protein: '35g',
+        carbs: '48g',
+        fat: '28g',
+        fiber: '7g'
+      },
+      allergens: [],
+      dietaryTags: ['Halal', 'Gluten-Free'],      image: '/carnival.jpg',
+      available: true 
     },
 
     // GRILL PLATTER SPECIALTIES
@@ -2449,7 +2974,17 @@ const FullMenuPage = () => {
       price: '$21.99', 
       category: 'grill', 
       popular: true, 
-      tags: [] 
+      tags: ['mixed-meat', 'lamb-beef', 'saffron-rice', 'grilled-perfection', 'traditional'],
+      nutritionalInfo: {
+        calories: 620,
+        protein: '48g',
+        carbs: '35g', 
+        fat: '32g',
+        fiber: '4g'
+      },
+      allergens: ['Sesame', 'Dairy'],
+      dietaryTags: ['Halal', 'Gluten-Free'],      image: '/Erbil Shish Kabab.jpg',
+      available: true
     },
     { 
       id: 1802, 
@@ -2485,7 +3020,17 @@ const FullMenuPage = () => {
       price: '$21.99', 
       category: 'grill', 
       popular: true, 
-      tags: [] 
+      tags: ['stuffed-kabab', 'mixed-meat', 'spicy', 'garlic', 'herb-seasoned'],
+      nutritionalInfo: {
+        calories: 650,
+        protein: '45g',
+        carbs: '38g', 
+        fat: '35g',
+        fiber: '4g'
+      },
+      allergens: ['Sesame', 'Dairy'],
+      dietaryTags: ['Halal'],      image: '/Mahshi Kabab.jpg',
+      available: true
     },
     { 
       id: 1803, 
@@ -2521,7 +3066,17 @@ const FullMenuPage = () => {
       price: '$20.99', 
       category: 'grill', 
       popular: true, 
-      tags: [] 
+      tags: ['marinated-chicken', 'herbs', 'dried-tomatoes', 'grilled', 'healthy'],
+      nutritionalInfo: {
+        calories: 580,
+        protein: '42g',
+        carbs: '35g', 
+        fat: '28g',
+        fiber: '3g'
+      },
+      allergens: ['Sesame', 'Dairy'],
+      dietaryTags: ['Halal', 'Gluten-Free'],      image: '/Chicken Kabab.jpg',
+      available: true
     },
     { 
       id: 1804, 
@@ -2556,7 +3111,17 @@ const FullMenuPage = () => {
       }, 
       price: '$24.99', 
       category: 'grill', 
-      tags: [] 
+      tags: ['eggplant-yogurt', 'pita-topped', 'ribeye', 'unique-combination', 'special-sauce'],
+      nutritionalInfo: {
+        calories: 720,
+        protein: '38g',
+        carbs: '45g', 
+        fat: '42g',
+        fiber: '6g'
+      },
+      allergens: ['Gluten', 'Dairy'],
+      dietaryTags: ['Halal'],      image: '/Cokertme Kabab.jpg',
+      available: true
     },
     { 
       id: 1805, 
@@ -2591,7 +3156,17 @@ const FullMenuPage = () => {
       price: '$16.99', 
       category: 'grill', 
       popular: true, 
-      tags: [] 
+      tags: ['grilled-wings', 'finger-food', 'savory', 'crispy', 'crowd-pleaser'],
+      nutritionalInfo: {
+        calories: 520,
+        protein: '38g',
+        carbs: '32g',
+        fat: '26g',
+        fiber: '3g'
+      },
+      allergens: ['Sesame', 'Dairy'],
+      dietaryTags: ['Halal', 'Gluten-Free'],      image: '/Grilled Wings Platter.jpg',
+      available: true 
     },
     { 
       id: 1806, 
@@ -2627,7 +3202,17 @@ const FullMenuPage = () => {
       price: '$22.99', 
       category: 'grill', 
       popular: true, 
-      tags: [] 
+      tags: ['ribeye-beef', 'premium-cut', 'meat-lovers', 'tender', 'juicy'],
+      nutritionalInfo: {
+        calories: 750,
+        protein: '52g',
+        carbs: '28g',
+        fat: '45g',
+        fiber: '3g'
+      },
+      allergens: ['Sesame', 'Dairy'],
+      dietaryTags: ['Halal', 'Gluten-Free'],      image: '/Beef Tikka.jpg',
+      available: true 
     },
     { 
       id: 1807, 
@@ -2662,7 +3247,17 @@ const FullMenuPage = () => {
       }, 
       price: '$19.99', 
       category: 'grill', 
-      tags: [] 
+      tags: ['chicken-tikka', 'tender', 'flavorful', 'spiced', 'aromatic'],
+      nutritionalInfo: {
+        calories: 540,
+        protein: '45g',
+        carbs: '32g',
+        fat: '24g',
+        fiber: '3g'
+      },
+      allergens: ['Sesame', 'Dairy'],
+      dietaryTags: ['Halal', 'Gluten-Free'],      image: '/Chicken Tikka.jpg',
+      available: true 
     },
     { 
       id: 1808, 
@@ -2697,7 +3292,17 @@ const FullMenuPage = () => {
       price: '$36.99', 
       category: 'grill', 
       popular: true, 
-      tags: [] 
+      tags: ['lamb-chops', 'premium', 'marinated', 'grilled-perfection', 'tender'],
+      nutritionalInfo: {
+        calories: 750,
+        protein: '55g',
+        carbs: '40g', 
+        fat: '42g',
+        fiber: '4g'
+      },
+      allergens: ['Sesame', 'Dairy'],
+      dietaryTags: ['Halal', 'Gluten-Free'],      image: '/Lamb Chops.jpg',
+      available: true
     },
     { 
       id: 1809, 
@@ -2733,12 +3338,67 @@ const FullMenuPage = () => {
       price: { serving2: '$69.99', serving4: '$105.99' }, 
       category: 'grill', 
       popular: true, 
-      tags: [], 
+      tags: ['special-platter', 'mixed-grill', 'sharing', 'variety', 'feast'], 
       variants: ['serving2', 'serving4'],
-      servingFor: { serving2: '2', serving4: '4' } 
+      servingFor: { serving2: '2', serving4: '4' },
+      nutritionalInfo: {
+        calories: 850,
+        protein: '65g',
+        carbs: '45g', 
+        fat: '48g',
+        fiber: '5g'
+      },
+      allergens: ['Sesame', 'Dairy'],
+      dietaryTags: ['Halal'],      image: '/Nature\'s Village Special Platter (2 People).jpg',
+      available: true
     },
 
     // KID'S MENU
+    { 
+      id: 1901, 
+      name: { 
+        en: "Kid's Pizza",
+        ar: 'بيتزا الأطفال',
+        fa: 'پیتزای کودکان',
+        ku: 'پیتزای منداڵان',
+        tr: 'Çocuk Pizzası',
+        ur: 'بچوں کا پیزا',
+        kmr: 'Pizza Zarokan',
+        es: 'Pizza para Niños',
+        ru: 'Детская пицца',
+        hi: 'बच्चों का पिज्जा',
+        sq: 'Pica për Fëmijë',
+        fr: 'Pizza pour Enfants'
+      }, 
+      description: { 
+        en: 'Thin crust pizza made for kids.',
+        ar: 'بيتزا رقيقة القاعدة مصنوعة للأطفال.',
+        fa: 'پیتزای نازک مخصوص کودکان.',
+        ku: 'پیتزای نازک بۆ منداڵان دروستکراوە.',
+        tr: 'Çocuklar için yapılmış ince hamur pizza.',
+        ur: 'بچوں کے لیے بنایا گیا پتلا پیزا۔',
+        kmr: 'Pizza nazik a ji bo zarokan hatiye çêkirin.',
+        es: 'Pizza de masa fina hecha para niños.',
+        ru: 'Тонкая пицца, специально приготовленная для детей.',
+        hi: 'बच्चों के लिए बनाया गया पतला पिज्जा।',
+        sq: 'Pica me brumë të hollë e bërë për fëmijë.',
+        fr: 'Pizza à pâte fine spécialement préparée pour les enfants.',
+        de: 'Dünne Pizzateig-Pizza, speziell für Kinder gemacht.'
+      }, 
+      price: '$10.99', 
+      category: 'kids', 
+      tags: ['kid-friendly', 'thin-crust', 'simple', 'small-size'],
+      nutritionalInfo: {
+        calories: 280,
+        protein: '12g',
+        carbs: '35g', 
+        fat: '10g',
+        fiber: '2g'
+      },
+      allergens: ['Gluten', 'Dairy'],
+      dietaryTags: ['Vegetarian', 'Halal'],      image: '/kpizza.jpg',
+      available: true
+    },
     { 
       id: 1902, 
       name: { 
@@ -2771,7 +3431,17 @@ const FullMenuPage = () => {
       price: '$8.99', 
       category: 'kids', 
       popular: true, 
-      tags: [] 
+      tags: ['crispy', 'breaded', 'kid-favorite', 'tender-chicken', 'finger-food'],
+      nutritionalInfo: {
+        calories: 220,
+        protein: '18g',
+        carbs: '12g',
+        fat: '12g',
+        fiber: '1g'
+      },
+      allergens: ['Gluten', 'Eggs'],
+      dietaryTags: ['Halal'],      image: '/Chicken Tenders.jpg',
+      available: true 
     },
     { 
       id: 1903, 
@@ -2807,7 +3477,17 @@ const FullMenuPage = () => {
       price: '$6.99', 
       category: 'kids', 
       popular: true, 
-      tags: [] 
+      tags: ['crispy', 'golden', 'kid-favorite', 'side-dish', 'classic'],
+      nutritionalInfo: {
+        calories: 320,
+        protein: '4g',
+        carbs: '45g', 
+        fat: '14g',
+        fiber: '4g'
+      },
+      allergens: [],
+      dietaryTags: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Halal'],      image: '/Fries.jpg',
+      available: true
     },
 
     // DRINKS (COLD)
@@ -2842,7 +3522,17 @@ const FullMenuPage = () => {
       }, 
       price: '$1.50', 
       category: 'drinks_cold', 
-      tags: [] 
+      tags: ['refreshing', 'hydrating', 'pure', 'essential'],
+      nutritionalInfo: {
+        calories: 0,
+        protein: '0g',
+        carbs: '0g', 
+        fat: '0g',
+        fiber: '0g'
+      },
+      allergens: [],
+      dietaryTags: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Halal'],      image: '/hero.mp4', // Placeholder: water bottle image needed
+      available: true
     },
     { 
       id: 2002, 
@@ -2877,7 +3567,17 @@ const FullMenuPage = () => {
       }, 
       price: '$3.99', 
       category: 'drinks_cold', 
-      tags: [] 
+      tags: ['sparkling', 'refreshing', 'bubbly', 'mineral'],
+      nutritionalInfo: {
+        calories: 0,
+        protein: '0g',
+        carbs: '0g',
+        fat: '0g',
+        fiber: '0g'
+      },
+      allergens: [],
+      dietaryTags: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Halal'],      image: '/hero.mp4', // Placeholder: sparkling water image needed
+      available: true 
     },
     { 
       id: 2003, 
@@ -2913,7 +3613,17 @@ const FullMenuPage = () => {
       price: '$2.99', 
       category: 'drinks_cold', 
       popular: true, 
-      tags: [] 
+      tags: ['fizzy', 'variety', 'classic', 'sweet', 'carbonated'],
+      nutritionalInfo: {
+        calories: 140,
+        protein: '0g',
+        carbs: '39g',
+        fat: '0g',
+        fiber: '0g'
+      },
+      allergens: [],
+      dietaryTags: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Halal'],      image: '/hero.mp4', // Placeholder: soda image needed
+      available: true 
     },
     { 
       id: 2004, 
@@ -2948,7 +3658,17 @@ const FullMenuPage = () => {
       }, 
       price: '$3.99', 
       category: 'drinks_cold', 
-      tags: [] 
+      tags: ['traditional', 'yogurt-based', 'erbil-specialty', 'protein-rich', 'refreshing'],
+      nutritionalInfo: {
+        calories: 120,
+        protein: '8g',
+        carbs: '15g', 
+        fat: '3g',
+        fiber: '0g'
+      },
+      allergens: ['Dairy'],
+      dietaryTags: ['Vegetarian', 'Halal'],      image: '/Erbil Yogurt Drink.jpg',
+      available: true
     },
 
     // DRINKS (HOT)
@@ -2986,7 +3706,7 @@ const FullMenuPage = () => {
       price: '$2.99', 
       category: 'drinks_hot', 
       popular: true, 
-      tags: [] 
+      tags: ['traditional', 'arabic', 'cardamom', 'aromatic', 'authentic'] 
     },
     { 
       id: 2102, 
@@ -3021,7 +3741,7 @@ const FullMenuPage = () => {
       }, 
       price: '$3.50', 
       category: 'drinks_hot', 
-      tags: [] 
+      tags: ['traditional', 'kurdish', 'coffee-blend', 'cultural', 'specialty'] 
     },
     { 
       id: 2103, 
@@ -3056,7 +3776,7 @@ const FullMenuPage = () => {
       }, 
       price: '$3.50', 
       category: 'drinks_hot', 
-      tags: [] 
+      tags: ['turkish', 'pistachio-flavor', 'specialty-coffee', 'nutty', 'unique'] 
     },
     { 
       id: 2104, 
@@ -3092,7 +3812,7 @@ const FullMenuPage = () => {
       price: '$2.99', 
       category: 'drinks_hot', 
       popular: true, 
-      tags: [] 
+      tags: ['spiced-tea', 'milk-tea', 'cardamom', 'comforting', 'creamy'] 
     },
     { 
       id: 2105, 
@@ -3127,7 +3847,7 @@ const FullMenuPage = () => {
       }, 
       price: '$2.50', 
       category: 'drinks_hot', 
-      tags: [] 
+      tags: ['traditional', 'persian', 'black-tea', 'authentic'] 
     },
     { 
       id: 2106, 
@@ -3162,7 +3882,7 @@ const FullMenuPage = () => {
       }, 
       price: '$2.50', 
       category: 'drinks_hot', 
-      tags: [] 
+      tags: ['healthy', 'antioxidants', 'green-tea', 'fresh'] 
     },
 
     // DESSERTS
@@ -3200,7 +3920,17 @@ const FullMenuPage = () => {
       price: '$6.99', 
       category: 'dessert', 
       popular: true, 
-      tags: [] 
+      tags: ['traditional', 'middle-eastern', 'honey', 'nuts', 'layered-pastry'],
+      nutritionalInfo: {
+        calories: 320,
+        protein: '6g',
+        carbs: '42g', 
+        fat: '15g',
+        fiber: '2g'
+      },
+      allergens: ['Gluten', 'Nuts', 'Dairy'],
+      dietaryTags: ['Vegetarian'],      image: '/baklava.jpg',
+      available: true
     },
     { 
       id: 2202, 
@@ -3236,7 +3966,17 @@ const FullMenuPage = () => {
       price: '$5.99', 
       category: 'dessert', 
       popular: true, 
-      tags: [] 
+      tags: ['italian', 'coffee-flavored', 'creamy', 'mascarpone', 'elegant'],
+      nutritionalInfo: {
+        calories: 280,
+        protein: '5g',
+        carbs: '28g', 
+        fat: '18g',
+        fiber: '1g'
+      },
+      allergens: ['Gluten', 'Dairy', 'Eggs', 'Alcohol'],
+      dietaryTags: ['Vegetarian'],      image: '/Tiramisu.jpg',
+      available: true
     },
     { 
       id: 2203, 
@@ -3271,7 +4011,7 @@ const FullMenuPage = () => {
       }, 
       price: '$5.99', 
       category: 'dessert', 
-      tags: [] 
+      tags: ['layered-dessert', 'cream', 'crispy-noodles', 'middle-eastern', 'texture-contrast'] 
     },
     { 
       id: 2204, 
@@ -3306,7 +4046,7 @@ const FullMenuPage = () => {
       }, 
       price: '$5.99', 
       category: 'dessert', 
-      tags: [] 
+      tags: ['rice-pudding', 'oven-baked', 'creamy', 'middle-eastern', 'comforting'] 
     },
     { 
       id: 2205, 
@@ -3342,7 +4082,7 @@ const FullMenuPage = () => {
       price: '$2.99', 
       category: 'dessert', 
       popular: true, 
-      tags: [], 
+      tags: ['cold-dessert', 'variety-flavors', 'classic', 'refreshing', 'kid-friendly'], 
       variants: ['singleScoop'],
       servingFor: { singleScoop: '1' } 
     },
@@ -3528,6 +4268,7 @@ const FullMenuPage = () => {
         'Sandwich & Platter': 'sandwich_platter',
         'Sandwich': 'sandwich_platter', // Handle sandwich variants
         'Naan': 'naan',
+        'Pizza': 'pizza',
         'Fish': 'fish',
         'Specialty': 'specialty',
         'Grill': 'grill',
@@ -3649,6 +4390,24 @@ const FullMenuPage = () => {
   useEffect(() => {
     validateMenuData();
   }, [validateMenuData]);
+
+  // Performance optimization: Create search index for faster filtering
+  const searchIndex = useMemo(() => {
+    const index = new Map();
+    menuItems.forEach(item => {
+      if (item && item.id) {
+        const searchableText = [
+          getText(item.name) || '',
+          getText(item.description || {}) || '',
+          ...(Array.isArray(item.tags) ? item.tags : []),
+          ...(Array.isArray(item.dietaryTags) ? item.dietaryTags : []),
+          item.category || ''
+        ].join(' ').toLowerCase();
+        index.set(item.id, searchableText);
+      }
+    });
+    return index;
+  }, [menuItems, getText]);
 
   // Memoized filtered menu items for performance with search functionality and error handling
   const filteredMenuItems = useMemo(() => {
@@ -4720,6 +5479,231 @@ const FullMenuPage = () => {
                         ))}
                       </div>
                     )}
+
+                    {/* Nutritional Information */}
+                    {item.nutritionalInfo && (
+                      <div className="mb-3 p-3 bg-blue-50 rounded-lg border-l-4 border-blue-200">
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">ℹ</span>
+                          </div>
+                          <span className="text-sm font-semibold text-blue-800">
+                            {language === 'ar' ? 'معلومات التغذية' :
+                             language === 'fa' ? 'اطلاعات تغذیه‌ای' :
+                             language === 'ku' ? 'زانیاری خۆراک' :
+                             language === 'tr' ? 'Beslenme Bilgileri' :
+                             language === 'ur' ? 'غذائی معلومات' :
+                             language === 'kmr' ? 'Agahiyên Xurek' :
+                             language === 'es' ? 'Información Nutricional' :
+                             language === 'ru' ? 'Пищевая ценность' :
+                             language === 'hi' ? 'पोषण संबंधी जानकारी' :
+                             language === 'sq' ? 'Informacioni Ushqyes' :
+                             language === 'fr' ? 'Informations Nutritionnelles' :
+                             language === 'de' ? 'Nährwertangaben' :
+                             'Nutritional Information'}
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-2 md:grid-cols-5 gap-2 text-xs">
+                          {item.nutritionalInfo.calories && (
+                            <div className="text-center bg-white rounded p-2">
+                              <div className="font-semibold text-blue-700">{item.nutritionalInfo.calories}</div>
+                              <div className="text-blue-600">
+                                {language === 'ar' ? 'سعرة' :
+                                 language === 'fa' ? 'کالری' :
+                                 language === 'ku' ? 'کالۆری' :
+                                 language === 'tr' ? 'Kalori' :
+                                 language === 'ur' ? 'کیلوری' :
+                                 language === 'kmr' ? 'Kalorî' :
+                                 language === 'es' ? 'Calorías' :
+                                 language === 'ru' ? 'ккал' :
+                                 language === 'hi' ? 'कैलोरी' :
+                                 language === 'sq' ? 'Kalori' :
+                                 language === 'fr' ? 'Calories' :
+                                 language === 'de' ? 'Kalorien' :
+                                 'Calories'}
+                              </div>
+                            </div>
+                          )}
+                          {item.nutritionalInfo.protein && (
+                            <div className="text-center bg-white rounded p-2">
+                              <div className="font-semibold text-blue-700">{item.nutritionalInfo.protein}</div>
+                              <div className="text-blue-600">
+                                {language === 'ar' ? 'بروتين' :
+                                 language === 'fa' ? 'پروتئین' :
+                                 language === 'ku' ? 'پرۆتین' :
+                                 language === 'tr' ? 'Protein' :
+                                 language === 'ur' ? 'پروٹین' :
+                                 language === 'kmr' ? 'Protein' :
+                                 language === 'es' ? 'Proteína' :
+                                 language === 'ru' ? 'Белок' :
+                                 language === 'hi' ? 'प्रोटीन' :
+                                 language === 'sq' ? 'Proteina' :
+                                 language === 'fr' ? 'Protéines' :
+                                 language === 'de' ? 'Protein' :
+                                 'Protein'}
+                              </div>
+                            </div>
+                          )}
+                          {item.nutritionalInfo.carbs && (
+                            <div className="text-center bg-white rounded p-2">
+                              <div className="font-semibold text-blue-700">{item.nutritionalInfo.carbs}</div>
+                              <div className="text-blue-600">
+                                {language === 'ar' ? 'كربوهيدرات' :
+                                 language === 'fa' ? 'کربوهیدرات' :
+                                 language === 'ku' ? 'کاربۆهایدرات' :
+                                 language === 'tr' ? 'Karbonhidrat' :
+                                 language === 'ur' ? 'کاربوہائیڈریٹ' :
+                                 language === 'kmr' ? 'Karbohîdrat' :
+                                 language === 'es' ? 'Carbohidratos' :
+                                 language === 'ru' ? 'Углеводы' :
+                                 language === 'hi' ? 'कार्बोहाइड्रेट' :
+                                 language === 'sq' ? 'Karbohidrate' :
+                                 language === 'fr' ? 'Glucides' :
+                                 language === 'de' ? 'Kohlenhydrate' :
+                                 'Carbs'}
+                              </div>
+                            </div>
+                          )}
+                          {item.nutritionalInfo.fat && (
+                            <div className="text-center bg-white rounded p-2">
+                              <div className="font-semibold text-blue-700">{item.nutritionalInfo.fat}</div>
+                              <div className="text-blue-600">
+                                {language === 'ar' ? 'دهون' :
+                                 language === 'fa' ? 'چربی' :
+                                 language === 'ku' ? 'چەوری' :
+                                 language === 'tr' ? 'Yağ' :
+                                 language === 'ur' ? 'چکنائی' :
+                                 language === 'kmr' ? 'Rûn' :
+                                 language === 'es' ? 'Grasa' :
+                                 language === 'ru' ? 'Жиры' :
+                                 language === 'hi' ? 'वसा' :
+                                 language === 'sq' ? 'Yndyrë' :
+                                 language === 'fr' ? 'Lipides' :
+                                 language === 'de' ? 'Fett' :
+                                 'Fat'}
+                              </div>
+                            </div>
+                          )}
+                          {item.nutritionalInfo.fiber && (
+                            <div className="text-center bg-white rounded p-2">
+                              <div className="font-semibold text-blue-700">{item.nutritionalInfo.fiber}</div>
+                              <div className="text-blue-600">
+                                {language === 'ar' ? 'ألياف' :
+                                 language === 'fa' ? 'فیبر' :
+                                 language === 'ku' ? 'فایبەر' :
+                                 language === 'tr' ? 'Lif' :
+                                 language === 'ur' ? 'فائبر' :
+                                 language === 'kmr' ? 'Fîber' :
+                                 language === 'es' ? 'Fibra' :
+                                 language === 'ru' ? 'Клетчатка' :
+                                 language === 'hi' ? 'फाइबर' :
+                                 language === 'sq' ? 'Fibër' :
+                                 language === 'fr' ? 'Fibres' :
+                                 language === 'de' ? 'Ballaststoffe' :
+                                 'Fiber'}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Allergen Information */}
+                    {Array.isArray(item.allergens) && item.allergens.length > 0 && (
+                      <div className="mb-3 p-3 bg-red-50 rounded-lg border-l-4 border-red-300">
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">!</span>
+                          </div>
+                          <span className="text-sm font-semibold text-red-800">
+                            {language === 'ar' ? 'تحذير من المواد المسببة للحساسية' :
+                             language === 'fa' ? 'هشدار آلرژن' :
+                             language === 'ku' ? 'ئاگاداری هەستیاری' :
+                             language === 'tr' ? 'Alerjen Uyarısı' :
+                             language === 'ur' ? 'الرجی کی تنبیہ' :
+                             language === 'kmr' ? 'Hişyariya Alerjîk' :
+                             language === 'es' ? 'Advertencia de Alérgenos' :
+                             language === 'ru' ? 'Предупреждение об аллергенах' :
+                             language === 'hi' ? 'एलर्जी चेतावनी' :
+                             language === 'sq' ? 'Paralajmërim Alergjeni' :
+                             language === 'fr' ? 'Avertissement Allergènes' :
+                             language === 'de' ? 'Allergen-Warnung' :
+                             'Allergen Warning'}
+                          </span>
+                        </div>
+                        <div className={`flex flex-wrap gap-2 ${isRTL ? 'justify-end' : 'justify-start'}`}>
+                          {item.allergens.map((allergen, allergenIndex) => (
+                            <span key={allergenIndex} className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium border border-red-200">
+                              {allergen}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Dietary Tags */}
+                    {Array.isArray(item.dietaryTags) && item.dietaryTags.length > 0 && (
+                      <div className="mb-3">
+                        <div className={`flex flex-wrap gap-2 ${isRTL ? 'justify-end' : 'justify-start'}`}>
+                          {item.dietaryTags.map((tag, tagIndex) => (
+                            <span key={tagIndex} className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium border border-green-200">
+                              {tag === 'Vegetarian' ? 
+                                (language === 'ar' ? 'نباتي' :
+                                 language === 'fa' ? 'گیاهخوار' :
+                                 language === 'ku' ? 'گیاخۆر' :
+                                 language === 'tr' ? 'Vejetaryen' :
+                                 language === 'ur' ? 'سبزی خور' :
+                                 language === 'kmr' ? 'Nebatî' :
+                                 language === 'es' ? 'Vegetariano' :
+                                 language === 'ru' ? 'Вегетарианский' :
+                                 language === 'hi' ? 'शाकाहारी' :
+                                 language === 'sq' ? 'Vegjetarian' :
+                                 language === 'fr' ? 'Végétarien' :
+                                 language === 'de' ? 'Vegetarisch' : 'Vegetarian') :
+                               tag === 'Vegan' ?
+                                (language === 'ar' ? 'نباتي صرف' :
+                                 language === 'fa' ? 'وگان' :
+                                 language === 'ku' ? 'ڤیگان' :
+                                 language === 'tr' ? 'Vegan' :
+                                 language === 'ur' ? 'ویگن' :
+                                 language === 'kmr' ? 'Vegan' :
+                                 language === 'es' ? 'Vegano' :
+                                 language === 'ru' ? 'Веганский' :
+                                 language === 'hi' ? 'वीगन' :
+                                 language === 'sq' ? 'Vegan' :
+                                 language === 'fr' ? 'Végan' :
+                                 language === 'de' ? 'Vegan' : 'Vegan') :
+                               tag === 'Gluten-Free' ?
+                                (language === 'ar' ? 'خالي من الغلوتين' :
+                                 language === 'fa' ? 'بدون گلوتن' :
+                                 language === 'ku' ? 'بەبێ گلۆتین' :
+                                 language === 'tr' ? 'Glutensiz' :
+                                 language === 'ur' ? 'گلوٹن فری' :
+                                 language === 'kmr' ? 'Bê Gluten' :
+                                 language === 'es' ? 'Sin Gluten' :
+                                 language === 'ru' ? 'Без глютена' :
+                                 language === 'hi' ? 'ग्लूटेन मुक्त' :
+                                 language === 'sq' ? 'Pa Gluten' :
+                                 language === 'fr' ? 'Sans Gluten' :
+                                 language === 'de' ? 'Glutenfrei' : 'Gluten-Free') :
+                               tag === 'Halal' ?
+                                (language === 'ar' ? 'حلال' :
+                                 language === 'fa' ? 'حلال' :
+                                 language === 'ku' ? 'حەلال' :
+                                 language === 'tr' ? 'Helal' :
+                                 language === 'ur' ? 'حلال' :
+                                 language === 'kmr' ? 'Helal' :
+                                 language === 'es' ? 'Halal' :
+                                 language === 'ru' ? 'Халяль' :
+                                 language === 'hi' ? 'हलाल' :
+                                 language === 'sq' ? 'Halal' :
+                                 language === 'fr' ? 'Halal' :
+                                 language === 'de' ? 'Halal' : 'Halal') : tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     
                     {/* Handle variants with error handling */}
                     {Array.isArray(item.variants) && item.variants.length > 0 ? (
@@ -4912,5 +5896,6 @@ const FullMenuPage = () => {
 }
 
 export default FullMenuPage
+
 
 
