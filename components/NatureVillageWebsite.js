@@ -470,7 +470,7 @@ const NatureVillageWebsite = () => {
       id: 1,
       src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop',
-      alt: { en: 'Elegant Restaurant Interior', ku: 'ناوەوەی چێشتخانەی جوان', ar: 'داخل المطعم الأنيق', es: 'Elegante Interior del Restaurante', sq: 'Interiori Elegant i Restorantit', fr: 'Intérieur Élégant du Restaurant', de: 'Elegantes Restaurant-Interieur' },
+      alt: { en: 'Elegant Restaurant Interior', ku: 'ناوەوەی چێشتخانەی جوان', ar: 'داخل المطعم الأنيق', es: 'Elegante Interior del Restaurante', sq: 'Interiori Elegant i Restorantit', fr: 'Intérieur Élégant du Restaurant', de: 'Elegantes Restaurant-Interieur', bn: 'মার্জিত রেস্তোরাঁর অভ্যন্তর' },
       category: 'atmosphere',
       tags: ['interior', 'ambiance', 'dining'],
       likes: 127,
@@ -488,7 +488,7 @@ const NatureVillageWebsite = () => {
       id: 2,
       src: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&h=300&fit=crop',
-      alt: { en: 'Authentic Middle Eastern Kebab', ku: 'کەبابی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست', ar: 'كباب شرق أوسطي أصيل', es: 'Auténtico Kebab del Medio Oriente', sq: 'Kabab Autentik i Lindjes së Mesme', fr: 'Kebab Authentique du Moyen-Orient', de: 'Authentischer Nahöstlicher Kebab' },
+      alt: { en: 'Authentic Middle Eastern Kebab', ku: 'کەبابی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست', ar: 'كباب شرق أوسطي أصيل', es: 'Auténtico Kebab del Medio Oriente', sq: 'Kabab Autentik i Lindjes së Mesme', fr: 'Kebab Authentique du Moyen-Orient', de: 'Authentischer Nahöstlicher Kebab', bn: 'খাঁটি মধ্যপ্রাচ্যীয় কাবাব' },
       category: 'dishes',
       tags: ['kebab', 'grilled', 'signature'],
       likes: 245,
@@ -506,7 +506,7 @@ const NatureVillageWebsite = () => {
       id: 3,
       src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop',
-      alt: { en: 'Fresh Hummus with Pita', ku: 'حومسی تازە لەگەڵ نانی پیتا', ar: 'حمص طازج مع الخبز', es: 'Hummus Fresco con Pita', sq: 'Humus i Freskët me Pita', fr: 'Houmous Frais avec Pita', de: 'Frischer Hummus mit Pita' },
+      alt: { en: 'Fresh Hummus with Pita', ku: 'حومسی تازە لەگەڵ نانی پیتا', ar: 'حمص طازج مع الخبز', es: 'Hummus Fresco con Pita', sq: 'Humus i Freskët me Pita', fr: 'Houmous Frais avec Pita', de: 'Frischer Hummus mit Pita', bn: 'পিতার সাথে তাজা হুমুস' },
       category: 'dishes',
       tags: ['hummus', 'appetizer', 'vegetarian'],
       likes: 189,
@@ -523,7 +523,7 @@ const NatureVillageWebsite = () => {
       id: 4,
       src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
-      alt: { en: 'Traditional Middle Eastern Platter', ku: 'پلێتەری نەریتی ڕۆژهەڵاتی ناوەڕاست', ar: 'طبق شرق أوسطي تقليدي', es: 'Plato Tradicional del Medio Oriente', sq: 'Pjatë Tradicionale e Lindjes së Mesme', fr: 'Plat Traditionnel du Moyen-Orient', de: 'Traditionelle Nahöstliche Platte' },
+      alt: { en: 'Traditional Middle Eastern Platter', ku: 'پلێتەری نەریتی ڕۆژهەڵاتی ناوەڕاست', ar: 'طبق شرق أوسطي تقليدي', es: 'Plato Tradicional del Medio Oriente', sq: 'Pjatë Tradicionale e Lindjes së Mesme', fr: 'Plat Traditionnel du Moyen-Orient', de: 'Traditionelle Nahöstliche Platte', bn: 'ঐতিহ্যবাহী মধ্যপ্রাচ্যীয় প্ল্যাটার' },
       category: 'dishes',
       tags: ['traditional', 'mixed', 'authentic'],
       likes: 156,
@@ -541,7 +541,7 @@ const NatureVillageWebsite = () => {
       id: 5,
       src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop',
-      alt: { en: 'Middle Eastern Vegetable Medley', ku: 'تێکەڵەی سەوزەی ڕۆژهەڵاتی ناوەڕاست', ar: 'خليط الخضار الشرق أوسطي', es: 'Mezcla de Vegetales del Medio Oriente', sq: 'Përzierje Perimesh të Lindjes së Mesme', fr: 'Mélange de Légumes du Moyen-Orient', de: 'Nahöstliche Gemüse-Medley' },
+      alt: { en: 'Middle Eastern Vegetable Medley', ku: 'تێکەڵەی سەوزەی ڕۆژهەڵاتی ناوەڕاست', ar: 'خليط الخضار الشرق أوسطي', es: 'Mezcla de Vegetales del Medio Oriente', sq: 'Përzierje Perimesh të Lindjes së Mesme', fr: 'Mélange de Légumes du Moyen-Orient', de: 'Nahöstliche Gemüse-Medley', bn: 'মধ্যপ্রাচ্যীয় সবজির মিশ্রণ' },
       category: 'dishes',
       tags: ['vegetables', 'healthy', 'colorful'],
       likes: 134,
@@ -559,7 +559,7 @@ const NatureVillageWebsite = () => {
       id: 6,
       src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop',
-      alt: { en: 'Traditional Baklava', ku: 'بەقڵاوای نەریتی', ar: 'بقلاوة تقليدية', es: 'Baklava Tradicional', sq: 'Bakllava Tradicionale', fr: 'Baklava Traditionnel', de: 'Traditionelles Baklava' },
+      alt: { en: 'Traditional Baklava', ku: 'بەقڵاوای نەریتی', ar: 'بقلاوة تقليدية', es: 'Baklava Tradicional', sq: 'Bakllava Tradicionale', fr: 'Baklava Traditionnel', de: 'Traditionelles Baklava', bn: 'ঐতিহ্যবাহী বাকলাভা' },
       category: 'desserts',
       tags: ['baklava', 'sweet', 'pastry'],
       likes: 201,
@@ -577,7 +577,7 @@ const NatureVillageWebsite = () => {
       id: 7,
       src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&h=300&fit=crop',
-      alt: { en: 'Middle Eastern Dolma', ku: 'دۆڵمەی ڕۆژهەڵاتی ناوەڕاست', ar: 'دولمة شرق أوسطية', es: 'Dolma del Medio Oriente', sq: 'Dollma e Lindjes së Mesme', fr: 'Dolma du Moyen-Orient', de: 'Nahöstliche Dolma' },
+      alt: { en: 'Middle Eastern Dolma', ku: 'دۆڵمەی ڕۆژهەڵاتی ناوەڕاست', ar: 'دولمة شرق أوسطية', es: 'Dolma del Medio Oriente', sq: 'Dollma e Lindjes së Mesme', fr: 'Dolma du Moyen-Orient', de: 'Nahöstliche Dolma', bn: 'মধ্যপ্রাচ্যীয় দলমা' },
       category: 'dishes',
       tags: ['dolma', 'stuffed', 'traditional'],
       likes: 178,
@@ -595,7 +595,7 @@ const NatureVillageWebsite = () => {
       id: 8,
       src: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=800&h=600&fit=crop',
       thumbnail: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop',
-      alt: { en: 'Hearty Middle Eastern Soup', ku: 'شۆربەی بەهێزی ڕۆژهەڵاتی ناوەڕاست', ar: 'حساء شرق أوسطي مغذي', es: 'Sopa Sustanciosa del Medio Oriente', sq: 'Supë Ushqyese e Lindjes së Mesme', fr: 'Soupe Nourrissante du Moyen-Orient', de: 'Herzhafte Nahöstliche Suppe' },
+      alt: { en: 'Hearty Middle Eastern Soup', ku: 'شۆربەی بەهێزی ڕۆژهەڵاتی ناوەڕاست', ar: 'حساء شرق أوسطي مغذي', es: 'Sopa Sustanciosa del Medio Oriente', sq: 'Supë Ushqyese e Lindjes së Mesme', fr: 'Soupe Nourrissante du Moyen-Orient', de: 'Herzhafte Nahöstliche Suppe', bn: 'হৃদ্যগ্রাহী মধ্যপ্রাচ্যীয় স্যুপ' },
       category: 'dishes',
       tags: ['soup', 'comfort', 'warm'],
       likes: 143,
@@ -3422,6 +3422,144 @@ const NatureVillageWebsite = () => {
         privacy: 'Datenschutzrichtlinie',
         terms: 'Nutzungsbedingungen'
       }
+    },
+    bn: {
+      nav: {
+        home: 'হোম',
+        menu: 'মেনু',
+        about: 'আমাদের সম্পর্কে',
+        gallery: 'গ্যালারি',
+        visit: 'আমাদের দেখুন',
+        reservations: 'সংরক্ষণ',
+        catering: 'ক্যাটারিং',
+        orderOnline: 'অর্ডার'
+      },
+      hero: {
+        title: 'নেচার ভিলেজ',
+        subtitle: 'প্রতিটি কামড়ে মধ্যপ্রাচ্যের স্বাদ',
+        description: 'উষ্ণ, ঐতিহ্যবাহী পরিবেশে খাঁটি মধ্যপ্রাচ্যীয় স্বাদের অভিজ্ঞতা নিন যেখানে প্রতিটি খাবার আমাদের সমৃদ্ধ সাংস্কৃতিক ঐতিহ্য এবং প্রজন্মের পর প্রজন্ম ধরে চলে আসা রন্ধনসম্পর্কীয় ঐতিহ্যের গল্প বলে।',
+        cta1: 'মেনু দেখুন',
+        cta2: 'সংরক্ষণ করুন'
+      },
+      menu: {
+        title: 'আমাদের মেনু',
+        subtitle: 'MenuIQ দ্বারা চালিত - AI-উন্নত ডাইনিং অভিজ্ঞতা',
+        filters: {
+          all: 'সকল আইটেম',
+          traditional: 'ঐতিহ্যবাহী',
+          vegetarian: 'নিরামিষ',
+          vegan: 'ভেগান',
+          soup: 'স্যুপ',
+          dessert: 'ডেজার্ট',
+          popular: 'সবচেয়ে জনপ্রিয়'
+        },
+        viewFull: 'সম্পূর্ণ মেনু দেখুন',
+        noItems: 'এই বিভাগে কোনো আইটেম পাওয়া যায়নি।'
+      },
+      about: {
+        title: 'আমাদের গল্প',
+        badge: 'আমাদের গল্প',
+        subtitle: 'আমাদের সম্প্রদায়ে খাঁটি মধ্যপ্রাচ্যীয় স্বাদ এবং উষ্ণ আতিথেয়তা নিয়ে আসা',
+        content: 'নেচার ভিলেজ একটি স্বপ্ন থেকে জন্ম নিয়েছে বিশ্বের সাথে মধ্যপ্রাচ্যের খাঁটি স্বাদ এবং উষ্ণ আতিথেয়তা ভাগাভাগি করার। আমাদের পারিবারিক রেসিপিগুলি প্রজন্মের পর প্রজন্ম ধরে চলে এসেছে, প্রতিটি খাবার ভালোবাসা এবং আমাদের সাংস্কৃতিক ঐতিহ্যের প্রতি সম্মানের সাথে তৈরি। আমরা সেরা উপাদান সংগ্রহ করি এবং প্রতিটি খাবার একই যত্ন এবং মনোযোগ দিয়ে প্রস্তুত করি যা শতাব্দী ধরে মধ্যপ্রাচ্যীয় আতিথেয়তাকে সংজ্ঞায়িত করেছে।',
+        story1: 'নেচার ভিলেজ আপনার কাছে মধ্যপ্রাচ্যীয় রন্ধনশৈলীর খাঁটি স্বাদ নিয়ে আসতে প্রতিশ্রুতিবদ্ধ একটি উষ্ণ এবং স্বাগত পরিবেশে যেখানে প্রতিটি অতিথি পরিবারের মতো অনুভব করে।',
+        story2: 'আমাদের শেফরা ঐতিহ্যবাহী মধ্যপ্রাচ্যীয় খাবার প্রস্তুত করতে আগ্রহী যা আমাদের সমৃদ্ধ রন্ধনসম্পর্কীয় ঐতিহ্য উদযাপন করে এমন সেরা উপাদান এবং সময়-সম্মানিত রান্নার কৌশল ব্যবহার করে।',
+        quote: 'প্রতিটি খাবার যত্নের সাথে তৈরি এবং মধ্যপ্রাচ্যীয় আতিথেয়তার উষ্ণতার সাথে পরিবেশিত।',
+        experience: 'বছরের অভিজ্ঞতা',
+        recipes: 'ঐতিহ্যবাহী রেসিপি',
+        customers: 'খুশি গ্রাহক',
+        awards: 'পুরস্কার জিতেছে',
+        features: {
+          authentic: 'খাঁটি স্বাদ',
+          fresh: 'তাজা উপাদান',
+          family: 'পারিবারিক রেসিপি',
+          hospitality: 'উষ্ণ আতিথেয়তা'
+        }
+      },
+      gallery: {
+        title: 'আমাদের গ্যালারি',
+        subtitle: 'আমাদের খাবার এবং পরিবেশের একটি দৃশ্যমান যাত্রা',
+        categories: {
+          all: 'সকল ছবি',
+          dishes: 'বিশেষ খাবার',
+          atmosphere: 'রেস্তোরাঁর পরিবেশ',
+          desserts: 'মিষ্টি খাবার'
+        },
+        viewMore: 'আরো দেখুন',
+        loading: 'লোড হচ্ছে...'
+      },
+      visit: {
+        title: 'আমাদের দেখুন',
+        subtitle: 'আমাদের উষ্ণ এবং আমন্ত্রণমূলক স্থানে আসুন',
+        address: 'ঠিকানা',
+        hours: 'খোলার সময়',
+        contact: 'যোগাযোগ',
+        directions: 'দিকনির্দেশনা পান',
+        call: 'কল করুন',
+        weekdays: 'রবি - বৃহস্পতি',
+        weekends: 'শুক্র - শনি',
+        closed: 'বন্ধ',
+        phone: '(470) 639-8696',
+        addressText: '৩৪৭৫ লসন ব্লভিডি, সুওয়ানি, GA ৩০০২৪',
+        status: {
+          open: 'এখন খোলা',
+          closed: 'এখন বন্ধ',
+          closing: 'শীঘ্রই বন্ধ',
+          opening: 'শীঘ্রই খোলা'
+        },
+        busyLevel: {
+          low: 'ব্যস্ত নয়',
+          medium: 'মাঝারি',
+          high: 'ব্যস্ত',
+          'very-high': 'খুব ব্যস্ত'
+        }
+      },
+      catering: {
+        title: 'ক্যাটারিং সেবা',
+        subtitle: 'আপনার বিশেষ অনুষ্ঠানের জন্য খাঁটি মধ্যপ্রাচ্যীয় স্বাদ',
+        description: 'আমাদের ব্যাপক ক্যাটারিং সেবার সাথে আপনার অনুষ্ঠানকে অবিস্মরণীয় করে তুলুন। আমরা ছোট সমাবেশ থেকে বড় উৎসব পর্যন্ত সবকিছুর জন্য খাঁটি মধ্যপ্রাচ্যীয় খাবার সরবরাহ করি।',
+        features: {
+          title: 'কেন আমাদের ক্যাটারিং বেছে নিবেন?',
+          items: [
+            'প্রতিটি খাবার তাজা প্রস্তুত',
+            'ডায়েটারি প্রয়োজনীয়তার জন্য কাস্টমাইজেশন',
+            'পেশাদার ডেলিভারি এবং সেটআপ',
+            'প্রতিযোগিতামূলক মূল্য',
+            'অভিজ্ঞ ক্যাটারিং দল'
+          ]
+        },
+        contact: 'আজই যোগাযোগ করুন',
+        phone: '(470) 639-8696'
+      },
+      footer: {
+        description: 'আপনার টেবিলে খাঁটি মধ্যপ্রাচ্যীয় স্বাদ এবং উষ্ণ আতিথেয়তা নিয়ে আসা। প্রতিটি খাবার আমাদের সমৃদ্ধ সাংস্কৃতিক ঐতিহ্য এবং রন্ধনসম্পর্কীয় উৎকর্ষতার উদযাপন।',
+        quickLinks: 'দ্রুত লিংক',
+        contactInfo: 'যোগাযোগের তথ্য',
+        followUs: 'আমাদের অনুসরণ করুন',
+        openDaily: 'রবি - বৃহস্পতি: ১২:০০ - ২২:০০\nশুক্র - শনি: ১২:০০ - ২৩:০০',
+        poweredBy: 'চালিত',
+        blunari: 'ব্লুনারি',
+        copyright: `© ${new Date().getFullYear()} নেচার ভিলেজ রেস্তোরাঁ। সর্বস্বত্ব সংরক্ষিত।`,
+        privacy: 'গোপনীয়তা নীতি',
+        terms: 'ব্যবহারের শর্তাবলী'
+      },
+      tags: {
+        'signature dish': '🌟 বিশেষ খাবার',
+        vegetarian: '🌱 নিরামিষ',
+        vegan: '🌿 ভেগান',
+        'gluten-free': '🌾 গ্লুটেন মুক্ত',
+        spicy: '🌶️ ঝাল',
+        'chef special': '👨‍🍳 শেফের বিশেষ',
+        popular: '⭐ জনপ্রিয়',
+        'house favorite': '❤️ ঘরের প্রিয়',
+        traditional: '🏛️ ঐতিহ্যবাহী',
+        'comfort food': '🍲 আরামদায়ক খাবার',
+        soup: '🍜 স্যুপ',
+        stew: '🥘 স্ট্যু'
+      },
+      addToCart: 'কার্টে যোগ করুন',
+      loading: 'লোড হচ্ছে...',
+      error: 'কিছু ভুল হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।',
+      currency: '$'
     }
   };
 
