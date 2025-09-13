@@ -5058,7 +5058,7 @@ const FullMenuPage = () => {
                               
                               <div className="relative z-10 flex flex-col sm:flex-row min-h-full">
                                 {/* Left side - Enhanced Image section with proper borders and placement */}
-                                <div className="w-full sm:w-2/3 h-96 sm:h-[600px] lg:h-[700px] relative overflow-hidden flex-shrink-0 rounded-t-2xl sm:rounded-t-none sm:rounded-l-2xl lg:rounded-l-3xl group-hover:scale-105 transition-transform duration-700">
+                                <div className="w-full sm:w-2/5 h-64 sm:h-[350px] lg:h-[400px] relative overflow-hidden flex-shrink-0 rounded-t-2xl sm:rounded-t-none sm:rounded-l-2xl lg:rounded-l-3xl group-hover:scale-105 transition-transform duration-700">
                                   {dish.imageUrl ? (
                                     <div className="relative w-full h-full bg-gradient-to-br from-amber-100 to-orange-100 animate-pulse rounded-t-2xl sm:rounded-t-none sm:rounded-l-2xl lg:rounded-l-3xl overflow-hidden">
                                       <Image
@@ -5103,7 +5103,7 @@ const FullMenuPage = () => {
                                 </div>
                                 
                                 {/* Right side - Enhanced Content with micro-interactions */}
-                                <div className="w-full sm:w-1/3 p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-center flex-grow">
+                                <div className="w-full sm:w-3/5 p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-center flex-grow">
                                   {/* Dish category badge with enhanced styling */}
                                   <div className="mb-4 sm:mb-6 transform transition-all duration-500 group-hover:translate-x-1">
                                     <span 
