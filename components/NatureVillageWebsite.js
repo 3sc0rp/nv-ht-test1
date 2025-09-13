@@ -3469,10 +3469,24 @@ const NatureVillageWebsite = () => {
         customers: 'খুশি গ্রাহক',
         awards: 'পুরস্কার জিতেছে',
         features: {
-          authentic: 'খাঁটি স্বাদ',
-          fresh: 'তাজা উপাদান',
-          family: 'পারিবারিক রেসিপি',
-          hospitality: 'উষ্ণ আতিথেয়তা'
+          chefs: {
+            title: 'বিশেষজ্ঞ শেফ',
+            description: 'খাঁটি মধ্যপ্রাচ্যীয় রন্ধনশৈলী'
+          },
+          ingredients: {
+            title: 'তাজা উপাদান',
+            description: 'প্রতিদিন মানসম্পন্ন সংগ্রহ'
+          },
+          service: {
+            title: 'উষ্ণ সেবা',
+            description: 'মধ্যপ্রাচ্যীয় আতিথেয়তা'
+          }
+        },
+        stats: {
+          happyCustomers: 'খুশি গ্রাহক',
+          authenticDishes: 'খাঁটি খাবার',
+          customerRating: 'গ্রাহক রেটিং',
+          freshIngredients: 'তাজা উপাদান'
         }
       },
       gallery: {
@@ -3541,6 +3555,72 @@ const NatureVillageWebsite = () => {
         copyright: `© ${new Date().getFullYear()} নেচার ভিলেজ রেস্তোরাঁ। সর্বস্বত্ব সংরক্ষিত।`,
         privacy: 'গোপনীয়তা নীতি',
         terms: 'ব্যবহারের শর্তাবলী'
+      },
+      ui: {
+        callNow: 'এখনই কল করুন',
+        call: 'কল',
+        orderOnline: 'অনলাইন অর্ডার',
+        restaurant: 'রেস্তোরাঁ',
+        familyOwned: 'পারিবারিক মালিকানাধীন',
+        halalCertified: 'হালাল সার্টিফাইড',
+        googleReviews: 'গুগল রিভিউ',
+        averageRating: 'গড় রেটিং',
+        fiveStarReviews: '৫-স্টার রিভিউ',
+        verifiedPurchase: 'যাচাইকৃত ক্রয়',
+        trustedReviewer: 'বিশ্বস্ত রিভিউয়ার',
+        foodEnthusiast: 'খাবার উৎসাহী',
+        menu: 'মেনু',
+        reserve: 'সংরক্ষণ',
+        bookTable: 'টেবিল বুক করুন',
+        viewMenu: 'মেনু দেখুন',
+        makeReservation: 'সংরক্ষণ করুন',
+        openStatus: 'এখন খোলা',
+        closedStatus: 'এখন বন্ধ',
+        busyStatus: 'ব্যস্ততার মাত্রা',
+        activity: 'কার্যকলাপ',
+        until: 'পর্যন্ত',
+        quiteBusy: 'বেশ ব্যস্ত'
+      },
+      status: {
+        weAreOpen: 'আমরা খোলা',
+        until: 'পর্যন্ত',
+        activity: 'কার্যকলাপ',
+        busy: 'ব্যস্ত',
+        quiteBusy: 'বেশ ব্যস্ত'
+      },
+      featuredDishes: {
+        title: 'বিশেষ খাবার',
+        subtitle: 'আমাদের সবচেয়ে প্রিয় মধ্যপ্রাচ্যীয় বিশেষত্ব আবিষ্কার করুন'
+      },
+      reviews: {
+        title: 'আমাদের অতিথিরা কী বলেন',
+        subtitle: 'গুগল রিভিউতে ৫৭২+ খুশি গ্রাহকদের দ্বারা ৪.৮/৫ স্টার রেট করা হয়েছে',
+        happyCustomers: 'খুশি গ্রাহক',
+        averageRating: 'গড় রেটিং',
+        fiveStarReviews: '৫-স্টার রিভিউ',
+        ctaTitle: 'আপনার নিজস্ব ৫-স্টার অভিজ্ঞতা তৈরি করতে প্রস্তুত?',
+        ctaSubtitle: '৫৭২+ সন্তুষ্ট গ্রাহকদের সাথে যোগ দিন যারা আমাদের খাঁটি রন্ধনশৈলী পছন্দ করেন! আজই আপনার টেবিল বুক করুন এবং খাঁটি মধ্যপ্রাচ্যীয় আতিথেয়তার পার্থক্য অনুভব করুন।',
+        bookNow: 'এখনই টেবিল বুক করুন',
+        callNow: '(৪৭০) ৩৫০-১০১৯ এ কল করুন'
+      },
+      celebrations: {
+        title: 'আপনার বিশেষ মুহূর্তগুলি উদযাপন করুন',
+        subtitle: 'খাঁটি মধ্যপ্রাচ্যীয় আতিথেয়তার সাথে আপনার জন্মদিন, বার্ষিকী এবং বিশেষ অনুষ্ঠানগুলিকে অবিস্মরণীয় করে তুলুন',
+        birthday: {
+          title: 'জন্মদিন উদযাপন',
+          subtitle: 'মিষ্টি মুহূর্তগুলিকে বিশেষ করে তোলা'
+        },
+        anniversary: {
+          title: 'বার্ষিকী ডিনার',
+          subtitle: 'আপনার ভালোবাসার গল্প উদযাপন করুন'
+        },
+        graduations: 'স্নাতক',
+        engagements: 'বাগদান',
+        familyReunions: 'পারিবারিক পুনর্মিলন',
+        holidays: 'ছুটির দিন',
+        readyToCelebrate: 'উদযাপন করতে প্রস্তুত?',
+        specialReservation: 'বিশেষ সংরক্ষণের জন্য কল করুন',
+        cta: 'আমাদের খাঁটি মধ্যপ্রাচ্যীয় আতিথেয়তা এবং অবিস্মরণীয় স্বাদের সাথে আপনার বিশেষ দিনটিকে অসাধারণ করে তুলুন'
       },
       tags: {
         'signature dish': '🌟 বিশেষ খাবার',
