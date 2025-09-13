@@ -5058,7 +5058,7 @@ const FullMenuPage = () => {
                               
                               <div className="relative z-10 flex flex-col sm:flex-row min-h-full">
                                 {/* Left side - Enhanced Image section with proper borders and placement */}
-                                <div className="w-full sm:w-3/5 h-80 sm:h-[520px] lg:h-[600px] relative overflow-hidden flex-shrink-0 rounded-t-2xl sm:rounded-t-none sm:rounded-l-2xl lg:rounded-l-3xl group-hover:scale-105 transition-transform duration-700">
+                                <div className="w-full sm:w-2/3 h-96 sm:h-[600px] lg:h-[700px] relative overflow-hidden flex-shrink-0 rounded-t-2xl sm:rounded-t-none sm:rounded-l-2xl lg:rounded-l-3xl group-hover:scale-105 transition-transform duration-700">
                                   {dish.imageUrl ? (
                                     <div className="relative w-full h-full bg-gradient-to-br from-amber-100 to-orange-100 animate-pulse rounded-t-2xl sm:rounded-t-none sm:rounded-l-2xl lg:rounded-l-3xl overflow-hidden">
                                       <Image
@@ -5103,7 +5103,7 @@ const FullMenuPage = () => {
                                 </div>
                                 
                                 {/* Right side - Enhanced Content with micro-interactions */}
-                                <div className="w-full sm:w-3/5 p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-center flex-grow">
+                                <div className="w-full sm:w-1/3 p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-center flex-grow">
                                   {/* Dish category badge with enhanced styling */}
                                   <div className="mb-4 sm:mb-6 transform transition-all duration-500 group-hover:translate-x-1">
                                     <span 
@@ -5406,9 +5406,9 @@ const FullMenuPage = () => {
                       <Image
                            src={item.image}
                            alt={`${getText(item.name)}${item.description ? ` - ${getText(item.description)}` : ''}`}
-                           className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110"
+                           className="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
                            width={600}
-                           height={480}
+                           height={576}
                            sizes="(max-width: 1024px) 100vw, 33vw"
                            onError={(e) => {
                              console.warn(`Failed to load image for item ${item.id}:`, item.image);
