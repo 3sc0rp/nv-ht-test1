@@ -3294,6 +3294,7 @@ const FullMenuPage = () => {
       }, 
       price: '$3.99', 
       category: 'drinks_cold', 
+      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3330,6 +3331,7 @@ const FullMenuPage = () => {
       price: '$2.99', 
       category: 'drinks_cold', 
       popular: true, 
+      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3365,6 +3367,7 @@ const FullMenuPage = () => {
       }, 
       price: '$3.99', 
       category: 'drinks_cold', 
+      image: '/Erbil Yogurt Drink.jpg',
       tags: [] 
     },
     { 
@@ -3388,7 +3391,7 @@ const FullMenuPage = () => {
       category: 'drinks_cold', 
       popular: false, 
       tags: ['mint', 'lemon', 'refreshing'],
-      imageUrl: '/House Special Mint Lemonade.jpg' 
+      image: '/House Special Mint Lemonade.jpg' 
     },
 
     // DRINKS (HOT)
@@ -3426,6 +3429,7 @@ const FullMenuPage = () => {
       price: '$3.49', 
       category: 'drinks_hot', 
       popular: true, 
+      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3461,6 +3465,7 @@ const FullMenuPage = () => {
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
+      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3496,6 +3501,7 @@ const FullMenuPage = () => {
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
+      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3532,6 +3538,7 @@ const FullMenuPage = () => {
       price: '$2.99', 
       category: 'drinks_hot', 
       popular: true, 
+      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3567,6 +3574,7 @@ const FullMenuPage = () => {
       }, 
       price: '$2.49', 
       category: 'drinks_hot', 
+      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
 
@@ -3605,6 +3613,7 @@ const FullMenuPage = () => {
       price: '$7.99', 
       category: 'dessert', 
       popular: true, 
+      image: '/baklava.jpg',
       tags: [] 
     },
     { 
