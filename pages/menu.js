@@ -3155,7 +3155,6 @@ const FullMenuPage = () => {
       price: '$3.99', 
       category: 'sides', 
       popular: false, 
-      image: '/pbiryani.jpg',
       tags: ['rice', 'saffron', 'vegetarian']
     },
     { 
@@ -3294,7 +3293,6 @@ const FullMenuPage = () => {
       }, 
       price: '$3.99', 
       category: 'drinks_cold', 
-      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3331,7 +3329,6 @@ const FullMenuPage = () => {
       price: '$2.99', 
       category: 'drinks_cold', 
       popular: true, 
-      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3429,7 +3426,6 @@ const FullMenuPage = () => {
       price: '$3.49', 
       category: 'drinks_hot', 
       popular: true, 
-      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3465,7 +3461,6 @@ const FullMenuPage = () => {
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
-      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3501,7 +3496,6 @@ const FullMenuPage = () => {
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
-      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3538,7 +3532,6 @@ const FullMenuPage = () => {
       price: '$2.99', 
       category: 'drinks_hot', 
       popular: true, 
-      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
     { 
@@ -3574,7 +3567,6 @@ const FullMenuPage = () => {
       }, 
       price: '$2.49', 
       category: 'drinks_hot', 
-      image: '/House Special Mint Lemonade.jpg',
       tags: [] 
     },
 
