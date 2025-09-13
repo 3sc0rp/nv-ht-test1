@@ -3241,6 +3241,75 @@ const FullMenuPage = () => {
       tags: ['rice', 'saffron', 'vegetarian'],
       imageUrl: '/saffron-rice.jpg' 
     },
+    { 
+      id: 1906, 
+      name: { 
+        en: 'Creamy Mashed Potatoes',
+        ar: 'البطاطس المهروسة الكريمية',
+        fa: 'پوره سیب‌زمینی خامه‌ای',
+        ku: 'پەتاتەی وردکراوی کریمی',
+        tr: 'Kremalı Patates Püresi',
+        ur: 'کریمی میش کیے ہوئے آلو',
+        kmr: 'Patatesên Şêranî yên Qurm',
+        es: 'Puré de Papas Cremoso',
+        ru: 'Кремовое картофельное пюре',
+        hi: 'मलाईदार मैश्ड आलू',
+        sq: 'Pure Patate me Krem',
+        fr: 'Purée de Pommes de Terre Crémeuse',
+        de: 'Cremiges Kartoffelpüree'
+      }, 
+      price: '$6.99', 
+      category: 'sides', 
+      popular: false, 
+      tags: ['potato', 'vegetarian', 'creamy'],
+      imageUrl: '/mashed-potatoes.jpg' 
+    },
+    { 
+      id: 1907, 
+      name: { 
+        en: 'Fries',
+        ar: 'بطاطس مقلية',
+        fa: 'سیب‌زمینی سرخ‌کردنی',
+        ku: 'پەتاتەی سوورکراو',
+        tr: 'Patates Kızartması',
+        ur: 'فرائیز',
+        kmr: 'Kartolên Sorkirî',
+        es: 'Papas Fritas',
+        ru: 'Картофель фри',
+        hi: 'फ्रेंच फ्राइज़',
+        sq: 'Patate të Skuqura',
+        fr: 'Frites',
+        de: 'Pommes Frites'
+      }, 
+      price: '$6.99', 
+      category: 'sides', 
+      popular: true, 
+      tags: ['potato', 'fried'],
+      imageUrl: '/Fries.jpg' 
+    },
+    { 
+      id: 1908, 
+      name: { 
+        en: 'Side Salad',
+        ar: 'سلطة جانبية',
+        fa: 'سالاد کنارى',
+        ku: 'سالادی لاوەکی',
+        tr: 'Yan Salata',
+        ur: 'سائیڈ سلاد',
+        kmr: 'Salata Alî',
+        es: 'Ensalada de Acompañamiento',
+        ru: 'Салат гарнир',
+        hi: 'साइड सलाद',
+        sq: 'Sallatë Anësore',
+        fr: 'Salade d\'Accompagnement',
+        de: 'Beilagensalat'
+      }, 
+      price: '$7.99', 
+      category: 'sides', 
+      popular: false, 
+      tags: ['salad', 'fresh', 'vegetarian'],
+      imageUrl: '/side-salad.jpg' 
+    },
 
     // DRINKS (COLD)
     { 
