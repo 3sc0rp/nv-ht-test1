@@ -1653,7 +1653,8 @@ const FullMenuPage = () => {
       price: '$9.99', 
       category: 'appetizers', 
       popular: true, 
-      tags: ['vegetarian', 'vegan'] 
+      tags: ['vegetarian', 'vegan'], 
+      image: '/Baba Ghanoush.jpg' 
     },
     { 
       id: 1004, 
@@ -1726,7 +1727,8 @@ const FullMenuPage = () => {
       price: '$9.99', 
       category: 'appetizers', 
       popular: true, 
-      tags: ['vegetarian', 'vegan'] 
+      tags: ['vegetarian', 'vegan'], 
+      image: '/Falafels.jpg' 
     },
     { 
       id: 1006, 
@@ -1798,7 +1800,8 @@ const FullMenuPage = () => {
       }, 
       price: '$10.99', 
       category: 'appetizers', 
-      tags: [] 
+      tags: [], 
+      image: '/Borek.jpg' 
     },
     { 
       id: 1008, 
@@ -1835,7 +1838,8 @@ const FullMenuPage = () => {
       price: '$24.99', 
       category: 'appetizers', 
       popular: true, 
-      tags: ['vegetarian'] 
+      tags: ['vegetarian'], 
+      image: '/Appetizers Combo.jpg' 
     },
 
     // SOUPS
@@ -3238,6 +3242,7 @@ const FullMenuPage = () => {
       price: '$3.99', 
       category: 'sides', 
       popular: false, 
+      image: '/pbiryani.jpg',
       tags: ['rice', 'saffron', 'vegetarian']
     },
     { 
@@ -3723,6 +3728,7 @@ const FullMenuPage = () => {
       }, 
       price: '$10.99', 
       category: 'dessert', 
+      image: '/Baklava with Saffron Ice Cream.jpg',
       tags: [] 
     },
     { 
@@ -3759,6 +3765,7 @@ const FullMenuPage = () => {
       price: '$6.99', 
       category: 'dessert', 
       popular: true, 
+      image: '/Tiramisu.jpg',
       tags: [] 
     },
     { 
@@ -3792,8 +3799,9 @@ const FullMenuPage = () => {
         fr: 'Dessert délicieux avec des couches de crème et de vermicelles croquants.',
         de: 'Köstliches Dessert mit Schichten aus Sahne und knuspriger Fadennudeln.'
       }, 
-      price: '$5.99', 
+      price: '$6.99', 
       category: 'dessert', 
+      image: '/Khash Khash.jpg',
       tags: [] 
     },
     { 
@@ -3827,8 +3835,9 @@ const FullMenuPage = () => {
         fr: 'Pudding lacté crémeux du Moyen-Orient.',
         de: 'Cremiger nahöstlicher Milchpudding.'
       }, 
-      price: '$5.99', 
+      price: '$6.99', 
       category: 'dessert', 
+      image: '/Oven Rice Pudding.jpg',
       tags: [] 
     },
     { 
@@ -3865,9 +3874,121 @@ const FullMenuPage = () => {
       price: '$2.99', 
       category: 'dessert', 
       popular: true, 
+      image: '/Saffron Ice Cream.jpg',
       tags: [], 
       variants: ['singleScoop'],
       servingFor: { singleScoop: '1' } 
+    },
+    { 
+      id: 2207, 
+      name: { 
+        en: 'Pistachio Cake',
+        ar: 'كعكة الفستق',
+        fa: 'کیک پسته',
+        ku: 'کێکی فیستق',
+        tr: 'Antep Fıstıklı Kek',
+        ur: 'پستہ کیک',
+        kmr: 'Kêka Fistiqê',
+        es: 'Pastel de Pistacho',
+        ru: 'Фисташковый торт',
+        hi: 'पिस्ता केक',
+        sq: 'Tortë me Pistacio',
+        fr: 'Gâteau à la Pistache',
+        de: 'Pistazien-Kuchen'
+      }, 
+      description: { 
+        en: 'Moist and flavorful cake made with premium pistachios.',
+        ar: 'كعكة رطبة ولذيذة مصنوعة من الفستق الممتاز.',
+        fa: 'کیک مرطوب و خوشمزه تهیه شده با پسته درجه یک.',
+        ku: 'کێکێکی نەمی خۆشتام دروستکراو لە فیستقی باش.',
+        tr: 'Premium Antep fıstığı ile yapılmış nemli ve lezzetli kek.',
+        ur: 'اعلیٰ قسم کے پستے سے بنا نمدار اور لذیذ کیک۔',
+        kmr: 'Kêka nem û bi tam a bi fistiqên kalîteyê pêk hatî.',
+        es: 'Pastel húmedo y sabroso hecho con pistachos premium.',
+        ru: 'Влажный и ароматный торт из отборных фисташек.',
+        hi: 'प्रीमियम पिस्ता से बना नम और स्वादिष्ट केक।',
+        sq: 'Tortë e lagësht dhe e shijshme e bërë me pistacio premium.',
+        fr: 'Gâteau moelleux et savoureux aux pistaches premium.',
+        de: 'Saftiger und aromatischer Kuchen aus Premium-Pistazien.'
+      }, 
+      price: '$7.99', 
+      category: 'dessert', 
+      image: '/Pistachio Cake.jpg',
+      tags: [] 
+    },
+    { 
+      id: 2208, 
+      name: { 
+        en: 'Saffron Ice Cream (One Scoop)',
+        ar: 'آيس كريم الزعفران (كرة واحدة)',
+        fa: 'بستنی زعفرانی (یک اسکوپ)',
+        ku: 'بەستەنی زەعفەران (یەک گۆپکە)',
+        tr: 'Safran Dondurmasi (Tek Top)',
+        ur: 'زعفران آئس کریم (ایک اسکوپ)',
+        kmr: 'Qeşa Zeferanî (Yek Gop)',
+        es: 'Helado de Azafrán (Una Bola)',
+        ru: 'Шафрановое мороженое (Один шарик)',
+        hi: 'केसर आइस क्रीम (एक स्कूप)',
+        sq: 'Akullore Shafrani (Një Top)',
+        fr: 'Glace au Safran (Une Boule)',
+        de: 'Safran-Eis (Eine Kugel)'
+      }, 
+      description: { 
+        en: 'Premium saffron-flavored ice cream, rich and aromatic.',
+        ar: 'آيس كريم بنكهة الزعفران الممتاز، غني وعطري.',
+        fa: 'بستنی طعم زعفران درجه یک، غنی و معطر.',
+        ku: 'بەستەنی تامی زەعفەرانی باش، دەوڵەمەند و بۆنخۆش.',
+        tr: 'Premium safran aromalı dondurma, zengin ve aromatik.',
+        ur: 'اعلیٰ قسم کا زعفران ذائقہ آئس کریم، بھرپور اور خوشبودار۔',
+        kmr: 'Qeşa bi tama zeferanî ya kalîteyê, dewlemend û bêhnxweş.',
+        es: 'Helado premium con sabor a azafrán, rico y aromático.',
+        ru: 'Премиальное шафрановое мороженое, насыщенное и ароматное.',
+        hi: 'प्रीमियम केसर स्वाद आइस क्रीम, समृद्ध और सुगंधित।',
+        sq: 'Akullore premium me shije shafrani, e pasur dhe aromatike.',
+        fr: 'Glace premium au safran, riche et aromatique.',
+        de: 'Premium Safran-Eis, reichhaltig und aromatisch.'
+      }, 
+      price: '$4.99', 
+      category: 'dessert', 
+      image: '/Saffron Ice Cream.jpg',
+      tags: [] 
+    },
+    { 
+      id: 2209, 
+      name: { 
+        en: 'Saffron Ice Cream (Two Scoops)',
+        ar: 'آيس كريم الزعفران (كرتان)',
+        fa: 'بستنی زعفرانی (دو اسکوپ)',
+        ku: 'بەستەنی زەعفەران (دوو گۆپکە)',
+        tr: 'Safran Dondurmasi (İki Top)',
+        ur: 'زعفران آئس کریم (دو اسکوپ)',
+        kmr: 'Qeşa Zeferanî (Du Gop)',
+        es: 'Helado de Azafrán (Dos Bolas)',
+        ru: 'Шафрановое мороженое (Два шарика)',
+        hi: 'केसर आइस क्रीम (दो स्कूप)',
+        sq: 'Akullore Shafrani (Dy Topa)',
+        fr: 'Glace au Safran (Deux Boules)',
+        de: 'Safran-Eis (Zwei Kugeln)'
+      }, 
+      description: { 
+        en: 'Double serving of our premium saffron-flavored ice cream.',
+        ar: 'حصة مضاعفة من آيس كريم الزعفران الممتاز.',
+        fa: 'سرو دوتایی از بستنی طعم زعفران درجه یک ما.',
+        ku: 'پشکی دووانەی بەستەنی تامی زەعفەرانی باشمان.',
+        tr: 'Premium safran aromalı dondurmamızın çift porsiyonu.',
+        ur: 'ہماری اعلیٰ قسم کی زعفران آئس کریم کا ڈبل سرونگ۔',
+        kmr: 'Porsiyone duanî ya qeşa me ya bi tama zeferanî ya kalîteyê.',
+        es: 'Doble porción de nuestro helado premium de azafrán.',
+        ru: 'Двойная порция нашего премиального шафранового мороженого.',
+        hi: 'हमारी प्रीमियम केसर आइस क्रीम की दोहरी सर्विंग।',
+        sq: 'Pjesë e dyfishtë e akullorës sonë premium me shije shafrani.',
+        fr: 'Double portion de notre glace premium au safran.',
+        de: 'Doppelte Portion unseres Premium Safran-Eises.'
+      }, 
+      price: '$8.99', 
+      category: 'dessert', 
+      image: '/Saffron Ice Cream.jpg',
+      tags: [] 
     },
 
     // SALADS
@@ -3918,10 +4039,10 @@ const FullMenuPage = () => {
           kmr: 'Protein Zêde Bike'
         }, 
         options: [ 
-          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस' }, price: '$7.99' }, 
-          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन' }, price: '$6.99' }, 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen' }, price: '$8.99' }, 
           { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फلाफेल' }, price: '$4.99' }, 
-          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगا' }, price: '$5.99' } 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen' }, price: '$6.99' } 
         ] 
       } 
     },
@@ -3960,7 +4081,31 @@ const FullMenuPage = () => {
       price: '$14.99', 
       category: 'salads', 
       popular: true, 
-      tags: ['vegetarian', 'vegan'] 
+      image: '/Fattoush Salad.jpg',
+      tags: ['vegetarian', 'vegan'], 
+      addOns: { 
+        title: { 
+          en: 'Add Protein',
+          ar: 'إضافة بروتين',
+          fa: 'اضافه کردن پروتین',
+          ku: 'پرۆتین زیادبکە',
+          tr: 'Protein Ekle',
+          ur: 'پروٹین شامل کریں',
+          kmr: 'Protein Zêde Bike',
+          es: 'Agregar Proteína',
+          ru: 'Добавить белок',
+          hi: 'प्रोटीन जोड़ें',
+          sq: 'Shto Proteinë',
+          fr: 'Ajouter des Protéines',
+          de: 'Protein hinzufügen'
+        }, 
+        options: [ 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen' }, price: '$8.99' }, 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen' }, price: '$6.99' }, 
+          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel' }, price: '$5.99' } 
+        ] 
+      } 
     },
     { 
       id: 1103, 
@@ -3996,7 +4141,30 @@ const FullMenuPage = () => {
       image: '/Shwan Salad.jpg',
       price: '$14.99', 
       category: 'salads', 
-      tags: ['vegetarian', 'vegan'] 
+      tags: ['vegetarian', 'vegan'], 
+      addOns: { 
+        title: { 
+          en: 'Add Protein',
+          ar: 'إضافة بروتين',
+          fa: 'اضافه کردن پروتین',
+          ku: 'پرۆتین زیادبکە',
+          tr: 'Protein Ekle',
+          ur: 'پروٹین شامل کریں',
+          kmr: 'Protein Zêde Bike',
+          es: 'Agregar Proteína',
+          ru: 'Добавить белок',
+          hi: 'प्रोटीन जोड़ें',
+          sq: 'Shto Proteinë',
+          fr: 'Ajouter des Protéines',
+          de: 'Protein hinzufügen'
+        }, 
+        options: [ 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen' }, price: '$8.99' }, 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen' }, price: '$6.99' }, 
+          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel' }, price: '$5.99' } 
+        ] 
+      } 
     },
     { 
       id: 1104, 
@@ -4033,7 +4201,30 @@ const FullMenuPage = () => {
       image: '/Tabbouleh Salad.jpg',
       price: '$14.99', 
       category: 'salads', 
-      tags: ['vegetarian', 'vegan'] 
+      tags: ['vegetarian', 'vegan'], 
+      addOns: { 
+        title: { 
+          en: 'Add Protein',
+          ar: 'إضافة بروتين',
+          fa: 'اضافه کردن پروتین',
+          ku: 'پرۆتین زیادبکە',
+          tr: 'Protein Ekle',
+          ur: 'پروٹین شامل کریں',
+          kmr: 'Protein Zêde Bike',
+          es: 'Agregar Proteína',
+          ru: 'Добавить белок',
+          hi: 'प्रोटीन जोड़ें',
+          sq: 'Shto Proteinë',
+          fr: 'Ajouter des Protéines',
+          de: 'Protein hinzufügen'
+        }, 
+        options: [ 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядina', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen' }, price: '$8.99' }, 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen' }, price: '$6.99' }, 
+          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel' }, price: '$5.99' } 
+        ] 
+      } 
     },
     // Note: Removed duplicate entries to prevent data inconsistencies
   ], []) // Empty dependency array since menu items are static
@@ -5372,6 +5563,17 @@ const FullMenuPage = () => {
           </div>
           </div>
         </main>
+        
+        {/* Food Safety Notice */}
+        <div className="bg-amber-50 border-t border-amber-200 py-6">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="text-center">
+              <p className="text-sm text-gray-600 leading-relaxed">
+                <span className="font-semibold text-gray-800">Notice:</span> Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions.
+              </p>
+            </div>
+          </div>
+        </div>
         
         {/* Footer */}
   {/* Shared Footer */}
