@@ -3163,7 +3163,7 @@ const FullMenuPage = () => {
       category: 'kids', 
       popular: false, 
       tags: ['beef', 'kabab'],
-      imageUrl: '/Kids Erbil Shish Kabab.jpg' 
+      imageUrl: '/kids/Kids Erbil Shish Kabab.jpg' 
     },
     { 
       id: 1904, 
@@ -3201,7 +3201,7 @@ const FullMenuPage = () => {
       category: 'kids', 
       popular: false, 
       tags: ['chicken', 'kabab'],
-      imageUrl: '/Kids Chicken Kabab.jpg' 
+      imageUrl: '/kids/Kids Chicken Kabab.jpg' 
     },
 
     // DRINKS (COLD)
