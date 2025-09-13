@@ -3235,21 +3235,6 @@ const FullMenuPage = () => {
         fr: 'Riz au Safran',
         de: 'Safranreis'
       }, 
-      description: { 
-        en: 'Aromatic basmati rice cooked with premium saffron threads, creating a golden, fragrant side dish that perfectly complements any meal.',
-        ar: 'أرز البسمتي العطري المطبوخ بخيوط الزعفران الفاخرة، مما يخلق طبق جانبي ذهبي عطر يكمل أي وجبة بشكل مثالي.',
-        fa: 'برنج بسمتی معطر که با رشته‌های زعفران درجه یک پخته شده و یک غذای جانبی طلایی و خوشبو ایجاد می‌کند که هر وعده غذایی را عالی تکمیل می‌کند.',
-        ku: 'برنجی بسماتی بۆنخۆش کە بە ڕیشاڵەکانی زەعفەرانی ئەستەم کراوە، دەستخۆشییەکی زێڕین و بۆنخۆش دروست دەکات کە بە تەواوی هەر ژەمێک تەواو دەکات.',
-        tr: 'Premium safran iplikleri ile pişirilen aromatik basmati pilavı, herhangi bir yemeği mükemmel şekilde tamamlayan altın rengi, kokulu bir garnitür oluşturur.',
-        ur: 'خوشبودار بسمتی چاول جو پریمیم زعفران کے دھاگوں کے ساتھ پکایا گیا ہے، ایک سنہری، خوشبودار سائیڈ ڈش بناتا ہے جو کسی بھی کھانے کو بہترین طریقے سے مکمل کرتا ہے۔',
-        kmr: 'Brinca basmatî ya bêhnxweş ku bi bendên zefranî yên kalîteyê ve hatiye çêkirin, xwarineke alî ya zêrîn û bêhnxweş çêdike ku her jimareka xwarinê bi tevahî temam dike.',
-        es: 'Arroz basmati aromático cocido con hebras de azafrán premium, creando un acompañamiento dorado y fragante que complementa perfectamente cualquier comida.',
-        ru: 'Ароматный рис басмати, приготовленный с премиальными нитями шафрана, создающий золотистый, ароматный гарнир, который идеально дополняет любое блюдо.',
-        hi: 'प्रीमियम केसर के धागों के साथ पकाया गया सुगंधित बासमती चावल, एक सुनहरा, सुगंधित साइड डिश बनाता है जो किसी भी भोजन को पूर्ण रूप से पूरा करता है।',
-        sq: 'Oriz basmati aromatik i gatuar me fije shafrani premium, duke krijuar një pjatë anësore të artë dhe të parfumuar që plotëson në mënyrë të përsosur çdo vakt.',
-        fr: 'Riz basmati aromatique cuit avec des filaments de safran premium, créant un accompagnement doré et parfumé qui complète parfaitement tout repas.',
-        de: 'Aromatischer Basmati-Reis, gekocht mit Premium-Safranfäden, der eine goldene, duftende Beilage schafft, die jede Mahlzeit perfekt ergänzt.'
-      }, 
       price: '$3.99', 
       category: 'sides', 
       popular: false, 
