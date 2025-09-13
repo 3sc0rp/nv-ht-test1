@@ -3505,7 +3505,7 @@ const FullMenuPage = () => {
         fr: 'Café arabe traditionnel à la cardamome.',
         de: 'Traditioneller arabischer Kaffee mit Kardamom.'
       }, 
-      price: '$2.99', 
+      price: '$3.49', 
       category: 'drinks_hot', 
       popular: true, 
       tags: [] 
@@ -3541,7 +3541,7 @@ const FullMenuPage = () => {
         fr: 'Mélange traditionnel de café kurde.',
         de: 'Traditionelle kurdische Kaffeemischung.'
       }, 
-      price: '$3.50', 
+      price: '$3.49', 
       category: 'drinks_hot', 
       tags: [] 
     },
@@ -3576,7 +3576,7 @@ const FullMenuPage = () => {
         fr: 'Café turc au goût de pistache.',
         de: 'Türkischer Kaffee mit Pistaziengeschmack.'
       }, 
-      price: '$3.50', 
+      price: '$3.49', 
       category: 'drinks_hot', 
       tags: [] 
     },
@@ -3647,42 +3647,7 @@ const FullMenuPage = () => {
         fr: 'Thé noir persan traditionnel.',
         de: 'Traditioneller persischer schwarzer Tee.'
       }, 
-      price: '$2.50', 
-      category: 'drinks_hot', 
-      tags: [] 
-    },
-    { 
-      id: 2106, 
-      name: { 
-        en: 'Green Tea',
-        ar: 'شاي أخضر',
-        fa: 'چای سبز',
-        ku: 'چایی سەوز',
-        tr: 'Yeşil Çay',
-        ur: 'سبز چائے',
-        kmr: 'Çaya Kesk',
-        es: 'Té Verde',
-        ru: 'Зелёный чай',
-        hi: 'हरी चाय',
-        sq: 'Çaj i Gjelbër',
-        fr: 'Thé Vert'
-      }, 
-      description: { 
-        en: 'Fresh green tea with antioxidants.',
-        ar: 'شاي أخضر طازج مع مضادات الأكسدة.',
-        fa: 'چای سبز تازه با آنتی‌اکسیدان.',
-        ku: 'چایی سەوزی تازە لەگەڵ دژە ئۆکسیدان.',
-        tr: 'Antioksidan içeren taze yeşil çay.',
-        ur: 'اینٹی آکسیڈنٹ کے ساتھ تازہ سبز چائے۔',
-        kmr: 'Çaya kesk a taze bi antîoksîdanan.',
-        es: 'Té verde fresco con antioxidantes.',
-        ru: 'Свежий зелёный чай с антиоксидантами.',
-        hi: 'एंटीऑक्सिडेंट के साथ ताज़ी हरी चाय।',
-        sq: 'Çaj i gjelbër i freskët me antioksidantë.',
-        fr: 'Thé vert frais aux antioxydants.',
-        de: 'Frischer grüner Tee mit Antioxidantien.'
-      }, 
-      price: '$2.50', 
+      price: '$2.49', 
       category: 'drinks_hot', 
       tags: [] 
     },
