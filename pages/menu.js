@@ -3238,8 +3238,7 @@ const FullMenuPage = () => {
       price: '$3.99', 
       category: 'sides', 
       popular: false, 
-      tags: ['rice', 'saffron', 'vegetarian'],
-      imageUrl: '/saffron-rice.jpg' 
+      tags: ['rice', 'saffron', 'vegetarian']
     },
     { 
       id: 1906, 
@@ -3261,8 +3260,7 @@ const FullMenuPage = () => {
       price: '$6.99', 
       category: 'sides', 
       popular: false, 
-      tags: ['potato', 'vegetarian', 'creamy'],
-      imageUrl: '/mashed-potatoes.jpg' 
+      tags: ['potato', 'vegetarian', 'creamy']
     },
     { 
       id: 1907, 
@@ -3308,7 +3306,7 @@ const FullMenuPage = () => {
       category: 'sides', 
       popular: false, 
       tags: ['salad', 'fresh', 'vegetarian'],
-      imageUrl: '/side-salad.jpg' 
+      imageUrl: '/Greek Salad.jpg' 
     },
 
     // DRINKS (COLD)
