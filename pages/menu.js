@@ -5058,7 +5058,7 @@ const FullMenuPage = () => {
                               
                               <div className="relative z-10 flex flex-col sm:flex-row min-h-full">
                                 {/* Left side - Enhanced Image section with proper borders and placement */}
-                                <div className="w-full sm:w-2/5 h-56 sm:h-96 lg:h-[420px] relative overflow-hidden flex-shrink-0 rounded-t-2xl sm:rounded-t-none sm:rounded-l-2xl lg:rounded-l-3xl group-hover:scale-105 transition-transform duration-700">
+                                <div className="w-full sm:w-1/2 h-64 sm:h-[450px] lg:h-[500px] relative overflow-hidden flex-shrink-0 rounded-t-2xl sm:rounded-t-none sm:rounded-l-2xl lg:rounded-l-3xl group-hover:scale-105 transition-transform duration-700">
                                   {dish.imageUrl ? (
                                     <div className="relative w-full h-full bg-gradient-to-br from-amber-100 to-orange-100 animate-pulse rounded-t-2xl sm:rounded-t-none sm:rounded-l-2xl lg:rounded-l-3xl overflow-hidden">
                                       <Image
@@ -5406,9 +5406,9 @@ const FullMenuPage = () => {
                       <Image
                            src={item.image}
                            alt={`${getText(item.name)}${item.description ? ` - ${getText(item.description)}` : ''}`}
-                           className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                           className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                            width={600}
-                           height={320}
+                           height={384}
                            sizes="(max-width: 1024px) 100vw, 33vw"
                            onError={(e) => {
                              console.warn(`Failed to load image for item ${item.id}:`, item.image);
