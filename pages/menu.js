@@ -3684,7 +3684,7 @@ const FullMenuPage = () => {
         fr: 'Pâtisserie sucrée aux couches de noix et de miel.',
         de: 'Süßes Gebäck mit Nuss- und Honigschichten.'
       }, 
-      price: '$6.99', 
+      price: '$7.99', 
       category: 'dessert', 
       popular: true, 
       tags: [] 
@@ -3720,7 +3720,7 @@ const FullMenuPage = () => {
         fr: 'Crème fouettée sucrée et mascarpone riche.',
         de: 'Gesüßte Schlagsahne und reichhaltiger Mascarpone.'
       }, 
-      price: '$5.99', 
+      price: '$6.99', 
       category: 'dessert', 
       popular: true, 
       tags: [] 
@@ -3832,6 +3832,42 @@ const FullMenuPage = () => {
       tags: [], 
       variants: ['singleScoop'],
       servingFor: { singleScoop: '1' } 
+    },
+    { 
+      id: 2206, 
+      name: { 
+        en: 'Baklava w/ Saffron Ice Cream',
+        ar: 'بقلاوة مع آيس كريم الزعفران',
+        fa: 'باقلوا با بستنی زعفرانی',
+        ku: 'بەقلاوا لەگەڵ بەستەنی زەعفەران',
+        tr: 'Safran Dondurmalu Baklava',
+        ur: 'زعفران آئس کریم کے ساتھ بقلاوہ',
+        kmr: 'Beqlawa bi Qeşa Zeferanî',
+        es: 'Baklava con Helado de Azafrán',
+        ru: 'Баклава с шафрановым мороженым',
+        hi: 'केसर आइस क्रीम के साथ बकलावा',
+        sq: 'Bakllava me Akullore Shafrani',
+        fr: 'Baklava avec Glace au Safran',
+        de: 'Baklava mit Safran-Eis'
+      }, 
+      description: { 
+        en: 'Traditional baklava served with aromatic saffron ice cream.',
+        ar: 'بقلاوة تقليدية تُقدم مع آيس كريم الزعفران العطري.',
+        fa: 'باقلوای سنتی همراه با بستنی معطر زعفرانی.',
+        ku: 'بەقلاوای نەریتی لەگەڵ بەستەنی بۆنخۆشی زەعفەران.',
+        tr: 'Aromatik safran dondurması ile servis edilen geleneksel baklava.',
+        ur: 'خوشبودار زعفران آئس کریم کے ساتھ روایتی بقلاوہ۔',
+        kmr: 'Beqlawa kevneşopî bi qeşa bêhnxweş a zeferanî.',
+        es: 'Baklava tradicional servido con helado aromático de azafrán.',
+        ru: 'Традиционная баклава с ароматным шафрановым мороженым.',
+        hi: 'सुगंधित केसर आइस क्रीम के साथ पारंपरिक बकलावा।',
+        sq: 'Bakllava tradicionale e shërbyer me akullore aromatike shafrani.',
+        fr: 'Baklava traditionnel servi avec une glace au safran aromatique.',
+        de: 'Traditionelle Baklava serviert mit aromatischem Safran-Eis.'
+      }, 
+      price: '$10.99', 
+      category: 'dessert', 
+      tags: [] 
     },
 
     // SALADS
