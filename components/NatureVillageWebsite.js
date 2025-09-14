@@ -3670,97 +3670,182 @@ const NatureVillageWebsite = () => {
       nav: {
         home: '홈',
         menu: '메뉴',
+        about: '소개',
         gallery: '갤러리',
+        visit: '방문하기',
+        reservations: '예약',
         catering: '케이터링',
-        contact: '연락처',
-        reservation: '예약'
+        orderOnline: '주문'
       },
       hero: {
         title: '네이처 빌리지',
-        subtitle: '정통 중동 요리',
-        description: '쿠르드족과 중동의 전통적인 맛을 탐험해보세요. 가족이 운영하는 레스토랑에서 신선한 재료와 정통 향신료로 만든 맛있는 요리를 즐기세요.',
-        orderNow: '지금 주문하기',
-        reserveTable: '테이블 예약'
-      },
-      features: {
-        authentic: '정통 요리',
-        family: '가족 운영',
-        fresh: '신선한 재료',
-        traditional: '전통 레시피'
+        subtitle: '한 입마다 중동의 맛',
+        description: '따뜻하고 전통적인 분위기에서 정통 중동 요리를 경험하세요. 모든 요리는 우리의 풍부한 문화 유산과 대대로 전해내려온 요리 전통의 이야기를 담고 있습니다.',
+        cta1: '메뉴 보기',
+        cta2: '예약하기'
       },
       menu: {
         title: '메뉴',
-        subtitle: '정통 중동 요리를 만나보세요',
-        appetizers: '애피타이저',
-        mains: '메인 요리',
-        desserts: '디저트',
-        beverages: '음료',
-        viewFullMenu: '전체 메뉴 보기'
+        subtitle: 'MenuIQ 기반 - AI 향상 다이닝 경험',
+        filters: {
+          all: '전체 메뉴',
+          traditional: '전통 요리',
+          vegetarian: '채식',
+          vegan: '비건',
+          soup: '스프',
+          dessert: '디저트',
+          popular: '인기 메뉴'
+        },
+        viewFull: '전체 메뉴 보기',
+        noItems: '이 카테고리에서 찾은 항목이 없습니다.'
+      },
+      about: {
+        title: '우리 이야기',
+        badge: '우리 이야기',
+        subtitle: '정통 중동 요리와 따뜻한 환대를 지역사회에 전하기',
+        content: '네이처 빌리지는 중동의 정통 맛과 따뜻한 환대를 세상과 나누고자 하는 꿈에서 시작되었습니다. 우리 가족의 레시피는 대대로 전해내려왔으며, 모든 요리는 우리 문화 전통에 대한 사랑과 존경으로 만들어집니다. 최고의 재료를 사용하고 수 세기 동안 중동 환대의 전통을 정의해온 세심한 관심과 배려로 모든 식사를 준비합니다.',
+        story1: '네이처 빌리지는 모든 손님이 가족처럼 느껴지는 따뜻하고 환영하는 분위기에서 정통 중동 요리의 맛을 전해드리는 데 전념하고 있습니다.',
+        story2: '우리 셰프들은 우리의 풍부한 요리 유산을 기념하는 최고의 재료와 전통적인 요리 기법을 사용하여 전통 중동 요리를 준비하는 데 열정을 쏟고 있습니다.',
+        quote: '모든 요리는 정성으로 만들어지고 중동 환대의 따뜻함으로 제공됩니다.',
+        experience: '년 경험',
+        recipes: '전통 레시피',
+        customers: '만족한 고객',
+        awards: '수상 경력',
+        features: {
+          chefs: {
+            title: '전문 셰프',
+            description: '정통 중동 요리'
+          },
+          ingredients: {
+            title: '신선한 재료',
+            description: '매일 엄선된 품질'
+          },
+          service: {
+            title: '따뜻한 서비스',
+            description: '중동식 환대'
+          }
+        },
+        stats: {
+          happyCustomers: '만족한 고객',
+          authenticDishes: '정통 요리',
+          customerRating: '고객 평점',
+          freshIngredients: '신선한 재료'
+        }
       },
       gallery: {
         title: '갤러리',
-        subtitle: '우리의 요리와 분위기를 미리보세요'
+        subtitle: '우리의 요리 유산과 레스토랑 분위기를 시각적으로 둘러보세요'
       },
-      testimonials: {
-        title: '고객 후기',
-        subtitle: '고객들의 의견을 들어보세요'
-      },
-      contact: {
-        title: '연락처',
-        subtitle: '방문하시거나 연락주세요',
+      visit: {
+        title: '방문하기',
+        subtitle: '도심 한복판에서 저희를 만나보세요',
+        hours: '영업시간',
+        contact: '연락처',
         address: '주소',
         phone: '전화',
-        email: '이메일',
-        hours: '영업시간',
+        makeReservation: '예약하기',
         getDirections: '길찾기'
+      },
+      ui: {
+        callNow: '지금 전화',
+        call: '전화',
+        orderOnline: '온라인 주문',
+        restaurant: '레스토랑',
+        familyOwned: '가족 운영',
+        halalCertified: '할랄 인증',
+        googleReviews: '구글 리뷰',
+        averageRating: '평균 평점',
+        fiveStarReviews: '5성 리뷰',
+        verifiedPurchase: '검증된 구매',
+        trustedReviewer: '신뢰할 수 있는 리뷰어',
+        foodEnthusiast: '음식 애호가',
+        menu: '메뉴',
+        reserve: '예약',
+        weAreOpen: '영업 중',
+        currentlyClosed: '현재 휴무',
+        live: '라이브',
+        until: '까지',
+        opens: '오픈',
+        activity: '활동'
+      },
+      reviews: {
+        title: '고객 후기',
+        subtitle: '구글 리뷰에서 572명 이상의 만족한 고객들이 4.8/5점으로 평가',
+        cta: '정통 요리를 사랑하는 572명 이상의 만족한 고객들과 함께하세요! 오늘 테이블을 예약하고 정통 중동 환대가 만드는 차이를 맛보세요.',
+        ctaButton: '지금 테이블 예약하기',
+        ctaTitle: '나만의 5성급 경험을 만들 준비가 되셨나요?',
+        trustIndicators: {
+          googleRating: '4.8★ 구글 평점',
+          totalReviews: '572+ 리뷰'
+        },
+        review1: {
+          name: 'Karen Cardenas',
+          text: '"약 1년 동안 이곳에 오고 있는데, 정말 제가 가장 좋아하는 레스토랑입니다! 음식이 정통이고 정말 맛있어요—모든 요리가 풍미가 가득하고, 특별한 차와 커피가 훌륭하며, 디저트는 어떤 식사든 완벽하게 마무리해줍니다."',
+          location: '검증된 구글 리뷰',
+          time: '1주 전'
+        },
+        review2: {
+          name: 'Ruth Cornea',
+          text: '"오늘 밤 네이처 빌리지 레스토랑에서 멋진 시간을 보냈습니다! 모든 것이 정말 완벽했어요! 음식, 분위기, 장식, 서비스 모든 것이 최고 수준입니다. 정통 중동 요리를 위한 새로운 즐겨찾는 장소가 될 것 같아요."',
+          location: '로컬 가이드 • 29개 리뷰',
+          time: '2개월 전'
+        },
+        review3: {
+          name: '구글 고객',
+          text: '"쿠지라는 밥과 양고기 요리를 주문했는데, 정말 든든하고 맛있었습니다. 피자는 자이로 고기, 치즈, 좋은 소스로 가득 찬 적당한 크기였어요. 정통 중동 요리의 맛이 저와 제 가족에게 정말 인상적이었습니다!"',
+          location: '검증된 구글 리뷰',
+          time: '최근'
+        },
+        badges: {
+          featured: '특별 추천',
+          localGuide: '로컬 가이드',
+          quziLover: '쿠지 애호가'
+        }
+      },
+      featured: {
+        title: '추천 요리',
+        subtitle: '전통 레시피와 현대적 프레젠테이션으로 만든 가장 사랑받는 중동 특선 요리를 만나보세요'
       },
       celebration: {
         title: '특별한 순간을 축하하세요',
-        subtitle: '기념일, 생일, 특별한 날을 위한 완벽한 장소',
-        description: '친밀한 가족 모임부터 대규모 축하행사까지, 네이처 빌리지는 모든 특별한 순간에 적합한 환경을 제공합니다.',
-        features: {
-          customMenu: '맞춤 메뉴',
-          privateSpace: '프라이빗 공간',
-          specialPricing: '특별 가격',
-          eventCoordination: '이벤트 조정'
+        subtitle: '정통 중동 환대로 생일, 기념일, 특별한 날을 잊을 수 없게 만드세요',
+        familyReunions: '가족 모임',
+        graduations: '졸업식',
+        engagements: '약혼식',
+        holidays: '명절',
+        birthday: {
+          title: '생일 축하',
+          tagline: '달콤한 순간을 특별하게',
+          feature1: '무료 생일 디저트',
+          feature2: '생일 축하 노래와 축하 인사',
+          feature3: '기억에 남는 식사 경험',
+          special: '또 다른 해를 축하하기에 완벽한 곳'
         },
-        bookEvent: '이벤트 예약하기'
-      },
-      footer: {
-        description: '신선한 재료와 전통 레시피로 만든 정통 중동 요리를 경험하세요.',
-        quickLinks: '빠른 링크',
-        contact: '연락처',
-        followUs: '팔로우하기',
-        rights: '모든 권리 보유.'
-      },
-      common: {
-        loading: '로딩 중...',
-        error: '오류가 발생했습니다',
-        tryAgain: '다시 시도',
-        close: '닫기',
-        open: '열기',
-        closed: '닫힘',
-        orderOnline: '온라인 주문',
-        callNow: '지금 전화',
-        getDirections: '길찾기',
-        viewMenu: '메뉴 보기',
-        bookTable: '테이블 예약',
-        moderatelyBusy: '적당히 바쁨',
-        veryBusy: '매우 바쁨',
-        notBusy: '한가함',
-        unknown: '알 수 없음'
+        anniversary: {
+          title: '기념일 만찬',
+          tagline: '당신의 사랑 이야기를 축하하세요',
+          feature1: '장미와 함께하는 로맨틱 테이블 세팅',
+          feature2: '2인용 무료 디저트',
+          feature3: '촛불이 켜진 식사 경험',
+          feature4: '개인 맞춤 기념일 카드',
+          special: '25년 이상 함께하셨나요? 특별한 서프라이즈가 기다립니다!'
+        },
+        cta: {
+          title: '축하할 준비가 되셨나요?',
+          subtitle: '정통 중동 환대와 잊을 수 없는 맛으로 특별한 날을 더욱 특별하게 만들어드리겠습니다',
+          reserve: '특별 예약 전화',
+          bookingAdvice: '최고의 축하 경험을 위해 48시간 전에 예약하세요'
+        }
       },
       tags: {
-        vegetarian: '🥬 채식주의자',
-        vegan: '🌱 비건',
-        'gluten-free': '🌾 글루텐 프리',
+        vegetarian: '🌱 채식',
+        vegan: '� 비건',
         spicy: '🌶️ 매운맛',
-        'chef special': '👨‍🍳 셰프 특선',
-        popular: '⭐ 인기',
-        'house favorite': '❤️ 하우스 페이버릿',
+        sweet: '🍯 달콤함',
         traditional: '🏛️ 전통',
+        grilled: '🔥 구이',
         'comfort food': '🍲 컴포트 푸드',
-        soup: '🍜 수프',
+        soup: '🍜 스프',
         stew: '🥘 스튜'
       },
       addToCart: '장바구니에 추가',
