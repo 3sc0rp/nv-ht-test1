@@ -298,7 +298,8 @@ const FullMenuPage = () => {
         fr: 'Biryani Parda',
         de: 'Parda Biryani',
         bn: 'পরদা বিরিয়ানি',
-        ko: '파르다 비리야니'
+        ko: '파르다 비리야니',
+        bs: 'Parda Biryani'
       }, 
       category: {
         en: 'Specialty',
@@ -315,7 +316,8 @@ const FullMenuPage = () => {
         fr: 'Spécialités',
         de: 'Spezialitäten',
         bn: 'বিশেষত্ব',
-        ko: '특선요리'
+        ko: '특선요리',
+        bs: 'Specijalitet'
       }, 
       placeholder: 'biryani', 
       imageUrl: '/pbiryani.jpg',
@@ -334,7 +336,8 @@ const FullMenuPage = () => {
         fr: 'Plat traditionnel de riz en couches avec des épices aromatiques et de la viande tendre',
         de: 'Traditionelles Schichtreisgericht mit aromatischen Gewürzen und zartem Fleisch',
         bn: 'সুগন্ধি মশলা এবং কোমল মাংসের সাথে ঐতিহ্যবাহী স্তরযুক্ত ভাতের খাবার',
-        ko: '향긋한 향신료와 부드러운 고기를 넣은 전통적인 층층이 쌓은 쌀 요리'
+        ko: '향긋한 향신료와 부드러운 고기를 넣은 전통적인 층층이 쌓은 쌀 요리',
+        bs: 'Tradicionalno jelo od rižo sa aromatskim začinima i nježnim mesom u slojevima'
       },
       color: '#FF6B6B'
     },

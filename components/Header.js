@@ -168,6 +168,16 @@ const Header = ({ currentPage = '' }) => {
         reservations: '예약',
         catering: '케이터링',
         orderOnline: '온라인 주문'
+      },
+      bs: {
+        home: 'Početna',
+        menu: 'Meni',
+        about: 'O nama',
+        gallery: 'Galerija',
+        visit: 'Posjetite nas',
+        reservations: 'Rezervacije',
+        catering: 'Catering',
+        orderOnline: 'Naruči online'
       }
     };
 
@@ -552,6 +562,7 @@ const Header = ({ currentPage = '' }) => {
                             {code === 'de' && '🇩🇪'}
                             {code === 'bn' && '🇧🇩'}
                             {code === 'ko' && '🇰🇷'}
+                            {code === 'bs' && '🇧🇦'}
                           </span>
                           {lang.name}
                         </span>

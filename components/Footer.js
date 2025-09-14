@@ -261,6 +261,22 @@ const Footer = () => {
         reservations: '예약',
         catering: '케이터링',
         gallery: '갤러리'
+      },
+      bs: {
+        description: 'Donosimo autentične okuse i toplu gostoljubivost Bliskog istoka na vaš sto. Svako jelo je proslava našeg bogatog kulturnog naslijeđa i kulinarskog izvrsnosti.',
+        quickLinks: 'Brzi linkovi',
+        contactInfo: 'Kontakt informacije',
+        openDaily: 'NED - ČET: 12:00 - 22:00\nPET - SUB: 12:00 - 23:00',
+        privacy: 'Politika privatnosti',
+        terms: 'Uslovi korištenja',
+        copyright: '© 2025 Nature Village restoran. Sva prava zadržana.',
+        poweredBy: 'Pokretano od',
+        blunari: 'Blunari',
+        home: 'Početna',
+        menu: 'Meni',
+        reservations: 'Rezervacije',
+        catering: 'Catering',
+        gallery: 'Galerija'
       }
     };
 

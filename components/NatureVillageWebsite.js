@@ -680,7 +680,8 @@ const NatureVillageWebsite = () => {
         fr: 'Quzi',
         de: 'Quzi',
         bn: 'কুজি',
-        ko: '쿠지'
+        ko: '쿠지',
+        bs: 'Quzi'
       },
       description: {
         en: 'A traditional Iraqi dish made with saffron rice and lamb shank, topped with special tomato sauce, and garnished with toasted almonds and fresh parsley, offers a unique culinary experience.',
@@ -695,7 +696,8 @@ const NatureVillageWebsite = () => {
         fr: 'Un plat irakien traditionnel fait avec du riz au safran et du jarret d\'agneau, garni de sauce tomate spéciale et décoré d\'amandes grillées et de persil frais, offre une expérience culinaire unique.',
         de: 'Ein traditionelles irakisches Gericht aus Safranreis und Lammhaxe, mit spezieller Tomatensauce überzogen und mit gerösteten Mandeln und frischer Petersilie garniert, bietet ein einzigartiges kulinarisches Erlebnis.',
         bn: 'জাফরানি চাল এবং ভেড়ার মাংস দিয়ে তৈরি একটি ঐতিহ্যবাহী ইরাকি খাবার, বিশেষ টমেটো সস দিয়ে পরিবেশিত এবং ভাজা বাদাম ও তাজা পার্সলে দিয়ে সাজানো, একটি অনন্য রান্নার অভিজ্ঞতা প্রদান করে।',
-        ko: '사프란 쌀과 양 정강이로 만든 전통 이라크 요리로, 특별한 토마토 소스로 덮고 구운 아몬드와 신선한 파슬리로 장식하여 독특한 요리 경험을 제공합니다.'
+        ko: '사프란 쌀과 양 정강이로 만든 전통 이라크 요리로, 특별한 토마토 소스로 덮고 구운 아몬드와 신선한 파슬리로 장식하여 독특한 요리 경험을 제공합니다.',
+        bs: 'Tradicionalno iračko jelo napravljeno sa šafranskim rižom i jagnještinom, prekriveno posebnim sosem od paradajza i ukrašeno pečenim bademima i svježim peršinom, pruža jedinstveno kulinarske iskustvo.'
       },
       price: '$26.99',
       category: 'specialty',
@@ -718,7 +720,8 @@ const NatureVillageWebsite = () => {
         fr: 'Plateau de Branzino Grillé',
         de: 'Gegrillter Branzino-Teller',
         bn: 'গ্রিলড ব্রানজিনো প্ল্যাটার',
-        ko: '구운 브란지노 플래터'
+        ko: '구운 브란지노 플래터',
+        bs: 'Pljeskavica Grilled Branzino'
       },
       description: {
         en: 'Grilled European sea bass fillets, served with sumac-marinated onions, fresh salad, grilled tomato, grilled lemon, and creamy mashed potatoes, is a delightful choice.',
@@ -733,7 +736,8 @@ const NatureVillageWebsite = () => {
         fr: 'Filets de bar européen grillés, servis avec des oignons marinés au sumac, salade fraîche, tomate grillée, citron grillé et purée de pommes de terre crémeuse, c\'est un choix délicieux.',
         de: 'Gegrillte europäische Seebarschfilets, serviert mit Sumach-marinierten Zwiebeln, frischem Salat, gegrillten Tomaten, gegrillter Zitrone und cremigem Kartoffelpüree, ist eine köstliche Wahl.',
         bn: 'গ্রিলড ইউরোপীয় সি বাস ফিলেট, সুমাক-মারিনেটেড পেঁয়াজ, তাজা সালাদ, গ্রিলড টমেটো, গ্রিলড লেবু এবং ক্রিমি ম্যাশড আলু দিয়ে পরিবেশিত, এটি একটি আনন্দদায়ক পছন্দ।',
-        ko: '구운 유럽산 바다농어 필레를 수막에 절인 양파, 신선한 샐러드, 구운 토마토, 구운 레몬, 크리미한 으깬 감자와 함께 제공하는 맛있는 선택입니다.'
+        ko: '구운 유럽산 바다농어 필레를 수막에 절인 양파, 신선한 샐러드, 구운 토마토, 구운 레몬, 크리미한 으깬 감자와 함께 제공하는 맛있는 선택입니다.',
+        bs: 'Grilled evropski branzino fileti, posluženi sa lukom mariniranim u sumaku, svježom salatom, grilled paradajzom, grilled limunom i kremastim pireom od krompira, predstavljaju divnu opciju.'
       },
       price: '$37.99',
       category: 'specialty',
@@ -756,7 +760,8 @@ const NatureVillageWebsite = () => {
         fr: 'Shish Kebab d\'Erbil',
         de: 'Erbil Shish Kebab',
         bn: 'এরবিল শিশ কাবাব',
-        ko: '에르빌 시시 카밥'
+        ko: '에르빌 시시 카밥',
+        bs: 'Erbil Shish Kabab'
       },
       description: {
         en: 'A kabab made with a mix of lamb and beef, grilled to perfection. It is served with saffron rice, seasonal salad, sumac onions, and grilled vegetables.',
@@ -771,7 +776,8 @@ const NatureVillageWebsite = () => {
         fr: 'Un kebab fait avec un mélange d\'agneau et de bœuf, grillé à la perfection. Servi avec du riz au safran, salade de saison, oignons au sumac et légumes grillés.',
         de: 'Ein Kebab aus einer Mischung von Lamm und Rind, perfekt gegrillt. Serviert mit Safranreis, Salat der Saison, Sumach-Zwiebeln und gegrilltem Gemüse.',
         bn: 'ভেড়া এবং গরুর মাংসের মিশ্রণ দিয়ে তৈরি একটি কাবাব, নিখুঁতভাবে গ্রিল করা। জাফরানি চাল, মৌসুমি সালাদ, সুমাক পেঁয়াজ এবং গ্রিলড সবজি দিয়ে পরিবেশিত।',
-        ko: '양고기와 소고기를 섞어 만든 카밥으로, 완벽하게 구워집니다. 사프란 쌀, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공됩니다.'
+        ko: '양고기와 소고기를 섞어 만든 카밥으로, 완벽하게 구워집니다. 사프란 쌀, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공됩니다.',
+        bs: 'Ćevapi od miješane janjetine i govedine, savršeno grillovan. Služi se sa šafranskim rižom, sezonskom salatom, sumak lukom i grillovanim povrćem.'
       },
       price: '$23.99',
       category: 'grill',
@@ -3857,6 +3863,193 @@ const NatureVillageWebsite = () => {
       addToCart: '장바구니에 추가',
       loading: '로딩 중...',
       error: '문제가 발생했습니다. 다시 시도해주세요.',
+      currency: '$'
+    },
+    bs: {
+      nav: {
+        home: 'Početna',
+        menu: 'Meni',
+        about: 'O nama',
+        gallery: 'Galerija',
+        visit: 'Posjetite nas',
+        reservations: 'Rezervacije',
+        catering: 'Catering',
+        orderOnline: 'Naručite'
+      },
+      hero: {
+        title: 'Nature Village',
+        subtitle: 'Okus Bliskog istoka u svakom zalogaju',
+        description: 'Doživite autentične okuse Bliskog istoka u toplom, tradicionalnom ambijentu gdje svako jelo priča priču o našem bogatom kulturnom naslijeđu i kulinarskim tradicijama prenošenim kroz generacije.',
+        cta1: 'Pogledaj meni',
+        cta2: 'Rezerviši mjesto'
+      },
+      menu: {
+        title: 'Naš meni',
+        subtitle: 'Pokretano od MenuIQ - AI poboljšano iskustvo objedovanja',
+        filters: {
+          all: 'Svi proizvodi',
+          traditional: 'Tradicionalno',
+          vegetarian: 'Vegetarijanski',
+          vegan: 'Veganski',
+          soup: 'Supe',
+          dessert: 'Deserti',
+          popular: 'Najpopularniji'
+        },
+        viewFull: 'Pogledaj cijeli meni',
+        noItems: 'Nema stavki u ovoj kategoriji.'
+      },
+      about: {
+        title: 'Naša priča',
+        badge: 'Naša priča',
+        subtitle: 'Donosimo autentične okuse Bliskog istoka i toplu gostoljubivost našoj zajednici',
+        content: 'Nature Village je rođen iz sna da podijelimo autentične okuse i toplu gostoljubivost Bliskog istoka sa svijetom. Naši porodični recepti prenošeni su kroz generacije, svako jelo pripravljeno s ljubavlju i poštovanjem naših kulturnih tradicija. Nabavljamo najkvalitetnije sastojke i pripremamo svaki obrok s istom pažnjom i brigom koja definiše gostoljubivost Bliskog istoka stoljećima.',
+        story1: 'Nature Village posvećen je donošenju autentičnih okusa kuhinje Bliskog istoka u toplom i dobrodošlom ambijentu gdje se svaki gost osjeća kao porodica.',
+        story2: 'Naši kuvari strastveno pripremaju tradicionalna jela Bliskog istoka koristenajkvalitetnije sastojke i vremenom provjerene tehnike kuvanja koje slave naše bogato kulinarske naslijeđe.',
+        quote: 'Svako jelo je pripravljeno s pažnjom i služeno s toplinom gostoljubivosti Bliskog istoka.',
+        experience: 'godine iskustva',
+        recipes: 'tradicionalni recepti',
+        customers: 'zadovoljni kupci',
+        awards: 'osvojene nagrade',
+        features: {
+          chefs: {
+            title: 'Stručni kuvari',
+            description: 'Autentična kuhinja Bliskog istoka'
+          },
+          ingredients: {
+            title: 'Svježi sastojci',
+            description: 'Kvaliteta nabavljena dnevno'
+          },
+          service: {
+            title: 'Topla usluga',
+            description: 'Gostoljubivost Bliskog istoka'
+          }
+        },
+        stats: {
+          happyCustomers: 'zadovoljni kupci',
+          authenticDishes: 'autentična jela',
+          customerRating: 'ocjena kupaca',
+          freshIngredients: 'svježi sastojci'
+        }
+      },
+      gallery: {
+        title: 'Galerija',
+        subtitle: 'Vizuelno putovanje kroz naše kulinarske naslijeđe i atmosferu restorana'
+      },
+      visit: {
+        title: 'Posjetite nas',
+        subtitle: 'Pronađite nas u srcu grada',
+        hours: 'Radno vrijeme',
+        contact: 'Kontakt informacije',
+        address: 'Adresa',
+        phone: 'Telefon',
+        makeReservation: 'Rezerviši',
+        getDirections: 'Upute za dolazak'
+      },
+      ui: {
+        callNow: 'Pozovi sada',
+        call: 'Pozovi',
+        orderOnline: 'Naruči online',
+        restaurant: 'Restoran',
+        familyOwned: 'Porodični restoran',
+        halalCertified: 'Halal certificiran',
+        googleReviews: 'Google recenzije',
+        averageRating: 'Prosječna ocjena',
+        fiveStarReviews: '5-zvjezdane recenzije',
+        verifiedPurchase: 'Potvrđena kupovina',
+        trustedReviewer: 'Povjerljiv recenzent',
+        foodEnthusiast: 'Ljubitelj hrane',
+        menu: 'Meni',
+        reserve: 'Rezerviši',
+        weAreOpen: 'Otvoreni smo',
+        currentlyClosed: 'Trenutno zatvoreni',
+        live: 'UŽIVO',
+        until: 'do',
+        opens: 'otvara',
+        activity: 'aktivnost'
+      },
+      reviews: {
+        title: 'Što naši gosti kažu',
+        subtitle: 'Ocjena 4.8/5 zvjezdica od 572+ zadovoljnih kupaca na Google recenzijama',
+        cta: 'Pridružite se sa 572+ zadovoljnih kupaca koji vole našu autentičnu kuhinju! Rezervirajte svoj stol danas i okušajte razliku koju pravi autentična gostoljubivost Bliskog istoka.',
+        ctaButton: 'Rezerviraj stol sada',
+        ctaTitle: 'Spremni za kreiranje vlastitog 5-zvjezdanog iskustva?',
+        trustIndicators: {
+          googleRating: '4.8★ Google ocjena',
+          totalReviews: '572+ recenzije'
+        },
+        review1: {
+          name: 'Karen Cardenas',
+          text: '"Dolazim ovdje već godinu dana i to je definitivno moj omiljeni restoran! Hrana je autentična i apsolutno ukusna—svako jelo je puno okusa, specijalni čajevi i kafe su nevjerojatn, a deserti su savršen završetak bilo kojeg obroka."',
+          location: 'Potvrđena Google recenzija',
+          time: 'prije 1 sedmicu'
+        },
+        review2: {
+          name: 'Ruth Cornea',
+          text: '"Večeras smo se divno proveli u Nature Village restoranu! Sve je bilo apsolutno savršeno! Hrana, atmosfera, dekor i usluga su sve na vrhunskom nivou. Ovo je definitivno naše novo omiljeno mjesto za autentičnu kuhinju Bliskog istoka."',
+          location: 'Lokalni vodič • 29 recenzija',
+          time: 'prije 2 mjeseca'
+        },
+        review3: {
+          name: 'Google kupac',
+          text: '"Naručio sam Quzi, jelo od riže i janjetine, bilo je vrlo zasitno i ukusno. Pizza je bila dobre veličine puna mesa giros, sira i lijepog sosa. Autentični okusi Bliskog istoka stvarno su impresionirali mene i moju porodicu!"',
+          location: 'Potvrđena Google recenzija',
+          time: 'nedavno'
+        },
+        badges: {
+          featured: 'ISTAKNUTO',
+          localGuide: 'LOKALNI VODIČ',
+          quziLover: 'LJUBITELJ QUZI'
+        }
+      },
+      featured: {
+        title: 'Istaknuta jela',
+        subtitle: 'Otkrijte naša najvoljenija jela Bliskog istoka, pripremljena tradicionalnim receptima i modernom prezentacijom'
+      },
+      celebration: {
+        title: 'Proslavite svoje posebne trenutke',
+        subtitle: 'Učinite svoje rođendane, godišnjice i posebne prilike nezaboravnim autentičnom gostoljubivošću Bliskog istoka',
+        familyReunions: 'Porodični okupljanja',
+        graduations: 'Diplomiranja',
+        engagements: 'Verenice',
+        holidays: 'Praznici',
+        birthday: {
+          title: 'Proslava rođendana',
+          tagline: 'Slatki trenuci učinjeni posebnima',
+          feature1: 'Besplatni rođendanski desert',
+          feature2: 'Pesma srećan rođendan i čestitke',
+          feature3: 'Nezaboravno iskustvo objedovanja',
+          special: 'Savršeno za proslavu još jedne godine života'
+        },
+        anniversary: {
+          title: 'Godišnjice večere',
+          tagline: 'Proslavite svoju priču ljubavi',
+          feature1: 'Romantičan stol s ružama',
+          feature2: 'Besplatni desert za dvoje',
+          feature3: 'Večera pri svijećama',
+          feature4: 'Personalizovana čestitka za godišnjicu',
+          special: '25+ godina zajedno? Posebno iznenađenje vas čeka!'
+        },
+        cta: {
+          title: 'Spremni za proslavu?',
+          subtitle: 'Dozvolite nam da vaš poseban dan učinimo izuzetnim autentičnom gostoljubivošću Bliskog istoka i nezaboravnim okusima',
+          reserve: 'Pozovite za posebnu rezervaciju',
+          bookingAdvice: 'Rezervirajte 48 sati unaprijed za najbolje iskustvo proslave'
+        }
+      },
+      tags: {
+        vegetarian: '🌱 Vegetarijanski',
+        vegan: '🌿 Veganski',
+        spicy: '🌶️ Ljut',
+        sweet: '🍯 Sladak',
+        traditional: '🏛️ Tradicionalan',
+        grilled: '🔥 Na žaru',
+        'comfort food': '🍲 Comfort hrana',
+        soup: '🍜 Supa',
+        stew: '🥘 Gulaš'
+      },
+      addToCart: 'Dodaj u korpu',
+      loading: 'Učitava...',
+      error: 'Dogodila se greška. Molimo pokušajte ponovo.',
       currency: '$'
     }
   };
