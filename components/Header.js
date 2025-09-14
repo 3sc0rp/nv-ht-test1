@@ -178,6 +178,16 @@ const Header = ({ currentPage = '' }) => {
         reservations: 'Rezervacije',
         catering: 'Catering',
         orderOnline: 'Naruči online'
+      },
+      zh: {
+        home: '首页',
+        menu: '菜单',
+        about: '关于我们',
+        gallery: '图库',
+        visit: '访问我们',
+        reservations: '预订',
+        catering: '餐饮服务',
+        orderOnline: '在线订购'
       }
     };
 

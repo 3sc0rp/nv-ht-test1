@@ -681,7 +681,8 @@ const NatureVillageWebsite = () => {
         de: 'Quzi',
         bn: 'কুজি',
         ko: '쿠지',
-        bs: 'Quzi'
+        bs: 'Quzi',
+        zh: '库兹'
       },
       description: {
         en: 'A traditional Iraqi dish made with saffron rice and lamb shank, topped with special tomato sauce, and garnished with toasted almonds and fresh parsley, offers a unique culinary experience.',
@@ -697,7 +698,8 @@ const NatureVillageWebsite = () => {
         de: 'Ein traditionelles irakisches Gericht aus Safranreis und Lammhaxe, mit spezieller Tomatensauce überzogen und mit gerösteten Mandeln und frischer Petersilie garniert, bietet ein einzigartiges kulinarisches Erlebnis.',
         bn: 'জাফরানি চাল এবং ভেড়ার মাংস দিয়ে তৈরি একটি ঐতিহ্যবাহী ইরাকি খাবার, বিশেষ টমেটো সস দিয়ে পরিবেশিত এবং ভাজা বাদাম ও তাজা পার্সলে দিয়ে সাজানো, একটি অনন্য রান্নার অভিজ্ঞতা প্রদান করে।',
         ko: '사프란 쌀과 양 정강이로 만든 전통 이라크 요리로, 특별한 토마토 소스로 덮고 구운 아몬드와 신선한 파슬리로 장식하여 독특한 요리 경험을 제공합니다.',
-        bs: 'Tradicionalno iračko jelo napravljeno sa šafranskim rižom i jagnještinom, prekriveno posebnim sosem od paradajza i ukrašeno pečenim bademima i svježim peršinom, pruža jedinstveno kulinarske iskustvo.'
+        bs: 'Tradicionalno iračko jelo napravljeno sa šafranskim rižom i jagnještinom, prekriveno posebnim sosem od paradajza i ukrašeno pečenim bademima i svježim peršinom, pruža jedinstveno kulinarske iskustvo.',
+        zh: '传统伊拉克菜肴，采用藏红花米饭和羊腿制作，淋上特制番茄酱，配以烤杏仁和新鲜欧芹装饰，提供独特的烹饪体验。'
       },
       price: '$26.99',
       category: 'specialty',
@@ -721,7 +723,8 @@ const NatureVillageWebsite = () => {
         de: 'Gegrillter Branzino-Teller',
         bn: 'গ্রিলড ব্রানজিনো প্ল্যাটার',
         ko: '구운 브란지노 플래터',
-        bs: 'Pljeskavica Grilled Branzino'
+        bs: 'Pljeskavica Grilled Branzino',
+        zh: '烤布兰齐诺拼盘'
       },
       description: {
         en: 'Grilled European sea bass fillets, served with sumac-marinated onions, fresh salad, grilled tomato, grilled lemon, and creamy mashed potatoes, is a delightful choice.',
@@ -737,7 +740,8 @@ const NatureVillageWebsite = () => {
         de: 'Gegrillte europäische Seebarschfilets, serviert mit Sumach-marinierten Zwiebeln, frischem Salat, gegrillten Tomaten, gegrillter Zitrone und cremigem Kartoffelpüree, ist eine köstliche Wahl.',
         bn: 'গ্রিলড ইউরোপীয় সি বাস ফিলেট, সুমাক-মারিনেটেড পেঁয়াজ, তাজা সালাদ, গ্রিলড টমেটো, গ্রিলড লেবু এবং ক্রিমি ম্যাশড আলু দিয়ে পরিবেশিত, এটি একটি আনন্দদায়ক পছন্দ।',
         ko: '구운 유럽산 바다농어 필레를 수막에 절인 양파, 신선한 샐러드, 구운 토마토, 구운 레몬, 크리미한 으깬 감자와 함께 제공하는 맛있는 선택입니다.',
-        bs: 'Grilled evropski branzino fileti, posluženi sa lukom mariniranim u sumaku, svježom salatom, grilled paradajzom, grilled limunom i kremastim pireom od krompira, predstavljaju divnu opciju.'
+        bs: 'Grilled evropski branzino fileti, posluženi sa lukom mariniranim u sumaku, svježom salatom, grilled paradajzom, grilled limunom i kremastim pireom od krompira, predstavljaju divnu opciju.',
+        zh: '烤制欧洲鲈鱼片，配以漆树腌制洋葱、新鲜沙拉、烤番茄、烤柠檬和奶油土豆泥，是美妙的选择。'
       },
       price: '$37.99',
       category: 'specialty',
@@ -761,7 +765,8 @@ const NatureVillageWebsite = () => {
         de: 'Erbil Shish Kebab',
         bn: 'এরবিল শিশ কাবাব',
         ko: '에르빌 시시 카밥',
-        bs: 'Erbil Shish Kabab'
+        bs: 'Erbil Shish Kabab',
+        zh: '埃尔比勒烤肉串'
       },
       description: {
         en: 'A kabab made with a mix of lamb and beef, grilled to perfection. It is served with saffron rice, seasonal salad, sumac onions, and grilled vegetables.',
@@ -777,7 +782,8 @@ const NatureVillageWebsite = () => {
         de: 'Ein Kebab aus einer Mischung von Lamm und Rind, perfekt gegrillt. Serviert mit Safranreis, Salat der Saison, Sumach-Zwiebeln und gegrilltem Gemüse.',
         bn: 'ভেড়া এবং গরুর মাংসের মিশ্রণ দিয়ে তৈরি একটি কাবাব, নিখুঁতভাবে গ্রিল করা। জাফরানি চাল, মৌসুমি সালাদ, সুমাক পেঁয়াজ এবং গ্রিলড সবজি দিয়ে পরিবেশিত।',
         ko: '양고기와 소고기를 섞어 만든 카밥으로, 완벽하게 구워집니다. 사프란 쌀, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공됩니다.',
-        bs: 'Ćevapi od miješane janjetine i govedine, savršeno grillovan. Služi se sa šafranskim rižom, sezonskom salatom, sumak lukom i grillovanim povrćem.'
+        bs: 'Ćevapi od miješane janjetine i govedine, savršeno grillovan. Služi se sa šafranskim rižom, sezonskom salatom, sumak lukom i grillovanim povrćem.',
+        zh: '由羊肉和牛肉混合制成的烤肉串，烤制完美。配以藏红花米饭、时令沙拉、漆树洋葱和烤蔬菜。'
       },
       price: '$23.99',
       category: 'grill',
@@ -4051,6 +4057,193 @@ const NatureVillageWebsite = () => {
       loading: 'Učitava...',
       error: 'Dogodila se greška. Molimo pokušajte ponovo.',
       currency: '$'
+    },
+    zh: {
+      nav: {
+        home: '首页',
+        menu: '菜单',
+        about: '关于我们',
+        gallery: '图库',
+        visit: '访问我们',
+        reservations: '预订',
+        catering: '餐饮服务',
+        orderOnline: '在线订购'
+      },
+      hero: {
+        title: 'Nature Village',
+        subtitle: '每一口都是中东风味',
+        description: '在温馨传统的环境中体验正宗的中东美味，每一道菜品都诉说着我们丰富的文化遗产和代代相传的烹饪传统故事。',
+        cta1: '查看菜单',
+        cta2: '预订座位'
+      },
+      menu: {
+        title: '我们的菜单',
+        subtitle: '由 MenuIQ 提供支持 - AI 增强的用餐体验',
+        filters: {
+          all: '全部',
+          traditional: '传统',
+          vegetarian: '素食',
+          vegan: '纯素',
+          soup: '汤类',
+          dessert: '甜品',
+          popular: '最受欢迎'
+        },
+        viewFull: '查看完整菜单',
+        noItems: '此类别中没有项目。'
+      },
+      about: {
+        title: '我们的故事',
+        badge: '我们的故事',
+        subtitle: '将正宗的中东风味和温馨的热情好客带给我们的社区',
+        content: 'Nature Village 诞生于与世界分享正宗中东风味和温馨热情好客的梦想。我们的家族食谱代代相传，每一道菜都以爱心和对文化传统的尊重精心制作。我们采购最优质的食材，以几个世纪以来定义中东热情好客的同样关怀和细致态度准备每一餐。',
+        story1: 'Nature Village 致力于在温馨宜人的环境中带来正宗的中东美食，让每位客人都感受到家的温暖。',
+        story2: '我们的厨师们热情地使用最优质的食材和经过时间考验的烹饪技术准备传统中东菜肴，庆祝我们丰富的烹饪传承。',
+        quote: '每一道菜都精心制作，以中东热情好客的温暖服务。',
+        experience: '年经验',
+        recipes: '传统食谱',
+        customers: '满意客户',
+        awards: '获得奖项',
+        features: {
+          chefs: {
+            title: '专业厨师',
+            description: '正宗中东美食'
+          },
+          ingredients: {
+            title: '新鲜食材',
+            description: '每日采购的优质食材'
+          },
+          service: {
+            title: '温馨服务',
+            description: '中东式热情好客'
+          }
+        },
+        stats: {
+          happyCustomers: '满意客户',
+          authenticDishes: '正宗菜肴',
+          customerRating: '客户评分',
+          freshIngredients: '新鲜食材'
+        }
+      },
+      gallery: {
+        title: '图库',
+        subtitle: '通过我们的烹饪传承和餐厅氛围进行视觉之旅'
+      },
+      visit: {
+        title: '访问我们',
+        subtitle: '在市中心找到我们',
+        hours: '营业时间',
+        contact: '联系信息',
+        address: '地址',
+        phone: '电话',
+        makeReservation: '预订',
+        getDirections: '获取路线'
+      },
+      ui: {
+        callNow: '立即致电',
+        call: '致电',
+        orderOnline: '在线订购',
+        restaurant: '餐厅',
+        familyOwned: '家族经营',
+        halalCertified: '清真认证',
+        googleReviews: 'Google 评论',
+        averageRating: '平均评分',
+        fiveStarReviews: '5星评论',
+        verifiedPurchase: '已验证购买',
+        trustedReviewer: '信任评论者',
+        foodEnthusiast: '美食爱好者',
+        menu: '菜单',
+        reserve: '预订',
+        weAreOpen: '我们营业中',
+        currentlyClosed: '目前关闭',
+        live: '实时',
+        until: '直到',
+        opens: '开放',
+        activity: '活动'
+      },
+      reviews: {
+        title: '我们的客人怎么说',
+        subtitle: 'Google 评论中 572+ 满意客户给出 4.8/5 星评分',
+        cta: '加入 572+ 喜爱我们正宗美食的满意客户！今天就预订您的餐桌，品尝正宗中东热情好客的不同之处。',
+        ctaButton: '立即预订餐桌',
+        ctaTitle: '准备好创造您自己的 5 星体验了吗？',
+        trustIndicators: {
+          googleRating: '4.8★ Google 评分',
+          totalReviews: '572+ 评论'
+        },
+        review1: {
+          name: 'Karen Cardenas',
+          text: '"我来这里已经一年了，这绝对是我最喜欢的餐厅！食物正宗且绝对美味——每一道菜都充满风味，特色茶和咖啡令人惊叹，甜点是任何一餐的完美结尾。"',
+          location: '已验证 Google 评论',
+          time: '1周前'
+        },
+        review2: {
+          name: 'Ruth Cornea',
+          text: '"今晚我们在 Nature Village 餐厅度过了美好的时光！一切都绝对完美！食物、氛围、装饰和服务都是一流的。这绝对是我们新的最爱，提供正宗的中东美食。"',
+          location: '本地向导 • 29 条评论',
+          time: '2个月前'
+        },
+        review3: {
+          name: 'Google 客户',
+          text: '"我点了 Quzi，一道米饭和羊肉菜，非常饱腹且美味。披萨大小适中，里面满是旋转烤肉、奶酪和美味的酱汁。正宗的中东风味真的给我和我的家人留下了深刻印象！"',
+          location: '已验证 Google 评论',
+          time: '最近'
+        },
+        badges: {
+          featured: '特色',
+          localGuide: '本地向导',
+          quziLover: 'QUZI 爱好者'
+        }
+      },
+      featured: {
+        title: '特色菜肴',
+        subtitle: '发现我们最受喜爱的中东特色菜，以传统食谱和现代呈现方式制作'
+      },
+      celebration: {
+        title: '庆祝您的特殊时刻',
+        subtitle: '以正宗的中东热情好客让您的生日、周年纪念和特殊场合难忘',
+        familyReunions: '家庭聚会',
+        graduations: '毕业典礼',
+        engagements: '订婚',
+        holidays: '节假日',
+        birthday: {
+          title: '生日庆祝',
+          tagline: '让甜蜜时刻变得特别',
+          feature1: '免费生日甜点',
+          feature2: '生日歌和祝贺',
+          feature3: '难忘的用餐体验',
+          special: '庆祝人生又一年的完美选择'
+        },
+        anniversary: {
+          title: '周年纪念晚餐',
+          tagline: '庆祝您的爱情故事',
+          feature1: '玫瑰花浪漫餐桌布置',
+          feature2: '双人免费甜点',
+          feature3: '烛光晚餐',
+          feature4: '个性化周年纪念祝贺',
+          special: '25+ 年在一起？特别惊喜等着您！'
+        },
+        cta: {
+          title: '准备庆祝了吗？',
+          subtitle: '让我们以正宗的中东热情好客和难忘的风味让您的特殊日子变得非凡',
+          reserve: '致电预订特殊场合',
+          bookingAdvice: '请提前 48 小时预订以获得最佳庆祝体验'
+        }
+      },
+      tags: {
+        vegetarian: '🌱 素食',
+        vegan: '🌿 纯素',
+        spicy: '🌶️ 辣',
+        sweet: '🍯 甜',
+        traditional: '🏛️ 传统',
+        grilled: '🔥 烧烤',
+        'comfort food': '🍲 舒适食物',
+        soup: '🍜 汤',
+        stew: '🥘 炖菜'
+      },
+      addToCart: '加入购物车',
+      loading: '加载中...',
+      error: '发生错误。请重试。',
+      currency: '¥'
     }
   };
 

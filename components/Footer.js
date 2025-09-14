@@ -277,6 +277,22 @@ const Footer = () => {
         reservations: 'Rezervacije',
         catering: 'Catering',
         gallery: 'Galerija'
+      },
+      zh: {
+        description: '我们将中东地区的正宗美味和温馨好客带到您的餐桌上。每一道菜品都是对我们丰富文化遗产和烹饪精髓的庆祝。',
+        quickLinks: '快捷链接',
+        contactInfo: '联系信息',
+        openDaily: '周日 - 周四: 12:00 - 22:00\n周五 - 周六: 12:00 - 23:00',
+        privacy: '隐私政策',
+        terms: '使用条款',
+        copyright: '© 2025 自然村餐厅。保留所有权利。',
+        poweredBy: '技术支持',
+        blunari: 'Blunari',
+        home: '首页',
+        menu: '菜单',
+        reservations: '预订',
+        catering: '餐饮服务',
+        gallery: '图库'
       }
     };
 
