@@ -683,7 +683,9 @@ const NatureVillageWebsite = () => {
         ko: '쿠지',
         bs: 'Quzi',
         zh: '库兹',
-        ro: 'Quzi'
+        ro: 'Quzi',
+        uk: 'Кузі',
+        vi: 'Quzi'
       },
       description: {
         en: 'A traditional Iraqi dish made with saffron rice and lamb shank, topped with special tomato sauce, and garnished with toasted almonds and fresh parsley, offers a unique culinary experience.',
@@ -701,7 +703,9 @@ const NatureVillageWebsite = () => {
         ko: '사프란 쌀과 양 정강이로 만든 전통 이라크 요리로, 특별한 토마토 소스로 덮고 구운 아몬드와 신선한 파슬리로 장식하여 독특한 요리 경험을 제공합니다.',
         bs: 'Tradicionalno iračko jelo napravljeno sa šafranskim rižom i jagnještinom, prekriveno posebnim sosem od paradajza i ukrašeno pečenim bademima i svježim peršinom, pruža jedinstveno kulinarske iskustvo.',
         zh: '传统伊拉克菜肴，采用藏红花米饭和羊腿制作，淋上特制番茄酱，配以烤杏仁和新鲜欧芹装饰，提供独特的烹饪体验。',
-        ro: 'Un fel tradițional irakian făcut cu orez cu șofran și pulpă de miel, acoperit cu sos special de roșii și garnisit cu migdale prăjite și pătrunjel proaspăt, oferă o experiență culinară unică.'
+        ro: 'Un fel tradițional irakian făcut cu orez cu șofran și pulpă de miel, acoperit cu sos special de roșii și garnisit cu migdale prăjite și pătrunjel proaspăt, oferă o experiență culinară unică.',
+        uk: 'Традиційна іракська страва з шафранового рису та яглячої гомілки, політа спеціальним томатним соусом та прикрашена смаженим мигдалем і свіжою петрушкою, пропонує унікальний кулінарний досвід.',
+        vi: 'Món ăn truyền thống Iraq làm từ cơm nghệ tây và chân cừu, phủ sốt cà chua đặc biệt và trang trí với hạnh nhân rang và rau mùi tây tươi, mang đến trải nghiệm ẩm thực độc đáo.'
       },
       price: '$26.99',
       category: 'specialty',
@@ -727,7 +731,9 @@ const NatureVillageWebsite = () => {
         ko: '구운 브란지노 플래터',
         bs: 'Pljeskavica Grilled Branzino',
         zh: '烤布兰齐诺拼盘',
-        ro: 'Platou de Branzino la Grătar'
+        ro: 'Platou de Branzino la Grătar',
+        uk: 'Плато гриль-бранзіно',
+        vi: 'Đĩa cá Branzino nướng'
       },
       description: {
         en: 'Grilled European sea bass fillets, served with sumac-marinated onions, fresh salad, grilled tomato, grilled lemon, and creamy mashed potatoes, is a delightful choice.',
@@ -745,7 +751,9 @@ const NatureVillageWebsite = () => {
         ko: '구운 유럽산 바다농어 필레를 수막에 절인 양파, 신선한 샐러드, 구운 토마토, 구운 레몬, 크리미한 으깬 감자와 함께 제공하는 맛있는 선택입니다.',
         bs: 'Grilled evropski branzino fileti, posluženi sa lukom mariniranim u sumaku, svježom salatom, grilled paradajzom, grilled limunom i kremastim pireom od krompira, predstavljaju divnu opciju.',
         zh: '烤制欧洲鲈鱼片，配以漆树腌制洋葱、新鲜沙拉、烤番茄、烤柠檬和奶油土豆泥，是美妙的选择。',
-        ro: 'File de branzino european la grătar, servite cu ceapă marinată în sumac, salată proaspătă, roșii la grătar, lămâie la grătar și piure de cartofi cremos, reprezintă o alegere delicioasă.'
+        ro: 'File de branzino european la grătar, servite cu ceapă marinată în sumac, salată proaspătă, roșii la grătar, lămâie la grătar și piure de cartofi cremos, reprezintă o alegere delicioasă.',
+        uk: 'Філе європейського морського окуня-гриль, подається з цибулею, маринованою в сумаку, свіжим салатом, грильованими помідорами, грільованим лимоном та вершковим картопляним пюре - це чудовий вибір.',
+        vi: 'Phi lê cá chẻm châu Âu nướng, phục vụ cùng hành tây ướp sumac, salad tươi, cà chua nướng, chanh nướng và khoai tây nghiền kem, là một lựa chọn tuyệt vời.'
       },
       price: '$37.99',
       category: 'specialty',
@@ -771,7 +779,9 @@ const NatureVillageWebsite = () => {
         ko: '에르빌 시시 카밥',
         bs: 'Erbil Shish Kabab',
         zh: '埃尔比勒烤肉串',
-        ro: 'Erbil Shish Kabab'
+        ro: 'Erbil Shish Kabab',
+        uk: 'Ербіль шиш-кебаб',
+        vi: 'Erbil Shish Kabab'
       },
       description: {
         en: 'A kabab made with a mix of lamb and beef, grilled to perfection. It is served with saffron rice, seasonal salad, sumac onions, and grilled vegetables.',
@@ -789,7 +799,9 @@ const NatureVillageWebsite = () => {
         ko: '양고기와 소고기를 섞어 만든 카밥으로, 완벽하게 구워집니다. 사프란 쌀, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공됩니다.',
         bs: 'Ćevapi od miješane janjetine i govedine, savršeno grillovan. Služi se sa šafranskim rižom, sezonskom salatom, sumak lukom i grillovanim povrćem.',
         zh: '由羊肉和牛肉混合制成的烤肉串，烤制完美。配以藏红花米饭、时令沙拉、漆树洋葱和烤蔬菜。',
-        ro: 'Un kebab făcut din amestec de miel și vită, grătar la perfecție. Se servește cu orez cu șofran, salată de sezon, ceapă cu sumac și legume la grătar.'
+        ro: 'Un kebab făcut din amestec de miel și vită, grătar la perfecție. Se servește cu orez cu șofran, salată de sezon, ceapă cu sumac și legume la grătar.',
+        uk: 'Кебаб з суміші ягнятини та яловичини, ідеально приготований на грилі. Подається з шафрановим рисом, сезонним салатом, цибулею з сумаком та грільованими овочами.',
+        vi: 'Kebab làm từ hỗn hợp thịt cừu và thịt bò, nướng hoàn hảo. Phục vụ với cơm nghệ tây, salad theo mùa, hành tây sumac và rau củ nướng.'
       },
       price: '$23.99',
       category: 'grill',
@@ -4436,6 +4448,278 @@ const NatureVillageWebsite = () => {
       addToCart: 'Adaugă în Coș',
       loading: 'Se încarcă...',
       error: 'A apărut o eroare. Te rugăm să încerci din nou.',
+      currency: '$'
+    },
+    uk: {
+      nav: {
+        home: 'Головна',
+        menu: 'Меню',
+        about: 'Про нас',
+        gallery: 'Галерея',
+        visit: 'Відвідайте нас',
+        reservations: 'Бронювання',
+        catering: 'Кейтеринг',
+        orderOnline: 'Замовити онлайн'
+      },
+      hero: {
+        title: 'Nature Village',
+        subtitle: 'Смак Близького Сходу в кожному ковтку',
+        description: 'Відчуйте справжні смаки Близького Сходу в теплій та традиційній атмосфері, де кожна страва розповідає історію про нашу багату культурну спадщину та кулінарні традиції, передані через покоління.',
+        cta1: 'Переглянути меню',
+        cta2: 'Забронювати столик'
+      },
+      menu: {
+        title: 'Наше меню',
+        subtitle: 'Powered by MenuIQ - Удосконалений кулінарний досвід з ШІ',
+        filters: {
+          all: 'Все',
+          traditional: 'Традиційне',
+          vegetarian: 'Вегетаріанське',
+          vegan: 'Веганське',
+          soup: 'Супи',
+          dessert: 'Десерти',
+          popular: 'Популярне'
+        },
+        viewFull: 'Переглянути повне меню',
+        noItems: 'У цій категорії немає страв.'
+      },
+      about: {
+        title: 'Наша історія',
+        badge: 'Наша історія',
+        subtitle: 'Ми приносимо справжні смаки Близького Сходу та теплу гостинність нашій спільноті',
+        content: 'Nature Village народився з мрії поділитися справжніми смаками та теплою гостинністю Близького Сходу зі світом. Наші сімейні рецепти передавалися через покоління, кожна страва готується з любовʼю та повагою до наших культурних традицій. Ми використовуємо найкращі інгредієнти та готуємо кожну страву з тією ж турботою та увагою, що визначає гостинність Близького Сходу протягом століть.',
+        story1: 'Nature Village присвячує себе приведенню справжніх смаків кухні Близького Сходу в теплу та привітну атмосферу, де кожен гість почувається як у родині.',
+        story2: 'Наші кухарі з пристрастю готують традиційні страви Близького Сходу, використовуючи найкращі інгредієнти та перевірені часом техніки приготування, що святкують нашу багату кулінарну спадщину.',
+        quote: 'Кожна страва готується з турботою та подається з теплом гостинності Близького Сходу.',
+        experience: 'років досвіду',
+        recipes: 'традиційних рецептів',
+        customers: 'задоволених клієнтів',
+        awards: 'отриманих нагород',
+        features: {
+          chefs: {
+            title: 'Майстерні кухарі',
+            description: 'Наші досвідчені кухарі приносять автентичні смаки прямо до вашого столу'
+          },
+          ingredients: {
+            title: 'Свіжі інгредієнти',
+            description: 'Ми використовуємо лише найкращі, найсвіжіші інгредієнти у всіх наших стравах'
+          },
+          atmosphere: {
+            title: 'Тепла атмосфера',
+            description: 'Насолоджуйтеся нашою затишною та привітною атмосферою, ідеальною для сімʼї та друзів'
+          }
+        }
+      },
+      reviews: {
+        title: 'Що кажуть наші гості',
+        subtitle: 'Справжні відгуки від наших цінних клієнтів',
+        review1: {
+          name: 'Клієнт Google',
+          text: '"Їжа була надзвичайно смачною! Ми замовили Мезе Комбо та Грільовану Дораду. Обслуговування було відмінним, а атмосфера дуже затишною. Ми обовʼязково повернемося знову!"',
+          location: 'Підтверджений відгук Google',
+          time: '1 тиждень тому'
+        },
+        review2: {
+          name: 'Рут Корнеа',
+          text: '"Ми чудово провели час у ресторані Nature Village сьогодні ввечері! Все було абсолютно ідеально! Їжа, атмосфера, декор та обслуговування - все на найвищому рівні. Це точно наше нове улюблене місце для автентичної кухні Близького Сходу."',
+          location: 'Місцевий гід • 29 відгуків',
+          time: '2 місяці тому'
+        },
+        review3: {
+          name: 'Клієнт Google',
+          text: '"Я замовив Кузі, страву з рису та ягнятини, вона була дуже ситною та смачною. Піца була хорошого розміру, наповнена мʼясом гіро, сиром та приємним соусом. Справжні смаки Близького Сходу дійсно вразили мене та мою родину!"',
+          location: 'Підтверджений відгук Google',
+          time: 'Нещодавно'
+        },
+        badges: {
+          featured: 'РЕКОМЕНДОВАНО',
+          localGuide: 'МІСЦЕВИЙ ГІД',
+          quziLover: 'ЛЮБИТЕЛЬ КУЗІ'
+        }
+      },
+      featured: {
+        title: 'Рекомендовані страви',
+        subtitle: 'Відкрийте для себе наші найулюбленіші курдські делікатеси, приготовані за традиційними рецептами з сучасною подачею'
+      },
+      celebration: {
+        title: 'Святкуйте свої особливі моменти',
+        subtitle: 'Зробіть свої дні народження, річниці та особливі випадки незабутніми з справжньою курдською гостинністю',
+        familyReunions: 'Сімейні зустрічі',
+        holidays: 'Свята',
+        birthday: {
+          title: 'Святкування дня народження',
+          tagline: 'Солодкі моменти стають особливими',
+          feature1: 'Безкоштовний десерт на день народження',
+          feature2: 'Пісня з днем народження та побажання',
+          feature3: 'Незабутній досвід обіду',
+          special: 'Ідеально для святкування ще одного року життя'
+        },
+        anniversary: {
+          title: 'Річничні вечері',
+          tagline: 'Святкуйте свою історію кохання',
+          feature1: 'Романтична сервіровка столу з трояндами',
+          feature2: 'Безкоштовний десерт на двох',
+          feature3: 'Вечеря при свічках',
+          feature4: 'Персоналізована річнична листівка',
+          special: '25+ років разом? Особливий сюрприз чекає на вас!'
+        },
+        cta: {
+          title: 'Готові святкувати?',
+          subtitle: 'Дозвольте нам зробити ваш особливий день надзвичайним зі справжньою гостинністю Близького Сходу та незабутніми смаками',
+          reserve: 'Дзвоніть для особливого бронювання',
+          bookingAdvice: 'Бронюйте за 48 годин наперед для найкращого святкового досвіду'
+        }
+      },
+      tags: {
+        vegetarian: '🌱 Вегетаріанське',
+        vegan: '🌿 Веганське',
+        spicy: '🌶️ Гостре',
+        sweet: '🍯 Солодке',
+        traditional: '🏛️ Традиційне',
+        grilled: '🔥 На грилі',
+        'comfort food': '🍲 Домашня їжа',
+        soup: '🍜 Суп',
+        stew: '🥘 Тушковане'
+      },
+      addToCart: 'Додати в кошик',
+      loading: 'Завантаження...',
+      error: 'Сталася помилка. Будь ласка, спробуйте ще раз.',
+      currency: '$'
+    },
+    vi: {
+      nav: {
+        home: 'Trang chủ',
+        menu: 'Thực đơn',
+        about: 'Về chúng tôi',
+        gallery: 'Thư viện ảnh',
+        visit: 'Ghé thăm',
+        reservations: 'Đặt bàn',
+        catering: 'Dịch vụ tiệc',
+        orderOnline: 'Đặt hàng trực tuyến'
+      },
+      hero: {
+        title: 'Nature Village',
+        subtitle: 'Hương vị Trung Đông trong từng ngụm',
+        description: 'Trải nghiệm hương vị chính thống của Trung Đông trong không gian ấm áp và truyền thống, nơi mỗi món ăn kể câu chuyện về di sản văn hóa phong phú và truyền thống ẩm thực được truyền qua nhiều thế hệ.',
+        cta1: 'Xem thực đơn',
+        cta2: 'Đặt bàn'
+      },
+      menu: {
+        title: 'Thực đơn của chúng tôi',
+        subtitle: 'Powered by MenuIQ - Trải nghiệm ẩm thực được nâng cao bởi AI',
+        filters: {
+          all: 'Tất cả',
+          traditional: 'Truyền thống',
+          vegetarian: 'Chay',
+          vegan: 'Thuần chay',
+          soup: 'Súp',
+          dessert: 'Tráng miệng',
+          popular: 'Phổ biến'
+        },
+        viewFull: 'Xem thực đơn đầy đủ',
+        noItems: 'Không có món nào trong danh mục này.'
+      },
+      about: {
+        title: 'Câu chuyện của chúng tôi',
+        badge: 'Câu chuyện của chúng tôi',
+        subtitle: 'Chúng tôi mang đến hương vị chính thống của Trung Đông và lòng hiếu khách ấm áp cho cộng đồng',
+        content: 'Nature Village ra đời từ giấc mơ chia sẻ hương vị chính thống và lòng hiếu khách ấm áp của Trung Đông với thế giới. Các công thức gia đình của chúng tôi đã được truyền qua nhiều thế hệ, mỗi món ăn được chuẩn bị với tình yêu và sự tôn trọng đối với truyền thống văn hóa của chúng tôi. Chúng tôi tìm nguồn những nguyên liệu tốt nhất và chuẩn bị từng bữa ăn với sự chăm sóc và chú ý tương tự đã định nghĩa lòng hiếu khách Trung Đông trong nhiều thế kỷ.',
+        story1: 'Nature Village cống hiến để mang đến hương vị chính thống của ẩm thực Trung Đông trong không gian ấm áp và chào đón nơi mỗi khách hàng cảm thấy như ở nhà.',
+        story2: 'Các đầu bếp của chúng tôi đam mê chuẩn bị các món ăn truyền thống Trung Đông bằng những nguyên liệu tốt nhất và kỹ thuật nấu ăn đã được kiểm chứng theo thời gian để tôn vinh di sản ẩm thực phong phú của chúng tôi.',
+        quote: 'Mỗi món ăn được chuẩn bị với sự chăm sóc và phục vụ với sự ấm áp của lòng hiếu khách Trung Đông.',
+        experience: 'năm kinh nghiệm',
+        recipes: 'công thức truyền thống',
+        customers: 'khách hàng hài lòng',
+        awards: 'giải thưởng đạt được',
+        features: {
+          chefs: {
+            title: 'Đầu bếp bậc thầy',
+            description: 'Các đầu bếp kinh nghiệm của chúng tôi mang đến hương vị chính thống ngay tại bàn của bạn'
+          },
+          ingredients: {
+            title: 'Nguyên liệu tươi',
+            description: 'Chúng tôi chỉ sử dụng những nguyên liệu tốt nhất, tươi nhất trong tất cả các món ăn'
+          },
+          atmosphere: {
+            title: 'Không gian ấm áp',
+            description: 'Tận hưởng không gian ấm cúng và chào đón của chúng tôi, hoàn hảo cho gia đình và bạn bè'
+          }
+        }
+      },
+      reviews: {
+        title: 'Khách hàng nói gì về chúng tôi',
+        subtitle: 'Đánh giá thực từ những khách hàng quý giá của chúng tôi',
+        review1: {
+          name: 'Khách hàng Google',
+          text: '"Đồ ăn cực kỳ ngon! Chúng tôi đã gọi Meze Combo và Cá Branzino Nướng. Dịch vụ tuyệt vời và không gian rất ấm cúng. Chúng tôi chắc chắn sẽ quay lại!"',
+          location: 'Đánh giá Google đã xác thực',
+          time: '1 tuần trước'
+        },
+        review2: {
+          name: 'Ruth Cornea',
+          text: '"Chúng tôi đã có một thời gian tuyệt vời tại nhà hàng Nature Village tối nay! Mọi thứ đều hoàn hảo! Đồ ăn, không gian, trang trí và dịch vụ - tất cả đều ở mức cao nhất. Đây chắc chắn là địa điểm ưa thích mới của chúng tôi cho ẩm thực Trung Đông chính thống."',
+          location: 'Hướng dẫn viên địa phương • 29 đánh giá',
+          time: '2 tháng trước'
+        },
+        review3: {
+          name: 'Khách hàng Google',
+          text: '"Tôi đã gọi Quzi, món ăn với cơm và thịt cừu, rất thịnh soạn và ngon. Pizza có kích thước tốt, đầy thịt gyro, phô mai và nước sốt ngon. Hương vị Trung Đông chính thống thực sự ấn tượng tôi và gia đình!"',
+          location: 'Đánh giá Google đã xác thực',
+          time: 'Gần đây'
+        },
+        badges: {
+          featured: 'NỔI BẬT',
+          localGuide: 'HƯỚNG DẪN VIÊN ĐỊA PHƯƠNG',
+          quziLover: 'NGƯỜI YÊU QUZI'
+        }
+      },
+      featured: {
+        title: 'Món ăn nổi bật',
+        subtitle: 'Khám phá những món ngon yêu thích nhất của chúng tôi, được chuẩn bị theo công thức truyền thống với cách trình bày hiện đại'
+      },
+      celebration: {
+        title: 'Kỷ niệm những khoảnh khắc đặc biệt',
+        subtitle: 'Làm cho sinh nhật, kỷ niệm và những dịp đặc biệt của bạn trở nên khó quên với lòng hiếu khách Kurdish chính thống',
+        familyReunions: 'Tụ họp gia đình',
+        holidays: 'Ngày lễ',
+        birthday: {
+          title: 'Tiệc sinh nhật',
+          tagline: 'Những khoảnh khắc ngọt ngào trở nên đặc biệt',
+          feature1: 'Tráng miệng miễn phí cho sinh nhật',
+          feature2: 'Hát chúc mừng sinh nhật và lời chúc',
+          feature3: 'Trải nghiệm ăn uống đáng nhớ',
+          special: 'Hoàn hảo để kỷ niệm thêm một năm cuộc đời'
+        },
+        anniversary: {
+          title: 'Bữa tối kỷ niệm',
+          tagline: 'Kỷ niệm câu chuyện tình yêu của bạn',
+          feature1: 'Bàn ăn lãng mạn với hoa hồng',
+          feature2: 'Tráng miệng miễn phí cho hai người',
+          feature3: 'Bữa tối dưới ánh nến',
+          feature4: 'Thiệp kỷ niệm cá nhân hóa',
+          special: '25+ năm bên nhau? Một bất ngờ đặc biệt đang chờ bạn!'
+        },
+        cta: {
+          title: 'Sẵn sàng kỷ niệm?',
+          subtitle: 'Hãy để chúng tôi làm cho ngày đặc biệt của bạn trở nên phi thường với lòng hiếu khách Trung Đông chính thống và hương vị khó quên',
+          reserve: 'Gọi để đặt bàn đặc biệt',
+          bookingAdvice: 'Đặt trước 48 giờ để có trải nghiệm kỷ niệm tốt nhất'
+        }
+      },
+      tags: {
+        vegetarian: '🌱 Chay',
+        vegan: '🌿 Thuần chay',
+        spicy: '🌶️ Cay',
+        sweet: '🍯 Ngọt',
+        traditional: '🏛️ Truyền thống',
+        grilled: '🔥 Nướng',
+        'comfort food': '🍲 Món ăn gia đình',
+        soup: '🍜 Súp',
+        stew: '🥘 Hầm'
+      },
+      addToCart: 'Thêm vào giỏ',
+      loading: 'Đang tải...',
+      error: 'Đã xảy ra lỗi. Vui lòng thử lại.',
       currency: '$'
     }
   };

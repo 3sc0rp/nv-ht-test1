@@ -198,6 +198,26 @@ const Header = ({ currentPage = '' }) => {
         reservations: 'Rezervări',
         catering: 'Catering',
         orderOnline: 'Comandă Online'
+      },
+      uk: {
+        home: 'Головна',
+        menu: 'Меню',
+        about: 'Про нас',
+        gallery: 'Галерея',
+        visit: 'Відвідайте нас',
+        reservations: 'Бронювання',
+        catering: 'Кейтеринг',
+        orderOnline: 'Замовити онлайн'
+      },
+      vi: {
+        home: 'Trang chủ',
+        menu: 'Thực đơn',
+        about: 'Về chúng tôi',
+        gallery: 'Thư viện ảnh',
+        visit: 'Ghé thăm',
+        reservations: 'Đặt bàn',
+        catering: 'Dịch vụ tiệc',
+        orderOnline: 'Đặt hàng trực tuyến'
       }
     };
 

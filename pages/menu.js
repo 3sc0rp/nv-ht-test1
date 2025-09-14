@@ -1750,6 +1750,138 @@ const FullMenuPage = () => {
         notice: 'Hinweis:',
         foodSafetyNotice: 'Der Verzehr von rohem oder ungenügend gegartem Fleisch, Geflügel, Meeresfrüchten, Schalentieren oder Eiern kann Ihr Risiko für lebensmittelbedingte Krankheiten erhöhen, insbesondere wenn Sie bestimmte Krankheiten haben.'
       }
+    },
+    uk: { 
+      title: 'Світ смаків в одному меню', 
+      subtitle: 'Скуштуйте традиції, відкрийте різноманітність та дослідіть наші найулюбленіші страви.',
+      restaurantBadge: 'Автентичний близькосхідний ресторан',
+      loading: 'Завантаження...',
+      searchPlaceholder: 'Пошук страв...',
+      noResults: 'Не знайдено страв, що відповідають вашому запиту.',
+      nav: {
+        home: 'Головна',
+        menu: 'Меню',
+        about: 'Про нас',
+        gallery: 'Галерея',
+        visit: 'Відвідайте нас',
+        reservations: 'Бронювання',
+        catering: 'Кейтеринг',
+        orderOnline: 'Замовити'
+      },
+      filters: { 
+        all: 'Всі страви', 
+        appetizers: 'Закуски', 
+        salads: 'Салати', 
+        sandwich_platter: 'Сендвічі та плато', 
+        naan: 'Наан', 
+        grill: 'Гриль-плато', 
+        specialty: 'Фірмові страви', 
+        wraps: 'Рулети', 
+        soup: 'Супи', 
+        dessert: 'Десерти', 
+        drinks: 'Напої',
+        kids: 'Дитяче меню'
+      },
+      deliveryOptions: {
+        title: 'Варіанти доставки',
+        subtitle: 'Оберіть свою улюблену платформу доставки',
+        ubereats: 'Uber Eats',
+        doordash: 'DoorDash',
+        slice: 'Slice'
+      },
+      orderModal: {
+        title: 'Замовити онлайн',
+        subtitle: 'Оберіть платформу для замовлення',
+        close: 'Закрити'
+      },
+      features: {
+        authenticity: 'Автентичність',
+        freshIngredients: 'Свіжі інгредієнти',
+        familyRecipes: 'Сімейні рецепти',
+        categories: 'Різноманітні категорії',
+        languages: 'Глобальні мови'
+      },
+      popularSectionTitle: 'Наші найпопулярніші страви',
+      scrollDownText: 'Прокрутіть вниз, щоб дослідити меню',
+      footer: {
+        description: 'Приносимо автентичні близькосхідні смаки та теплу гостинність до вашого столу. Кожна страва - це святкування нашої багатої культурної спадщини та кулінарної досконалості.',
+        quickLinks: 'Швидкі посилання',
+        contactInfo: 'Контактна інформація',
+        privacy: 'Політика конфіденційності',
+        terms: 'Умови використання',
+        openDaily: 'НД - ЧТ: 12:00 - 22:00\nПТ - СБ: 12:00 - 23:00',
+        copyright: '© 2025 Ресторан Nature Village. Всі права захищені.',
+        poweredBy: 'Powered by',
+        blunari: 'Blunari AI',
+        notice: 'Зауваження:',
+        foodSafetyNotice: 'Споживання сирого або недостатньо приготованого мʼяса, птиці, морепродуктів, молюсків або яєць може підвищити ризик захворювань, що передаються через їжу, особливо якщо у вас є певні захворювання.'
+      }
+    },
+    vi: { 
+      title: 'Thế giới hương vị trong một thực đơn', 
+      subtitle: 'Nếm thử truyền thống, khám phá sự đa dạng và khám phá những món ăn được yêu thích nhất của chúng tôi.',
+      restaurantBadge: 'Nhà hàng Trung Đông chính thống',
+      loading: 'Đang tải...',
+      searchPlaceholder: 'Tìm kiếm món ăn...',
+      noResults: 'Không tìm thấy món ăn nào phù hợp với tìm kiếm của bạn.',
+      nav: {
+        home: 'Trang chủ',
+        menu: 'Thực đơn',
+        about: 'Về chúng tôi',
+        gallery: 'Thư viện ảnh',
+        visit: 'Ghé thăm',
+        reservations: 'Đặt bàn',
+        catering: 'Dịch vụ tiệc',
+        orderOnline: 'Đặt hàng'
+      },
+      filters: { 
+        all: 'Tất cả món', 
+        appetizers: 'Khai vị', 
+        salads: 'Salad', 
+        sandwich_platter: 'Sandwich & Đĩa', 
+        naan: 'Bánh Naan', 
+        grill: 'Đĩa nướng', 
+        specialty: 'Món đặc biệt', 
+        wraps: 'Bánh cuốn', 
+        soup: 'Súp', 
+        dessert: 'Tráng miệng', 
+        drinks: 'Đồ uống',
+        kids: 'Thực đơn trẻ em'
+      },
+      deliveryOptions: {
+        title: 'Tùy chọn giao hàng',
+        subtitle: 'Chọn nền tảng giao hàng yêu thích của bạn',
+        ubereats: 'Uber Eats',
+        doordash: 'DoorDash',
+        slice: 'Slice'
+      },
+      orderModal: {
+        title: 'Đặt hàng trực tuyến',
+        subtitle: 'Chọn nền tảng để đặt hàng',
+        close: 'Đóng'
+      },
+      features: {
+        authenticity: 'Tính chính thống',
+        freshIngredients: 'Nguyên liệu tươi',
+        familyRecipes: 'Công thức gia đình',
+        categories: 'Danh mục đa dạng',
+        languages: 'Ngôn ngữ toàn cầu'
+      },
+      popularSectionTitle: 'Những món ăn phổ biến nhất của chúng tôi',
+      scrollDownText: 'Cuộn xuống để khám phá thực đơn',
+      footer: {
+        description: 'Mang đến hương vị Trung Đông chính thống và lòng hiếu khách ấm áp đến bàn ăn của bạn. Mỗi món ăn là một lễ kỷ niệm di sản văn hóa phong phú và sự xuất sắc trong ẩm thực của chúng tôi.',
+        quickLinks: 'Liên kết nhanh',
+        contactInfo: 'Thông tin liên hệ',
+        privacy: 'Chính sách bảo mật',
+        terms: 'Điều khoản và điều kiện',
+        openDaily: 'CN - T5: 12:00 - 22:00\nT6 - T7: 12:00 - 23:00',
+        copyright: '© 2025 Nhà hàng Nature Village. Tất cả quyền được bảo lưu.',
+        poweredBy: 'Powered by',
+        blunari: 'Blunari AI',
+        notice: 'Lưu ý:',
+        foodSafetyNotice: 'Việc tiêu thụ thịt, gia cầm, hải sản, tôm cua hoặc trứng sống hoặc chưa nấu chín có thể làm tăng nguy cơ mắc bệnh do thực phẩm, đặc biệt nếu bạn có một số bệnh nhất định.'
+      }
     }
   }
 

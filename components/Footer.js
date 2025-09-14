@@ -309,6 +309,38 @@ const Footer = () => {
         reservations: 'Rezervări',
         catering: 'Catering',
         gallery: 'Galerie'
+      },
+      uk: {
+        description: 'Ми приносимо автентичні смаки та теплу гостинність Близького Сходу до вашого столу. Кожна страва - це святкування нашої багатої культурної спадщини та кулінарної досконалості.',
+        quickLinks: 'Швидкі посилання',
+        contactInfo: 'Контактна інформація',
+        openDaily: 'НД - ЧТ: 12:00 - 22:00\nПТ - СБ: 12:00 - 23:00',
+        privacy: 'Політика конфіденційності',
+        terms: 'Умови використання',
+        copyright: '© 2025 Ресторан Nature Village. Всі права захищені.',
+        poweredBy: 'Powered by',
+        blunari: 'Blunari',
+        home: 'Головна',
+        menu: 'Меню',
+        reservations: 'Бронювання',
+        catering: 'Кейтеринг',
+        gallery: 'Галерея'
+      },
+      vi: {
+        description: 'Chúng tôi mang đến hương vị chính thống và lòng hiếu khách ấm áp của Trung Đông đến bàn ăn của bạn. Mỗi món ăn là một lễ kỷ niệm di sản văn hóa phong phú và sự xuất sắc trong ẩm thực của chúng tôi.',
+        quickLinks: 'Liên kết nhanh',
+        contactInfo: 'Thông tin liên hệ',
+        openDaily: 'CN - T5: 12:00 - 22:00\nT6 - T7: 12:00 - 23:00',
+        privacy: 'Chính sách bảo mật',
+        terms: 'Điều khoản và điều kiện',
+        copyright: '© 2025 Nhà hàng Nature Village. Tất cả quyền được bảo lưu.',
+        poweredBy: 'Powered by',
+        blunari: 'Blunari',
+        home: 'Trang chủ',
+        menu: 'Thực đơn',
+        reservations: 'Đặt bàn',
+        catering: 'Dịch vụ tiệc',
+        gallery: 'Thư viện ảnh'
       }
     };
 
