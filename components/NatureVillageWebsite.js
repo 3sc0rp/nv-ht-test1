@@ -679,7 +679,8 @@ const NatureVillageWebsite = () => {
         sq: 'Quzi',
         fr: 'Quzi',
         de: 'Quzi',
-        bn: 'কুজি'
+        bn: 'কুজি',
+        ko: '쿠지'
       },
       description: {
         en: 'A traditional Iraqi dish made with saffron rice and lamb shank, topped with special tomato sauce, and garnished with toasted almonds and fresh parsley, offers a unique culinary experience.',
@@ -693,7 +694,8 @@ const NatureVillageWebsite = () => {
         sq: 'Një pjatë tradicionale irakiane e bërë me oriz safrani dhe copë dele, e mbuluar me salcë speciale domatesh dhe e zbukuruar me bajame të pjekura dhe majdanoz të freskët, ofron një përvojë kulinare unike.',
         fr: 'Un plat irakien traditionnel fait avec du riz au safran et du jarret d\'agneau, garni de sauce tomate spéciale et décoré d\'amandes grillées et de persil frais, offre une expérience culinaire unique.',
         de: 'Ein traditionelles irakisches Gericht aus Safranreis und Lammhaxe, mit spezieller Tomatensauce überzogen und mit gerösteten Mandeln und frischer Petersilie garniert, bietet ein einzigartiges kulinarisches Erlebnis.',
-        bn: 'জাফরানি চাল এবং ভেড়ার মাংস দিয়ে তৈরি একটি ঐতিহ্যবাহী ইরাকি খাবার, বিশেষ টমেটো সস দিয়ে পরিবেশিত এবং ভাজা বাদাম ও তাজা পার্সলে দিয়ে সাজানো, একটি অনন্য রান্নার অভিজ্ঞতা প্রদান করে।'
+        bn: 'জাফরানি চাল এবং ভেড়ার মাংস দিয়ে তৈরি একটি ঐতিহ্যবাহী ইরাকি খাবার, বিশেষ টমেটো সস দিয়ে পরিবেশিত এবং ভাজা বাদাম ও তাজা পার্সলে দিয়ে সাজানো, একটি অনন্য রান্নার অভিজ্ঞতা প্রদান করে।',
+        ko: '사프란 쌀과 양 정강이로 만든 전통 이라크 요리로, 특별한 토마토 소스로 덮고 구운 아몬드와 신선한 파슬리로 장식하여 독특한 요리 경험을 제공합니다.'
       },
       price: '$26.99',
       category: 'specialty',
@@ -715,7 +717,8 @@ const NatureVillageWebsite = () => {
         sq: 'Pjatë Branzino të Pjekur në Skarë',
         fr: 'Plateau de Branzino Grillé',
         de: 'Gegrillter Branzino-Teller',
-        bn: 'গ্রিলড ব্রানজিনো প্ল্যাটার'
+        bn: 'গ্রিলড ব্রানজিনো প্ল্যাটার',
+        ko: '구운 브란지노 플래터'
       },
       description: {
         en: 'Grilled European sea bass fillets, served with sumac-marinated onions, fresh salad, grilled tomato, grilled lemon, and creamy mashed potatoes, is a delightful choice.',
@@ -729,7 +732,8 @@ const NatureVillageWebsite = () => {
         sq: 'Feta levrek evropian të pjekur në skarë, të shërbyer me qepë të marinuara me sumak, sallatë të freskët, domate të pjekura në skarë, limon të pjekur në skarë dhe pure patate me krem, është një zgjedhje e këndshme.',
         fr: 'Filets de bar européen grillés, servis avec des oignons marinés au sumac, salade fraîche, tomate grillée, citron grillé et purée de pommes de terre crémeuse, c\'est un choix délicieux.',
         de: 'Gegrillte europäische Seebarschfilets, serviert mit Sumach-marinierten Zwiebeln, frischem Salat, gegrillten Tomaten, gegrillter Zitrone und cremigem Kartoffelpüree, ist eine köstliche Wahl.',
-        bn: 'গ্রিলড ইউরোপীয় সি বাস ফিলেট, সুমাক-মারিনেটেড পেঁয়াজ, তাজা সালাদ, গ্রিলড টমেটো, গ্রিলড লেবু এবং ক্রিমি ম্যাশড আলু দিয়ে পরিবেশিত, এটি একটি আনন্দদায়ক পছন্দ।'
+        bn: 'গ্রিলড ইউরোপীয় সি বাস ফিলেট, সুমাক-মারিনেটেড পেঁয়াজ, তাজা সালাদ, গ্রিলড টমেটো, গ্রিলড লেবু এবং ক্রিমি ম্যাশড আলু দিয়ে পরিবেশিত, এটি একটি আনন্দদায়ক পছন্দ।',
+        ko: '구운 유럽산 바다농어 필레를 수막에 절인 양파, 신선한 샐러드, 구운 토마토, 구운 레몬, 크리미한 으깬 감자와 함께 제공하는 맛있는 선택입니다.'
       },
       price: '$37.99',
       category: 'specialty',
@@ -751,7 +755,8 @@ const NatureVillageWebsite = () => {
         sq: 'Shish Kabab Erbil',
         fr: 'Shish Kebab d\'Erbil',
         de: 'Erbil Shish Kebab',
-        bn: 'এরবিল শিশ কাবাব'
+        bn: 'এরবিল শিশ কাবাব',
+        ko: '에르빌 시시 카밥'
       },
       description: {
         en: 'A kabab made with a mix of lamb and beef, grilled to perfection. It is served with saffron rice, seasonal salad, sumac onions, and grilled vegetables.',
@@ -765,7 +770,8 @@ const NatureVillageWebsite = () => {
         sq: 'Një kabab i bërë me një përzierje dele dhe viçi, i pjekur në përsosuri. Shërbehet me oriz safrani, sallatë stinore, qepë sumaku dhe perime të pjekura në skarë.',
         fr: 'Un kebab fait avec un mélange d\'agneau et de bœuf, grillé à la perfection. Servi avec du riz au safran, salade de saison, oignons au sumac et légumes grillés.',
         de: 'Ein Kebab aus einer Mischung von Lamm und Rind, perfekt gegrillt. Serviert mit Safranreis, Salat der Saison, Sumach-Zwiebeln und gegrilltem Gemüse.',
-        bn: 'ভেড়া এবং গরুর মাংসের মিশ্রণ দিয়ে তৈরি একটি কাবাব, নিখুঁতভাবে গ্রিল করা। জাফরানি চাল, মৌসুমি সালাদ, সুমাক পেঁয়াজ এবং গ্রিলড সবজি দিয়ে পরিবেশিত।'
+        bn: 'ভেড়া এবং গরুর মাংসের মিশ্রণ দিয়ে তৈরি একটি কাবাব, নিখুঁতভাবে গ্রিল করা। জাফরানি চাল, মৌসুমি সালাদ, সুমাক পেঁয়াজ এবং গ্রিলড সবজি দিয়ে পরিবেশিত।',
+        ko: '양고기와 소고기를 섞어 만든 카밥으로, 완벽하게 구워집니다. 사프란 쌀, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공됩니다.'
       },
       price: '$23.99',
       category: 'grill',
