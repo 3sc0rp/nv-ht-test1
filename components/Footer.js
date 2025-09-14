@@ -293,6 +293,22 @@ const Footer = () => {
         reservations: '预订',
         catering: '餐饮服务',
         gallery: '图库'
+      },
+      ro: {
+        description: 'Aducem gusturile autentice și ospitalitatea caldă din Orientul Mijlociu la masa ta. Fiecare fel de mâncare este o sărbătoare a moștenirii noastre culturale bogate și a excelenței culinare.',
+        quickLinks: 'Link-uri Rapide',
+        contactInfo: 'Informații de Contact',
+        openDaily: 'DUM - JOI: 12:00 - 22:00\nVIN - SÂM: 12:00 - 23:00',
+        privacy: 'Politica de Confidențialitate',
+        terms: 'Termeni și Condiții',
+        copyright: '© 2025 Restaurantul Nature Village. Toate drepturile rezervate.',
+        poweredBy: 'Powered by',
+        blunari: 'Blunari',
+        home: 'Acasă',
+        menu: 'Meniu',
+        reservations: 'Rezervări',
+        catering: 'Catering',
+        gallery: 'Galerie'
       }
     };
 

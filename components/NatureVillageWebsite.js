@@ -682,7 +682,8 @@ const NatureVillageWebsite = () => {
         bn: 'কুজি',
         ko: '쿠지',
         bs: 'Quzi',
-        zh: '库兹'
+        zh: '库兹',
+        ro: 'Quzi'
       },
       description: {
         en: 'A traditional Iraqi dish made with saffron rice and lamb shank, topped with special tomato sauce, and garnished with toasted almonds and fresh parsley, offers a unique culinary experience.',
@@ -699,7 +700,8 @@ const NatureVillageWebsite = () => {
         bn: 'জাফরানি চাল এবং ভেড়ার মাংস দিয়ে তৈরি একটি ঐতিহ্যবাহী ইরাকি খাবার, বিশেষ টমেটো সস দিয়ে পরিবেশিত এবং ভাজা বাদাম ও তাজা পার্সলে দিয়ে সাজানো, একটি অনন্য রান্নার অভিজ্ঞতা প্রদান করে।',
         ko: '사프란 쌀과 양 정강이로 만든 전통 이라크 요리로, 특별한 토마토 소스로 덮고 구운 아몬드와 신선한 파슬리로 장식하여 독특한 요리 경험을 제공합니다.',
         bs: 'Tradicionalno iračko jelo napravljeno sa šafranskim rižom i jagnještinom, prekriveno posebnim sosem od paradajza i ukrašeno pečenim bademima i svježim peršinom, pruža jedinstveno kulinarske iskustvo.',
-        zh: '传统伊拉克菜肴，采用藏红花米饭和羊腿制作，淋上特制番茄酱，配以烤杏仁和新鲜欧芹装饰，提供独特的烹饪体验。'
+        zh: '传统伊拉克菜肴，采用藏红花米饭和羊腿制作，淋上特制番茄酱，配以烤杏仁和新鲜欧芹装饰，提供独特的烹饪体验。',
+        ro: 'Un fel tradițional irakian făcut cu orez cu șofran și pulpă de miel, acoperit cu sos special de roșii și garnisit cu migdale prăjite și pătrunjel proaspăt, oferă o experiență culinară unică.'
       },
       price: '$26.99',
       category: 'specialty',
@@ -724,7 +726,8 @@ const NatureVillageWebsite = () => {
         bn: 'গ্রিলড ব্রানজিনো প্ল্যাটার',
         ko: '구운 브란지노 플래터',
         bs: 'Pljeskavica Grilled Branzino',
-        zh: '烤布兰齐诺拼盘'
+        zh: '烤布兰齐诺拼盘',
+        ro: 'Platou de Branzino la Grătar'
       },
       description: {
         en: 'Grilled European sea bass fillets, served with sumac-marinated onions, fresh salad, grilled tomato, grilled lemon, and creamy mashed potatoes, is a delightful choice.',
@@ -741,7 +744,8 @@ const NatureVillageWebsite = () => {
         bn: 'গ্রিলড ইউরোপীয় সি বাস ফিলেট, সুমাক-মারিনেটেড পেঁয়াজ, তাজা সালাদ, গ্রিলড টমেটো, গ্রিলড লেবু এবং ক্রিমি ম্যাশড আলু দিয়ে পরিবেশিত, এটি একটি আনন্দদায়ক পছন্দ।',
         ko: '구운 유럽산 바다농어 필레를 수막에 절인 양파, 신선한 샐러드, 구운 토마토, 구운 레몬, 크리미한 으깬 감자와 함께 제공하는 맛있는 선택입니다.',
         bs: 'Grilled evropski branzino fileti, posluženi sa lukom mariniranim u sumaku, svježom salatom, grilled paradajzom, grilled limunom i kremastim pireom od krompira, predstavljaju divnu opciju.',
-        zh: '烤制欧洲鲈鱼片，配以漆树腌制洋葱、新鲜沙拉、烤番茄、烤柠檬和奶油土豆泥，是美妙的选择。'
+        zh: '烤制欧洲鲈鱼片，配以漆树腌制洋葱、新鲜沙拉、烤番茄、烤柠檬和奶油土豆泥，是美妙的选择。',
+        ro: 'File de branzino european la grătar, servite cu ceapă marinată în sumac, salată proaspătă, roșii la grătar, lămâie la grătar și piure de cartofi cremos, reprezintă o alegere delicioasă.'
       },
       price: '$37.99',
       category: 'specialty',
@@ -766,7 +770,8 @@ const NatureVillageWebsite = () => {
         bn: 'এরবিল শিশ কাবাব',
         ko: '에르빌 시시 카밥',
         bs: 'Erbil Shish Kabab',
-        zh: '埃尔比勒烤肉串'
+        zh: '埃尔比勒烤肉串',
+        ro: 'Erbil Shish Kabab'
       },
       description: {
         en: 'A kabab made with a mix of lamb and beef, grilled to perfection. It is served with saffron rice, seasonal salad, sumac onions, and grilled vegetables.',
@@ -783,7 +788,8 @@ const NatureVillageWebsite = () => {
         bn: 'ভেড়া এবং গরুর মাংসের মিশ্রণ দিয়ে তৈরি একটি কাবাব, নিখুঁতভাবে গ্রিল করা। জাফরানি চাল, মৌসুমি সালাদ, সুমাক পেঁয়াজ এবং গ্রিলড সবজি দিয়ে পরিবেশিত।',
         ko: '양고기와 소고기를 섞어 만든 카밥으로, 완벽하게 구워집니다. 사프란 쌀, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공됩니다.',
         bs: 'Ćevapi od miješane janjetine i govedine, savršeno grillovan. Služi se sa šafranskim rižom, sezonskom salatom, sumak lukom i grillovanim povrćem.',
-        zh: '由羊肉和牛肉混合制成的烤肉串，烤制完美。配以藏红花米饭、时令沙拉、漆树洋葱和烤蔬菜。'
+        zh: '由羊肉和牛肉混合制成的烤肉串，烤制完美。配以藏红花米饭、时令沙拉、漆树洋葱和烤蔬菜。',
+        ro: 'Un kebab făcut din amestec de miel și vită, grătar la perfecție. Se servește cu orez cu șofran, salată de sezon, ceapă cu sumac și legume la grătar.'
       },
       price: '$23.99',
       category: 'grill',
@@ -4244,6 +4250,193 @@ const NatureVillageWebsite = () => {
       loading: '加载中...',
       error: '发生错误。请重试。',
       currency: '¥'
+    },
+    ro: {
+      nav: {
+        home: 'Acasă',
+        menu: 'Meniu',
+        about: 'Despre Noi',
+        gallery: 'Galerie',
+        visit: 'Vizitează-ne',
+        reservations: 'Rezervări',
+        catering: 'Catering',
+        orderOnline: 'Comandă Online'
+      },
+      hero: {
+        title: 'Nature Village',
+        subtitle: 'Gustul Orientului Mijlociu în fiecare înghițitură',
+        description: 'Experimentează gusturile autentice din Orientul Mijlociu într-un ambient cald și tradițional, unde fiecare fel de mâncare spune o poveste despre moștenirea noastră culturală bogată și tradițiile culinare transmise prin generații.',
+        cta1: 'Vezi Meniul',
+        cta2: 'Rezervă o Masă'
+      },
+      menu: {
+        title: 'Meniul Nostru',
+        subtitle: 'Powered by MenuIQ - Experiență culinară îmbunătățită cu AI',
+        filters: {
+          all: 'Toate',
+          traditional: 'Tradițional',
+          vegetarian: 'Vegetarian',
+          vegan: 'Vegan',
+          soup: 'Supe',
+          dessert: 'Deserturi',
+          popular: 'Populare'
+        },
+        viewFull: 'Vezi Meniul Complet',
+        noItems: 'Nu există articole în această categorie.'
+      },
+      about: {
+        title: 'Povestea Noastră',
+        badge: 'Povestea Noastră',
+        subtitle: 'Aducem gusturile autentice din Orientul Mijlociu și ospitalitatea caldă comunității noastre',
+        content: 'Nature Village s-a născut din visul de a împărtăși gusturile autentice și ospitalitatea caldă din Orientul Mijlociu cu lumea. Rețetele noastre de familie au fost transmise prin generații, fiecare fel de mâncare fiind pregătit cu dragoste și respect pentru tradițiile noastre culturale. Ne aprovizionăm cu cele mai bune ingrediente și pregătim fiecare masă cu aceeași grijă și atenție care definește ospitalitatea din Orientul Mijlociu de secole.',
+        story1: 'Nature Village se dedică aducerii gusturilor autentice din bucătăria Orientului Mijlociu într-un ambient cald și primitor unde fiecare oaspete se simte ca în familie.',
+        story2: 'Bucătarii noștri pregătesc cu pasiune felurile tradiționale din Orientul Mijlociu folosind cele mai bune ingrediente și tehnici de gătit dovedite în timp care celebrează moștenirea noastră culinară bogată.',
+        quote: 'Fiecare fel de mâncare este pregătit cu grijă și servit cu căldura ospitalității din Orientul Mijlociu.',
+        experience: 'ani de experiență',
+        recipes: 'rețete tradiționale',
+        customers: 'clienți mulțumiți',
+        awards: 'premii câștigate',
+        features: {
+          chefs: {
+            title: 'Bucătari Experți',
+            description: 'Bucătărie autentică din Orientul Mijlociu'
+          },
+          ingredients: {
+            title: 'Ingrediente Proaspete',
+            description: 'Calitate aprovizionată zilnic'
+          },
+          service: {
+            title: 'Serviciu Cald',
+            description: 'Ospitalitate din Orientul Mijlociu'
+          }
+        },
+        stats: {
+          happyCustomers: 'clienți mulțumiți',
+          authenticDishes: 'feluri autentice',
+          customerRating: 'rating clienți',
+          freshIngredients: 'ingrediente proaspete'
+        }
+      },
+      gallery: {
+        title: 'Galerie',
+        subtitle: 'O călătorie vizuală prin moștenirea noastră culinară și atmosfera restaurantului'
+      },
+      visit: {
+        title: 'Vizitează-ne',
+        subtitle: 'Găsește-ne în inima orașului',
+        hours: 'Program de Lucru',
+        contact: 'Informații de Contact',
+        address: 'Adresă',
+        phone: 'Telefon',
+        makeReservation: 'Rezervă',
+        getDirections: 'Indicații'
+      },
+      ui: {
+        callNow: 'Sună Acum',
+        call: 'Sună',
+        orderOnline: 'Comandă Online',
+        restaurant: 'Restaurant',
+        familyOwned: 'Deținut de Familie',
+        halalCertified: 'Certificat Halal',
+        googleReviews: 'Recenzii Google',
+        averageRating: 'Rating Mediu',
+        fiveStarReviews: 'Recenzii 5 Stele',
+        verifiedPurchase: 'Cumpărătură Verificată',
+        trustedReviewer: 'Recenzor de Încredere',
+        foodEnthusiast: 'Entuziast Culinar',
+        menu: 'Meniu',
+        reserve: 'Rezervă',
+        weAreOpen: 'Suntem Deschiși',
+        currentlyClosed: 'Momentan Închis',
+        live: 'LIVE',
+        until: 'până la',
+        opens: 'deschide',
+        activity: 'activitate'
+      },
+      reviews: {
+        title: 'Ce Spun Oaspeții Noștri',
+        subtitle: 'Evaluat cu 4.8/5 stele de către 572+ clienți mulțumiți pe recenziile Google',
+        cta: 'Alătură-te celor 572+ clienți mulțumiți care iubesc bucătăria noastră autentică! Rezervă masa astăzi și simte diferența pe care o face ospitalitatea autentică din Orientul Mijlociu.',
+        ctaButton: 'Rezervă Masa Acum',
+        ctaTitle: 'Gata să îți creezi propria experiență de 5 stele?',
+        trustIndicators: {
+          googleRating: 'Rating Google 4.8★',
+          totalReviews: '572+ recenzii'
+        },
+        review1: {
+          name: 'Karen Cardenas',
+          text: '"Vin aici de un an și este cu siguranță restaurantul meu preferat! Mâncarea este autentică și absolut delicioasă—fiecare fel este plin de aromă, ceaiurile și cafelele speciale sunt uimitoare, iar deserturile sunt sfârșitul perfect pentru orice masă."',
+          location: 'Recenzie Google Verificată',
+          time: 'acum 1 săptămână'
+        },
+        review2: {
+          name: 'Ruth Cornea',
+          text: '"Am avut o seară minunată la restaurantul Nature Village în această seară! Totul a fost absolut perfect! Mâncarea, atmosfera, decorul și serviciul sunt toate de top. Acesta este cu siguranță noul nostru loc preferat pentru bucătărie autentică din Orientul Mijlociu."',
+          location: 'Ghid Local • 29 recenzii',
+          time: 'acum 2 luni'
+        },
+        review3: {
+          name: 'Client Google',
+          text: '"Am comandat Quzi, un fel de orez și carne de miel, a fost foarte hrănitor și delicios. Pizza a fost de mărime bună plină cu carne gyros, brânză și un sos minunat. Gusturile autentice din Orientul Mijlociu ne-au impresionat cu adevărat pe mine și familia mea!"',
+          location: 'Recenzie Google Verificată',
+          time: 'recent'
+        },
+        badges: {
+          featured: 'RECOMANDAT',
+          localGuide: 'GHID LOCAL',
+          quziLover: 'IUBITOR QUZI'
+        }
+      },
+      featured: {
+        title: 'Feluri Recomandate',
+        subtitle: 'Descoperă specialitățile noastre preferate din Orientul Mijlociu, pregătite cu rețete tradiționale și prezentare modernă'
+      },
+      celebration: {
+        title: 'Sărbătorește Momentele Tale Speciale',
+        subtitle: 'Fă-ți zilele de naștere, aniversări și ocazii speciale memorabile cu ospitalitatea autentică din Orientul Mijlociu',
+        familyReunions: 'Reuniuni de Familie',
+        graduations: 'Absolviri',
+        engagements: 'Logodne',
+        holidays: 'Sărbători',
+        birthday: {
+          title: 'Sărbătoare de Ziua de Naștere',
+          tagline: 'Momentele dulci făcute speciale',
+          feature1: 'Desert gratuit de ziua de naștere',
+          feature2: 'Cântec de ziua de naștere și felicitări',
+          feature3: 'Experiență de luat masa memorabilă',
+          special: 'Perfect pentru sărbătorirea unui an în plus de viață'
+        },
+        anniversary: {
+          title: 'Cina de Aniversare',
+          tagline: 'Sărbătorește povestea ta de dragoste',
+          feature1: 'Masă romantică cu trandafiri',
+          feature2: 'Desert gratuit pentru doi',
+          feature3: 'Cina la lumina lumânărilor',
+          feature4: 'Felicitare personalizată de aniversare',
+          special: '25+ ani împreună? O surpriză specială te așteaptă!'
+        },
+        cta: {
+          title: 'Gata să Sărbătorești?',
+          subtitle: 'Lasă-ne să îți facem ziua specială extraordinară cu ospitalitatea autentică din Orientul Mijlociu și gusturi memorabile',
+          reserve: 'Sună pentru Rezervare Specială',
+          bookingAdvice: 'Rezervă cu 48 de ore în avans pentru cea mai bună experiență de sărbătoare'
+        }
+      },
+      tags: {
+        vegetarian: '🌱 Vegetarian',
+        vegan: '🌿 Vegan',
+        spicy: '🌶️ Picant',
+        sweet: '🍯 Dulce',
+        traditional: '🏛️ Tradițional',
+        grilled: '🔥 La Grătar',
+        'comfort food': '🍲 Mâncare de Casă',
+        soup: '🍜 Supă',
+        stew: '🥘 Tocană'
+      },
+      addToCart: 'Adaugă în Coș',
+      loading: 'Se încarcă...',
+      error: 'A apărut o eroare. Te rugăm să încerci din nou.',
+      currency: '$'
     }
   };
 

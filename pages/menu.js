@@ -300,7 +300,8 @@ const FullMenuPage = () => {
         bn: 'পরদা বিরিয়ানি',
         ko: '파르다 비리야니',
         bs: 'Parda Biryani',
-        zh: '帕尔达比尔亚尼'
+        zh: '帕尔达比尔亚尼',
+        ro: 'Parda Biryani'
       }, 
       category: {
         en: 'Specialty',
@@ -319,7 +320,8 @@ const FullMenuPage = () => {
         bn: 'বিশেষত্ব',
         ko: '특선요리',
         bs: 'Specijalitet',
-        zh: '特色菜'
+        zh: '特色菜',
+        ro: 'Specialitate'
       }, 
       placeholder: 'biryani', 
       imageUrl: '/pbiryani.jpg',
@@ -340,7 +342,8 @@ const FullMenuPage = () => {
         bn: 'সুগন্ধি মশলা এবং কোমল মাংসের সাথে ঐতিহ্যবাহী স্তরযুক্ত ভাতের খাবার',
         ko: '향긋한 향신료와 부드러운 고기를 넣은 전통적인 층층이 쌓은 쌀 요리',
         bs: 'Tradicionalno jelo od rižo sa aromatskim začinima i nježnim mesom u slojevima',
-        zh: '传统分层米饭配芳香香料和嫩肉'
+        zh: '传统分层米饭配芳香香料和嫩肉',
+        ro: 'Fel tradițional de orez în straturi cu condimente aromatice și carne fragedă'
       },
       color: '#FF6B6B'
     },

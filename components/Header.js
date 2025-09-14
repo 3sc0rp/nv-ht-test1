@@ -188,6 +188,16 @@ const Header = ({ currentPage = '' }) => {
         reservations: '预订',
         catering: '餐饮服务',
         orderOnline: '在线订购'
+      },
+      ro: {
+        home: 'Acasă',
+        menu: 'Meniu',
+        about: 'Despre Noi',
+        gallery: 'Galerie',
+        visit: 'Vizitează-ne',
+        reservations: 'Rezervări',
+        catering: 'Catering',
+        orderOnline: 'Comandă Online'
       }
     };
 
