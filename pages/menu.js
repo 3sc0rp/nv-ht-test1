@@ -296,7 +296,9 @@ const FullMenuPage = () => {
         hi: 'परदा बिरयानी',
         sq: 'Parda Biryani',
         fr: 'Biryani Parda',
-        de: 'Parda Biryani'
+        de: 'Parda Biryani',
+        bn: 'পরদা বিরিয়ানি',
+        ko: '파르다 비리야니'
       }, 
       category: {
         en: 'Specialty',
@@ -311,10 +313,12 @@ const FullMenuPage = () => {
         hi: 'विशेष व्यंजन',
         sq: 'Specialitetet',
         fr: 'Spécialités',
-        de: 'Spezialitäten'
+        de: 'Spezialitäten',
+        bn: 'বিশেষত্ব',
+        ko: '특선요리'
       }, 
       placeholder: 'biryani', 
-      imageUrl: '/pbiryani.png',
+      imageUrl: '/pbiryani.jpg',
       description: {
         en: 'Traditional layered rice dish with aromatic spices and tender meat',
         ar: 'طبق أرز طبقي تقليدي بالتوابل العطرية واللحم الطري',
@@ -328,7 +332,9 @@ const FullMenuPage = () => {
         hi: 'सुगंधित मसालों और नरम मांस के साथ पारंपरिक परतदार चावल का व्यंजन',
         sq: 'Pjatë tradicionale orizi me shtresa me erëza aromatike dhe mish të butë',
         fr: 'Plat traditionnel de riz en couches avec des épices aromatiques et de la viande tendre',
-        de: 'Traditionelles Schichtreisgericht mit aromatischen Gewürzen und zartem Fleisch'
+        de: 'Traditionelles Schichtreisgericht mit aromatischen Gewürzen und zartem Fleisch',
+        bn: 'সুগন্ধি মশলা এবং কোমল মাংসের সাথে ঐতিহ্যবাহী স্তরযুক্ত ভাতের খাবার',
+        ko: '향긋한 향신료와 부드러운 고기를 넣은 전통적인 층층이 쌓은 쌀 요리'
       },
       color: '#FF6B6B'
     },
@@ -347,7 +353,9 @@ const FullMenuPage = () => {
         hi: 'महशी कबाब',
         sq: 'Mahshi Kabab',
         fr: 'Kebab Mahshi',
-        de: 'Mahshi Kebab'
+        de: 'Mahshi Kebab',
+        bn: 'মাহশি কাবাব',
+        ko: '마시 카밥'
       }, 
       category: {
         en: 'Grill',
@@ -362,7 +370,9 @@ const FullMenuPage = () => {
         hi: 'ग्रिल प्लेटर',
         sq: 'Pjatat e Grilit',
         fr: 'Plats Grillés',
-        de: 'Grillgerichte'
+        de: 'Grillgerichte',
+        bn: 'গ্রিল',
+        ko: '그릴'
       }, 
       placeholder: 'kebab', 
       imageUrl: '/mkabab.jpg',
@@ -379,7 +389,9 @@ const FullMenuPage = () => {
         hi: 'लहसुन, तेज़ मिर्च और अजमोद के साथ गोमांस और भेड़ के बच्चे का कबाब',
         sq: 'Kabab viçi dhe deleje me shije hudhra, speca të egos dhe majdanoz',
         fr: 'Kebab de bœuf et d\'agneau assaisonné à l\'ail, aux piments forts et au persil',
-        de: 'Rind- und Lamm-Kebab gewürzt mit Knoblauch, scharfen Paprika und Petersilie'
+        de: 'Rind- und Lamm-Kebab gewürzt mit Knoblauch, scharfen Paprika und Petersilie',
+        bn: 'রসুন, ঝাল মরিচ এবং পার্সলে দিয়ে তৈরি গরু ও মেষের কাবাব',
+        ko: '마늘, 매운 고추, 파슬리로 양념한 소고기와 양고기 카밥'
       },
       color: '#A0522D'
     },
@@ -398,7 +410,9 @@ const FullMenuPage = () => {
         hi: 'हम्मुस',
         sq: 'Humus',
         fr: 'Houmous',
-        de: 'Hummus'
+        de: 'Hummus',
+        bn: 'হুমুস',
+        ko: '후무스'
       }, 
       category: {
         en: 'Appetizer',
@@ -413,7 +427,9 @@ const FullMenuPage = () => {
         hi: 'स्टार्टर',
         sq: 'Aperitivë',
         fr: 'Apéritifs',
-        de: 'Vorspeisen'
+        de: 'Vorspeisen',
+        bn: 'ক্ষুধাবর্ধক',
+        ko: '애피타이저'
       }, 
       placeholder: 'hummus', 
       imageUrl: '/hummus.jpg',
@@ -449,7 +465,9 @@ const FullMenuPage = () => {
         hi: 'बकलावा',
         sq: 'Bakllava',
         fr: 'Baklava',
-        de: 'Baklava'
+        de: 'Baklava',
+        bn: 'বাকলাভা',
+        ko: '바클라바'
       }, 
       category: {
         en: 'Dessert',
@@ -464,7 +482,9 @@ const FullMenuPage = () => {
         hi: 'मिठाई',
         sq: 'Ëmbëlsira',
         fr: 'Desserts',
-        de: 'Desserts'
+        de: 'Desserts',
+        bn: 'মিষ্টান্ন',
+        ko: '디저트'
       }, 
       placeholder: 'baklava', 
       imageUrl: '/baklava.jpg',
@@ -481,7 +501,9 @@ const FullMenuPage = () => {
         hi: 'नाजुक फिलो में नट्स और शहद की परतों के साथ मीठी पेस्ट्री',
         sq: 'Ëmbëlsirë me shtresa arrash dhe mjaltë në brumë delikat fillo',
         fr: 'Pâtisserie sucrée avec des couches de noix et de miel dans une délicate pâte phyllo',
-        de: 'Süßes Gebäck mit Nuss- und Honigschichten in zartem Phyllo-Teig'
+        de: 'Süßes Gebäck mit Nuss- und Honigschichten in zartem Phyllo-Teig',
+        bn: 'সূক্ষ্ম ফিলো পেস্ট্রিতে বাদাম এবং মধুর স্তর সহ মিষ্টি পেস্ট্রি',
+        ko: '섬세한 필로 페이스트리에 견과류와 꿀이 층층이 들어간 달콤한 페이스트리'
       },
       color: '#DEB887'
     },
@@ -500,7 +522,9 @@ const FullMenuPage = () => {
         hi: 'चिकन शावरमा सैंडविच',
         sq: 'Sandwich Shawarma Pule',
         fr: 'Sandwich Shawarma au Poulet',
-        de: 'Hähnchen-Schawarma-Sandwich'
+        de: 'Hähnchen Schawarma Sandwich',
+        bn: 'চিকেন শাওয়ারমা স্যান্ডউইচ',
+        ko: '치킨 샤와르마 샌드위치'
       }, 
       category: {
         en: 'Sandwich',
@@ -515,7 +539,9 @@ const FullMenuPage = () => {
         hi: 'सैंडविच',
         sq: 'Sandwich',
         fr: 'Sandwich',
-        de: 'Sandwich'
+        de: 'Sandwich',
+        bn: 'স্যান্ডউইচ',
+        ko: '샌드위치'
       }, 
       placeholder: 'shawarma', 
       imageUrl: '/chk.jpg',
@@ -532,7 +558,9 @@ const FullMenuPage = () => {
         hi: 'सब्जियों और सॉस के साथ ताजा पीटा में लपेटा गया नर्म मैरिनेटेड चिकन',
         sq: 'Pulë e butë e marinuar e mbështjellë në pita të freskët me perime dhe salcë',
         fr: 'Poulet mariné tendre enroulé dans du pain pita frais avec des légumes et de la sauce',
-        de: 'Zartes mariniertes Hähnchen in frischem Pita mit Gemüse und Sauce'
+        de: 'Zartes mariniertes Hähnchen in frischem Pita mit Gemüse und Sauce',
+        bn: 'তাজা পিটা রুটিতে সবজি এবং সস সহ মোড়ানো নরম ম্যারিনেটেড চিকেন',
+        ko: '신선한 피타 빵에 야채와 소스와 함께 감싼 부드러운 양념 치킨'
       },
       color: '#FFD93D'
     },
@@ -551,7 +579,9 @@ const FullMenuPage = () => {
         hi: 'करक चाय',
         sq: 'Çaj Karak',
         fr: 'Thé Karak',
-        de: 'Karak Tee'
+        de: 'Karak Tee',
+        bn: 'কারাক চা',
+        ko: '카라크 차이'
       }, 
       category: {
         en: 'Hot Drinks',
@@ -566,7 +596,9 @@ const FullMenuPage = () => {
         hi: 'पेय (गर्म)',
         sq: 'Pije (të Nxehta)',
         fr: 'Boissons Chaudes',
-        de: 'Heiße Getränke'
+        de: 'Heiße Getränke',
+        bn: 'গরম পানীয়',
+        ko: '뜨거운 음료'
       }, 
       placeholder: 'tea', 
       imageUrl: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=300&h=200&fit=crop',
@@ -583,7 +615,9 @@ const FullMenuPage = () => {
         hi: 'दूध और इलायची के साथ मसालेदार चाय, एक पारंपरिक मध्य पूर्वी पसंदीदा',
         sq: 'Çaj me erëza me qumësht dhe hil, një e preferuar tradicionale e Lindjes së Mesme',
         fr: 'Thé épicé au lait et à la cardamome, un favori traditionnel du Moyen-Orient',
-        de: 'Gewürztee mit Milch und Kardamom, ein traditioneller Favorit des Nahen Ostens'
+        de: 'Gewürztee mit Milch und Kardamom, ein traditioneller Favorit des Nahen Ostens',
+        bn: 'দুধ এবং এলাচ সহ মশলাযুক্ত চা, একটি ঐতিহ্যবাহী মধ্যপ্রাচ্যের প্রিয়',
+        ko: '우유와 카다몬이 들어간 향신료 차, 전통적인 중동의 인기 음료'
       },
       color: '#8B4513'
     }
@@ -821,6 +855,7 @@ const FullMenuPage = () => {
         grill: 'Grill Platters', 
         specialty: 'Specialty Dishes', 
         kids: "Kid's Menu", 
+        ko: '키즈 메뉴', 
         sides: 'Sides', 
         drinks_cold: 'Drinks (Cold)', 
         drinks_hot: 'Drinks (Hot)', 
@@ -842,6 +877,8 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'Our Most Popular Dishes',
       scrollDownText: 'Scroll down to explore menu',
+      notice: 'Notice:',
+      foodSafetyNotice: 'Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions.',
       footer: {
         description: 'Bringing the authentic flavors and warm hospitality of the Middle East to your table. Every dish is a celebration of our rich cultural heritage and culinary excellence.',
         quickLinks: 'Quick Links',
@@ -910,7 +947,9 @@ const FullMenuPage = () => {
         openDaily: 'یەکشەممە - پێنجشەممە: ١٢ شەو - ١٠ شەو\nهەینی - شەممە: ١٢ شەو - ١١ شەو',
         copyright: '© ٢٠٢٥ چێشتخانەی کوردی گوندی سروشت. هەموو مافەکان پارێزراون.',
         poweredBy: 'پشتگیری کراو لەلایەن',
-        blunari: 'بلوناری ئای ئای'
+        blunari: 'بلوناری ',
+        notice: 'ئاگاداریی:',
+        foodSafetyNotice: 'خواردنی گۆشتی خاو یان کەم لێنراو، بالندە، خواردنی دەریا، شەکرۆک یان هێلکە دەتوانێت مەترسی نەخۆشی خواردن زیاد بکات، بەتایبەتی ئەگەر دۆخی تەندروستی تایبەتت هەبێت.'
       }
     },
     ar: { 
@@ -969,7 +1008,9 @@ const FullMenuPage = () => {
         openDaily: 'الأحد - الخميس: ١٢ صباحاً - ١٠ مساءً\nالجمعة - السبت: ١٢ صباحاً - ١١ مساءً',
         copyright: '© ٢٠٢٥ مطعم قرية الطبيعة الكردي. جميع الحقوق محفوظة.',
         poweredBy: 'مدعوم بـ',
-        blunari: 'بلوناري الذكي'
+        blunari: 'بلوناري الذكي',
+        notice: 'تنبيه:',
+        foodSafetyNotice: 'قد يؤدي تناول اللحوم أو الدواجن أو المأكولات البحرية أو الرخويات أو البيض النيئة أو غير المطبوخة جيداً إلى زيادة خطر الإصابة بأمراض منقولة بالغذاء، خاصة إذا كنت تعاني من حالات طبية معينة.'
       }
     },
     fa: { 
@@ -1028,7 +1069,9 @@ const FullMenuPage = () => {
         openDaily: 'یکشنبه - پنج‌شنبه: ۱۲ شب - ۱۰ شب\nجمعه - شنبه: ۱۲ شب - ۱۱ شب',
         copyright: '© ۲۰۲۵ رستوران کردی دهکده طبیعت. تمام حقوق محفوظ است.',
         poweredBy: 'قدرت گرفته از',
-        blunari: 'بلوناری هوشمند'
+        blunari: 'بلوناری هوشمند',
+        notice: 'هشدار:',
+        foodSafetyNotice: 'مصرف گوشت خام یا کم پخت، طیور، غذاهای دریایی، صدف یا تخم مرغ ممکن است خطر ابتلا به بیماری‌های غذایی را افزایش دهد، به ویژه اگر شرایط پزشکی خاصی داشته باشید.'
       }
     },
     tr: { 
@@ -1087,7 +1130,9 @@ const FullMenuPage = () => {
         openDaily: 'Pazar - Perşembe: 12:00 - 22:00\nCuma - Cumartesi: 12:00 - 23:00',
         copyright: '© 2025 Nature Village Kürt Restoranı. Tüm hakları saklıdır.',
         poweredBy: 'Destekçisi',
-        blunari: 'Blunari Akıllı'
+        blunari: 'Blunari Akıllı',
+        notice: 'Uyarı:',
+        foodSafetyNotice: 'Çiğ veya az pişmiş et, kümes hayvanları, deniz ürünleri, kabuklu deniz ürünleri veya yumurta tüketmek, özellikle belirli tıbbi durumlarınız varsa, gıda kaynaklı hastalık riskinizi artırabilir.'
       }
     },
     ur: { 
@@ -1146,7 +1191,9 @@ const FullMenuPage = () => {
         openDaily: 'اتوار - جمعرات: 12 بجے - 10 بجے\nجمعہ - ہفتہ: 12 بجے - 11 بجے',
         copyright: '© 2025 Nature Village کرد ریسٹورنٹ۔ تمام حقوق محفوظ ہیں۔',
         poweredBy: 'تعاون یافتہ',
-        blunari: 'Blunari سمارٹ'
+        blunari: 'Blunari سمارٹ',
+        notice: 'نوٹس:',
+        foodSafetyNotice: 'کچے یا کم پکے ہوئے گوشت، مرغی، سمندری غذا، شیلفش یا انڈے کا استعمال آپ کو فوڈ بورن بیماری کا خطرہ بڑھا سکتا ہے، خاص طور پر اگر آپ کو کوئی مخصوص طبی حالات ہیں۔'
       }
     },
     kmr: { 
@@ -1205,8 +1252,129 @@ const FullMenuPage = () => {
         openDaily: 'Yekşem - Pêncşem: 12:00 - 22:00\nÎn - Şem: 12:00 - 23:00',
         copyright: '© 2025 Xwaringeha Kurdî ya Gundê Xwezayê. Hemû maf parastî ne.',
         poweredBy: 'Destekkirî bi',
-        blunari: 'Blunari Smart'
+        blunari: 'Blunari Smart',
+        notice: 'Hişyarî:',
+        foodSafetyNotice: 'Xwarina goştê xav an kêm pijandî, teyrê, xwarinên deryayê, qerekên deryayê an hêkan dikare xetera nexweşiya xwarinê zêde bike, bi taybetî heke rewşên bijîjkî yên taybet hebe.'
       }
+    },
+    bn: { 
+      title: 'এক মেনুতে বিশ্বের স্বাদ', 
+      subtitle: 'ঐতিহ্যের স্বাদ নিন, বৈচিত্র্য আবিষ্কার করুন এবং আমাদের সবচেয়ে প্রিয় খাবারগুলি অন্বেষণ করুন।',
+      restaurantBadge: 'খাঁটি মধ্যপ্রাচ্যীয় রেস্তোরাঁ',
+      loading: 'লোড হচ্ছে...',
+      searchPlaceholder: 'খাবার খুঁজুন...',
+      noResults: 'আপনার অনুসন্ধানের সাথে মিলে এমন কোনো খাবার পাওয়া যায়নি।',
+      nav: {
+        home: 'হোম',
+        menu: 'মেনু',
+        about: 'আমাদের সম্পর্কে',
+        gallery: 'গ্যালারি',
+        visit: 'আমাদের দেখুন',
+        reservations: 'সংরক্ষণ',
+        catering: 'ক্যাটারিং',
+        orderOnline: 'অর্ডার'
+      },
+      filters: { 
+        all: 'সকল আইটেম', 
+        appetizers: 'ক্ষুধাবর্ধক', 
+        salads: 'সালাদ', 
+        sandwich_platter: 'স্যান্ডউইচ ও প্ল্যাটার', 
+        naan: 'নান', 
+        grill: 'গ্রিল প্ল্যাটার', 
+        specialty: 'বিশেষ খাবার', 
+        kids: 'বাচ্চাদের মেনু', 
+        sides: 'সাইড ডিশ', 
+        drinks_cold: 'পানীয় (ঠান্ডা)', 
+        drinks_hot: 'পানীয় (গরম)', 
+        soup: 'স্যুপ', 
+        dessert: 'ডেজার্ট', 
+        popular: 'সবচেয়ে জনপ্রিয়' 
+      },
+      addProtein: 'প্রোটিন যোগ করুন',
+      servingFor: 'পরিবেশনা',
+      variants: {
+        sandwich: 'স্যান্ডউইচ',
+        platter: 'প্ল্যাটার',
+        singleScoop: 'একক স্কুপ'
+      },
+      stats: {
+        dishes: 'সুস্বাদু খাবার',
+        categories: 'বৈচিত্র্যময় বিভাগ',
+        languages: 'বৈশ্বিক ভাষা'
+      },
+      popularSectionTitle: 'আমাদের সবচেয়ে জনপ্রিয় খাবার',
+      scrollDownText: 'মেনু অন্বেষণ করতে নিচে স্ক্রল করুন',
+      footer: {
+        description: 'আপনার টেবিলে খাঁটি মধ্যপ্রাচ্যীয় স্বাদ এবং উষ্ণ আতিথেয়তা নিয়ে আসা। প্রতিটি খাবার আমাদের সমৃদ্ধ সাংস্কৃতিক ঐতিহ্য এবং রন্ধনসম্পর্কীয় উৎকর্ষতার উদযাপন।',
+        quickLinks: 'দ্রুত লিংক',
+        contactInfo: 'যোগাযোগের তথ্য',
+        privacy: 'গোপনীয়তা নীতি',
+        terms: 'ব্যবহারের শর্তাবলী',
+        openDaily: 'রবি - বৃহস্পতি: ১২:০০ - ২২:০০\nশুক্র - শনি: ১২:০০ - ২৩:০০',
+        copyright: '© ২০২৫ নেচার ভিলেজ রেস্তোরাঁ। সর্বস্বত্ব সংরক্ষিত।',
+        poweredBy: 'চালিত',
+        blunari: 'ব্লুনারি স্মার্ট',
+        notice: 'বিজ্ঞপ্তি:',
+        foodSafetyNotice: 'কাঁচা বা কম রান্না করা মাংস, মুরগি, সামুদ্রিক খাবার, শেলফিশ বা ডিম খাওয়া আপনার খাদ্যজনিত অসুস্থতার ঝুঁকি বাড়াতে পারে, বিশেষ করে যদি আপনার নির্দিষ্ট চিকিৎসা অবস্থা থাকে।'
+      }
+    },
+    ko: { 
+      title: '하나의 메뉴에 담긴 세계의 맛', 
+      subtitle: '전통을 맛보고, 다양성을 발견하며, 가장 사랑받는 요리를 탐험해보세요.',
+      restaurantBadge: '정통 중동 레스토랑',
+      loading: '로딩 중...',
+      searchPlaceholder: '요리 검색...',
+      noResults: '검색 조건에 맞는 요리를 찾을 수 없습니다.',
+      nav: {
+        home: '홈',
+        menu: '메뉴',
+        about: '소개',
+        gallery: '갤러리',
+        visit: '방문하기',
+        reservations: '예약',
+        catering: '케이터링',
+        orderOnline: '주문'
+      },
+      filters: { 
+        all: '전체 메뉴', 
+        appetizers: '전채요리', 
+        salads: '샐러드', 
+        sandwich_platter: '샌드위치 & 플래터', 
+        naan: '난', 
+        grill: '그릴 플래터', 
+        specialty: '특선 요리', 
+        kids: '키즈 메뉴', 
+        sides: '사이드 메뉴', 
+        drinks_cold: '음료 (차가운)', 
+        drinks_hot: '음료 (뜨거운)', 
+        soup: '수프', 
+        dessert: '디저트', 
+        popular: '인기 메뉴' 
+      },
+      addProtein: '단백질 추가',
+      servingFor: '인분',
+      variants: {
+        sandwich: '샌드위치',
+        platter: '플래터',
+        singleScoop: '싱글 스쿱'
+      },
+      stats: {
+        dishes: '맛있는 요리',
+        categories: '다양한 카테고리',
+        languages: '글로벌 언어'
+      },
+      popularSectionTitle: '가장 인기 있는 요리',
+      description: '정통 중동 맛과 따뜻한 환대를 당신의 테이블로 가져다드립니다. 모든 요리는 우리의 풍부한 문화유산과 요리 전통의 축하입니다.',
+      quickLinks: '빠른 링크',
+      contactInfo: '연락처 정보',
+      privacy: '개인정보 처리방침',
+      terms: '이용약관',
+      openDaily: '일 - 목: 12:00 - 22:00\n금 - 토: 12:00 - 23:00',
+      copyright: '© 2025 네이처 빌리지 레스토랑. 모든 권리 보유.',
+      poweredBy: '개발',
+      blunari: '블루나리 스마트',
+      notice: '주의:',
+      foodSafetyNotice: '날것이나 덜 익힌 육류, 가금류, 해산물, 조개류 또는 계란을 섭취하면 특정 질병이 있는 경우 특히 식중독 위험이 증가할 수 있습니다.'
     },
     ru: {
       title: 'Наше кулинарное путешествие',
@@ -1264,7 +1432,9 @@ const FullMenuPage = () => {
         openDaily: 'ВС - ЧТ: 12:00 - 22:00\nПТ - СБ: 12:00 - 23:00',
         copyright: '© 2025 Курдский ресторан Природная деревня. Все права защищены.',
         poweredBy: 'При поддержке',
-        blunari: 'Blunari AI'
+        blunari: 'Blunari AI',
+        notice: 'Внимание:',
+        foodSafetyNotice: 'Употребление сырого или недоваренного мяса, птицы, морепродуктов, моллюсков или яиц может увеличить риск пищевого отравления, особенно при наличии определенных заболеваний.'
       }
     },
     hi: {
@@ -1323,7 +1493,9 @@ const FullMenuPage = () => {
         openDaily: 'रवि - गुरु: 12:00 - 22:00\nशुक्र - शनि: 12:00 - 23:00',
         copyright: '© 2025 नेचर विलेज कुर्दी रेस्टोरेंट। सभी अधिकार सुरक्षित।',
         poweredBy: 'द्वारा संचालित',
-        blunari: 'Blunari AI'
+        blunari: 'Blunari AI',
+        notice: 'सूचना:',
+        foodSafetyNotice: 'कच्चे या अधपके मांस, मुर्गी, समुद्री भोजन, शेलफिश या अंडे का सेवन आपको खाद्य जनित बीमारी का खतरा बढ़ा सकता है, विशेष रूप से यदि आपको कुछ चिकित्सा स्थितियां हैं।'
       }
     },
     es: {
@@ -1382,7 +1554,9 @@ const FullMenuPage = () => {
         openDaily: 'DOM - JUE: 12:00 - 22:00\nVIE - SÁB: 12:00 - 23:00',
         copyright: '© 2025 Restaurante Nature Village. Todos los derechos reservados.',
         poweredBy: 'Desarrollado por',
-        blunari: 'Blunari AI'
+        blunari: 'Blunari AI',
+        notice: 'Aviso:',
+        foodSafetyNotice: 'Consumir carnes, aves, mariscos, moluscos o huevos crudos o poco cocidos puede aumentar su riesgo de enfermedades transmitidas por alimentos, especialmente si tiene ciertas condiciones médicas.'
       }
     },
     sq: {
@@ -1441,7 +1615,9 @@ const FullMenuPage = () => {
         openDaily: 'E DI - E EN: 12:00 - 22:00\nE PR - E SH: 12:00 - 23:00',
         copyright: '© 2025 Restorant Kurd Nature Village. Të gjitha të drejtat e rezervuara.',
         poweredBy: 'Mundësuar nga',
-        blunari: 'Blunari AI'
+        blunari: 'Blunari AI',
+        notice: 'Njoftim:',
+        foodSafetyNotice: 'Konsumimi i mishit të papjekur ose të pakuar plotësisht, shpendëve, ushqimeve të detit, krustaceve ose vezëve mund të rrisë rrezikun tuaj nga sëmundjet e ushqimit, veçanërisht nëse keni kushte të caktuara mjekësore.'
       }
     },
     fr: { 
@@ -1500,7 +1676,9 @@ const FullMenuPage = () => {
         openDaily: 'DIM - JEU: 12h00 - 22h00\nVEN - SAM: 12h00 - 23h00',
         copyright: '© 2025 Restaurant Nature Village. Tous droits réservés.',
         poweredBy: 'Propulsé par',
-        blunari: 'Blunari IA'
+        blunari: 'Blunari IA',
+        notice: 'Avis:',
+        foodSafetyNotice: 'La consommation de viandes, volailles, fruits de mer, crustacés ou œufs crus ou insuffisamment cuits peut augmenter votre risque de maladie d\'origine alimentaire, surtout si vous avez certaines conditions médicales.'
       }
     },
     de: { 
@@ -1559,7 +1737,9 @@ const FullMenuPage = () => {
         openDaily: 'SO - DO: 12:00 - 22:00\nFR - SA: 12:00 - 23:00',
         copyright: '© 2025 Nature Village Restaurant. Alle Rechte vorbehalten.',
         poweredBy: 'Powered by',
-        blunari: 'Blunari KI'
+        blunari: 'Blunari KI',
+        notice: 'Hinweis:',
+        foodSafetyNotice: 'Der Verzehr von rohem oder ungenügend gegartem Fleisch, Geflügel, Meeresfrüchten, Schalentieren oder Eiern kann Ihr Risiko für lebensmittelbedingte Krankheiten erhöhen, insbesondere wenn Sie bestimmte Krankheiten haben.'
       }
     }
   }
@@ -1582,7 +1762,9 @@ const FullMenuPage = () => {
         de: 'Hummus',
         ru: 'Хумус',
         hi: 'हम्मुस',
-        sq: 'Humus'
+        sq: 'Humus',
+        bn: 'হুমুস',
+        ko: '후무스'
       }, 
       description: { 
         en: 'A classic Levantine dip made from mashed chickpeas, tahini, olive oil, lemon juice and garlic.',
@@ -1597,7 +1779,9 @@ const FullMenuPage = () => {
         de: 'Ein klassischer levantinischer Dip aus zerdrückten Kichererbsen, Tahini, Olivenöl, Zitronensaft und Knoblauch.',
         ru: 'Классическая левантийская закуска из измельченного нута, тахини, оливкового масла, лимонного сока и чеснока.',
         hi: 'मसले हुए छोले, तिल का पेस्ट, जैतून का तेल, नींबू का रस और लहसुन से बना क्लासिक लेवेंटाइन डिप।',
-        sq: 'Një sos klasik levantinas i bërë nga grofthat e shtypur, tahini, vaj ulliri, lëng limoni dhe hudhra.'
+        sq: 'Një sos klasik levantinas i bërë nga grofthat e shtypur, tahini, vaj ulliri, lëng limoni dhe hudhra.',
+        bn: 'ছোলা, তাহিনি, জলপাই তেল, লেবুর রস এবং রসুন দিয়ে তৈরি ক্লাসিক লেভান্টাইন ডিপ।',
+        ko: '으깬 병아리콩, 타히니, 올리브 오일, 레몬 주스, 마늘로 만든 클래식한 레반트 딥입니다.'
       }, 
       price: '$8.99', 
       category: 'appetizers', 
@@ -1620,7 +1804,9 @@ const FullMenuPage = () => {
         hi: 'बाबा गनूश',
         sq: 'Baba Ghanoush',
         fr: 'Baba Ganouch',
-        de: 'Baba Ghanoush'
+        de: 'Baba Ghanoush',
+        bn: 'বাবা গানুশ',
+        ko: '바바 가누시'
       }, 
       description: { 
         en: 'This Levantine dip, made from roasted eggplant, yogurt, tahini, garlic, lemon juice, is a delicious addition to any meal.',
@@ -1636,7 +1822,8 @@ const FullMenuPage = () => {
         ru: 'Эта левантийская закуска из жареных баклажанов, йогурта, тахини, чеснока и лимонного сока - вкусное дополнение к любому блюду.',
         hi: 'भुने हुए बैंगन, दही, तिल का पेस्ट, लहसुन और नींबू के रस से बना यह लेवेंटाइन डिप किसी भी भोजन के साथ स्वादिष्ट जोड़ है।',
         sq: 'Kjo salcë levantinase, e bërë nga patëllxhani i pjekur, kosi, tahini, hudhra dhe lëngu i limonit, është një shtesë e shijshme për çdo vakt.',
-        fr: 'Cette trempette levantine, faite d\'aubergine grillée, yaourt, tahini, ail et jus de citron, est un délicieux accompagnement à tout repas.'
+        bn: 'ভাজা বেগুন, দই, তাহিনি, রসুন এবং লেবুর রস দিয়ে তৈরি এই লেভান্টাইন ডিপ যেকোনো খাবারের সাথে সুস্বাদু সংযোজন।',
+        ko: '구운 가지, 요거트, 타히니, 마늘, 레몬 주스로 만든 이 레반트 딥은 어떤 식사에도 맛있는 추가 요리입니다.'
       }, 
       price: '$9.99', 
       category: 'appetizers', 
@@ -1659,7 +1846,9 @@ const FullMenuPage = () => {
         hi: 'किब्बेह',
         sq: 'Kibbeh',
         fr: 'Kibbeh',
-        de: 'Kibbeh'
+        de: 'Kibbeh',
+        bn: 'কিবেহ',
+        ko: '키베'
       }, 
       description: { 
         en: 'A Middle Eastern classic with a crispy outer shell made from finely ground rice and spices, encasing a flavorful minced meat filling (beef, peas, carrot, almonds, raisins). Fried to perfection, Kibbeh adds a rich aroma and unique taste to your dining experience.',
@@ -1674,7 +1863,9 @@ const FullMenuPage = () => {
         hi: 'बारीक पिसे चावल और मसालों से बना कुरकुरा बाहरी आवरण के साथ मध्य पूर्वी क्लासिक, जिसमें स्वादिष्ट कीमा (बीफ, मटर, गाजर, बादाम, किशमिश) भरा होता है। पूर्णता तक तला गया, किब्बेह आपके भोजन के अनुभव में समृद्ध सुगंध और अनूठा स्वाद जोड़ता है।',
         sq: 'Një klasik i Lindjes së Mesme me një lëvore të jashtme të krisur e bërë nga orizi i bluar imët dhe erëza, që mban një mbushje mishi të grirë plot shije (viç, bizele, karrota, bajame, rrush i thatë). E skuqur në përsosmëri, Kibbeh-i shton një aromë të pasur dhe shije të veçantë në përvojën tuaj të ngrënies.',
         fr: 'Un classique du Moyen-Orient avec une coquille extérieure croustillante faite de riz finement moulu et d\'épices, renfermant une farce de viande hachée savoureuse (bœuf, petits pois, carotte, amandes, raisins secs). Frit à la perfection, le Kibbeh ajoute un arôme riche et un goût unique à votre expérience culinaire.',
-        de: 'Ein nahöstlicher Klassiker mit knuspriger äußerer Hülle aus fein gemahlenem Reis und Gewürzen, gefüllt mit würzigem Hackfleisch (Rindfleisch, Erbsen, Karotten, Mandeln, Rosinen). Perfekt frittiert verleiht Kibbeh Ihrem kulinarischen Erlebnis ein reiches Aroma und einen einzigartigen Geschmack.'
+        de: 'Ein nahöstlicher Klassiker mit knuspriger äußerer Hülle aus fein gemahlenem Reis und Gewürzen, gefüllt mit würzigem Hackfleisch (Rindfleisch, Erbsen, Karotten, Mandeln, Rosinen). Perfekt frittiert verleiht Kibbeh Ihrem kulinarischen Erlebnis ein reiches Aroma und einen einzigartigen Geschmack.',
+        bn: 'সূক্ষ্ম ভাত এবং মশলা দিয়ে তৈরি খাস্তা বাইরের খোসা সহ মধ্যপ্রাচ্যের ক্লাসিক, যাতে সুস্বাদু কীমা ভর্তি (গরুর মাংস, মটর, গাজর, বাদাম, কিশমিশ) রয়েছে। নিখুঁতভাবে ভাজা, কিবেহ আপনার খাবারের অভিজ্ঞতায় সমৃদ্ধ সুগন্ধ এবং অনন্য স্বাদ যোগ করে।',
+        ko: '잘게 간 쌀과 향신료로 만든 바삭한 외피에 맛있는 다진 고기 속(소고기, 완두콩, 당근, 아몬드, 건포도)이 들어간 중동의 클래식 요리입니다. 완벽하게 튀긴 키베는 당신의 식사 경험에 풍부한 향과 독특한 맛을 더합니다.'
       }, 
       price: '$10.99', 
       category: 'appetizers', 
@@ -1696,7 +1887,9 @@ const FullMenuPage = () => {
         ru: 'Фалафель',
         hi: 'फलाफेल',
         fr: 'Falafels',
-        de: 'Falafels'
+        de: 'Falafels',
+        bn: 'ফালাফেল',
+        ko: '팔라펠'
       }, 
       description: { 
         en: 'Consisting of chickpea patties seasoned with aromatic spices and fried to a golden, crispy exterior, and served with hummus and a drizzle of olive oil, this delightful snack adds a delicious touch to your dining experience.',
@@ -1711,7 +1904,9 @@ const FullMenuPage = () => {
         hi: 'सुगंधित मसालों के साथ स्वादिष्ट चने की पैटी से बना और सुनहरा, कुरकुरा बाहरी हिस्सा बनने तक तला गया, और हम्मुस और जैतून के तेल की फुहार के साथ परोसा जाता है, यह स्वादिष्ट नाश्ता आपके भोजन के अनुभव में एक स्वादिष्ट स्पर्श जोड़ता है।',
         sq: 'Përbëhet nga patate gronosh të kondimentuara me erëza aromatike dhe të skuqura deri në një të jashtme të artë dhe të krisur, dhe shërbehet me humus dhe një spërkatje vaji ulliri, kjo meze e shijshme shton një prekje të shijshme në përvojën tuaj të të ngrënit.',
         fr: 'Composé de galettes de pois chiches assaisonnées aux épices aromatiques et frites jusqu\'à obtenir un extérieur doré et croustillant, et servi avec du houmous et un filet d\'huile d\'olive, cette délicieuse collation ajoute une touche savoureuse à votre expérience culinaire.',
-        de: 'Besteht aus Kichererbsen-Bällchen, die mit aromatischen Gewürzen gewürzt und zu einer goldenen, knusprigen Außenhaut frittiert werden, und serviert mit Hummus und einem Schuss Olivenöl, dieser köstliche Snack verleiht Ihrem kulinarischen Erlebnis eine delikate Note.'
+        de: 'Besteht aus Kichererbsen-Bällchen, die mit aromatischen Gewürzen gewürzt und zu einer goldenen, knusprigen Außenhaut frittiert werden, und serviert mit Hummus und einem Schuss Olivenöl, dieser köstliche Snack verleiht Ihrem kulinarischen Erlebnis eine delikate Note.',
+        bn: 'সুগন্ধি মশলা দিয়ে তৈরি ছোলার প্যাটি এবং সোনালী, খাস্তা বাইরের অংশ পর্যন্ত ভাজা, এবং হুমুস এবং জলপাই তেলের ছিটা দিয়ে পরিবেশিত, এই সুস্বাদু স্ন্যাক আপনার খাবারের অভিজ্ঞতায় একটি সুস্বাদু স্পর্শ যোগ করে।',
+        ko: '향신료로 양념한 병아리콩 패티를 황금빛 바삭한 겉면이 될 때까지 튀기고, 후무스와 올리브 오일 뿌림과 함께 제공되는 이 맛있는 스낵은 당신의 식사 경험에 맛있는 터치를 더합니다.'
       }, 
       price: '$9.99', 
       category: 'appetizers', 
@@ -1734,7 +1929,9 @@ const FullMenuPage = () => {
         hi: 'प्रकृति का बगीचा',
         sq: 'Kopshti i Natyrës',
         fr: 'Jardin de la Nature',
-        de: 'Natur-Garten'
+        de: 'Natur-Garten',
+        bn: 'প্রকৃতির বাগান',
+        ko: '자연의 정원'
       }, 
       description: { 
         en: 'A light and nutritious savory dip is made with a base of yogurt, garlic and aromatic spices, and it is topped with dried tomatoes, fresh thyme, walnuts, mint, Kalamata olives and olive oil.',
@@ -1749,7 +1946,9 @@ const FullMenuPage = () => {
         hi: 'दही, लहसुन और सुगंधित मसालों के आधार पर बना हल्का और पौष्टिक स्वादिष्ट डिप, जो सूखे टमाटर, ताज़ा अजवाइन, अखरोट, पुदीना, कलामाटा जैतून और जैतून के तेल से सजाया गया है।',
         sq: 'Një sos i lehtë dhe ushqyes i bërë me një bazë kosi, hudhra dhe erëza aromatike, dhe është mbuluar me domate të thata, rigon të freskët, arra, mendër, ullinj Kalamata dhe vaj ulliri.',
         fr: 'Une trempette légère et nutritive préparée avec une base de yaourt, ail et épices aromatiques, et garnie de tomates séchées, thym frais, noix, menthe, olives Kalamata et huile d\'olive.',
-        de: 'Ein leichter und nahrhafter würziger Dip auf Basis von Joghurt, Knoblauch und aromatischen Gewürzen, garniert mit getrockneten Tomaten, frischem Thymian, Walnüssen, Minze, Kalamata-Oliven und Olivenöl.'
+        de: 'Ein leichter und nahrhafter würziger Dip auf Basis von Joghurt, Knoblauch und aromatischen Gewürzen, garniert mit getrockneten Tomaten, frischem Thymian, Walnüssen, Minze, Kalamata-Oliven und Olivenöl.',
+        bn: 'দই, রসুন এবং সুগন্ধি মশলার ভিত্তিতে তৈরি একটি হালকা এবং পুষ্টিকর স্বাদযুক্ত ডিপ, যা শুকনো টমেটো, তাজা থাইম, আখরোট, পুদিনা, কালামাতা জলপাই এবং জলপাই তেল দিয়ে সাজানো।',
+        ko: '요거트, 마늘, 향신료를 베이스로 한 가볍고 영양가 있는 맛있는 딥으로, 말린 토마토, 신선한 타임, 호두, 민트, 칼라마타 올리브, 올리브 오일로 토핑됩니다.'
       }, 
       price: '$10.99', 
       category: 'appetizers', 
@@ -1771,7 +1970,9 @@ const FullMenuPage = () => {
         hi: 'बोरेक',
         sq: 'Byrek',
         fr: 'Börek',
-        de: 'Börek'
+        de: 'Börek',
+        bn: 'বোরেক',
+        ko: '보렉'
       }, 
       description: { 
         en: 'Handmade beef börek is crafted with a rich filling (beef, peas, carrot) and served with a special sauce. This delicious börek, with its crispy pastry and unique sauce, leaves an unforgettable taste on the palate.',
@@ -1786,7 +1987,9 @@ const FullMenuPage = () => {
         hi: 'हस्तनिर्मित बीफ बोरेक समृद्ध भराव (बीफ, मटर, गाजर) के साथ बनाया जाता है और विशेष सॉस के साथ परोसा जाता है। यह स्वादिष्ट बोरेक अपनी कुरकुरी पेस्ट्री और अनोखी सॉस के साथ तालु पर अविस्मरणीय स्वाद छोड़ता है।',
         sq: 'Byreku i viçit i bërë me dorë është përgatitur me një mbushje të pasur (viç, bizele, karrota) dhe shërbehet me një salcë të veçantë. Ky byrek i shijshëm, me brumë të krisur dhe salcë të veçantë, lë një shije të paharrueshme në qiell të gojës.',
         fr: 'Le börek de bœuf fait main est préparé avec une garniture riche (bœuf, petits pois, carotte) et servi avec une sauce spéciale. Ce délicieux börek, avec sa pâte croustillante et sa sauce unique, laisse un goût inoubliable en bouche.',
-        de: 'Handgemachter Rind-börek wird mit einer reichhaltigen Füllung (Rindfleisch, Erbsen, Karotten) zubereitet und mit einer besonderen Sauce serviert. Dieser köstliche börek hinterlässt mit seinem knusprigen Teig und seiner einzigartigen Sauce einen unvergesslichen Geschmack am Gaumen.'
+        de: 'Handgemachter Rind-börek wird mit einer reichhaltigen Füllung (Rindfleisch, Erbsen, Karotten) zubereitet und mit einer besonderen Sauce serviert. Dieser köstliche börek hinterlässt mit seinem knusprigen Teig und seiner einzigartigen Sauce einen unvergesslichen Geschmack am Gaumen.',
+        bn: 'হস্তনির্মিত গরুর মাংসের বোরেক সমৃদ্ধ ভর্তা (গরুর মাংস, মটর, গাজর) দিয়ে তৈরি এবং বিশেষ সস দিয়ে পরিবেশিত। এই সুস্বাদু বোরেক, তার খাস্তা পেস্ট্রি এবং অনন্য সস দিয়ে তালুতে অবিস্মরণীয় স্বাদ রেখে যায়।',
+        ko: '수제 쇠고기 보렉은 풍부한 속 재료(쇠고기, 완두콩, 당근)로 만들어지며 특별한 소스와 함께 제공됩니다. 바삭한 페이스트리와 독특한 소스가 있는 이 맛있는 보렉은 입맛에 잊을 수 없는 맛을 남깁니다.'
       }, 
       price: '$10.99', 
       category: 'appetizers', 
@@ -1808,7 +2011,9 @@ const FullMenuPage = () => {
         hi: 'ऐपेटाइज़र कॉम्बो',
         sq: 'Kombinim Aperitivësh',
         fr: 'Combo d\'Apéritifs',
-        de: 'Vorspeisen-Kombination'
+        de: 'Vorspeisen-Kombination',
+        bn: 'ক্ষুধাবর্ধক কম্বো',
+        ko: '전채 콤보'
       }, 
       description: { 
         en: 'This platter brings together three (hummus, baba ghanoush, nature\'s garden) of the most beloved mezze flavors from the Middle East, along with delicious falafel balls. With its elegant presentation and magnificent aromas, it will add a delightful touch to your table.',
@@ -1823,7 +2028,9 @@ const FullMenuPage = () => {
         hi: 'यह प्लेटर मध्य पूर्व के तीन सबसे प्रिय मेज़े स्वादों (हम्मुस, बाबा गनूश, प्रकृति का बगीचा) को स्वादिष्ट फलाफेल बॉल्स के साथ मिलाता है। अपनी सुंदर प्रस्तुति और शानदार सुगंध के साथ, यह आपकी मेज़ पर एक आनंददायक स्पर्श जोड़ेगा।',
         sq: 'Kjo pjatë bashkon tre (humus, baba ghanoush, kopshti i natyrës) nga shijët më të dashura të mezes nga Lindja e Mesme, së bashku me topat e shijshme të falafelit. Me prezantimin e saj elegant dhe aromat e shkëlqyera, do të shtojë një prekje të këndshme në tryezën tuaj.',
         fr: 'Cette assiette rassemble trois (houmous, baba ghanoush, jardin de la nature) des saveurs de mezze les plus appréciées du Moyen-Orient, accompagnées de délicieuses boulettes de falafel. Avec sa présentation élégante et ses arômes magnifiques, elle ajoutera une touche délicieuse à votre table.',
-        de: 'Diese Platte vereint drei (Hummus, Baba Ghanoush, Natur-Garten) der beliebtesten Mezze-Geschmäcker aus dem Nahen Osten zusammen mit köstlichen Falafel-Bällchen. Mit ihrer eleganten Präsentation und herrlichen Aromen verleiht sie Ihrem Tisch eine wunderbare Note.'
+        de: 'Diese Platte vereint drei (Hummus, Baba Ghanoush, Natur-Garten) der beliebtesten Mezze-Geschmäcker aus dem Nahen Osten zusammen mit köstlichen Falafel-Bällchen. Mit ihrer eleganten Präsentation und herrlichen Aromen verleiht sie Ihrem Tisch eine wunderbare Note.',
+        bn: 'এই প্লেটারটি মধ্যপ্রাচ্যের সবচেয়ে প্রিয় তিনটি মেজে স্বাদ (হুমুস, বাবা গানুশ, প্রকৃতির বাগান) সুস্বাদু ফালাফেল বলের সাথে একত্রিত করে। তার মার্জিত উপস্থাপনা এবং চমৎকার সুগন্ধের সাথে, এটি আপনার টেবিলে একটি আনন্দদায়ক স্পর্শ যোগ করবে।',
+        ko: '이 플래터는 맛있는 팔라펠 볼과 함께 중동에서 가장 사랑받는 세 가지 메제 맛(후무스, 바바 가누시, 자연의 정원)을 한데 모았습니다. 우아한 프레젠테이션과 훌륭한 향기로 당신의 테이블에 즐거운 터치를 더할 것입니다.'
       }, 
       price: '$24.99', 
       category: 'appetizers', 
@@ -1845,10 +2052,12 @@ const FullMenuPage = () => {
         kmr: 'Şorba Masûrkan',
         es: 'Sopa de Lentejas',
         ru: 'Чечевичный суп',
-        hi: 'मसूर का सूप',
+        hi: 'दाल का सूप',
         sq: 'Supë Thjerrash',
-        fr: 'Soupe de Lentilles',
-        de: 'Linsensuppe'
+        fr: 'Soupe aux Lentilles',
+        de: 'Linsensuppe',
+        bn: 'মসুর ডালের স্যুপ',
+        ko: '렌틸 수프'
       }, 
       description: { 
         en: 'A hearty and nutritious soup made with red lentils, onions, carrots, potatoes, and a blend of aromatic spices.',
@@ -1863,7 +2072,9 @@ const FullMenuPage = () => {
         hi: 'लाल मसूर, प्याज, गाजर, आलू और सुगंधित मसालों के मिश्रण से बना पौष्टिक और भरपूर सूप।',
         sq: 'Një supë e bollshme dhe ushqyese e bërë me thjerrëza të kuqe, qepë, karrota, patate dhe një përzierje erëzash aromatike.',
         fr: 'Une soupe nourrissante et nutritive préparée avec des lentilles rouges, des oignons, des carottes, des pommes de terre et un mélange d\'épices aromatiques.',
-        de: 'Eine herzhafte und nahrhafte Suppe aus roten Linsen, Zwiebeln, Karotten, Kartoffeln und einer aromatischen Gewürzmischung.'
+        de: 'Eine herzhafte und nahrhafte Suppe aus roten Linsen, Zwiebeln, Karotten, Kartoffeln und einer aromatischen Gewürzmischung.',
+        bn: 'লাল মসুর ডাল, পেঁয়াজ, গাজর, আলু এবং সুগন্ধি মশলার মিশ্রণ দিয়ে তৈরি একটি হৃদ্যগ্রাহী এবং পুষ্টিকর স্যুপ।',
+        ko: '적렌틸, 양파, 당근, 감자, 향긋한 향신료 믹스로 만든 든든하고 영양가 있는 수프입니다.'
       }, 
       image: '/Lentil Soup.jpg',
       price: '$7.99', 
@@ -1888,7 +2099,9 @@ const FullMenuPage = () => {
         hi: 'इराकी गुस प्लेटर',
         sq: 'Pjatë Guss Irakiane',
         fr: 'Plateau Guss Irakien',
-        de: 'Irakische Guss-Platte'
+        de: 'Irakische Guss-Platte',
+        bn: 'ইরাকি গুস প্লেটার',
+        ko: '이라크 구스 플래터'
       }, 
       description: { 
         en: 'Thinly sliced, seasoned beef, served with saffron rice, sumac onions and fresh salad.',
@@ -1903,7 +2116,9 @@ const FullMenuPage = () => {
         hi: 'पतली कटी, मसालेदार बीफ, केसर चावल, सुमाक प्याज और ताज़ा सलाद के साथ परोसा जाता है।',
         sq: 'Viç i prerë hollë, i erëzuar, i shërbyer me oriz me shafran, qepë sumak dhe sallatë të freskët.',
         fr: 'Bœuf finement tranché et assaisonné, servi avec du riz au safran, des oignons sumac et une salade fraîche.',
-        de: 'Dünn geschnittenes, gewürztes Rindfleisch, serviert mit Safranreis, Sumach-Zwiebeln und frischem Salat.'
+        de: 'Dünn geschnittenes, gewürztes Rindfleisch, serviert mit Safranreis, Sumach-Zwiebeln und frischem Salat.',
+        bn: 'পাতলা করে কাটা, মশলাযুক্ত গরুর মাংস, জাফরান ভাত, সুমাক পেঁয়াজ এবং তাজা সালাদ দিয়ে পরিবেশিত।',
+        ko: '얇게 썬 양념 쇠고기로, 사프란 쌀, 수막 양파, 신선한 샐러드와 함께 제공됩니다.'
       }, 
       image: '/Iraqi Guss Platter.jpg',
       price: '$19.99', 
@@ -1926,7 +2141,9 @@ const FullMenuPage = () => {
         hi: 'इराकी गुस रैप',
         sq: 'Wrap Guss Irakian',
         fr: 'Wrap Guss Irakien',
-        de: 'Irakischer Guss-Wrap'
+        de: 'Irakischer Guss-Wrap',
+        bn: 'ইরাকি গুস র‍্যাপ',
+        ko: '이라크 구스 랩'
       }, 
       description: { 
         en: 'Thinly sliced, seasoned beef, tahini sauce, onion, lettuce, tomato and cucumber. Served with a fresh salad or fries upon request.',
@@ -1941,7 +2158,9 @@ const FullMenuPage = () => {
         hi: 'पतली कटी, मसालेदार बीफ, तहिनी सॉस, प्याज, सलाद पत्ता, टमाटर और खीरा। अनुरोध पर ताज़ा सलाद या फ्राइज़ के साथ परोसा जाता है।',
         sq: 'Viç i prerë hollë, i erëzuar, salcë tahini, qepë, marule, domate dhe kastravec. Shërbehet me sallatë të freskët ose patate të skuqura sipas kërkesës.',
         fr: 'Bœuf finement tranché et assaisonné, sauce tahini, oignon, laitue, tomate et concombre. Servi avec une salade fraîche ou des frites sur demande.',
-        de: 'Dünn geschnittenes, gewürztes Rindfleisch, Tahini-Sauce, Zwiebel, Kopfsalat, Tomate und Gurke. Auf Wunsch mit frischem Salat oder Pommes frites serviert.'
+        de: 'Dünn geschnittenes, gewürztes Rindfleisch, Tahini-Sauce, Zwiebel, Kopfsalat, Tomate und Gurke. Auf Wunsch mit frischem Salat oder Pommes frites serviert.',
+        bn: 'পাতলা করে কাটা, মশলাযুক্ত গরুর মাংস, তাহিনি সস, পেঁয়াজ, লেটুস, টমেটো এবং শসা। অনুরোধে তাজা সালাদ বা ফ্রাইজ দিয়ে পরিবেশিত।',
+        ko: '얇게 썬 양념 쇠고기, 타히니 소스, 양파, 상추, 토마토, 오이가 들어갑니다. 요청 시 신선한 샐러드나 감자튀김과 함께 제공됩니다.'
       }, 
       image: '/Iraqi Guss Wrap.jpg',
       price: '$17.99', 
@@ -1964,7 +2183,9 @@ const FullMenuPage = () => {
         hi: 'चिकन प्लेटर',
         sq: 'Pjatë Pule',
         fr: 'Plateau de Poulet',
-        de: 'Hähnchen-Platte'
+        de: 'Hähnchen-Platte',
+        bn: 'চিকেন প্লেটার',
+        ko: '치킨 플래터'
       }, 
       description: { 
         en: 'Thinly sliced, seasoned chicken, served with saffron rice, sumac onions and fresh salad.',
@@ -1979,7 +2200,9 @@ const FullMenuPage = () => {
         hi: 'पतली कटी, मसालेदार चिकन, केसर चावल, सुमाक प्याज और ताज़ा सलाद के साथ परोसा जाता है।',
         sq: 'Pulë e prerë hollë, e erëzuar, e shërbyer me oriz me shafran, qepë sumak dhe sallatë të freskët.',
         fr: 'Poulet finement tranché et assaisonné, servi avec du riz au safran, des oignons sumac et une salade fraîche.',
-        de: 'Dünn geschnittenes, gewürztes Hähnchen, serviert mit Safranreis, Sumach-Zwiebeln und frischem Salat.'
+        de: 'Dünn geschnittenes, gewürztes Hähnchen, serviert mit Safranreis, Sumach-Zwiebeln und frischem Salat.',
+        bn: 'পাতলা করে কাটা, মশলাযুক্ত চিকেন, জাফরান ভাত, সুমাক পেঁয়াজ এবং তাজা সালাদ দিয়ে পরিবেশিত।',
+        ko: '얇게 썬 양념 치킨을 사프란 쌀, 수막 양파, 신선한 샐러드와 함께 제공합니다.'
       }, 
       image: '/Chicken Platter.jpg',
       price: '$18.99', 
@@ -2002,7 +2225,9 @@ const FullMenuPage = () => {
         hi: 'चिकन रैप',
         sq: 'Wrap Pule',
         fr: 'Wrap au Poulet',
-        de: 'Hähnchen-Wrap'
+        de: 'Hähnchen-Wrap',
+        bn: 'চিকেন র‍্যাপ',
+        ko: '치킨 랩'
       }, 
       description: { 
         en: 'Sliced, seasoned chicken, tahini sauce, onion, lettuce, tomato and cucumber. Served with a fresh salad or fries upon request.',
@@ -2017,7 +2242,9 @@ const FullMenuPage = () => {
         hi: 'कटा हुआ, मसालेदार चिकन, तहिनी सॉस, प्याज, सलाद पत्ता, टमाटर और खीरा। अनुरोध पर ताज़ा सलाद या फ्राइज़ के साथ परोसा जाता है।',
         sq: 'Pulë e prerë, e erëzuar, salcë tahini, qepë, marule, domate dhe kastravec. Shërbehet me sallatë të freskët ose patate të skuqura sipas kërkesës.',
         fr: 'Poulet tranché et assaisonné, sauce tahini, oignon, laitue, tomate et concombre. Servi avec une salade fraîche ou des frites sur demande.',
-        de: 'Geschnittenes, gewürztes Hähnchen, Tahini-Sauce, Zwiebel, Kopfsalat, Tomate und Gurke. Auf Wunsch mit frischem Salat oder Pommes frites serviert.'
+        de: 'Geschnittenes, gewürztes Hähnchen, Tahini-Sauce, Zwiebel, Kopfsalat, Tomate und Gurke. Auf Wunsch mit frischem Salat oder Pommes frites serviert.',
+        bn: 'কাটা, মশলাযুক্ত চিকেন, তাহিনি সস, পেঁয়াজ, লেটুস, টমেটো এবং শসা। অনুরোধে তাজা সালাদ বা ফ্রাইজ দিয়ে পরিবেশিত।',
+        ko: '썬 양념 치킨, 타히니 소스, 양파, 상추, 토마토, 오이가 들어갑니다. 요청 시 신선한 샐러드나 감자튀김과 함께 제공됩니다.'
       }, 
       image: '/Chicken Wrap.jpg',
       price: '$16.99', 
@@ -2040,7 +2267,9 @@ const FullMenuPage = () => {
         hi: 'फलाफेल प्लेटर',
         sq: 'Pjatë Falafel',
         fr: 'Plateau de Falafels',
-        de: 'Falafels-Platte'
+        de: 'Falafels-Platte',
+        bn: 'ফালাফেল প্লেটার',
+        ko: '팔라펠 플래터'
       }, 
       description: { 
         en: 'Special chef made crispy falafel balls served with hummus, fresh salad and sumac onions.',
@@ -2055,7 +2284,9 @@ const FullMenuPage = () => {
         hi: 'शेफ के विशेष कुरकुरे फलाफेल बॉल्स हम्मस, ताज़ा सलाद और सुमाक प्याज के साथ परोसे जाते हैं।',
         sq: 'Topat e veçantë të falafeli të krisura të shefit të shërbyer me hummus, sallatë të freskët dhe qepë sumak.',
         fr: 'Boulettes de falafel croustillantes spéciales du chef servies avec houmous, salade fraîche et oignons sumac.',
-        de: 'Spezielle knusprige Falafel-Bällchen vom Küchenchef, serviert mit Hummus, frischem Salat und Sumach-Zwiebeln.'
+        de: 'Spezielle knusprige Falafel-Bällchen vom Küchenchef, serviert mit Hummus, frischem Salat und Sumach-Zwiebeln.',
+        bn: 'শেফের বিশেষ তৈরি খাস্তা ফালাফেল বল হুমুস, তাজা সালাদ এবং সুমাক পেঁয়াজ দিয়ে পরিবেশিত।',
+        ko: '셰프가 특별히 만든 바삭한 팔라펠 볼을 후무스, 신선한 샐러드, 수막 양파와 함께 제공합니다.'
       }, 
       image: '/Falafel Platter.jpg',
       price: '$17.99', 
@@ -2078,7 +2309,9 @@ const FullMenuPage = () => {
         hi: 'फलाफेल रैप',
         sq: 'Wrap Falafel',
         fr: 'Wrap aux Falafels',
-        de: 'Falafel-Wrap'
+        de: 'Falafel-Wrap',
+        bn: 'ফালাফেল র‍্যাপ',
+        ko: '팔라펠 랩'
       }, 
       description: { 
         en: 'Special chef made crispy falafel balls wrapped in soft pita bread with hummus, onion, lettuce, tomato and cucumber. Served with a fresh salad or fries upon request.',
@@ -2093,7 +2326,9 @@ const FullMenuPage = () => {
         hi: 'शेफ के विशेष कुरकुरे फलाफेल बॉल्स नरम पीटा ब्रेड में हम्मस, प्याज, सलाद पत्ता, टमाटर और खीरे के साथ लपेटे गए। अनुरोध पर ताज़ा सलाद या फ्राइज़ के साथ परोसे जाते हैं।',
         sq: 'Topat e veçantë të falafeli të krisura të shefit të mbështjella në bukë pita të butë me hummus, qepë, marule, domate dhe kastravec. Shërbehet me sallatë të freskët ose patate të skuqura sipas kërkesës.',
         fr: 'Boulettes de falafel croustillantes spéciales du chef enroulées dans du pain pita moelleux avec houmous, oignon, laitue, tomate et concombre. Servi avec une salade fraîche ou des frites sur demande.',
-        de: 'Spezielle knusprige Falafel-Bällchen vom Küchenchef in weiches Pita-Brot eingewickelt mit Hummus, Zwiebel, Kopfsalat, Tomate und Gurke. Auf Wunsch mit frischem Salat oder Pommes frites serviert.'
+        de: 'Spezielle knusprige Falafel-Bällchen vom Küchenchef in weiches Pita-Brot eingewickelt mit Hummus, Zwiebel, Kopfsalat, Tomate und Gurke. Auf Wunsch mit frischem Salat oder Pommes frites serviert.',
+        bn: 'শেফের বিশেষ তৈরি খাস্তা ফালাফেল বল নরম পিটা রুটিতে হুমুস, পেঁয়াজ, লেটুস, টমেটো এবং শসা দিয়ে মোড়ানো। অনুরোধে তাজা সালাদ বা ফ্রাইজ দিয়ে পরিবেশিত।',
+        ko: '셰프가 특별히 만든 바삭한 팔라펠 볼을 부드러운 피타 빵에 후무스, 양파, 상추, 토마토, 오이와 함께 감쌌습니다. 요청 시 신선한 샐러드나 감자튀김과 함께 제공됩니다.'
       }, 
       image: '/Falafel Wrap.jpg',
       price: '$15.99', 
@@ -2116,7 +2351,9 @@ const FullMenuPage = () => {
         hi: 'लहमाकुन',
         sq: 'Lahmacun',
         fr: 'Lahmacun',
-        de: 'Lahmacun'
+        de: 'Lahmacun',
+        bn: 'লাহমাকুন',
+        ko: '라흐마쿤'
       }, 
       description: { 
         en: 'A traditional dish, made with a thin dough topped with a flavorful mixture of minced beef and lamb, onions, bell peppers, tomatoes, and spices, is served with tomatoes, lettuce, lemon and sumac onions.',
@@ -2131,7 +2368,9 @@ const FullMenuPage = () => {
         hi: 'एक पारंपरिक व्यंजन, पतले आटे से बना जिसके ऊपर कीमा बीफ और लैम्ब, प्याज, शिमला मिर्च, टमाटर और मसालों का स्वादिष्ट मिश्रण डाला गया है, टमाटर, सलाद पत्ता, नींबू और सुमाक प्याज के साथ परोसा जाता है।',
         sq: 'Një pjatë tradicionale, e bërë me brumë të hollë e mbuluar me një përzierje të shijshme të mishit të grirë të viçit dhe të deles, qepës, speca të ëmbël, domatet dhe erëza, shërbehet me domate, marule, limon dhe qepë sumak.',
         fr: 'Un plat traditionnel, fait avec une pâte fine recouverte d\'un mélange savoureux de bœuf et d\'agneau hachés, d\'oignons, de poivrons, de tomates et d\'épices, servi avec des tomates, de la laitue, du citron et des oignons sumac.',
-        de: 'Ein traditionelles Gericht aus dünnem Teig, belegt mit einer würzigen Mischung aus Hackfleisch von Rind und Lamm, Zwiebeln, Paprika, Tomaten und Gewürzen, serviert mit Tomaten, Kopfsalat, Zitrone und Sumach-Zwiebeln.'
+        de: 'Ein traditionelles Gericht aus dünnem Teig, belegt mit einer würzigen Mischung aus Hackfleisch von Rind und Lamm, Zwiebeln, Paprika, Tomaten und Gewürzen, serviert mit Tomaten, Kopfsalat, Zitrone und Sumach-Zwiebeln.',
+        bn: 'একটি ঐতিহ্যবাহী খাবার, পাতলা ময়দা দিয়ে তৈরি যার উপরে গরু ও ভেড়ার কীমা, পেঁয়াজ, ক্যাপসিকাম, টমেটো এবং মশলার সুস্বাদু মিশ্রণ দেওয়া, টমেটো, লেটুস, লেবু এবং সুমাক পেঁয়াজ দিয়ে পরিবেশিত।',
+        ko: '얇은 반죽 위에 다진 쇠고기와 양고기, 양파, 피망, 토마토, 향신료의 맛있는 혼합물을 올린 전통 요리로, 토마토, 상추, 레몬, 수막 양파와 함께 제공됩니다.'
       }, 
       image: '/Lahmacun.jpg',
       price: '$17.99', 
@@ -2156,7 +2395,9 @@ const FullMenuPage = () => {
         hi: 'हवरामी नान',
         sq: 'Naan Hawrami',
         fr: 'Naan Hawrami',
-        de: 'Hawrami Naan'
+        de: 'Hawrami Naan',
+        bn: 'হাওরামি নান',
+        ko: '하와라미 난'
       }, 
       description: { 
         en: 'A delightful flatbread originating from Hawraman.',
@@ -2171,7 +2412,9 @@ const FullMenuPage = () => {
         hi: 'हवरामान से आने वाली स्वादिष्ट फ्लैटब्रेड।',
         sq: 'Një bukë e shkëlqyer që vjen nga Hawramani.',
         fr: 'Un délicieux pain plat originaire du Hawraman.',
-        de: 'Ein köstliches Fladenbrot aus Hawraman.'
+        de: 'Ein köstliches Fladenbrot aus Hawraman.',
+        bn: 'হাওরামান থেকে উৎপন্ন একটি সুস্বাদু ফ্ল্যাটব্রেড।',
+        ko: '하와라만에서 유래한 맛있는 플랫브레드입니다.'
       }, 
       image: '/Hawrami Naan.jpg',
       price: '$2.99', 
@@ -2194,7 +2437,9 @@ const FullMenuPage = () => {
         hi: 'तिल कुलेरा',
         sq: 'Kulera me Susam',
         fr: 'Kulera au Sésame',
-        de: 'Sesam-Kulera'
+        de: 'Sesam-Kulera',
+        bn: 'তিল কুলেরা',
+        ko: '참깨 쿨레라'
       }, 
       description: { 
         en: 'A type of flatbread made without the need for extensive kneading, known for its simplicity and soft, chewy texture.',
@@ -2209,7 +2454,9 @@ const FullMenuPage = () => {
         hi: 'व्यापक गूंधने की आवश्यकता के बिना बनाई गई फ्लैटब्रेड का एक प्रकार, जो अपनी सादगी और नरम, चबाने योग्य बनावट के लिए जानी जाती है।',
         sq: 'Një lloj buke e sheshtë e bërë pa nevojën e brumorjes së gjerë, e njohur për thjeshtësinë dhe teksturën e saj të butë dhe të ngjashme.',
         fr: 'Un type de pain plat fait sans besoin de pétrissage extensif, connu pour sa simplicité et sa texture douce et moelleuse.',
-        de: 'Eine Art Fladenbrot, das ohne ausgiebiges Kneten hergestellt wird, bekannt für seine Einfachheit und weiche, zähe Textur.'
+        de: 'Eine Art Fladenbrot, das ohne ausgiebiges Kneten hergestellt wird, bekannt für seine Einfachheit und weiche, zähe Textur.',
+        bn: 'একধরনের ফ্ল্যাটব্রেড যা ব্যাপক মেখানোর প্রয়োজন ছাড়াই তৈরি, এর সরলতা এবং নরম, চিবানো যায় এমন গঠনের জন্য পরিচিত।',
+        ko: '광범위한 반죽 없이 만든 플랫브레드의 한 종류로, 단순함과 부드럽고 쫄깃한 식감으로 유명합니다.'
       }, 
       price: '$3.99', 
       category: 'naan', 
@@ -2233,7 +2480,9 @@ const FullMenuPage = () => {
         hi: 'मध्य पूर्वी शैली परदा बिरयानी',
         sq: 'Parda Biryani Stili i Lindjes së Mesme',
         fr: 'Biryani Parda Style Moyen-Orient',
-        de: 'Parda Biryani im nahöstlichen Stil'
+        de: 'Parda Biryani im nahöstlichen Stil',
+        bn: 'মধ্যপ্রাচ্যীয় স্টাইল পরদা বিরিয়ানি',
+        ko: '중동식 파르다 비리야니'
       }, 
       description: { 
         en: 'A rich Middle Eastern dish of spiced rice, prepared with tender slow-cooked beef, raisins, almonds, peas, and potatoes, encased in a delicate layer of pastry and baked to perfection, is served with a fresh salad on the side.',
@@ -2248,7 +2497,9 @@ const FullMenuPage = () => {
         hi: 'मसालेदार चावल का समृद्ध मध्य पूर्वी व्यंजन, नरम धीमी पकी गाय के मांस, किशमिश, बादाम, मटर और आलू के साथ तैयार, नाजुक आटे की परत में लपेटा और परफेक्शन तक बेक किया गया, साइड में ताजा सलाद के साथ परोसा जाता है।',
         sq: 'Një pjatë i pasur lindor i mesëm i orizit të erëzuar, i përgatitur me viç të butë të gatuar ngadalë, rrush të thatë, bajame, bizele dhe patate, i mbështjellë në një shtresë delikate brumi dhe i pjekur në përsosmëri, shërbehet me sallatë të freskët në krah.',
         fr: 'Un plat riche du Moyen-Orient de riz épicé, préparé avec du bœuf tendre cuit lentement, des raisins secs, des amandes, des petits pois et des pommes de terre, enrobé dans une délicate couche de pâte et cuit à la perfection, servi avec une salade fraîche en accompagnement.',
-        de: 'Ein reichhaltiges nahöstliches Gericht aus gewürztem Reis, zubereitet mit zartem, langsam gegartem Rindfleisch, Rosinen, Mandeln, Erbsen und Kartoffeln, umhüllt von einer zarten Teigschicht und zur Perfektion gebacken, serviert mit einem frischen Salat als Beilage.'
+        de: 'Ein reichhaltiges nahöstliches Gericht aus gewürztem Reis, zubereitet mit zartem, langsam gegartem Rindfleisch, Rosinen, Mandeln, Erbsen und Kartoffeln, umhüllt von einer zarten Teigschicht und zur Perfektion gebacken, serviert mit einem frischen Salat als Beilage.',
+        bn: 'মশলাযুক্ত ভাতের একটি সমৃদ্ধ মধ্যপ্রাচ্যীয় খাবার, নরম ধীরে রান্না করা গরুর মাংস, কিশমিশ, বাদাম, মটর এবং আলু দিয়ে তৈরি, সূক্ষ্ম পেস্ট্রি স্তরে মোড়ানো এবং নিখুঁতভাবে বেক করা, পাশে তাজা সালাদ দিয়ে পরিবেশিত।',
+        ko: '부드럽고 천천히 익힌 쇠고기, 건포도, 아몬드, 완두콩, 감자로 준비한 향신료 쌀의 풍부한 중동 요리로, 섬세한 페이스트리 층에 싸여 완벽하게 구워져 옆에 신선한 샐러드와 함께 제공됩니다.'
       }, 
       image: '/Middle Eastern Style Parda Biryani.jpg',
       price: '$23.99', 
@@ -2270,7 +2521,10 @@ const FullMenuPage = () => {
         ru: 'Кузи',
         hi: 'क़ुज़ी',
         sq: 'Quzi',
-        fr: 'Quzi'
+        fr: 'Quzi',
+        de: 'Quzi',
+        bn: 'কুজি',
+        ko: '쿠지'
       }, 
       description: { 
         en: 'A traditional Iraqi dish made with saffron rice and lamb shank, topped with special tomato sauce, and garnished with toasted almonds and fresh parsley, offers a unique culinary experience.',
@@ -2285,7 +2539,9 @@ const FullMenuPage = () => {
         hi: 'केसर चावल और भेड़ की टांग से बना पारंपरिक इराकी व्यंजन, विशेष टमाटर की चटनी से ढका हुआ और भुने हुए बादाम और ताज़े अजमोद से सजाया गया, एक अनूठा पाक अनुभव प्रदान करता है।',
         sq: 'Një pjatë tradicional irakian i bërë me oriz me shafran dhe kërci qengji, i mbuluar me salcë speciale domatesh dhe i zbukuruar me bajame të pjekura dhe majdanoz të freskët, ofron një përvojë kulinare unike.',
         fr: 'Un plat traditionnel irakien préparé avec du riz au safran et du jarret d\'agneau, recouvert de sauce tomate spéciale et garni d\'amandes grillées et de persil frais, offre une expérience culinaire unique.',
-        de: 'Ein traditionelles irakisches Gericht aus Safranreis und Lammhaxe, mit spezieller Tomatensauce überzogen und mit gerösteten Mandeln und frischer Petersilie garniert, bietet ein einzigartiges kulinarisches Erlebnis.'
+        de: 'Ein traditionelles irakisches Gericht aus Safranreis und Lammhaxe, mit spezieller Tomatensauce überzogen und mit gerösteten Mandeln und frischer Petersilie garniert, bietet ein einzigartiges kulinarisches Erlebnis.',
+        bn: 'জাফরান ভাত এবং ভেড়ার মাংসের হাড় দিয়ে তৈরি ঐতিহ্যবাহী ইরাকি খাবার, বিশেষ টমেটো সস দিয়ে ঢাকা এবং ভাজা বাদাম ও তাজা পার্সলে দিয়ে সাজানো, একটি অনন্য রন্ধনশৈলীর অভিজ্ঞতা প্রদান করে।',
+        ko: '사프란 쌀과 양 정강이로 만든 전통 이라크 요리로, 특별한 토마토 소스로 덮고 구운 아몬드와 신선한 파슬리로 장식하여 독특한 요리 경험을 제공합니다.'
       }, 
       image: '/Quzi.jpg',
       price: '$26.99', 
@@ -2307,7 +2563,10 @@ const FullMenuPage = () => {
         ru: 'Манди',
         hi: 'मंडी',
         sq: 'Mandi',
-        fr: 'Mandi'
+        fr: 'Mandi',
+        de: 'Mandi',
+        bn: 'মান্দি',
+        ko: '만디'
       }, 
       description: { 
         en: 'A traditional Yemeni dish made with Mandi rice and chicken. The half chicken is served on a bed of rice and topped with fresh parsley. It is accompanied by special sauces.',
@@ -2322,7 +2581,9 @@ const FullMenuPage = () => {
         hi: 'मंडी चावल और चिकन के साथ बनाया गया पारंपरिक यमनी व्यंजन। आधा चिकन चावल के बिस्तर पर परोसा जाता है और ताज़े अजमोद से सजाया जाता है। विशेष सॉस के साथ परोसा जाता है।',
         sq: 'Një pjatë tradicional jemenas i bërë me oriz Mandi dhe pulë. Gjysma e pulës shërbehet mbi një shtrat orizi dhe zbukurohet me majdanoz të freskët. Shoqërohet me salca speciale.',
         fr: 'Un plat traditionnel yéménite préparé avec du riz Mandi et du poulet. La demi-portion de poulet est servie sur un lit de riz et garnie de persil frais. Il est accompagné de sauces spéciales.',
-        de: 'Ein traditionelles jemenitisches Gericht aus Mandi-Reis und Hähnchen. Das halbe Hähnchen wird auf einem Reisbett serviert und mit frischer Petersilie garniert. Wird mit speziellen Saucen begleitet.'
+        de: 'Ein traditionelles jemenitisches Gericht aus Mandi-Reis und Hähnchen. Das halbe Hähnchen wird auf einem Reisbett serviert und mit frischer Petersilie garniert. Wird mit speziellen Saucen begleitet.',
+        bn: 'মান্দি ভাত এবং চিকেন দিয়ে তৈরি ঐতিহ্যবাহী ইয়েমেনি খাবার। অর্ধেক চিকেন ভাতের বিছানায় পরিবেশিত এবং তাজা পার্সলে দিয়ে সাজানো। বিশেষ সস দিয়ে পরিবেশিত।',
+        ko: '만디 쌀과 치킨으로 만든 전통 예멘 요리입니다. 반마리 치킨이 쌀 위에 제공되며 신선한 파슬리로 토핑됩니다. 특별한 소스와 함께 제공됩니다.'
       }, 
       image: '/Mandi.jpg',
       price: '$23.99', 
@@ -2344,7 +2605,11 @@ const FullMenuPage = () => {
         fr: 'Qaliya du Village',
         ru: 'Деревенская Калия',
         hi: 'विलेज क़लिया',
-        sq: 'Qaliya e Fshatit'
+        sq: 'Qaliya e Fshatit',
+        fr: 'Qaliya du Village',
+        de: 'Dorf Qaliya',
+        bn: 'ভিলেজ কালিয়া',
+        ko: '빌리지 칼리야'
       }, 
       description: { 
         en: 'This traditional Kurdish dish is made from tender slow-cooked beef blended with caramelized onions, garlic, tomato sauce, a signature mix of spices, and a touch of date syrup. It is served with saffron rice, representing a refined fusion of traditional depth and modern elegance.',
@@ -2359,7 +2624,9 @@ const FullMenuPage = () => {
         hi: 'यह पारंपरिक कुर्दी व्यंजन नरम धीमी पकी गाय के मांस से बनाया गया है जो कैरामेलाइज़्ड प्याज, लहसुन, टमाटर सॉस, मसालों के विशेष मिश्रण और खजूर के सिरप के स्पर्श के साथ मिलाया गया है। केसर चावल के साथ परोसा जाता है, जो पारंपरिक गहराई और आधुनिक भव्यता का परिष्कृत संयोजन दर्शाता है।',
         sq: 'Kjo pjatë tradicionale kurde është bërë nga viç i butë i gatuar ngadalë i përzier me qepë karamelizuara, hudhra, salcë domatesh, një përzierje karakteristike erëzash dhe një prekje të shirupit të hurmave. Shërbehet me oriz me shafran, duke përfaqësuar një përzierje të rafinuar të thellësisë tradicionale dhe elegancës moderne.',
         fr: 'Ce plat traditionnel kurde est fait de bœuf tendre cuit lentement mélangé avec des oignons caramélisés, de l\'ail, de la sauce tomate, un mélange signature d\'épices et une touche de sirop de dattes. Il est servi avec du riz au safran, représentant une fusion raffinée de profondeur traditionnelle et d\'élégance moderne.',
-        de: 'Dieses traditionelle kurdische Gericht wird aus zartem, langsam gegartem Rindfleisch zubereitet, das mit karamellisierten Zwiebeln, Knoblauch, Tomatensauce, einer charakteristischen Gewürzmischung und einem Hauch Dattelsirup vermischt wird. Es wird mit Safranreis serviert und stellt eine raffinierte Fusion aus traditioneller Tiefe und moderner Eleganz dar.'
+        de: 'Dieses traditionelle kurdische Gericht wird aus zartem, langsam gegartem Rindfleisch zubereitet, das mit karamellisierten Zwiebeln, Knoblauch, Tomatensauce, einer charakteristischen Gewürzmischung und einem Hauch Dattelsirup vermischt wird. Es wird mit Safranreis serviert und stellt eine raffinierte Fusion aus traditioneller Tiefe und moderner Eleganz dar.',
+        bn: 'এই ঐতিহ্যবাহী কুর্দি খাবার নরম ধীরে রান্না করা গরুর মাংস দিয়ে তৈরি যা ক্যারামেলাইজড পেঁয়াজ, রসুন, টমেটো সস, মশলার বিশেষ মিশ্রণ এবং খেজুরের সিরাপের স্পর্শ দিয়ে মিশ্রিত। জাফরান ভাত দিয়ে পরিবেশিত, যা ঐতিহ্যবাহী গভীরতা এবং আধুনিক কমনীয়তার পরিশীলিত সংমিশ্রণ।',
+        ko: '이 전통적인 쿠르드 요리는 캐러멜화된 양파, 마늘, 토마토 소스, 시그니처 향신료 믹스, 대추 시럽 터치와 함께 블렌딩된 부드럽고 천천히 익힌 쇠고기로 만들어집니다. 사프란 쌀과 함께 제공되어 전통적인 깊이와 현대적인 우아함의 세련된 융합을 나타냅니다.'
       }, 
       image: '/Village Qaliya.jpg',
       price: '$24.99', 
@@ -2381,7 +2648,10 @@ const FullMenuPage = () => {
         ru: 'Креветки в масле',
         hi: 'बटर श्रिम्प',
         sq: 'Karkaleca me Gjalpë',
-        fr: 'Crevettes au Beurre'
+        fr: 'Crevettes au Beurre',
+        de: 'Butter-Garnelen',
+        bn: 'বাটার চিংড়ি',
+        ko: '버터 새우'
       }, 
       description: { 
         en: 'Sautéed shrimp with butter, mushrooms, tomatoes, red pepper flakes and garlic, and served with a side of saffron rice, makes a delicious meal.',
@@ -2396,7 +2666,9 @@ const FullMenuPage = () => {
         hi: 'मक्खन, मशरूम, टमाटर, लाल मिर्च के फ्लेक्स और लहसुन के साथ भुने हुए झींगे, और केसर चावल के साथ परोसे जाते हैं, एक स्वादिष्ट भोजन बनाते हैं।',
         sq: 'Karkaleca të skuqura me gjalpë, kërpudha, domate, biskota speca të kuq dhe hudhra, dhe shërbehet me një anë orizi me shafran, bën një vakt të shijshëm.',
         fr: 'Crevettes sautées au beurre, champignons, tomates, flocons de poivron rouge et ail, et servies avec un accompagnement de riz au safran, font un repas délicieux.',
-        de: 'Garnelen sautiert mit Butter, Champignons, Tomaten, roten Pfefferflocken und Knoblauch, serviert mit einer Beilage aus Safranreis, macht eine köstliche Mahlzeit.'
+        de: 'Garnelen sautiert mit Butter, Champignons, Tomaten, roten Pfefferflocken und Knoblauch, serviert mit einer Beilage aus Safranreis, macht eine köstliche Mahlzeit.',
+        bn: 'মাখন, মাশরুম, টমেটো, লাল মরিচের ফ্লেক্স এবং রসুন দিয়ে ভাজা চিংড়ি, এবং জাফরান ভাত দিয়ে পরিবেশিত, একটি সুস্বাদু খাবার তৈরি করে।',
+        ko: '버터, 마시룸, 토마토, 고춧가루, 마늘로 볶은 새우를 사프란 라이스와 함께 제공하여 맛있는 식사를 만듭니다.'
       }, 
       image: '/Butter Shrimp.jpg',
       price: '$23.99', 
@@ -2419,7 +2691,9 @@ const FullMenuPage = () => {
         hi: 'लैम्ब लेग स्पेशल (2 दिन की पूर्व सूचना आवश्यक)',
         sq: 'Kofshë Qengji Speciale (Kërkohet Njoftim 2 Ditë Paraprakisht)',
         fr: 'Gigot d\'Agneau Spécial (Préavis de 2 Jours Requis)',
-        de: 'Lammkeule Spezial (2 Tage Voranmeldung Erforderlich)'
+        de: 'Lammkeule Spezial (2 Tage Voranmeldung Erforderlich)',
+        bn: 'ল্যাম্ব লেগ স্পেশাল (২ দিনের পূর্ব নোটিশ প্রয়োজন)',
+        ko: '양다리 스페셜 (2일 전 예약 필요)'
       }, 
       description: { 
         en: 'This dish features tender, fall-off-the-bone lamb shank, slow-roasted for 8 hours, and is served with two varieties of rice (saffron and biryani), fresh salad, tzatziki sauce, spicy sauce, and our special mild white sauce, along with an appetizers combo and sesame kulera, serving 10 people.',
@@ -2434,7 +2708,9 @@ const FullMenuPage = () => {
         hi: 'इस व्यंजन में नरम, हड्डी से गिरने वाली भेड़ की टांग है, जो 8 घंटे तक धीमी आंच पर भुनी गई है, और दो प्रकार के चावल (केसर और बिरयानी), ताजा सलाद, त्ज़त्ज़िकी सॉस, तीखी सॉस, और हमारी विशेष हल्की सफेद सॉस के साथ एपेटाइज़र कॉम्बो और तिल कुलेरा के साथ परोसा जाता है, 10 लोगों को परोसता है।',
         sq: 'Kjo pjatë përmban kofshë qengji të butë që bie nga kocka, e pjekur ngadalë për 8 orë, dhe shërbehet me dy lloje orizi (me shafran dhe biryani), sallatë të freskët, salcë tzatziki, salcë djegëse dhe salcën tonë speciale të bardhë të butë, së bashku me një kombinim hapësirash dhe kulera me susam, duke shërbyer 10 persona.',
         fr: 'Ce plat présente un gigot d\'agneau tendre qui tombe de l\'os, rôti lentement pendant 8 heures, et est servi avec deux variétés de riz (safran et biryani), salade fraîche, sauce tzatziki, sauce épicée et notre sauce blanche douce spéciale, accompagné d\'un combo d\'apéritifs et de kulera au sésame, servant 10 personnes.',
-        de: 'Dieses Gericht zeigt zarte, vom Knochen fallende Lammkeule, 8 Stunden langsam geröstet, und wird mit zwei Reissorten (Safran und Biryani), frischem Salat, Tzatziki-Sauce, scharfer Sauce und unserer speziellen milden weißen Sauce zusammen mit einer Vorspeisen-Kombination und Sesam-Kulera serviert, für 10 Personen.'
+        de: 'Dieses Gericht zeigt zarte, vom Knochen fallende Lammkeule, 8 Stunden langsam geröstet, und wird mit zwei Reissorten (Safran und Biryani), frischem Salat, Tzatziki-Sauce, scharfer Sauce und unserer speziellen milden weißen Sauce zusammen mit einer Vorspeisen-Kombination und Sesam-Kulera serviert, für 10 Personen.',
+        bn: 'এই পদে রয়েছে নরম, হাড় থেকে পড়ে যাওয়া মেষশাবকের পা, ৮ ঘন্টা ধীরে ভাজা, এবং দুই ধরনের ভাত (জাফরান এবং বিরিয়ানি), তাজা সালাদ, তাজাতজিকি সস, ঝাল সস এবং আমাদের বিশেষ হালকা সাদা সস দিয়ে ক্ষুধাবর্ধক কম্বো এবং তিল কুলেরা সহ পরিবেশিত, ১০ জনের জন্য।',
+        ko: '이 요리는 8시간 동안 천천히 구워서 뼈에서 떨어지는 부드러운 양 정강이가 특징이며, 두 종류의 쌀(사프란과 비리야니), 신선한 샐러드, 짜지키 소스, 매운 소스, 특별한 마일드 화이트 소스와 함께 전채 콤보와 참깨 쿨레라와 함께 제공되어 10명이 드실 수 있습니다.'
       }, 
       image: '/Lamb Leg Special.jpg',
       price: '$499.00', 
@@ -2458,7 +2734,9 @@ const FullMenuPage = () => {
         fr: 'Shish Kebab d\'Erbil',
         ru: 'Эрбильский шиш-кебаб',
         hi: 'एर्बिल शीश कबाब',
-        sq: 'Shish Kabab Erbil'
+        sq: 'Shish Kabab Erbil',
+        bn: 'এরবিল শিশ কাবাব',
+        ko: '에르빌 시시 카밥'
       }, 
       description: { 
         en: 'A kabab made with a mix of lamb and beef, grilled to perfection. It is served with saffron rice, fresh salad, sumac onions and grilled tomato.',
@@ -2473,7 +2751,9 @@ const FullMenuPage = () => {
         ru: 'Кебаб из смеси баранины и говядины, приготовленный на гриле до совершенства. Подается с шафрановым рисом, свежим салатом, луком с сумаком и жареным помидором.',
         hi: 'भेड़ के बच्चे और गाय के मांस के मिश्रण से बना कबाब, पूर्णता तक ग्रिल किया गया। केसर चावल, ताजा सलाद, सुमाक प्याज और ग्रिल्ड टमाटर के साथ परोसा जाता है।',
         sq: 'Një kabab i bërë me një përzierje mishi qengjishi dhe viçi, i pjekur në skarë deri në përsosmëri. Shërbehet me oriz me shafran, sallatë të freskët, qepë sumak dhe domate në skarë.',
-        de: 'Ein Kebab aus einer Mischung von Lamm- und Rindfleisch, perfekt gegrillt. Serviert mit Safranreis, frischem Salat, Sumak-Zwiebeln und gegrillter Tomate.'
+        de: 'Ein Kebab aus einer Mischung von Lamm- und Rindfleisch, perfekt gegrillt. Serviert mit Safranreis, frischem Salat, Sumak-Zwiebeln und gegrillter Tomate.',
+        bn: 'মেষশাবক এবং গরুর মাংসের মিশ্রণে তৈরি কাবাব, নিখুঁততা পর্যন্ত গ্রিল করা। জাফরান ভাত, তাজা সালাদ, সুমাক পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে পরিবেশিত।',
+        ko: '양고기와 소고기를 섞어 만든 카밥으로, 완벽하게 구워집니다. 사프란 쌀, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공됩니다.'
       }, 
       price: '$23.99', 
       category: 'grill', 
@@ -2495,7 +2775,9 @@ const FullMenuPage = () => {
         ru: 'Махши кебаб',
         hi: 'महशी कबाब',
         sq: 'Kabab Mahshi',
-        fr: 'Kebab Mahshi'
+        fr: 'Kebab Mahshi',
+        bn: 'মাহশী কাবাব',
+        ko: '마시 카밥'
       }, 
       description: { 
         en: 'A kabab made with beef and lamb, flavored with garlic, spicy peppers and parsley. It is served with fresh salad, saffron rice, sumac onions and grilled tomato.',
@@ -2510,7 +2792,9 @@ const FullMenuPage = () => {
         hi: 'गाय और भेड़ के बच्चे के मांस से बना कबाब, लहसुन, तेज़ मिर्च और अजमोद के साथ स्वादिष्ट। ताजा सलाद, केसर चावल, सुमाक प्याज और ग्रिल्ड टमाटर के साथ परोसा जाता है।',
         sq: 'Një kabab i bërë me viç dhe qengj, i shijësuar me hudhra, spec të rrëmbyeshëm dhe majdanoz. Shërbehet me sallatë të freskët, oriz me shafran, qepë sumak dhe domate në skarë.',
         fr: 'Un kebab fait avec du bœuf et de l\'agneau, assaisonné à l\'ail, aux piments forts et au persil. Servi avec une salade fraîche, du riz au safran, des oignons au sumac et une tomate grillée.',
-        de: 'Ein Kebab aus Rind- und Lammfleisch, gewürzt mit Knoblauch, scharfen Paprika und Petersilie. Serviert mit frischem Salat, Safranreis, Sumak-Zwiebeln und gegrillter Tomate.'
+        de: 'Ein Kebab aus Rind- und Lammfleisch, gewürzt mit Knoblauch, scharfen Paprika und Petersilie. Serviert mit frischem Salat, Safranreis, Sumak-Zwiebeln und gegrillter Tomate.',
+        bn: 'গরু এবং মেষশাবকের মাংস দিয়ে তৈরি কাবাব, রসুন, ঝাল মরিচ এবং পার্সলে দিয়ে স্বাদযুক্ত। তাজা সালাদ, জাফরান ভাত, সুমাক পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে পরিবেশিত।',
+        ko: '소고기와 양고기로 만든 카밥으로, 마늘, 매운 고추, 파슬리로 맛을 냅니다. 신선한 샐러드, 사프란 라이스, 수막 양파, 구운 토마토와 함께 제공됩니다.'
       }, 
       price: '$23.99', 
       category: 'grill', 
@@ -2532,7 +2816,9 @@ const FullMenuPage = () => {
         ru: 'Куриный кебаб',
         hi: 'चिकन कबाब',
         sq: 'Kabab Pule',
-        fr: 'Kebab de Poulet'
+        fr: 'Kebab de Poulet',
+        bn: 'চিকেন কাবাব',
+        ko: '치킨 카밥'
       }, 
       description: { 
         en: 'Marinated chicken with spices, tomatoes, bell peppers, parsley, and onions is served with saffron rice, fresh salad, sumac onions, and grilled tomato.',
@@ -2547,7 +2833,9 @@ const FullMenuPage = () => {
         hi: 'मसालों, टमाटर, शिमला मिर्च, अजमोद और प्याज के साथ मैरिनेट चिकन केसर चावल, ताजा सलाद, सुमाक प्याज और ग्रिल्ड टमाटर के साथ परोसा जाता है।',
         sq: 'Pulë e marinuar me erëza, domate, spec të ëmbël, majdanoz dhe qepë shërbehet me oriz me shafran, sallatë të freskët, qepë sumak dhe domate në skarë.',
         fr: 'Poulet mariné aux épices, tomates, poivrons, persil et oignons est servi avec riz au safran, salade fraîche, oignons au sumac et tomate grillée.',
-        de: 'Mariniertes Hähnchen mit Gewürzen, Tomaten, Paprika, Petersilie und Zwiebeln wird mit Safranreis, frischem Salat, Sumak-Zwiebeln und gegrillter Tomate serviert.'
+        de: 'Mariniertes Hähnchen mit Gewürzen, Tomaten, Paprika, Petersilie und Zwiebeln wird mit Safranreis, frischem Salat, Sumak-Zwiebeln und gegrillter Tomate serviert.',
+        bn: 'মসলা, টমেটো, বেল মরিচ, পার্সলে এবং পেঁয়াজ দিয়ে মেরিনেটেড চিকেন জাফরান ভাত, তাজা সালাদ, সুমাক পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে পরিবেশিত।',
+        ko: '향신료, 토마토, 피망, 파슬리, 양파로 양념한 치킨을 사프란 라이스, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공합니다.'
       }, 
       price: '$22.99', 
       category: 'grill', 
@@ -2566,10 +2854,13 @@ const FullMenuPage = () => {
         ur: 'چوکرتمے کباب',
         kmr: 'Kebaba Çokertme',
         es: 'Kebab Cökertme',
-        ru: 'Чокертме кебаб',
-        hi: 'चोकर्तमे कबाब',
+        ru: 'Чекертме кебаб',
+        hi: 'चोकरत्मे कबाब',
         sq: 'Kabab Cökertme',
-        fr: 'Kebab Cökertme'
+        fr: 'Kebab Cökertme',
+        de: 'Cökertme-Kebab',
+        bn: 'চোকার্তমে কাবাব',
+        ko: '쵸케르트메 카밥'
       }, 
       description: { 
         en: 'Eggplant with yogurt and garlic, topped with thinly sliced beef pieces, is served with shoestring potatoes and special tomato sauce.',
@@ -2584,7 +2875,9 @@ const FullMenuPage = () => {
         hi: 'दही और लहसुन के साथ बैंगन, बारीक कटे हुए गोमांस के टुकड़ों से ढका हुआ, शूस्ट्रिंग आलू और विशेष टमाटर सॉस के साथ परोसा जाता है।',
         sq: 'Patëllxhan me kos dhe hudhra, i mbuluar me copa të holla mishi viçi, shërbehet me patate në fije dhe salcë të veçantë domatesh.',
         fr: 'Aubergine au yaourt et à l\'ail, garnie de fines tranches de bœuf, servie avec des pommes de terre allumettes et une sauce tomate spéciale.',
-        de: 'Aubergine mit Joghurt und Knoblauch, belegt mit dünn geschnittenen Rindfleischstücken, serviert mit Schusterkartoffeln und spezieller Tomatensauce.'
+        de: 'Aubergine mit Joghurt und Knoblauch, belegt mit dünn geschnittenen Rindfleischstücken, serviert mit Schusterkartoffeln und spezieller Tomatensauce.',
+        bn: 'দই এবং রসুনের সাথে বেগুন, পাতলা কাটা গরুর মাংসের টুকরা দিয়ে ঢাকা, শুস্ট্রিং আলু এবং বিশেষ টমেটো সসের সাথে পরিবেশিত।',
+        ko: '요거트와 마늘을 넣은 가지 위에 얇게 썬 소고기 조각을 올리고, 실감자와 특제 토마토 소스와 함께 제공됩니다.'
       }, 
       price: '$25.99', 
       category: 'grill', 
@@ -2606,7 +2899,9 @@ const FullMenuPage = () => {
         ru: 'Крылышки',
         hi: 'विंग्स',
         sq: 'Krahët',
-        fr: 'Ailes'
+        fr: 'Ailes',
+        bn: 'উইংস',
+        ko: '윙스'
       }, 
       description: { 
         en: 'Grilled wings, a flavor sensation that will delight your taste buds, are served with aromatic saffron rice, fresh green salad, sumac-seasoned onions, and grilled tomato. Don\'t miss out on this delectable combination!',
@@ -2621,7 +2916,9 @@ const FullMenuPage = () => {
         hi: 'ग्रिल्ड विंग्स, एक स्वाद की संवेदना जो आपकी स्वाद कलियों को प्रसन्न करेगी, सुगंधित केसर चावल, ताजे हरे सलाद, सुमाक-मसालेदार प्याज और ग्रिल्ड टमाटर के साथ परोसा जाता है। इस स्वादिष्ट संयोजन को न चूकें!',
         sq: 'Krahët në skarë, një përvojë shije që do të kënaqë shijet tuaja, shërbehet me oriz aromatik me shafran, sallatë të gjelbër të freskët, qepë të erëzuara me sumak dhe domate në skarë. Mos e humbni këtë kombinim të shijshëm!',
         fr: 'Ailes grillées, une sensation gustative qui ravira vos papilles, servies avec du riz aromatique au safran, salade verte fraîche, oignons assaisonnés au sumac et tomate grillée. Ne manquez pas cette délicieuse combinaison!',
-        de: 'Gegrillte Flügel, ein Geschmackserlebnis, das Ihre Geschmacksnerven erfreuen wird, werden mit aromatischem Safranreis, frischem grünem Salat, mit Sumak gewürzten Zwiebeln und gegrillter Tomate serviert. Lassen Sie sich diese köstliche Kombination nicht entgehen!'
+        de: 'Gegrillte Flügel, ein Geschmackserlebnis, das Ihre Geschmacksnerven erfreuen wird, werden mit aromatischem Safranreis, frischem grünem Salat, mit Sumak gewürzten Zwiebeln und gegrillter Tomate serviert. Lassen Sie sich diese köstliche Kombination nicht entgehen!',
+        bn: 'গ্রিল করা উইংস, একটি স্বাদের অনুভূতি যা আপনার স্বাদ কোরকদের আনন্দিত করবে, সুগন্ধি জাফরান ভাত, তাজা সবুজ সালাদ, সুমাক-মসলাযুক্ত পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে পরিবেশিত। এই সুস্বাদু সমন্বয়টি মিস করবেন না!',
+        ko: '구운 윙스는 당신의 미각을 즐겁게 할 맛의 감각으로, 향긋한 사프란 라이스, 신선한 녹색 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공됩니다. 이 맛있는 조합을 놓치지 마세요!'
       }, 
       price: '$19.99', 
       category: 'grill', 
@@ -2643,7 +2940,9 @@ const FullMenuPage = () => {
         ru: 'Тикка из говядины',
         hi: 'बीफ टिक्का',
         sq: 'Tikka Viçi',
-        fr: 'Tikka de Bœuf'
+        fr: 'Tikka de Bœuf',
+        bn: 'বিফ টিক্কা',
+        ko: '소고기 티카'
       }, 
       description: { 
         en: 'Beef tikka, the perfect choice for meat lovers, is paired with aromatic saffron rice, fresh salad, sumac-seasoned onions, and grilled tomato. It creates an unforgettable taste experience. Don\'t miss out on this unique flavor!',
@@ -2658,7 +2957,9 @@ const FullMenuPage = () => {
         hi: 'बीफ टिक्का, मांस प्रेमियों के लिए बेहतरीन विकल्प, सुगंधित केसर चावल, ताजे सलाद, सुमाक मसालेदार प्याज और ग्रिल्ड टमाटर के साथ जोड़ा गया है। यह अविस्मरणीय स्वाद अनुभव बनाता है। इस अनूठे स्वाद को मत छोड़ें!',
         sq: 'Tikka viçi, zgjidhja perfekte për dashamirët e mishit, është çiftuar me oriz aromatik me shafran, sallatë të freskët, qepë të erëzuara me sumak dhe domate në skarë. Krijon një përvojë shije të paharrushme. Mos e humbni këtë shije unike!',
         fr: 'Tikka de bœuf, le choix parfait pour les amateurs de viande, est accompagné de riz aromatique au safran, salade fraîche, oignons assaisonnés au sumac et tomate grillée. Il crée une expérience gustative inoubliable. Ne manquez pas cette saveur unique !',
-        de: 'Rind-Tikka, die perfekte Wahl für Fleischliebhaber, wird mit aromatischem Safranreis, frischem Salat, mit Sumak gewürzten Zwiebeln und gegrillter Tomate kombiniert. Es schafft ein unvergessliches Geschmackserlebnis. Lassen Sie sich diesen einzigartigen Geschmack nicht entgehen!'
+        de: 'Rind-Tikka, die perfekte Wahl für Fleischliebhaber, wird mit aromatischem Safranreis, frischem Salat, mit Sumak gewürzten Zwiebeln und gegrillter Tomate kombiniert. Es schafft ein unvergessliches Geschmackserlebnis. Lassen Sie sich diesen einzigartigen Geschmack nicht entgehen!',
+        bn: 'বিফ টিক্কা, মাংসপ্রেমীদের জন্য নিখুঁত পছন্দ, সুগন্ধি জাফরান ভাত, তাজা সালাদ, সুমাক-মসলাযুক্ত পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে জোড়া। এটি একটি অবিস্মরণীয় স্বাদের অভিজ্ঞতা তৈরি করে। এই অনন্য স্বাদটি মিস করবেন না!',
+        ko: '고기 애호가들을 위한 완벽한 선택인 소고기 티카는 향긋한 사프란 쌀, 신선한 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공됩니다. 잊을 수 없는 맛의 경험을 만들어냅니다. 이 독특한 맛을 놓치지 마세요!'
       }, 
       price: '$23.99', 
       category: 'grill', 
@@ -2680,7 +2981,9 @@ const FullMenuPage = () => {
         ru: 'Куриная тикка',
         hi: 'चिकन टिक्का',
         sq: 'Tikka Pule',
-        fr: 'Tikka de Poulet'
+        fr: 'Tikka de Poulet',
+        bn: 'চিকেন টিক্কা',
+        ko: '치킨 티카'
       }, 
       description: { 
         en: 'This dish offers a flavorful experience! It is served with aromatic saffron rice, fresh salad, sumac-seasoned onions, and grilled tomato. Bon appétit!',
@@ -2695,7 +2998,9 @@ const FullMenuPage = () => {
         hi: 'यह व्यंजन एक स्वादिष्ट अनुभव प्रदान करता है! सुगंधित केसर चावल, ताजे सलाद, सुमाक मसालेदार प्याज और ग्रिल्ड टमाटर के साथ परोसा जाता है। स्वादिष्ट भोजन करें!',
         sq: 'Ky pjatë ofron një përvojë të shijshme! Shërbehet me oriz aromatik me shafran, sallatë të freskët, qepë të erëzuara me sumak dhe domate në skarë. Ju bëftë mirë!',
         fr: 'Ce plat offre une expérience savoureuse ! Il est servi avec du riz aromatique au safran, salade fraîche, oignons assaisonnés au sumac et tomate grillée. Bon appétit !',
-        de: 'Dieses Gericht bietet ein geschmackvolles Erlebnis! Es wird mit aromatischem Safranreis, frischem Salat, mit Sumak gewürzten Zwiebeln und gegrillter Tomate serviert. Guten Appetit!'
+        de: 'Dieses Gericht bietet ein geschmackvolles Erlebnis! Es wird mit aromatischem Safranreis, frischem Salat, mit Sumak gewürzten Zwiebeln und gegrillter Tomate serviert. Guten Appetit!',
+        bn: 'এই পদটি একটি স্বাদযুক্ত অভিজ্ঞতা প্রদান করে! সুগন্ধি জাফরান ভাত, তাজা সালাদ, সুমাক-মসলাযুক্ত পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে পরিবেশিত। শুভ খাবার!',
+        ko: '이 요리는 풍미로운 경험을 제공합니다! 향긋한 사프란 라이스, 신선한 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공됩니다. 맛있게 드세요!'
       }, 
       price: '$21.99', 
       category: 'grill', 
@@ -2717,7 +3022,9 @@ const FullMenuPage = () => {
         ru: 'Тикка из баранины',
         hi: 'लैम्ब टिक्का',
         sq: 'Tikka Qengjishi',
-        fr: 'Tikka d\'Agneau'
+        fr: 'Tikka d\'Agneau',
+        bn: 'ল্যাম্ব টিক্কা',
+        ko: '양고기 티카'
       }, 
       description: { 
         en: 'Tender lamb cubes, marinated in spices and grilled on skewers, are served with sumac-marinated onions, fresh salad, saffron rice, and grilled tomato.',
@@ -2732,7 +3039,9 @@ const FullMenuPage = () => {
         hi: 'मसालों में मैरिनेट किए गए और सीखों पर ग्रिल किए गए नरम भेड़ के टुकड़े, सुमाक-मैरिनेट प्याज, ताजे सलाद, केसर चावल और ग्रिल्ड टमाटर के साथ परोसे जाते हैं।',
         sq: 'Kuba të buta qengjishi, të marinuar me erëza dhe të pjekura në skarë në shpuza, shërbehet me qepë të marinuar me sumak, sallatë të freskët, oriz me shafran dhe domate në skarë.',
         fr: 'Cubes tendres d\'agneau, marinés aux épices et grillés sur des brochettes, sont servis avec des oignons marinés au sumac, salade fraîche, riz au safran et tomate grillée.',
-        de: 'Zarte Lammwürfel, in Gewürzen mariniert und auf Spießen gegrillt, werden mit in Sumak marinierten Zwiebeln, frischem Salat, Safranreis und gegrillter Tomate serviert.'
+        de: 'Zarte Lammwürfel, in Gewürzen mariniert und auf Spießen gegrillt, werden mit in Sumak marinierten Zwiebeln, frischem Salat, Safranreis und gegrillter Tomate serviert.',
+        bn: 'নরম মেষশাবকের কিউব, মসলায় মেরিনেট করা এবং শিকে গ্রিল করা, সুমাক-মেরিনেট করা পেঁয়াজ, তাজা সালাদ, জাফরান ভাত এবং গ্রিল করা টমেটোর সাথে পরিবেশিত।',
+        ko: '향신료에 절여 꼬치에 구운 부드러운 양고기 큐브를, 수막에 절인 양파, 신선한 샐러드, 사프란 쌀, 구운 토마토와 함께 제공합니다.'
       }, 
       price: '$23.99', 
       category: 'grill', 
@@ -2757,7 +3066,9 @@ const FullMenuPage = () => {
         hi: 'नेचर विलेज स्पेशल प्लैटर',
         sq: 'Pjatë Speciale Nature Village',
         fr: 'Plateau Spécial Nature Village',
-        de: 'Nature Village Spezial Platte'
+        de: 'Nature Village Spezial Platte',
+        bn: 'নেচার ভিলেজ স্পেশাল প্লেটার',
+        ko: '네이처 빌리지 스페셜 플래터'
       }, 
       description: { 
         en: 'An extraordinary feast featuring our signature grilled specialties: tender Erbil kabab, flavorful Mahshi kabab, succulent beef tikka, perfectly seasoned chicken tikka, crispy grilled wings, and aromatic chicken kabab. Served with two exquisite rice varieties - fragrant saffron rice and spiced biryani - alongside sumac-marinated onions, fresh garden salad, and char-grilled tomatoes. A true celebration of Middle Eastern culinary artistry!',
@@ -2772,7 +3083,9 @@ const FullMenuPage = () => {
         hi: 'हमारी विशेष ग्रिल्ड खासियतों के साथ एक असाधारण दावत: कोमल एर्बिल कबाब, स्वादिष्ट महशी कबाब, रसदार बीफ टिक्का, बेहतरीन मसालों वाला चिकन टिक्का, कुरकुरे ग्रिल्ड विंग्स, और सुगंधित चिकन कबाब। दो उत्कृष्ट चावल की किस्मों के साथ परोसा जाता है - सुगंधित केसर चावल और मसालेदार बिरयानी - सुमाक-मैरिनेटेड प्याज, ताजा बगीचे का सलाद, और कोयले पर भुने टमाटर के साथ। मध्य पूर्वी पाक कला की एक सच्ची उत्सव!',
         sq: 'Një gosti e jashtëzakonshme me specialitetet tona të reja në skarë: kabab Erbil i butë, kabab Mahshi i shijshëm, tikka viçi i lagësht, tikka pule e përsosur me erëza, krahë të kërcëlluar në skarë dhe kabab pule aromatik. Serviret me dy lloje orizi të shkëlqyer - oriz me shafran të parfumuar dhe biryani me erëza - së bashku me qepë të marinuar me sumak, sallatë të freskët kopshti dhe domate të thekura në qymyr. Një festim i vërtetë i artit kulinar të Lindjes së Mesme!',
         fr: 'Un festin extraordinaire mettant en vedette nos spécialités grillées: tendre kebab d\'Erbil, savoureux kebab Mahshi, succulent tikka de bœuf, tikka de poulet parfaitement assaisonné, ailes grillées croustillantes et kebab de poulet aromatique. Servi avec deux variétés de riz exquises - riz au safran parfumé et biryani épicé - accompagné d\'oignons marinés au sumac, salade fraîche du jardin et tomates grillées au charbon. Une véritable célébration de l\'art culinaire du Moyen-Orient!',
-        de: 'Ein außergewöhnliches Festmahl mit unseren charakteristischen Grillspezialitäten: zartes Erbil-Kebab, geschmackvolles Mahshi-Kebab, saftiges Rind-Tikka, perfekt gewürztes Hähnchen-Tikka, knusprige gegrillte Flügel und aromatisches Hähnchen-Kebab. Serviert mit zwei exquisiten Reissorten - duftendem Safranreis und gewürztem Biryani - zusammen mit in Sumak marinierten Zwiebeln, frischem Gartensalat und über Kohlenfeuer gegrillten Tomaten. Eine wahre Feier der nahöstlichen Kochkunst!'
+        de: 'Ein außergewöhnliches Festmahl mit unseren charakteristischen Grillspezialitäten: zartes Erbil-Kebab, geschmackvolles Mahshi-Kebab, saftiges Rind-Tikka, perfekt gewürztes Hähnchen-Tikka, knusprige gegrillte Flügel und aromatisches Hähnchen-Kebab. Serviert mit zwei exquisiten Reissorten - duftendem Safranreis und gewürztem Biryani - zusammen mit in Sumak marinierten Zwiebeln, frischem Gartensalat und über Kohlenfeuer gegrillten Tomaten. Eine wahre Feier der nahöstlichen Kochkunst!',
+        bn: 'আমাদের বিশেষ গ্রিল করা খাদ্যগুলির সাথে একটি অসাধারণ ভোজ: নরম এরবিল কাবাব, স্বাদযুক্ত মাহশী কাবাব, রসালো বিফ টিক্কা, নিখুঁতভাবে মসলাযুক্ত চিকেন টিক্কা, কুড়কুড়ে গ্রিল করা উইংস এবং সুগন্ধি চিকেন কাবাব। দুটি চমৎকার ভাতের জাত দিয়ে পরিবেশিত - সুগন্ধি জাফরান ভাত এবং মসলাযুক্ত বিরিয়ানি - সুমাক-মেরিনেট করা পেঁয়াজ, তাজা বাগানের সালাদ এবং কয়লায় গ্রিল করা টমেটোর সাথে। মধ্যপ্রাচ্যের রন্ধনশিল্পের একটি প্রকৃত উদযাপন!',
+        ko: '우리의 시그니처 그릴 스페셜티로 구성된 특별한 잔치: 부드러운 어빌 카밥, 풍미로운 마시 카밥, 육즙이 풍부한 비프 티카, 완벽하게 양념된 치킨 티카, 바삭한 구운 윙스, 향긋한 치킨 카밥. 두 가지 훌륭한 쌀 요리와 함께 제공됩니다 - 향긋한 사프란 라이스와 향신료 비리야니 - 수막에 절인 양파, 신선한 정원 샐러드, 숯불에 구운 토마토와 함께. 중동 요리 예술의 진정한 축제입니다!'
       }, 
       price: '$69.99', // Base price for serving2, variants will override
       category: 'grill', 
@@ -2794,7 +3107,9 @@ const FullMenuPage = () => {
             hi: '2 लोगों के लिए',
             sq: 'Për 2 Persona',
             fr: 'Pour 2 Personnes',
-            de: 'Für 2 Personen'
+            de: 'Für 2 Personen',
+            bn: '২ জনের জন্য',
+            ko: '2인분'
           },
           price: '$69.99'
         },
@@ -2813,7 +3128,9 @@ const FullMenuPage = () => {
             hi: '4 लोगों के लिए',
             sq: 'Për 4 Persona',
             fr: 'Pour 4 Personnes',
-            de: 'Für 4 Personen'
+            de: 'Für 4 Personen',
+            bn: '৪ জনের জন্য',
+            ko: '4인분'
           },
           price: '$119.99'
         }
@@ -2834,10 +3151,12 @@ const FullMenuPage = () => {
         kmr: 'Perrê Berx',
         es: 'Chuletas de Cordero',
         ru: 'Бараньи отбивные',
+        bn: 'ল্যাম্ব চপস',
         hi: 'लैम्ब चॉप्स',
-        sq: 'Kotoleta Qengji',
+        sq: 'Kotoleta Qengjishi',
         fr: 'Côtelettes d\'Agneau',
-        de: 'Lammkoteletts'
+        de: 'Lammkoteletts',
+        ko: '양갈비'
       }, 
       description: { 
         en: 'Marinated with special spices and perfectly cooked, and served with aromatic saffron rice or creamy mashed potatoes (upon request), fresh salad, sumac-seasoned onions, and grilled tomato, it creates an unforgettable taste.',
@@ -2852,7 +3171,9 @@ const FullMenuPage = () => {
         hi: 'विशेष मसालों में मैरिनेट किया गया और पूर्ण रूप से पकाया गया, और सुगंधित केसर चावल या मलाईदार मैश्ड आलू (अनुरोध पर), ताजा सलाद, सुमाक-मसालेदार प्याज, और ग्रिल्ड टमाटर के साथ परोसा जाता है, यह एक अविस्मरणीय स्वाद बनाता है।',
         sq: 'I marinuar me erëza të veçanta dhe i gatuar në mënyrë të përsosur, dhe i shërbyer me oriz me shafran aromatik ose pure patate me krem (me kërkesë), sallatë të freskët, qepë të aromizuara me sumak dhe domate të pjekura në skarë, krijon një shije të paharrueshme.',
         fr: 'Marinées avec des épices spéciales et parfaitement cuites, et servies avec du riz au safran aromatique ou de la purée de pommes de terre crémeuse (sur demande), une salade fraîche, des oignons assaisonnés au sumac et une tomate grillée, cela crée un goût inoubliable.',
-        de: 'Mit besonderen Gewürzen mariniert und perfekt gegart, serviert mit aromatischem Safranreis oder cremigem Kartoffelpüree (auf Anfrage), frischem Salat, mit Sumak gewürzten Zwiebeln und gegrillten Tomaten, schafft es einen unvergesslichen Geschmack.'
+        de: 'Mit besonderen Gewürzen mariniert und perfekt gegart, serviert mit aromatischem Safranreis oder cremigem Kartoffelpüree (auf Anfrage), frischem Salat, mit Sumak gewürzten Zwiebeln und gegrillten Tomaten, schafft es einen unvergesslichen Geschmack.',
+        bn: 'বিশেষ মসলা দিয়ে মেরিনেট করা এবং নিখুঁতভাবে রান্না করা, এবং সুগন্ধি জাফরান ভাত বা ক্রিমি ম্যাশড আলু (অনুরোধের ভিত্তিতে), তাজা সালাদ, সুমাক-মসলাযুক্ত পেঁয়াজ এবং গ্রিল করা টমেটো দিয়ে পরিবেশিত, এটি একটি অবিস্মরণীয় স্বাদ তৈরি করে।',
+        ko: '특별한 향신료로 양념하고 완벽하게 조리되어, 향긋한 사프란 라이스 또는 크리미한 으깬 감자(요청 시), 신선한 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공되어 잊을 수 없는 맛을 만들어냅니다.'
       }, 
       price: '$38.99', 
       category: 'grill', 
@@ -2868,16 +3189,18 @@ const FullMenuPage = () => {
         en: 'Grilled Shrimp Platter',
         ar: 'طبق الجمبري المشوي',
         fa: 'پلاتر میگوی کبابی',
-        ku: 'پلێتەری مەیگووی گرێلکراو',
+        ku: 'پلێتەری شەیتانی گرێلکراو',
         tr: 'Izgara Karides Tabağı',
-        ur: 'گرل شدہ جھینگا پلیٹر',
-        kmr: 'Plata Şevekên Grîlkirî',
+        ur: 'گرل شرمپ پلیٹر',
+        kmr: 'Plata Şêşmalên Grîlkirî',
         es: 'Plato de Camarones a la Parrilla',
-        ru: 'Блюдо из жареных креветок',
-        hi: 'ग्रिल्ड झींगा प्लैटर',
-        sq: 'Pjatë Karkalecash në Skarë',
+        ru: 'Блюдо из креветок на гриле',
+        hi: 'ग्रिल्ड श्रिम्प प्लैटर',
+        sq: 'Pjatë Karkaleci të Pjekur në Skarë',
         fr: 'Plateau de Crevettes Grillées',
-        de: 'Gegrillte Garnelen Platte'
+        de: 'Gegrillte Garnelen Platte',
+        bn: 'গ্রিল করা চিংড়ি প্লেটার',
+        ko: '구운 새우 플래터'
       }, 
       description: { 
         en: 'Marinated grilled shrimp served with sumac-marinated onions, fresh salad, aromatic saffron rice or creamy mashed potatoes (upon request) and grilled tomato.',
@@ -2892,7 +3215,9 @@ const FullMenuPage = () => {
         hi: 'मैरिनेट किए गए ग्रिल्ड झींगे सुमाक-मैरिनेटेड प्याज, ताजा सलाद, सुगंधित केसर चावल या मलाईदार मैश्ड आलू (अनुरोध पर) और ग्रिल्ड टमाटर के साथ परोसे जाते हैं।',
         sq: 'Karkaleca të marinuara në skarë të shërbyer me qepë të marinuara me sumak, sallatë të freskët, oriz me shafran aromatik ose pure patate me krem (me kërkesë) dhe domate të pjekura në skarë.',
         fr: 'Crevettes grillées marinées servies avec des oignons marinés au sumac, une salade fraîche, du riz au safran aromatique ou de la purée de pommes de terre crémeuse (sur demande) et une tomate grillée.',
-        de: 'Marinierte gegrillte Garnelen serviert mit in Sumak marinierten Zwiebeln, frischem Salat, aromatischem Safranreis oder cremigem Kartoffelpüree (auf Anfrage) und gegrillten Tomaten.'
+        de: 'Marinierte gegrillte Garnelen serviert mit in Sumak marinierten Zwiebeln, frischem Salat, aromatischem Safranreis oder cremigem Kartoffelpüree (auf Anfrage) und gegrillten Tomaten.',
+        bn: 'মেরিনেট করা গ্রিল চিংড়ি সুমাক-মেরিনেট করা পেঁয়াজ, তাজা সালাদ, সুগন্ধি জাফরান ভাত বা ক্রিমি ম্যাশড আলু (অনুরোধের ভিত্তিতে) এবং গ্রিল করা টমেটো দিয়ে পরিবেশিত।',
+        ko: '양념한 구운 새우를 수막에 절인 양파, 신선한 샐러드, 향긋한 사프란 라이스 또는 크리미한 으깬 감자(요청 시), 구운 토마토와 함께 제공합니다.'
       }, 
       price: '$22.99', 
       category: 'grill', 
@@ -2917,7 +3242,9 @@ const FullMenuPage = () => {
         hi: 'ग्रिल्ड ब्रान्ज़िनो प्लैटर',
         sq: 'Pjatë Branzino në Skarë',
         fr: 'Plateau de Bar Grillé',
-        de: 'Gegrillte Wolfsbarsch Platte'
+        de: 'Gegrillte Wolfsbarsch Platte',
+        bn: 'গ্রিল করা ব্রানজিনো প্লেটার',
+        ko: '구운 브란지노 플래터'
       }, 
       description: { 
         en: 'Grilled European sea bass fillets, served with sumac-marinated onions, fresh salad, grilled tomato, grilled lemon, and creamy mashed potatoes, is a delightful choice.',
@@ -2932,7 +3259,9 @@ const FullMenuPage = () => {
         hi: 'ग्रिल्ड यूरोपीय सी बास फिलेट्स, सुमाक-मैरिनेटेड प्याज, ताजा सलाद, ग्रिल्ड टमाटर, ग्रिल्ड नींबू, और मलाईदार मैश्ड आलू के साथ परोसा जाता है, यह एक आनंददायक विकल्प है।',
         sq: 'Fileto levrek evropian të pjekur në skarë, të shërbyer me qepë të marinuara me sumak, sallatë të freskët, domate të pjekura në skarë, limon të pjekur në skarë dhe pure patate me krem, është një zgjedhje e këndshme.',
         fr: 'Filets de bar européen grillés, servis avec des oignons marinés au sumac, une salade fraîche, une tomate grillée, un citron grillé et une purée de pommes de terre crémeuse, c\'est un choix délicieux.',
-        de: 'Gegrillte europäische Wolfsbarsch-Filets, serviert mit in Sumak marinierten Zwiebeln, frischem Salat, gegrillten Tomaten, gegrillter Zitrone und cremigem Kartoffelpüree, ist eine köstliche Wahl.'
+        de: 'Gegrillte europäische Wolfsbarsch-Filets, serviert mit in Sumak marinierten Zwiebeln, frischem Salat, gegrillten Tomaten, gegrillter Zitrone und cremigem Kartoffelpüree, ist eine köstliche Wahl.',
+        bn: 'গ্রিল করা ইউরোপীয় সি বাস ফিললেট, সুমাক-মেরিনেট করা পেঁয়াজ, তাজা সালাদ, গ্রিল করা টমেটো, গ্রিল করা লেবু এবং ক্রিমি ম্যাশড আলু দিয়ে পরিবেশিত, এটি একটি সুস্বাদু পছন্দ।',
+        ko: '구운 유럽산 바다농어 필레를 수막에 절인 양파, 신선한 샐러드, 구운 토마토, 구운 레몬, 크리미한 으깬 감자와 함께 제공하는 맛있는 선택입니다.'
       }, 
       price: '$37.99', 
       category: 'grill', 
@@ -2957,7 +3286,9 @@ const FullMenuPage = () => {
         hi: 'वेजी प्लैटर',
         sq: 'Pjatë Perimesh',
         fr: 'Plateau de Légumes',
-        de: 'Gemüse Platte'
+        de: 'Gemüse Platte',
+        bn: 'ভেজি প্লেটার',
+        ko: '베지 플래터'
       }, 
       description: { 
         en: 'This dish features a stir-fried medley of broccoli, carrots, green beans, onion, snap peas, celery, red bell pepper, and white chestnuts, topped with basil, olive oil, and garlic sauce. It is served with saffron rice, tomato sauce, and mild and hot sauces.',
@@ -2972,7 +3303,9 @@ const FullMenuPage = () => {
         hi: 'यह डिश ब्रोकली, गाजर, हरी फलियां, प्याज, मटर, अजवाइन, लाल शिमला मिर्च, और सफेद बादाम का तला हुआ मिश्रण है, जिस पर तुलसी, जैतून का तेल और लहसुन की चटनी डाली जाती है। यह केसर चावल, टमाटर की चटनी, और हल्की और तेज चटनी के साथ परोसा जाता है।',
         sq: 'Kjo pjatë përmban një përzierje të skuqur brokoli, karrota, bishtaja të gjelbra, qepë, bizele, sellino, speca të kuq dhe gështenja të bardha, e mbuluar me borzilok, vaj ulliri dhe salcë hudhra. Shërbehet me oriz me shafran, salcë domatesh dhe salca të buta dhe të forta.',
         fr: 'Ce plat présente un mélange sauté de brocoli, carottes, haricots verts, oignon, pois mange-tout, céleri, poivron rouge et châtaignes blanches, garni de basilic, huile d\'olive et sauce à l\'ail. Il est servi avec du riz au safran, de la sauce tomate et des sauces douces et épicées.',
-        de: 'Dieses Gericht besteht aus einer gebratenen Mischung aus Brokkoli, Karotten, grünen Bohnen, Zwiebeln, Zuckerschoten, Sellerie, roter Paprika und weißen Kastanien, garniert mit Basilikum, Olivenöl und Knoblauchsauce. Es wird mit Safranreis, Tomatensauce und milden und scharfen Saucen serviert.'
+        de: 'Dieses Gericht besteht aus einer gebratenen Mischung aus Brokkoli, Karotten, grünen Bohnen, Zwiebeln, Zuckerschoten, Sellerie, roter Paprika und weißen Kastanien, garniert mit Basilikum, Olivenöl und Knoblauchsauce. Es wird mit Safranreis, Tomatensauce und milden und scharfen Saucen serviert.',
+        bn: 'এই খাবারে ব্রোকলি, গাজর, সবুজ বিন, পেঁয়াজ, স্ন্যাপ মটর, সেলারি, লাল ক্যাপসিকাম এবং সাদা চেস্টনাটের ভাজা মিশ্রণ রয়েছে, তুলসী, অলিভ অয়েল এবং রসুনের সস দিয়ে সাজানো। এটি জাফরান ভাত, টমেটো সস এবং মৃদু ও ঝাল সস দিয়ে পরিবেশিত হয়।',
+        ko: '이 요리는 브로콜리, 당근, 녹두, 양파, 스냅피, 셀러리, 빨간 피망, 하얀 밤을 볶은 혼합물로, 바질, 올리브 오일, 마늘 소스를 곁들였습니다. 사프란 라이스, 토마토 소스, 순한 소스와 매운 소스와 함께 제공됩니다.'
       }, 
       price: '$19.99', 
       category: 'grill', 
@@ -2997,7 +3330,9 @@ const FullMenuPage = () => {
         hi: 'चिकन टेंडर',
         sq: 'Shirita Pule',
         fr: 'Filets de Poulet Tendres',
-        de: 'Hähnchen-Streifen'
+        de: 'Hähnchen-Streifen',
+        bn: 'চিকেন টেন্ডার',
+        ko: '치킨 텐더'
       }, 
       description: { 
         en: 'Tender strips of chicken breast, breaded and fried to crispy golden brown, are served with your choice of dipping sauces.',
@@ -3012,7 +3347,9 @@ const FullMenuPage = () => {
         hi: 'चिकन ब्रेस्ट की नरम पट्टियां, ब्रेड और कुरकुरी सुनहरी भूरे रंग में तली हुई, आपकी पसंद की डिपिंग सॉस के साथ परोसी जाती हैं।',
         sq: 'Shirita të buta të gjoksit të pulës, të mbuluar me bukë dhe të skuqura në ngjyrë të artë të krisur, shërbehet me salcat tuaja të zgjedhura për zhytje.',
         fr: 'Lanières tendres de poitrine de poulet, panées et frites jusqu\'à un doré croustillant, servies avec vos sauces de trempage au choix.',
-        de: 'Zarte Streifen von Hühnerbrust, paniert und zu goldbrauner Knusprigkeit frittiert, werden mit Ihren gewählten Dip-Saucen serviert.'
+        de: 'Zarte Streifen von Hühnerbrust, paniert und zu goldbrauner Knusprigkeit frittiert, werden mit Ihren gewählten Dip-Saucen serviert.',
+        bn: 'চিকেন ব্রেস্টের নরম স্ট্রিপ, ব্রেড করা এবং কুড়কুড়ে সোনালি বাদামী রঙে ভাজা, আপনার পছন্দের ডিপিং সস দিয়ে পরিবেশিত।',
+        ko: '치킨 브레스트의 부드러운 스트립을 빵가루로 입혀서 바삭한 황금빛 갈색으로 튀겨, 원하는 디핑 소스와 함께 제공됩니다.'
       }, 
       price: '$9.49', 
       category: 'kids', 
@@ -3034,7 +3371,10 @@ const FullMenuPage = () => {
         ru: 'Картофель фри',
         hi: 'फ्रेंच फ्राइज़',
         sq: 'Patate të Skuqura',
-        fr: 'Frites'
+        fr: 'Frites',
+        de: 'Pommes',
+        bn: 'ফ্রাইজ',
+        ko: '감자튀김'
       }, 
       description: { 
         en: 'Crispy, golden-brown potato fries, seasoned to perfection and served hot.',
@@ -3049,7 +3389,9 @@ const FullMenuPage = () => {
         hi: 'कुरकुरे, सुनहरे-भूरे आलू फ्राइज़, पूर्णता से सीज़न किए गए और गर्म परोसे गए।',
         sq: 'Patate të krisura me ngjyrë të artë, të erëzuara në përsosmëri dhe të shërbyera të nxehta.',
         fr: 'Frites croustillantes et dorées, parfaitement assaisonnées et servies chaudes.',
-        de: 'Knusprige, goldbraune Kartoffelpommes, perfekt gewürzt und heiß serviert.'
+        de: 'Knusprige, goldbraune Kartoffelpommes, perfekt gewürzt und heiß serviert.',
+        bn: 'কুড়কুড়ে, সোনালি-বাদামী আলুর ফ্রাই, নিখুঁততার সাথে মসলা দেওয়া এবং গরম পরিবেশিত।',
+        ko: '바삭하고 황금빛 갈색의 감자튀김으로, 완벽하게 양념되어 뜨겁게 제공됩니다.'
       }, 
       price: '$6.99', 
       category: 'kids', 
@@ -3066,13 +3408,24 @@ const FullMenuPage = () => {
         ku: 'شیش کەبابی هەولێر',
         tr: 'Erbil Şiş Kebab',
         ur: 'اربیل شیش کباب',
+        kmr: 'Şişê Hewlêrê',
+        es: 'Shish Kebab de Erbil',
+        ru: 'Шиш-кебаб Эрбиль',
+        hi: 'एर्बिल शीश कबाब',
+        sq: 'Shish Kabab Erbil',
+        fr: 'Brochette d\'Erbil',
+        de: 'Erbil Spiess-Kebab',
+        bn: 'এরবিল শিশ কাবাব',
+        ko: '어빌 시시 카밥',
         kmr: 'Şîş Kebabê Hewlêrê',
         es: 'Shish Kabab de Erbil',
         ru: 'Шиш-кебаб Эрбиль',
         hi: 'एर्बिल शीश कबाब',
         sq: 'Shish Kabab Erbil',
         fr: 'Brochette Erbil',
-        de: 'Erbil Spießbraten'
+        de: 'Erbil Spießbraten',
+        bn: 'এরবিল শিশ কাবাব',
+        ko: '어빌 시시 카밥'
       }, 
       description: { 
         en: 'This dish features mildly spiced mini beef kabab skewers specially prepared for kids, served with creamy mashed potatoes.',
@@ -3087,7 +3440,9 @@ const FullMenuPage = () => {
         hi: 'यह डिश में हल्के मसाले वाले मिनी बीफ कबाब स्किवर हैं जो विशेष रूप से बच्चों के लिए तैयार किए गए हैं, मलाईदार मैश किए गए आलू के साथ परोसे जाते हैं।',
         sq: 'Kjo pjatë përmban shishqebap të vegjël viçi me erëza të buta të përgatitura posaçërisht për fëmijë, të shërbyer me pure patate me krem.',
         fr: 'Ce plat présente des mini-brochettes de bœuf légèrement épicées spécialement préparées pour les enfants, servies avec une purée de pommes de terre crémeuse.',
-        de: 'Dieses Gericht bietet mild gewürzte Mini-Rindfleisch-Kebab-Spieße, die speziell für Kinder zubereitet werden, serviert mit cremigem Kartoffelpüree.'
+        de: 'Dieses Gericht bietet mild gewürzte Mini-Rindfleisch-Kebab-Spieße, die speziell für Kinder zubereitet werden, serviert mit cremigem Kartoffelpüree.',
+        bn: 'এই পদে হালকা মসলাযুক্ত মিনি বিফ কাবাব স্কিউয়ার রয়েছে যা বিশেষভাবে শিশুদের জন্য প্রস্তুত করা হয়, ক্রিমি ম্যাশড আলুর সাথে পরিবেশিত।',
+        ko: '이 요리는 아이들을 위해 특별히 준비된 부드럽게 양념한 미니 소고기 카밥 꼬치로, 크리미한 으깬 감자와 함께 제공됩니다.'
       }, 
       price: '$16.99', 
       category: 'kids', 
@@ -3110,7 +3465,9 @@ const FullMenuPage = () => {
         hi: 'चिकन कबाब',
         sq: 'Kebab Pule',
         fr: 'Brochette de Poulet',
-        de: 'Hähnchen-Kebab'
+        de: 'Hähnchen-Kebab',
+        bn: 'চিকেন কাবাব',
+        ko: '치킨 카밥'
       }, 
       description: { 
         en: 'Mildly spiced mini chicken kabab skewers specially prepared for kids, served with creamy mashed potatoes.',
@@ -3125,7 +3482,9 @@ const FullMenuPage = () => {
         hi: 'हल्के मसाले वाले मिनी चिकन कबाब स्किवर जो विशेष रूप से बच्चों के लिए तैयार किए गए हैं, मलाईदार मैश किए गए आलू के साथ परोसे जाते हैं।',
         sq: 'Shishqebap të vegjël pule me erëza të buta të përgatitura posaçërisht për fëmijë, të shërbyer me pure patate me krem.',
         fr: 'Mini-brochettes de poulet légèrement épicées spécialement préparées pour les enfants, servies avec une purée de pommes de terre crémeuse.',
-        de: 'Mild gewürzte Mini-Hähnchen-Kebab-Spieße, die speziell für Kinder zubereitet werden, serviert mit cremigem Kartoffelpüree.'
+        de: 'Mild gewürzte Mini-Hähnchen-Kebab-Spieße, die speziell für Kinder zubereitet werden, serviert mit cremigem Kartoffelpüree.',
+        bn: 'হালকা মসলাযুক্ত মিনি চিকেন কাবাব স্কিউয়ার যা বিশেষভাবে শিশুদের জন্য প্রস্তুত করা হয়, ক্রিমি ম্যাশড আলুর সাথে পরিবেশিত।',
+        ko: '아이들을 위해 특별히 준비된 부드럽게 양념한 미니 치킨 카밥 꼬치로, 크리미한 으깬 감자와 함께 제공됩니다.'
       }, 
       price: '$15.99', 
       category: 'kids', 
@@ -3150,7 +3509,9 @@ const FullMenuPage = () => {
         hi: 'केसर चावल',
         sq: 'Oriz me Shafran',
         fr: 'Riz au Safran',
-        de: 'Safranreis'
+        de: 'Safranreis',
+        bn: 'জাফরান ভাত',
+        ko: '사프란 라이스'
       }, 
       price: '$3.99', 
       category: 'sides', 
@@ -3172,7 +3533,9 @@ const FullMenuPage = () => {
         hi: 'मलाईदार मैश्ड आलू',
         sq: 'Pure Patate me Krem',
         fr: 'Purée de Pommes de Terre Crémeuse',
-        de: 'Cremiges Kartoffelpüree'
+        de: 'Cremiges Kartoffelpüree',
+        bn: 'ক্রিমি ম্যাশড আলু',
+        ko: '크리미한 으깬 감자'
       }, 
       price: '$6.99', 
       category: 'sides', 
@@ -3194,7 +3557,9 @@ const FullMenuPage = () => {
         hi: 'फ्रेंच फ्राइज़',
         sq: 'Patate të Skuqura',
         fr: 'Frites',
-        de: 'Pommes Frites'
+        de: 'Pommes Frites',
+        bn: 'ফ্রাইজ',
+        ko: '프렌치 프라이'
       }, 
       price: '$6.99', 
       category: 'sides', 
@@ -3217,7 +3582,9 @@ const FullMenuPage = () => {
         hi: 'साइड सलाद',
         sq: 'Sallatë Anësore',
         fr: 'Salade d\'Accompagnement',
-        de: 'Beilagensalat'
+        de: 'Beilagensalat',
+        bn: 'সাইড সালাদ',
+        ko: '사이드 샐러드'
       }, 
       price: '$7.99', 
       category: 'sides', 
@@ -3240,7 +3607,11 @@ const FullMenuPage = () => {
         es: 'Agua',
         ru: 'Вода',
         hi: 'पानी',
-        sq: 'Ujë'
+        sq: 'Ujë',
+        fr: 'Eau',
+        de: 'Wasser',
+        bn: 'পানি',
+        ko: '물'
       }, 
       description: { 
         en: 'Fresh bottled water.',
@@ -3254,7 +3625,10 @@ const FullMenuPage = () => {
         ru: 'Свежая бутилированная вода.',
         hi: 'ताज़ा बोतलबंद पानी।',
         sq: 'Ujë i freskët në shishe.',
-        de: 'Frisches Flaschenwasser.'
+        fr: 'Eau embouteillée fraîche.',
+        de: 'Frisches Flaschenwasser.',
+        bn: 'তাজা বোতলজাত পানি।',
+        ko: '신선한 생수.'
       }, 
       price: '$1.49', 
       category: 'drinks_cold', 
@@ -3274,7 +3648,10 @@ const FullMenuPage = () => {
         ru: 'Газированная вода',
         hi: 'स्पार्कलिंग वॉटर',
         sq: 'Ujë me Gaz',
-        fr: 'Eau Pétillante'
+        fr: 'Eau Pétillante',
+        de: 'Sprudelwasser',
+        bn: 'স্পার্কলিং ওয়াটার',
+        ko: '탄산수'
       }, 
       description: { 
         en: 'Refreshing sparkling water.',
@@ -3289,7 +3666,9 @@ const FullMenuPage = () => {
         hi: 'ताज़गी देने वाला स्पार्कलिंग वॉटर।',
         sq: 'Ujë me gaz freskues.',
         fr: 'Eau pétillante rafraîchissante.',
-        de: 'Erfrischendes Mineralwasser.'
+        de: 'Erfrischendes Mineralwasser.',
+        bn: 'সতেজকারী স্পার্কলিং ওয়াটার।',
+        ko: '시원한 탄산수.'
       }, 
       price: '$3.99', 
       category: 'drinks_cold', 
@@ -3306,10 +3685,13 @@ const FullMenuPage = () => {
         ur: 'سوڈا',
         kmr: 'Vexwarinê Gazdar',
         es: 'Refresco',
-        ru: 'Газировka',
+        ru: 'Газировка',
         hi: 'सोडा',
         sq: 'Pije me Gaz',
-        fr: 'Soda'
+        fr: 'Soda',
+        de: 'Limonade',
+        bn: 'সোডা',
+        ko: '탄산음료'
       }, 
       description: { 
         en: 'Choice of Coke, Diet Coke, Coke Zero, Sprite, Fanta, Ginger Ale, or Minute Maid.',
@@ -3324,7 +3706,9 @@ const FullMenuPage = () => {
         hi: 'कोक, डाइट कोक, कोक जीरो, स्प्राइट, फैंटा, जिंजर एले या मिनट मेड का विकल्प।',
         sq: 'Zgjidhje ndërmjet Koka Kola, Diet Koka, Koka Zero, Sprite, Fanta, Ginger Ale ose Minute Maid.',
         fr: 'Choix de Coca-Cola, Coca Light, Coca Zéro, Sprite, Fanta, Ginger Ale ou Minute Maid.',
-        de: 'Auswahl aus Coca Cola, Diet Coke, Coke Zero, Sprite, Fanta, Ginger Ale oder Minute Maid.'
+        de: 'Auswahl aus Coca Cola, Diet Coke, Coke Zero, Sprite, Fanta, Ginger Ale oder Minute Maid.',
+        bn: 'কোক, ডায়েট কোক, কোক জিরো, স্প্রাইট, ফ্যান্টা, জিঞ্জার অ্যাল বা মিনিট মেইড এর পছন্দ।',
+        ko: '콜라, 다이어트 콜라, 콜라 제로, 스프라이트, 판타, 진저 에일 또는 미닛 메이드 중 선택.'
       }, 
       price: '$2.99', 
       category: 'drinks_cold', 
@@ -3342,10 +3726,13 @@ const FullMenuPage = () => {
         ur: 'اربیل یوگرٹ ڈرنک',
         kmr: 'Vexwarinê Mastê Hewlêr',
         es: 'Bebida de Yogur de Erbil',
-        ru: 'Йогуртовый напиток из Эрбиля',
-        hi: 'एर्बिल दही का पेय',
+        ru: 'Йогуртный напиток Эрбиль',
+        hi: 'एर्बिल योगर्ट ड्रिंक',
         sq: 'Pije Kosi Erbil',
-        fr: 'Boisson au Yaourt d\'Erbil'
+        fr: 'Boisson au Yaourt d\'Erbil',
+        de: 'Erbil Joghurt-Getränk',
+        bn: 'এরবিল দই পানীয়',
+        ko: '어빌 요거트 드링크'
       }, 
       description: { 
         en: 'Traditional yogurt drink from Erbil.',
@@ -3360,7 +3747,9 @@ const FullMenuPage = () => {
         hi: 'एर्बिल से पारंपरिक दही का पेय।',
         sq: 'Pije tradicionale kosi nga Erbil.',
         fr: 'Boisson traditionnelle au yaourt d\'Erbil.',
-        de: 'Traditionelles Joghurtgetränk aus Erbil.'
+        de: 'Traditionelles Joghurtgetränk aus Erbil.',
+        bn: 'এরবিল থেকে ঐতিহ্যবাহী দই পানীয়।',
+        ko: '에르빌의 전통 요거트 음료.'
       }, 
       price: '$3.99', 
       category: 'drinks_cold', 
@@ -3380,9 +3769,16 @@ const FullMenuPage = () => {
         es: 'Limonada de Menta Especial de la Casa',
         ru: 'Фирменный мятный лимонад',
         hi: 'हाउस स्पेशल मिंट लेमोनेड',
+        sq: 'Limonadë Mendhe Speciale e Shtëpisë',
+        fr: 'Limonade à la Menthe Spécialité Maison',
+        de: 'Haus-Spezial Minz-Limonade',
+        bn: 'হাউস স্পেশাল মিন্ট লেমোনেড',
+        ko: '하우스 스페셜 민트 레모네이드',
         sq: 'Limonadë me Mente Speciale e Shtëpisë',
         fr: 'Limonade à la Menthe Spéciale Maison',
-        de: 'Hausgemachte Spezial-Minz-Limonade'
+        de: 'Hausgemachte Spezial-Minz-Limonade',
+        bn: 'হাউস স্পেশাল পুদিনা লেমোনেড',
+        ko: '하우스 스페셜 민트 레모네이드'
       }, 
       price: '$4.99', 
       category: 'drinks_cold', 
@@ -3406,7 +3802,10 @@ const FullMenuPage = () => {
         ru: 'Арабский кофе',
         hi: 'अरबी कॉफी',
         sq: 'Kafe Arabe',
-        fr: 'Café Arabe'
+        fr: 'Café Arabe',
+        de: 'Arabischer Kaffee',
+        bn: 'আরবি কফি',
+        ko: '아라비아 커피'
       }, 
       description: { 
         en: 'Traditional Arabic coffee with cardamom.',
@@ -3421,7 +3820,9 @@ const FullMenuPage = () => {
         hi: 'इलायची के साथ पारंपरिक अरबी कॉफी।',
         sq: 'Kafe tradicionale arabe me hil.',
         fr: 'Café arabe traditionnel à la cardamome.',
-        de: 'Traditioneller arabischer Kaffee mit Kardamom.'
+        de: 'Traditioneller arabischer Kaffee mit Kardamom.',
+        bn: 'এলাচের সাথে ঐতিহ্যবাহী আরবি কফি।',
+        ko: '카다몬이 들어간 전통 아라비아 커피.'
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
@@ -3442,7 +3843,10 @@ const FullMenuPage = () => {
         ru: 'Курдский кофе Казван',
         hi: 'कुर्दी काज़वान कॉफी',
         sq: 'Kafe Kurde Qazwan',
-        fr: 'Café Kurde Qazwan'
+        fr: 'Café Kurde Qazwan',
+        de: 'Kurdischer Qazwan Kaffee',
+        bn: 'কুর্দি কাজওয়ান কফি',
+        ko: '쿠르드 카즈완 커피'
       }, 
       description: { 
         en: 'Traditional Kurdish coffee blend.',
@@ -3457,7 +3861,9 @@ const FullMenuPage = () => {
         hi: 'पारंपरिक कुर्दी कॉफी मिश्रण।',
         sq: 'Përzierje tradicionale kafe kurde.',
         fr: 'Mélange traditionnel de café kurde.',
-        de: 'Traditionelle kurdische Kaffeemischung.'
+        de: 'Traditionelle kurdische Kaffeemischung.',
+        bn: 'ঐতিহ্যবাহী কুর্দি কফি মিশ্রণ।',
+        ko: '전통 쿠르드 커피 블렌드.'
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
@@ -3477,7 +3883,10 @@ const FullMenuPage = () => {
         ru: 'Турецкий кофе с фисташками',
         hi: 'तुर्की पिस्ता कॉफी',
         sq: 'Kafe Turke me Fistik',
-        fr: 'Café Turc à la Pistache'
+        fr: 'Café Turc à la Pistache',
+        de: 'Türkischer Pistazienkaffee',
+        bn: 'তুর্কি পেস্তা কফি',
+        ko: '터키 피스타치오 커피'
       }, 
       description: { 
         en: 'Turkish coffee with pistachio flavor.',
@@ -3492,7 +3901,9 @@ const FullMenuPage = () => {
         hi: 'फिस्ते के स्वाद वाली तुर्की कॉफी।',
         sq: 'Kafe turke me shije fistiku.',
         fr: 'Café turc au goût de pistache.',
-        de: 'Türkischer Kaffee mit Pistaziengeschmack.'
+        de: 'Türkischer Kaffee mit Pistaziengeschmack.',
+        bn: 'পেস্তার স্বাদযুক্ত তুর্কি কফি।',
+        ko: '피스타치오 맛 터키 커피.'
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
@@ -3512,7 +3923,10 @@ const FullMenuPage = () => {
         ru: 'Карак чай',
         hi: 'करक चाय',
         sq: 'Çaj Karak',
-        fr: 'Thé Karak'
+        fr: 'Thé Karak',
+        de: 'Karak Tee',
+        bn: 'কারাক চা',
+        ko: '카라크 차이'
       }, 
       description: { 
         en: 'Spiced tea with milk and cardamom.',
@@ -3527,7 +3941,9 @@ const FullMenuPage = () => {
         hi: 'दूध और इलायची के साथ मसालेदार चाय।',
         sq: 'Çaj me erëza me qumësht dhe hil.',
         fr: 'Thé épicé au lait et à la cardamome.',
-        de: 'Gewürztee mit Milch und Kardamom.'
+        de: 'Gewürztee mit Milch und Kardamom.',
+        bn: 'দুধ এবং এলাচের সাথে মসলাযুক্ত চা।',
+        ko: '우유와 카다몬이 들어간 향신료 차.'
       }, 
       price: '$2.99', 
       category: 'drinks_hot', 
@@ -3547,8 +3963,22 @@ const FullMenuPage = () => {
         es: 'Té Persa',
         ru: 'Персидский чай',
         hi: 'फारसी चाय',
+        sq: 'Çaj Persi',
+        fr: 'Thé Persan',
+        de: 'Persischer Tee',
+        bn: 'পারস্য চা',
+        ko: '페르시아 차',
+        ku: 'چایی فارسی',
+        tr: 'Fars Çayı',
+        ur: 'فارسی چائے',
+        kmr: 'Çaya Farsî',
+        es: 'Té Persa',
+        ru: 'Персидский чай',
+        hi: 'फारसी चाय',
         sq: 'Çaj Persian',
-        fr: 'Thé Persan'
+        fr: 'Thé Persan',
+        bn: 'ফার্সি চা',
+        ko: '페르시아 차'
       }, 
       description: { 
         en: 'Traditional Persian black tea.',
@@ -3563,7 +3993,9 @@ const FullMenuPage = () => {
         hi: 'पारंपरिक फारसी काली चाय।',
         sq: 'Çaj i zi tradicional persian.',
         fr: 'Thé noir persan traditionnel.',
-        de: 'Traditioneller persischer schwarzer Tee.'
+        de: 'Traditioneller persischer schwarzer Tee.',
+        bn: 'ঐতিহ্যবাহী ফার্সি কালো চা।',
+        ko: '전통 페르시아 홍차.'
       }, 
       price: '$2.49', 
       category: 'drinks_hot', 
@@ -3585,7 +4017,9 @@ const FullMenuPage = () => {
         ru: 'Баклава',
         hi: 'बकलावा',
         sq: 'Bakllava',
-        fr: 'Baklava'
+        fr: 'Baklava',
+        bn: 'বাকলাভা',
+        ko: '바클라바'
       }, 
       description: { 
         en: 'A sweet pastry with layers of nuts and honey.',
@@ -3600,7 +4034,9 @@ const FullMenuPage = () => {
         hi: 'नट्स और शहद की परतों के साथ मीठी पेस्ट्री।',
         sq: 'Ëmbëlsirë me shtresa arrash dhe mjalti.',
         fr: 'Pâtisserie sucrée aux couches de noix et de miel.',
-        de: 'Süßes Gebäck mit Nuss- und Honigschichten.'
+        de: 'Süßes Gebäck mit Nuss- und Honigschichten.',
+        bn: 'বাদাম এবং মধুর স্তর সহ মিষ্টি পেস্ট্রি।',
+        ko: '견과류와 꿀이 층층이 들어간 달콤한 페이스트리.'
       }, 
       price: '$7.99', 
       category: 'dessert', 
@@ -3623,7 +4059,9 @@ const FullMenuPage = () => {
         hi: 'केसर आइस क्रीम के साथ बकलावा',
         sq: 'Bakllava me Akullore Shafrani',
         fr: 'Baklava avec Glace au Safran',
-        de: 'Baklava mit Safran-Eis'
+        de: 'Baklava mit Safran-Eis',
+        bn: 'জাফরান আইসক্রিম সহ বাকলাভা',
+        ko: '사프란 아이스크림을 곁들인 바클라바'
       }, 
       description: { 
         en: 'Traditional baklava served with aromatic saffron ice cream.',
@@ -3638,7 +4076,9 @@ const FullMenuPage = () => {
         hi: 'सुगंधित केसर आइस क्रीम के साथ पारंपरिक बकलावा।',
         sq: 'Bakllava tradicionale e shërbyer me akullore aromatike shafrani.',
         fr: 'Baklava traditionnel servi avec une glace au safran aromatique.',
-        de: 'Traditionelle Baklava serviert mit aromatischem Safran-Eis.'
+        de: 'Traditionelle Baklava serviert mit aromatischem Safran-Eis.',
+        bn: 'সুগন্ধি জাফরান আইসক্রিমের সাথে ঐতিহ্যবাহী বাকলাভা।',
+        ko: '향긋한 사프란 아이스크림과 함께 제공되는 전통 바클라바.'
       }, 
       price: '$10.99', 
       category: 'dessert', 
@@ -3659,7 +4099,9 @@ const FullMenuPage = () => {
         ru: 'Тирамису',
         hi: 'तिरामिसू',
         sq: 'Tiramisu',
-        fr: 'Tiramisu'
+        fr: 'Tiramisu',
+        bn: 'তিরামিসু',
+        ko: '티라미수'
       }, 
       description: { 
         en: 'Sweetened whipped cream and a rich mascarpone.',
@@ -3674,7 +4116,9 @@ const FullMenuPage = () => {
         hi: 'मीठी व्हिप्ड क्रीम और समृद्ध मस्कारपोने।',
         sq: 'Krem i rrugur i ëmbël dhe mascarpone e pasur.',
         fr: 'Crème fouettée sucrée et mascarpone riche.',
-        de: 'Gesüßte Schlagsahne und reichhaltiger Mascarpone.'
+        de: 'Gesüßte Schlagsahne und reichhaltiger Mascarpone.',
+        bn: 'মিষ্টি হুইপড ক্রিম এবং সমৃদ্ধ মাসকারপোনে।',
+        ko: '달콤한 휘핑크림과 진한 마스카르포네.'
       }, 
       price: '$6.99', 
       category: 'dessert', 
@@ -3696,7 +4140,9 @@ const FullMenuPage = () => {
         ru: 'Хаш Хаш',
         hi: 'खाश खाश',
         sq: 'Khash Khash',
-        fr: 'Khash Khash'
+        fr: 'Khash Khash',
+        bn: 'খাশ খাশ',
+        ko: '카시 카시'
       }, 
       description: { 
         en: 'A delicious dessert with layers of cream and crunchy vermicelli.',
@@ -3711,7 +4157,9 @@ const FullMenuPage = () => {
         hi: 'क्रीम और कुरकुरे वर्मीसेली की परतों के साथ स्वादिष्ट मिठाई।',
         sq: 'Ëmbëlsirë e shijshme me shtresa kremi dhe makarona të krisura.',
         fr: 'Dessert délicieux avec des couches de crème et de vermicelles croquants.',
-        de: 'Köstliches Dessert mit Schichten aus Sahne und knuspriger Fadennudeln.'
+        de: 'Köstliches Dessert mit Schichten aus Sahne und knuspriger Fadennudeln.',
+        bn: 'ক্রিম এবং কুড়কুড়ে ভার্মিসেলির স্তর সহ সুস্বাদু মিষ্টি।',
+        ko: '크림과 바삭한 버미첼리가 층층이 들어간 맛있는 디저트.'
       }, 
       price: '$6.99', 
       category: 'dessert', 
@@ -3732,7 +4180,9 @@ const FullMenuPage = () => {
         ru: 'Печёный рисовый пудинг',
         hi: 'ओवन राइस पुडिंग',
         sq: 'Puding Orizi në Furrë',
-        fr: 'Pudding de Riz au Four'
+        fr: 'Pudding de Riz au Four',
+        bn: 'ওভেন রাইস পুডিং',
+        ko: '오븐 쌀 푸딩'
       }, 
       description: { 
         en: 'Creamy Middle Eastern milk pudding.',
@@ -3747,7 +4197,9 @@ const FullMenuPage = () => {
         hi: 'क्रीमी मध्य पूर्वी दूध पुडिंग।',
         sq: 'Puding kremoz qumështi i Lindjes së Mesme.',
         fr: 'Pudding lacté crémeux du Moyen-Orient.',
-        de: 'Cremiger nahöstlicher Milchpudding.'
+        de: 'Cremiger nahöstlicher Milchpudding.',
+        bn: 'ক্রিমি মধ্যপ্রাচ্যের দুধের পুডিং।',
+        ko: '크림 같은 중동 우유 푸딩.'
       }, 
       price: '$6.99', 
       category: 'dessert', 
@@ -3768,7 +4220,10 @@ const FullMenuPage = () => {
         ru: 'Мороженое',
         hi: 'आइस क्रीम',
         sq: 'Akullore',
-        fr: 'Glace'
+        fr: 'Glace',
+        de: 'Eis',
+        bn: 'আইসক্রিম',
+        ko: '아이스크림'
       }, 
       description: { 
         en: 'Choose from 3 flavors: Strawberry, Chocolate, Vanilla.',
@@ -3783,7 +4238,9 @@ const FullMenuPage = () => {
         hi: '3 स्वादों में से चुनें: स्ट्रॉबेरी, चॉकलेट, वेनिला।',
         sq: 'Zgjidhni nga 3 shijet: Luleshtrydhe, Çokollatë, Vanilë.',
         fr: 'Choisissez parmi 3 parfums : Fraise, Chocolat, Vanille.',
-        de: 'Wählen Sie aus 3 Geschmacksrichtungen: Erdbeere, Schokolade, Vanille.'
+        de: 'Wählen Sie aus 3 Geschmacksrichtungen: Erdbeere, Schokolade, Vanille.',
+        bn: '৩টি স্বাদ থেকে বেছে নিন: স্ট্রবেরি, চকলেট, ভ্যানিলা।',
+        ko: '3가지 맛 중에서 선택하세요: 딸기, 초콜릿, 바닐라.'
       }, 
       price: '$2.99', 
       category: 'dessert', 
@@ -3808,7 +4265,9 @@ const FullMenuPage = () => {
         hi: 'पिस्ता केक',
         sq: 'Tortë me Pistacio',
         fr: 'Gâteau à la Pistache',
-        de: 'Pistazien-Kuchen'
+        de: 'Pistazien-Kuchen',
+        bn: 'পেস্তা কেক',
+        ko: '피스타치오 케이크'
       }, 
       description: { 
         en: 'Moist and flavorful cake made with premium pistachios.',
@@ -3823,7 +4282,9 @@ const FullMenuPage = () => {
         hi: 'प्रीमियम पिस्ता से बना नम और स्वादिष्ट केक।',
         sq: 'Tortë e lagësht dhe e shijshme e bërë me pistacio premium.',
         fr: 'Gâteau moelleux et savoureux aux pistaches premium.',
-        de: 'Saftiger und aromatischer Kuchen aus Premium-Pistazien.'
+        de: 'Saftiger und aromatischer Kuchen aus Premium-Pistazien.',
+        bn: 'প্রিমিয়াম পেস্তা দিয়ে তৈরি আর্দ্র এবং স্বাদযুক্ত কেক।',
+        ko: '프리미엄 피스타치오로 만든 촉촉하고 맛있는 케이크.'
       }, 
       price: '$7.99', 
       category: 'dessert', 
@@ -3845,7 +4306,18 @@ const FullMenuPage = () => {
         hi: 'केसर आइस क्रीम (एक स्कूप)',
         sq: 'Akullore Shafrani (Një Top)',
         fr: 'Glace au Safran (Une Boule)',
-        de: 'Safran-Eis (Eine Kugel)'
+        de: 'Safran-Eis (Eine Kugel)',
+        bn: 'জাফরান আইসক্রিম (এক স্কুপ)',
+        ko: '사프란 아이스크림 (한 스쿱)',
+        kmr: 'Qeşa Zeferanî (Yek Gop)',
+        es: 'Helado de Azafrán (Una Bola)',
+        ru: 'Шафрановое мороженое (Один шарик)',
+        hi: 'केसर आइस क्रीम (एक स्कूप)',
+        sq: 'Akullore Shafrani (Një Top)',
+        fr: 'Glace au Safran (Une Boule)',
+        de: 'Safran-Eis (Eine Kugel)',
+        bn: 'জাফরান আইসক্রিম (এক স্কুপ)',
+        ko: '사프란 아이스크림 (한 스쿱)'
       }, 
       description: { 
         en: 'Premium saffron-flavored ice cream, rich and aromatic.',
@@ -3860,7 +4332,9 @@ const FullMenuPage = () => {
         hi: 'प्रीमियम केसर स्वाद आइस क्रीम, समृद्ध और सुगंधित।',
         sq: 'Akullore premium me shije shafrani, e pasur dhe aromatike.',
         fr: 'Glace premium au safran, riche et aromatique.',
-        de: 'Premium Safran-Eis, reichhaltig und aromatisch.'
+        de: 'Premium Safran-Eis, reichhaltig und aromatisch.',
+        bn: 'প্রিমিয়াম জাফরান-স্বাদযুক্ত আইসক্রিম, সমৃদ্ধ এবং সুগন্ধি।',
+        ko: '프리미엄 사프란 맛 아이스크림, 풍부하고 향긋합니다.'
       }, 
       price: '$4.99', 
       category: 'dessert', 
@@ -3882,7 +4356,9 @@ const FullMenuPage = () => {
         hi: 'केसर आइस क्रीम (दो स्कूप)',
         sq: 'Akullore Shafrani (Dy Topa)',
         fr: 'Glace au Safran (Deux Boules)',
-        de: 'Safran-Eis (Zwei Kugeln)'
+        de: 'Safran-Eis (Zwei Kugeln)',
+        bn: 'জাফরান আইসক্রিম (দুই স্কুপ)',
+        ko: '사프란 아이스크림 (두 스쿱)'
       }, 
       description: { 
         en: 'Double serving of our premium saffron-flavored ice cream.',
@@ -3897,7 +4373,9 @@ const FullMenuPage = () => {
         hi: 'हमारी प्रीमियम केसर आइस क्रीम की दोहरी सर्विंग।',
         sq: 'Pjesë e dyfishtë e akullorës sonë premium me shije shafrani.',
         fr: 'Double portion de notre glace premium au safran.',
-        de: 'Doppelte Portion unseres Premium Safran-Eises.'
+        de: 'Doppelte Portion unseres Premium Safran-Eises.',
+        bn: 'আমাদের প্রিমিয়াম জাফরান আইসক্রিমের দ্বিগুণ পরিবেশন।',
+        ko: '우리의 프리미엄 사프란 아이스크림의 더블 서빙.'
       }, 
       price: '$8.99', 
       category: 'dessert', 
@@ -3920,7 +4398,10 @@ const FullMenuPage = () => {
         ru: 'Греческий салат',
         hi: 'ग्रीक सलाद',
         sq: 'Sallatë Greke',
-        fr: 'Salade Grecque'
+        fr: 'Salade Grecque',
+        de: 'Griechischer Salat',
+        bn: 'গ্রিক সালাদ',
+        ko: '그리스 샐러드'
       }, 
       description: { 
         en: 'A classic Greek salad made with spring mix, tomatoes, cucumbers, onions, Kalamata olives, Feta cheese and Greek vinaigrette.',
@@ -3935,7 +4416,9 @@ const FullMenuPage = () => {
         hi: 'स्प्रिंग मिक्स, टमाटर, खीरे, प्याज, कलामाटा जैतून, फेटा चीज़ और ग्रीक विनैग्रेट से बना क्लासिक ग्रीक सलाद।',
         sq: 'Sallatë klasike greke e bërë me përzierje pranverore, domate, kastravec, qepë, ullinj Kalamata, djathë Feta dhe vinegretë greke.',
         fr: 'Salade grecque classique préparée avec mélange printanier, tomates, concombres, oignons, olives Kalamata, fromage Feta et vinaigrette grecque.',
-        de: 'Klassischer griechischer Salat mit Frühlings-Mix, Tomaten, Gurken, Zwiebeln, Kalamata-Oliven, Feta-Käse und griechischer Vinaigrette.'
+        de: 'Klassischer griechischer Salat mit Frühlings-Mix, Tomaten, Gurken, Zwiebeln, Kalamata-Oliven, Feta-Käse und griechischer Vinaigrette.',
+        bn: 'স্প্রিং মিক্স, টমেটো, শসা, পেঁয়াজ, কালামাটা অলিভ, ফেটা চিজ এবং গ্রিক ভিনাইগ্রেট দিয়ে তৈরি ক্লাসিক গ্রিক সালাদ।',
+        ko: '스프링 믹스, 토마토, 오이, 양파, 칼라마타 올리브, 페타 치즈, 그리스 비네그레트로 만든 클래식 그리스 샐러드입니다.'
       }, 
       image: '/Greek Salad.jpg',
       price: '$14.99', 
@@ -3950,7 +4433,14 @@ const FullMenuPage = () => {
           ku: 'پرۆتین زیادبکە',
           tr: 'Protein Ekle',
           ur: 'پروٹین شامل کریں',
-          kmr: 'Protein Zêde Bike'
+          kmr: 'Protein Zêde Bike',
+          es: 'Agregar Proteína',
+          ru: 'Добавить белок',
+          hi: 'प्रोटीन जोड़ें',
+          sq: 'Shto Proteinë',
+          fr: 'Ajouter des Protéines',
+          de: 'Protein hinzufügen',
+          bn: 'প্রোটিন যোগ করুন'
         }, 
         options: [ 
           { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
@@ -3974,7 +4464,10 @@ const FullMenuPage = () => {
         ru: 'Салат Фаттуш',
         hi: 'फत्तूश सलाद',
         sq: 'Sallatë Fattoush',
-        fr: 'Salade Fattoush'
+        fr: 'Salade Fattoush',
+        de: 'Fattoush Salat',
+        bn: 'ফাতুশ সালাদ',
+        ko: '파투시 샐러드'
       }, 
       description: { 
         en: 'A delicious Middle Eastern salad made with lettuce, tomatoes, cucumbers, bell peppers, fresh mint, parsley, crispy pita bread, and pomegranate molasses dressing.',
@@ -3989,7 +4482,9 @@ const FullMenuPage = () => {
         hi: 'सलाद पत्ता, टमाटर, खीरे, बेल पेपर, ताज़ा पुदीना, अजमोद, कुरकुरी पीटा ब्रेड और अनार के शीरे की ड्रेसिंग से बना स्वादिष्ट मध्य पूर्वी सलाद।',
         sq: 'Sallatë e shijshme lindjes së mesme e bërë me marule, domate, kastravec, spec të ëmbël, mendër të freskët, majdanoz, bukë pita të krisur dhe salcë melase shege.',
         fr: 'Une délicieuse salade du Moyen-Orient préparée avec laitue, tomates, concombres, poivrons doux, menthe fraîche, persil, pain pita croustillant et vinaigrette à la mélasse de grenade.',
-        de: 'Ein köstlicher nahöstlicher Salat aus Kopfsalat, Tomaten, Gurken, Paprika, frischer Minze, Petersilie, knusprigem Pita-Brot und Granatapfelmelasse-Dressing.'
+        de: 'Ein köstlicher nahöstlicher Salat aus Kopfsalat, Tomaten, Gurken, Paprika, frischer Minze, Petersilie, knusprigem Pita-Brot und Granatapfelmelasse-Dressing.',
+        bn: 'লেটুস, টমেটো, শসা, বেল পেপার, তাজা পুদিনা, পার্সলে, কুরকুরে পিটা ব্রেড এবং ডালিমের মোলাসেস ড্রেসিং দিয়ে তৈরি সুস্বাদু মধ্যপ্রাচ্যের সালাদ।',
+        ko: '상추, 토마토, 오이, 피망, 신선한 민트, 파슬리, 바삭한 피타 빵, 석류 당밀 드레싱으로 만든 맛있는 중동 샐러드입니다.'
       }, 
       image: '/Fattoush Salad.jpg',
       price: '$14.99', 
@@ -4035,7 +4530,10 @@ const FullMenuPage = () => {
         ru: 'Салат Шиван',
         hi: 'शिवान सलाद',
         sq: 'Sallatë Shiwan',
-        fr: 'Salade Shiwan'
+        fr: 'Salade Shiwan',
+        de: 'Shwan Salat',
+        bn: 'শিওয়ান সালাদ',
+        ko: '시완 샐러드'
       }, 
       description: { 
         en: 'A refreshing Turkish salad made with tomatoes, cucumbers, green peppers, onions, parsley, and walnuts, seasoned with olive oil and lemon juice.',
@@ -4050,7 +4548,9 @@ const FullMenuPage = () => {
         hi: 'टमाटर, खीरे, हरी मिर्च, प्याज, अजमोद और अखरोट से बना तरोताजा तुर्की सलाद, जैतून के तेल और नींबू के रस से सीज़न किया गया।',
         sq: 'Sallatë turke freskuese e bërë me domate, kastravec, spec të gjelbër, qepë, majdanoz dhe arrë, e këndelur me vaj ulliri dhe lëng limoni.',
         fr: 'Une salade turque rafraîchissante préparée avec tomates, concombres, poivrons verts, oignons, persil et noix, assaisonnée à l\'huile d\'olive et au jus de citron.',
-        de: 'Ein erfrischender türkischer Salat aus Tomaten, Gurken, grünen Paprika, Zwiebeln, Petersilie und Walnüssen, gewürzt mit Olivenöl und Zitronensaft.'
+        de: 'Ein erfrischender türkischer Salat aus Tomaten, Gurken, grünen Paprika, Zwiebeln, Petersilie und Walnüssen, gewürzt mit Olivenöl und Zitronensaft.',
+        bn: 'টমেটো, শসা, সবুজ মরিচ, পেঁয়াজ, পার্সলে এবং আখরোট দিয়ে তৈরি সতেজকারী তুর্কি সালাদ, অলিভ অয়েল এবং লেবুর রস দিয়ে মসলাযুক্ত।',
+        ko: '토마토, 오이, 피망, 양파, 파슬리, 호두로 만든 상쾌한 터키식 샐러드로, 올리브 오일과 레몬 주스로 양념합니다.'
       }, 
       image: '/Shwan Salad.jpg',
       price: '$14.99', 
@@ -4095,7 +4595,9 @@ const FullMenuPage = () => {
         hi: 'तब्बूलेह सलाद',
         sq: 'Sallatë Tabbouleh',
         fr: 'Salade Tabbouleh',
-        de: 'Tabbouleh-Salat'
+        de: 'Tabbouleh-Salat',
+        bn: 'তাবুলেহ সালাদ',
+        ko: '타불레 샐러드'
       }, 
       description: { 
         en: 'A Levantine salad of finely chopped parsley, soaked extra fine bulgur, tomatoes, mint, onion, and scallions, seasoned with olive oil, lemon juice, salt and black pepper.',
@@ -4110,7 +4612,9 @@ const FullMenuPage = () => {
         hi: 'बारीक कटी हुई अजमोद, भिगोई हुई अतिरिक्त बारीक दलिया, टमाटर, पुदीना, प्याज और हरी प्याज का लेवेंटाइन सलाद, जैतून के तेल, नींबू के रस, नमक और काली मिर्च से स्वादिष्ट बनाया गया।',
         sq: 'Sallatë levantinase me majdanoz të grirë imët, bulgur shumë të hollë të lagur, domate, mendër, qepë dhe qepë të gjelbër, e kondimentuar me vaj ulliri, lëng limoni, kripë dhe piper të zi.',
         fr: 'Salade levantine de persil finement haché, boulgour extra-fin trempé, tomates, menthe, oignon et échalotes, assaisonnée avec huile d\'olive, jus de citron, sel et poivre noir.',
-        de: 'Levantinischer Salat aus fein gehackter Petersilie, eingeweichtem extra-feinem Bulgur, Tomaten, Minze, Zwiebeln und Frühlingszwiebeln, gewürzt mit Olivenöl, Zitronensaft, Salz und schwarzem Pfeffer.'
+        de: 'Levantinischer Salat aus fein gehackter Petersilie, eingeweichtem extra-feinem Bulgur, Tomaten, Minze, Zwiebeln und Frühlingszwiebeln, gewürzt mit Olivenöl, Zitronensaft, Salz und schwarzem Pfeffer.',
+        bn: 'সূক্ষ্ম কাটা পার্সলে, ভেজানো অতি সূক্ষ্ম বুলগুর, টমেটো, পুদিনা, পেঁয়াজ এবং স্কালিয়ন দিয়ে তৈরি লেভান্তাইন সালাদ, অলিভ অয়েল, লেবুর রস, লবণ এবং কালো মরিচ দিয়ে মসলাযুক্ত।',
+        ko: '잘게 다진 파슬리, 불린 극세 불구르, 토마토, 민트, 양파, 파로 만든 레반트 샐러드로, 올리브 오일, 레몬 주스, 소금, 후춧가루로 양념했습니다.'
       }, 
       image: '/Tabbouleh Salad.jpg',
       price: '$14.99', 
@@ -5482,7 +5986,7 @@ const FullMenuPage = () => {
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center">
               <p className="text-sm text-gray-600 leading-relaxed">
-                <span className="font-semibold text-gray-800">Notice:</span> Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions.
+                <span className="font-semibold text-gray-800">{t.footer?.notice || t.notice}</span> {t.footer?.foodSafetyNotice || t.foodSafetyNotice}
               </p>
             </div>
           </div>

@@ -229,6 +229,38 @@ const Footer = () => {
         reservations: 'Reservierungen',
         catering: 'Catering',
         gallery: 'Galerie'
+      },
+      bn: {
+        description: 'আপনার টেবিলে খাঁটি মধ্যপ্রাচ্যীয় স্বাদ এবং উষ্ণ আতিথেয়তা নিয়ে আসা। প্রতিটি খাবার আমাদের সমৃদ্ধ সাংস্কৃতিক ঐতিহ্য এবং রন্ধনসম্পর্কীয় উৎকর্ষতার উদযাপন।',
+        quickLinks: 'দ্রুত লিংক',
+        contactInfo: 'যোগাযোগের তথ্য',
+        openDaily: 'রবি - বৃহস্পতি: ১২:০০ - ২২:০০\nশুক্র - শনি: ১২:০০ - ২৩:০০',
+        privacy: 'গোপনীয়তা নীতি',
+        terms: 'ব্যবহারের শর্তাবলী',
+        copyright: '© ২০২৫ নেচার ভিলেজ রেস্তোরাঁ। সর্বস্বত্ব সংরক্ষিত।',
+        poweredBy: 'চালিত',
+        blunari: 'ব্লুনারি',
+        home: 'হোম',
+        menu: 'মেনু',
+        reservations: 'সংরক্ষণ',
+        catering: 'ক্যাটারিং',
+        gallery: 'গ্যালারি'
+      },
+      ko: {
+        description: '중동의 정통 맛과 따뜻한 환대를 여러분의 식탁으로 가져다 드립니다. 모든 요리는 우리의 풍부한 문화 유산과 요리 우수성의 축하입니다.',
+        quickLinks: '빠른 링크',
+        contactInfo: '연락처 정보',
+        openDaily: '일 - 목: 12:00 - 22:00\n금 - 토: 12:00 - 23:00',
+        privacy: '개인정보 처리방침',
+        terms: '서비스 약관',
+        copyright: '© 2025 네이처 빌리지 레스토랑. 모든 권리 보유.',
+        poweredBy: '개발',
+        blunari: '블루나리',
+        home: '홈',
+        menu: '메뉴',
+        reservations: '예약',
+        catering: '케이터링',
+        gallery: '갤러리'
       }
     };
 

@@ -148,6 +148,26 @@ const Header = ({ currentPage = '' }) => {
         reservations: 'Reservierungen',
         catering: 'Catering',
         orderOnline: 'Online Bestellen'
+      },
+      bn: {
+        home: 'হোম',
+        menu: 'মেনু',
+        about: 'আমাদের সম্পর্কে',
+        gallery: 'গ্যালারি',
+        visit: 'আমাদের দেখুন',
+        reservations: 'সংরক্ষণ',
+        catering: 'ক্যাটারিং',
+        orderOnline: 'অনলাইন অর্ডার'
+      },
+      ko: {
+        home: '홈',
+        menu: '메뉴',
+        about: '회사 소개',
+        gallery: '갤러리',
+        visit: '방문하기',
+        reservations: '예약',
+        catering: '케이터링',
+        orderOnline: '온라인 주문'
       }
     };
 
@@ -491,6 +511,8 @@ const Header = ({ currentPage = '' }) => {
                        language === 'ru' ? 'Язык' :
                        language === 'hi' ? 'भाषा' :
                        language === 'de' ? 'Sprache' :
+                       language === 'bn' ? 'ভাষা' :
+                       language === 'ko' ? '언어' :
                        'Language'}
                     </h3>
                     <span className="text-sm text-amber-600 font-medium px-3 py-1 bg-amber-100 rounded-full">
@@ -528,6 +550,8 @@ const Header = ({ currentPage = '' }) => {
                             {code === 'ru' && '🇷🇺'}
                             {code === 'hi' && '🇮🇳'}
                             {code === 'de' && '🇩🇪'}
+                            {code === 'bn' && '🇧🇩'}
+                            {code === 'ko' && '🇰🇷'}
                           </span>
                           {lang.name}
                         </span>
