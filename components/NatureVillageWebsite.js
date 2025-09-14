@@ -3665,6 +3665,108 @@ const NatureVillageWebsite = () => {
       loading: 'লোড হচ্ছে...',
       error: 'কিছু ভুল হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।',
       currency: '$'
+    },
+    ko: {
+      nav: {
+        home: '홈',
+        menu: '메뉴',
+        gallery: '갤러리',
+        catering: '케이터링',
+        contact: '연락처',
+        reservation: '예약'
+      },
+      hero: {
+        title: '네이처 빌리지',
+        subtitle: '정통 중동 요리',
+        description: '쿠르드족과 중동의 전통적인 맛을 탐험해보세요. 가족이 운영하는 레스토랑에서 신선한 재료와 정통 향신료로 만든 맛있는 요리를 즐기세요.',
+        orderNow: '지금 주문하기',
+        reserveTable: '테이블 예약'
+      },
+      features: {
+        authentic: '정통 요리',
+        family: '가족 운영',
+        fresh: '신선한 재료',
+        traditional: '전통 레시피'
+      },
+      menu: {
+        title: '메뉴',
+        subtitle: '정통 중동 요리를 만나보세요',
+        appetizers: '애피타이저',
+        mains: '메인 요리',
+        desserts: '디저트',
+        beverages: '음료',
+        viewFullMenu: '전체 메뉴 보기'
+      },
+      gallery: {
+        title: '갤러리',
+        subtitle: '우리의 요리와 분위기를 미리보세요'
+      },
+      testimonials: {
+        title: '고객 후기',
+        subtitle: '고객들의 의견을 들어보세요'
+      },
+      contact: {
+        title: '연락처',
+        subtitle: '방문하시거나 연락주세요',
+        address: '주소',
+        phone: '전화',
+        email: '이메일',
+        hours: '영업시간',
+        getDirections: '길찾기'
+      },
+      celebration: {
+        title: '특별한 순간을 축하하세요',
+        subtitle: '기념일, 생일, 특별한 날을 위한 완벽한 장소',
+        description: '친밀한 가족 모임부터 대규모 축하행사까지, 네이처 빌리지는 모든 특별한 순간에 적합한 환경을 제공합니다.',
+        features: {
+          customMenu: '맞춤 메뉴',
+          privateSpace: '프라이빗 공간',
+          specialPricing: '특별 가격',
+          eventCoordination: '이벤트 조정'
+        },
+        bookEvent: '이벤트 예약하기'
+      },
+      footer: {
+        description: '신선한 재료와 전통 레시피로 만든 정통 중동 요리를 경험하세요.',
+        quickLinks: '빠른 링크',
+        contact: '연락처',
+        followUs: '팔로우하기',
+        rights: '모든 권리 보유.'
+      },
+      common: {
+        loading: '로딩 중...',
+        error: '오류가 발생했습니다',
+        tryAgain: '다시 시도',
+        close: '닫기',
+        open: '열기',
+        closed: '닫힘',
+        orderOnline: '온라인 주문',
+        callNow: '지금 전화',
+        getDirections: '길찾기',
+        viewMenu: '메뉴 보기',
+        bookTable: '테이블 예약',
+        moderatelyBusy: '적당히 바쁨',
+        veryBusy: '매우 바쁨',
+        notBusy: '한가함',
+        unknown: '알 수 없음'
+      },
+      tags: {
+        vegetarian: '🥬 채식주의자',
+        vegan: '🌱 비건',
+        'gluten-free': '🌾 글루텐 프리',
+        spicy: '🌶️ 매운맛',
+        'chef special': '👨‍🍳 셰프 특선',
+        popular: '⭐ 인기',
+        'house favorite': '❤️ 하우스 페이버릿',
+        traditional: '🏛️ 전통',
+        'comfort food': '🍲 컴포트 푸드',
+        soup: '🍜 수프',
+        stew: '🥘 스튜'
+      },
+      addToCart: '장바구니에 추가',
+      loading: '로딩 중...',
+      error: '문제가 발생했습니다. 다시 시도해주세요.',
+      currency: '$'
     }
   };
 
