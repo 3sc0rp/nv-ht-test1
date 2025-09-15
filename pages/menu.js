@@ -301,7 +301,9 @@ const FullMenuPage = () => {
         ko: '파르다 비리야니',
         bs: 'Parda Biryani',
         zh: '帕尔达比尔亚尼',
-        ro: 'Parda Biryani'
+        ro: 'Parda Biryani',
+        uk: 'Парда Біріяні',
+        vi: 'Cơm Biryani Parda'
       }, 
       category: {
         en: 'Specialty',
@@ -321,7 +323,9 @@ const FullMenuPage = () => {
         ko: '특선요리',
         bs: 'Specijalitet',
         zh: '特色菜',
-        ro: 'Specialitate'
+        ro: 'Specialitate',
+        uk: 'Фірмові страви',
+        vi: 'Đặc sản'
       }, 
       placeholder: 'biryani', 
       imageUrl: '/pbiryani.jpg',
@@ -343,7 +347,9 @@ const FullMenuPage = () => {
         ko: '향긋한 향신료와 부드러운 고기를 넣은 전통적인 층층이 쌓은 쌀 요리',
         bs: 'Tradicionalno jelo od rižo sa aromatskim začinima i nježnim mesom u slojevima',
         zh: '传统分层米饭配芳香香料和嫩肉',
-        ro: 'Fel tradițional de orez în straturi cu condimente aromatice și carne fragedă'
+        ro: 'Fel tradițional de orez în straturi cu condimente aromatice și carne fragedă',
+        uk: 'Традиційна багатошарова рисова страва з ароматними спеціями та ніжним мʼясом',
+        vi: 'Món cơm truyền thống nhiều lớp với gia vị thơm và thịt mềm'
       },
       color: '#FF6B6B'
     },
@@ -364,7 +370,12 @@ const FullMenuPage = () => {
         fr: 'Kebab Mahshi',
         de: 'Mahshi Kebab',
         bn: 'মাহশি কাবাব',
-        ko: '마시 카밥'
+        ko: '마시 카밥',
+        bs: 'Mahši Kebab',
+        zh: '马什卡巴布',
+        ro: 'Kebab Mahshi',
+        uk: 'Махші кебаб',
+        vi: 'Kebab Mahshi'
       }, 
       category: {
         en: 'Grill',
@@ -381,7 +392,12 @@ const FullMenuPage = () => {
         fr: 'Plats Grillés',
         de: 'Grillgerichte',
         bn: 'গ্রিল',
-        ko: '그릴'
+        ko: '그릴',
+        bs: 'Roštilj',
+        zh: '烧烤',
+        ro: 'Grătar',
+        uk: 'Гриль',
+        vi: 'Nướng'
       }, 
       placeholder: 'kebab', 
       imageUrl: '/mkabab.jpg',
@@ -400,7 +416,12 @@ const FullMenuPage = () => {
         fr: 'Kebab de bœuf et d\'agneau assaisonné à l\'ail, aux piments forts et au persil',
         de: 'Rind- und Lamm-Kebab gewürzt mit Knoblauch, scharfen Paprika und Petersilie',
         bn: 'রসুন, ঝাল মরিচ এবং পার্সলে দিয়ে তৈরি গরু ও মেষের কাবাব',
-        ko: '마늘, 매운 고추, 파슬리로 양념한 소고기와 양고기 카밥'
+        ko: '마늘, 매운 고추, 파슬리로 양념한 소고기와 양고기 카밥',
+        bs: 'Goveđi i jagnjeći ćevap začinjen češnjakom, ljutim papričicama i peršinom',
+        zh: '用大蒜、辣椒和欧芹调味的牛肉和羊肉烤肉串',
+        ro: 'Kebab de vită și miel condimentat cu usturoi, ardei iuți și pătrunjel',
+        uk: 'Кебаб з яловичини та баранини з часником, гострим перцем та петрушкою',
+        vi: 'Kebab thịt bò và thịt cừu tẩm ướp với tỏi, ớt cay và rau mùi tây'
       },
       color: '#A0522D'
     },
