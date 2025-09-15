@@ -4581,7 +4581,12 @@ const FullMenuPage = () => {
         sq: 'Bakllava',
         fr: 'Baklava',
         bn: 'বাকলাভা',
-        ko: '바클라바'
+        ko: '바클라바',
+        bs: 'Baklava',
+        zh: '果仁蜜饼',
+        ro: 'Baklava',
+        uk: 'Баклава',
+        vi: 'Bánh Baklava'
       }, 
       description: { 
         en: 'A sweet pastry with layers of nuts and honey.',
@@ -4598,7 +4603,12 @@ const FullMenuPage = () => {
         fr: 'Pâtisserie sucrée aux couches de noix et de miel.',
         de: 'Süßes Gebäck mit Nuss- und Honigschichten.',
         bn: 'বাদাম এবং মধুর স্তর সহ মিষ্টি পেস্ট্রি।',
-        ko: '견과류와 꿀이 층층이 들어간 달콤한 페이스트리.'
+        ko: '견과류와 꿀이 층층이 들어간 달콤한 페이스트리.',
+        bs: 'Slatka pita sa slojevima oraha i meda.',
+        zh: '层层坚果和蜂蜜的甜酥饼。',
+        ro: 'Prăjitură dulce cu straturi de nuci și miere.',
+        uk: 'Солодка випічка з шарами горіхів та меду.',
+        vi: 'Bánh ngọt với các lớp hạt và mật ong.'
       }, 
       price: '$7.99', 
       category: 'dessert', 
@@ -4920,7 +4930,12 @@ const FullMenuPage = () => {
         fr: 'Glace au Safran (Deux Boules)',
         de: 'Safran-Eis (Zwei Kugeln)',
         bn: 'জাফরান আইসক্রিম (দুই স্কুপ)',
-        ko: '사프란 아이스크림 (두 스쿱)'
+        ko: '사프란 아이스크림 (두 스쿱)',
+        bs: 'Šafransko sladoled (Dvije kugle)',
+        zh: '藏红花冰淇淋 (两球)',
+        ro: 'Înghețată cu șofran (Două bile)',
+        uk: 'Шафранове морозиво (Дві кульки)',
+        vi: 'Kem nghệ tây (Hai viên)'
       }, 
       description: { 
         en: 'Double serving of our premium saffron-flavored ice cream.',
@@ -4937,7 +4952,12 @@ const FullMenuPage = () => {
         fr: 'Double portion de notre glace premium au safran.',
         de: 'Doppelte Portion unseres Premium Safran-Eises.',
         bn: 'আমাদের প্রিমিয়াম জাফরান আইসক্রিমের দ্বিগুণ পরিবেশন।',
-        ko: '우리의 프리미엄 사프란 아이스크림의 더블 서빙.'
+        ko: '우리의 프리미엄 사프란 아이스크림의 더블 서빙.',
+        bs: 'Dvostruki obrok našeg premium šafranskog sladoleda.',
+        zh: '我们优质藏红花味冰淇淋的双份装。',
+        ro: 'Porție dublă din înghețata noastră premium cu aromă de șofran.',
+        uk: 'Подвійна порція нашого преміального шафранового морозива.',
+        vi: 'Khẩu phần đôi kem nghệ tây cao cấp của chúng tôi.'
       }, 
       price: '$8.99', 
       category: 'dessert', 
@@ -5021,7 +5041,7 @@ const FullMenuPage = () => {
           vi: 'Thêm Protein'
         }, 
         options: [ 
-          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
           { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen' }, price: '$8.99' }, 
           { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फلाफेल' }, price: '$4.99' }, 
           { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen' }, price: '$6.99' } 
@@ -5242,7 +5262,14 @@ const FullMenuPage = () => {
           hi: 'प्रोटीन जोड़ें',
           sq: 'Shto Proteinë',
           fr: 'Ajouter des Protéines',
-          de: 'Protein hinzufügen'
+          de: 'Protein hinzufügen',
+          bn: 'প্রোটিন যোগ করুন',
+          ko: '단백질 추가',
+          bs: 'Dodaj protein',
+          zh: '添加蛋白质',
+          ro: 'Adaugă proteină',
+          uk: 'Додати білок',
+          vi: 'Thêm Protein'
         }, 
         options: [ 
           { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядina', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
