@@ -135,6 +135,24 @@ const GalleryPage = () => {
       backToHome: 'Zurück zur Startseite',
       contact: 'Für weitere Informationen rufen Sie uns bitte an unter',
       phone: '(470) 350-1019'
+    },
+    bn: {
+      title: 'রক্ষণাবেক্ষণে',
+      subtitle: 'ছবির গ্যালারি',
+      message: 'আমরা আমাদের সর্বশেষ অভিজ্ঞতা প্রদর্শনের জন্য আমাদের ছবির গ্যালারি আপডেট করছি।',
+      expectedTime: 'শীঘ্রই আবার অনলাইনে আসব।',
+      backToHome: 'হোমে ফিরে যান',
+      contact: 'আরও তথ্যের জন্য, অনুগ্রহ করে আমাদের কল করুন',
+      phone: '(470) 350-1019'
+    },
+    ko: {
+      title: '유지보수 중',
+      subtitle: '사진 갤러리',
+      message: '최신 경험을 선보이기 위해 사진 갤러리를 업데이트하고 있습니다.',
+      expectedTime: '곧 다시 온라인으로 돌아올 예정입니다.',
+      backToHome: '홈으로 돌아가기',
+      contact: '자세한 정보는 전화로 문의해 주세요',
+      phone: '(470) 350-1019'
     }
   };
 

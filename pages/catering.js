@@ -135,6 +135,24 @@ const CateringPage = () => {
       backToHome: 'Zurück zur Startseite',
       contact: 'Für dringende Catering-Anfragen rufen Sie uns bitte an unter',
       phone: '(470) 350-1019'
+    },
+    bn: {
+      title: 'রক্ষণাবেক্ষণে',
+      subtitle: 'ক্যাটারিং সেবা',
+      message: 'আপনাকে আরও ভাল সেবা দেওয়ার জন্য আমরা আমাদের ক্যাটারিং সিস্টেম আপডেট করছি।',
+      expectedTime: 'শীঘ্রই আবার অনলাইনে আসব।',
+      backToHome: 'হোমে ফিরে যান',
+      contact: 'তাৎক্ষণিক ক্যাটারিং জিজ্ঞাসার জন্য, অনুগ্রহ করে আমাদের কল করুন',
+      phone: '(470) 350-1019'
+    },
+    ko: {
+      title: '유지보수 중',
+      subtitle: '케이터링 서비스',
+      message: '더 나은 서비스를 제공하기 위해 케이터링 시스템을 업데이트하고 있습니다.',
+      expectedTime: '곧 다시 온라인으로 돌아올 예정입니다.',
+      backToHome: '홈으로 돌아가기',
+      contact: '즉시 케이터링 문의는 전화로 연락해 주세요',
+      phone: '(470) 350-1019'
     }
   };
 

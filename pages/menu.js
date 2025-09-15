@@ -442,7 +442,12 @@ const FullMenuPage = () => {
         fr: 'Houmous',
         de: 'Hummus',
         bn: 'হুমুস',
-        ko: '후무스'
+        ko: '후무스',
+        bs: 'Humus',
+        zh: '鹰嘴豆泥',
+        ro: 'Humus',
+        uk: 'Хумус',
+        vi: 'Hummus'
       }, 
       category: {
         en: 'Appetizer',
@@ -509,7 +514,12 @@ const FullMenuPage = () => {
         fr: 'Baklava',
         de: 'Baklava',
         bn: 'বাকলাভা',
-        ko: '바클라바'
+        ko: '바클라바',
+        bs: 'Baklava',
+        zh: '巴克拉瓦',
+        ro: 'Baklava',
+        uk: 'Баклава',
+        vi: 'Baklava'
       }, 
       category: {
         en: 'Dessert',
@@ -3649,7 +3659,12 @@ const FullMenuPage = () => {
             fr: 'Pour 2 Personnes',
             de: 'Für 2 Personen',
             bn: '২ জনের জন্য',
-            ko: '2인분'
+            ko: '2인분',
+            bs: 'Za 2 osobe',
+            zh: '2人份',
+            ro: 'Pentru 2 Persoane',
+            uk: 'На 2 особи',
+            vi: 'Cho 2 người'
           },
           price: '$69.99'
         },
@@ -3670,7 +3685,12 @@ const FullMenuPage = () => {
             fr: 'Pour 4 Personnes',
             de: 'Für 4 Personen',
             bn: '৪ জনের জন্য',
-            ko: '4인분'
+            ko: '4인분',
+            bs: 'Za 4 osobe',
+            zh: '4人份',
+            ro: 'Pentru 4 Persoane',
+            uk: 'На 4 особи',
+            vi: 'Cho 4 người'
           },
           price: '$119.99'
         }
@@ -4292,7 +4312,12 @@ const FullMenuPage = () => {
         fr: 'Eau Pétillante',
         de: 'Sprudelwasser',
         bn: 'স্পার্কলিং ওয়াটার',
-        ko: '탄산수'
+        ko: '탄산수',
+        bs: 'Gazirana voda',
+        zh: '苏打水',
+        ro: 'Apă carbogazoasă',
+        uk: 'Газована вода',
+        vi: 'Nước có ga'
       }, 
       description: { 
         en: 'Refreshing sparkling water.',
@@ -4309,7 +4334,12 @@ const FullMenuPage = () => {
         fr: 'Eau pétillante rafraîchissante.',
         de: 'Erfrischendes Mineralwasser.',
         bn: 'সতেজকারী স্পার্কলিং ওয়াটার।',
-        ko: '시원한 탄산수.'
+        ko: '시원한 탄산수।',
+        bs: 'Osvježavajuća gazirana voda.',
+        zh: '清爽的苏打水。',
+        ro: 'Apă carbogazoasă răcoritoare.',
+        uk: 'Освіжаюча газована вода.',
+        vi: 'Nước có ga sảng khoái.'
       }, 
       price: '$3.99', 
       category: 'drinks_cold', 
@@ -4332,7 +4362,12 @@ const FullMenuPage = () => {
         fr: 'Soda',
         de: 'Limonade',
         bn: 'সোডা',
-        ko: '탄산음료'
+        ko: '탄산음료',
+        bs: 'Gazirana pića',
+        zh: '汽水',
+        ro: 'Băuturi carbogazoase',
+        uk: 'Газовані напої',
+        vi: 'Nước ngọt có ga'
       }, 
       description: { 
         en: 'Choice of Coke, Diet Coke, Coke Zero, Sprite, Fanta, Ginger Ale, or Minute Maid.',
@@ -4349,7 +4384,12 @@ const FullMenuPage = () => {
         fr: 'Choix de Coca-Cola, Coca Light, Coca Zéro, Sprite, Fanta, Ginger Ale ou Minute Maid.',
         de: 'Auswahl aus Coca Cola, Diet Coke, Coke Zero, Sprite, Fanta, Ginger Ale oder Minute Maid.',
         bn: 'কোক, ডায়েট কোক, কোক জিরো, স্প্রাইট, ফ্যান্টা, জিঞ্জার অ্যাল বা মিনিট মেইড এর পছন্দ।',
-        ko: '콜라, 다이어트 콜라, 콜라 제로, 스프라이트, 판타, 진저 에일 또는 미닛 메이드 중 선택.'
+        ko: '콜라, 다이어트 콜라, 콜라 제로, 스프라이트, 판타, 진저 에일 또는 미닛 메이드 중 선택।',
+        bs: 'Izbor između Coca Cole, Diet Coca Cole, Coca Cola Zero, Sprite, Fanta, Ginger Ale ili Minute Maid.',
+        zh: '可选择可乐、无糖可乐、零度可乐、雪碧、芬达、姜汁汽水或美汁源。',
+        ro: 'Alegere între Coca Cola, Coca Cola Light, Coca Cola Zero, Sprite, Fanta, Ginger Ale sau Minute Maid.',
+        uk: 'Вибір з Кока-Коли, Дієт Коки, Кока-Кола Зеро, Спрайта, Фанти, Імбирного елю або Мінут Мейд.',
+        vi: 'Lựa chọn Coca Cola, Diet Coke, Coke Zero, Sprite, Fanta, Ginger Ale hoặc Minute Maid.'
       }, 
       price: '$2.99', 
       category: 'drinks_cold', 
@@ -4373,7 +4413,12 @@ const FullMenuPage = () => {
         fr: 'Boisson au Yaourt d\'Erbil',
         de: 'Erbil Joghurt-Getränk',
         bn: 'এরবিল দই পানীয়',
-        ko: '어빌 요거트 드링크'
+        ko: '어빌 요거트 드링크',
+        bs: 'Erbil jogurt piće',
+        zh: '埃尔比勒酸奶饮料',
+        ro: 'Băutură de iaurt Erbil',
+        uk: 'Йогуртний напій Ербіль',
+        vi: 'Đồ uống sữa chua Erbil'
       }, 
       description: { 
         en: 'Traditional yogurt drink from Erbil.',
@@ -4390,7 +4435,12 @@ const FullMenuPage = () => {
         fr: 'Boisson traditionnelle au yaourt d\'Erbil.',
         de: 'Traditionelles Joghurtgetränk aus Erbil.',
         bn: 'এরবিল থেকে ঐতিহ্যবাহী দই পানীয়।',
-        ko: '에르빌의 전통 요거트 음료.'
+        ko: '에르빌의 전통 요거트 음료।',
+        bs: 'Tradicionalno jogurt piće iz Erbila.',
+        zh: '来自埃尔比勒的传统酸奶饮料。',
+        ro: 'Băutură tradițională de iaurt din Erbil.',
+        uk: 'Традиційний йогуртний напій з Ербіля.',
+        vi: 'Đồ uống sữa chua truyền thống từ Erbil.'
       }, 
       price: '$3.99', 
       category: 'drinks_cold', 
@@ -4415,11 +4465,11 @@ const FullMenuPage = () => {
         de: 'Haus-Spezial Minz-Limonade',
         bn: 'হাউস স্পেশাল মিন্ট লেমোনেড',
         ko: '하우스 스페셜 민트 레모네이드',
-        sq: 'Limonadë me Mente Speciale e Shtëpisë',
-        fr: 'Limonade à la Menthe Spéciale Maison',
-        de: 'Hausgemachte Spezial-Minz-Limonade',
-        bn: 'হাউস স্পেশাল পুদিনা লেমোনেড',
-        ko: '하우스 스페셜 민트 레모네이드'
+        bs: 'Kuća Specijal Mint Limonada',
+        zh: '招牌薄荷柠檬水',
+        ro: 'Limonadă cu Mentă Specialitatea Casei',
+        uk: 'Фірмова м\'ятна лимонада',
+        vi: 'Nước chanh bạc hà đặc biệt'
       }, 
       price: '$4.99', 
       category: 'drinks_cold', 
@@ -4446,7 +4496,12 @@ const FullMenuPage = () => {
         fr: 'Café Arabe',
         de: 'Arabischer Kaffee',
         bn: 'আরবি কফি',
-        ko: '아라비아 커피'
+        ko: '아라비아 커피',
+        bs: 'Arapska kafa',
+        zh: '阿拉伯咖啡',
+        ro: 'Cafea arabă',
+        uk: 'Арабська кава',
+        vi: 'Cà phê Ả Rập'
       }, 
       description: { 
         en: 'Traditional Arabic coffee with cardamom.',
@@ -4463,7 +4518,12 @@ const FullMenuPage = () => {
         fr: 'Café arabe traditionnel à la cardamome.',
         de: 'Traditioneller arabischer Kaffee mit Kardamom.',
         bn: 'এলাচের সাথে ঐতিহ্যবাহী আরবি কফি।',
-        ko: '카다몬이 들어간 전통 아라비아 커피.'
+        ko: '카다몬이 들어간 전통 아라비아 커피.',
+        bs: 'Tradicionalna arapska kafa sa kardamomom.',
+        zh: '传统的阿拉伯豆蔻咖啡。',
+        ro: 'Cafea arabă tradițională cu cardamom.',
+        uk: 'Традиційна арабська кава з кардамоном.',
+        vi: 'Cà phê Ả Rập truyền thống với thảo quả.'
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
@@ -4504,7 +4564,12 @@ const FullMenuPage = () => {
         fr: 'Mélange traditionnel de café kurde.',
         de: 'Traditionelle kurdische Kaffeemischung.',
         bn: 'ঐতিহ্যবাহী কুর্দি কফি মিশ্রণ।',
-        ko: '전통 쿠르드 커피 블렌드.'
+        ko: '전통 쿠르드 커피 블렌드.',
+        bs: 'Tradicionalna kurdska mješavina kafe.',
+        zh: '传统的库尔德咖啡混合。',
+        ro: 'Amestec tradițional de cafea kurdă.',
+        uk: 'Традиційна курдська кавова суміш.',
+        vi: 'Hỗn hợp cà phê Kurdistan truyền thống.'
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
@@ -4527,7 +4592,12 @@ const FullMenuPage = () => {
         fr: 'Café Turc à la Pistache',
         de: 'Türkischer Pistazienkaffee',
         bn: 'তুর্কি পেস্তা কফি',
-        ko: '터키 피스타치오 커피'
+        ko: '터키 피스타치오 커피',
+        bs: 'Turska Fistik Kafa',
+        zh: '土耳其开心果咖啡',
+        ro: 'Cafea Turcească cu Fistic',
+        uk: 'Турецька кава з фісташками',
+        vi: 'Cà phê Thổ Nhĩ Kỳ hương hạt dẻ cười'
       }, 
       description: { 
         en: 'Turkish coffee with pistachio flavor.',
@@ -4544,7 +4614,12 @@ const FullMenuPage = () => {
         fr: 'Café turc au goût de pistache.',
         de: 'Türkischer Kaffee mit Pistaziengeschmack.',
         bn: 'পেস্তার স্বাদযুক্ত তুর্কি কফি।',
-        ko: '피스타치오 맛 터키 커피.'
+        ko: '피스타치오 맛 터키 커피.',
+        bs: 'Turska kafa sa okusom fistika.',
+        zh: '开心果味土耳其咖啡。',
+        ro: 'Cafea turcească cu aromă de fistic.',
+        uk: 'Турецька кава зі смаком фісташки.',
+        vi: 'Cà phê Thổ Nhĩ Kỳ hương vị hạt dẻ cười.'
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
@@ -4567,7 +4642,12 @@ const FullMenuPage = () => {
         fr: 'Thé Karak',
         de: 'Karak Tee',
         bn: 'কারাক চা',
-        ko: '카라크 차이'
+        ko: '카라크 차이',
+        bs: 'Karak Čaj',
+        zh: '卡拉克茶',
+        ro: 'Ceai Karak',
+        uk: 'Карак чай',
+        vi: 'Trà Karak'
       }, 
       description: { 
         en: 'Spiced tea with milk and cardamom.',
@@ -4584,7 +4664,12 @@ const FullMenuPage = () => {
         fr: 'Thé épicé au lait et à la cardamome.',
         de: 'Gewürztee mit Milch und Kardamom.',
         bn: 'দুধ এবং এলাচের সাথে মসলাযুক্ত চা।',
-        ko: '우유와 카다몬이 들어간 향신료 차.'
+        ko: '우유와 카다몬이 들어간 향신료 차.',
+        bs: 'Začinjeni čaj sa mlijekom i kardamomom.',
+        zh: '用牛奶和豆蔻调味的香料茶。',
+        ro: 'Ceai condimentat cu lapte și cardamom.',
+        uk: 'Пряний чай з молоком і кардамоном.',
+        vi: 'Trà gia vị với sữa và thảo quả.'
       }, 
       price: '$2.99', 
       category: 'drinks_hot', 
@@ -4609,17 +4694,11 @@ const FullMenuPage = () => {
         de: 'Persischer Tee',
         bn: 'পারস্য চা',
         ko: '페르시아 차',
-        ku: 'چایی فارسی',
-        tr: 'Fars Çayı',
-        ur: 'فارسی چائے',
-        kmr: 'Çaya Farsî',
-        es: 'Té Persa',
-        ru: 'Персидский чай',
-        hi: 'फारसी चाय',
-        sq: 'Çaj Persian',
-        fr: 'Thé Persan',
-        bn: 'ফার্সি চা',
-        ko: '페르시아 차'
+        bs: 'Persijski Čaj',
+        zh: '波斯茶',
+        ro: 'Ceai Persan',
+        uk: 'Перський чай',
+        vi: 'Trà Ba Tư'
       }, 
       description: { 
         en: 'Traditional Persian black tea.',
@@ -4636,7 +4715,12 @@ const FullMenuPage = () => {
         fr: 'Thé noir persan traditionnel.',
         de: 'Traditioneller persischer schwarzer Tee.',
         bn: 'ঐতিহ্যবাহী ফার্সি কালো চা।',
-        ko: '전통 페르시아 홍차.'
+        ko: '전통 페르시아 홍차.',
+        bs: 'Tradicionalni persijski crni čaj.',
+        zh: '传统的波斯红茶。',
+        ro: 'Ceai negru persan tradițional.',
+        uk: 'Традиційний перський чорний чай.',
+        vi: 'Trà đen Ba Tư truyền thống.'
       }, 
       price: '$2.49', 
       category: 'drinks_hot', 
@@ -4712,7 +4796,12 @@ const FullMenuPage = () => {
         fr: 'Baklava avec Glace au Safran',
         de: 'Baklava mit Safran-Eis',
         bn: 'জাফরান আইসক্রিম সহ বাকলাভা',
-        ko: '사프란 아이스크림을 곁들인 바클라바'
+        ko: '사프란 아이스크림을 곁들인 바클라바',
+        bs: 'Baklava sa Šafranskim Sladoledom',
+        zh: '配藏红花冰淇淋的果仁蜜饼',
+        ro: 'Baklava cu Înghețată de Șofran',
+        uk: 'Баклава з шафрановим морозивом',
+        vi: 'Baklava với Kem Nghệ Tây'
       }, 
       description: { 
         en: 'Traditional baklava served with aromatic saffron ice cream.',
@@ -4729,7 +4818,12 @@ const FullMenuPage = () => {
         fr: 'Baklava traditionnel servi avec une glace au safran aromatique.',
         de: 'Traditionelle Baklava serviert mit aromatischem Safran-Eis.',
         bn: 'সুগন্ধি জাফরান আইসক্রিমের সাথে ঐতিহ্যবাহী বাকলাভা।',
-        ko: '향긋한 사프란 아이스크림과 함께 제공되는 전통 바클라바.'
+        ko: '향긋한 사프란 아이스크림과 함께 제공되는 전통 바클라바.',
+        bs: 'Tradicionalna baklava servirana sa aromatičnim šafranskim sladoledom.',
+        zh: '传统果仁蜜饼配香浓藏红花冰淇淋。',
+        ro: 'Baklava tradițională servită cu înghețată aromatică de șofran.',
+        uk: 'Традиційна баклава з ароматним шафрановим морозивом.',
+        vi: 'Baklava truyền thống được phục vụ với kem nghệ tây thơm ngon.'
       }, 
       price: '$10.99', 
       category: 'dessert', 
@@ -4752,7 +4846,12 @@ const FullMenuPage = () => {
         sq: 'Tiramisu',
         fr: 'Tiramisu',
         bn: 'তিরামিসু',
-        ko: '티라미수'
+        ko: '티라미수',
+        bs: 'Tiramisu',
+        zh: '提拉米苏',
+        ro: 'Tiramisu',
+        uk: 'Тірамісу',
+        vi: 'Tiramisu'
       }, 
       description: { 
         en: 'Sweetened whipped cream and a rich mascarpone.',
@@ -4769,7 +4868,12 @@ const FullMenuPage = () => {
         fr: 'Crème fouettée sucrée et mascarpone riche.',
         de: 'Gesüßte Schlagsahne und reichhaltiger Mascarpone.',
         bn: 'মিষ্টি হুইপড ক্রিম এবং সমৃদ্ধ মাসকারপোনে।',
-        ko: '달콤한 휘핑크림과 진한 마스카르포네.'
+        ko: '달콤한 휘핑크림과 진한 마스카르포네.',
+        bs: 'Zaslađena šlag i bogat mascarpone.',
+        zh: '甜味鲜奶油和丰富的马斯卡彭尼。',
+        ro: 'Frișcă îndulcită și mascarpone bogat.',
+        uk: 'Підсолоджені збиті вершки та багатий маскарпоне.',
+        vi: 'Kem tươi ngọt và mascarpone đậm đà.'
       }, 
       price: '$6.99', 
       category: 'dessert', 
@@ -4793,7 +4897,12 @@ const FullMenuPage = () => {
         sq: 'Khash Khash',
         fr: 'Khash Khash',
         bn: 'খাশ খাশ',
-        ko: '카시 카시'
+        ko: '카시 카시',
+        bs: 'Haš Haš',
+        zh: '哈什哈什',
+        ro: 'Khash Khash',
+        uk: 'Хаш Хаш',
+        vi: 'Khash Khash'
       }, 
       description: { 
         en: 'A delicious dessert with layers of cream and crunchy vermicelli.',
@@ -4810,7 +4919,12 @@ const FullMenuPage = () => {
         fr: 'Dessert délicieux avec des couches de crème et de vermicelles croquants.',
         de: 'Köstliches Dessert mit Schichten aus Sahne und knuspriger Fadennudeln.',
         bn: 'ক্রিম এবং কুড়কুড়ে ভার্মিসেলির স্তর সহ সুস্বাদু মিষ্টি।',
-        ko: '크림과 바삭한 버미첼리가 층층이 들어간 맛있는 디저트.'
+        ko: '크림과 바삭한 버미첼리가 층층이 들어간 맛있는 디저트.',
+        bs: 'Ukusan desert sa slojevima kreme i hrskavog makaronija.',
+        zh: '带有奶油层和酥脆细面条的美味甜点。',
+        ro: 'Desert delicios cu straturi de cremă și fidea crocantă.',
+        uk: 'Смачний десерт з шарами вершків та хрусткої вермішелі.',
+        vi: 'Món tráng miệng ngon với các lớp kem và bún tàu giòn.'
       }, 
       price: '$6.99', 
       category: 'dessert', 
@@ -4833,7 +4947,12 @@ const FullMenuPage = () => {
         sq: 'Puding Orizi në Furrë',
         fr: 'Pudding de Riz au Four',
         bn: 'ওভেন রাইস পুডিং',
-        ko: '오븐 쌀 푸딩'
+        ko: '오븐 쌀 푸딩',
+        bs: 'Pirinčani Puding iz Pećnice',
+        zh: '烤箱大米布丁',
+        ro: 'Pudding de Orez la Cuptor',
+        uk: 'Рисовий пудинг з духовки',
+        vi: 'Bánh Pudding Gạo Nướng'
       }, 
       description: { 
         en: 'Creamy Middle Eastern milk pudding.',
@@ -4850,7 +4969,12 @@ const FullMenuPage = () => {
         fr: 'Pudding lacté crémeux du Moyen-Orient.',
         de: 'Cremiger nahöstlicher Milchpudding.',
         bn: 'ক্রিমি মধ্যপ্রাচ্যের দুধের পুডিং।',
-        ko: '크림 같은 중동 우유 푸딩.'
+        ko: '크림 같은 중동 우유 푸딩.',
+        bs: 'Kremasti bliskoistočni mljećni puding.',
+        zh: '奶香中东牛奶布丁。',
+        ro: 'Pudding cremos de lapte din Orientul Mijlociu.',
+        uk: 'Кремовий близькосхідний молочний пудинг.',
+        vi: 'Pudding sữa kem Trung Đông.'
       }, 
       price: '$6.99', 
       category: 'dessert', 
@@ -4874,7 +4998,12 @@ const FullMenuPage = () => {
         fr: 'Glace',
         de: 'Eis',
         bn: 'আইসক্রিম',
-        ko: '아이스크림'
+        ko: '아이스크림',
+        bs: 'Sladoled',
+        zh: '冰淇淋',
+        ro: 'Înghețată',
+        uk: 'Морозиво',
+        vi: 'Kem'
       }, 
       description: { 
         en: 'Choose from 3 flavors: Strawberry, Chocolate, Vanilla.',
@@ -4891,7 +5020,12 @@ const FullMenuPage = () => {
         fr: 'Choisissez parmi 3 parfums : Fraise, Chocolat, Vanille.',
         de: 'Wählen Sie aus 3 Geschmacksrichtungen: Erdbeere, Schokolade, Vanille.',
         bn: '৩টি স্বাদ থেকে বেছে নিন: স্ট্রবেরি, চকলেট, ভ্যানিলা।',
-        ko: '3가지 맛 중에서 선택하세요: 딸기, 초콜릿, 바닐라.'
+        ko: '3가지 맛 중에서 선택하세요: 딸기, 초콜릿, 바닐라.',
+        bs: 'Birajte između 3 okusa: Jagoda, Čokolada, Vanila.',
+        zh: '从3种口味中选择：草莓、巧克力、香草。',
+        ro: 'Alegeți din 3 arome: Căpșuni, Ciocolată, Vanilie.',
+        uk: 'Оберіть з 3 смаків: Полуниця, Шоколад, Ваніль.',
+        vi: 'Chọn từ 3 hương vị: Dâu tây, Socola, Vani.'
       }, 
       price: '$2.99', 
       category: 'dessert', 
@@ -4918,7 +5052,12 @@ const FullMenuPage = () => {
         fr: 'Gâteau à la Pistache',
         de: 'Pistazien-Kuchen',
         bn: 'পেস্তা কেক',
-        ko: '피스타치오 케이크'
+        ko: '피스타치오 케이크',
+        bs: 'Kolač od Pistacija',
+        zh: '开心果蛋糕',
+        ro: 'Tort cu Fistic',
+        uk: 'Фісташковий торт',
+        vi: 'Bánh Hạt Dẻ Cười'
       }, 
       description: { 
         en: 'Moist and flavorful cake made with premium pistachios.',
@@ -4935,7 +5074,12 @@ const FullMenuPage = () => {
         fr: 'Gâteau moelleux et savoureux aux pistaches premium.',
         de: 'Saftiger und aromatischer Kuchen aus Premium-Pistazien.',
         bn: 'প্রিমিয়াম পেস্তা দিয়ে তৈরি আর্দ্র এবং স্বাদযুক্ত কেক।',
-        ko: '프리미엄 피스타치오로 만든 촉촉하고 맛있는 케이크.'
+        ko: '프리미엄 피스타치오로 만든 촉촉하고 맛있는 케이크.',
+        bs: 'Vlažan i ukusan kolač napravljen od vrhunskih pistacija.',
+        zh: '用优质开心果制作的湿润美味蛋糕。',
+        ro: 'Tort umed și savuros făcut cu fistic premium.',
+        uk: 'Вологий та смачний торт з преміум фісташками.',
+        vi: 'Bánh ngọt ẩm và đậm đà làm từ hạt dẻ cười cao cấp.'
       }, 
       price: '$7.99', 
       category: 'dessert', 
@@ -5122,7 +5266,7 @@ const FullMenuPage = () => {
         options: [ 
           { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
           { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
-          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फلाफेल' }, price: '$4.99' }, 
+          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治球', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$4.99' }, 
           { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' } 
         ] 
       } 
