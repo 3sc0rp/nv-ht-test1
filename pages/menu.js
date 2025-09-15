@@ -5237,7 +5237,7 @@ const FullMenuPage = () => {
           { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
           { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen' }, price: '$8.99' }, 
           { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen' }, price: '$6.99' }, 
-          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel' }, price: '$5.99' } 
+          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$5.99' } 
         ] 
       } 
     },
