@@ -459,7 +459,12 @@ const FullMenuPage = () => {
         fr: 'Apéritifs',
         de: 'Vorspeisen',
         bn: 'ক্ষুধাবর্ধক',
-        ko: '애피타이저'
+        ko: '애피타이저',
+        bs: 'Predjelo',
+        zh: '开胃菜',
+        ro: 'Aperitiv',
+        uk: 'Закуска',
+        vi: 'Khai vị'
       }, 
       placeholder: 'hummus', 
       imageUrl: '/hummus.jpg',
@@ -476,7 +481,14 @@ const FullMenuPage = () => {
         hi: 'तिल का पेस्ट, जैतून का तेल और गर्म पीटा ब्रेड के साथ मलाईदार चने का डिप',
         sq: 'Sos kremoz me groftha me tahini, vaj ulliri dhe bukë pita të ngrohtë',
         fr: 'Dip crémeux aux pois chiches avec tahini, huile d\'olive et pain pita chaud',
-        de: 'Cremiger Kichererbsen-Dip mit Tahini, Olivenöl und warmem Pita-Brot'
+        de: 'Cremiger Kichererbsen-Dip mit Tahini, Olivenöl und warmem Pita-Brot',
+        bn: 'তাহিনি, জলপাই তেল এবং গরম পিটা রুটির সাথে ক্রিমি ছোলার ডিপ',
+        ko: '타히니, 올리브 오일, 따뜻한 피타 빵이 들어간 크리미 병아리콩 딥',
+        bs: 'Kremasti dip od slanutka sa tahinim, maslinovim uljem i toplim pita kruhom',
+        zh: '奶油鹰嘴豆蘸酱配芝麻酱、橄榄油和温热的皮塔饼',
+        ro: 'Dip cremos din năut cu tahini, ulei de măsline și pâine pita caldă',
+        uk: 'Вершковий дип з нуту з тахіні, оливковою олією та теплою пітою',
+        vi: 'Sốt đậu gà kem với tahini, dầu ô liu và bánh mì pita nóng'
       },
       color: '#D2B48C'
     },
@@ -514,7 +526,12 @@ const FullMenuPage = () => {
         fr: 'Desserts',
         de: 'Desserts',
         bn: 'মিষ্টান্ন',
-        ko: '디저트'
+        ko: '디저트',
+        bs: 'Deserti',
+        zh: '甜点',
+        ro: 'Deserturi',
+        uk: 'Десерти',
+        vi: 'Tráng miệng'
       }, 
       placeholder: 'baklava', 
       imageUrl: '/baklava.jpg',
@@ -533,7 +550,12 @@ const FullMenuPage = () => {
         fr: 'Pâtisserie sucrée avec des couches de noix et de miel dans une délicate pâte phyllo',
         de: 'Süßes Gebäck mit Nuss- und Honigschichten in zartem Phyllo-Teig',
         bn: 'সূক্ষ্ম ফিলো পেস্ট্রিতে বাদাম এবং মধুর স্তর সহ মিষ্টি পেস্ট্রি',
-        ko: '섬세한 필로 페이스트리에 견과류와 꿀이 층층이 들어간 달콤한 페이스트리'
+        ko: '섬세한 필로 페이스트리에 견과류와 꿀이 층층이 들어간 달콤한 페이스트리',
+        bs: 'Slatki kolačić sa slojevima oraha i meda u finoj filo testi',
+        zh: '精致酥皮中夹有坚果和蜂蜜层的甜酥饼',
+        ro: 'Prăjitură dulce cu straturi de nuci și miere în aluat filo delicat',
+        uk: 'Солодка випічка з шарами горіхів та меду в ніжному тісті філо',
+        vi: 'Bánh ngọt với các lớp hạt và mật ong trong lớp vỏ phyllo mỏng'
       },
       color: '#DEB887'
     },
