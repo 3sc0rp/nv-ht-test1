@@ -576,7 +576,12 @@ const FullMenuPage = () => {
         fr: 'Sandwich Shawarma au Poulet',
         de: 'Hähnchen Schawarma Sandwich',
         bn: 'চিকেন শাওয়ারমা স্যান্ডউইচ',
-        ko: '치킨 샤와르마 샌드위치'
+        ko: '치킨 샤와르마 샌드위치',
+        bs: 'Sendvič sa Piletinom Shawarma',
+        zh: '鸡肉沙威玛三明治',
+        ro: 'Sandwich cu Shawarma de Pui',
+        uk: 'Сендвіч з куркою шаварма',
+        vi: 'Bánh Mì Shawarma Gà'
       }, 
       category: {
         en: 'Sandwich',
@@ -593,7 +598,12 @@ const FullMenuPage = () => {
         fr: 'Sandwich',
         de: 'Sandwich',
         bn: 'স্যান্ডউইচ',
-        ko: '샌드위치'
+        ko: '샌드위치',
+        bs: 'Sendvič',
+        zh: '三明治',
+        ro: 'Sandwich',
+        uk: 'Сендвіч',
+        vi: 'Bánh Mì'
       }, 
       placeholder: 'shawarma', 
       imageUrl: '/chk.jpg',
@@ -612,7 +622,12 @@ const FullMenuPage = () => {
         fr: 'Poulet mariné tendre enroulé dans du pain pita frais avec des légumes et de la sauce',
         de: 'Zartes mariniertes Hähnchen in frischem Pita mit Gemüse und Sauce',
         bn: 'তাজা পিটা রুটিতে সবজি এবং সস সহ মোড়ানো নরম ম্যারিনেটেড চিকেন',
-        ko: '신선한 피타 빵에 야채와 소스와 함께 감싼 부드러운 양념 치킨'
+        ko: '신선한 피타 빵에 야채와 소스와 함께 감싼 부드러운 양념 치킨',
+        bs: 'Nežno marinirano pile umotano u svježu pitu sa povrćem i umakom',
+        zh: '嫩腌鸡肉配新鲜皮塔饼蔬菜和酱汁',
+        ro: 'Pui marinat moale înfășurat în pită proaspătă cu legume și sos',
+        uk: 'Ніжна мариноваоана курка загорнута у свіжу піту з овочами та соусом',
+        vi: 'Thịt gà ướp mềm cuốn trong bánh pita tươi với rau và sốt'
       },
       color: '#FFD93D'
     },
@@ -633,7 +648,12 @@ const FullMenuPage = () => {
         fr: 'Thé Karak',
         de: 'Karak Tee',
         bn: 'কারাক চা',
-        ko: '카라크 차이'
+        ko: '카라크 차이',
+        bs: 'Karak Čaj',
+        zh: '卡拉克茶',
+        ro: 'Ceai Karak',
+        uk: 'Карак чай',
+        vi: 'Trà Karak'
       }, 
       category: {
         en: 'Hot Drinks',
@@ -650,7 +670,12 @@ const FullMenuPage = () => {
         fr: 'Boissons Chaudes',
         de: 'Heiße Getränke',
         bn: 'গরম পানীয়',
-        ko: '뜨거운 음료'
+        ko: '뜨거운 음료',
+        bs: 'Topli Napici',
+        zh: '热饮',
+        ro: 'Băuturi Calde',
+        uk: 'Гарячі напої',
+        vi: 'Đồ Uống Nóng'
       }, 
       placeholder: 'tea', 
       imageUrl: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=300&h=200&fit=crop',
@@ -669,7 +694,12 @@ const FullMenuPage = () => {
         fr: 'Thé épicé au lait et à la cardamome, un favori traditionnel du Moyen-Orient',
         de: 'Gewürztee mit Milch und Kardamom, ein traditioneller Favorit des Nahen Ostens',
         bn: 'দুধ এবং এলাচ সহ মশলাযুক্ত চা, একটি ঐতিহ্যবাহী মধ্যপ্রাচ্যের প্রিয়',
-        ko: '우유와 카다몬이 들어간 향신료 차, 전통적인 중동의 인기 음료'
+        ko: '우유와 카다몬이 들어간 향신료 차, 전통적인 중동의 인기 음료',
+        bs: 'Začinjen čaj sa mlijekom i kardamomom, tradicionalni favorit Bliskog istoka',
+        zh: '加牛奶和豆蔻的香料茶，传统的中东最爱',
+        ro: 'Ceai condimentat cu lapte și cardamom, un favorit tradițional din Orientul Mijlociu',
+        uk: 'Пряний чай з молоком та кардамоном, традиційний близькосхідний фаворит',
+        vi: 'Trà gia vị với sữa và bạch đậu khấu, một món yêu thích truyền thống của Trung Đông'
       },
       color: '#8B4513'
     }
@@ -907,7 +937,6 @@ const FullMenuPage = () => {
         grill: 'Grill Platters', 
         specialty: 'Specialty Dishes', 
         kids: "Kid's Menu", 
-        ko: '키즈 메뉴', 
         sides: 'Sides', 
         drinks_cold: 'Drinks (Cold)', 
         drinks_hot: 'Drinks (Hot)', 
@@ -1340,7 +1369,9 @@ const FullMenuPage = () => {
         drinks_hot: 'পানীয় (গরম)', 
         soup: 'স্যুপ', 
         dessert: 'ডেজার্ট', 
-        popular: 'সবচেয়ে জনপ্রিয়' 
+        popular: 'সবচেয়ে জনপ্রিয়',
+        wraps: 'র‍্যাপ',
+        drinks: 'পানীয়' 
       },
       addProtein: 'প্রোটিন যোগ করুন',
       servingFor: 'পরিবেশনা',
@@ -1401,7 +1432,9 @@ const FullMenuPage = () => {
         drinks_hot: '음료 (뜨거운)', 
         soup: '수프', 
         dessert: '디저트', 
-        popular: '인기 메뉴' 
+        popular: '인기 메뉴',
+        wraps: '랩',
+        drinks: '음료' 
       },
       addProtein: '단백질 추가',
       servingFor: '인분',
@@ -1416,7 +1449,9 @@ const FullMenuPage = () => {
         languages: '글로벌 언어'
       },
       popularSectionTitle: '가장 인기 있는 요리',
-      description: '정통 중동 맛과 따뜻한 환대를 당신의 테이블로 가져다드립니다. 모든 요리는 우리의 풍부한 문화유산과 요리 전통의 축하입니다.',
+      scrollDownText: '메뉴를 탐색하려면 아래로 스크롤하세요',
+      footer: {
+        description: '정통 중동 맛과 따뜻한 환대를 당신의 테이블로 가져다드립니다. 모든 요리는 우리의 풍부한 문화유산과 요리 전통의 축하입니다.',
       quickLinks: '빠른 링크',
       contactInfo: '연락처 정보',
       privacy: '개인정보 처리방침',
@@ -1427,6 +1462,7 @@ const FullMenuPage = () => {
       blunari: '블루나리 스마트',
       notice: '주의:',
       foodSafetyNotice: '날것이나 덜 익힌 육류, 가금류, 해산물, 조개류 또는 계란을 섭취하면 특정 질병이 있는 경우 특히 식중독 위험이 증가할 수 있습니다.'
+      }
     },
     ru: {
       title: 'Наше кулинарное путешествие',
@@ -5085,9 +5121,9 @@ const FullMenuPage = () => {
         }, 
         options: [ 
           { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
-          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen' }, price: '$8.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
           { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फلाफेल' }, price: '$4.99' }, 
-          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen' }, price: '$6.99' } 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' } 
         ] 
       } 
     },
@@ -5157,13 +5193,20 @@ const FullMenuPage = () => {
           hi: 'प्रोटीन जोड़ें',
           sq: 'Shto Proteinë',
           fr: 'Ajouter des Protéines',
-          de: 'Protein hinzufügen'
+          de: 'Protein hinzufügen',
+          bn: 'প্রোটিন যোগ করুন',
+          ko: '단백질 추가',
+          bs: 'Dodaj Protein',
+          zh: '添加蛋白质',
+          ro: 'Adăugați Proteine',
+          uk: 'Додати білок',
+          vi: 'Thêm Protein'
         }, 
         options: [ 
-          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
-          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen' }, price: '$8.99' }, 
-          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen' }, price: '$6.99' }, 
-          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel' }, price: '$5.99' } 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' }, 
+          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治球', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$5.99' } 
         ] 
       } 
     },
@@ -5231,12 +5274,19 @@ const FullMenuPage = () => {
           hi: 'प्रोटीन जोड़ें',
           sq: 'Shto Proteinë',
           fr: 'Ajouter des Protéines',
-          de: 'Protein hinzufügen'
+          de: 'Protein hinzufügen',
+          bn: 'প্রোটিন যোগ করুন',
+          ko: '단백질 추가',
+          bs: 'Dodaj Protein',
+          zh: '添加蛋白质',
+          ro: 'Adăugați Proteine',
+          uk: 'Додати білок',
+          vi: 'Thêm Protein'
         }, 
         options: [ 
-          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
-          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen' }, price: '$8.99' }, 
-          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen' }, price: '$6.99' }, 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' }, 
           { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$5.99' } 
         ] 
       } 
@@ -5315,10 +5365,10 @@ const FullMenuPage = () => {
           vi: 'Thêm Protein'
         }, 
         options: [ 
-          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядina', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
-          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen' }, price: '$8.99' }, 
-          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen' }, price: '$6.99' }, 
-          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel' }, price: '$5.99' } 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядina', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' }, 
+          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治球', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$5.99' } 
         ] 
       } 
     },
@@ -5561,7 +5611,7 @@ const FullMenuPage = () => {
         kmr: '🌶️ Tûj',
         es: '🌶️ Picante',
         ru: '🌶️ Острый',
-        hi: '🌶️ मसालेदार'
+        hi: '🌶️ मसालेदार', sq: '🌶️ Djegës', fr: '🌶️ Épicé', de: '🌶️ Scharf', bn: '🌶️ ঝাল', ko: '🌶️ 매운', bs: '🌶️ Ljuto', zh: '🌶️ 辣的', ro: '🌶️ Picant', uk: '🌶️ Гострий', vi: '🌶️ Cay'
       },
       sweet: {
         en: '🍯 Sweet',
@@ -5573,7 +5623,7 @@ const FullMenuPage = () => {
         kmr: '🍯 Şîrîn',
         es: '🍯 Dulce',
         ru: '🍯 Сладкий',
-        hi: '🍯 मीठा'
+        hi: '🍯 मीठा', sq: '🍯 I ëmbël', fr: '🍯 Sucré', de: '🍯 Süß', bn: '🍯 মিষ্টি', ko: '🍯 달콤한', bs: '🍯 Slatko', zh: '🍯 甜的', ro: '🍯 Dulce', uk: '🍯 Солодкий', vi: '🍯 Ngọt'
       },
       traditional: {
         en: '🏛️ Traditional',
@@ -5585,7 +5635,7 @@ const FullMenuPage = () => {
         kmr: '🏛️ Kevneşopî',
         es: '🏛️ Tradicional',
         ru: '🏛️ Традиционный',
-        hi: '🏛️ पारंपरिक'
+        hi: '🏛️ पारंपरिक', sq: '🏛️ Tradicional', fr: '🏛️ Traditionnel', de: '🏛️ Traditionell', bn: '🏛️ ঐতিহ্যবাহী', ko: '🏛️ 전통적인', bs: '🏛️ Tradicionalno', zh: '🏛️ 传统的', ro: '🏛️ Tradițional', uk: '🏛️ Традиційний', vi: '🏛️ Truyền thống'
       },
       grilled: {
         en: '🔥 Grilled',
@@ -5597,7 +5647,7 @@ const FullMenuPage = () => {
         kmr: '🔥 Şewitî',
         es: '🔥 A la Parrilla',
         ru: '🔥 Гриль',
-        hi: '🔥 ग्रिल्ड'
+        hi: '🔥 ग्रिल्ड', sq: '🔥 Në Skarë', fr: '🔥 Grillé', de: '🔥 Gegrillt', bn: '🔥 গ্রিল করা', ko: '🔥 구운', bs: '🔥 Sa roštilja', zh: '🔥 烤制的', ro: '🔥 La grătar', uk: '🔥 Гриль', vi: '🔥 Nướng'
       },
       fried: {
         en: '🍳 Fried',
@@ -5609,7 +5659,7 @@ const FullMenuPage = () => {
         kmr: '🍳 Sorkirî',
         es: '🍳 Frito',
         ru: '🍳 Жареный',
-        hi: '🍳 तली हुई'
+        hi: '🍳 तली हुई', sq: '🍳 I skuqur', fr: '🍳 Frit', de: '🍳 Gebraten', bn: '🍳 ভাজা', ko: '🍳 튀긴', bs: '🍳 Prženo', zh: '🍳 油炸的', ro: '🍳 Prăjit', uk: '🍳 Смажений', vi: '🍳 Chiên'
       }
     };
     
