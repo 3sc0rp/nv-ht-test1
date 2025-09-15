@@ -1905,7 +1905,12 @@ const FullMenuPage = () => {
         hi: 'हम्मुस',
         sq: 'Humus',
         bn: 'হুমুস',
-        ko: '후무스'
+        ko: '후무스',
+        bs: 'Humus',
+        zh: '鹰嘴豆泥',
+        ro: 'Humus',
+        uk: 'Хумус',
+        vi: 'Hummus'
       }, 
       description: { 
         en: 'A classic Levantine dip made from mashed chickpeas, tahini, olive oil, lemon juice and garlic.',
@@ -1922,7 +1927,12 @@ const FullMenuPage = () => {
         hi: 'मसले हुए छोले, तिल का पेस्ट, जैतून का तेल, नींबू का रस और लहसुन से बना क्लासिक लेवेंटाइन डिप।',
         sq: 'Një sos klasik levantinas i bërë nga grofthat e shtypur, tahini, vaj ulliri, lëng limoni dhe hudhra.',
         bn: 'ছোলা, তাহিনি, জলপাই তেল, লেবুর রস এবং রসুন দিয়ে তৈরি ক্লাসিক লেভান্টাইন ডিপ।',
-        ko: '으깬 병아리콩, 타히니, 올리브 오일, 레몬 주스, 마늘로 만든 클래식한 레반트 딥입니다.'
+        ko: '으깬 병아리콩, 타히니, 올리브 오일, 레몬 주스, 마늘로 만든 클래식한 레반트 딥입니다.',
+        bs: 'Klasični levantinski umak od mačkanih slanutka, tahini, maslinovog ulja, limunovog soka i bijelog luka.',
+        zh: '经典黎凡特蘸酱，由捣碎的鹰嘴豆、芝麻酱、橄榄油、柠檬汁和大蒜制成。',
+        ro: 'O sosă clasică levantină din năut pisat, tahini, ulei de măsline, suc de lămâie și usturoi.',
+        uk: 'Класичний левантійський соус з подрібненого нуту, тахіні, оливкової олії, лимонного соку та часнику.',
+        vi: 'Sốt chấm Levantine cổ điển làm từ đậu chickpea nghiền, tahini, dầu ô liu, nước cốt chanh và tỏi.'
       }, 
       price: '$8.99', 
       category: 'appetizers', 
@@ -1947,7 +1957,12 @@ const FullMenuPage = () => {
         fr: 'Baba Ganouch',
         de: 'Baba Ghanoush',
         bn: 'বাবা গানুশ',
-        ko: '바바 가누시'
+        ko: '바바 가누시',
+        bs: 'Baba Ghanoush',
+        zh: '茄子泥',
+        ro: 'Baba Ghanoush',
+        uk: 'Баба Гануш',
+        vi: 'Baba Ghanoush'
       }, 
       description: { 
         en: 'This Levantine dip, made from roasted eggplant, yogurt, tahini, garlic, lemon juice, is a delicious addition to any meal.',
@@ -1964,7 +1979,12 @@ const FullMenuPage = () => {
         hi: 'भुने हुए बैंगन, दही, तिल का पेस्ट, लहसुन और नींबू के रस से बना यह लेवेंटाइन डिप किसी भी भोजन के साथ स्वादिष्ट जोड़ है।',
         sq: 'Kjo salcë levantinase, e bërë nga patëllxhani i pjekur, kosi, tahini, hudhra dhe lëngu i limonit, është një shtesë e shijshme për çdo vakt.',
         bn: 'ভাজা বেগুন, দই, তাহিনি, রসুন এবং লেবুর রস দিয়ে তৈরি এই লেভান্টাইন ডিপ যেকোনো খাবারের সাথে সুস্বাদু সংযোজন।',
-        ko: '구운 가지, 요거트, 타히니, 마늘, 레몬 주스로 만든 이 레반트 딥은 어떤 식사에도 맛있는 추가 요리입니다.'
+        ko: '구운 가지, 요거트, 타히니, 마늘, 레몬 주스로 만든 이 레반트 딥은 어떤 식사에도 맛있는 추가 요리입니다.',
+        bs: 'Ovaj levantinski umak, napravljen od pečenog patlidžana, jogurta, tahini, bijelog luka i limunovog soka, ukusna je dopuna svakom obroku.',
+        zh: '这道黎凡特蘸酱由烤茄子、酸奶、芝麻酱、大蒜和柠檬汁制成，是任何餐食的美味添加。',
+        ro: 'Această sosă levantină, făcută din vânătă coapte, iaurt, tahini, usturoi și suc de lămâie, este o adăugire delicioasă la orice masă.',
+        uk: 'Цей левантійський соус з запеченого баклажана, йогурту, тахіні, часнику та лимонного соку - смачне доповнення до будь-якої страви.',
+        vi: 'Sốt chấm Levantine này làm từ cà tím nướng, sữa chua, tahini, tỏi và nước cốt chanh, là món ăn kèm ngon cho bất kỳ bữa ăn nào.'
       }, 
       price: '$9.99', 
       category: 'appetizers', 
@@ -1989,7 +2009,12 @@ const FullMenuPage = () => {
         fr: 'Kibbeh',
         de: 'Kibbeh',
         bn: 'কিবেহ',
-        ko: '키베'
+        ko: '키베',
+        bs: 'Kibbeh',
+        zh: '基贝',
+        ro: 'Kibbeh',
+        uk: 'Кіббе',
+        vi: 'Kibbeh'
       }, 
       description: { 
         en: 'A Middle Eastern classic with a crispy outer shell made from finely ground rice and spices, encasing a flavorful minced meat filling (beef, peas, carrot, almonds, raisins). Fried to perfection, Kibbeh adds a rich aroma and unique taste to your dining experience.',
@@ -2006,7 +2031,12 @@ const FullMenuPage = () => {
         fr: 'Un classique du Moyen-Orient avec une coquille extérieure croustillante faite de riz finement moulu et d\'épices, renfermant une farce de viande hachée savoureuse (bœuf, petits pois, carotte, amandes, raisins secs). Frit à la perfection, le Kibbeh ajoute un arôme riche et un goût unique à votre expérience culinaire.',
         de: 'Ein nahöstlicher Klassiker mit knuspriger äußerer Hülle aus fein gemahlenem Reis und Gewürzen, gefüllt mit würzigem Hackfleisch (Rindfleisch, Erbsen, Karotten, Mandeln, Rosinen). Perfekt frittiert verleiht Kibbeh Ihrem kulinarischen Erlebnis ein reiches Aroma und einen einzigartigen Geschmack.',
         bn: 'সূক্ষ্ম ভাত এবং মশলা দিয়ে তৈরি খাস্তা বাইরের খোসা সহ মধ্যপ্রাচ্যের ক্লাসিক, যাতে সুস্বাদু কীমা ভর্তি (গরুর মাংস, মটর, গাজর, বাদাম, কিশমিশ) রয়েছে। নিখুঁতভাবে ভাজা, কিবেহ আপনার খাবারের অভিজ্ঞতায় সমৃদ্ধ সুগন্ধ এবং অনন্য স্বাদ যোগ করে।',
-        ko: '잘게 간 쌀과 향신료로 만든 바삭한 외피에 맛있는 다진 고기 속(소고기, 완두콩, 당근, 아몬드, 건포도)이 들어간 중동의 클래식 요리입니다. 완벽하게 튀긴 키베는 당신의 식사 경험에 풍부한 향과 독특한 맛을 더합니다.'
+        ko: '잘게 간 쌀과 향신료로 만든 바삭한 외피에 맛있는 다진 고기 속(소고기, 완두콩, 당근, 아몬드, 건포도)이 들어간 중동의 클래식 요리입니다. 완벽하게 튀긴 키베는 당신의 식사 경험에 풍부한 향과 독특한 맛을 더합니다.',
+        bs: 'Bliskoistočni klasik sa hrskavom vanjskom ljuskom napravljenom od fino samlevene riže i začina, koji sadrži ukusan fil od mlevenog mesa (govedina, grašak, šargarepa, badem, grožđice). Savršeno pržen, Kibbeh dodaje bogat aroma i jedinstven ukus vašem kulinarskom iskustvu.',
+        zh: '中东经典菜肴，酥脆的外壳由细磨大米和香料制成，包裹着美味的肉馅（牛肉、豌豆、胡萝卜、杏仁、葡萄干）。完美炸制的基贝为您的用餐体验增添丰富香气和独特口味。',
+        ro: 'Un clasic din Orientul Mijlociu cu o coajă exterioară crocantă din orez fin măcinat și condimente, conținând o umplutură savuroasă de carne tocată (carne de vită, mazăre, morcov, migdale, stafide). Prăjit la perfecțiune, Kibbeh adaugă o aromă bogată și un gust unic experienței tale culinare.',
+        uk: 'Близькосхідна класика з хрусткою зовнішньою оболонкою з дрібно меленого рису та спецій, що містить смачну начинку з рубленого мʼяса (яловичина, горошок, морква, мигдаль, родзинки). Ідеально смажений кіббе додає багатий аромат та унікальний смак вашому кулінарному досвіду.',
+        vi: 'Món cổ điển Trung Đông với lớp vỏ ngoài giòn làm từ gạo xay nhuyễn và gia vị, bao bọc nhân thịt băm đậm đà (thịt bò, đậu Hà Lan, cà rốt, hạnh nhân, nho khô). Chiên hoàn hảo, Kibbeh thêm hương thơm phong phú và hương vị độc đáo cho trải nghiệm ẩm thực của bạn.'
       }, 
       price: '$10.99', 
       category: 'appetizers', 
@@ -2030,7 +2060,12 @@ const FullMenuPage = () => {
         fr: 'Falafels',
         de: 'Falafels',
         bn: 'ফালাফেল',
-        ko: '팔라펠'
+        ko: '팔라펠',
+        bs: 'Falafel',
+        zh: '法拉费',
+        ro: 'Falafel',
+        uk: 'Фалафель',
+        vi: 'Falafel'
       }, 
       description: { 
         en: 'Consisting of chickpea patties seasoned with aromatic spices and fried to a golden, crispy exterior, and served with hummus and a drizzle of olive oil, this delightful snack adds a delicious touch to your dining experience.',
@@ -2047,7 +2082,12 @@ const FullMenuPage = () => {
         fr: 'Composé de galettes de pois chiches assaisonnées aux épices aromatiques et frites jusqu\'à obtenir un extérieur doré et croustillant, et servi avec du houmous et un filet d\'huile d\'olive, cette délicieuse collation ajoute une touche savoureuse à votre expérience culinaire.',
         de: 'Besteht aus Kichererbsen-Bällchen, die mit aromatischen Gewürzen gewürzt und zu einer goldenen, knusprigen Außenhaut frittiert werden, und serviert mit Hummus und einem Schuss Olivenöl, dieser köstliche Snack verleiht Ihrem kulinarischen Erlebnis eine delikate Note.',
         bn: 'সুগন্ধি মশলা দিয়ে তৈরি ছোলার প্যাটি এবং সোনালী, খাস্তা বাইরের অংশ পর্যন্ত ভাজা, এবং হুমুস এবং জলপাই তেলের ছিটা দিয়ে পরিবেশিত, এই সুস্বাদু স্ন্যাক আপনার খাবারের অভিজ্ঞতায় একটি সুস্বাদু স্পর্শ যোগ করে।',
-        ko: '향신료로 양념한 병아리콩 패티를 황금빛 바삭한 겉면이 될 때까지 튀기고, 후무스와 올리브 오일 뿌림과 함께 제공되는 이 맛있는 스낵은 당신의 식사 경험에 맛있는 터치를 더합니다.'
+        ko: '향신료로 양념한 병아리콩 패티를 황금빛 바삭한 겉면이 될 때까지 튀기고, 후무스와 올리브 오일 뿌림과 함께 제공되는 이 맛있는 스낵은 당신의 식사 경험에 맛있는 터치를 더합니다.',
+        bs: 'Sastoji se od pljeskavica od slanutka začinjenih aromatskim začinima i prženih do zlatne, hrskave vanjštine, i servira se s humusom i prstohvatom maslinovog ulja, ovaj ukusan zalogaj dodaje ukusan dodir vašem kulinarskom iskustvu.',
+        zh: '由用芳香香料调味的鹰嘴豆饼制成，炸至金黄酥脆的外层，配以鹰嘴豆泥和橄榄油淋汁，这道美味小食为您的用餐体验增添美味触感。',
+        ro: 'Constă din chiftele de năut condimentate cu condimente aromatice și prăjite până la o coajă aurie și crocantă, și servite cu humus și o stropire de ulei de măsline, acest gustos aperitiv adaugă o notă delicioasă experienței tale culinare.',
+        uk: 'Складається з котлеток з нуту, приправлених ароматними спеціями та смажених до золотистої, хрусткої скоринки, подається з хумусом та краплинкою оливкової олії, ця смачна закуска додає смачний акцент вашому кулінарному досвіду.',
+        vi: 'Bao gồm những miếng bánh đậu chickpea tẩm gia vị thơm và chiên đến lớp vỏ ngoài vàng giòn, và được phục vụ với hummus và một ít dầu ô liu, món ăn nhẹ ngon này thêm hương vị thú vị cho trải nghiệm ẩm thực của bạn.'
       }, 
       price: '$9.99', 
       category: 'appetizers', 
@@ -2072,7 +2112,12 @@ const FullMenuPage = () => {
         fr: 'Jardin de la Nature',
         de: 'Natur-Garten',
         bn: 'প্রকৃতির বাগান',
-        ko: '자연의 정원'
+        ko: '자연의 정원',
+        bs: 'Prirodni Vrt',
+        zh: '自然花园',
+        ro: 'Grădina Naturii',
+        uk: 'Природний сад',
+        vi: 'Vườn Thiên Nhiên'
       }, 
       description: { 
         en: 'A light and nutritious savory dip is made with a base of yogurt, garlic and aromatic spices, and it is topped with dried tomatoes, fresh thyme, walnuts, mint, Kalamata olives and olive oil.',
@@ -2089,7 +2134,12 @@ const FullMenuPage = () => {
         fr: 'Une trempette légère et nutritive préparée avec une base de yaourt, ail et épices aromatiques, et garnie de tomates séchées, thym frais, noix, menthe, olives Kalamata et huile d\'olive.',
         de: 'Ein leichter und nahrhafter würziger Dip auf Basis von Joghurt, Knoblauch und aromatischen Gewürzen, garniert mit getrockneten Tomaten, frischem Thymian, Walnüssen, Minze, Kalamata-Oliven und Olivenöl.',
         bn: 'দই, রসুন এবং সুগন্ধি মশলার ভিত্তিতে তৈরি একটি হালকা এবং পুষ্টিকর স্বাদযুক্ত ডিপ, যা শুকনো টমেটো, তাজা থাইম, আখরোট, পুদিনা, কালামাতা জলপাই এবং জলপাই তেল দিয়ে সাজানো।',
-        ko: '요거트, 마늘, 향신료를 베이스로 한 가볍고 영양가 있는 맛있는 딥으로, 말린 토마토, 신선한 타임, 호두, 민트, 칼라마타 올리브, 올리브 오일로 토핑됩니다.'
+        ko: '요거트, 마늘, 향신료를 베이스로 한 가볍고 영양가 있는 맛있는 딥으로, 말린 토마토, 신선한 타임, 호두, 민트, 칼라마타 올리브, 올리브 오일로 토핑됩니다.',
+        bs: 'Lagani i hranjivi slani umak napravljen od jogurta, bijelog luka i aromatskih začina, prekiven sušenim rajčicama, svježim timjanom, orasima, mentom, Kalamata maslinama i maslinovim uljem.',
+        zh: '由酸奶、大蒜和芳香香料制成的清淡营养美味蘸酱，配以干番茄、新鲜百里香、核桃、薄荷、卡拉马塔橄榄和橄榄油。',
+        ro: 'O sosă savuroasă ușoară și nutritivă făcută cu o bază de iaurt, usturoi și condimente aromatice, acoperită cu roșii uscate, cimbru proaspăt, nuci, mentă, măsline Kalamata și ulei de măsline.',
+        uk: 'Легкий та поживний пікантний соус на основі йогурту, часнику та ароматних спецій, прикрашений в\'яленими помідорами, свіжим чебрецем, волоськими горіхами, мʼятою, оливками каламата та оливковою олією.',
+        vi: 'Một loại sốt chấm nhẹ và bổ dưỡng được làm từ sữa chua, tỏi và gia vị thơm, và được phủ với cà chua khô, lá thyme tươi, óc chó, bạc hà, ô liu Kalamata và dầu ô liu.'
       }, 
       price: '$10.99', 
       category: 'appetizers', 
@@ -2113,7 +2163,12 @@ const FullMenuPage = () => {
         fr: 'Börek',
         de: 'Börek',
         bn: 'বোরেক',
-        ko: '보렉'
+        ko: '보렉',
+        bs: 'Burek',
+        zh: '博雷克',
+        ro: 'Börek',
+        uk: 'Борек',
+        vi: 'Borek'
       }, 
       description: { 
         en: 'Handmade beef börek is crafted with a rich filling (beef, peas, carrot) and served with a special sauce. This delicious börek, with its crispy pastry and unique sauce, leaves an unforgettable taste on the palate.',
@@ -2130,7 +2185,12 @@ const FullMenuPage = () => {
         fr: 'Le börek de bœuf fait main est préparé avec une garniture riche (bœuf, petits pois, carotte) et servi avec une sauce spéciale. Ce délicieux börek, avec sa pâte croustillante et sa sauce unique, laisse un goût inoubliable en bouche.',
         de: 'Handgemachter Rind-börek wird mit einer reichhaltigen Füllung (Rindfleisch, Erbsen, Karotten) zubereitet und mit einer besonderen Sauce serviert. Dieser köstliche börek hinterlässt mit seinem knusprigen Teig und seiner einzigartigen Sauce einen unvergesslichen Geschmack am Gaumen.',
         bn: 'হস্তনির্মিত গরুর মাংসের বোরেক সমৃদ্ধ ভর্তা (গরুর মাংস, মটর, গাজর) দিয়ে তৈরি এবং বিশেষ সস দিয়ে পরিবেশিত। এই সুস্বাদু বোরেক, তার খাস্তা পেস্ট্রি এবং অনন্য সস দিয়ে তালুতে অবিস্মরণীয় স্বাদ রেখে যায়।',
-        ko: '수제 쇠고기 보렉은 풍부한 속 재료(쇠고기, 완두콩, 당근)로 만들어지며 특별한 소스와 함께 제공됩니다. 바삭한 페이스트리와 독특한 소스가 있는 이 맛있는 보렉은 입맛에 잊을 수 없는 맛을 남깁니다.'
+        ko: '수제 쇠고기 보렉은 풍부한 속 재료(쇠고기, 완두콩, 당근)로 만들어지며 특별한 소스와 함께 제공됩니다. 바삭한 페이스트리와 독특한 소스가 있는 이 맛있는 보렉은 입맛에 잊을 수 없는 맛을 남깁니다.',
+        bs: 'Ručno rađeni goveđi burek napravljen je s bogatim nadevom (govedina, grašak, mrkva) i serviran s posebnim sosom. Ovaj ukusni burek, sa svojim hrskavim tijestom i jedinstvenim sosom, ostavlja nezaboravan okus na nepcu.',
+        zh: '手工牛肉博雷克采用丰富馅料（牛肉、豌豆、胡萝卜）制作，配有特制酱汁。这道美味的博雷克，凭借其酥脆的面皮和独特的酱汁，在味蕾上留下难忘的味道。',
+        ro: 'Börek-ul de vită făcut manual este preparat cu o umplutură bogată (carne de vită, mazăre, morcov) și servit cu un sos special. Acest börek delicios, cu aluatul său crocant și sosul unic, lasă un gust de neuitat pe cerul gurii.',
+        uk: 'Ручний яловичий борек виготовляється з багатою начинкою (яловичина, горошок, морква) та подається зі спеціальним соусом. Цей смачний борек зі своїм хрустким тістом та унікальним соусом залишає незабутній смак на піднебінні.',
+        vi: 'Börek thịt bò thủ công được chế biến với nhân phong phú (thịt bò, đậu Hà Lan, cà rốt) và được phục vụ với nước sốt đặc biệt. Món börek ngon này, với lớp bánh giòn và nước sốt độc đáo, để lại hương vị khó quên trên vòm miệng.'
       }, 
       price: '$10.99', 
       category: 'appetizers', 
@@ -2154,7 +2214,12 @@ const FullMenuPage = () => {
         fr: 'Combo d\'Apéritifs',
         de: 'Vorspeisen-Kombination',
         bn: 'ক্ষুধাবর্ধক কম্বো',
-        ko: '전채 콤보'
+        ko: '전채 콤보',
+        bs: 'Predjelo Kombinacija',
+        zh: '开胃菜组合',
+        ro: 'Combo de Aperitive',
+        uk: 'Комбо закусок',
+        vi: 'Combo Khai Vị'
       }, 
       description: { 
         en: 'This platter brings together three (hummus, baba ghanoush, nature\'s garden) of the most beloved mezze flavors from the Middle East, along with delicious falafel balls. With its elegant presentation and magnificent aromas, it will add a delightful touch to your table.',
@@ -2171,7 +2236,12 @@ const FullMenuPage = () => {
         fr: 'Cette assiette rassemble trois (houmous, baba ghanoush, jardin de la nature) des saveurs de mezze les plus appréciées du Moyen-Orient, accompagnées de délicieuses boulettes de falafel. Avec sa présentation élégante et ses arômes magnifiques, elle ajoutera une touche délicieuse à votre table.',
         de: 'Diese Platte vereint drei (Hummus, Baba Ghanoush, Natur-Garten) der beliebtesten Mezze-Geschmäcker aus dem Nahen Osten zusammen mit köstlichen Falafel-Bällchen. Mit ihrer eleganten Präsentation und herrlichen Aromen verleiht sie Ihrem Tisch eine wunderbare Note.',
         bn: 'এই প্লেটারটি মধ্যপ্রাচ্যের সবচেয়ে প্রিয় তিনটি মেজে স্বাদ (হুমুস, বাবা গানুশ, প্রকৃতির বাগান) সুস্বাদু ফালাফেল বলের সাথে একত্রিত করে। তার মার্জিত উপস্থাপনা এবং চমৎকার সুগন্ধের সাথে, এটি আপনার টেবিলে একটি আনন্দদায়ক স্পর্শ যোগ করবে।',
-        ko: '이 플래터는 맛있는 팔라펠 볼과 함께 중동에서 가장 사랑받는 세 가지 메제 맛(후무스, 바바 가누시, 자연의 정원)을 한데 모았습니다. 우아한 프레젠테이션과 훌륭한 향기로 당신의 테이블에 즐거운 터치를 더할 것입니다.'
+        ko: '이 플래터는 맛있는 팔라펠 볼과 함께 중동에서 가장 사랑받는 세 가지 메제 맛(후무스, 바바 가누시, 자연의 정원)을 한데 모았습니다. 우아한 프레젠테이션과 훌륭한 향기로 당신의 테이블에 즐거운 터치를 더할 것입니다.',
+        bs: 'Ovaj pladanj spaja tri (humus, baba ghanoush, prirodni vrt) najvoljenija okusa mezea s Bliskog istoka, zajedno s ukusnim kuglicama falafela. Sa svojom elegantnom prezentacijom i veličanstvenim aromama, dodat će ugodan dodir vašem stolu.',
+        zh: '这道拼盘汇集了中东最受喜爱的三种开胃菜口味（鹰嘴豆泥、茄子泥、自然花园），配以美味的法拉费球。凭借其优雅的呈现和绝妙的香气，将为您的餐桌增添愉悦的触感。',
+        ro: 'Această farfurie reunește trei (humus, baba ghanoush, grădina naturii) dintre cele mai îndrăgite arome de mezze din Orientul Mijlociu, împreună cu delicioase bile de falafel. Cu prezentarea sa elegantă și aromele magnifice, va adăuga o notă încântătoare mesei tale.',
+        uk: 'Це блюдо поєднує три найулюбленіші смаки мезе з Близького Сходу (хумус, баба гануш, природний сад) разом зі смачними кульками фалафель. Завдяки елегантній подачі та чудовим ароматам воно додасть приємний акцент вашому столу.',
+        vi: 'Đĩa này kết hợp ba (hummus, baba ghanoush, vườn thiên nhiên) hương vị mezze được yêu thích nhất từ Trung Đông, cùng với những viên falafel ngon. Với cách trình bày thanh lịch và mùi hương tuyệt vời, nó sẽ thêm một chút thú vị cho bàn ăn của bạn.'
       }, 
       price: '$24.99', 
       category: 'appetizers', 
@@ -2198,7 +2268,12 @@ const FullMenuPage = () => {
         fr: 'Soupe aux Lentilles',
         de: 'Linsensuppe',
         bn: 'মসুর ডালের স্যুপ',
-        ko: '렌틸 수프'
+        ko: '렌틸 수프',
+        bs: 'Sočivo Juha',
+        zh: '扁豆汤',
+        ro: 'Supă de Linte',
+        uk: 'Сочевичний суп',
+        vi: 'Súp Đậu Lăng'
       }, 
       description: { 
         en: 'A hearty and nutritious soup made with red lentils, onions, carrots, potatoes, and a blend of aromatic spices.',
@@ -2215,7 +2290,12 @@ const FullMenuPage = () => {
         fr: 'Une soupe nourrissante et nutritive préparée avec des lentilles rouges, des oignons, des carottes, des pommes de terre et un mélange d\'épices aromatiques.',
         de: 'Eine herzhafte und nahrhafte Suppe aus roten Linsen, Zwiebeln, Karotten, Kartoffeln und einer aromatischen Gewürzmischung.',
         bn: 'লাল মসুর ডাল, পেঁয়াজ, গাজর, আলু এবং সুগন্ধি মশলার মিশ্রণ দিয়ে তৈরি একটি হৃদ্যগ্রাহী এবং পুষ্টিকর স্যুপ।',
-        ko: '적렌틸, 양파, 당근, 감자, 향긋한 향신료 믹스로 만든 든든하고 영양가 있는 수프입니다.'
+        ko: '적렌틸, 양파, 당근, 감자, 향긋한 향신료 믹스로 만든 든든하고 영양가 있는 수프입니다.',
+        bs: 'Obilna i hranjiva juha napravljena od crvenog sočiva, luka, mrkve, krompira i mješavine aromatskih začina.',
+        zh: '由红扁豆、洋葱、胡萝卜、土豆和芳香香料混合制成的丰盛营养汤品。',
+        ro: 'O supă consistentă și nutritivă preparată cu linte roșie, ceapă, morcovi, cartofi și un amestec de condimente aromatice.',
+        uk: 'Ситний та поживний суп з червоної сочевиці, цибулі, моркви, картоплі та суміші ароматних спецій.',
+        vi: 'Món súp thịnh soạn và bổ dưỡng làm từ đậu lăng đỏ, hành tây, cà rốt, khoai tây và hỗn hợp gia vị thơm.'
       }, 
       image: '/Lentil Soup.jpg',
       price: '$7.99', 
@@ -2242,7 +2322,12 @@ const FullMenuPage = () => {
         fr: 'Plateau Guss Irakien',
         de: 'Irakische Guss-Platte',
         bn: 'ইরাকি গুস প্লেটার',
-        ko: '이라크 구스 플래터'
+        ko: '이라크 구스 플래터',
+        bs: 'Irački Guss Pladanj',
+        zh: '伊拉克古斯拼盘',
+        ro: 'Platou Guss Irakian',
+        uk: 'Іракське блюдо Гусс',
+        vi: 'Đĩa Guss Iraq'
       }, 
       description: { 
         en: 'Thinly sliced, seasoned beef, served with saffron rice, sumac onions and fresh salad.',
@@ -2259,7 +2344,12 @@ const FullMenuPage = () => {
         fr: 'Bœuf finement tranché et assaisonné, servi avec du riz au safran, des oignons sumac et une salade fraîche.',
         de: 'Dünn geschnittenes, gewürztes Rindfleisch, serviert mit Safranreis, Sumach-Zwiebeln und frischem Salat.',
         bn: 'পাতলা করে কাটা, মশলাযুক্ত গরুর মাংস, জাফরান ভাত, সুমাক পেঁয়াজ এবং তাজা সালাদ দিয়ে পরিবেশিত।',
-        ko: '얇게 썬 양념 쇠고기로, 사프란 쌀, 수막 양파, 신선한 샐러드와 함께 제공됩니다.'
+        ko: '얇게 썬 양념 쇠고기로, 사프란 쌀, 수막 양파, 신선한 샐러드와 함께 제공됩니다.',
+        bs: 'Tanko naresana, začinjena govedina, servirana s rižom od šafrana, sumak lukom i svježom salatom.',
+        zh: '薄切调味牛肉，配藏红花米饭、漆树洋葱和新鲜沙拉。',
+        ro: 'Carne de vită tăiată subțire și condimentată, servită cu orez cu șofran, ceapă sumac și salată proaspătă.',
+        uk: 'Тонко нарізана, приправлена яловичина, подається з шафрановим рисом, цибулею сумах та свіжим салатом.',
+        vi: 'Thịt bò thái mỏng tẩm gia vị, được phục vụ với cơm nghệ tây, hành sumac và salad tươi.'
       }, 
       image: '/Iraqi Guss Platter.jpg',
       price: '$19.99', 
@@ -2284,7 +2374,12 @@ const FullMenuPage = () => {
         fr: 'Wrap Guss Irakien',
         de: 'Irakischer Guss-Wrap',
         bn: 'ইরাকি গুস র‍্যাপ',
-        ko: '이라크 구스 랩'
+        ko: '이라크 구스 랩',
+        bs: 'Irački Guss Umotano',
+        zh: '伊拉克古斯卷饼',
+        ro: 'Wrap Guss Irakian',
+        uk: 'Іракський рулет Гусс',
+        vi: 'Bánh cuốn Guss Iraq'
       }, 
       description: { 
         en: 'Thinly sliced, seasoned beef, tahini sauce, onion, lettuce, tomato and cucumber. Served with a fresh salad or fries upon request.',
@@ -2301,7 +2396,12 @@ const FullMenuPage = () => {
         fr: 'Bœuf finement tranché et assaisonné, sauce tahini, oignon, laitue, tomate et concombre. Servi avec une salade fraîche ou des frites sur demande.',
         de: 'Dünn geschnittenes, gewürztes Rindfleisch, Tahini-Sauce, Zwiebel, Kopfsalat, Tomate und Gurke. Auf Wunsch mit frischem Salat oder Pommes frites serviert.',
         bn: 'পাতলা করে কাটা, মশলাযুক্ত গরুর মাংস, তাহিনি সস, পেঁয়াজ, লেটুস, টমেটো এবং শসা। অনুরোধে তাজা সালাদ বা ফ্রাইজ দিয়ে পরিবেশিত।',
-        ko: '얇게 썬 양념 쇠고기, 타히니 소스, 양파, 상추, 토마토, 오이가 들어갑니다. 요청 시 신선한 샐러드나 감자튀김과 함께 제공됩니다.'
+        ko: '얇게 썬 양념 쇠고기, 타히니 소스, 양파, 상추, 토마토, 오이가 들어갑니다. 요청 시 신선한 샐러드나 감자튀김과 함께 제공됩니다.',
+        bs: 'Tanko naresana, začinjena govedina, tahini sos, luk, salata, rajčica i krastavac. Serviran s svježom salatom ili prženim krumpirom na zahtjev.',
+        zh: '薄切调味牛肉、芝麻酱、洋葱、生菜、番茄和黄瓜。应要求配新鲜沙拉或薯条。',
+        ro: 'Carne de vită tăiată subțire și condimentată, sos tahini, ceapă, salată verde, roșie și castravete. Servit cu salată proaspătă sau cartofi prăjiți la cerere.',
+        uk: 'Тонко нарізана, приправлена яловичина, соус тахіні, цибуля, салат, помідор та огірок. Подається зі свіжим салатом або картоплею фрі на замовлення.',
+        vi: 'Thịt bò thái mỏng tẩm gia vị, sốt tahini, hành tây, xà lách, cà chua và dưa chuột. Được phục vụ với salad tươi hoặc khoai tây chiên theo yêu cầu.'
       }, 
       image: '/Iraqi Guss Wrap.jpg',
       price: '$17.99', 
@@ -2326,7 +2426,12 @@ const FullMenuPage = () => {
         fr: 'Plateau de Poulet',
         de: 'Hähnchen-Platte',
         bn: 'চিকেন প্লেটার',
-        ko: '치킨 플래터'
+        ko: '치킨 플래터',
+        bs: 'Piletina Pladanj',
+        zh: '鸡肉拼盘',
+        ro: 'Platou de Pui',
+        uk: 'Курячий плато',
+        vi: 'Đĩa Gà'
       }, 
       description: { 
         en: 'Thinly sliced, seasoned chicken, served with saffron rice, sumac onions and fresh salad.',
@@ -2343,7 +2448,12 @@ const FullMenuPage = () => {
         fr: 'Poulet finement tranché et assaisonné, servi avec du riz au safran, des oignons sumac et une salade fraîche.',
         de: 'Dünn geschnittenes, gewürztes Hähnchen, serviert mit Safranreis, Sumach-Zwiebeln und frischem Salat.',
         bn: 'পাতলা করে কাটা, মশলাযুক্ত চিকেন, জাফরান ভাত, সুমাক পেঁয়াজ এবং তাজা সালাদ দিয়ে পরিবেশিত।',
-        ko: '얇게 썬 양념 치킨을 사프란 쌀, 수막 양파, 신선한 샐러드와 함께 제공합니다.'
+        ko: '얇게 썬 양념 치킨을 사프란 쌀, 수막 양파, 신선한 샐러드와 함께 제공합니다.',
+        bs: 'Tanko naresana, začinjena piletina, servirana s rižom od šafrana, sumak lukom i svježom salatom.',
+        zh: '薄切调味鸡肉，配藏红花米饭、漆树洋葱和新鲜沙拉。',
+        ro: 'Pui tăiat subțire și condimentat, servit cu orez cu șofran, ceapă sumac și salată proaspătă.',
+        uk: 'Тонко нарізана, приправлена курка, подається з шафрановим рисом, цибулею сумах та свіжим салатом.',
+        vi: 'Thịt gà thái mỏng tẩm gia vị, được phục vụ với cơm nghệ tây, hành sumac và salad tươi.'
       }, 
       image: '/Chicken Platter.jpg',
       price: '$18.99', 
@@ -2368,7 +2478,12 @@ const FullMenuPage = () => {
         fr: 'Wrap au Poulet',
         de: 'Hähnchen-Wrap',
         bn: 'চিকেন র‍্যাপ',
-        ko: '치킨 랩'
+        ko: '치킨 랩',
+        bs: 'Piletina Umotano',
+        zh: '鸡肉卷饼',
+        ro: 'Wrap de Pui',
+        uk: 'Курячий рулет',
+        vi: 'Bánh cuốn Gà'
       }, 
       description: { 
         en: 'Sliced, seasoned chicken, tahini sauce, onion, lettuce, tomato and cucumber. Served with a fresh salad or fries upon request.',
@@ -2385,7 +2500,12 @@ const FullMenuPage = () => {
         fr: 'Poulet tranché et assaisonné, sauce tahini, oignon, laitue, tomate et concombre. Servi avec une salade fraîche ou des frites sur demande.',
         de: 'Geschnittenes, gewürztes Hähnchen, Tahini-Sauce, Zwiebel, Kopfsalat, Tomate und Gurke. Auf Wunsch mit frischem Salat oder Pommes frites serviert.',
         bn: 'কাটা, মশলাযুক্ত চিকেন, তাহিনি সস, পেঁয়াজ, লেটুস, টমেটো এবং শসা। অনুরোধে তাজা সালাদ বা ফ্রাইজ দিয়ে পরিবেশিত।',
-        ko: '썬 양념 치킨, 타히니 소스, 양파, 상추, 토마토, 오이가 들어갑니다. 요청 시 신선한 샐러드나 감자튀김과 함께 제공됩니다.'
+        ko: '썬 양념 치킨, 타히니 소스, 양파, 상추, 토마토, 오이가 들어갑니다. 요청 시 신선한 샐러드나 감자튀김과 함께 제공됩니다.',
+        bs: 'Naresana, začinjena piletina, tahini sos, luk, salata, rajčica i krastavac. Serviran s svježom salatom ili prženim krumpirom na zahtjev.',
+        zh: '切片调味鸡肉、芝麻酱、洋葱、生菜、番茄和黄瓜。应要求配新鲜沙拉或薯条。',
+        ro: 'Pui feliat și condimentat, sos tahini, ceapă, salată verde, roșie și castravete. Servit cu salată proaspătă sau cartofi prăjiți la cerere.',
+        uk: 'Нарізана, приправлена курка, соус тахіні, цибуля, салат, помідор та огірок. Подається зі свіжим салатом або картоплею фрі на замовлення.',
+        vi: 'Thịt gà thái lát tẩm gia vị, sốt tahini, hành tây, xà lách, cà chua và dưa chuột. Được phục vụ với salad tươi hoặc khoai tây chiên theo yêu cầu.'
       }, 
       image: '/Chicken Wrap.jpg',
       price: '$16.99', 
@@ -2410,7 +2530,12 @@ const FullMenuPage = () => {
         fr: 'Plateau de Falafels',
         de: 'Falafels-Platte',
         bn: 'ফালাফেল প্লেটার',
-        ko: '팔라펠 플래터'
+        ko: '팔라펠 플래터',
+        bs: 'Falafel Pladanj',
+        zh: '沙拉球拼盘',
+        ro: 'Platou de Falafel',
+        uk: 'Блюдо фалафель',
+        vi: 'Đĩa Falafel'
       }, 
       description: { 
         en: 'Special chef made crispy falafel balls served with hummus, fresh salad and sumac onions.',
@@ -2427,7 +2552,12 @@ const FullMenuPage = () => {
         fr: 'Boulettes de falafel croustillantes spéciales du chef servies avec houmous, salade fraîche et oignons sumac.',
         de: 'Spezielle knusprige Falafel-Bällchen vom Küchenchef, serviert mit Hummus, frischem Salat und Sumach-Zwiebeln.',
         bn: 'শেফের বিশেষ তৈরি খাস্তা ফালাফেল বল হুমুস, তাজা সালাদ এবং সুমাক পেঁয়াজ দিয়ে পরিবেশিত।',
-        ko: '셰프가 특별히 만든 바삭한 팔라펠 볼을 후무스, 신선한 샐러드, 수막 양파와 함께 제공합니다.'
+        ko: '셰프가 특별히 만든 바삭한 팔라펠 볼을 후무স, 신선한 샐러드, 수막 양파와 함께 제공합니다.',
+        bs: 'Posebne hrskave kuglice falafela od kuvara servirane s humusom, svježom salatom i sumac lukom.',
+        zh: '主厨特制的酥脆沙拉球，配有鹰嘴豆泥、新鲜沙拉和漆树洋葱。',
+        ro: 'Bile speciale de falafel crocante ale șefului servite cu hummus, salată proaspătă și ceapă sumac.',
+        uk: 'Спеціальні хрусткі кульки фалафель від шеф-кухаря, подаються з хумусом, свіжим салатом та цибулею сумах.',
+        vi: 'Những viên falafel giòn đặc biệt của đầu bếp được phục vụ với hummus, salad tươi và hành sumac.'
       }, 
       image: '/Falafel Platter.jpg',
       price: '$17.99', 
@@ -2452,7 +2582,12 @@ const FullMenuPage = () => {
         fr: 'Wrap aux Falafels',
         de: 'Falafel-Wrap',
         bn: 'ফালাফেল র‍্যাপ',
-        ko: '팔라펠 랩'
+        ko: '팔라펠 랩',
+        bs: 'Falafel Umotano',
+        zh: '沙拉三明治卷',
+        ro: 'Wrap Falafel',
+        uk: 'Фалафель рулет',
+        vi: 'Bánh cuốn Falafel'
       }, 
       description: { 
         en: 'Special chef made crispy falafel balls wrapped in soft pita bread with hummus, onion, lettuce, tomato and cucumber. Served with a fresh salad or fries upon request.',
@@ -2469,7 +2604,12 @@ const FullMenuPage = () => {
         fr: 'Boulettes de falafel croustillantes spéciales du chef enroulées dans du pain pita moelleux avec houmous, oignon, laitue, tomate et concombre. Servi avec une salade fraîche ou des frites sur demande.',
         de: 'Spezielle knusprige Falafel-Bällchen vom Küchenchef in weiches Pita-Brot eingewickelt mit Hummus, Zwiebel, Kopfsalat, Tomate und Gurke. Auf Wunsch mit frischem Salat oder Pommes frites serviert.',
         bn: 'শেফের বিশেষ তৈরি খাস্তা ফালাফেল বল নরম পিটা রুটিতে হুমুস, পেঁয়াজ, লেটুস, টমেটো এবং শসা দিয়ে মোড়ানো। অনুরোধে তাজা সালাদ বা ফ্রাইজ দিয়ে পরিবেশিত।',
-        ko: '셰프가 특별히 만든 바삭한 팔라펠 볼을 부드러운 피타 빵에 후무스, 양파, 상추, 토마토, 오이와 함께 감쌌습니다. 요청 시 신선한 샐러드나 감자튀김과 함께 제공됩니다.'
+        ko: '셰프가 특별히 만든 바삭한 팔라펠 볼을 부드러운 피타 빵에 후무스, 양파, 상추, 토마토, 오이와 함께 감쌌습니다. 요청 시 신선한 샐러드나 감자튀김과 함께 제공됩니다.',
+        bs: 'Posebne hrskave kuglice falafela od kuvara umotane u mekan pita hleb sa humusom, lukom, salatom, paradajzom i krstavcem. Služi se sa svežom salatom ili pomfritom na zahtev.',
+        zh: '主厨特制的酥脆沙拉球包裹在柔软的皮塔饼中，配有鹰嘴豆泥、洋葱、生菜、番茄和黄瓜。根据要求配新鲜沙拉或薯条。',
+        ro: 'Bile speciale de falafel crocante ale șefului înfășurate în pâine pita moale cu hummus, ceapă, salată, roșii și castraveți. Servit cu salată proaspătă sau cartofi prăjiți la cerere.',
+        uk: 'Спеціальні хрусткі кульки фалафель від шеф-кухаря, загорнуті в м\'яку піту з хумусом, цибулею, салатом, помідором та огірком. Подається зі свіжим салатом або картоплею фрі за бажанням.',
+        vi: 'Những viên falafel giòn đặc biệt của đầu bếp được cuốn trong bánh pita mềm với hummus, hành tây, xà lách, cà chua và dưa chuột. Được phục vụ với salad tươi hoặc khoai tây chiên theo yêu cầu.'
       }, 
       image: '/Falafel Wrap.jpg',
       price: '$15.99', 
@@ -2494,7 +2634,12 @@ const FullMenuPage = () => {
         fr: 'Lahmacun',
         de: 'Lahmacun',
         bn: 'লাহমাকুন',
-        ko: '라흐마쿤'
+        ko: '라흐마쿤',
+        bs: 'Lahmacun',
+        zh: '土耳其肉饼',
+        ro: 'Lahmacun',
+        uk: 'Лахмаджун',
+        vi: 'Bánh pizza Thổ Nhĩ Kỳ'
       }, 
       description: { 
         en: 'A traditional dish, made with a thin dough topped with a flavorful mixture of minced beef and lamb, onions, bell peppers, tomatoes, and spices, is served with tomatoes, lettuce, lemon and sumac onions.',
@@ -2511,7 +2656,12 @@ const FullMenuPage = () => {
         fr: 'Un plat traditionnel, fait avec une pâte fine recouverte d\'un mélange savoureux de bœuf et d\'agneau hachés, d\'oignons, de poivrons, de tomates et d\'épices, servi avec des tomates, de la laitue, du citron et des oignons sumac.',
         de: 'Ein traditionelles Gericht aus dünnem Teig, belegt mit einer würzigen Mischung aus Hackfleisch von Rind und Lamm, Zwiebeln, Paprika, Tomaten und Gewürzen, serviert mit Tomaten, Kopfsalat, Zitrone und Sumach-Zwiebeln.',
         bn: 'একটি ঐতিহ্যবাহী খাবার, পাতলা ময়দা দিয়ে তৈরি যার উপরে গরু ও ভেড়ার কীমা, পেঁয়াজ, ক্যাপসিকাম, টমেটো এবং মশলার সুস্বাদু মিশ্রণ দেওয়া, টমেটো, লেটুস, লেবু এবং সুমাক পেঁয়াজ দিয়ে পরিবেশিত।',
-        ko: '얇은 반죽 위에 다진 쇠고기와 양고기, 양파, 피망, 토마토, 향신료의 맛있는 혼합물을 올린 전통 요리로, 토마토, 상추, 레몬, 수막 양파와 함께 제공됩니다.'
+        ko: '얇은 반죽 위에 다진 쇠고기와 양고기, 양파, 피망, 토마토, 향신료의 맛있는 혼합물을 올린 전통 요리로, 토마토, 상추, 레몬, 수막 양파와 함께 제공됩니다.',
+        bs: 'Tradicionalno jelo napravljeno od tankog testa prelivenog ukusnom mešavinom mlevenog govedine i jagnjetine, luka, paprike, paradajza i začina, služi se sa paradajzom, salatom, limunom i sumac lukom.',
+        zh: '传统菜肴，用薄面团制作，顶部铺有牛肉和羊肉馅、洋葱、甜椒、番茄和香料的美味混合物，配番茄、生菜、柠檬和漆树洋葱一起享用。',
+        ro: 'Un fel de mâncare tradițional, făcut cu aluat subțire acoperit cu un amestec gustos de carne tocată de vită și miel, ceapă, ardei gras, roșii și condimente, servit cu roșii, salată, lămâie și ceapă sumac.',
+        uk: 'Традиційна страва з тонкого тіста, покритого ароматною сумішшю з рубленої яловичини та баранини, цибулі, солодкого перцю, помідорів та спецій, подається з помідорами, салатом, лимоном та цибулею сумах.',
+        vi: 'Một món ăn truyền thống, làm từ bột mỏng phủ hỗn hợp thơm ngon của thịt bò và cừu xay, hành tây, ớt chuông, cà chua và gia vị, được phục vụ với cà chua, xà lách, chanh và hành tây sumac.'
       }, 
       image: '/Lahmacun.jpg',
       price: '$17.99', 
@@ -2538,7 +2688,12 @@ const FullMenuPage = () => {
         fr: 'Naan Hawrami',
         de: 'Hawrami Naan',
         bn: 'হাওরামি নান',
-        ko: '하와라미 난'
+        ko: '하와라미 난',
+        bs: 'Hawrami Naan',
+        zh: '哈瓦拉米烤饼',
+        ro: 'Naan Hawrami',
+        uk: 'Хаврамі наан',
+        vi: 'Bánh naan Hawrami'
       }, 
       description: { 
         en: 'A delightful flatbread originating from Hawraman.',
@@ -2555,7 +2710,12 @@ const FullMenuPage = () => {
         fr: 'Un délicieux pain plat originaire du Hawraman.',
         de: 'Ein köstliches Fladenbrot aus Hawraman.',
         bn: 'হাওরামান থেকে উৎপন্ন একটি সুস্বাদু ফ্ল্যাটব্রেড।',
-        ko: '하와라만에서 유래한 맛있는 플랫브레드입니다.'
+        ko: '하와라만에서 유래한 맛있는 플랫브레드입니다.',
+        bs: 'Ukusan pljeskavac koji potiče iz Hawramana.',
+        zh: '来自哈瓦拉曼的美味薄饼。',
+        ro: 'O plăcintă delicioasă originară din Hawraman.',
+        uk: 'Чудова пляцка, що походить з Хаврамана.',
+        vi: 'Một loại bánh mì dẹt ngon miệng có nguồn gốc từ Hawraman.'
       }, 
       image: '/Hawrami Naan.jpg',
       price: '$2.99', 
@@ -2580,7 +2740,12 @@ const FullMenuPage = () => {
         fr: 'Kulera au Sésame',
         de: 'Sesam-Kulera',
         bn: 'তিল কুলেরা',
-        ko: '참깨 쿨레라'
+        ko: '참깨 쿨레라',
+        bs: 'Sezamska Kulera',
+        zh: '芝麻库莱拉',
+        ro: 'Kulera cu Susan',
+        uk: 'Кулера з кунжутом',
+        vi: 'Kulera mè'
       }, 
       description: { 
         en: 'A type of flatbread made without the need for extensive kneading, known for its simplicity and soft, chewy texture.',
@@ -2597,7 +2762,12 @@ const FullMenuPage = () => {
         fr: 'Un type de pain plat fait sans besoin de pétrissage extensif, connu pour sa simplicité et sa texture douce et moelleuse.',
         de: 'Eine Art Fladenbrot, das ohne ausgiebiges Kneten hergestellt wird, bekannt für seine Einfachheit und weiche, zähe Textur.',
         bn: 'একধরনের ফ্ল্যাটব্রেড যা ব্যাপক মেখানোর প্রয়োজন ছাড়াই তৈরি, এর সরলতা এবং নরম, চিবানো যায় এমন গঠনের জন্য পরিচিত।',
-        ko: '광범위한 반죽 없이 만든 플랫브레드의 한 종류로, 단순함과 부드럽고 쫄깃한 식감으로 유명합니다.'
+        ko: '광범위한 반죽 없이 만든 플랫브레드의 한 종류로, 단순함과 부드럽고 쫄깃한 식감으로 유명합니다.',
+        bs: 'Vrsta ravnog hleba napravljena bez potrebe za opsežnim mešenjem, poznata po svojoj jednostavnosti i mekoj, žvakljivoj teksturi.',
+        zh: '一种不需要大量揉面制作的扁平面包，以其简单性和柔软、有嚼劲的质地而闻名。',
+        ro: 'Un tip de pâine plată făcută fără nevoia de frământare extensivă, cunoscută pentru simplitatea sa și textura moale și elastică.',
+        uk: 'Тип пляцки, виготовленої без потреби в інтенсивному заміжуванні, відомої своєю простотою та м\'якою, жувальною текстурою.',
+        vi: 'Một loại bánh mì dẹt được làm mà không cần nhào quá nhiều, nổi tiếng với sự đơn giản và kết cấu mềm, dai.'
       }, 
       price: '$3.99', 
       category: 'naan', 
@@ -2623,7 +2793,12 @@ const FullMenuPage = () => {
         fr: 'Biryani Parda Style Moyen-Orient',
         de: 'Parda Biryani im nahöstlichen Stil',
         bn: 'মধ্যপ্রাচ্যীয় স্টাইল পরদা বিরিয়ানি',
-        ko: '중동식 파르다 비리야니'
+        ko: '중동식 파르다 비리야니',
+        bs: 'Parda Biryani u bliskoistočnom stilu',
+        zh: '中东风味帕尔达比里亚尼',
+        ro: 'Biryani Parda în stil din Orientul Mijlociu',
+        uk: 'Парда Біріяні в близькосхідному стилі',
+        vi: 'Cơm Biryani Parda kiểu Trung Đông'
       }, 
       description: { 
         en: 'A rich Middle Eastern dish of spiced rice, prepared with tender slow-cooked beef, raisins, almonds, peas, and potatoes, encased in a delicate layer of pastry and baked to perfection, is served with a fresh salad on the side.',
@@ -2640,7 +2815,12 @@ const FullMenuPage = () => {
         fr: 'Un plat riche du Moyen-Orient de riz épicé, préparé avec du bœuf tendre cuit lentement, des raisins secs, des amandes, des petits pois et des pommes de terre, enrobé dans une délicate couche de pâte et cuit à la perfection, servi avec une salade fraîche en accompagnement.',
         de: 'Ein reichhaltiges nahöstliches Gericht aus gewürztem Reis, zubereitet mit zartem, langsam gegartem Rindfleisch, Rosinen, Mandeln, Erbsen und Kartoffeln, umhüllt von einer zarten Teigschicht und zur Perfektion gebacken, serviert mit einem frischen Salat als Beilage.',
         bn: 'মশলাযুক্ত ভাতের একটি সমৃদ্ধ মধ্যপ্রাচ্যীয় খাবার, নরম ধীরে রান্না করা গরুর মাংস, কিশমিশ, বাদাম, মটর এবং আলু দিয়ে তৈরি, সূক্ষ্ম পেস্ট্রি স্তরে মোড়ানো এবং নিখুঁতভাবে বেক করা, পাশে তাজা সালাদ দিয়ে পরিবেশিত।',
-        ko: '부드럽고 천천히 익힌 쇠고기, 건포도, 아몬드, 완두콩, 감자로 준비한 향신료 쌀의 풍부한 중동 요리로, 섬세한 페이스트리 층에 싸여 완벽하게 구워져 옆에 신선한 샐러드와 함께 제공됩니다.'
+        ko: '부드럽고 천천히 익힌 쇠고기, 건포도, 아몬드, 완두콩, 감자로 준비한 향신료 쌀의 풍부한 중동 요리로, 섬세한 페이스트리 층에 싸여 완벽하게 구워져 옆에 신선한 샐러드와 함께 제공됩니다.',
+        bs: 'Bogato bliskoistočno jelo od začinjenog pirinča, pripravljeno sa nežnim sporokuvanim govedinom, grožđicama, bademima, graškom i krompirom, umotano u delikatni sloj testa i pečeno do savršenstva, služi se sa svežom salatom sa strane.',
+        zh: '丰富的中东香料米饭菜肴，配有嫩慢炖牛肉、葡萄干、杏仁、豌豆和土豆，包裹在精致的酥皮层中烘烤至完美，配新鲜沙拉一起享用。',
+        ro: 'Un fel de mâncare bogat din Orientul Mijlociu din orez condimentat, preparat cu carne de vită fragedă gătită lent, stafide, migdale, mazăre și cartofi, înfășurat într-un strat delicat de aluat și copt la perfecțiune, servit cu salată proaspătă alături.',
+        uk: 'Багате близькосхідне блюдо з пряного рису, приготоване з ніжною повільно тушкованою яловичиною, родзинками, мигдалем, горошком та картоплею, загорнуте в делікатний шар тіста та запечене до досконалості, подається зі свіжим салатом збоку.',
+        vi: 'Một món ăn Trung Đông phong phú từ cơm gia vị, được chuẩn bị với thịt bò niềm mềm, nho khô, hạnh nhân, đậu Hà Lan và khoai tây, bọc trong lớp bánh ngọt tinh tế và nướng hoàn hảo, được phục vụ với salad tươi bên cạnh.'
       }, 
       image: '/Middle Eastern Style Parda Biryani.jpg',
       price: '$23.99', 
@@ -2665,7 +2845,12 @@ const FullMenuPage = () => {
         fr: 'Quzi',
         de: 'Quzi',
         bn: 'কুজি',
-        ko: '쿠지'
+        ko: '쿠지',
+        bs: 'Quzi',
+        zh: '库兹羊腿饭',
+        ro: 'Quzi',
+        uk: 'Кузі',
+        vi: 'Cơm Quzi'
       }, 
       description: { 
         en: 'A traditional Iraqi dish made with saffron rice and lamb shank, topped with special tomato sauce, and garnished with toasted almonds and fresh parsley, offers a unique culinary experience.',
@@ -2682,7 +2867,12 @@ const FullMenuPage = () => {
         fr: 'Un plat traditionnel irakien préparé avec du riz au safran et du jarret d\'agneau, recouvert de sauce tomate spéciale et garni d\'amandes grillées et de persil frais, offre une expérience culinaire unique.',
         de: 'Ein traditionelles irakisches Gericht aus Safranreis und Lammhaxe, mit spezieller Tomatensauce überzogen und mit gerösteten Mandeln und frischer Petersilie garniert, bietet ein einzigartiges kulinarisches Erlebnis.',
         bn: 'জাফরান ভাত এবং ভেড়ার মাংসের হাড় দিয়ে তৈরি ঐতিহ্যবাহী ইরাকি খাবার, বিশেষ টমেটো সস দিয়ে ঢাকা এবং ভাজা বাদাম ও তাজা পার্সলে দিয়ে সাজানো, একটি অনন্য রন্ধনশৈলীর অভিজ্ঞতা প্রদান করে।',
-        ko: '사프란 쌀과 양 정강이로 만든 전통 이라크 요리로, 특별한 토마토 소스로 덮고 구운 아몬드와 신선한 파슬리로 장식하여 독특한 요리 경험을 제공합니다.'
+        ko: '사프란 쌀과 양 정강이로 만든 전통 이라크 요리로, 특별한 토마토 소스로 덮고 구운 아몬드와 신선한 파슬리로 장식하여 독특한 요리 경험을 제공합니다.',
+        bs: 'Tradicionalno iračko jelo napravljeno od šafranove pirinča i jagnjeće golenjače, preliveno posebnim paradajz sosom i ukrašeno prženim bademima i svežim peršunom, nudi jedinstveno kulinsko iskustvo.',
+        zh: '传统伊拉克菜肴，用藏红花米饭和羊小腿制作，淋上特制番茄酱，配烤杏仁和新鲜欧芹装饰，提供独特的美食体验。',
+        ro: 'Un fel de mâncare tradițional irakian făcut cu orez cu șofran și ciolan de miel, acoperit cu sos special de roșii și decorat cu migdale prăjite și pătrunjel proaspăt, oferă o experiență culinară unică.',
+        uk: 'Традиційна іракська страва з шафранового рису та баранячої гомілки, покрита спеціальним томатним соусом та прикрашена смаженим мигдалем і свіжою петрушкою, пропонує унікальний кулінарний досвід.',
+        vi: 'Một món ăn truyền thống Iraq làm từ cơm nghệ tây và cẳng cừu, phủ sốt cà chua đặc biệt và trang trí với hạnh nhân rang và rau mùi tây tươi, mang đến trải nghiệm ẩm thực độc đáo.'
       }, 
       image: '/Quzi.jpg',
       price: '$26.99', 
@@ -2707,7 +2897,12 @@ const FullMenuPage = () => {
         fr: 'Mandi',
         de: 'Mandi',
         bn: 'মান্দি',
-        ko: '만디'
+        ko: '만디',
+        bs: 'Mandi',
+        zh: '曼迪烤鸡饭',
+        ro: 'Mandi',
+        uk: 'Манді',
+        vi: 'Cơm gà Mandi'
       }, 
       description: { 
         en: 'A traditional Yemeni dish made with Mandi rice and chicken. The half chicken is served on a bed of rice and topped with fresh parsley. It is accompanied by special sauces.',
@@ -2724,7 +2919,12 @@ const FullMenuPage = () => {
         fr: 'Un plat traditionnel yéménite préparé avec du riz Mandi et du poulet. La demi-portion de poulet est servie sur un lit de riz et garnie de persil frais. Il est accompagné de sauces spéciales.',
         de: 'Ein traditionelles jemenitisches Gericht aus Mandi-Reis und Hähnchen. Das halbe Hähnchen wird auf einem Reisbett serviert und mit frischer Petersilie garniert. Wird mit speziellen Saucen begleitet.',
         bn: 'মান্দি ভাত এবং চিকেন দিয়ে তৈরি ঐতিহ্যবাহী ইয়েমেনি খাবার। অর্ধেক চিকেন ভাতের বিছানায় পরিবেশিত এবং তাজা পার্সলে দিয়ে সাজানো। বিশেষ সস দিয়ে পরিবেশিত।',
-        ko: '만디 쌀과 치킨으로 만든 전통 예멘 요리입니다. 반마리 치킨이 쌀 위에 제공되며 신선한 파슬리로 토핑됩니다. 특별한 소스와 함께 제공됩니다.'
+        ko: '만디 쌀과 치킨으로 만든 전통 예멘 요리입니다. 반마리 치킨이 쌀 위에 제공되며 신선한 파슬리로 토핑됩니다. 특별한 소스와 함께 제공됩니다.',
+        bs: 'Tradicionalno jemensko jelo napravljeno od Mandi pirinča i pilića. Pola pilića se služi na krevetu od pirinča i posipa svežim peršunom. Prati ga specijalni sosovi.',
+        zh: '用曼迪米饭和鸡肉制作的传统也门菜肴。半只鸡肉放在米饭床上，撒上新鲜欧芹。配有特制酱汁。',
+        ro: 'Un fel de mâncare tradițional yemenit făcut cu orez Mandi și pui. Jumătatea de pui este servită pe un pat de orez și acoperită cu pătrunjel proaspăt. Este însoțit de sosuri speciale.',
+        uk: 'Традиційна ємеська страва з рису манді та курки. Половина курки подається на подушці з рису та прикрашається свіжою петрушкою. Супроводжується спеціальними соусами.',
+        vi: 'Một món ăn truyền thống Yemen làm từ cơm Mandi và gà. Nửa con gà được phục vụ trên giường cơm và rắc rau mùi tây tươi. Được kèm theo những loại sốt đặc biệt.'
       }, 
       image: '/Mandi.jpg',
       price: '$23.99', 
@@ -2743,14 +2943,18 @@ const FullMenuPage = () => {
         ur: 'ولیج قالیہ',
         kmr: 'Qaliyeya Gund',
         es: 'Qaliya de la Aldea',
-        fr: 'Qaliya du Village',
         ru: 'Деревенская Калия',
         hi: 'विलेज क़लिया',
         sq: 'Qaliya e Fshatit',
         fr: 'Qaliya du Village',
         de: 'Dorf Qaliya',
         bn: 'ভিলেজ কালিয়া',
-        ko: '빌리지 칼리야'
+        ko: '빌리지 칼리야',
+        bs: 'Seoska Qaliya',
+        zh: '乡村咖喱',
+        ro: 'Qaliya Satului',
+        uk: 'Сільська калія',
+        vi: 'Cà ri làng quê'
       }, 
       description: { 
         en: 'This traditional Kurdish dish is made from tender slow-cooked beef blended with caramelized onions, garlic, tomato sauce, a signature mix of spices, and a touch of date syrup. It is served with saffron rice, representing a refined fusion of traditional depth and modern elegance.',
@@ -2767,7 +2971,12 @@ const FullMenuPage = () => {
         fr: 'Ce plat traditionnel kurde est fait de bœuf tendre cuit lentement mélangé avec des oignons caramélisés, de l\'ail, de la sauce tomate, un mélange signature d\'épices et une touche de sirop de dattes. Il est servi avec du riz au safran, représentant une fusion raffinée de profondeur traditionnelle et d\'élégance moderne.',
         de: 'Dieses traditionelle kurdische Gericht wird aus zartem, langsam gegartem Rindfleisch zubereitet, das mit karamellisierten Zwiebeln, Knoblauch, Tomatensauce, einer charakteristischen Gewürzmischung und einem Hauch Dattelsirup vermischt wird. Es wird mit Safranreis serviert und stellt eine raffinierte Fusion aus traditioneller Tiefe und moderner Eleganz dar.',
         bn: 'এই ঐতিহ্যবাহী কুর্দি খাবার নরম ধীরে রান্না করা গরুর মাংস দিয়ে তৈরি যা ক্যারামেলাইজড পেঁয়াজ, রসুন, টমেটো সস, মশলার বিশেষ মিশ্রণ এবং খেজুরের সিরাপের স্পর্শ দিয়ে মিশ্রিত। জাফরান ভাত দিয়ে পরিবেশিত, যা ঐতিহ্যবাহী গভীরতা এবং আধুনিক কমনীয়তার পরিশীলিত সংমিশ্রণ।',
-        ko: '이 전통적인 쿠르드 요리는 캐러멜화된 양파, 마늘, 토마토 소스, 시그니처 향신료 믹스, 대추 시럽 터치와 함께 블렌딩된 부드럽고 천천히 익힌 쇠고기로 만들어집니다. 사프란 쌀과 함께 제공되어 전통적인 깊이와 현대적인 우아함의 세련된 융합을 나타냅니다.'
+        ko: '이 전통적인 쿠르드 요리는 캐러멜화된 양파, 마늘, 토마토 소스, 시그니처 향신료 믹스, 대추 시럽 터치와 함께 블렌딩된 부드럽고 천천히 익힌 쇠고기로 만들어집니다. 사프란 쌀과 함께 제공되어 전통적인 깊이와 현대적인 우아함의 세련된 융합을 나타냅니다.',
+        bs: 'Ovo tradicionalno kurdsko jelo je napravljeno od nežne sporokuva­ne govedine pomešane sa karamelizovanim lukom, belim lukom, paradajz sosom, karakterističnom mešavinom začina i dodirom sirup­a od urme. Služi se sa šafranskim pirinčem, predstavljajući profi­njenu fuziju tradicionalne dubine i modernu eleganciju.',
+        zh: '这道传统的库尔德菜肴由嫩慢炖牛肉制成，配有焦糖洋葱、大蒜、番茄酱、特色香料混合和椰枣糖浆的点缀。配有藏红花米饭，代表传统深度和现代优雅的精致融合。',
+        ro: 'Acest fel de mâncare tradițional kurd este făcut din carne de vită fragedă gătită lent amestecată cu ceapă caramelizată, usturoi, sos de roșii, un amestec caracteristic de condimente și o notă de sirop de curmale. Este servit cu orez cu șofran, reprezentând o fuziune rafinată a profunzimii tradiționale și eleganței moderne.',
+        uk: 'Ця традиційна курдська страва готується з ніжної повільно тушкованої яловичини, змішаної з карамелізованою цибулею, часником, томатним соусом, фірмовою сумішшю спецій та краплею фінікового сиропу. Подається з шафрановим рисом, що являє собою вишукане поєднання традиційної глибини та сучасної елегантності.',
+        vi: 'Món ăn truyền thống của người Kurd này được làm từ thịt bò mềm niềm chậm kết hợp với hành tây caramel, tỏi, sốt cà chua, hỗn hợp gia vị đặc trưng và một chút xi-rô chà là. Được phục vụ với cơm nghệ tây, thể hiện sự kết hợp tinh tế giữa chiều sâu truyền thống và sự thanh lịch hiện đại.'
       }, 
       image: '/Village Qaliya.jpg',
       price: '$24.99', 
@@ -2792,7 +3001,12 @@ const FullMenuPage = () => {
         fr: 'Crevettes au Beurre',
         de: 'Butter-Garnelen',
         bn: 'বাটার চিংড়ি',
-        ko: '버터 새우'
+        ko: '버터 새우',
+        bs: 'Škampi u butteru',
+        zh: '黄油虾',
+        ro: 'Creveți în unt',
+        uk: 'Креветки у вершковому маслі',
+        vi: 'Tôm bơ'
       }, 
       description: { 
         en: 'Sautéed shrimp with butter, mushrooms, tomatoes, red pepper flakes and garlic, and served with a side of saffron rice, makes a delicious meal.',
@@ -2809,7 +3023,12 @@ const FullMenuPage = () => {
         fr: 'Crevettes sautées au beurre, champignons, tomates, flocons de poivron rouge et ail, et servies avec un accompagnement de riz au safran, font un repas délicieux.',
         de: 'Garnelen sautiert mit Butter, Champignons, Tomaten, roten Pfefferflocken und Knoblauch, serviert mit einer Beilage aus Safranreis, macht eine köstliche Mahlzeit.',
         bn: 'মাখন, মাশরুম, টমেটো, লাল মরিচের ফ্লেক্স এবং রসুন দিয়ে ভাজা চিংড়ি, এবং জাফরান ভাত দিয়ে পরিবেশিত, একটি সুস্বাদু খাবার তৈরি করে।',
-        ko: '버터, 마시룸, 토마토, 고춧가루, 마늘로 볶은 새우를 사프란 라이스와 함께 제공하여 맛있는 식사를 만듭니다.'
+        ko: '버터, 마시룸, 토마토, 고춧가루, 마늘로 볶은 새우를 사프란 라이스와 함께 제공하여 맛있는 식사를 만듭니다.',
+        bs: 'Škampi soteani sa butterom, pečurkama, paradajzom, pahuljicama crvene paprike i belim lukom, i služe se sa šafranskim pirinčem, čine ukusno jelo.',
+        zh: '用黄油、蘑菇、番茄、红辣椒片和大蒜炒制的虾，配有藏红花米饭，制作美味的餐点。',
+        ro: 'Creveți sote cu unt, ciuperci, roșii, fulgi de ardei roșu și usturoi, și serviți cu o garnitură de orez cu șofran, fac o masă delicioasă.',
+        uk: 'Креветки, обсмажені з вершковим маслом, грибами, помідорами, пластівцями червоного перцю та часником, подаються з гарніром з шафранового рису, складаючи смачну страву.',
+        vi: 'Tôm xào với bơ, nấm, cà chua, ớt đỏ bột và tỏi, và được phục vụ với cơm nghệ tây bên cạnh, tạo nên một bữa ăn ngon miệng.'
       }, 
       image: '/Butter Shrimp.jpg',
       price: '$23.99', 
@@ -2834,7 +3053,12 @@ const FullMenuPage = () => {
         fr: 'Gigot d\'Agneau Spécial (Préavis de 2 Jours Requis)',
         de: 'Lammkeule Spezial (2 Tage Voranmeldung Erforderlich)',
         bn: 'ল্যাম্ব লেগ স্পেশাল (২ দিনের পূর্ব নোটিশ প্রয়োজন)',
-        ko: '양다리 스페셜 (2일 전 예약 필요)'
+        ko: '양다리 스페셜 (2일 전 예약 필요)',
+        bs: 'Janjeći but specijal (potrebno je obaveštenje 2 dana unapred)',
+        zh: '特制羊腿 (需提前2天通知)',
+        ro: 'Pulpă de miel specială (se necesită preaviz de 2 zile)',
+        uk: 'Спеціальна баранча ніжка (потрібне попередження за 2 дні)',
+        vi: 'Đùi cừu đặc biệt (Cần thông báo trước 2 ngày)'
       }, 
       description: { 
         en: 'This dish features tender, fall-off-the-bone lamb shank, slow-roasted for 8 hours, and is served with two varieties of rice (saffron and biryani), fresh salad, tzatziki sauce, spicy sauce, and our special mild white sauce, along with an appetizers combo and sesame kulera, serving 10 people.',
@@ -2851,7 +3075,12 @@ const FullMenuPage = () => {
         fr: 'Ce plat présente un gigot d\'agneau tendre qui tombe de l\'os, rôti lentement pendant 8 heures, et est servi avec deux variétés de riz (safran et biryani), salade fraîche, sauce tzatziki, sauce épicée et notre sauce blanche douce spéciale, accompagné d\'un combo d\'apéritifs et de kulera au sésame, servant 10 personnes.',
         de: 'Dieses Gericht zeigt zarte, vom Knochen fallende Lammkeule, 8 Stunden langsam geröstet, und wird mit zwei Reissorten (Safran und Biryani), frischem Salat, Tzatziki-Sauce, scharfer Sauce und unserer speziellen milden weißen Sauce zusammen mit einer Vorspeisen-Kombination und Sesam-Kulera serviert, für 10 Personen.',
         bn: 'এই পদে রয়েছে নরম, হাড় থেকে পড়ে যাওয়া মেষশাবকের পা, ৮ ঘন্টা ধীরে ভাজা, এবং দুই ধরনের ভাত (জাফরান এবং বিরিয়ানি), তাজা সালাদ, তাজাতজিকি সস, ঝাল সস এবং আমাদের বিশেষ হালকা সাদা সস দিয়ে ক্ষুধাবর্ধক কম্বো এবং তিল কুলেরা সহ পরিবেশিত, ১০ জনের জন্য।',
-        ko: '이 요리는 8시간 동안 천천히 구워서 뼈에서 떨어지는 부드러운 양 정강이가 특징이며, 두 종류의 쌀(사프란과 비리야니), 신선한 샐러드, 짜지키 소스, 매운 소스, 특별한 마일드 화이트 소스와 함께 전채 콤보와 참깨 쿨레라와 함께 제공되어 10명이 드실 수 있습니다.'
+        ko: '이 요리는 8시간 동안 천천히 구워서 뼈에서 떨어지는 부드러운 양 정강이가 특징이며, 두 종류의 쌀(사프란과 비리야니), 신선한 샐러드, 짜지키 소스, 매운 소스, 특별한 마일드 화이트 소스와 함께 전채 콤보와 참깨 쿨레라와 함께 제공되어 10명이 드실 수 있습니다.',
+        bs: 'Ovo jelo sadrži nežan, janjeći but koji se odvaja od kosti, sporo pečen 8 sati, i služi se sa dve vrste pirinča (šafranskim i biryani), svežom salatom, tzatziki sosom, ljutim sosom i našim posebnim blagim belim sosom, zajedno sa kombinacijom predjela i sezamskim kulera, služi 10 osoba.',
+        zh: '这道菜以嫩滑、骨肉分离的羊腿为特色，慢烤8小时，配有两种米饭（藏红花和比里亚尼）、新鲜沙拉、酸奶黄瓜酱、辣酱和我们特制的温和白酱，配有开胃菜组合和芝麻库莱拉，可供10人享用。',
+        ro: 'Acest fel de mâncare prezintă pulpă de miel fragedă care se desprinde de os, prăjită lent timp de 8 ore, și este servită cu două varietăți de orez (cu șofran și biryani), salată proaspătă, sos tzatziki, sos picant și sosul nostru special alb și ușor, împreună cu o combinație de aperitive și kulera cu susan, servind 10 persoane.',
+        uk: 'Ця страва містить ніжну баранячу ніжку, що відпадає від кістки, повільно смажену протягом 8 годин, та подається з двома видами рису (шафранового та біріяні), свіжим салатом, соусом дзадзікі, гострим соусом та нашим спеціальним м\'яким білим соусом, разом з комбо закусок та кунжутною кулерою, на 10 осіб.',
+        vi: 'Món ăn này có đặc trưng là đùi cừu mềm, rời khỏi xương, nướng chậm trong 8 giờ, và được phục vụ với hai loại cơm (nghệ tây và biryani), salad tươi, sốt tzatziki, sốt cay và sốt trắng nhẹ đặc biệt của chúng tôi, cùng với combo khai vị và kulera mè, phục vụ 10 người.'
       }, 
       image: '/Lamb Leg Special.jpg',
       price: '$499.00', 
@@ -2876,8 +3105,14 @@ const FullMenuPage = () => {
         ru: 'Эрбильский шиш-кебаб',
         hi: 'एर्बिल शीश कबाब',
         sq: 'Shish Kabab Erbil',
+        de: 'Erbil Schisch Kebab',
         bn: 'এরবিল শিশ কাবাব',
-        ko: '에르빌 시시 카밥'
+        ko: '에르빌 시시 카밥',
+        bs: 'Erbil Šiš Kebab',
+        zh: '埃尔比勒烤肉串',
+        ro: 'Shish Kebab Erbil',
+        uk: 'Ербільський шиш-кебаб',
+        vi: 'Shish Kebab Erbil'
       }, 
       description: { 
         en: 'A kabab made with a mix of lamb and beef, grilled to perfection. It is served with saffron rice, fresh salad, sumac onions and grilled tomato.',
@@ -2894,7 +3129,12 @@ const FullMenuPage = () => {
         sq: 'Një kabab i bërë me një përzierje mishi qengjishi dhe viçi, i pjekur në skarë deri në përsosmëri. Shërbehet me oriz me shafran, sallatë të freskët, qepë sumak dhe domate në skarë.',
         de: 'Ein Kebab aus einer Mischung von Lamm- und Rindfleisch, perfekt gegrillt. Serviert mit Safranreis, frischem Salat, Sumak-Zwiebeln und gegrillter Tomate.',
         bn: 'মেষশাবক এবং গরুর মাংসের মিশ্রণে তৈরি কাবাব, নিখুঁততা পর্যন্ত গ্রিল করা। জাফরান ভাত, তাজা সালাদ, সুমাক পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে পরিবেশিত।',
-        ko: '양고기와 소고기를 섞어 만든 카밥으로, 완벽하게 구워집니다. 사프란 쌀, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공됩니다.'
+        ko: '양고기와 소고기를 섞어 만든 카밥으로, 완벽하게 구워집니다. 사프란 쌀, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공됩니다.',
+        bs: 'Kebab napravljen od mešavine jagnjetine i govedine, grillovan do savršenstva. Služi se sa šafranskim pirinčem, svežom salatom, sumac lukom i grillovanim paradajzom.',
+        zh: '由羊肉和牛肉混合制成的烤肉串，烤制完美。配有藏红花米饭、新鲜沙拉、漆树洋葱和烤番茄。',
+        ro: 'Un kebab făcut dintr-un amestec de miel și vită, grătar la perfecțiune. Este servit cu orez cu șofran, salată proaspătă, ceapă sumac și roșii la grătar.',
+        uk: 'Кебаб з суміші баранини та яловичини, приготований на грилі до досконалості. Подається з шафрановим рисом, свіжим салатом, цибулею сумах та смаженими помідорами.',
+        vi: 'Một món kebab làm từ hỗn hợp thịt cừu và thịt bò, nướng hoàn hảo. Được phục vụ với cơm nghệ tây, salad tươi, hành tây sumac và cà chua nướng.'
       }, 
       price: '$23.99', 
       category: 'grill', 
@@ -2918,7 +3158,12 @@ const FullMenuPage = () => {
         sq: 'Kabab Mahshi',
         fr: 'Kebab Mahshi',
         bn: 'মাহশী কাবাব',
-        ko: '마시 카밥'
+        ko: '마시 카밥',
+        bs: 'Mahši Kebab',
+        zh: '马什卡巴布',
+        ro: 'Kebab Mahshi',
+        uk: 'Махші кебаб',
+        vi: 'Kebab Mahshi'
       }, 
       description: { 
         en: 'A kabab made with beef and lamb, flavored with garlic, spicy peppers and parsley. It is served with fresh salad, saffron rice, sumac onions and grilled tomato.',
@@ -2935,7 +3180,12 @@ const FullMenuPage = () => {
         fr: 'Un kebab fait avec du bœuf et de l\'agneau, assaisonné à l\'ail, aux piments forts et au persil. Servi avec une salade fraîche, du riz au safran, des oignons au sumac et une tomate grillée.',
         de: 'Ein Kebab aus Rind- und Lammfleisch, gewürzt mit Knoblauch, scharfen Paprika und Petersilie. Serviert mit frischem Salat, Safranreis, Sumak-Zwiebeln und gegrillter Tomate.',
         bn: 'গরু এবং মেষশাবকের মাংস দিয়ে তৈরি কাবাব, রসুন, ঝাল মরিচ এবং পার্সলে দিয়ে স্বাদযুক্ত। তাজা সালাদ, জাফরান ভাত, সুমাক পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে পরিবেশিত।',
-        ko: '소고기와 양고기로 만든 카밥으로, 마늘, 매운 고추, 파슬리로 맛을 냅니다. 신선한 샐러드, 사프란 라이스, 수막 양파, 구운 토마토와 함께 제공됩니다.'
+        ko: '소고기와 양고기로 만든 카밥으로, 마늘, 매운 고추, 파슬리로 맛을 냅니다. 신선한 샐러드, 사프란 라이스, 수막 양파, 구운 토마토와 함께 제공됩니다.',
+        bs: 'Kebab napravljen od goveđeg i jagnječeg mesa, začinjen belim lukom, ljutom paprikom i peršinom. Služi se sa svežom salatom, šafranom rizom, sumak lukom i grillovanom paradajzom.',
+        zh: '用牛肉和羊肉制作的烤肉串，用大蒜、辣椒和欧芹调味。配新鲜沙拉、藏红花饭、苏麦克洋葱和烤西红柿。',
+        ro: 'Un kebab făcut din carne de vită și miel, condimentat cu usturoi, ardei iuți și pătrunjel. Se servește cu salată proaspătă, orez cu șofran, ceapă sumac și roșii la grătar.',
+        uk: 'Кебаб з яловичини та баранини, приправлений часником, гострим перцем та петрушкою. Подається зі свіжим салатом, шафрановим рисом, цибулею з сумахом та печеними помідорами.',
+        vi: 'Một loại kebab làm từ thịt bò và thịt cừu, nêm nếm với tỏi, ớt cay và ngò tây. Được phục vụ cùng salad tươi, cơm nghệ tây, hành tây sumac và cà chua nướng.'
       }, 
       price: '$23.99', 
       category: 'grill', 
@@ -2959,7 +3209,12 @@ const FullMenuPage = () => {
         sq: 'Kabab Pule',
         fr: 'Kebab de Poulet',
         bn: 'চিকেন কাবাব',
-        ko: '치킨 카밥'
+        ko: '치킨 카밥',
+        bs: 'Piletina Kebab',
+        zh: '鸡肉卡巴布',
+        ro: 'Kebab de Pui',
+        uk: 'Курячий кебаб',
+        vi: 'Kebab Gà'
       }, 
       description: { 
         en: 'Marinated chicken with spices, tomatoes, bell peppers, parsley, and onions is served with saffron rice, fresh salad, sumac onions, and grilled tomato.',
@@ -2976,7 +3231,12 @@ const FullMenuPage = () => {
         fr: 'Poulet mariné aux épices, tomates, poivrons, persil et oignons est servi avec riz au safran, salade fraîche, oignons au sumac et tomate grillée.',
         de: 'Mariniertes Hähnchen mit Gewürzen, Tomaten, Paprika, Petersilie und Zwiebeln wird mit Safranreis, frischem Salat, Sumak-Zwiebeln und gegrillter Tomate serviert.',
         bn: 'মসলা, টমেটো, বেল মরিচ, পার্সলে এবং পেঁয়াজ দিয়ে মেরিনেটেড চিকেন জাফরান ভাত, তাজা সালাদ, সুমাক পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে পরিবেশিত।',
-        ko: '향신료, 토마토, 피망, 파슬리, 양파로 양념한 치킨을 사프란 라이스, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공합니다.'
+        ko: '향신료, 토마토, 피망, 파슬리, 양파로 양념한 치킨을 사프란 라이스, 신선한 샐러드, 수막 양파, 구운 토마토와 함께 제공합니다.',
+        bs: 'Marinirano pile sa začinima, paradajzom, paprikom, peršinom i lukom služi se sa šafranom rižom, svežom salatom, sumak lukom i grillovanom paradajzom.',
+        zh: '用香料、番茄、青椒、欧芹和洋葱腌制的鸡肉，配藏红花饭、新鲜沙拉、苏麦克洋葱和烤西红柿。',
+        ro: 'Pui marinat cu condimente, roșii, ardei grași, pătrunjel și ceapă este servit cu orez cu șofran, salată proaspătă, ceapă sumac și roșii la grătar.',
+        uk: 'Маринована курка зі спеціями, помідорами, болгарським перцем, петрушкою та цибулею подається з шафрановим рисом, свіжим салатом, цибулею з сумахом та печеними помідорами.',
+        vi: 'Gà ướp với gia vị, cà chua, ớt chuông, ngò tây và hành tây được phục vụ cùng cơm nghệ tây, salad tươi, hành tây sumac và cà chua nướng.'
       }, 
       price: '$22.99', 
       category: 'grill', 
@@ -3001,7 +3261,12 @@ const FullMenuPage = () => {
         fr: 'Kebab Cökertme',
         de: 'Cökertme-Kebab',
         bn: 'চোকার্তমে কাবাব',
-        ko: '쵸케르트메 카밥'
+        ko: '쵸케르트메 카밥',
+        bs: 'Cökertme Kebab',
+        zh: '乔克尔特梅烤肉',
+        ro: 'Kebab Cökertme',
+        uk: 'Чекертме кебаб',
+        vi: 'Kebab Cökertme'
       }, 
       description: { 
         en: 'Eggplant with yogurt and garlic, topped with thinly sliced beef pieces, is served with shoestring potatoes and special tomato sauce.',
@@ -3018,7 +3283,12 @@ const FullMenuPage = () => {
         fr: 'Aubergine au yaourt et à l\'ail, garnie de fines tranches de bœuf, servie avec des pommes de terre allumettes et une sauce tomate spéciale.',
         de: 'Aubergine mit Joghurt und Knoblauch, belegt mit dünn geschnittenen Rindfleischstücken, serviert mit Schusterkartoffeln und spezieller Tomatensauce.',
         bn: 'দই এবং রসুনের সাথে বেগুন, পাতলা কাটা গরুর মাংসের টুকরা দিয়ে ঢাকা, শুস্ট্রিং আলু এবং বিশেষ টমেটো সসের সাথে পরিবেশিত।',
-        ko: '요거트와 마늘을 넣은 가지 위에 얇게 썬 소고기 조각을 올리고, 실감자와 특제 토마토 소스와 함께 제공됩니다.'
+        ko: '요거트와 마늘을 넣은 가지 위에 얇게 썬 소고기 조각을 올리고, 실감자와 특제 토마토 소스와 함께 제공됩니다.',
+        bs: 'Plava patlidžan sa jogurtom i belim lukom, prekriven tanko isečenim komadićima goveđeg mesa, služi se sa krompirićima u niti i posebnim paradajz sosom.',
+        zh: '配酸奶和大蒜的茄子，上面覆盖薄片牛肉，配薯条和特制番茄酱。',
+        ro: 'Vânătă cu iaurt și usturoi, acoperită cu bucăți de carne de vită tăiate subțire, servită cu cartofi julien și sos special de roșii.',
+        uk: 'Баклажан з йогуртом та часником, покритий тонко нарізаними шматочками яловичини, подається з картоплею соломкою та спеціальним томатним соусом.',
+        vi: 'Cà tím với sữa chua và tỏi, phủ những miếng thịt bò thái mỏng, được phục vụ cùng khoai tây sợi và sốt cà chua đặc biệt.'
       }, 
       price: '$25.99', 
       category: 'grill', 
@@ -3042,7 +3312,12 @@ const FullMenuPage = () => {
         sq: 'Krahët',
         fr: 'Ailes',
         bn: 'উইংস',
-        ko: '윙스'
+        ko: '윙스',
+        bs: 'Krila',
+        zh: '鸡翅',
+        ro: 'Aripi',
+        uk: 'Крилця',
+        vi: 'Cánh Gà'
       }, 
       description: { 
         en: 'Grilled wings, a flavor sensation that will delight your taste buds, are served with aromatic saffron rice, fresh green salad, sumac-seasoned onions, and grilled tomato. Don\'t miss out on this delectable combination!',
@@ -3059,7 +3334,12 @@ const FullMenuPage = () => {
         fr: 'Ailes grillées, une sensation gustative qui ravira vos papilles, servies avec du riz aromatique au safran, salade verte fraîche, oignons assaisonnés au sumac et tomate grillée. Ne manquez pas cette délicieuse combinaison!',
         de: 'Gegrillte Flügel, ein Geschmackserlebnis, das Ihre Geschmacksnerven erfreuen wird, werden mit aromatischem Safranreis, frischem grünem Salat, mit Sumak gewürzten Zwiebeln und gegrillter Tomate serviert. Lassen Sie sich diese köstliche Kombination nicht entgehen!',
         bn: 'গ্রিল করা উইংস, একটি স্বাদের অনুভূতি যা আপনার স্বাদ কোরকদের আনন্দিত করবে, সুগন্ধি জাফরান ভাত, তাজা সবুজ সালাদ, সুমাক-মসলাযুক্ত পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে পরিবেশিত। এই সুস্বাদু সমন্বয়টি মিস করবেন না!',
-        ko: '구운 윙스는 당신의 미각을 즐겁게 할 맛의 감각으로, 향긋한 사프란 라이스, 신선한 녹색 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공됩니다. 이 맛있는 조합을 놓치지 마세요!'
+        ko: '구운 윙스는 당신의 미각을 즐겁게 할 맛의 감각으로, 향긋한 사프란 라이스, 신선한 녹색 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공됩니다. 이 맛있는 조합을 놓치지 마세요!',
+        bs: 'Grillovan krila, osećaj ukusa koji će oduševiti vaše nepce, služe se sa aromatičnim šafranom rižom, svežom zelenom salatom, lukom začinjenim sumak i grillovanom paradajzom. Ne propustite ovu ukusnu kombinaciju!',
+        zh: '烤鸡翅，一种会让你味蕾愉悦的味觉体验，配香喷喷的藏红花饭、新鲜绿色沙拉、苏麦克调味洋葱和烤番茄。不要错过这个美味的组合！',
+        ro: 'Aripi la grătar, o senzație de gust care vă va încânta papilele gustative, sunt servite cu orez aromat cu șofran, salată verde proaspătă, ceapă condimentată cu sumac și roșii la grătar. Nu ratați această combinație delicioasă!',
+        uk: 'Печені крилця, відчуття смаку, яке порадує ваші смакові рецептори, подаються з ароматним шафрановим рисом, свіжим зеленим салатом, цибулею, приправленою сумахом, та печеними помідорами. Не пропустіть цю смачну комбінацію!',
+        vi: 'Cánh gà nướng, một cảm giác hương vị sẽ làm hài lòng vị giác của bạn, được phục vụ cùng cơm nghệ tây thơm, salad xanh tươi, hành tây nêm sumac và cà chua nướng. Đừng bỏ lỡ sự kết hợp ngon lành này!'
       }, 
       price: '$19.99', 
       category: 'grill', 
@@ -3083,7 +3363,12 @@ const FullMenuPage = () => {
         sq: 'Tikka Viçi',
         fr: 'Tikka de Bœuf',
         bn: 'বিফ টিক্কা',
-        ko: '소고기 티카'
+        ko: '소고기 티카',
+        bs: 'Goveđa Tikka',
+        zh: '牛肉提卡',
+        ro: 'Tikka de Vită',
+        uk: 'Яловича тікка',
+        vi: 'Tikka Thịt Bò'
       }, 
       description: { 
         en: 'Beef tikka, the perfect choice for meat lovers, is paired with aromatic saffron rice, fresh salad, sumac-seasoned onions, and grilled tomato. It creates an unforgettable taste experience. Don\'t miss out on this unique flavor!',
@@ -3100,7 +3385,12 @@ const FullMenuPage = () => {
         fr: 'Tikka de bœuf, le choix parfait pour les amateurs de viande, est accompagné de riz aromatique au safran, salade fraîche, oignons assaisonnés au sumac et tomate grillée. Il crée une expérience gustative inoubliable. Ne manquez pas cette saveur unique !',
         de: 'Rind-Tikka, die perfekte Wahl für Fleischliebhaber, wird mit aromatischem Safranreis, frischem Salat, mit Sumak gewürzten Zwiebeln und gegrillter Tomate kombiniert. Es schafft ein unvergessliches Geschmackserlebnis. Lassen Sie sich diesen einzigartigen Geschmack nicht entgehen!',
         bn: 'বিফ টিক্কা, মাংসপ্রেমীদের জন্য নিখুঁত পছন্দ, সুগন্ধি জাফরান ভাত, তাজা সালাদ, সুমাক-মসলাযুক্ত পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে জোড়া। এটি একটি অবিস্মরণীয় স্বাদের অভিজ্ঞতা তৈরি করে। এই অনন্য স্বাদটি মিস করবেন না!',
-        ko: '고기 애호가들을 위한 완벽한 선택인 소고기 티카는 향긋한 사프란 쌀, 신선한 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공됩니다. 잊을 수 없는 맛의 경험을 만들어냅니다. 이 독특한 맛을 놓치지 마세요!'
+        ko: '고기 애호가들을 위한 완벽한 선택인 소고기 티카는 향긋한 사프란 쌀, 신선한 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공됩니다. 잊을 수 없는 맛의 경험을 만들어냅니다. 이 독특한 맛을 놓치지 마세요!',
+        bs: 'Goveđa tikka, savršen izbor za ljubitelje mesa, uparena je sa aromatičnim šafranom rižom, svežom salatom, lukom začinjenim sumak i grillovanom paradajzom. Stvara nezaboravno iskustvo ukusa. Ne propustite ovaj jedinstveni ukus!',
+        zh: '牛肉提卡，肉类爱好者的完美选择，配香喷喷的藏红花饭、新鲜沙拉、苏麦克调味洋葱和烤番茄。创造难忘的味觉体验。不要错过这独特的味道！',
+        ro: 'Tikka de vită, alegerea perfectă pentru iubitorii de carne, este asociată cu orez aromat cu șofran, salată proaspătă, ceapă condimentată cu sumac și roșii la grătar. Creează o experiență gustativă de neuitat. Nu ratați această aromă unică!',
+        uk: 'Яловича тікка, ідеальний вибір для любителів м\'яса, поєднується з ароматним шафрановим рисом, свіжим салатом, цибулею, приправленою сумахом, та печеними помідорами. Створює незабутній смаковий досвід. Не пропустіть цей унікальний смак!',
+        vi: 'Tikka thịt bò, lựa chọn hoàn hảo cho những người yêu thích thịt, được kết hợp với cơm nghệ tây thơm, salad tươi, hành tây nêm sumac và cà chua nướng. Tạo ra trải nghiệm hương vị khó quên. Đừng bỏ lỡ hương vị độc đáo này!'
       }, 
       price: '$23.99', 
       category: 'grill', 
@@ -3124,7 +3414,12 @@ const FullMenuPage = () => {
         sq: 'Tikka Pule',
         fr: 'Tikka de Poulet',
         bn: 'চিকেন টিক্কা',
-        ko: '치킨 티카'
+        ko: '치킨 티카',
+        bs: 'Piletina Tikka',
+        zh: '鸡肉提卡',
+        ro: 'Tikka de Pui',
+        uk: 'Курячий тікка',
+        vi: 'Tikka Gà'
       }, 
       description: { 
         en: 'This dish offers a flavorful experience! It is served with aromatic saffron rice, fresh salad, sumac-seasoned onions, and grilled tomato. Bon appétit!',
@@ -3141,7 +3436,12 @@ const FullMenuPage = () => {
         fr: 'Ce plat offre une expérience savoureuse ! Il est servi avec du riz aromatique au safran, salade fraîche, oignons assaisonnés au sumac et tomate grillée. Bon appétit !',
         de: 'Dieses Gericht bietet ein geschmackvolles Erlebnis! Es wird mit aromatischem Safranreis, frischem Salat, mit Sumak gewürzten Zwiebeln und gegrillter Tomate serviert. Guten Appetit!',
         bn: 'এই পদটি একটি স্বাদযুক্ত অভিজ্ঞতা প্রদান করে! সুগন্ধি জাফরান ভাত, তাজা সালাদ, সুমাক-মসলাযুক্ত পেঁয়াজ এবং গ্রিল করা টমেটোর সাথে পরিবেশিত। শুভ খাবার!',
-        ko: '이 요리는 풍미로운 경험을 제공합니다! 향긋한 사프란 라이스, 신선한 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공됩니다. 맛있게 드세요!'
+        ko: '이 요리는 풍미로운 경험을 제공합니다! 향긋한 사프란 라이스, 신선한 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공됩니다. 맛있게 드세요!',
+        bs: 'Ovo jelo nudi ukusno iskustvo! Služi se sa aromatičnim šafranom rižom, svežom salatom, lukom začinjenim sumak i grillovanom paradajzom. Prijatno!',
+        zh: '这道菜提供美味的体验！配香喷喷的藏红花饭、新鲜沙拉、苏麦克调味洋葱和烤番茄。祝您用餐愉快！',
+        ro: 'Acest fel de mâncare oferă o experiență gustoasă! Este servit cu orez aromat cu șofran, salată proaspătă, ceapă condimentată cu sumac și roșii la grătar. Poftă bună!',
+        uk: 'Ця страва пропонує смачний досвід! Подається з ароматним шафрановим рисом, свіжим салатом, цибулею, приправленою сумахом, та печеними помідорами. Смачного!',
+        vi: 'Món này mang đến trải nghiệm đầy hương vị! Được phục vụ cùng cơm nghệ tây thơm, salad tươi, hành tây nêm sumac và cà chua nướng. Chúc ngon miệng!'
       }, 
       price: '$21.99', 
       category: 'grill', 
@@ -3165,7 +3465,12 @@ const FullMenuPage = () => {
         sq: 'Tikka Qengjishi',
         fr: 'Tikka d\'Agneau',
         bn: 'ল্যাম্ব টিক্কা',
-        ko: '양고기 티카'
+        ko: '양고기 티카',
+        bs: 'Jagnjetina Tikka',
+        zh: '羊肉提卡',
+        ro: 'Tikka de Miel',
+        uk: 'Барання тікка',
+        vi: 'Tikka Thịt Cừu'
       }, 
       description: { 
         en: 'Tender lamb cubes, marinated in spices and grilled on skewers, are served with sumac-marinated onions, fresh salad, saffron rice, and grilled tomato.',
@@ -3182,7 +3487,12 @@ const FullMenuPage = () => {
         fr: 'Cubes tendres d\'agneau, marinés aux épices et grillés sur des brochettes, sont servis avec des oignons marinés au sumac, salade fraîche, riz au safran et tomate grillée.',
         de: 'Zarte Lammwürfel, in Gewürzen mariniert und auf Spießen gegrillt, werden mit in Sumak marinierten Zwiebeln, frischem Salat, Safranreis und gegrillter Tomate serviert.',
         bn: 'নরম মেষশাবকের কিউব, মসলায় মেরিনেট করা এবং শিকে গ্রিল করা, সুমাক-মেরিনেট করা পেঁয়াজ, তাজা সালাদ, জাফরান ভাত এবং গ্রিল করা টমেটোর সাথে পরিবেশিত।',
-        ko: '향신료에 절여 꼬치에 구운 부드러운 양고기 큐브를, 수막에 절인 양파, 신선한 샐러드, 사프란 쌀, 구운 토마토와 함께 제공합니다.'
+        ko: '향신료에 절여 꼬치에 구운 부드러운 양고기 큐브를, 수막에 절인 양파, 신선한 샐러드, 사프란 쌀, 구운 토마토와 함께 제공합니다.',
+        bs: 'Nežni kockice jagnjetine, marinirane u začinima i pečene na ražnju, služe se sa lukom mariniranim u sumak, svežom salatom, šafranom rižom i grillovanom paradajzom.',
+        zh: '嫩羊肉块，用香料腌制并在串上烧烤，配苏麦克腌制洋葱、新鲜沙拉、藏红花饭和烤番茄。',
+        ro: 'Cuburi fragede de miel, marinate în condimente și grătariate pe frigărui, sunt servite cu ceapă marinată în sumac, salată proaspătă, orez cu șofran și roșii la grătar.',
+        uk: 'Ніжні кубики баранини, мариновані в спеціях та приготовані на шампурах, подаються з цибулею, маринованою в сумаху, свіжим салатом, шафрановим рисом та печеними помідорами.',
+        vi: 'Những khối thịt cừu mềm, ướp gia vị và nướng trên que, được phục vụ cùng hành tây ướp sumac, salad tươi, cơm nghệ tây và cà chua nướng.'
       }, 
       price: '$23.99', 
       category: 'grill', 
@@ -3209,7 +3519,12 @@ const FullMenuPage = () => {
         fr: 'Plateau Spécial Nature Village',
         de: 'Nature Village Spezial Platte',
         bn: 'নেচার ভিলেজ স্পেশাল প্লেটার',
-        ko: '네이처 빌리지 스페셜 플래터'
+        ko: '네이처 빌리지 스페셜 플래터',
+        bs: 'Nature Village Specijalni Plato',
+        zh: '自然村特色拼盘',
+        ro: 'Platou Special Nature Village',
+        uk: 'Спеціальний плато Nature Village',
+        vi: 'Đĩa Đặc Biệt Nature Village'
       }, 
       description: { 
         en: 'An extraordinary feast featuring our signature grilled specialties: tender Erbil kabab, flavorful Mahshi kabab, succulent beef tikka, perfectly seasoned chicken tikka, crispy grilled wings, and aromatic chicken kabab. Served with two exquisite rice varieties - fragrant saffron rice and spiced biryani - alongside sumac-marinated onions, fresh garden salad, and char-grilled tomatoes. A true celebration of Middle Eastern culinary artistry!',
@@ -3226,7 +3541,12 @@ const FullMenuPage = () => {
         fr: 'Un festin extraordinaire mettant en vedette nos spécialités grillées: tendre kebab d\'Erbil, savoureux kebab Mahshi, succulent tikka de bœuf, tikka de poulet parfaitement assaisonné, ailes grillées croustillantes et kebab de poulet aromatique. Servi avec deux variétés de riz exquises - riz au safran parfumé et biryani épicé - accompagné d\'oignons marinés au sumac, salade fraîche du jardin et tomates grillées au charbon. Une véritable célébration de l\'art culinaire du Moyen-Orient!',
         de: 'Ein außergewöhnliches Festmahl mit unseren charakteristischen Grillspezialitäten: zartes Erbil-Kebab, geschmackvolles Mahshi-Kebab, saftiges Rind-Tikka, perfekt gewürztes Hähnchen-Tikka, knusprige gegrillte Flügel und aromatisches Hähnchen-Kebab. Serviert mit zwei exquisiten Reissorten - duftendem Safranreis und gewürztem Biryani - zusammen mit in Sumak marinierten Zwiebeln, frischem Gartensalat und über Kohlenfeuer gegrillten Tomaten. Eine wahre Feier der nahöstlichen Kochkunst!',
         bn: 'আমাদের বিশেষ গ্রিল করা খাদ্যগুলির সাথে একটি অসাধারণ ভোজ: নরম এরবিল কাবাব, স্বাদযুক্ত মাহশী কাবাব, রসালো বিফ টিক্কা, নিখুঁতভাবে মসলাযুক্ত চিকেন টিক্কা, কুড়কুড়ে গ্রিল করা উইংস এবং সুগন্ধি চিকেন কাবাব। দুটি চমৎকার ভাতের জাত দিয়ে পরিবেশিত - সুগন্ধি জাফরান ভাত এবং মসলাযুক্ত বিরিয়ানি - সুমাক-মেরিনেট করা পেঁয়াজ, তাজা বাগানের সালাদ এবং কয়লায় গ্রিল করা টমেটোর সাথে। মধ্যপ্রাচ্যের রন্ধনশিল্পের একটি প্রকৃত উদযাপন!',
-        ko: '우리의 시그니처 그릴 스페셜티로 구성된 특별한 잔치: 부드러운 어빌 카밥, 풍미로운 마시 카밥, 육즙이 풍부한 비프 티카, 완벽하게 양념된 치킨 티카, 바삭한 구운 윙스, 향긋한 치킨 카밥. 두 가지 훌륭한 쌀 요리와 함께 제공됩니다 - 향긋한 사프란 라이스와 향신료 비리야니 - 수막에 절인 양파, 신선한 정원 샐러드, 숯불에 구운 토마토와 함께. 중동 요리 예술의 진정한 축제입니다!'
+        ko: '우리의 시그니처 그릴 스페셜티로 구성된 특별한 잔치: 부드러운 어빌 카밥, 풍미로운 마시 카밥, 육즙이 풍부한 비프 티카, 완벽하게 양념된 치킨 티카, 바삭한 구운 윙스, 향긋한 치킨 카밥. 두 가지 훌륭한 쌀 요리와 함께 제공됩니다 - 향긋한 사프란 라이스와 향신료 비리야니 - 수막에 절인 양파, 신선한 정원 샐러드, 숯불에 구운 토마토와 함께. 중동 요리 예술의 진정한 축제입니다!',
+        bs: 'Izvanredno slavlje sa našim prepoznatljivim grill specijalitetima: nežan Erbil kebab, ukusan Mahši kebab, sočna goveđa tikka, savršeno začinjena piletina tikka, hrskava grillovan krila i aromatičan kebab od pilića. Služi se sa dva izuzetna sorta pirinča - mirisni šafran pirinač i začinjen biryani - uz luk mariniran u sumac, svežu baštensku salatu i paradajz pečen na žaru. Pravo slavlje kulinarskog umeća Bliskog istoka!',
+        zh: '我们招牌烧烤特色菜组成的非凡盛宴：嫩滑埃尔比勒烤肉串、风味马什烤肉串、多汁牛肉提卡、调味完美的鸡肉提卡、酥脆烤鸡翅和香喷喷的鸡肉烤串。配两种精美米饭 - 香喷喷的藏红花饭和香料比尔亚尼 - 以及苏麦克腌制洋葱、新鲜花园沙拉和炭火烤番茄。真正庆祝中东烹饪艺术！',
+        ro: 'O masă extraordinară cu specialitățile noastre la grătar: kebab Erbil fragez, kebab Mahshi savuros, tikka de vită suculentă, tikka de pui perfect condimentată, aripi crocante la grătar și kebab de pui aromat. Servit cu două soiuri excelente de orez - orez parfumat cu șofran și biryani condimentat - alături de ceapă marinată în sumac, salată proaspătă de grădină și roșii la cărbuni. O adevărată sărbătoare a artei culinare din Orientul Mijlociu!',
+        uk: 'Надзвичайне свято з нашими фірмовими стравами на грилі: ніжний кебаб Ербіль, смачний кебаб Махші, соковита яловича тікка, ідеально приправлена курячий тікка, хрусткі печені крилця та ароматний курячий кебаб. Подається з двома вишуканими сортами рису - ароматний шафрановий рис та прянний біріяні - разом з цибулею, маринованою в сумаху, свіжим садовим салатом та томатами, печеними на вугіллі. Справжнє святкування близькосхідного кулінарного мистецтва!',
+        vi: 'Một bữa tiệc phi thường với các món nướng đặc trưng của chúng tôi: kebab Erbil mềm, kebab Mahshi đậm đà, tikka thịt bò ngon ngọt, tikka gà nêm nếm hoàn hảo, cánh gà nướng giòn và kebab gà thơm lừng. Được phục vụ cùng hai loại cơm tuyệt hào - cơm nghệ tây thơm và biryani gia vị - cùng hành tây ướp sumac, salad vườn tươi và cà chua nướng than. Một lễ kỷ niệm thực sự của nghệ thuật ẩm thực Trung Đông!'
       }, 
       price: '$69.99', // Base price for serving2, variants will override
       category: 'grill', 
@@ -3297,7 +3617,12 @@ const FullMenuPage = () => {
         sq: 'Kotoleta Qengjishi',
         fr: 'Côtelettes d\'Agneau',
         de: 'Lammkoteletts',
-        ko: '양갈비'
+        ko: '양갈비',
+        bs: 'Jagnjeći kotleti',
+        zh: '羊排',
+        ro: 'Cotlete de Miel',
+        uk: 'Баранячі котлети',
+        vi: 'Sườn Cừu'
       }, 
       description: { 
         en: 'Marinated with special spices and perfectly cooked, and served with aromatic saffron rice or creamy mashed potatoes (upon request), fresh salad, sumac-seasoned onions, and grilled tomato, it creates an unforgettable taste.',
@@ -3314,7 +3639,12 @@ const FullMenuPage = () => {
         fr: 'Marinées avec des épices spéciales et parfaitement cuites, et servies avec du riz au safran aromatique ou de la purée de pommes de terre crémeuse (sur demande), une salade fraîche, des oignons assaisonnés au sumac et une tomate grillée, cela crée un goût inoubliable.',
         de: 'Mit besonderen Gewürzen mariniert und perfekt gegart, serviert mit aromatischem Safranreis oder cremigem Kartoffelpüree (auf Anfrage), frischem Salat, mit Sumak gewürzten Zwiebeln und gegrillten Tomaten, schafft es einen unvergesslichen Geschmack.',
         bn: 'বিশেষ মসলা দিয়ে মেরিনেট করা এবং নিখুঁতভাবে রান্না করা, এবং সুগন্ধি জাফরান ভাত বা ক্রিমি ম্যাশড আলু (অনুরোধের ভিত্তিতে), তাজা সালাদ, সুমাক-মসলাযুক্ত পেঁয়াজ এবং গ্রিল করা টমেটো দিয়ে পরিবেশিত, এটি একটি অবিস্মরণীয় স্বাদ তৈরি করে।',
-        ko: '특별한 향신료로 양념하고 완벽하게 조리되어, 향긋한 사프란 라이스 또는 크리미한 으깬 감자(요청 시), 신선한 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공되어 잊을 수 없는 맛을 만들어냅니다.'
+        ko: '특별한 향신료로 양념하고 완벽하게 조리되어, 향긋한 사프란 라이스 또는 크리미한 으깬 감자(요청 시), 신선한 샐러드, 수막 양념 양파, 구운 토마토와 함께 제공되어 잊을 수 없는 맛을 만들어냅니다.',
+        bs: 'Marinirani u posebnim začinima i savršeno kuvani, i služeni sa aromatičnim šafranom rižom ili kremastim pireom od krompira (na zahtev), svežom salatom, lukom začinjenim sumac i grillovanom paradajzom, stvaraju nezaboravan ukus.',
+        zh: '用特殊香料腌制并完美烹调，配香喷喷的藏红花饭或奶油土豆泥（可按要求提供）、新鲜沙拉、苏麦克调味洋葱和烤番茄，创造难忘的口味。',
+        ro: 'Marinate în condimente speciale și gătite perfect, și servite cu orez aromat cu șofran sau piure de cartofi cremos (la cerere), salată proaspătă, ceapă condimentată cu sumac și roșii la grătar, creează un gust de neuitat.',
+        uk: 'Мариновані в спеціальних спеціях та ідеально приготовані, подаються з ароматним шафрановим рисом або вершковим картопляним пюре (на замовлення), свіжим салатом, цибулею, приправленою сумахом, та печеними помідорами, створюючи незабутній смак.',
+        vi: 'Ướp trong gia vị đặc biệt và nấu chín hoàn hảo, được phục vụ cùng cơm nghệ tây thơm hoặc khoai tây nghiền kem (theo yêu cầu), salad tươi, hành tây nêm sumac và cà chua nướng, tạo ra hương vị khó quên.'
       }, 
       price: '$38.99', 
       category: 'grill', 
@@ -3341,7 +3671,12 @@ const FullMenuPage = () => {
         fr: 'Plateau de Crevettes Grillées',
         de: 'Gegrillte Garnelen Platte',
         bn: 'গ্রিল করা চিংড়ি প্লেটার',
-        ko: '구운 새우 플래터'
+        ko: '구운 새우 플래터',
+        bs: 'Školjka Škampa',
+        zh: '烤虾拼盘',
+        ro: 'Platou de Creveți la Grătar',
+        uk: 'Тарілка смажених креветок',
+        vi: 'Đĩa Tôm Nướng'
       }, 
       description: { 
         en: 'Marinated grilled shrimp served with sumac-marinated onions, fresh salad, aromatic saffron rice or creamy mashed potatoes (upon request) and grilled tomato.',
@@ -3358,7 +3693,12 @@ const FullMenuPage = () => {
         fr: 'Crevettes grillées marinées servies avec des oignons marinés au sumac, une salade fraîche, du riz au safran aromatique ou de la purée de pommes de terre crémeuse (sur demande) et une tomate grillée.',
         de: 'Marinierte gegrillte Garnelen serviert mit in Sumak marinierten Zwiebeln, frischem Salat, aromatischem Safranreis oder cremigem Kartoffelpüree (auf Anfrage) und gegrillten Tomaten.',
         bn: 'মেরিনেট করা গ্রিল চিংড়ি সুমাক-মেরিনেট করা পেঁয়াজ, তাজা সালাদ, সুগন্ধি জাফরান ভাত বা ক্রিমি ম্যাশড আলু (অনুরোধের ভিত্তিতে) এবং গ্রিল করা টমেটো দিয়ে পরিবেশিত।',
-        ko: '양념한 구운 새우를 수막에 절인 양파, 신선한 샐러드, 향긋한 사프란 라이스 또는 크리미한 으깬 감자(요청 시), 구운 토마토와 함께 제공합니다.'
+        ko: '양념한 구운 새우를 수막에 절인 양파, 신선한 샐러드, 향긋한 사프란 라이스 또는 크리미한 으깬 감자(요청 시), 구운 토마토와 함께 제공합니다.',
+        bs: 'Marinirani škampi sa roštilja posluženi s lukom mariniranim u sumaku, svježom salatom, aromatičnim šafranskim rižom ili kremastim pireom od krumpira (na zahtjev) i rostiljskim rajčicama.',
+        zh: '调味烤虾配漆树腌洋葱、新鲜沙拉、香浓藏红花米饭或奶油土豆泥（可要求）和烤番茄。',
+        ro: 'Creveți la grătar marinați serviți cu ceapă marinată în sumac, salată proaspătă, orez cu șofran aromat sau piure de cartofi cremos (la cerere) și roșii la grătar.',
+        uk: 'Мариновані смажені креветки подаються з цибулею, маринованою в сумаку, свіжим салатом, ароматним шафрановим рисом або кремовим картопляним пюре (на замовлення) та смаженими помідорами.',
+        vi: 'Tôm nướng tẩm ướp phục vụ với hành tây ngâm sumac, salad tươi, cơm nghệ tây thơm hoặc khoai tây nghiền kem (theo yêu cầu) và cà chua nướng.'
       }, 
       price: '$22.99', 
       category: 'grill', 
@@ -3385,7 +3725,12 @@ const FullMenuPage = () => {
         fr: 'Plateau de Bar Grillé',
         de: 'Gegrillte Wolfsbarsch Platte',
         bn: 'গ্রিল করা ব্রানজিনো প্লেটার',
-        ko: '구운 브란지노 플래터'
+        ko: '구운 브란지노 플래터',
+        bs: 'Lubin na Žaru Tanjir',
+        zh: '烤鲈鱼拼盘',
+        ro: 'Platou de Branzino la Grătar',
+        uk: 'Тарілка смаженого морського окуня',
+        vi: 'Đĩa Cá Branzino Nướng'
       }, 
       description: { 
         en: 'Grilled European sea bass fillets, served with sumac-marinated onions, fresh salad, grilled tomato, grilled lemon, and creamy mashed potatoes, is a delightful choice.',
@@ -3402,7 +3747,12 @@ const FullMenuPage = () => {
         fr: 'Filets de bar européen grillés, servis avec des oignons marinés au sumac, une salade fraîche, une tomate grillée, un citron grillé et une purée de pommes de terre crémeuse, c\'est un choix délicieux.',
         de: 'Gegrillte europäische Wolfsbarsch-Filets, serviert mit in Sumak marinierten Zwiebeln, frischem Salat, gegrillten Tomaten, gegrillter Zitrone und cremigem Kartoffelpüree, ist eine köstliche Wahl.',
         bn: 'গ্রিল করা ইউরোপীয় সি বাস ফিললেট, সুমাক-মেরিনেট করা পেঁয়াজ, তাজা সালাদ, গ্রিল করা টমেটো, গ্রিল করা লেবু এবং ক্রিমি ম্যাশড আলু দিয়ে পরিবেশিত, এটি একটি সুস্বাদু পছন্দ।',
-        ko: '구운 유럽산 바다농어 필레를 수막에 절인 양파, 신선한 샐러드, 구운 토마토, 구운 레몬, 크리미한 으깬 감자와 함께 제공하는 맛있는 선택입니다.'
+        ko: '구운 유럽산 바다농어 필레를 수막에 절인 양파, 신선한 샐러드, 구운 토마토, 구운 레몬, 크리미한 으깬 감자와 함께 제공하는 맛있는 선택입니다.',
+        bs: 'Grillani fileti europskog lubina, posluženi s lukom mariniranim u sumaku, svježom salatom, grillovanim rajčicama, grillovanim limonom i kremastim pireom od krumpira, ukusan je izbor.',
+        zh: '烤欧洲鲈鱼片，配漆树腌洋葱、新鲜沙拉、烤番茄、烤柠檬和奶油土豆泥，是令人愉悦的选择。',
+        ro: 'File de bass european la grătar, servite cu ceapă marinată în sumac, salată proaspătă, roșii la grătar, lămâie la grătar și piure de cartofi cremos, este o alegere încântătoare.',
+        uk: 'Смажені філе європейського морського окуня, подаються з цибулею, маринованою в сумаку, свіжим салатом, смаженими помідорами, смаженим лимоном та кремовим картопляним пюре - чудовий вибір.',
+        vi: 'Phi lê cá chẻm châu Âu nướng, phục vụ với hành tây ngâm sumac, salad tươi, cà chua nướng, chanh nướng và khoai tây nghiền kem, là lựa chọn tuyệt vời.'
       }, 
       price: '$37.99', 
       category: 'grill', 
@@ -3429,7 +3779,12 @@ const FullMenuPage = () => {
         fr: 'Plateau de Légumes',
         de: 'Gemüse Platte',
         bn: 'ভেজি প্লেটার',
-        ko: '베지 플래터'
+        ko: '베지 플래터',
+        bs: 'Tanjir sa Povrćem',
+        zh: '蔬菜拼盘',
+        ro: 'Platou de Legume',
+        uk: 'Овочева тарілка',
+        vi: 'Đĩa Rau Củ'
       }, 
       description: { 
         en: 'This dish features a stir-fried medley of broccoli, carrots, green beans, onion, snap peas, celery, red bell pepper, and white chestnuts, topped with basil, olive oil, and garlic sauce. It is served with saffron rice, tomato sauce, and mild and hot sauces.',
@@ -3446,7 +3801,12 @@ const FullMenuPage = () => {
         fr: 'Ce plat présente un mélange sauté de brocoli, carottes, haricots verts, oignon, pois mange-tout, céleri, poivron rouge et châtaignes blanches, garni de basilic, huile d\'olive et sauce à l\'ail. Il est servi avec du riz au safran, de la sauce tomate et des sauces douces et épicées.',
         de: 'Dieses Gericht besteht aus einer gebratenen Mischung aus Brokkoli, Karotten, grünen Bohnen, Zwiebeln, Zuckerschoten, Sellerie, roter Paprika und weißen Kastanien, garniert mit Basilikum, Olivenöl und Knoblauchsauce. Es wird mit Safranreis, Tomatensauce und milden und scharfen Saucen serviert.',
         bn: 'এই খাবারে ব্রোকলি, গাজর, সবুজ বিন, পেঁয়াজ, স্ন্যাপ মটর, সেলারি, লাল ক্যাপসিকাম এবং সাদা চেস্টনাটের ভাজা মিশ্রণ রয়েছে, তুলসী, অলিভ অয়েল এবং রসুনের সস দিয়ে সাজানো। এটি জাফরান ভাত, টমেটো সস এবং মৃদু ও ঝাল সস দিয়ে পরিবেশিত হয়।',
-        ko: '이 요리는 브로콜리, 당근, 녹두, 양파, 스냅피, 셀러리, 빨간 피망, 하얀 밤을 볶은 혼합물로, 바질, 올리브 오일, 마늘 소스를 곁들였습니다. 사프란 라이스, 토마토 소스, 순한 소스와 매운 소스와 함께 제공됩니다.'
+        ko: '이 요리는 브로콜리, 당근, 녹두, 양파, 스냅피, 셀러리, 빨간 피망, 하얀 밤을 볶은 혼합물로, 바질, 올리브 오일, 마늘 소스를 곁들였습니다. 사프란 라이스, 토마토 소스, 순한 소스와 매운 소스와 함께 제공됩니다.',
+        bs: 'Ovo jelo sadrži prženu mješavinu brokule, mrkve, zelenog graha, luka, graška, celera, crvene paprike i bijelih kestenja, posuto bosiljkom, maslinovim uljem i umakom od češnjaka. Služi se sa šafranskim rižom, umakom od rajčice te blagim i ljutim umacima.',
+        zh: '这道菜以炒西兰花、胡萝卜、四季豆、洋葱、荷兰豆、芹菜、红甜椒和白栗子为特色，配罗勒、橄榄油和蒜蓉酱。配藏红花米饭、番茄酱和温和及辛辣酱汁。',
+        ro: 'Acest fel de mâncare conține un amestec prăjit de broccoli, morcovi, fasole verde, ceapă, mazăre, țelină, ardei roșu și castane albe, acoperiți cu busuioc, ulei de măsline și sos de usturoi. Se servește cu orez cu șofran, sos de roșii și sosuri blânde și picante.',
+        uk: 'Ця страва містить смажену суміш броколі, моркви, зеленої квасолі, цибулі, гороху, селери, червоного перцю та білих каштанів, посипану базиліком, оливковою олією та часниковим соусом. Подається з шафрановим рисом, томатним соусом та м\'якими і гострими соусами.',
+        vi: 'Món này có hỗn hợp xào bông cải xanh, cà rót, đậu xanh, hành tây, đậu Hà Lan, cần tây, ớt chuông đỏ và hạt dẻ trắng, phủ húng quế, dầu ô liu và nước sốt tỏi. Được phục vụ với cơm nghệ tây, nước sốt cà chua và các loại nước sốt nhẹ và cay.'
       }, 
       price: '$19.99', 
       category: 'grill', 
@@ -3468,12 +3828,17 @@ const FullMenuPage = () => {
         kmr: 'Tenderên Mirîşk',
         es: 'Tiras de Pollo',
         ru: 'Куриные полоски',
-        hi: 'चिकन टेंडर',
+        hi: 'चिकन टेंडر',
         sq: 'Shirita Pule',
         fr: 'Filets de Poulet Tendres',
         de: 'Hähnchen-Streifen',
         bn: 'চিকেন টেন্ডার',
-        ko: '치킨 텐더'
+        ko: '치킨 텐더',
+        bs: 'Piletina u Trakama',
+        zh: '鸡柳条',
+        ro: 'Șnițel de Pui în Fâșii',
+        uk: 'Курячі смужки',
+        vi: 'Gà Chiên Giòn'
       }, 
       description: { 
         en: 'Tender strips of chicken breast, breaded and fried to crispy golden brown, are served with your choice of dipping sauces.',
@@ -3490,7 +3855,12 @@ const FullMenuPage = () => {
         fr: 'Lanières tendres de poitrine de poulet, panées et frites jusqu\'à un doré croustillant, servies avec vos sauces de trempage au choix.',
         de: 'Zarte Streifen von Hühnerbrust, paniert und zu goldbrauner Knusprigkeit frittiert, werden mit Ihren gewählten Dip-Saucen serviert.',
         bn: 'চিকেন ব্রেস্টের নরম স্ট্রিপ, ব্রেড করা এবং কুড়কুড়ে সোনালি বাদামী রঙে ভাজা, আপনার পছন্দের ডিপিং সস দিয়ে পরিবেশিত।',
-        ko: '치킨 브레스트의 부드러운 스트립을 빵가루로 입혀서 바삭한 황금빛 갈색으로 튀겨, 원하는 디핑 소스와 함께 제공됩니다.'
+        ko: '치킨 브레스트의 부드러운 스트립을 빵가루로 입혀서 바삭한 황금빛 갈색으로 튀겨, 원하는 디핑 소스와 함께 제공됩니다.',
+        bs: 'Nežne trake pilećih prsa, panirane i pržene do hrskave zlatno-smeđe boje, poslužuju se s umacima za umakanje po vašem izboru.',
+        zh: '嫩鸡胸肉条，裹面包屑油炸至酥脆金棕色，配您选择的蘸酱。',
+        ro: 'Fâșii fragede de piept de pui, pane și prăjite până la o culoare aurie crocantă, servite cu sosurile de înmuiat la alegere.',
+        uk: 'Ніжні смужки курячих грудок, панировані та смажені до хрусткого золотисто-коричневого кольору, подаються з соусами на ваш вибір.',
+        vi: 'Những miếng thịt ức gà mềm, tẩm bột mì và chiên đến màu vàng nâu giòn, được phục vụ với các loại nước sốt chấm theo lựa chọn của bạn.'
       }, 
       price: '$9.49', 
       category: 'kids', 
@@ -3515,7 +3885,12 @@ const FullMenuPage = () => {
         fr: 'Frites',
         de: 'Pommes',
         bn: 'ফ্রাইজ',
-        ko: '감자튀김'
+        ko: '감자튀김',
+        bs: 'Pomfrit',
+        zh: '薯条',
+        ro: 'Cartofi Prăjiți',
+        uk: 'Картопля фрі',
+        vi: 'Khoai Tây Chiên'
       }, 
       description: { 
         en: 'Crispy, golden-brown potato fries, seasoned to perfection and served hot.',
@@ -3532,7 +3907,12 @@ const FullMenuPage = () => {
         fr: 'Frites croustillantes et dorées, parfaitement assaisonnées et servies chaudes.',
         de: 'Knusprige, goldbraune Kartoffelpommes, perfekt gewürzt und heiß serviert.',
         bn: 'কুড়কুড়ে, সোনালি-বাদামী আলুর ফ্রাই, নিখুঁততার সাথে মসলা দেওয়া এবং গরম পরিবেশিত।',
-        ko: '바삭하고 황금빛 갈색의 감자튀김으로, 완벽하게 양념되어 뜨겁게 제공됩니다.'
+        ko: '바삭하고 황금빛 갈색의 감자튀김으로, 완벽하게 양념되어 뜨겁게 제공됩니다.',
+        bs: 'Hrskav, zlatno-smeđi pomfrit, savršeno začinjen i poslužen vruć.',
+        zh: '酥脆的金棕色薯条，调味完美，热腾腾上桌。',
+        ro: 'Cartofi prăjiți crocanti, aurii-maronii, condimentați la perfecție și serviți fierbinți.',
+        uk: 'Хрустка золотисто-коричнева картопля фрі, ідеально приправлена і подана гарячою.',
+        vi: 'Khoai tây chiên giòn, màu vàng nâu, được nêm nếm hoàn hảo và phục vụ nóng.'
       }, 
       price: '$6.99', 
       category: 'kids', 
@@ -3549,8 +3929,8 @@ const FullMenuPage = () => {
         ku: 'شیش کەبابی هەولێر',
         tr: 'Erbil Şiş Kebab',
         ur: 'اربیل شیش کباب',
-        kmr: 'Şişê Hewlêrê',
-        es: 'Shish Kebab de Erbil',
+        kmr: 'Şîş Kebabê Hewlêrê',
+        es: 'Shish Kabab de Erbil',
         ru: 'Шиш-кебаб Эрбиль',
         hi: 'एर्बिल शीश कबाब',
         sq: 'Shish Kabab Erbil',
@@ -3558,15 +3938,11 @@ const FullMenuPage = () => {
         de: 'Erbil Spiess-Kebab',
         bn: 'এরবিল শিশ কাবাব',
         ko: '어빌 시시 카밥',
-        kmr: 'Şîş Kebabê Hewlêrê',
-        es: 'Shish Kabab de Erbil',
-        ru: 'Шиш-кебаб Эрбиль',
-        hi: 'एर्बिल शीश कबाब',
-        sq: 'Shish Kabab Erbil',
-        fr: 'Brochette Erbil',
-        de: 'Erbil Spießbraten',
-        bn: 'এরবিল শিশ কাবাব',
-        ko: '어빌 시시 카밥'
+        bs: 'Erbil Šiš Ćevap',
+        zh: '埃尔比勒烤肉串',
+        ro: 'Shish Kebab Erbil',
+        uk: 'Ербільський шиш-кебаб',
+        vi: 'Thịt Nướng Xiên Erbil'
       }, 
       description: { 
         en: 'This dish features mildly spiced mini beef kabab skewers specially prepared for kids, served with creamy mashed potatoes.',
@@ -3583,7 +3959,12 @@ const FullMenuPage = () => {
         fr: 'Ce plat présente des mini-brochettes de bœuf légèrement épicées spécialement préparées pour les enfants, servies avec une purée de pommes de terre crémeuse.',
         de: 'Dieses Gericht bietet mild gewürzte Mini-Rindfleisch-Kebab-Spieße, die speziell für Kinder zubereitet werden, serviert mit cremigem Kartoffelpüree.',
         bn: 'এই পদে হালকা মসলাযুক্ত মিনি বিফ কাবাব স্কিউয়ার রয়েছে যা বিশেষভাবে শিশুদের জন্য প্রস্তুত করা হয়, ক্রিমি ম্যাশড আলুর সাথে পরিবেশিত।',
-        ko: '이 요리는 아이들을 위해 특별히 준비된 부드럽게 양념한 미니 소고기 카밥 꼬치로, 크리미한 으깬 감자와 함께 제공됩니다.'
+        ko: '이 요리는 아이들을 위해 특별히 준비된 부드럽게 양념한 미니 소고기 카밥 꼬치로, 크리미한 으깬 감자와 함께 제공됩니다.',
+        bs: 'Ovo jelo sadrži blago začinjene mini ćevape od govedine posebno pripremljene za djecu, poslužene s kremastim pireom od krumpira.',
+        zh: '这道菜的特色是温和调味的迷你牛肉烤串，专为儿童准备，配奶油土豆泥。',
+        ro: 'Acest fel de mâncare conține mini-frigarui de vită ușor condimentate, special preparate pentru copii, servite cu piure de cartofi cremos.',
+        uk: 'Ця страва містить м\'яко приправлені міні-шашлики з яловичини, спеціально приготовані для дітей, подаються з кремовим картопляним пюре.',
+        vi: 'Món này có các xiên thịt bò mini nêm nhẹ đặc biệt được chuẩn bị cho trẻ em, phục vụ với khoai tây nghiền kem.'
       }, 
       price: '$16.99', 
       category: 'kids', 
@@ -3608,7 +3989,12 @@ const FullMenuPage = () => {
         fr: 'Brochette de Poulet',
         de: 'Hähnchen-Kebab',
         bn: 'চিকেন কাবাব',
-        ko: '치킨 카밥'
+        ko: '치킨 카밥',
+        bs: 'Piletina Ćevap',
+        zh: '鸡肉烤串',
+        ro: 'Kebab de Pui',
+        uk: 'Курячий кебаб',
+        vi: 'Thịt Gà Nướng Xiên'
       }, 
       description: { 
         en: 'Mildly spiced mini chicken kabab skewers specially prepared for kids, served with creamy mashed potatoes.',
@@ -3625,7 +4011,12 @@ const FullMenuPage = () => {
         fr: 'Mini-brochettes de poulet légèrement épicées spécialement préparées pour les enfants, servies avec une purée de pommes de terre crémeuse.',
         de: 'Mild gewürzte Mini-Hähnchen-Kebab-Spieße, die speziell für Kinder zubereitet werden, serviert mit cremigem Kartoffelpüree.',
         bn: 'হালকা মসলাযুক্ত মিনি চিকেন কাবাব স্কিউয়ার যা বিশেষভাবে শিশুদের জন্য প্রস্তুত করা হয়, ক্রিমি ম্যাশড আলুর সাথে পরিবেশিত।',
-        ko: '아이들을 위해 특별히 준비된 부드럽게 양념한 미니 치킨 카밥 꼬치로, 크리미한 으깬 감자와 함께 제공됩니다.'
+        ko: '아이들을 위해 특별히 준비된 부드럽게 양념한 미니 치킨 카밥 꼬치로, 크리미한 으깬 감자와 함께 제공됩니다.',
+        bs: 'Blago začinjeni mini ćevapi od piletine posebno pripremljeni za djecu, posluženi s kremastim pireom od krumpira.',
+        zh: '温和调味的迷你鸡肉烤串，专为儿童准备，配奶油土豆泥。',
+        ro: 'Mini-frigarui de pui ușor condimentate, special preparate pentru copii, servite cu piure de cartofi cremos.',
+        uk: 'М\'яко приправлені міні-шашлики з курки, спеціально приготовані для дітей, подаються з кремовим картопляним пюре.',
+        vi: 'Các xiên thịt gà mini nêm nhẹ đặc biệt được chuẩn bị cho trẻ em, phục vụ với khoai tây nghiền kem.'
       }, 
       price: '$15.99', 
       category: 'kids', 
@@ -3652,7 +4043,12 @@ const FullMenuPage = () => {
         fr: 'Riz au Safran',
         de: 'Safranreis',
         bn: 'জাফরান ভাত',
-        ko: '사프란 라이스'
+        ko: '사프란 라이스',
+        bs: 'Šafranovi Rižot',
+        zh: '藏红花米饭',
+        ro: 'Orez cu Șofran',
+        uk: 'Шафрановий рис',
+        vi: 'Cơm Nghệ Tây'
       }, 
       price: '$3.99', 
       category: 'sides', 
@@ -3676,7 +4072,12 @@ const FullMenuPage = () => {
         fr: 'Purée de Pommes de Terre Crémeuse',
         de: 'Cremiges Kartoffelpüree',
         bn: 'ক্রিমি ম্যাশড আলু',
-        ko: '크리미한 으깬 감자'
+        ko: '크리미한 으깬 감자',
+        bs: 'Kremasti Pire od Krumpira',
+        zh: '奶油土豆泥',
+        ro: 'Piure Cremos de Cartofi',
+        uk: 'Кремове картопляне пюре',
+        vi: 'Khoai Tây Nghiền Kem'
       }, 
       price: '$6.99', 
       category: 'sides', 
@@ -3700,7 +4101,12 @@ const FullMenuPage = () => {
         fr: 'Frites',
         de: 'Pommes Frites',
         bn: 'ফ্রাইজ',
-        ko: '프렌치 프라이'
+        ko: '프렌치 프라이',
+        bs: 'Pomfrit',
+        zh: '薯条',
+        ro: 'Cartofi Prăjiți',
+        uk: 'Картопля фрі',
+        vi: 'Khoai Tây Chiên'
       }, 
       price: '$6.99', 
       category: 'sides', 
@@ -3725,7 +4131,12 @@ const FullMenuPage = () => {
         fr: 'Salade d\'Accompagnement',
         de: 'Beilagensalat',
         bn: 'সাইড সালাদ',
-        ko: '사이드 샐러드'
+        ko: '사이드 샐러드',
+        bs: 'Priložna Salata',
+        zh: '配菜沙拉',
+        ro: 'Salată de Garnitură',
+        uk: 'Салат на гарнір',
+        vi: 'Salad Phụ'
       }, 
       price: '$7.99', 
       category: 'sides', 
@@ -3752,7 +4163,12 @@ const FullMenuPage = () => {
         fr: 'Eau',
         de: 'Wasser',
         bn: 'পানি',
-        ko: '물'
+        ko: '물',
+        bs: 'Voda',
+        zh: '水',
+        ro: 'Apă',
+        uk: 'Вода',
+        vi: 'Nước'
       }, 
       description: { 
         en: 'Fresh bottled water.',
@@ -3769,7 +4185,12 @@ const FullMenuPage = () => {
         fr: 'Eau embouteillée fraîche.',
         de: 'Frisches Flaschenwasser.',
         bn: 'তাজা বোতলজাত পানি।',
-        ko: '신선한 생수.'
+        ko: '신선한 생수.',
+        bs: 'Svježa flaširana voda.',
+        zh: '新鲜瓶装水。',
+        ro: 'Apă îmbuteliată proaspătă.',
+        uk: 'Свіжа бутильована вода.',
+        vi: 'Nước đóng chai tươi.'
       }, 
       price: '$1.49', 
       category: 'drinks_cold', 
@@ -4542,7 +4963,12 @@ const FullMenuPage = () => {
         fr: 'Salade Grecque',
         de: 'Griechischer Salat',
         bn: 'গ্রিক সালাদ',
-        ko: '그리스 샐러드'
+        ko: '그리스 샐러드',
+        bs: 'Grčka Salata',
+        zh: '希腊沙拉',
+        ro: 'Salată Grecească',
+        uk: 'Грецький салат',
+        vi: 'Salad Hy Lạp'
       }, 
       description: { 
         en: 'A classic Greek salad made with spring mix, tomatoes, cucumbers, onions, Kalamata olives, Feta cheese and Greek vinaigrette.',
@@ -4559,7 +4985,12 @@ const FullMenuPage = () => {
         fr: 'Salade grecque classique préparée avec mélange printanier, tomates, concombres, oignons, olives Kalamata, fromage Feta et vinaigrette grecque.',
         de: 'Klassischer griechischer Salat mit Frühlings-Mix, Tomaten, Gurken, Zwiebeln, Kalamata-Oliven, Feta-Käse und griechischer Vinaigrette.',
         bn: 'স্প্রিং মিক্স, টমেটো, শসা, পেঁয়াজ, কালামাটা অলিভ, ফেটা চিজ এবং গ্রিক ভিনাইগ্রেট দিয়ে তৈরি ক্লাসিক গ্রিক সালাদ।',
-        ko: '스프링 믹스, 토마토, 오이, 양파, 칼라마타 올리브, 페타 치즈, 그리스 비네그레트로 만든 클래식 그리스 샐러드입니다.'
+        ko: '스프링 믹스, 토마토, 오이, 양파, 칼라마타 올리브, 페타 치즈, 그리스 비네그레트로 만든 클래식 그리스 샐러드입니다.',
+        bs: 'Klasična grčka salata napravljena od proljetne mješavine, rajčica, krastavaca, luka, Kalamata maslina, Feta sira i grčke vinegrete.',
+        zh: '经典希腊沙拉，由春季混合菜、番茄、黄瓜、洋葱、卡拉马塔橄榄、菲达奶酪和希腊油醋汁制成。',
+        ro: 'Salată grecească clasică făcută cu amestec de primăvară, roșii, castraveți, ceapă, măsline Kalamata, brânză Feta și vinaigretă grecească.',
+        uk: 'Класичний грецький салат з весняної суміші, помідорів, огірків, цибулі, оливок каламата, сиру фета та грецького соусу-вінегрет.',
+        vi: 'Salad Hy Lạp cổ điển làm từ hỗn hợp rau mùa xuân, cà chua, dưa chuột, hành tây, ô liu Kalamata, phô mai Feta và nước sốt giấm Hy Lạp.'
       }, 
       image: '/Greek Salad.jpg',
       price: '$14.99', 
@@ -4581,7 +5012,13 @@ const FullMenuPage = () => {
           sq: 'Shto Proteinë',
           fr: 'Ajouter des Protéines',
           de: 'Protein hinzufügen',
-          bn: 'প্রোটিন যোগ করুন'
+          bn: 'প্রোটিন যোগ করুন',
+          ko: '단백질 추가',
+          bs: 'Dodaj Protein',
+          zh: '添加蛋白质',
+          ro: 'Adaugă Proteine',
+          uk: 'Додати білок',
+          vi: 'Thêm Protein'
         }, 
         options: [ 
           { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch' }, price: '$9.99' }, 
@@ -4608,7 +5045,12 @@ const FullMenuPage = () => {
         fr: 'Salade Fattoush',
         de: 'Fattoush Salat',
         bn: 'ফাতুশ সালাদ',
-        ko: '파투시 샐러드'
+        ko: '파투시 샐러드',
+        bs: 'Fattoush Salata',
+        zh: '法图什沙拉',
+        ro: 'Salată Fattoush',
+        uk: 'Салат Фаттуш',
+        vi: 'Salad Fattoush'
       }, 
       description: { 
         en: 'A delicious Middle Eastern salad made with lettuce, tomatoes, cucumbers, bell peppers, fresh mint, parsley, crispy pita bread, and pomegranate molasses dressing.',
@@ -4625,7 +5067,12 @@ const FullMenuPage = () => {
         fr: 'Une délicieuse salade du Moyen-Orient préparée avec laitue, tomates, concombres, poivrons doux, menthe fraîche, persil, pain pita croustillant et vinaigrette à la mélasse de grenade.',
         de: 'Ein köstlicher nahöstlicher Salat aus Kopfsalat, Tomaten, Gurken, Paprika, frischer Minze, Petersilie, knusprigem Pita-Brot und Granatapfelmelasse-Dressing.',
         bn: 'লেটুস, টমেটো, শসা, বেল পেপার, তাজা পুদিনা, পার্সলে, কুরকুরে পিটা ব্রেড এবং ডালিমের মোলাসেস ড্রেসিং দিয়ে তৈরি সুস্বাদু মধ্যপ্রাচ্যের সালাদ।',
-        ko: '상추, 토마토, 오이, 피망, 신선한 민트, 파슬리, 바삭한 피타 빵, 석류 당밀 드레싱으로 만든 맛있는 중동 샐러드입니다.'
+        ko: '상추, 토마토, 오이, 피망, 신선한 민트, 파슬리, 바삭한 피타 빵, 석류 당밀 드레싱으로 만든 맛있는 중동 샐러드입니다.',
+        bs: 'Ukusna bliskoistočna salata napravljena od salate, rajčica, krastavaca, paprika, svježe mente, peršina, hrskavog pita kruha i preliva od šipkovog melasa.',
+        zh: '美味的中东沙拉，由生菜、番茄、黄瓜、甜椒、新鲜薄荷、欧芹、酥脆皮塔饼和石榴糖浆调味汁制成。',
+        ro: 'O salată delicioasă din Orientul Mijlociu făcută cu salată verde, roșii, castraveți, ardei dulci, mentă proaspătă, pătrunjel, pâine pita crocantă și dressing de melasă de rodie.',
+        uk: 'Смачний близькосхідний салат з салату, помідорів, огірків, солодкого перцю, свіжої мʼяти, петрушки, хрусткого хліба піта та заправки з гранатової патоки.',
+        vi: 'Salad Trung Đông ngon được làm từ rau diếp, cà chua, dưa chuột, ớt chuông, bạc hà tươi, rau mùi tây, bánh mì pita giòn và nước sốt mật ong lựu.'
       }, 
       image: '/Fattoush Salad.jpg',
       price: '$14.99', 
@@ -4674,7 +5121,12 @@ const FullMenuPage = () => {
         fr: 'Salade Shiwan',
         de: 'Shwan Salat',
         bn: 'শিওয়ান সালাদ',
-        ko: '시완 샐러드'
+        ko: '시완 샐러드',
+        bs: 'Šivan Salata',
+        zh: '希万沙拉',
+        ro: 'Salată Shiwan',
+        uk: 'Салат Шиван',
+        vi: 'Salad Shwan'
       }, 
       description: { 
         en: 'A refreshing Turkish salad made with tomatoes, cucumbers, green peppers, onions, parsley, and walnuts, seasoned with olive oil and lemon juice.',
@@ -4691,7 +5143,12 @@ const FullMenuPage = () => {
         fr: 'Une salade turque rafraîchissante préparée avec tomates, concombres, poivrons verts, oignons, persil et noix, assaisonnée à l\'huile d\'olive et au jus de citron.',
         de: 'Ein erfrischender türkischer Salat aus Tomaten, Gurken, grünen Paprika, Zwiebeln, Petersilie und Walnüssen, gewürzt mit Olivenöl und Zitronensaft.',
         bn: 'টমেটো, শসা, সবুজ মরিচ, পেঁয়াজ, পার্সলে এবং আখরোট দিয়ে তৈরি সতেজকারী তুর্কি সালাদ, অলিভ অয়েল এবং লেবুর রস দিয়ে মসলাযুক্ত।',
-        ko: '토마토, 오이, 피망, 양파, 파슬리, 호두로 만든 상쾌한 터키식 샐러드로, 올리브 오일과 레몬 주스로 양념합니다.'
+        ko: '토마토, 오이, 피망, 양파, 파슬리, 호두로 만든 상쾌한 터키식 샐러드로, 올리브 오일과 레몬 주스로 양념합니다.',
+        bs: 'Osvježavajuća turska salata napravljena od rajčica, krastavaca, zelene paprike, luka, peršina i oraha, začinjena maslinovim uljem i limunovim sokom.',
+        zh: '清爽的土耳其沙拉，由番茄、黄瓜、青椒、洋葱、欧芹和核桃制成，用橄榄油和柠檬汁调味。',
+        ro: 'O salată turcească revigorantă făcută cu roșii, castraveți, ardei verzi, ceapă, pătrunjel și nuci, condimentată cu ulei de măsline și suc de lămâie.',
+        uk: 'Освіжаючий турецький салат з помідорів, огірків, зеленого перцю, цибулі, петрушки та волоських горіхів, заправлений оливковою олією та лимонним соком.',
+        vi: 'Salad Thổ Nhĩ Kỳ tươi mát làm từ cà chua, dưa chuột, ớt xanh, hành tây, rau mùi tây và óc chó, nêm bằng dầu ô liu và nước cốt chanh.'
       }, 
       image: '/Shwan Salad.jpg',
       price: '$14.99', 
@@ -4738,7 +5195,12 @@ const FullMenuPage = () => {
         fr: 'Salade Tabbouleh',
         de: 'Tabbouleh-Salat',
         bn: 'তাবুলেহ সালাদ',
-        ko: '타불레 샐러드'
+        ko: '타불레 샐러드',
+        bs: 'Tabbouleh Salata',
+        zh: '塔布勒沙拉',
+        ro: 'Salată Tabbouleh',
+        uk: 'Салат Табуле',
+        vi: 'Salad Tabbouleh'
       }, 
       description: { 
         en: 'A Levantine salad of finely chopped parsley, soaked extra fine bulgur, tomatoes, mint, onion, and scallions, seasoned with olive oil, lemon juice, salt and black pepper.',
@@ -4755,7 +5217,12 @@ const FullMenuPage = () => {
         fr: 'Salade levantine de persil finement haché, boulgour extra-fin trempé, tomates, menthe, oignon et échalotes, assaisonnée avec huile d\'olive, jus de citron, sel et poivre noir.',
         de: 'Levantinischer Salat aus fein gehackter Petersilie, eingeweichtem extra-feinem Bulgur, Tomaten, Minze, Zwiebeln und Frühlingszwiebeln, gewürzt mit Olivenöl, Zitronensaft, Salz und schwarzem Pfeffer.',
         bn: 'সূক্ষ্ম কাটা পার্সলে, ভেজানো অতি সূক্ষ্ম বুলগুর, টমেটো, পুদিনা, পেঁয়াজ এবং স্কালিয়ন দিয়ে তৈরি লেভান্তাইন সালাদ, অলিভ অয়েল, লেবুর রস, লবণ এবং কালো মরিচ দিয়ে মসলাযুক্ত।',
-        ko: '잘게 다진 파슬리, 불린 극세 불구르, 토마토, 민트, 양파, 파로 만든 레반트 샐러드로, 올리브 오일, 레몬 주스, 소금, 후춧가루로 양념했습니다.'
+        ko: '잘게 다진 파슬리, 불린 극세 불구르, 토마토, 민트, 양파, 파로 만든 레반트 샐러드로, 올리브 오일, 레몬 주스, 소금, 후춧가루로 양념했습니다.',
+        bs: 'Levantinska salata od sitno sjeckanog peršina, potopljenog izuzetno finog bulgura, rajčica, mente, luka i mladog luka, začinjena maslinovim uljem, limunovim sokom, solju i crnim biberom.',
+        zh: '黎凡特沙拉，由切细的欧芹、泡发的特细布格麦、番茄、薄荷、洋葱和韭葱制成，用橄榄油、柠檬汁、盐和黑胡椒调味。',
+        ro: 'Salată levantină din pătrunjel tăiat fin, bulgur extra-fin înmuiat, roșii, mentă, ceapă și ceapă verde, condimentată cu ulei de măsline, suc de lămâie, sare și piper negru.',
+        uk: 'Левантійський салат з дрібно нарізаної петрушки, замоченого надтонкого булгуру, помідорів, мʼяти, цибулі та зеленої цибулі, приправлений оливковою олією, лимонним соком, сіллю та чорним перцем.',
+        vi: 'Salad Levantine làm từ rau mùi tây thái nhỏ, bulgur siêu mịn đã ngâm, cà chua, bạc hà, hành tây và hành lá, nêm với dầu ô liu, nước cốt chanh, muối và tiêu đen.'
       }, 
       image: '/Tabbouleh Salad.jpg',
       price: '$14.99', 
