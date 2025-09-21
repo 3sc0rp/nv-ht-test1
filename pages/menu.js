@@ -32,6 +32,7 @@ const FullMenuPage = () => {
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
   const [showOrderModal, setShowOrderModal] = useState(false)
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const reducedMotion = useReducedMotion()
 
   // Use shared language config
@@ -253,6 +254,125 @@ const FullMenuPage = () => {
     
     return result;
   }, [language]);
+
+  // Helper functions for carousel SVG icons
+  const getSVGGradient = useCallback((placeholder) => {
+    const gradients = {
+      salmon: 'bg-gradient-to-br from-pink-400 to-orange-500',
+      salad: 'bg-gradient-to-br from-green-400 to-emerald-500',
+      steak: 'bg-gradient-to-br from-red-500 to-amber-600',
+      pasta: 'bg-gradient-to-br from-yellow-400 to-amber-500',
+      cake: 'bg-gradient-to-br from-pink-400 to-purple-500',
+      wings: 'bg-gradient-to-br from-orange-400 to-red-500',
+      curry: 'bg-gradient-to-br from-yellow-500 to-orange-600',
+      tacos: 'bg-gradient-to-br from-green-400 to-yellow-500',
+      smoothie: 'bg-gradient-to-br from-purple-400 to-pink-500',
+      bread: 'bg-gradient-to-br from-amber-400 to-orange-500'
+    };
+    return gradients[placeholder] || 'bg-gradient-to-br from-amber-400 to-orange-500';
+  }, []);
+
+  const getSVGIcon = useCallback((placeholder, size = 40) => {
+    const iconClass = "text-white drop-shadow-sm";
+    const icons = {
+      salmon: (
+        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
+          <ellipse cx="50" cy="50" rx="35" ry="20" fill="currentColor" opacity="0.4"/>
+          <ellipse cx="45" cy="50" rx="25" ry="15" fill="currentColor" opacity="0.6"/>
+          <polygon points="75,50 85,40 85,60" fill="currentColor" opacity="0.8"/>
+          <circle cx="40" cy="45" r="3" fill="currentColor"/>
+          <path d="M25 45 Q35 40 25 50 Q35 55 25 50" fill="currentColor" opacity="0.6"/>
+        </svg>
+      ),
+      salad: (
+        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
+          <circle cx="50" cy="55" r="30" fill="currentColor" opacity="0.3"/>
+          <circle cx="40" cy="40" r="8" fill="currentColor" opacity="0.7"/>
+          <circle cx="60" cy="45" r="6" fill="currentColor" opacity="0.8"/>
+          <circle cx="50" cy="65" r="5" fill="currentColor" opacity="0.6"/>
+          <circle cx="35" cy="60" r="4" fill="currentColor" opacity="0.5"/>
+          <circle cx="65" cy="60" r="7" fill="currentColor" opacity="0.7"/>
+        </svg>
+      ),
+      steak: (
+        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
+          <ellipse cx="50" cy="50" rx="30" ry="25" fill="currentColor" opacity="0.4"/>
+          <ellipse cx="50" cy="50" rx="25" ry="20" fill="currentColor" opacity="0.6"/>
+          <path d="M30 40 Q50 35 70 40 Q70 60 50 65 Q30 60 30 40" fill="currentColor" opacity="0.8"/>
+          <circle cx="45" cy="45" r="2" fill="currentColor"/>
+          <circle cx="55" cy="50" r="2" fill="currentColor"/>
+        </svg>
+      ),
+      pasta: (
+        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
+          <path d="M30 30 Q50 20 70 30 Q65 50 50 60 Q35 50 30 30" fill="currentColor" opacity="0.4"/>
+          <path d="M35 35 Q50 25 65 35 Q60 50 50 55 Q40 50 35 35" fill="currentColor" opacity="0.6"/>
+          <circle cx="50" cy="45" r="15" fill="currentColor" opacity="0.3"/>
+          <path d="M40 40 Q50 35 60 40" stroke="currentColor" strokeWidth="2" fill="none"/>
+          <path d="M42 50 Q50 45 58 50" stroke="currentColor" strokeWidth="2" fill="none"/>
+        </svg>
+      ),
+      cake: (
+        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
+          <rect x="25" y="40" width="50" height="35" rx="5" fill="currentColor" opacity="0.4"/>
+          <rect x="30" y="45" width="40" height="25" rx="3" fill="currentColor" opacity="0.6"/>
+          <rect x="35" y="50" width="30" height="15" rx="2" fill="currentColor" opacity="0.8"/>
+          <circle cx="45" cy="35" r="3" fill="currentColor"/>
+          <circle cx="55" cy="35" r="3" fill="currentColor"/>
+          <path d="M40 30 Q50 25 60 30" stroke="currentColor" strokeWidth="2" fill="none"/>
+        </svg>
+      ),
+      wings: (
+        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
+          <ellipse cx="45" cy="50" rx="20" ry="12" fill="currentColor" opacity="0.4"/>
+          <ellipse cx="55" cy="50" rx="20" ry="12" fill="currentColor" opacity="0.4"/>
+          <ellipse cx="45" cy="50" rx="15" ry="8" fill="currentColor" opacity="0.6"/>
+          <ellipse cx="55" cy="50" rx="15" ry="8" fill="currentColor" opacity="0.6"/>
+          <circle cx="40" cy="47" r="2" fill="currentColor"/>
+          <circle cx="60" cy="47" r="2" fill="currentColor"/>
+        </svg>
+      ),
+      curry: (
+        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
+          <circle cx="50" cy="55" r="25" fill="currentColor" opacity="0.3"/>
+          <circle cx="50" cy="55" r="20" fill="currentColor" opacity="0.5"/>
+          <circle cx="45" cy="50" r="3" fill="currentColor" opacity="0.8"/>
+          <circle cx="55" cy="52" r="4" fill="currentColor" opacity="0.7"/>
+          <circle cx="50" cy="60" r="2" fill="currentColor" opacity="0.9"/>
+          <path d="M35 45 Q50 40 65 45" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.6"/>
+        </svg>
+      ),
+      tacos: (
+        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
+          <path d="M30 60 Q50 40 70 60 Q50 70 30 60" fill="currentColor" opacity="0.4"/>
+          <path d="M35 58 Q50 45 65 58 Q50 65 35 58" fill="currentColor" opacity="0.6"/>
+          <circle cx="45" cy="55" r="2" fill="currentColor"/>
+          <circle cx="55" cy="55" r="2" fill="currentColor"/>
+          <circle cx="50" cy="52" r="1.5" fill="currentColor"/>
+        </svg>
+      ),
+      smoothie: (
+        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
+          <rect x="35" y="35" width="30" height="40" rx="5" fill="currentColor" opacity="0.3"/>
+          <rect x="38" y="38" width="24" height="34" rx="3" fill="currentColor" opacity="0.5"/>
+          <circle cx="50" cy="45" r="8" fill="currentColor" opacity="0.7"/>
+          <circle cx="45" cy="55" r="4" fill="currentColor" opacity="0.6"/>
+          <circle cx="55" cy="60" r="3" fill="currentColor" opacity="0.8"/>
+          <rect x="45" y="25" width="10" height="10" rx="2" fill="currentColor" opacity="0.4"/>
+        </svg>
+      ),
+      bread: (
+        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
+          <ellipse cx="50" cy="55" rx="25" ry="15" fill="currentColor" opacity="0.4"/>
+          <ellipse cx="50" cy="50" rx="20" ry="12" fill="currentColor" opacity="0.6"/>
+          <circle cx="45" cy="48" r="2" fill="currentColor" opacity="0.8"/>
+          <circle cx="55" cy="50" r="2" fill="currentColor" opacity="0.8"/>
+          <circle cx="50" cy="45" r="1.5" fill="currentColor" opacity="0.7"/>
+        </svg>
+      )
+    };
+    return icons[placeholder] || icons.bread;
+  }, []);
 
   // Enhanced carousel state management with viewport tracking
   const [currentDishIndex, setCurrentDishIndex] = useState(0);
@@ -952,6 +1072,7 @@ const FullMenuPage = () => {
         drinks_hot: 'Drinks (Hot)', 
         soup: 'Soups', 
         dessert: 'Desserts', 
+        fish: 'Fish',
         popular: 'Most Popular' 
       },
       addProtein: 'Add Protein',
@@ -968,6 +1089,18 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'Our Most Popular Dishes',
       scrollDownText: 'Scroll down to explore menu',
+      carousel: {
+        popularDishes: 'Popular dishes carousel',
+        previousDish: 'Previous dish',
+        nextDish: 'Next dish',
+        pauseSlideshow: 'Pause slideshow',
+        playSlideshow: 'Play slideshow',
+        goToSlide: 'Go to',
+        slideOf: 'slide',
+        of: 'of',
+        arrowKeyLeft: '← Arrow Key',
+        arrowKeyRight: '→ Arrow Key'
+      },
       notice: 'Notice:',
       foodSafetyNotice: 'Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions.',
       footer: {
@@ -1013,6 +1146,7 @@ const FullMenuPage = () => {
         drinks_hot: 'خواردنەوەکان (گەرەم)', 
         soup: 'شۆربە', 
         dessert: 'شیرینی', 
+        fish: 'ماسی',
         popular: 'بەناوبانگترین' 
       },
       addProtein: 'پرۆتین زیادبکە',
@@ -1029,6 +1163,18 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'بەناوبانگترین خۆراکەکانمان',
       scrollDownText: 'بۆ گەڕان لە مێنیو بەرەو خوارەوە بچۆ',
+      carousel: {
+        popularDishes: 'گەڕانی خۆراکە بەناوبانگەکان',
+        previousDish: 'خۆراکی پێشوو',
+        nextDish: 'خۆراکی دواتر',
+        pauseSlideshow: 'ڕاگرتنی نمایش',
+        playSlideshow: 'کردنەوەی نمایش',
+        goToSlide: 'بڕۆ بۆ',
+        slideOf: 'سلایدی',
+        of: 'لە',
+        arrowKeyLeft: '← دوگمەی تیر',
+        arrowKeyRight: '→ دوگمەی تیر'
+      },
       footer: {
         description: 'تامە ڕەسەنەکان و میوانداری گەرمی ڕۆژهەڵاتی ناوەڕاست بۆ مێزەکەتان دەهێنین. هەر خۆراکێک ئاهەنگێکە بۆ میراتی دەوڵەمەندی کولتوریمان و باشی ئاشپەزییەکەمان.',
         quickLinks: 'بەستەری خێرا',
@@ -1074,6 +1220,7 @@ const FullMenuPage = () => {
         drinks_hot: 'المشروبات (ساخنة)', 
         soup: 'شوربات', 
         dessert: 'حلويات', 
+        fish: 'السمك',
         popular: 'الأكثر شهرة' 
       },
       addProtein: 'إضافة بروتين',
@@ -1090,6 +1237,18 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'أطباقنا الأكثر شهرة',
       scrollDownText: 'مرر لأسفل لاستكشاف القائمة',
+      carousel: {
+        popularDishes: 'دوار الأطباق الشائعة',
+        previousDish: 'الطبق السابق',
+        nextDish: 'الطبق التالي',
+        pauseSlideshow: 'إيقاف العرض',
+        playSlideshow: 'تشغيل العرض',
+        goToSlide: 'اذهب إلى',
+        slideOf: 'شريحة',
+        of: 'من',
+        arrowKeyLeft: '← مفتاح السهم',
+        arrowKeyRight: '→ مفتاح السهم'
+      },
       footer: {
         description: 'نقدم النكهات الأصيلة والضيافة الدافئة من الشرق الأوسط إلى طاولتك. كل طبق هو احتفال بتراثنا الثقافي الغني وتميزنا في الطهي.',
         quickLinks: 'روابط سريعة',
@@ -1135,6 +1294,7 @@ const FullMenuPage = () => {
         drinks_hot: 'نوشیدنی‌ها (گرم)', 
         soup: 'سوپ‌ها', 
         dessert: 'دسرها', 
+        fish: 'ماهی',
         popular: 'محبوب‌ترین' 
       },
       addProtein: 'اضافه کردن پروتین',
@@ -1151,6 +1311,18 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'محبوب‌ترین غذاهای ما',
       scrollDownText: 'برای کاوش منو پایین بروید',
+      carousel: {
+        popularDishes: 'چرخش غذاهای محبوب',
+        previousDish: 'غذای قبلی',
+        nextDish: 'غذای بعدی',
+        pauseSlideshow: 'توقف نمایش',
+        playSlideshow: 'شروع نمایش',
+        goToSlide: 'برو به',
+        slideOf: 'اسلاید',
+        of: 'از',
+        arrowKeyLeft: '← کلید پیکان',
+        arrowKeyRight: '→ کلید پیکان'
+      },
       footer: {
         description: 'طعم‌های اصیل و مهمان‌نوازی گرم خاورمیانه را به میز شما می‌آوریم. هر غذا جشنی از میراث فرهنگی غنی و تعالی آشپزی ماست.',
         quickLinks: 'لینک‌های سریع',
@@ -1196,6 +1368,7 @@ const FullMenuPage = () => {
         drinks_hot: 'İçecekler (Sıcak)', 
         soup: 'Çorbalar', 
         dessert: 'Tatlılar', 
+        fish: 'Balık',
         popular: 'En Popüler' 
       },
       addProtein: 'Protein Ekle',
@@ -1212,6 +1385,18 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'En Popüler Yemeklerimiz',
       scrollDownText: 'Menüyü keşfetmek için aşağı kaydırın',
+      carousel: {
+        popularDishes: 'Popüler yemek döngüsü',
+        previousDish: 'Önceki yemek',
+        nextDish: 'Sonraki yemek',
+        pauseSlideshow: 'Gösteriyi durdur',
+        playSlideshow: 'Gösteriyi oynat',
+        goToSlide: 'Git',
+        slideOf: 'slaydı',
+        of: 'of',
+        arrowKeyLeft: '← Ok tuşu',
+        arrowKeyRight: '→ Ok tuşu'
+      },
       footer: {
         description: 'Orta Doğu\'nun özgün lezzetlerini ve sıcak misafirperverliğini masanıza getiriyoruz. Her yemek zengin kültürel mirasımızın ve mutfak mükemmelliğimizin bir kutlamasıdır.',
         quickLinks: 'Hızlı Bağlantılar',
@@ -1257,6 +1442,7 @@ const FullMenuPage = () => {
         drinks_hot: 'مشروبات (گرم)', 
         soup: 'سوپس', 
         dessert: 'میٹھائیاں', 
+        fish: 'مچھلی',
         popular: 'سب سے مقبول' 
       },
       addProtein: 'پروٹین شامل کریں',
@@ -1273,6 +1459,18 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'ہمارے سب سے مقبول کھانے',
       scrollDownText: 'مینو دیکھنے کے لیے نیچے سکرول کریں',
+      carousel: {
+        popularDishes: 'مقبول کھانوں کا چکر',
+        previousDish: 'پچھلا کھانا',
+        nextDish: 'اگلا کھانا',
+        pauseSlideshow: 'سلائیڈ شو رکیں',
+        playSlideshow: 'سلائیڈ شو چلائیں',
+        goToSlide: 'جائیں',
+        slideOf: 'سلائیڈ',
+        of: 'کا',
+        arrowKeyLeft: '← تیر کی کلید',
+        arrowKeyRight: '→ تیر کی کلید'
+      },
       footer: {
         description: 'ہم مشرق وسطیٰ کے اصل ذائقے اور گرم مہمان نوازی آپ کے میز تک لاتے ہیں۔ ہر کھانا ہماری بھرپور ثقافتی ورثے اور کھانا پکانے کی مہارت کا جشن ہے۔',
         quickLinks: 'فوری روابط',
@@ -1318,6 +1516,7 @@ const FullMenuPage = () => {
         drinks_hot: 'Vexwarin (Germ)', 
         soup: 'Şorbeyên', 
         dessert: 'Şîrînî', 
+        fish: 'Masî',
         popular: 'Herî Bilind' 
       },
       addProtein: 'Protein Zêde Bike',
@@ -1379,6 +1578,7 @@ const FullMenuPage = () => {
         drinks_hot: 'পানীয় (গরম)', 
         soup: 'স্যুপ', 
         dessert: 'ডেজার্ট', 
+        fish: 'মাছ',
         popular: 'সবচেয়ে জনপ্রিয়',
         wraps: 'র‍্যাপ',
         drinks: 'পানীয়' 
@@ -1442,6 +1642,7 @@ const FullMenuPage = () => {
         drinks_hot: '음료 (뜨거운)', 
         soup: '수프', 
         dessert: '디저트', 
+        fish: '생선',
         popular: '인기 메뉴',
         wraps: '랩',
         drinks: '음료' 
@@ -1505,6 +1706,7 @@ const FullMenuPage = () => {
         drinks_hot: 'Горячие напитки',
         soup: 'Супы',
         dessert: 'Десерты',
+        fish: 'Рыба',
         popular: 'Популярные'
       },
       addProtein: 'Добавить белок',
@@ -1521,6 +1723,18 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'Наши самые популярные блюда',
       scrollDownText: 'Прокрутите вниз, чтобы изучить меню',
+      carousel: {
+        popularDishes: 'Карусель популярных блюд',
+        previousDish: 'Предыдущее блюдо',
+        nextDish: 'Следующее блюдо',
+        pauseSlideshow: 'Пауза слайд-шоу',
+        playSlideshow: 'Воспроизвести слайд-шоу',
+        goToSlide: 'Перейти к',
+        slideOf: 'слайду',
+        of: 'из',
+        arrowKeyLeft: '← Клавиша стрелки',
+        arrowKeyRight: '→ Клавиша стрелки'
+      },
       footer: {
         description: 'Мы привносим подлинные вкусы и теплое гостеприимство Ближнего Востока за ваш стол. Каждое блюдо - это праздник нашего богатого культурного наследия и кулинарного мастерства.',
         quickLinks: 'Быстрые ссылки',
@@ -1566,6 +1780,7 @@ const FullMenuPage = () => {
         drinks_hot: 'पेय (गर्म)',
         soup: 'सूप',
         dessert: 'मिठाई',
+        fish: 'मछली',
         popular: 'लोकप्रिय'
       },
       addProtein: 'प्रोटीन जोड़ें',
@@ -1627,6 +1842,7 @@ const FullMenuPage = () => {
         drinks_hot: 'Bebidas (Calientes)',
         soup: 'Sopas',
         dessert: 'Postres',
+        fish: 'Pescado',
         popular: 'Más Popular'
       },
       addProtein: 'Añadir Proteína',
@@ -1643,6 +1859,18 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'Nuestros Platos Más Populares',
       scrollDownText: 'Desplázate hacia abajo para explorar el menú',
+      carousel: {
+        popularDishes: 'Carrusel de platos populares',
+        previousDish: 'Plato anterior',
+        nextDish: 'Siguiente plato',
+        pauseSlideshow: 'Pausar presentación',
+        playSlideshow: 'Reproducir presentación',
+        goToSlide: 'Ir a',
+        slideOf: 'diapositiva',
+        of: 'de',
+        arrowKeyLeft: '← Tecla de flecha',
+        arrowKeyRight: '→ Tecla de flecha'
+      },
       footer: {
         description: 'Llevamos los sabores auténticos y la cálida hospitalidad de Oriente Medio a tu mesa. Cada plato es una celebración de nuestro rico patrimonio cultural y excelencia culinaria.',
         quickLinks: 'Enlaces Rápidos',
@@ -1688,6 +1916,7 @@ const FullMenuPage = () => {
         drinks_hot: 'Pije (të Nxehta)',
         soup: 'Supa',
         dessert: 'Ëmbëlsira',
+        fish: 'Peshk',
         popular: 'Më të Popullarit'
       },
       addProtein: 'Shto Proteinë',
@@ -1749,6 +1978,7 @@ const FullMenuPage = () => {
         drinks_hot: 'Boissons (Chaudes)', 
         soup: 'Soupes', 
         dessert: 'Desserts', 
+        fish: 'Poisson',
         popular: 'Plus Populaires' 
       },
       addProtein: 'Ajouter Protéine',
@@ -1765,6 +1995,18 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'Nos Plats les Plus Populaires',
       scrollDownText: 'Faites défiler vers le bas pour explorer le menu',
+      carousel: {
+        popularDishes: 'Carrousel de plats populaires',
+        previousDish: 'Plat précédent',
+        nextDish: 'Plat suivant',
+        pauseSlideshow: 'Mettre en pause',
+        playSlideshow: 'Lire le diaporama',
+        goToSlide: 'Aller à',
+        slideOf: 'diapositive',
+        of: 'de',
+        arrowKeyLeft: '← Touche fléchée',
+        arrowKeyRight: '→ Touche fléchée'
+      },
       footer: {
         description: 'Apporter les saveurs authentiques et l\'hospitalité chaleureuse du Moyen-Orient à votre table. Chaque plat est une célébration de notre riche patrimoine culturel et de notre excellence culinaire.',
         quickLinks: 'Liens Rapides',
@@ -1810,6 +2052,7 @@ const FullMenuPage = () => {
         drinks_hot: 'Getränke (Heiß)', 
         soup: 'Suppen', 
         dessert: 'Desserts', 
+        fish: 'Fisch',
         popular: 'Am Beliebtesten' 
       },
       addProtein: 'Protein Hinzufügen',
@@ -1826,6 +2069,18 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'Unsere Beliebtesten Gerichte',
       scrollDownText: 'Scrollen Sie nach unten, um die Speisekarte zu erkunden',
+      carousel: {
+        popularDishes: 'Karussell beliebter Gerichte',
+        previousDish: 'Vorheriges Gericht',
+        nextDish: 'Nächstes Gericht',
+        pauseSlideshow: 'Diashow pausieren',
+        playSlideshow: 'Diashow abspielen',
+        goToSlide: 'Gehe zu',
+        slideOf: 'Folie',
+        of: 'von',
+        arrowKeyLeft: '← Pfeiltaste',
+        arrowKeyRight: '→ Pfeiltaste'
+      },
       footer: {
         description: 'Authentische nahöstliche Aromen und warme Gastfreundschaft an Ihren Tisch bringen. Jedes Gericht ist eine Feier unseres reichen kulturellen Erbes und kulinarischer Exzellenz.',
         quickLinks: 'Schnelle Links',
@@ -1869,6 +2124,7 @@ const FullMenuPage = () => {
         soup: 'Супи', 
         dessert: 'Десерти', 
         drinks: 'Напої',
+        fish: 'Риба',
         kids: 'Дитяче меню'
       },
       deliveryOptions: {
@@ -1935,6 +2191,7 @@ const FullMenuPage = () => {
         soup: 'Súp', 
         dessert: 'Tráng miệng', 
         drinks: 'Đồ uống',
+        fish: 'Cá',
         kids: 'Thực đơn trẻ em'
       },
       deliveryOptions: {
@@ -1958,6 +2215,18 @@ const FullMenuPage = () => {
       },
       popularSectionTitle: 'Những món ăn phổ biến nhất của chúng tôi',
       scrollDownText: 'Cuộn xuống để khám phá thực đơn',
+      carousel: {
+        popularDishes: 'Băng chuyền món ăn phổ biến',
+        previousDish: 'Món trước',
+        nextDish: 'Món tiếp theo',
+        pauseSlideshow: 'Tạm dừng trình chiếu',
+        playSlideshow: 'Phát trình chiếu',
+        goToSlide: 'Đi tới',
+        slideOf: 'slide',
+        of: 'của',
+        arrowKeyLeft: '← Phím mũi tên',
+        arrowKeyRight: '→ Phím mũi tên'
+      },
       footer: {
         description: 'Mang đến hương vị Trung Đông chính thống và lòng hiếu khách ấm áp đến bàn ăn của bạn. Mỗi món ăn là một lễ kỷ niệm di sản văn hóa phong phú và sự xuất sắc trong ẩm thực của chúng tôi.',
         quickLinks: 'Liên kết nhanh',
@@ -1970,6 +2239,80 @@ const FullMenuPage = () => {
         blunari: 'Blunari AI',
         notice: 'Lưu ý:',
         foodSafetyNotice: 'Việc tiêu thụ thịt, gia cầm, hải sản, tôm cua hoặc trứng sống hoặc chưa nấu chín có thể làm tăng nguy cơ mắc bệnh do thực phẩm, đặc biệt nếu bạn có một số bệnh nhất định.'
+      }
+    },
+    bs: {
+      title: 'Naša Gastronomska Putovanja',
+      subtitle: 'Otkrijte autentične okuse pripremljene sa strašću i tradicijom',
+      restaurantBadge: 'Autentični Bliskoistočni Restoran',
+      loading: 'Učitava...',
+      searchPlaceholder: 'Pretraži jela...',
+      noResults: 'Nema rezultata koji se poklapaju sa vašom pretragom.',
+      nav: {
+        home: 'Početna',
+        menu: 'Meni',
+        about: 'O nama',
+        gallery: 'Galerija',
+        visit: 'Posjetite nas',
+        reservations: 'Rezervacije',
+        catering: 'Usluga dostave',
+        orderOnline: 'Naruči'
+      },
+      filters: {
+        all: 'Sve',
+        appetizers: 'Predjela',
+        salads: 'Salate',
+        sandwich_platter: 'Sendviči i Tanjuri',
+        naan: 'Naan',
+        grill: 'Roštilj',
+        specialty: 'Specijaliteti',
+        kids: 'Dječji meni',
+        sides: 'Prilozi',
+        drinks_cold: 'Pića (Hladna)',
+        drinks_hot: 'Pića (Vrela)',
+        soup: 'Supe',
+        dessert: 'Deserti',
+        fish: 'Riba',
+        popular: 'Najpopularnije'
+      },
+      addProtein: 'Dodaj protein',
+      servingFor: 'Za',
+      variants: {
+        sandwich: 'Sendvič',
+        platter: 'Tanjur',
+        singleScoop: 'Jedna kugla'
+      },
+      stats: {
+        dishes: 'Ukusna jela',
+        categories: 'Raznovrsne kategorije',
+        languages: 'Globalni jezici'
+      },
+      popularSectionTitle: 'Naša najpopularnija jela',
+      scrollDownText: 'Skroliraj dolje za pregled menija',
+      carousel: {
+        popularDishes: 'Karusel popularnih jela',
+        previousDish: 'Prethodno jelo',
+        nextDish: 'Sljedeće jelo',
+        pauseSlideshow: 'Pauziraj prezentaciju',
+        playSlideshow: 'Pokreni prezentaciju',
+        goToSlide: 'Idi na',
+        slideOf: 'slajd',
+        of: 'od',
+        arrowKeyLeft: '← Strelica lijevo',
+        arrowKeyRight: '→ Strelica desno'
+      },
+      footer: {
+        description: 'Donosimo autentične okuse i toplu gostoprimljivost Bliskog istoka na vaš sto. Svako jelo je proslava našeg bogatog kulturnog naslijeđa i kulinarskog savršenstva.',
+        quickLinks: 'Brze veze',
+        contactInfo: 'Kontakt informacije',
+        privacy: 'Pravila privatnosti',
+        terms: 'Uslovi korištenja',
+        openDaily: 'NED - ČET: 12:00 - 22:00\nPET - SUB: 12:00 - 23:00',
+        copyright: '© 2025 Nature Village Kurdski Restoran. Sva prava zadržana.',
+        poweredBy: 'Pokreće',
+        blunari: 'Blunari AI',
+        notice: 'Napomena:',
+        foodSafetyNotice: 'Konzumiranje sirovog ili nedovoljno kovanog mesa, peradi, plodova mora, školjaka ili jaja može povećati rizik od bolesti uzrokovanih hranom, posebno ako imate određena zdravstvena stanja.'
       }
     }
   }
@@ -2337,6 +2680,335 @@ const FullMenuPage = () => {
       popular: true, 
       tags: ['vegetarian'], 
       image: '/Appetizers Combo.jpg' 
+    },
+
+    // SALADS
+    { 
+      id: 1101, 
+      name: { 
+        en: 'Greek Salad',
+        ar: 'سلطة يونانية',
+        fa: 'سالاد یونانی',
+        ku: 'سالادی یۆنانی',
+        tr: 'Yunan Salatası',
+        ur: 'یونانی سلاد',
+        kmr: 'Salata Yewnanî',
+        es: 'Ensalada Griega',
+        ru: 'Греческий салат',
+        hi: 'ग्रीक सलाद',
+        sq: 'Sallatë Greke',
+        fr: 'Salade Grecque',
+        de: 'Griechischer Salat',
+        bn: 'গ্রিক সালাদ',
+        ko: '그리스 샐러드',
+        bs: 'Grčka Salata',
+        zh: '希腊沙拉',
+        ro: 'Salată Grecească',
+        uk: 'Грецький салат',
+        vi: 'Salad Hy Lạp'
+      }, 
+      description: { 
+        en: 'A classic Greek salad made with spring mix, tomatoes, cucumbers, onions, Kalamata olives, Feta cheese and Greek vinaigrette.',
+        ar: 'سلطة يونانية كلاسيكية مصنوعة من خليط الربيع، الطماطم، الخيار، البصل، زيتون كالاماتا، جبن الفيتا وتتبيلة يونانية.',
+        fa: 'سالاد یونانی کلاسیک از مخلوط بهاری، گوجه‌فرنگی، خیار، پیاز، زیتون کالاماتا، پنیر فتا و سس یونانی.',
+        ku: 'سالادی یۆنانی کلاسیک لە تێکەڵی بەهار، تەماتە، خیار، پیاز، زەیتونی کالاماتا، پەنیری فیتا و سۆسی یۆنانی.',
+        tr: 'Bahar karışımı, domates, salatalık, soğan, Kalamata zeytini, Feta peyniri ve Yunan soslu klasik Yunan salatası.',
+        ur: 'بہار کے مرکب، ٹماٹر، کھیرا، پیاز، کالاماٹا زیتون، فیٹا چیز اور یونانی ڈریسنگ سے بنا کلاسک یونانی سلاد۔',
+        kmr: 'Salatayek Yewnanî ya klasîk ku ji tevahiya biharê, firangoş, xiyar, pîvaz, zeytûnên Kalamata, penîrê Feta û soşa Yewnanî tê çêkirin.',
+        es: 'Ensalada griega clásica hecha con mezcla primaveral, tomates, pepinos, cebolla, aceitunas Kalamata, queso Feta y vinagreta griega.',
+        ru: 'Классический греческий салат из весенней смеси, помидоров, огурцов, лука, оливок каламата, сыра фета и греческой заправки.',
+        hi: 'स्प्रिंग मिक्स, टमाटर, खीरे, प्याज, कलामाटा जैतून, फेटा चीज़ और ग्रीक विनैग्रेट से बना क्लासिक ग्रीक सलाद।',
+        sq: 'Sallatë klasike greke e bërë me përzierje pranverore, domate, kastravec, qepë, ullinj Kalamata, djathë Feta dhe vinegretë greke.',
+        fr: 'Salade grecque classique préparée avec mélange printanier, tomates, concombres, oignons, olives Kalamata, fromage Feta et vinaigrette grecque.',
+        de: 'Klassischer griechischer Salat mit Frühlings-Mix, Tomaten, Gurken, Zwiebeln, Kalamata-Oliven, Feta-Käse und griechischer Vinaigrette.',
+        bn: 'স্প্রিং মিক্স, টমেটো, শসা, পেঁয়াজ, কালামাটা অলিভ, ফেটা চিজ এবং গ্রিক ভিনাইগ্রেট দিয়ে তৈরি ক্লাসিক গ্রিক সালাদ।',
+        ko: '스프링 믹스, 토마토, 오이, 양파, 칼라마타 올리브, 페타 치즈, 그리스 비네그레트로 만든 클래식 그리스 샐러드입니다.',
+        bs: 'Klasična grčka salata napravljena od proljetne mješavine, rajčica, krastavaca, luka, Kalamata maslina, Feta sira i grčke vinegrete.',
+        zh: '经典希腊沙拉，由春季混合菜、番茄、黄瓜、洋葱、卡拉马塔橄榄、菲达奶酪和希腊油醋汁制成。',
+        ro: 'Salată grecească clasică făcută cu amestec de primăvară, roșii, castraveți, ceapă, măsline Kalamata, brânză Feta și vinaigretă grecească.',
+        uk: 'Класичний грецький салат з весняної суміші, помідорів, огірків, цибулі, оливок каламата, сиру фета та грецького соусу-вінегрет.',
+        vi: 'Salad Hy Lạp cổ điển làm từ hỗn hợp rau mùa xuân, cà chua, dưa chuột, hành tây, ô liu Kalamata, phô mai Feta và nước sốt giấm Hy Lạp.'
+      }, 
+      image: '/Greek Salad.jpg',
+      price: '$14.99', 
+      category: 'salads', 
+      popular: true, 
+      tags: ['vegetarian'], 
+      addOns: { 
+        title: { 
+          en: 'Add Protein',
+          ar: 'إضافة بروتين',
+          fa: 'اضافه کردن پروتین',
+          ku: 'پرۆتین زیادبکە',
+          tr: 'Protein Ekle',
+          ur: 'پروٹین شامل کریں',
+          kmr: 'Protein Zêde Bike',
+          es: 'Agregar Proteína',
+          ru: 'Добавить белок',
+          hi: 'प्रोटीन जोड़ें',
+          sq: 'Shto Proteinë',
+          fr: 'Ajouter des Protéines',
+          de: 'Protein hinzufügen',
+          bn: 'প্রোটিন যোগ করুন',
+          ko: '단백질 추가',
+          bs: 'Dodaj Protein',
+          zh: '添加蛋白质',
+          ro: 'Adaugă Proteine',
+          uk: 'Додати білок',
+          vi: 'Thêm Protein'
+        }, 
+        options: [ 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
+          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治球', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$4.99' }, 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' } 
+        ] 
+      } 
+    },
+    { 
+      id: 1102, 
+      name: { 
+        en: 'Fattoush Salad',
+        ar: 'سلطة فتوش',
+        fa: 'سالاد فتوش',
+        ku: 'سالادی فەتووش',
+        tr: 'Fattuş Salatası',
+        ur: 'فتوش سلاد',
+        kmr: 'Salata Fetûş',
+        es: 'Ensalada Fattoush',
+        ru: 'Салат Фаттуш',
+        hi: 'फत्तूश सलाद',
+        sq: 'Sallatë Fattoush',
+        fr: 'Salade Fattoush',
+        de: 'Fattoush Salat',
+        bn: 'ফাতুশ সালাদ',
+        ko: '파투시 샐러드',
+        bs: 'Fattoush Salata',
+        zh: '法图什沙拉',
+        ro: 'Salată Fattoush',
+        uk: 'Салат Фаттуш',
+        vi: 'Salad Fattoush'
+      }, 
+      description: { 
+        en: 'A delicious Middle Eastern salad made with lettuce, tomatoes, cucumbers, bell peppers, fresh mint, parsley, crispy pita bread, and pomegranate molasses dressing.',
+        ar: 'سلطة شرق أوسطية لذيذة مصنوعة من الخس والطماطم والخيار والفلفل الحلو والنعناع الطازج والبقدونس وخبز البيتا المقرمش وصلصة دبس الرمان.',
+        fa: 'سالاد لذیذ خاورمیانه‌ای از کاهو، گوجه‌فرنگی، خیار، فلفل دلمه‌ای، نعنای تازه، جعفری، نان پیتای ترد و سس انار.',
+        ku: 'سالادێکی خۆشی ڕۆژهەڵاتی ناوەڕاست لە خس، تەماتە، خیار، بیبەری شیرین، پونگی تازە، جەعدە، نانی پیتای ترسکە و سۆسی هەنار.',
+        tr: 'Marul, domates, salatalık, dolma biberi, taze nane, maydanoz, çıtır pita ekmeği ve nar ekşisi sosuyla yapılan lezzetli Orta Doğu salatası.',
+        ur: 'لیٹوس، ٹماٹر، کھیرا، بیل پیپرز، تازہ پودینہ، دھنیا، کرسپی پیٹا بریڈ اور انار کے شیرے کی ڈریسنگ سے بنا لذیذ مشرق وسطیٰ کا سلاد۔',
+        kmr: 'Salatayek bi tam a Rojhilatê Navîn ku ji salata kesk, firangoş, xiyar, biberên şîrîn, pûngê taze, şînî, nanê pita yê çitir û soşa henarê tê çêkirin.',
+        es: 'Una deliciosa ensalada del Medio Oriente hecha con lechuga, tomates, pepinos, pimientos morrones, menta fresca, perejil, pan pita crujiente y aderezo de melaza de granada.',
+        ru: 'Вкусный ближневосточный салат из салата, помидоров, огурцов, болгарского перца, свежей мяты, петрушки, хрустящего хлеба пита и заправки из гранатовой патоки.',
+        hi: 'सलाद पत्ता, टमाटर, खीरे, बेल पेपर, ताज़ा पुदीना, अजमोद, कुरकुरी पीटा ब्रेड और अनार के शीरे की ड्रेसिंग से बना स्वादिष्ट मध्य पूर्वी सलाद।',
+        sq: 'Sallatë e shijshme lindjes së mesme e bërë me marule, domate, kastravec, spec të ëmbël, mendër të freskët, majdanoz, bukë pita të krisur dhe salcë melase shege.',
+        fr: 'Une délicieuse salade du Moyen-Orient préparée avec laitue, tomates, concombres, poivrons doux, menthe fraîche, persil, pain pita croustillant et vinaigrette à la mélasse de grenade.',
+        de: 'Ein köstlicher nahöstlicher Salat aus Kopfsalat, Tomaten, Gurken, Paprika, frischer Minze, Petersilie, knusprigem Pita-Brot und Granatapfelmelasse-Dressing.',
+        bn: 'লেটুস, টমেটো, শসা, বেল পেপার, তাজা পুদিনা, পার্সলে, কুরকুরে পিটা ব্রেড এবং ডালিমের মোলাসেস ড্রেসিং দিয়ে তৈরি সুস্বাদু মধ্যপ্রাচ্যের সালাদ।',
+        ko: '상추, 토마토, 오이, 피망, 신선한 민트, 파슬리, 바삭한 피타 빵, 석류 당밀 드레싱으로 만든 맛있는 중동 샐러드입니다.',
+        bs: 'Ukusna bliskoistočna salata napravljena od salate, rajčica, krastavaca, paprika, svježe mente, peršina, hrskavog pita kruha i preliva od šipkovog melasa.',
+        zh: '美味的中东沙拉，由生菜、番茄、黄瓜、甜椒、新鲜薄荷、欧芹、酥脆皮塔饼和石榴糖浆调味汁制成。',
+        ro: 'O salată delicioasă din Orientul Mijlociu făcută cu salată verde, roșii, castraveți, ardei dulci, mentă proaspătă, pătrunjel, pâine pita crocantă și dressing de melasă de rodie.',
+        uk: 'Смачний близькосхідний салат з салату, помідорів, огірків, солодкого перцю, свіжої мʼяти, петрушки, хрусткого хліба піта та заправки з гранатової патоки.',
+        vi: 'Salad Trung Đông ngon được làm từ rau diếp, cà chua, dưa chuột, ớt chuông, bạc hà tươi, rau mùi tây, bánh mì pita giòn và nước sốt mật ong lựu.'
+      }, 
+      image: '/Fattoush Salad.jpg',
+      price: '$14.99', 
+      category: 'salads', 
+      popular: true, 
+      image: '/Fattoush Salad.jpg',
+      tags: ['vegetarian', 'vegan'], 
+      addOns: { 
+        title: { 
+          en: 'Add Protein',
+          ar: 'إضافة بروتين',
+          fa: 'اضافه کردن پروتین',
+          ku: 'پرۆتین زیادبکە',
+          tr: 'Protein Ekle',
+          ur: 'پروٹین شامل کریں',
+          kmr: 'Protein Zêde Bike',
+          es: 'Agregar Proteína',
+          ru: 'Добавить белок',
+          hi: 'प्रोटीन जोड़ें',
+          sq: 'Shto Proteinë',
+          fr: 'Ajouter des Protéines',
+          de: 'Protein hinzufügen',
+          bn: 'প্রোটিন যোগ করুন',
+          ko: '단백질 추가',
+          bs: 'Dodaj Protein',
+          zh: '添加蛋白质',
+          ro: 'Adăugați Proteine',
+          uk: 'Додати білок',
+          vi: 'Thêm Protein'
+        }, 
+        options: [ 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' }, 
+          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफেল', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治球', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$5.99' } 
+        ] 
+      } 
+    },
+    { 
+      id: 1103, 
+      name: { 
+        en: 'Shwan Salad',
+        ar: 'سلطة شيوان',
+        fa: 'سالاد شیوان',
+        ku: 'سالادی شیوان',
+        tr: 'Şivan Salatası',
+        ur: 'شیوان سلاد',
+        kmr: 'Salata Şîvan',
+        es: 'Ensalada Shivan',
+        ru: 'Салат Шиван',
+        hi: 'शिवान सलाद',
+        sq: 'Sallatë Shiwan',
+        fr: 'Salade Shiwan',
+        de: 'Shwan Salat',
+        bn: 'শিওয়ান সালাদ',
+        ko: '시완 샐러드',
+        bs: 'Šivan Salata',
+        zh: '希万沙拉',
+        ro: 'Salată Shiwan',
+        uk: 'Салат Шиван',
+        vi: 'Salad Shwan'
+      }, 
+      description: { 
+        en: 'A refreshing Turkish salad made with tomatoes, cucumbers, green peppers, onions, parsley, and walnuts, seasoned with olive oil and lemon juice.',
+        ar: 'سلطة تركية منعشة مصنوعة من الطماطم والخيار والفلفل الأخضر والبصل والبقدونس والجوز، متبلة بزيت الزيتون وعصير الليمون.',
+        fa: 'سالاد ترکی تازه‌کننده از گوجه‌فرنگی، خیار، فلفل سبز، پیاز، جعفری و گردو، با روغن زیتون و آب لیمو طعم‌دار شده.',
+        ku: 'سالادێکی ترکی ئارامبەخش لە تەماتە، خیار، بیبەری سەوز، پیاز، جەعدە و گوێز، بە زەیتی زەیتوون و شیری لیمۆ تامدراوە.',
+        tr: 'Domates, salatalık, yeşil biber, soğan, maydanoz ve cevizle yapılan, zeytinyağı ve limon suyuyla tatlandırılmış ferahlatıcı Türk salatası.',
+        ur: 'ٹماٹر، کھیرا، ہری مرچ، پیاز، دھنیا اور اخروٹ سے بنا تازگی بخش ترک سلاد، زیتون کے تیل اور لیموں کے رس سے ذائقہ دار۔',
+        kmr: 'Salatayek Tirkî ya vevişandî ku ji firangoş, xiyar, biberê kesk, pîvaz, şînî û gihokan tê çêkirin, bi zeyta zeytûnê û ava lîmonê tatdar dike.',
+        es: 'Una refrescante ensalada turca hecha con tomates, pepinos, pimientos verdes, cebollas, perejil y nueces, sazonada con aceite de oliva y jugo de limón.',
+        ru: 'Освежающий турецкий салат из помидоров, огурцов, зелёного перца, лука, петрушки и грецких орехов, заправленный оливковым маслом и лимонным соком.',
+        hi: 'टमाटर, खीरे, हरी मिर्च, प्याज, अजमोद और अखरोट से बना तरोताजा तुर्की सलाद, जैतून के तेल और नींबू के रस से सीज़न किया गया।',
+        sq: 'Sallatë turke freskuese e bërë me domate, kastravec, spec të gjelbër, qepë, majdanoz dhe arrë, e këndelur me vaj ulliri dhe lëng limoni.',
+        fr: 'Une salade turque rafraîchissante préparée avec tomates, concombres, poivrons verts, oignons, persil et noix, assaisonnée à l\'huile d\'olive et au jus de citron.',
+        de: 'Ein erfrischender türkischer Salat aus Tomaten, Gurken, grünen Paprika, Zwiebeln, Petersilie und Walnüssen, gewürzt mit Olivenöl und Zitronensaft.',
+        bn: 'টমেটো, শসা, সবুজ মরিচ, পেঁয়াজ, পার্সলে এবং আখরোট দিয়ে তৈরি সতেজকারী তুর্কি সালাদ, অলিভ অয়েল এবং লেবুর রস দিয়ে মসলাযুক্ত।',
+        ko: '토마토, 오이, 피망, 양파, 파슬리, 호두로 만든 상쾌한 터키식 샐러드로, 올리브 오일과 레몬 주스로 양념합니다.',
+        bs: 'Osvježavajuća turska salata napravljena od rajčica, krastavaca, zelene paprike, luka, peršina i oraha, začinjena maslinovim uljem i limunovim sokom.',
+        zh: '清爽的土耳其沙拉，由番茄、黄瓜、青椒、洋葱、欧芹和核桃制成，用橄榄油和柠檬汁调味。',
+        ro: 'O salată turcească revigorantă făcută cu roșii, castraveți, ardei verzi, ceapă, pătrunjel și nuci, condimentată cu ulei de măsline și suc de lămâie.',
+        uk: 'Освіжаючий турецький салат з помідорів, огірків, зеленого перцю, цибулі, петрушки та волоських горіхів, заправлений оливковою олією та лимонним соком.',
+        vi: 'Salad Thổ Nhĩ Kỳ tươi mát làm từ cà chua, dưa chuột, ớt xanh, hành tây, rau mùi tây và óc chó, nêm bằng dầu ô liu và nước cốt chanh.'
+      }, 
+      image: '/Shwan Salad.jpg',
+      price: '$14.99', 
+      category: 'salads', 
+      tags: ['vegetarian', 'vegan'], 
+      addOns: { 
+        title: { 
+          en: 'Add Protein',
+          ar: 'إضافة بروتين',
+          fa: 'اضافه کردن پروتین',
+          ku: 'پرۆتین زیادبکە',
+          tr: 'Protein Ekle',
+          ur: 'پروٹین شامل کریں',
+          kmr: 'Protein Zêde Bike',
+          es: 'Agregar Proteína',
+          ru: 'Добавить белок',
+          hi: 'प्रोटीन जोड़ें',
+          sq: 'Shto Proteinë',
+          fr: 'Ajouter des Protéines',
+          de: 'Protein hinzufügen',
+          bn: 'প্রোটিন যোগ করুন',
+          ko: '단백질 추가',
+          bs: 'Dodaj Protein',
+          zh: '添加蛋白质',
+          ro: 'Adăugați Proteine',
+          uk: 'Додати білок',
+          vi: 'Thêm Protein'
+        }, 
+        options: [ 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगা', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креvertки', vi: 'Tôm' }, price: '$6.99' }, 
+          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$5.99' } 
+        ] 
+      } 
+    },
+    { 
+      id: 1104, 
+      name: { 
+        en: 'Tabbouleh Salad',
+        ar: 'سلطة التبولة',
+        fa: 'سالاد تبوله',
+        ku: 'سالادی تەبووله',
+        tr: 'Tabbouleh Salatası',
+        ur: 'تبولہ سلاد',
+        kmr: 'Salata Tabbouleh',
+        es: 'Ensalada Tabbouleh',
+        ru: 'Салат Табуле',
+        hi: 'तब्बूलेह सलाद',
+        sq: 'Sallatë Tabbouleh',
+        fr: 'Salade Tabbouleh',
+        de: 'Tabbouleh-Salat',
+        bn: 'তাবুলেহ সালাদ',
+        ko: '타불레 샐러드',
+        bs: 'Tabbouleh Salata',
+        zh: '塔布勒沙拉',
+        ro: 'Salată Tabbouleh',
+        uk: 'Салат Табуле',
+        vi: 'Salad Tabbouleh'
+      }, 
+      description: { 
+        en: 'A Levantine salad of finely chopped parsley, soaked extra fine bulgur, tomatoes, mint, onion, and scallions, seasoned with olive oil, lemon juice, salt and black pepper.',
+        ar: 'سلطة شامية من البقدونس المفروم ناعماً، البرغل الناعم المنقوع، الطماطم، النعناع، البصل، والبصل الأخضر، متبلة بزيت الزيتون وعصير الليمون والملح والفلفل الأسود.',
+        fa: 'سالاد شامی از جعفری ریز خرد شده، برغول بسیار نرم خیسانده شده، گوجه‌فرنگی، نعنا، پیاز و پیازچه، طعم‌دار شده با روغن زیتون، آب لیمو، نمک و فلفل سیاه.',
+        ku: 'سالادێکی شامی لە جەعدەی وردکراو، برغولی نەرمی خیسکراو، تەماتە، پونگ، پیاز و پیازی سەوز، تامدراو بە زەیتی زەیتوون، شیری لیمۆ، خوێ و بیبەری ڕەش.',
+        tr: 'İnce doğranmış maydanoz, ıslatılmış çok ince bulgur, domates, nane, soğan ve yeşil soğan ile yapılan Levanten salatası, zeytinyağı, limon suyu, tuz ve karabiber ile baharatlanmış.',
+        ur: 'باریک کٹے ہوئے دھنیا، بھگوئے ہوئے انتہائی باریک دلیا، ٹماٹر، پودینہ، پیاز اور ہری پیاز کا شامی سلاد، زیتون کا تیل، لیموں کا رس، نمک اور کالی مرچ سے ذائقہ دار بنایا گیا۔',
+        kmr: 'Salatayek Şamî ya ku ji şînî bixuber, bulgurê gelek nazik ê avkirî, firangoş, pûng, pîvaz û pîvazên kesk, bi zeyta zeytûnê, ava lîmonê, xwê û biberê reş tê çêkirin.',
+        es: 'Ensalada levantina de perejil finamente picado, bulgur extrafino remojado, tomates, menta, cebolla y cebolletas, sazonada con aceite de oliva, jugo de limón, sal y pimienta negra.',
+        ru: 'Левантийский салат из мелко нарезанной петрушки, замоченного сверхмелкого булгура, помидоров, мяты, лука и зелёного лука, приправленный оливковым маслом, лимонным соком, солью и чёрным перцем.',
+        hi: 'बारीक कटी हुई अजमोद, भिगोई हुई अतिरिक्त बारीक दलिया, टमाटर, पुदीना, प्याज और हरी प्याज का लेवेंटाइन सलाद, जैतून के तेल, नींबू के रस, नमक और काली मिर्च से स्वादिष्ट बनाया गया।',
+        sq: 'Sallatë levantinase me majdanoz të grirë imët, bulgur shumë të hollë të lagur, domate, mendër, qepë dhe qepë të gjelbër, e kondimentuar me vaj ulliri, lëng limoni, kripë dhe piper të zi.',
+        fr: 'Salade levantine de persil finement haché, boulgour extra-fin trempé, tomates, menthe, oignon et échalotes, assaisonnée avec huile d\'olive, jus de citron, sel et poivre noir.',
+        de: 'Levantinischer Salat aus fein gehackter Petersilie, eingeweichtem extra-feinem Bulgur, Tomaten, Minze, Zwiebeln und Frühlingszwiebeln, gewürzt mit Olivenöl, Zitronensaft, Salz und schwarzem Pfeffer.',
+        bn: 'সূক্ষ্ম কাটা পার্সলে, ভেজানো অতি সূক্ষ্ম বুলগুর, টমেটো, পুদিনা, পেঁয়াজ এবং স্কালিয়ন দিয়ে তৈরি লেভান্তাইন সালাদ, অলিভ অয়েল, লেবুর রস, লবণ এবং কালো মরিচ দিয়ে মসলাযুক্ত।',
+        ko: '잘게 다진 파슬리, 불린 극세 불구르, 토마토, 민트, 양파, 파로 만든 레반트 샐러드로, 올리브 오일, 레몬 주스, 소금, 후춧가루로 양념했습니다.',
+        bs: 'Levantinska salata od sitno sjeckanog peršina, potopljenog izuzetno finog bulgura, rajčica, mente, luka i mladog luka, začinjena maslinovim uljem, limunovim sokom, solju i crnim biberom.',
+        zh: '黎凡特沙拉，由切细的欧芹、泡发的特细布格麦、番茄、薄荷、洋葱和韭葱制成，用橄榄油、柠檬汁、盐和黑胡椒调味。',
+        ro: 'Salată levantină din pătrunjel tăiat fin, bulgur extra-fin înmuiat, roșii, mentă, ceapă și ceapă verde, condimentată cu ulei de măsline, suc de lămâie, sare și piper negru.',
+        uk: 'Левантійський салат з дрібно нарізаної петрушки, замоченого надтонкого булгуру, помідорів, мʼяти, цибулі та зеленої цибулі, приправлений оливковою олією, лимонним соком, сіллю та чорним перцем.',
+        vi: 'Salad Levantine làm từ rau mùi tây thái nhỏ, bulgur siêu mịn đã ngâm, cà chua, bạc hà, hành tây và hành lá, nêm với dầu ô liu, nước cốt chanh, muối và tiêu đen.'
+      }, 
+      image: '/Tabbouleh Salad.jpg',
+      price: '$14.99', 
+      category: 'salads', 
+      tags: ['vegetarian', 'vegan'], 
+      addOns: { 
+        title: { 
+          en: 'Add Protein',
+          ar: 'إضافة بروتين',
+          fa: 'اضافه کردن پروتین',
+          ku: 'پرۆتین زیادبکە',
+          tr: 'Protein Ekle',
+          ur: 'پروٹین شامل کریں',
+          kmr: 'Protein Zêde Bike',
+          es: 'Agregar Proteína',
+          ru: 'Добавить белок',
+          hi: 'प्रोटीन जोड़ें',
+          sq: 'Shto Proteinë',
+          fr: 'Ajouter des Protéines',
+          de: 'Protein hinzufügen',
+          bn: 'প্রোটিন যোগ করুন',
+          ko: '단백질 추가',
+          bs: 'Dodaj protein',
+          zh: '添加蛋白质',
+          ro: 'Adaugă proteină',
+          uk: 'Додати білок',
+          vi: 'Thêm Protein'
+        }, 
+        options: [ 
+          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
+          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
+          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' }, 
+          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافল', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफেল', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治球', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$5.99' } 
+        ] 
+      } 
     },
 
     // SOUPS
@@ -2863,6 +3535,57 @@ const FullMenuPage = () => {
       image: '/Sesame Kulera.jpg',
       tags: ['vegetarian'] 
     },
+    { 
+      id: 1404, 
+      name: { 
+        en: 'Samoon',
+        ar: 'صمون',
+        fa: 'صمون',
+        ku: 'سەمون',
+        tr: 'Samoon',
+        ur: 'صمون',
+        kmr: 'Samûn',
+        es: 'Samoon',
+        ru: 'Самун',
+        hi: 'समून',
+        sq: 'Samoon',
+        fr: 'Samoon',
+        de: 'Samoon',
+        bn: 'সামুন',
+        ko: '사문',
+        bs: 'Samoon',
+        zh: '萨文面包',
+        ro: 'Samoon',
+        uk: 'Самун',
+        vi: 'Bánh Samoon'
+      }, 
+      description: { 
+        en: 'A delicious Middle Eastern bread, known for its soft and slightly chewy texture.',
+        ar: 'خبز شرق أوسطي لذيذ، يُعرف بملمسه الناعم والمطاطي قليلاً.',
+        fa: 'نان خوشمزه خاورمیانه‌ای که به دلیل بافت نرم و کمی کشسانش شناخته شده است.',
+        ku: 'نانێکی خۆشتامی ڕۆژهەڵاتی ناوەڕاست، بە دەمامکی نەرم و کەمێک چەقەڵی ناسراوە.',
+        tr: 'Yumuşak ve hafif çiğnenebilir dokusuyla tanınan lezzetli Orta Doğu ekmeği.',
+        ur: 'ایک مزیدار مشرق وسطیٰ کی روٹی، جو اپنی نرم اور ہلکی لچکدار ساخت کے لیے مشہور ہے۔',
+        kmr: 'Naneke xweş a Rojhilatê Navîn, bi tekstura xwe ya nerm û hinekî girêdayî tê nasîn.',
+        es: 'Un delicioso pan de Oriente Medio, conocido por su textura suave y ligeramente masticable.',
+        ru: 'Восхитительный ближневосточный хлеб, известный своей мягкой и слегка жевательной текстурой.',
+        hi: 'एक स्वादिष्ट मध्य पूर्वी ब्रेड, जो अपनी नरम और हल्की चबाने योग्य बनावट के लिए जानी जाती है।',
+        sq: 'Një bukë e shijshme e Lindjes së Mesme, e njohur për teksturën e saj të butë dhe pak të ngjashme.',
+        fr: 'Un délicieux pain du Moyen-Orient, connu pour sa texture douce et légèrement moelleuse.',
+        de: 'Ein köstliches nahöstliches Brot, bekannt für seine weiche und leicht zähe Textur.',
+        bn: 'একটি সুস্বাদু মধ্যপ্রাচ্যীয় রুটি, এর নরম এবং সামান্য চিবানো যায় এমন গঠনের জন্য পরিচিত।',
+        ko: '부드럽고 약간 쫄깃한 식감으로 유명한 맛있는 중동 빵입니다.',
+        bs: 'Ukusan bliskoistočni hleb, poznat po svojoj mekoj i blago žvakljivoj teksturi.',
+        zh: '一种美味的中东面包，以其柔软和略有嚼劲的质地而闻名。',
+        ro: 'O pâine delicioasă din Orientul Mijlociu, cunoscută pentru textura sa moale și ușor elastică.',
+        uk: 'Смачний близькосхідний хліб, відомий своєю м\'якою і злегка жувальною текстурою.',
+        vi: 'Một loại bánh mì Trung Đông ngon miệng, nổi tiếng với kết cấu mềm và hơi dai.'
+      }, 
+      price: '$2.99', 
+      category: 'naan', 
+      image: '/Samoon.jpg',
+      tags: ['vegetarian'] 
+    },
 
     // SPECIALTY DISHES
     { 
@@ -3128,51 +3851,51 @@ const FullMenuPage = () => {
     { 
       id: 1708, 
       name: { 
-        en: 'Lamb Leg Special (2-Day Notice Required)',
-        ar: 'ساق الخروف الخاص (يتطلب إشعار مسبق لمدة يومين)',
-        fa: 'ویژه ساق بره (نیاز به اطلاع ۲ روزه)',
-        ku: 'تایبەتی قاچی بەرخ (پێویستی بە ئاگاداری ٢ ڕۆژە)',
-        tr: 'Kuzu But Özel (2 Günlük Ön Bildirim Gerekli)',
-        ur: 'لیمب لیگ خاص (2 دن کی پیشگی اطلاع درکار)',
-        kmr: 'Qijika Berxê Taybet (Agahdarina 2 Rojî Pêwîst e)',
-        es: 'Pierna de Cordero Especial (Se Requiere Aviso de 2 Días)',
-        ru: 'Специальная баранья нога (требуется уведомление за 2 дня)',
-        hi: 'लैम्ब लेग स्पेशल (2 दिन की पूर्व सूचना आवश्यक)',
-        sq: 'Kofshë Qengji Speciale (Kërkohet Njoftim 2 Ditë Paraprakisht)',
-        fr: 'Gigot d\'Agneau Spécial (Préavis de 2 Jours Requis)',
-        de: 'Lammkeule Spezial (2 Tage Voranmeldung Erforderlich)',
-        bn: 'ল্যাম্ব লেগ স্পেশাল (২ দিনের পূর্ব নোটিশ প্রয়োজন)',
-        ko: '양다리 스페셜 (2일 전 예약 필요)',
-        bs: 'Janjeći but specijal (potrebno je obaveštenje 2 dana unapred)',
-        zh: '特制羊腿 (需提前2天通知)',
-        ro: 'Pulpă de miel specială (se necesită preaviz de 2 zile)',
-        uk: 'Спеціальна баранча ніжка (потрібне попередження за 2 дні)',
-        vi: 'Đùi cừu đặc biệt (Cần thông báo trước 2 ngày)'
+        en: 'Half Lamb Special (2-Day Notice Required)',
+        ar: 'نصف خروف خاص (يتطلب إشعار مسبق لمدة يومين)',
+        fa: 'ویژه نیم بره (نیاز به اطلاع ۲ روزه)',
+        ku: 'تایبەتی نیو بەرخ (پێویستی بە ئاگاداری ٢ ڕۆژە)',
+        tr: 'Yarım Kuzu Özel (2 Günlük Ön Bildirim Gerekli)',
+        ur: 'آدھا لیمب خاص (2 دن کی پیشگی اطلاع درکار)',
+        kmr: 'Nîv Berxê Taybet (Agahdarina 2 Rojî Pêwîst e)',
+        es: 'Media Cordero Especial (Se Requiere Aviso de 2 Días)',
+        ru: 'Специальная половина барана (требуется уведомление за 2 дня)',
+        hi: 'आधा लैम्ब स्पेशल (2 दिन की पूर्व सूचना आवश्यक)',
+        sq: 'Gjysmë Qengji Speciale (Kërkohet Njoftim 2 Ditë Paraprakisht)',
+        fr: 'Demi-Agneau Spécial (Préavis de 2 Jours Requis)',
+        de: 'Halbes Lamm Spezial (2 Tage Voranmeldung Erforderlich)',
+        bn: 'অর্ধেক ল্যাম্ব স্পেশাল (২ দিনের পূর্ব নোটিশ প্রয়োজন)',
+        ko: '반마리 양 스페셜 (2일 전 예약 필요)',
+        bs: 'Pola janjeta specijal (potrebno je obaveštenje 2 dana unapred)',
+        zh: '特制半只羊 (需提前2天通知)',
+        ro: 'Jumătate de miel specială (se necesită preaviz de 2 zile)',
+        uk: 'Спеціальна половина баранини (потрібне попередження за 2 дні)',
+        vi: 'Nửa con cừu đặc biệt (Cần thông báo trước 2 ngày)'
       }, 
       description: { 
-        en: 'This dish features tender, fall-off-the-bone lamb shank, slow-roasted for 8 hours, and is served with two varieties of rice (saffron and biryani), fresh salad, tzatziki sauce, spicy sauce, and our special mild white sauce, along with an appetizers combo and sesame kulera, serving 10 people.',
-        ar: 'يتميز هذا الطبق بساق الخروف الطرية التي تقع من العظم، محمصة ببطء لمدة 8 ساعات، ويُقدم مع نوعين من الأرز (الزعفران والبرياني)، والسلطة الطازجة، وصلصة التزاتزيكي، والصلصة الحارة، وصلصتنا البيضاء الخفيفة الخاصة، مع مجموعة المقبلات وكوليرا السمسم، لخدمة 10 أشخاص.',
-        fa: 'این غذا شامل ساق بره نرم و از استخوان جدا شونده است که به مدت ۸ ساعت آهسته برشته شده و با دو نوع برنج (زعفرانی و بریانی)، سالاد تازه، سس تزاتزیکی، سس تند و سس سفید ملایم مخصوص ما همراه با ترکیب پیش غذا و کولرای کنجد سرو می‌شود و برای ۱۰ نفر کافی است.',
-        ku: 'ئەم خۆراکە تایبەتمەندی قاچی بەرخی نەرم و لە ئێسکەوە کەوتووە، بۆ ماوەی ٨ کاتژمێر بە هێواشی برژاوە، و لەگەڵ دوو جۆری برنج (زەعفەران و بریانی)، سالادی تازە، سۆسی تزاتزیکی، سۆسی تەند، و سۆسی سپی نەرمی تایبەتمان لەگەڵ تێکەڵی پێشخۆراک و کولێرای کنجد دەخرێتە بەردەست، بۆ ١٠ کەس.',
-        tr: 'Bu yemek kemikten düşen yumuşak kuzu kemiği içerir, 8 saat yavaş kavrulmuş ve iki çeşit pirinç (safran ve biryani), taze salata, tzatziki sosu, baharatlı sos ve özel hafif beyaz sosumuzla birlikte meze kombinasyonu ve susam kulera ile 10 kişilik servis edilir.',
-        ur: 'یہ ڈش نرم، ہڈی سے گرنے والی بھیڑ کی ٹانگ پر مشتمل ہے، 8 گھنٹے تک آہستہ بھنی گئی، اور دو قسم کے چاول (زعفران اور بریانی)، تازہ سلاد، تزاتزیکی ساس، تیز ساس، اور ہماری خاص ہلکی سفید ساس کے ساتھ اپیٹائزر کومبو اور تل کولیرا کے ساتھ پیش کی جاتی ہے، 10 لوگوں کو پیش کرتی ہے۔',
-        kmr: 'Ev xwarin qijika berxê nerm û ji hestiyê ketî dihewîne, 8 demjimêr hêdî şewitî, û bi du cure brincê (zefran û biryani), salatayek taze, sosê tzatziki, sosê tûj û sosê spî yê nerm ê me yê taybet bi tevahiya mezeyên û kulera kundurmê re ji bo 10 kesan tê peşkêşkirin.',
-        es: 'Este plato presenta pierna de cordero tierna que se desprende del hueso, asada lentamente durante 8 horas, y se sirve con dos variedades de arroz (azafrán y biryani), ensalada fresca, salsa tzatziki, salsa picante y nuestra salsa blanca suave especial, junto con una combinación de aperitivos y kulera de sésamo, sirviendo a 10 personas.',
-        ru: 'Это блюдо включает нежную, отваливающуюся от кости баранью ногу, медленно жареную в течение 8 часов, подается с двумя видами риса (шафранный и бирьяни), свежим салатом, соусом дзадзики, острым соусом и нашим специальным мягким белым соусом, вместе с комбо закусок и кунжутной кулерой, на 10 человек.',
-        hi: 'इस व्यंजन में नरम, हड्डी से गिरने वाली भेड़ की टांग है, जो 8 घंटे तक धीमी आंच पर भुनी गई है, और दो प्रकार के चावल (केसर और बिरयानी), ताजा सलाद, त्ज़त्ज़िकी सॉस, तीखी सॉस, और हमारी विशेष हल्की सफेद सॉस के साथ एपेटाइज़र कॉम्बो और तिल कुलेरा के साथ परोसा जाता है, 10 लोगों को परोसता है।',
-        sq: 'Kjo pjatë përmban kofshë qengji të butë që bie nga kocka, e pjekur ngadalë për 8 orë, dhe shërbehet me dy lloje orizi (me shafran dhe biryani), sallatë të freskët, salcë tzatziki, salcë djegëse dhe salcën tonë speciale të bardhë të butë, së bashku me një kombinim hapësirash dhe kulera me susam, duke shërbyer 10 persona.',
-        fr: 'Ce plat présente un gigot d\'agneau tendre qui tombe de l\'os, rôti lentement pendant 8 heures, et est servi avec deux variétés de riz (safran et biryani), salade fraîche, sauce tzatziki, sauce épicée et notre sauce blanche douce spéciale, accompagné d\'un combo d\'apéritifs et de kulera au sésame, servant 10 personnes.',
-        de: 'Dieses Gericht zeigt zarte, vom Knochen fallende Lammkeule, 8 Stunden langsam geröstet, und wird mit zwei Reissorten (Safran und Biryani), frischem Salat, Tzatziki-Sauce, scharfer Sauce und unserer speziellen milden weißen Sauce zusammen mit einer Vorspeisen-Kombination und Sesam-Kulera serviert, für 10 Personen.',
-        bn: 'এই পদে রয়েছে নরম, হাড় থেকে পড়ে যাওয়া মেষশাবকের পা, ৮ ঘন্টা ধীরে ভাজা, এবং দুই ধরনের ভাত (জাফরান এবং বিরিয়ানি), তাজা সালাদ, তাজাতজিকি সস, ঝাল সস এবং আমাদের বিশেষ হালকা সাদা সস দিয়ে ক্ষুধাবর্ধক কম্বো এবং তিল কুলেরা সহ পরিবেশিত, ১০ জনের জন্য।',
-        ko: '이 요리는 8시간 동안 천천히 구워서 뼈에서 떨어지는 부드러운 양 정강이가 특징이며, 두 종류의 쌀(사프란과 비리야니), 신선한 샐러드, 짜지키 소스, 매운 소스, 특별한 마일드 화이트 소스와 함께 전채 콤보와 참깨 쿨레라와 함께 제공되어 10명이 드실 수 있습니다.',
-        bs: 'Ovo jelo sadrži nežan, janjeći but koji se odvaja od kosti, sporo pečen 8 sati, i služi se sa dve vrste pirinča (šafranskim i biryani), svežom salatom, tzatziki sosom, ljutim sosom i našim posebnim blagim belim sosom, zajedno sa kombinacijom predjela i sezamskim kulera, služi 10 osoba.',
-        zh: '这道菜以嫩滑、骨肉分离的羊腿为特色，慢烤8小时，配有两种米饭（藏红花和比里亚尼）、新鲜沙拉、酸奶黄瓜酱、辣酱和我们特制的温和白酱，配有开胃菜组合和芝麻库莱拉，可供10人享用。',
-        ro: 'Acest fel de mâncare prezintă pulpă de miel fragedă care se desprinde de os, prăjită lent timp de 8 ore, și este servită cu două varietăți de orez (cu șofran și biryani), salată proaspătă, sos tzatziki, sos picant și sosul nostru special alb și ușor, împreună cu o combinație de aperitive și kulera cu susan, servind 10 persoane.',
-        uk: 'Ця страва містить ніжну баранячу ніжку, що відпадає від кістки, повільно смажену протягом 8 годин, та подається з двома видами рису (шафранового та біріяні), свіжим салатом, соусом дзадзікі, гострим соусом та нашим спеціальним м\'яким білим соусом, разом з комбо закусок та кунжутною кулерою, на 10 осіб.',
-        vi: 'Món ăn này có đặc trưng là đùi cừu mềm, rời khỏi xương, nướng chậm trong 8 giờ, và được phục vụ với hai loại cơm (nghệ tây và biryani), salad tươi, sốt tzatziki, sốt cay và sốt trắng nhẹ đặc biệt của chúng tôi, cùng với combo khai vị và kulera mè, phục vụ 10 người.'
+        en: 'This dish features tender, fall-off-the-bone lamb, slow-roasted for 8 hours, and is served with two varieties of rice (saffron and biryani), fresh salad, tzatziki sauce, spicy sauce, and our special mild white sauce, along with an appetizers combo and sesame kulera, serving 10 to 12 people.',
+        ar: 'يتميز هذا الطبق بالخروف الطري الذي يقع من العظم، محمص ببطء لمدة 8 ساعات، ويُقدم مع نوعين من الأرز (الزعفران والبرياني)، والسلطة الطازجة، وصلصة التزاتزيكي، والصلصة الحارة، وصلصتنا البيضاء الخفيفة الخاصة، مع مجموعة المقبلات وكوليرا السمسم، لخدمة 10 إلى 12 شخصاً.',
+        fa: 'این غذا شامل بره نرم و از استخوان جدا شونده است که به مدت ۸ ساعت آهسته برشته شده و با دو نوع برنج (زعفرانی و بریانی)، سالاد تازه، سس تزاتزیکی، سس تند و سس سفید ملایم مخصوص ما همراه با ترکیب پیش غذا و کولرای کنجد سرو می‌شود و برای ۱۰ تا ۱۲ نفر کافی است.',
+        ku: 'ئەم خۆراکە تایبەتمەندی بەرخی نەرم و لە ئێسکەوە کەوتووە، بۆ ماوەی ٨ کاتژمێر بە هێواشی برژاوە، و لەگەڵ دوو جۆری برنج (زەعفەران و بریانی)، سالادی تازە، سۆسی تزاتزیکی، سۆسی تەند، و سۆسی سپی نەرمی تایبەتمان لەگەڵ تێکەڵی پێشخۆراک و کولێرای کنجد دەخرێتە بەردەست، بۆ ١٠ بۆ ١٢ کەس.',
+        tr: 'Bu yemek kemikten düşen yumuşak kuzu içerir, 8 saat yavaş kavrulmuş ve iki çeşit pirinç (safran ve biryani), taze salata, tzatziki sosu, baharatlı sos ve özel hafif beyaz sosumuzla birlikte meze kombinasyonu ve susam kulera ile 10 ila 12 kişilik servis edilir.',
+        ur: 'یہ ڈش نرم، ہڈی سے گرنے والی بھیڑ پر مشتمل ہے، 8 گھنٹے تک آہستہ بھنی گئی، اور دو قسم کے چاول (زعفران اور بریانی)، تازہ سلاد، تزاتزیکی ساس، تیز ساس، اور ہماری خاص ہلکی سفید ساس کے ساتھ اپیٹائزر کومبو اور تل کولیرا کے ساتھ پیش کی جاتی ہے، 10 سے 12 لوگوں کو پیش کرتی ہے۔',
+        kmr: 'Ev xwarin berxê nerm û ji hestiyê ketî dihewîne, 8 demjimêr hêdî şewitî, û bi du cure brincê (zefran û biryani), salatayek taze, sosê tzatziki, sosê tûj û sosê spî yê nerm ê me yê taybet bi tevahiya mezeyên û kulera kundurmê re ji bo 10 heta 12 kesan tê peşkêşkirin.',
+        es: 'Este plato presenta cordero tierno que se desprende del hueso, asado lentamente durante 8 horas, y se sirve con dos variedades de arroz (azafrán y biryani), ensalada fresca, salsa tzatziki, salsa picante y nuestra salsa blanca suave especial, junto con una combinación de aperitivos y kulera de sésamo, sirviendo de 10 a 12 personas.',
+        ru: 'Это блюдо включает нежную, отваливающуюся от кости баранину, медленно жареную в течение 8 часов, подается с двумя видами риса (шафранный и бирьяни), свежим салатом, соусом дзадзики, острым соусом и нашим специальным мягким белым соусом, вместе с комбо закусок и кунжутной кулерой, на 10-12 человек.',
+        hi: 'इस व्यंजन में नरम, हड्डी से गिरने वाली भेड़ का मांस है, जो 8 घंटे तक धीमी आंच पर भुना गया है, और दो प्रकार के चावल (केसर और बिरयानी), ताजा सलाद, त्ज़त्ज़िकी सॉस, तीखी सॉस, और हमारी विशेष हल्की सफेद सॉस के साथ एपेटाइज़र कॉम्बो और तिल कुलेरा के साथ परोसा जाता है, 10 से 12 लोगों को परोसता है।',
+        sq: 'Kjo pjatë përmban qengj të butë që bie nga kocka, e pjekur ngadalë për 8 orë, dhe shërbehet me dy lloje orizi (me shafran dhe biryani), sallatë të freskët, salcë tzatziki, salcë djegëse dhe salcën tonë speciale të bardhë të butë, së bashku me një kombinim hapësirash dhe kulera me susam, duke shërbyer 10 deri në 12 persona.',
+        fr: 'Ce plat présente de l\'agneau tendre qui tombe de l\'os, rôti lentement pendant 8 heures, et est servi avec deux variétés de riz (safran et biryani), salade fraîche, sauce tzatziki, sauce épicée et notre sauce blanche douce spéciale, accompagné d\'un combo d\'apéritifs et de kulera au sésame, servant 10 à 12 personnes.',
+        de: 'Dieses Gericht zeigt zartes, vom Knochen fallendes Lamm, 8 Stunden langsam geröstet, und wird mit zwei Reissorten (Safran und Biryani), frischem Salat, Tzatziki-Sauce, scharfer Sauce und unserer speziellen milden weißen Sauce zusammen mit einer Vorspeisen-Kombination und Sesam-Kulera serviert, für 10 bis 12 Personen.',
+        bn: 'এই পদে রয়েছে নরম, হাড় থেকে পড়ে যাওয়া মেষশাবক, ৮ ঘন্টা ধীরে ভাজা, এবং দুই ধরনের ভাত (জাফরান এবং বিরিয়ানি), তাজা সালাদ, তাজাতজিকি সস, ঝাল সস এবং আমাদের বিশেষ হালকা সাদা সস দিয়ে ক্ষুধাবর্ধক কম্বো এবং তিল কুলেরা সহ পরিবেশিত, ১০ থেকে ১২ জনের জন্য।',
+        ko: '이 요리는 8시간 동안 천천히 구워서 뼈에서 떨어지는 부드러운 양고기가 특징이며, 두 종류의 쌀(사프란과 비리야니), 신선한 샐러드, 짜지키 소스, 매운 소스, 특별한 마일드 화이트 소스와 함께 전채 콤보와 참깨 쿨레라와 함께 제공되어 10~12명이 드실 수 있습니다.',
+        bs: 'Ovo jelo sadrži nežno janje koje se odvaja od kosti, sporo pečeno 8 sati, i služi se sa dve vrste pirinča (šafranskim i biryani), svežom salatom, tzatziki sosom, ljutim sosom i našim posebnim blagim belim sosom, zajedno sa kombinacijom predjela i sezamskim kulera, služi 10 do 12 osoba.',
+        zh: '这道菜以嫩滑、骨肉分离的羊肉为特色，慢烤8小时，配有两种米饭（藏红花和比里亚尼）、新鲜沙拉、酸奶黄瓜酱、辣酱和我们特制的温和白酱，配有开胃菜组合和芝麻库莱拉，可供10-12人享用。',
+        ro: 'Acest fel de mâncare prezintă miel fraged care se desprinde de os, prăjit lent timp de 8 ore, și este servit cu două varietăți de orez (cu șofran și biryani), salată proaspătă, sos tzatziki, sos picant și sosul nostru special alb și ușor, împreună cu o combinație de aperitive și kulera cu susan, servind 10 până la 12 persoane.',
+        uk: 'Ця страва містить ніжну баранину, що відпадає від кістки, повільно смажену протягом 8 годин, та подається з двома видами рису (шафранового та біріяні), свіжим салатом, соусом дзадзікі, гострим соусом та нашим спеціальним м\'яким білим соусом, разом з комбо закусок та кунжутною кулерою, на 10-12 осіб.',
+        vi: 'Món ăn này có đặc trưng là thịt cừu mềm, rời khỏi xương, nướng chậm trong 8 giờ, và được phục vụ với hai loại cơm (nghệ tây và biryani), salad tươi, sốt tzatziki, sốt cay và sốt trắng nhẹ đặc biệt của chúng tôi, cùng với combo khai vị và kulera mè, phục vụ 10 đến 12 người.'
       }, 
       image: '/Lamb Leg Special.jpg',
-      price: '$499.00', 
+      price: '$599.00', 
       category: 'specialty', 
       popular: false, 
       tags: ['special-order', 'large-group'] 
@@ -4124,6 +4847,111 @@ const FullMenuPage = () => {
       tags: ['chicken', 'kabab']
     },
 
+    // FISH
+    { 
+      id: 2301, 
+      name: { 
+        en: 'Masgouf',
+        ar: 'مسگوف',
+        fa: 'مسگوف',
+        ku: 'مەسگووف',
+        tr: 'Masguf',
+        ur: 'مسگوف',
+        kmr: 'Masguf',
+        es: 'Masgouf',
+        ru: 'Масгуф',
+        hi: 'मसगूफ',
+        sq: 'Masgouf',
+        fr: 'Masgouf',
+        de: 'Masgouf',
+        bn: 'মাসগুফ',
+        ko: '마스구프',
+        bs: 'Masgouf',
+        zh: '烤鱼',
+        ro: 'Masgouf',
+        uk: 'Масгуф',
+        vi: 'Masgouf'
+      }, 
+      description: { 
+        en: 'Traditional Iraqi grilled fish, butterflied and seasoned with aromatic spices, slow-cooked over open flames. A true delicacy with authentic Middle Eastern flavors. (Advance order required one day when visiting)',
+        ar: 'سمك عراقي مشوي تقليدي، مقطع كالفراشة ومتبل بالتوابل العطرة، مطبوخ ببطء على النار المفتوحة. لذة حقيقية بنكهات شرق أوسطية أصيلة. (يجب الطلب مسبقاً بيوم واحد عند الزيارة)',
+        fa: 'ماهی کبابی سنتی عراقی، پروانه‌ای شده و با ادویه‌های معطر طعم‌دار، روی آتش باز به آرامی پخته می‌شود. یک غذای واقعاً لذیذ با طعم‌های اصیل خاورمیانه. (سفارش قبلی یک روز قبل از مراجعه لازم است)',
+        ku: 'ماسی ئاگرینی تەقلیدی عێراقی، وەک پەپووله کراوەتەوە و بە بۆنخۆشی تامدراوە، بە هێواشی لەسەر ئاگری کراوە پێخراوە. خۆراکێکی بەڕاستی خۆش بە تامی ڕاستەقینەی ڕۆژهەڵاتی ناوەڕاست. (پێویستە یەک ڕۆژ پێشوەخت داوا بکرێت کاتی سەردان)',
+        tr: 'Geleneksel Irak ızgara balığı, kelebek şeklinde açılmış ve aromatik baharatlarla baharatlanmış, açık ateşte yavaş pişirilmiş. Otantik Orta Doğu lezzetleriyle gerçek bir lezzet. (Ziyaret ederken bir gün önceden sipariş gereklidir)',
+        ur: 'روایتی عراقی گرل مچھلی، تتلی کی طرح کھولی گئی اور خوشبودار مصالحوں سے محفوظ، کھلی آگ پر آہستہ پکائی گئی۔ مشرق وسطیٰ کے اصل ذائقوں کے ساتھ واقعی ایک لذیذ ڈش۔ (دورہ کرتے وقت ایک دن پہلے آرڈر ضروری)',
+        kmr: 'Masîyê şewitî ya kevneşopî ya Îraqê, wek perperûkê vekirî û bi bênxweşan tatdar kirin, li ser agirê vekirî hêdî pijandin. Xwarineka bi rastî xweş bi tamên resen ên Rojhilatê Navîn. (Dema serdanê siparişa pêşî ya yek rojê pêwîst e)',
+        es: 'Pescado a la parrilla tradicional iraquí, abierto como mariposa y sazonado con especias aromáticas, cocinado lentamente sobre llamas abiertas. Una verdadera delicia con sabores auténticos del Medio Oriente. (Se requiere pedido anticipado un día al visitar)',
+        ru: 'Традиционная иракская жареная рыба, раскрытая бабочкой и приправленная ароматными специями, медленно приготовленная на открытом огне. Истинный деликатес с подлинными ближневосточными вкусами. (При посещении требуется предварительный заказ за день)',
+        hi: 'पारंपरिक इराकी ग्रिल मछली, तितली की तरह खोली गई और सुगंधित मसालों से सीज़न की गई, खुली आग पर धीरे-धीरे पकाई गई। मध्य पूर्वी प्रामाणिक स्वादों के साथ एक सच्ची स्वादिष्टता। (दौरा करते समय एक दिन पहले ऑर्डर आवश्यक)',
+        sq: 'Peshk tradicional irakian në skuqje, i hapur si flutur dhe i aromatizuar me erëza aromatike, i gatuar ngadalë mbi flakë të hapura. Një shije e vërtetë me aroma autentike nga Lindja e Mesme. (Kërkohet porosi paraprake një ditë kur vizitoni)',
+        fr: 'Poisson grillé traditionnel irakien, ouvert en papillon et assaisonné avec des épices aromatiques, cuit lentement sur feu ouvert. Un vrai délice aux saveurs authentiques du Moyen-Orient. (Commande anticipée requise un jour lors de la visite)',
+        de: 'Traditioneller irakischer Grillfisch, schmetterlingsartig geöffnet und mit aromatischen Gewürzen gewürzt, langsam über offenen Flammen gekocht. Eine wahre Delikatesse mit authentischen nahöstlichen Aromen. (Vorbestellung einen Tag vor dem Besuch erforderlich)',
+        bn: 'ঐতিহ্যবাহী ইরাকি গ্রিল মাছ, প্রজাপতির মতো খোলা এবং সুগন্ধি মশলা দিয়ে সিজন করা, খোলা আগুনে ধীরে ধীরে রান্না করা। মধ্যপ্রাচ্যের প্রামাণিক স্বাদের সাথে একটি সত্যিকারের সুস্বাদু খাবার। (ভ্রমণের সময় এক দিন আগে অর্ডার প্রয়োজন)',
+        ko: '전통적인 이라크 구이 생선으로, 나비 모양으로 펼쳐서 향긋한 향신료로 양념하고 열린 불꽃에서 천천히 요리했습니다. 정통 중동 풍미의 진정한 별미입니다. (방문 시 하루 전 미리 주문 필요)',
+        bs: 'Tradicionalna iračka riба na žaru, otvorena kao leptir i začinjena aromatičnim začinima, polako kuhana na otvorenom pламenu. Pravi delikates sa autentičnim bliskoistočnim ukusima. (Potrebna je unaprijed narudžba jedan dan pri posjeti)',
+        zh: '传统伊拉克烤鱼，蝴蝶式切开并用芳香香料调味，在明火上慢慢烹制。具有正宗中东风味的真正美味。（参观时需提前一天预订）',
+        ro: 'Pește la grătar tradițional irakian, deschis ca un fluture și condimentat cu mirodenii aromatice, gătit încet pe flăcări deschise. O adevărată delicatesă cu aromele autentice din Orientul Mijlociu. (Este necesară comandă în avans cu o zi la vizită)',
+        uk: 'Традиційна іракська рибa на грилі, розкрита метеликом і приправлена ароматними спеціями, повільно приготована на відкритому вогні. Справжній делікатес з автентичними близькосхідними смаками. (При відвідуванні потрібне попереднє замовлення за день)',
+        vi: 'Cá nướng truyền thống Iraq, mở như cánh bướm và tẩm gia vị thơm, nấu chậm trên lửa hở. Một món ngon thực sự với hương vị Trung Đông chính thống. (Phải đặt hàng trước một ngày khi đến thăm)'
+      }, 
+      category: 'fish', 
+      popular: true, 
+      image: '/Masgouf.jpg',
+      tags: [],
+      variants: [
+        {
+          name: {
+            en: '2 People',
+            ar: 'شخصين',
+            fa: '2 نفر',
+            ku: 'دوو کەس',
+            tr: '2 Kişi',
+            ur: '2 لوگ',
+            kmr: '2 Kes',
+            es: '2 Personas',
+            ru: '2 Человека',
+            hi: '2 लोग',
+            sq: '2 Persona',
+            fr: '2 Personnes',
+            de: '2 Personen',
+            bn: '2 জন',
+            ko: '2명',
+            bs: '2 Osobe',
+            zh: '2人份',
+            ro: '2 Persoane',
+            uk: '2 Особи',
+            vi: '2 Người'
+          },
+          price: '$69.99'
+        },
+        {
+          name: {
+            en: '4 People',
+            ar: 'أربعة أشخاص',
+            fa: '4 نفر',
+            ku: 'چوار کەس',
+            tr: '4 Kişi',
+            ur: '4 لوگ',
+            kmr: '4 Kes',
+            es: '4 Personas',
+            ru: '4 Человека',
+            hi: '4 लोग',
+            sq: '4 Persona',
+            fr: '4 Personnes',
+            de: '4 Personen',
+            bn: '4 জন',
+            ko: '4명',
+            bs: '4 Osobe',
+            zh: '4人份',
+            ro: '4 Persoane',
+            uk: '4 Особи',
+            vi: '4 Người'
+          },
+          price: '$129.99'
+        }
+      ]
+    },
+
     // SIDES
     { 
       id: 1905, 
@@ -4827,7 +5655,7 @@ const FullMenuPage = () => {
       }, 
       price: '$10.99', 
       category: 'dessert', 
-      image: '/Baklava with Saffron Ice Cream.jpg',
+      image: '/Baklava w Saffron Ice Cream.jpg',
       tags: [] 
     },
     { 
@@ -5186,816 +6014,96 @@ const FullMenuPage = () => {
       category: 'dessert', 
       image: '/Saffron Ice Cream.jpg',
       tags: [] 
-    },
-
-    // SALADS
-    { 
-      id: 1101, 
-      name: { 
-        en: 'Greek Salad',
-        ar: 'سلطة يونانية',
-        fa: 'سالاد یونانی',
-        ku: 'سالادی یۆنانی',
-        tr: 'Yunan Salatası',
-        ur: 'یونانی سلاد',
-        kmr: 'Salata Yewnanî',
-        es: 'Ensalada Griega',
-        ru: 'Греческий салат',
-        hi: 'ग्रीक सलाद',
-        sq: 'Sallatë Greke',
-        fr: 'Salade Grecque',
-        de: 'Griechischer Salat',
-        bn: 'গ্রিক সালাদ',
-        ko: '그리스 샐러드',
-        bs: 'Grčka Salata',
-        zh: '希腊沙拉',
-        ro: 'Salată Grecească',
-        uk: 'Грецький салат',
-        vi: 'Salad Hy Lạp'
-      }, 
-      description: { 
-        en: 'A classic Greek salad made with spring mix, tomatoes, cucumbers, onions, Kalamata olives, Feta cheese and Greek vinaigrette.',
-        ar: 'سلطة يونانية كلاسيكية مصنوعة من خليط الربيع، الطماطم، الخيار، البصل، زيتون كالاماتا، جبن الفيتا وتتبيلة يونانية.',
-        fa: 'سالاد یونانی کلاسیک از مخلوط بهاری، گوجه‌فرنگی، خیار، پیاز، زیتون کالاماتا، پنیر فتا و سس یونانی.',
-        ku: 'سالادی یۆنانی کلاسیک لە تێکەڵی بەهار، تەماتە، خیار، پیاز، زەیتونی کالاماتا، پەنیری فیتا و سۆسی یۆنانی.',
-        tr: 'Bahar karışımı, domates, salatalık, soğan, Kalamata zeytini, Feta peyniri ve Yunan soslu klasik Yunan salatası.',
-        ur: 'بہار کے مرکب، ٹماٹر، کھیرا، پیاز، کالاماٹا زیتون، فیٹا چیز اور یونانی ڈریسنگ سے بنا کلاسک یونانی سلاد۔',
-        kmr: 'Salatayek Yewnanî ya klasîk ku ji tevahiya biharê, firangoş, xiyar, pîvaz, zeytûnên Kalamata, penîrê Feta û soşa Yewnanî tê çêkirin.',
-        es: 'Ensalada griega clásica hecha con mezcla primaveral, tomates, pepinos, cebolla, aceitunas Kalamata, queso Feta y vinagreta griega.',
-        ru: 'Классический греческий салат из весенней смеси, помидоров, огурцов, лука, оливок каламата, сыра фета и греческой заправки.',
-        hi: 'स्प्रिंग मिक्स, टमाटर, खीरे, प्याज, कलामाटा जैतून, फेटा चीज़ और ग्रीक विनैग्रेट से बना क्लासिक ग्रीक सलाद।',
-        sq: 'Sallatë klasike greke e bërë me përzierje pranverore, domate, kastravec, qepë, ullinj Kalamata, djathë Feta dhe vinegretë greke.',
-        fr: 'Salade grecque classique préparée avec mélange printanier, tomates, concombres, oignons, olives Kalamata, fromage Feta et vinaigrette grecque.',
-        de: 'Klassischer griechischer Salat mit Frühlings-Mix, Tomaten, Gurken, Zwiebeln, Kalamata-Oliven, Feta-Käse und griechischer Vinaigrette.',
-        bn: 'স্প্রিং মিক্স, টমেটো, শসা, পেঁয়াজ, কালামাটা অলিভ, ফেটা চিজ এবং গ্রিক ভিনাইগ্রেট দিয়ে তৈরি ক্লাসিক গ্রিক সালাদ।',
-        ko: '스프링 믹스, 토마토, 오이, 양파, 칼라마타 올리브, 페타 치즈, 그리스 비네그레트로 만든 클래식 그리스 샐러드입니다.',
-        bs: 'Klasična grčka salata napravljena od proljetne mješavine, rajčica, krastavaca, luka, Kalamata maslina, Feta sira i grčke vinegrete.',
-        zh: '经典希腊沙拉，由春季混合菜、番茄、黄瓜、洋葱、卡拉马塔橄榄、菲达奶酪和希腊油醋汁制成。',
-        ro: 'Salată grecească clasică făcută cu amestec de primăvară, roșii, castraveți, ceapă, măsline Kalamata, brânză Feta și vinaigretă grecească.',
-        uk: 'Класичний грецький салат з весняної суміші, помідорів, огірків, цибулі, оливок каламата, сиру фета та грецького соусу-вінегрет.',
-        vi: 'Salad Hy Lạp cổ điển làm từ hỗn hợp rau mùa xuân, cà chua, dưa chuột, hành tây, ô liu Kalamata, phô mai Feta và nước sốt giấm Hy Lạp.'
-      }, 
-      image: '/Greek Salad.jpg',
-      price: '$14.99', 
-      category: 'salads', 
-      popular: true, 
-      tags: ['vegetarian'], 
-      addOns: { 
-        title: { 
-          en: 'Add Protein',
-          ar: 'إضافة بروتين',
-          fa: 'اضافه کردن پروتین',
-          ku: 'پرۆتین زیادبکە',
-          tr: 'Protein Ekle',
-          ur: 'پروٹین شامل کریں',
-          kmr: 'Protein Zêde Bike',
-          es: 'Agregar Proteína',
-          ru: 'Добавить белок',
-          hi: 'प्रोटीन जोड़ें',
-          sq: 'Shto Proteinë',
-          fr: 'Ajouter des Protéines',
-          de: 'Protein hinzufügen',
-          bn: 'প্রোটিন যোগ করুন',
-          ko: '단백질 추가',
-          bs: 'Dodaj Protein',
-          zh: '添加蛋白质',
-          ro: 'Adaugă Proteine',
-          uk: 'Додати білок',
-          vi: 'Thêm Protein'
-        }, 
-        options: [ 
-          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
-          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
-          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治球', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$4.99' }, 
-          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' } 
-        ] 
-      } 
-    },
-    { 
-      id: 1102, 
-      name: { 
-        en: 'Fattoush Salad',
-        ar: 'سلطة فتوش',
-        fa: 'سالاد فتوش',
-        ku: 'سالادی فەتووش',
-        tr: 'Fattuş Salatası',
-        ur: 'فتوش سلاد',
-        kmr: 'Salata Fetûş',
-        es: 'Ensalada Fattoush',
-        ru: 'Салат Фаттуш',
-        hi: 'फत्तूश सलाद',
-        sq: 'Sallatë Fattoush',
-        fr: 'Salade Fattoush',
-        de: 'Fattoush Salat',
-        bn: 'ফাতুশ সালাদ',
-        ko: '파투시 샐러드',
-        bs: 'Fattoush Salata',
-        zh: '法图什沙拉',
-        ro: 'Salată Fattoush',
-        uk: 'Салат Фаттуш',
-        vi: 'Salad Fattoush'
-      }, 
-      description: { 
-        en: 'A delicious Middle Eastern salad made with lettuce, tomatoes, cucumbers, bell peppers, fresh mint, parsley, crispy pita bread, and pomegranate molasses dressing.',
-        ar: 'سلطة شرق أوسطية لذيذة مصنوعة من الخس والطماطم والخيار والفلفل الحلو والنعناع الطازج والبقدونس وخبز البيتا المقرمش وصلصة دبس الرمان.',
-        fa: 'سالاد لذیذ خاورمیانه‌ای از کاهو، گوجه‌فرنگی، خیار، فلفل دلمه‌ای، نعنای تازه، جعفری، نان پیتای ترد و سس انار.',
-        ku: 'سالادێکی خۆشی ڕۆژهەڵاتی ناوەڕاست لە خس، تەماتە، خیار، بیبەری شیرین، پونگی تازە، جەعدە، نانی پیتای ترسکە و سۆسی هەنار.',
-        tr: 'Marul, domates, salatalık, dolma biberi, taze nane, maydanoz, çıtır pita ekmeği ve nar ekşisi sosuyla yapılan lezzetli Orta Doğu salatası.',
-        ur: 'لیٹوس، ٹماٹر، کھیرا، بیل پیپرز، تازہ پودینہ، دھنیا، کرسپی پیٹا بریڈ اور انار کے شیرے کی ڈریسنگ سے بنا لذیذ مشرق وسطیٰ کا سلاد۔',
-        kmr: 'Salatayek bi tam a Rojhilatê Navîn ku ji salata kesk, firangoş, xiyar, biberên şîrîn, pûngê taze, şînî, nanê pita yê çitir û soşa henarê tê çêkirin.',
-        es: 'Una deliciosa ensalada del Medio Oriente hecha con lechuga, tomates, pepinos, pimientos morrones, menta fresca, perejil, pan pita crujiente y aderezo de melaza de granada.',
-        ru: 'Вкусный ближневосточный салат из салата, помидоров, огурцов, болгарского перца, свежей мяты, петрушки, хрустящего хлеба пита и заправки из гранатовой патоки.',
-        hi: 'सलाद पत्ता, टमाटर, खीरे, बेल पेपर, ताज़ा पुदीना, अजमोद, कुरकुरी पीटा ब्रेड और अनार के शीरे की ड्रेसिंग से बना स्वादिष्ट मध्य पूर्वी सलाद।',
-        sq: 'Sallatë e shijshme lindjes së mesme e bërë me marule, domate, kastravec, spec të ëmbël, mendër të freskët, majdanoz, bukë pita të krisur dhe salcë melase shege.',
-        fr: 'Une délicieuse salade du Moyen-Orient préparée avec laitue, tomates, concombres, poivrons doux, menthe fraîche, persil, pain pita croustillant et vinaigrette à la mélasse de grenade.',
-        de: 'Ein köstlicher nahöstlicher Salat aus Kopfsalat, Tomaten, Gurken, Paprika, frischer Minze, Petersilie, knusprigem Pita-Brot und Granatapfelmelasse-Dressing.',
-        bn: 'লেটুস, টমেটো, শসা, বেল পেপার, তাজা পুদিনা, পার্সলে, কুরকুরে পিটা ব্রেড এবং ডালিমের মোলাসেস ড্রেসিং দিয়ে তৈরি সুস্বাদু মধ্যপ্রাচ্যের সালাদ।',
-        ko: '상추, 토마토, 오이, 피망, 신선한 민트, 파슬리, 바삭한 피타 빵, 석류 당밀 드레싱으로 만든 맛있는 중동 샐러드입니다.',
-        bs: 'Ukusna bliskoistočna salata napravljena od salate, rajčica, krastavaca, paprika, svježe mente, peršina, hrskavog pita kruha i preliva od šipkovog melasa.',
-        zh: '美味的中东沙拉，由生菜、番茄、黄瓜、甜椒、新鲜薄荷、欧芹、酥脆皮塔饼和石榴糖浆调味汁制成。',
-        ro: 'O salată delicioasă din Orientul Mijlociu făcută cu salată verde, roșii, castraveți, ardei dulci, mentă proaspătă, pătrunjel, pâine pita crocantă și dressing de melasă de rodie.',
-        uk: 'Смачний близькосхідний салат з салату, помідорів, огірків, солодкого перцю, свіжої мʼяти, петрушки, хрусткого хліба піта та заправки з гранатової патоки.',
-        vi: 'Salad Trung Đông ngon được làm từ rau diếp, cà chua, dưa chuột, ớt chuông, bạc hà tươi, rau mùi tây, bánh mì pita giòn và nước sốt mật ong lựu.'
-      }, 
-      image: '/Fattoush Salad.jpg',
-      price: '$14.99', 
-      category: 'salads', 
-      popular: true, 
-      image: '/Fattoush Salad.jpg',
-      tags: ['vegetarian', 'vegan'], 
-      addOns: { 
-        title: { 
-          en: 'Add Protein',
-          ar: 'إضافة بروتين',
-          fa: 'اضافه کردن پروتین',
-          ku: 'پرۆتین زیادبکە',
-          tr: 'Protein Ekle',
-          ur: 'پروٹین شامل کریں',
-          kmr: 'Protein Zêde Bike',
-          es: 'Agregar Proteína',
-          ru: 'Добавить белок',
-          hi: 'प्रोटीन जोड़ें',
-          sq: 'Shto Proteinë',
-          fr: 'Ajouter des Protéines',
-          de: 'Protein hinzufügen',
-          bn: 'প্রোটিন যোগ করুন',
-          ko: '단백질 추가',
-          bs: 'Dodaj Protein',
-          zh: '添加蛋白质',
-          ro: 'Adăugați Proteine',
-          uk: 'Додати білок',
-          vi: 'Thêm Protein'
-        }, 
-        options: [ 
-          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
-          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
-          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' }, 
-          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治球', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$5.99' } 
-        ] 
-      } 
-    },
-    { 
-      id: 1103, 
-      name: { 
-        en: 'Shwan Salad',
-        ar: 'سلطة شيوان',
-        fa: 'سالاد شیوان',
-        ku: 'سالادی شیوان',
-        tr: 'Şivan Salatası',
-        ur: 'شیوان سلاد',
-        kmr: 'Salata Şîvan',
-        es: 'Ensalada Shivan',
-        ru: 'Салат Шиван',
-        hi: 'शिवान सलाद',
-        sq: 'Sallatë Shiwan',
-        fr: 'Salade Shiwan',
-        de: 'Shwan Salat',
-        bn: 'শিওয়ান সালাদ',
-        ko: '시완 샐러드',
-        bs: 'Šivan Salata',
-        zh: '希万沙拉',
-        ro: 'Salată Shiwan',
-        uk: 'Салат Шиван',
-        vi: 'Salad Shwan'
-      }, 
-      description: { 
-        en: 'A refreshing Turkish salad made with tomatoes, cucumbers, green peppers, onions, parsley, and walnuts, seasoned with olive oil and lemon juice.',
-        ar: 'سلطة تركية منعشة مصنوعة من الطماطم والخيار والفلفل الأخضر والبصل والبقدونس والجوز، متبلة بزيت الزيتون وعصير الليمون.',
-        fa: 'سالاد ترکی تازه‌کننده از گوجه‌فرنگی، خیار، فلفل سبز، پیاز، جعفری و گردو، با روغن زیتون و آب لیمو طعم‌دار شده.',
-        ku: 'سالادێکی ترکی ئارامبەخش لە تەماتە، خیار، بیبەری سەوز، پیاز، جەعدە و گوێز، بە زەیتی زەیتوون و شیری لیمۆ تامدراوە.',
-        tr: 'Domates, salatalık, yeşil biber, soğan, maydanoz ve cevizle yapılan, zeytinyağı ve limon suyuyla tatlandırılmış ferahlatıcı Türk salatası.',
-        ur: 'ٹماٹر، کھیرا، ہری مرچ، پیاز، دھنیا اور اخروٹ سے بنا تازگی بخش ترک سلاد، زیتون کے تیل اور لیموں کے رس سے ذائقہ دار۔',
-        kmr: 'Salatayek Tirkî ya vevişandî ku ji firangoş, xiyar, biberê kesk, pîvaz, şînî û gihokan tê çêkirin, bi zeyta zeytûnê û ava lîmonê tatdar dike.',
-        es: 'Una refrescante ensalada turca hecha con tomates, pepinos, pimientos verdes, cebollas, perejil y nueces, sazonada con aceite de oliva y jugo de limón.',
-        ru: 'Освежающий турецкий салат из помидоров, огурцов, зелёного перца, лука, петрушки и грецких орехов, заправленный оливковым маслом и лимонным соком.',
-        hi: 'टमाटर, खीरे, हरी मिर्च, प्याज, अजमोद और अखरोट से बना तरोताजा तुर्की सलाद, जैतून के तेल और नींबू के रस से सीज़न किया गया।',
-        sq: 'Sallatë turke freskuese e bërë me domate, kastravec, spec të gjelbër, qepë, majdanoz dhe arrë, e këndelur me vaj ulliri dhe lëng limoni.',
-        fr: 'Une salade turque rafraîchissante préparée avec tomates, concombres, poivrons verts, oignons, persil et noix, assaisonnée à l\'huile d\'olive et au jus de citron.',
-        de: 'Ein erfrischender türkischer Salat aus Tomaten, Gurken, grünen Paprika, Zwiebeln, Petersilie und Walnüssen, gewürzt mit Olivenöl und Zitronensaft.',
-        bn: 'টমেটো, শসা, সবুজ মরিচ, পেঁয়াজ, পার্সলে এবং আখরোট দিয়ে তৈরি সতেজকারী তুর্কি সালাদ, অলিভ অয়েল এবং লেবুর রস দিয়ে মসলাযুক্ত।',
-        ko: '토마토, 오이, 피망, 양파, 파슬리, 호두로 만든 상쾌한 터키식 샐러드로, 올리브 오일과 레몬 주스로 양념합니다.',
-        bs: 'Osvježavajuća turska salata napravljena od rajčica, krastavaca, zelene paprike, luka, peršina i oraha, začinjena maslinovim uljem i limunovim sokom.',
-        zh: '清爽的土耳其沙拉，由番茄、黄瓜、青椒、洋葱、欧芹和核桃制成，用橄榄油和柠檬汁调味。',
-        ro: 'O salată turcească revigorantă făcută cu roșii, castraveți, ardei verzi, ceapă, pătrunjel și nuci, condimentată cu ulei de măsline și suc de lămâie.',
-        uk: 'Освіжаючий турецький салат з помідорів, огірків, зеленого перцю, цибулі, петрушки та волоських горіхів, заправлений оливковою олією та лимонним соком.',
-        vi: 'Salad Thổ Nhĩ Kỳ tươi mát làm từ cà chua, dưa chuột, ớt xanh, hành tây, rau mùi tây và óc chó, nêm bằng dầu ô liu và nước cốt chanh.'
-      }, 
-      image: '/Shwan Salad.jpg',
-      price: '$14.99', 
-      category: 'salads', 
-      tags: ['vegetarian', 'vegan'], 
-      addOns: { 
-        title: { 
-          en: 'Add Protein',
-          ar: 'إضافة بروتين',
-          fa: 'اضافه کردن پروتین',
-          ku: 'پرۆتین زیادبکە',
-          tr: 'Protein Ekle',
-          ur: 'پروٹین شامل کریں',
-          kmr: 'Protein Zêde Bike',
-          es: 'Agregar Proteína',
-          ru: 'Добавить белок',
-          hi: 'प्रोटीन जोड़ें',
-          sq: 'Shto Proteinë',
-          fr: 'Ajouter des Protéines',
-          de: 'Protein hinzufügen',
-          bn: 'প্রোটিন যোগ করুন',
-          ko: '단백질 추가',
-          bs: 'Dodaj Protein',
-          zh: '添加蛋白质',
-          ro: 'Adăugați Proteine',
-          uk: 'Додати білок',
-          vi: 'Thêm Protein'
-        }, 
-        options: [ 
-          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядина', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
-          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
-          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' }, 
-          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$5.99' } 
-        ] 
-      } 
-    },
-    { 
-      id: 1104, 
-      name: { 
-        en: 'Tabbouleh Salad',
-        ar: 'سلطة التبولة',
-        fa: 'سالاد تبوله',
-        ku: 'سالادی تەبووله',
-        tr: 'Tabbouleh Salatası',
-        ur: 'تبولہ سلاد',
-        kmr: 'Salata Tabbouleh',
-        es: 'Ensalada Tabbouleh',
-        ru: 'Салат Табуле',
-        hi: 'तब्बूलेह सलाद',
-        sq: 'Sallatë Tabbouleh',
-        fr: 'Salade Tabbouleh',
-        de: 'Tabbouleh-Salat',
-        bn: 'তাবুলেহ সালাদ',
-        ko: '타불레 샐러드',
-        bs: 'Tabbouleh Salata',
-        zh: '塔布勒沙拉',
-        ro: 'Salată Tabbouleh',
-        uk: 'Салат Табуле',
-        vi: 'Salad Tabbouleh'
-      }, 
-      description: { 
-        en: 'A Levantine salad of finely chopped parsley, soaked extra fine bulgur, tomatoes, mint, onion, and scallions, seasoned with olive oil, lemon juice, salt and black pepper.',
-        ar: 'سلطة شامية من البقدونس المفروم ناعماً، البرغل الناعم المنقوع، الطماطم، النعناع، البصل، والبصل الأخضر، متبلة بزيت الزيتون وعصير الليمون والملح والفلفل الأسود.',
-        fa: 'سالاد شامی از جعفری ریز خرد شده، برغول بسیار نرم خیسانده شده، گوجه‌فرنگی، نعنا، پیاز و پیازچه، طعم‌دار شده با روغن زیتون، آب لیمو، نمک و فلفل سیاه.',
-        ku: 'سالادێکی شامی لە جەعدەی وردکراو، برغولی نەرمی خیسکراو، تەماتە، پونگ، پیاز و پیازی سەوز، تامدراو بە زەیتی زەیتوون، شیری لیمۆ، خوێ و بیبەری ڕەش.',
-        tr: 'İnce doğranmış maydanoz, ıslatılmış çok ince bulgur, domates, nane, soğan ve yeşil soğan ile yapılan Levanten salatası, zeytinyağı, limon suyu, tuz ve karabiber ile baharatlanmış.',
-        ur: 'باریک کٹے ہوئے دھنیا، بھگوئے ہوئے انتہائی باریک دلیا، ٹماٹر، پودینہ، پیاز اور ہری پیاز کا شامی سلاد، زیتون کا تیل، لیموں کا رس، نمک اور کالی مرچ سے ذائقہ دار بنایا گیا۔',
-        kmr: 'Salatayek Şamî ya ku ji şînî bixuber, bulgurê gelek nazik ê avkirî, firangoş, pûng, pîvaz û pîvazên kesk, bi zeyta zeytûnê, ava lîmonê, xwê û biberê reş tê çêkirin.',
-        es: 'Ensalada levantina de perejil finamente picado, bulgur extrafino remojado, tomates, menta, cebolla y cebolletas, sazonada con aceite de oliva, jugo de limón, sal y pimienta negra.',
-        ru: 'Левантийский салат из мелко нарезанной петрушки, замоченного сверхмелкого булгура, помидоров, мяты, лука и зелёного лука, приправленный оливковым маслом, лимонным соком, солью и чёрным перцем.',
-        hi: 'बारीक कटी हुई अजमोद, भिगोई हुई अतिरिक्त बारीक दलिया, टमाटर, पुदीना, प्याज और हरी प्याज का लेवेंटाइन सलाद, जैतून के तेल, नींबू के रस, नमक और काली मिर्च से स्वादिष्ट बनाया गया।',
-        sq: 'Sallatë levantinase me majdanoz të grirë imët, bulgur shumë të hollë të lagur, domate, mendër, qepë dhe qepë të gjelbër, e kondimentuar me vaj ulliri, lëng limoni, kripë dhe piper të zi.',
-        fr: 'Salade levantine de persil finement haché, boulgour extra-fin trempé, tomates, menthe, oignon et échalotes, assaisonnée avec huile d\'olive, jus de citron, sel et poivre noir.',
-        de: 'Levantinischer Salat aus fein gehackter Petersilie, eingeweichtem extra-feinem Bulgur, Tomaten, Minze, Zwiebeln und Frühlingszwiebeln, gewürzt mit Olivenöl, Zitronensaft, Salz und schwarzem Pfeffer.',
-        bn: 'সূক্ষ্ম কাটা পার্সলে, ভেজানো অতি সূক্ষ্ম বুলগুর, টমেটো, পুদিনা, পেঁয়াজ এবং স্কালিয়ন দিয়ে তৈরি লেভান্তাইন সালাদ, অলিভ অয়েল, লেবুর রস, লবণ এবং কালো মরিচ দিয়ে মসলাযুক্ত।',
-        ko: '잘게 다진 파슬리, 불린 극세 불구르, 토마토, 민트, 양파, 파로 만든 레반트 샐러드로, 올리브 오일, 레몬 주스, 소금, 후춧가루로 양념했습니다.',
-        bs: 'Levantinska salata od sitno sjeckanog peršina, potopljenog izuzetno finog bulgura, rajčica, mente, luka i mladog luka, začinjena maslinovim uljem, limunovim sokom, solju i crnim biberom.',
-        zh: '黎凡特沙拉，由切细的欧芹、泡发的特细布格麦、番茄、薄荷、洋葱和韭葱制成，用橄榄油、柠檬汁、盐和黑胡椒调味。',
-        ro: 'Salată levantină din pătrunjel tăiat fin, bulgur extra-fin înmuiat, roșii, mentă, ceapă și ceapă verde, condimentată cu ulei de măsline, suc de lămâie, sare și piper negru.',
-        uk: 'Левантійський салат з дрібно нарізаної петрушки, замоченого надтонкого булгуру, помідорів, мʼяти, цибулі та зеленої цибулі, приправлений оливковою олією, лимонним соком, сіллю та чорним перцем.',
-        vi: 'Salad Levantine làm từ rau mùi tây thái nhỏ, bulgur siêu mịn đã ngâm, cà chua, bạc hà, hành tây và hành lá, nêm với dầu ô liu, nước cốt chanh, muối và tiêu đen.'
-      }, 
-      image: '/Tabbouleh Salad.jpg',
-      price: '$14.99', 
-      category: 'salads', 
-      tags: ['vegetarian', 'vegan'], 
-      addOns: { 
-        title: { 
-          en: 'Add Protein',
-          ar: 'إضافة بروتين',
-          fa: 'اضافه کردن پروتین',
-          ku: 'پرۆتین زیادبکە',
-          tr: 'Protein Ekle',
-          ur: 'پروٹین شامل کریں',
-          kmr: 'Protein Zêde Bike',
-          es: 'Agregar Proteína',
-          ru: 'Добавить белок',
-          hi: 'प्रोटीन जोड़ें',
-          sq: 'Shto Proteinë',
-          fr: 'Ajouter des Protéines',
-          de: 'Protein hinzufügen',
-          bn: 'প্রোটিন যোগ করুন',
-          ko: '단백질 추가',
-          bs: 'Dodaj protein',
-          zh: '添加蛋白质',
-          ro: 'Adaugă proteină',
-          uk: 'Додати білок',
-          vi: 'Thêm Protein'
-        }, 
-        options: [ 
-          { name: { en: 'Beef', ar: 'لحم بقر', fa: 'گوشت گاو', ku: 'گۆشتی گا', tr: 'Dana Eti', ur: 'گائے کا گوشت', kmr: 'Goştê Ga', es: 'Carne de Res', ru: 'Говядina', hi: 'गोमांस', sq: 'Mish Viqi', fr: 'Bœuf', de: 'Rindfleisch', bn: 'গরুর মাংস', ko: '소고기', bs: 'Govedina', zh: '牛肉', ro: 'Carne de Vită', uk: 'Яловичина', vi: 'Thịt Bò' }, price: '$9.99' }, 
-          { name: { en: 'Chicken', ar: 'دجاج', fa: 'مرغ', ku: 'مریشک', tr: 'Tavuk', ur: 'چکن', kmr: 'Mirîşk', es: 'Pollo', ru: 'Курица', hi: 'चिकन', sq: 'Pulë', fr: 'Poulet', de: 'Hähnchen', bn: 'চিকেন', ko: '치킨', bs: 'Piletina', zh: '鸡肉', ro: 'Pui', uk: 'Курятина', vi: 'Thịt Gà' }, price: '$8.99' }, 
-          { name: { en: 'Shrimp', ar: 'روبيان', fa: 'میگو', ku: 'میگۆ', tr: 'Karides', ur: 'جھینگا', kmr: 'Mîgo', es: 'Camarones', ru: 'Креветки', hi: 'झींगा', sq: 'Karkaleca', fr: 'Crevettes', de: 'Garnelen', bn: 'চিংড়ি', ko: '새우', bs: 'Škampi', zh: '虾', ro: 'Creveți', uk: 'Креветки', vi: 'Tôm' }, price: '$6.99' }, 
-          { name: { en: 'Falafel', ar: 'فلافل', fa: 'فلافل', ku: 'فەلەفڵ', tr: 'Falafel', ur: 'فلافل', kmr: 'Falafel', es: 'Falafel', ru: 'Фалафель', hi: 'फलाफेल', sq: 'Falafel', fr: 'Falafel', de: 'Falafel', bn: 'ফালাফেল', ko: '팔라펠', bs: 'Falafel', zh: '沙拉三明治球', ro: 'Falafel', uk: 'Фалафель', vi: 'Falafel' }, price: '$5.99' } 
-        ] 
-      } 
-    },
-    // Note: Removed duplicate entries to prevent data inconsistencies
+    }
   ], []) // Empty dependency array since menu items are static
 
   const t = translations[language] || translations.en
 
-  // Helper function to normalize category values consistently - MOVED BEFORE validateMenuData
+  // Helper function to normalize category values consistently
   const normalizeCategory = useCallback((category) => {
     if (typeof category === 'string') {
       return category;
     }
-    if (typeof category === 'object' && category !== null && category.en) {
-      // Map display names to filter keys
-      const categoryMappings = {
-        'Appetizers': 'appetizers',
-        'Appetizer': 'appetizers', // Handle both singular and plural
-        'Salads': 'salads',
-        'Soups': 'soup',
-        'Soup': 'soup', // Handle both singular and plural
-        'Sandwich & Platter': 'sandwich_platter',
-        'Sandwich': 'sandwich_platter', // Handle sandwich variants
-        'Naan': 'naan',
-        'Specialty': 'specialty',
-        'Grill': 'grill',
-        'Kid\'s Menu': 'kids',
-        'Sides': 'sides',
-        'Drinks (Cold)': 'drinks_cold',
-        'Drinks (Hot)': 'drinks_hot',
-        'Hot Drinks': 'drinks_hot', // Handle variant
-        'Desserts': 'dessert',
-        'Dessert': 'dessert' // Handle both singular and plural
-      };
-      
-      const mappedCategory = categoryMappings[category.en];
-      
-      if (mappedCategory) {
-        return mappedCategory;
-      }
-      
-      // If no mapping found, fallback to lowercase normalized version
-      return category.en?.toLowerCase().replace(/[^a-z0-9]/g, '_') || 'other';
+    if (category && typeof category === 'object') {
+      return category[language] || category.en || Object.values(category)[0] || 'unknown';
     }
-    return 'other'; // Fallback for invalid categories
-  }, []);
+    return 'unknown';
+  }, [language]);
 
-  // Development-only validation function with error handling
+  // Validate menu data to catch potential issues early
   const validateMenuData = useCallback(() => {
-    if (process.env.NODE_ENV !== 'development') return;
+    const seenIds = new Set();
+    const duplicateIds = [];
     
-    try {
-      console.group('🔍 Menu Data Validation & Filter Testing');
-      
-      // Check for duplicate IDs
-      const ids = menuItems.map(item => item.id);
-      const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
-      if (duplicateIds.length > 0) {
-        console.warn('⚠️ Duplicate menu item IDs found:', [...new Set(duplicateIds)]);
-      }
-      
-      // Check total items
-      console.log(`📊 Total menu items: ${menuItems.length}`);
-      
-      // Validate categories and test all filters
-      const categoryCounts = {};
-      const invalidItems = [];
-      
-      menuItems.forEach((item, index) => {
-        // Validate required fields
-        if (!item.id || !item.name || !item.category) {
-          invalidItems.push({ 
-            index, 
-            item: item.name?.en || `Item ${index}`, 
-            issue: 'Missing required fields (id, name, or category)' 
-          });
-          return;
-        }
-        
-        const normalizedCategory = normalizeCategory(item?.category);
-        
-        if (!normalizedCategory || normalizedCategory === 'other') {
-          invalidItems.push({ 
-            index, 
-            item: item.name?.en || `Item ${index}`, 
-            category: item?.category,
-            issue: 'Invalid category' 
-          });
-        }
-        
-        categoryCounts[normalizedCategory] = (categoryCounts[normalizedCategory] || 0) + 1;
-      });
-      
-      console.log('📈 Category distribution:', categoryCounts);
-      
-      // Test each filter
-      const availableFilters = Object.keys(t.filters).filter(key => !['all', 'popular'].includes(key));
-      console.log('🧪 Testing filters:');
-      
-      availableFilters.forEach(filterKey => {
-        const expectedCount = categoryCounts[filterKey] || 0;
-        const actualFilteredItems = menuItems.filter(item => 
-          normalizeCategory(item?.category) === filterKey
-        );
-        const actualCount = actualFilteredItems.length;
-        
-        const status = expectedCount === actualCount ? '✅' : '❌';
-        console.log(`${status} ${filterKey}: Expected ${expectedCount}, Got ${actualCount}`);
-        
-        if (expectedCount !== actualCount) {
-          console.warn(`❌ Filter "${filterKey}" mismatch!`, {
-            expected: expectedCount,
-            actual: actualCount,
-            items: actualFilteredItems.map(item => ({ 
-              name: item.name?.en, 
-              category: item?.category,
-              normalized: normalizeCategory(item?.category)
-            }))
-          });
-        }
-      });
-      
-      if (invalidItems.length > 0) {
-        console.warn('⚠️ Items with issues:', invalidItems);
-      }
-      
-      // Check if all filter keys have corresponding items
-      const missingCategories = availableFilters.filter(filter => !categoryCounts[filter]);
-      
-      if (missingCategories.length > 0) {
-        console.warn('⚠️ Filters with no items:', missingCategories);
+    menuItems.forEach(item => {
+      if (seenIds.has(item.id)) {
+        duplicateIds.push(item.id);
       } else {
-        console.log('✅ All filters have corresponding menu items');
+        seenIds.add(item.id);
       }
-      
-      console.groupEnd();
-    } catch (error) {
-      console.error('Error during menu data validation:', error);
+    });
+    
+    if (duplicateIds.length > 0) {
+      console.warn('Duplicate menu item IDs found:', duplicateIds);
     }
-  }, [menuItems, normalizeCategory, t.filters]);
+    
+    return duplicateIds.length === 0;
+  }, [menuItems]);
 
-  // Run validation in development
+  // Define custom filter order
+  const filterOrder = [
+    'all', 'appetizers', 'salads', 'soup', 'sandwich_platter', 'naan', 
+    'specialty', 'grill', 'fish', 'kids', 'sides', 'drinks_cold', 
+    'drinks_hot', 'dessert', 'popular'
+  ];
+
+  // Apply category filter
+  const filteredMenuItems = useMemo(() => {
+    if (!selectedCategory || selectedCategory === 'all') {
+      return menuItems;
+    }
+    
+    return menuItems.filter(item => {
+      const itemCategory = normalizeCategory(item.category);
+      return itemCategory.toLowerCase() === selectedCategory.toLowerCase();
+    });
+  }, [menuItems, selectedCategory, normalizeCategory]);
+
+  // Get unique categories from menu items for filter buttons
+  const uniqueCategories = useMemo(() => {
+    const categories = menuItems.map(item => normalizeCategory(item.category));
+    return [...new Set(categories)];
+  }, [menuItems, normalizeCategory]);
+
+  // Sort categories according to the specified order
+  const sortedCategories = useMemo(() => {
+    return filterOrder.filter(category => uniqueCategories.includes(category));
+  }, [uniqueCategories, filterOrder]);
+
+  // Effect to validate menu data on component mount
   useEffect(() => {
     validateMenuData();
   }, [validateMenuData]);
 
-  // Memoized filtered menu items for performance with search functionality and error handling
-  const filteredMenuItems = useMemo(() => {
-    try {
-      // Safety check for menuItems array
-      if (!Array.isArray(menuItems) || menuItems.length === 0) {
-        console.warn('Menu items array is empty or invalid');
-        return [];
-      }
-
-      let filteredItems = menuItems.filter(item => {
-        // Safety checks for item structure
-        if (!item || typeof item !== 'object') {
-          console.warn('Invalid menu item found:', item);
-          return false;
-        }
-        
-        // Check for required fields
-        if (!item.id || !item.name || !item.category) {
-          console.warn('Menu item missing required fields:', item);
-          return false;
-        }
-        
-        return true;
-      });
-      
-      // Apply category filter
-      if (activeFilter === 'popular') {
-        filteredItems = filteredItems.filter(item => item?.popular === true);
-      } else if (activeFilter !== 'all') {
-        filteredItems = filteredItems.filter(item => {
-          const normalizedCategory = normalizeCategory(item?.category);
-          return normalizedCategory === activeFilter;
-        });
-      }
-      
-      // Apply search filter
-      if (searchTerm && searchTerm.trim()) {
-        const searchLower = searchTerm.toLowerCase().trim();
-        filteredItems = filteredItems.filter(item => {
-          try {
-            const itemName = getText(item.name) || '';
-            const itemDescription = getText(item.description || {}) || '';
-            const itemTags = Array.isArray(item.tags) ? item.tags.join(' ') : '';
-            
-            const searchContent = `${itemName} ${itemDescription} ${itemTags}`.toLowerCase();
-            return searchContent.includes(searchLower);
-          } catch (error) {
-            console.warn('Error processing item for search:', item, error);
-            return false;
-          }
-        });
-      }
-      
-      return filteredItems;
-    } catch (error) {
-      console.error('Error filtering menu items:', error);
-      return [];
-    }
-  }, [activeFilter, searchTerm, menuItems, getText, normalizeCategory]);
-
-  const getTagTranslation = useCallback((tag) => {
-    const tagTranslations = {
-      vegetarian: {
-        en: '🌱 Vegetarian',
-        ar: '🌱 نباتي',
-        fa: '🌱 گیاهی',
-        ku: '🌱 ڕووەکی',
-        tr: '🌱 Vejetaryen',
-        ur: '🌱 سبزی خور',
-        kmr: '🌱 Nebatî',
-        es: '🌱 Vegetariano',
-        ru: '🌱 Вегетарианский',
-        hi: '🌱 शाकाहारी'
-      },
-      vegan: {
-        en: '🌿 Vegan',
-        ar: '🌿 نباتي صرف',
-        fa: '🌿 وگان',
-        ku: '🌿 ڕووەکی ڕەها',
-        tr: '🌿 Vegan',
-        ur: '🌿 ویگن',
-        kmr: '🌿 Vegan',
-        es: '🌿 Vegano',
-        ru: '🌿 Веганский',
-        hi: '🌿 वीगन'
-      },
-      spicy: {
-        en: '🌶️ Spicy',
-        ar: '🌶️ حار',
-        fa: '🌶️ تند',
-        ku: '🌶️ تیژ',
-        tr: '🌶️ Acılı',
-        ur: '🌶️ تیز',
-        kmr: '🌶️ Tûj',
-        es: '🌶️ Picante',
-        ru: '🌶️ Острый',
-        hi: '🌶️ मसालेदार', sq: '🌶️ Djegës', fr: '🌶️ Épicé', de: '🌶️ Scharf', bn: '🌶️ ঝাল', ko: '🌶️ 매운', bs: '🌶️ Ljuto', zh: '🌶️ 辣的', ro: '🌶️ Picant', uk: '🌶️ Гострий', vi: '🌶️ Cay'
-      },
-      sweet: {
-        en: '🍯 Sweet',
-        ar: '🍯 حلو',
-        fa: '🍯 شیرین',
-        ku: '🍯 شیرین',
-        tr: '🍯 Tatlı',
-        ur: '🍯 میٹھا',
-        kmr: '🍯 Şîrîn',
-        es: '🍯 Dulce',
-        ru: '🍯 Сладкий',
-        hi: '🍯 मीठा', sq: '🍯 I ëmbël', fr: '🍯 Sucré', de: '🍯 Süß', bn: '🍯 মিষ্টি', ko: '🍯 달콤한', bs: '🍯 Slatko', zh: '🍯 甜的', ro: '🍯 Dulce', uk: '🍯 Солодкий', vi: '🍯 Ngọt'
-      },
-      traditional: {
-        en: '🏛️ Traditional',
-        ar: '🏛️ تقليدي',
-        fa: '🏛️ سنتی',
-        ku: '🏛️ نەریتی',
-        tr: '🏛️ Geleneksel',
-        ur: '🏛️ روایتی',
-        kmr: '🏛️ Kevneşopî',
-        es: '🏛️ Tradicional',
-        ru: '🏛️ Традиционный',
-        hi: '🏛️ पारंपरिक', sq: '🏛️ Tradicional', fr: '🏛️ Traditionnel', de: '🏛️ Traditionell', bn: '🏛️ ঐতিহ্যবাহী', ko: '🏛️ 전통적인', bs: '🏛️ Tradicionalno', zh: '🏛️ 传统的', ro: '🏛️ Tradițional', uk: '🏛️ Традиційний', vi: '🏛️ Truyền thống'
-      },
-      grilled: {
-        en: '🔥 Grilled',
-        ar: '🔥 مشوي',
-        fa: '🔥 کبابی',
-        ku: '🔥 برژاو',
-        tr: '🔥 Izgara',
-        ur: '🔥 گرل شدہ',
-        kmr: '🔥 Şewitî',
-        es: '🔥 A la Parrilla',
-        ru: '🔥 Гриль',
-        hi: '🔥 ग्रिल्ड', sq: '🔥 Në Skarë', fr: '🔥 Grillé', de: '🔥 Gegrillt', bn: '🔥 গ্রিল করা', ko: '🔥 구운', bs: '🔥 Sa roštilja', zh: '🔥 烤制的', ro: '🔥 La grătar', uk: '🔥 Гриль', vi: '🔥 Nướng'
-      },
-      fried: {
-        en: '🍳 Fried',
-        ar: '🍳 مقلي',
-        fa: '🍳 سرخ شده',
-        ku: '🍳 سووتراو',
-        tr: '🍳 Kızartılmış',
-        ur: '🍳 تلا ہوا',
-        kmr: '🍳 Sorkirî',
-        es: '🍳 Frito',
-        ru: '🍳 Жареный',
-        hi: '🍳 तली हुई', sq: '🍳 I skuqur', fr: '🍳 Frit', de: '🍳 Gebraten', bn: '🍳 ভাজা', ko: '🍳 튀긴', bs: '🍳 Prženo', zh: '🍳 油炸的', ro: '🍳 Prăjit', uk: '🍳 Смажений', vi: '🍳 Chiên'
-      }
-    };
-    
-    return tagTranslations[tag] ? getText(tagTranslations[tag]) : tag;
-  }, [getText]);
-
-  // Helper functions for carousel SVG icons
-  const getSVGGradient = useCallback((placeholder) => {
-    const gradients = {
-      salmon: 'bg-gradient-to-br from-pink-400 to-orange-500',
-      salad: 'bg-gradient-to-br from-green-400 to-emerald-500',
-      steak: 'bg-gradient-to-br from-red-500 to-amber-600',
-      pasta: 'bg-gradient-to-br from-yellow-400 to-amber-500',
-      cake: 'bg-gradient-to-br from-pink-400 to-purple-500',
-      wings: 'bg-gradient-to-br from-orange-400 to-red-500',
-      curry: 'bg-gradient-to-br from-yellow-500 to-orange-600',
-      tacos: 'bg-gradient-to-br from-green-400 to-yellow-500',
-      smoothie: 'bg-gradient-to-br from-purple-400 to-pink-500',
-      bread: 'bg-gradient-to-br from-amber-400 to-orange-500'
-    };
-    return gradients[placeholder] || 'bg-gradient-to-br from-amber-400 to-orange-500';
+  // Handle category selection
+  const handleCategorySelect = useCallback((category) => {
+    setSelectedCategory(category);
   }, []);
-
-  const getSVGIcon = useCallback((placeholder, size = 40) => {
-    const iconClass = "text-white drop-shadow-sm";
-    const icons = {
-      salmon: (
-        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
-          <ellipse cx="50" cy="50" rx="35" ry="20" fill="currentColor" opacity="0.4"/>
-          <ellipse cx="45" cy="50" rx="25" ry="15" fill="currentColor" opacity="0.6"/>
-          <polygon points="75,50 85,40 85,60" fill="currentColor" opacity="0.8"/>
-          <circle cx="40" cy="45" r="3" fill="currentColor"/>
-          <path d="M25 45 Q35 40 25 50 Q35 55 25 50" fill="currentColor" opacity="0.6"/>
-        </svg>
-      ),
-      salad: (
-        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
-          <circle cx="50" cy="55" r="30" fill="currentColor" opacity="0.3"/>
-          <circle cx="40" cy="40" r="8" fill="currentColor" opacity="0.7"/>
-          <circle cx="60" cy="45" r="6" fill="currentColor" opacity="0.8"/>
-          <circle cx="50" cy="65" r="5" fill="currentColor" opacity="0.6"/>
-          <circle cx="35" cy="60" r="4" fill="currentColor" opacity="0.5"/>
-          <circle cx="65" cy="60" r="7" fill="currentColor" opacity="0.7"/>
-        </svg>
-      ),
-      steak: (
-        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
-          <ellipse cx="50" cy="50" rx="30" ry="25" fill="currentColor" opacity="0.4"/>
-          <ellipse cx="50" cy="50" rx="25" ry="20" fill="currentColor" opacity="0.6"/>
-          <path d="M30 40 Q50 35 70 40 Q70 60 50 65 Q30 60 30 40" fill="currentColor" opacity="0.8"/>
-          <circle cx="45" cy="45" r="2" fill="currentColor"/>
-          <circle cx="55" cy="50" r="2" fill="currentColor"/>
-        </svg>
-      ),
-      pasta: (
-        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
-          <path d="M30 30 Q50 20 70 30 Q65 50 50 60 Q35 50 30 30" fill="currentColor" opacity="0.4"/>
-          <path d="M35 35 Q50 25 65 35 Q60 50 50 55 Q40 50 35 35" fill="currentColor" opacity="0.6"/>
-          <circle cx="50" cy="45" r="15" fill="currentColor" opacity="0.3"/>
-          <path d="M40 40 Q50 35 60 40" stroke="currentColor" strokeWidth="2" fill="none"/>
-          <path d="M42 50 Q50 45 58 50" stroke="currentColor" strokeWidth="2" fill="none"/>
-        </svg>
-      ),
-      cake: (
-        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
-          <rect x="25" y="40" width="50" height="35" rx="5" fill="currentColor" opacity="0.4"/>
-          <rect x="30" y="45" width="40" height="25" rx="3" fill="currentColor" opacity="0.6"/>
-          <rect x="35" y="50" width="30" height="15" rx="2" fill="currentColor" opacity="0.8"/>
-          <circle cx="45" cy="35" r="3" fill="currentColor"/>
-          <circle cx="55" cy="35" r="3" fill="currentColor"/>
-          <path d="M40 30 Q50 25 60 30" stroke="currentColor" strokeWidth="2" fill="none"/>
-        </svg>
-      ),
-      wings: (
-        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
-          <ellipse cx="45" cy="50" rx="20" ry="12" fill="currentColor" opacity="0.4"/>
-          <ellipse cx="55" cy="50" rx="20" ry="12" fill="currentColor" opacity="0.4"/>
-          <ellipse cx="45" cy="50" rx="15" ry="8" fill="currentColor" opacity="0.6"/>
-          <ellipse cx="55" cy="50" rx="15" ry="8" fill="currentColor" opacity="0.6"/>
-          <circle cx="40" cy="47" r="2" fill="currentColor"/>
-          <circle cx="60" cy="47" r="2" fill="currentColor"/>
-        </svg>
-      ),
-      curry: (
-        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
-          <circle cx="50" cy="55" r="25" fill="currentColor" opacity="0.3"/>
-          <circle cx="50" cy="55" r="20" fill="currentColor" opacity="0.5"/>
-          <circle cx="45" cy="50" r="3" fill="currentColor" opacity="0.8"/>
-          <circle cx="55" cy="52" r="4" fill="currentColor" opacity="0.7"/>
-          <circle cx="50" cy="60" r="2" fill="currentColor" opacity="0.9"/>
-          <path d="M35 45 Q50 40 65 45" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.6"/>
-        </svg>
-      ),
-      tacos: (
-        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
-          <path d="M30 60 Q50 40 70 60 Q50 70 30 60" fill="currentColor" opacity="0.4"/>
-          <path d="M35 58 Q50 45 65 58 Q50 65 35 58" fill="currentColor" opacity="0.6"/>
-          <circle cx="45" cy="55" r="2" fill="currentColor"/>
-          <circle cx="55" cy="55" r="2" fill="currentColor"/>
-          <circle cx="50" cy="52" r="1.5" fill="currentColor"/>
-        </svg>
-      ),
-      smoothie: (
-        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
-          <rect x="35" y="35" width="30" height="40" rx="5" fill="currentColor" opacity="0.3"/>
-          <rect x="38" y="38" width="24" height="34" rx="3" fill="currentColor" opacity="0.5"/>
-          <circle cx="50" cy="45" r="8" fill="currentColor" opacity="0.7"/>
-          <circle cx="45" cy="55" r="4" fill="currentColor" opacity="0.6"/>
-          <circle cx="55" cy="60" r="3" fill="currentColor" opacity="0.8"/>
-          <rect x="45" y="25" width="10" height="10" rx="2" fill="currentColor" opacity="0.4"/>
-        </svg>
-      ),
-      bread: (
-        <svg width={size} height={size} viewBox="0 0 100 100" className={iconClass}>
-          <ellipse cx="50" cy="55" rx="25" ry="15" fill="currentColor" opacity="0.4"/>
-          <ellipse cx="50" cy="50" rx="20" ry="12" fill="currentColor" opacity="0.6"/>
-          <circle cx="45" cy="48" r="2" fill="currentColor" opacity="0.8"/>
-          <circle cx="55" cy="50" r="2" fill="currentColor" opacity="0.8"/>
-          <circle cx="50" cy="45" r="1.5" fill="currentColor" opacity="0.7"/>
-        </svg>
-      )
-    };
-    return icons[placeholder] || icons.bread;
-  }, []);
-
-  if (!isMounted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
-        <div className="text-center space-y-4">
-          <div className="relative">
-            {!reducedMotion && (
-              <>
-                <div className="w-16 h-16 border-4 border-amber-200 border-t-amber-600 rounded-full animate-spin mx-auto" aria-hidden="true"></div>
-                <div className="absolute inset-0 w-16 h-16 border-4 border-transparent border-r-orange-400 rounded-full animate-ping mx-auto" aria-hidden="true"></div>
-              </>
-            )}
-            {reducedMotion && (
-              <div className="w-16 h-16 border-4 border-amber-300 rounded-full mx-auto" aria-hidden="true"></div>
-            )}
-          </div>
-          <div className="text-2xl font-serif text-amber-800">{translations[language]?.loading || 'Loading...'}</div>
-          <div className="text-sm text-amber-600">Preparing your culinary journey...</div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <>
       <Head>
-        <title>Nature Village - {t.title}</title>
-        <meta name="description" content={t.subtitle} />
+        <title>{t.pageTitle}</title>
+        <meta name="description" content={t.pageDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#92400e" />
         <meta name="robots" content="index, follow" />
         <meta name="language" content={language} />
         <meta name="keywords" content="Kurdish restaurant, Middle Eastern food, authentic cuisine, nature village, traditional recipes" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={`Nature Village - ${t.title}`} />
-        <meta property="og:description" content={t.subtitle} />
+        <meta property="og:title" content={`Nature Village - ${t.title || t.menuTitle}`} />
+        <meta property="og:description" content={t.subtitle || t.menuSubtitle} />
         <meta property="og:site_name" content="Nature Village Restaurant" />
-        {/* Canonical and hreflang */}
-        {(() => {
-          const baseCanonical = 'https://naturevillagerestaurant.com/menu'
-          const canonicalHref = language === 'en' ? baseCanonical : `${baseCanonical}?lang=${language}`
-          const alternates = generateHreflangAlternates(baseCanonical)
-          return (
-            <>
-              <link rel="canonical" href={canonicalHref} />
-              {alternates.map(alt => (
-                <link key={alt.hreflang} rel="alternate" hrefLang={alt.hreflang} href={alt.href} />
-              ))}
-              <link rel="alternate" hrefLang="x-default" href={baseCanonical} />
-              <script
-                type="application/ld+json"
-                // eslint-disable-next-line react/no-danger
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify(generateMenuJsonLD(
-                    // Build sections grouped by category (excluding 'all'/'popular')
-                    Object.entries(t.filters)
-                      .filter(([key]) => key !== 'all' && key !== 'popular')
-                      .map(([key]) => ({
-                        category: key,
-                        items: menuItems.filter(mi => mi.category === key)
-                      })),
-                    language
-                  ))
-                }}
-              />
-            </>
-          )
-        })()}
       </Head>
 
       {/* Skip to main content for accessibility */}
@@ -6054,76 +6162,6 @@ const FullMenuPage = () => {
           50% { transform: translateX(4px); }
         }
 
-        @keyframes carousel-progress {
-          0% { stroke-dashoffset: 100.53; }
-          100% { stroke-dashoffset: 0; }
-        }
-
-        @keyframes shimmer {
-          0% { transform: translateX(-100%) skewX(-12deg); }
-          100% { transform: translateX(200%) skewX(-12deg); }
-        }
-
-        .animate-shimmer {
-          animation: shimmer 2s ease-in-out infinite;
-        }
-
-        /* Mobile menu animations */
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        @keyframes slideInLeft {
-          from {
-            transform: translateX(-100%);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
-        @keyframes slideInRight {
-          from {
-            transform: translateX(100%);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out;
-        }
-
-        .animate-slideInLeft {
-          animation: slideInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .animate-slideInRight {
-          animation: slideInRight 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .carousel-active {
-          animation: carousel-float 3s ease-in-out infinite, carousel-glow 2s ease-in-out infinite;
-        }
-        
-        .carousel-transitioning {
-          animation: spring-bounce 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .motion-blur-sm {
-          filter: blur(0.5px);
-        }
-
         .animate-float {
           animation: float 6s ease-in-out infinite;
         }
@@ -6149,23 +6187,10 @@ const FullMenuPage = () => {
         .animate-bounce-x {
           animation: bounce-x 2s ease-in-out infinite;
         }
-        
-        /* Enhanced 3D perspective */
-        .carousel-container {
-          perspective: 1500px;
-          perspective-origin: center center;
-        }
-        
-        /* Smooth hardware acceleration */
-        .dish-circle {
-          transform-style: preserve-3d;
-          will-change: transform, filter, opacity;
-          backface-visibility: hidden;
-          -webkit-backface-visibility: hidden;
-        }
       `}</style>
-      <div className="min-h-screen bg-white pt-20 sm:pt-24" style={{ direction: languages[language]?.dir || 'ltr' }}>
-        <Header currentPage="menu" />
+
+      <div className="min-h-screen bg-white pt-20 sm:pt-24" style={{ direction: isRTL ? 'rtl' : 'ltr' }}>
+        <Header />
 
         {/* Rest of the menu page content */}
         <main id="main-content" className="relative" role="main">
@@ -6203,14 +6228,14 @@ const FullMenuPage = () => {
                 <div className="space-y-4 sm:space-y-6 md:space-y-8">
                   <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-serif font-bold leading-[0.85] tracking-tighter">
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-orange-200 animate-gradient-x drop-shadow-lg">
-                      {t.title}
+                      {t.title || 'A World of Flavors on One Menu'}
                     </span>
                   </h1>
                   
                   {/* Enhanced Subtitle */}
                   <div className="max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto">
                     <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-amber-100/90 leading-relaxed font-light tracking-wide drop-shadow-sm">
-                      {t.subtitle}
+                      {t.subtitle || 'Taste tradition, discover variety, and explore our most loved dishes.'}
                     </p>
                   </div>
                 </div>
@@ -6235,7 +6260,7 @@ const FullMenuPage = () => {
                     <div className="text-center group transition-all duration-500 hover:scale-110 hover:-rotate-1" role="listitem">
                       <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/20 shadow-lg group-hover:shadow-xl group-hover:bg-white/15 transition-all duration-300">
                         <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-orange-300 group-hover:text-orange-200 transition-colors mb-2 font-mono">
-                          {Object.keys(t.filters).length - 2}
+                          {uniqueCategories.length}
                         </div>
                         <div className="text-xs sm:text-sm md:text-base text-orange-200/80 font-semibold tracking-wide">
                           {t.stats?.categories || 'Diverse Categories'}
@@ -6247,7 +6272,7 @@ const FullMenuPage = () => {
                     <div className="text-center group transition-all duration-500 hover:scale-110 hover:rotate-1" role="listitem">
                       <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/20 shadow-lg group-hover:shadow-xl group-hover:bg-white/15 transition-all duration-300">
                         <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-300 group-hover:text-yellow-200 transition-colors mb-2 font-mono">
-                          10
+                          20
                         </div>
                         <div className="text-xs sm:text-sm md:text-base text-yellow-200/80 font-semibold tracking-wide">
                           {t.stats?.languages || 'Global Languages'}
@@ -6255,8 +6280,6 @@ const FullMenuPage = () => {
                       </div>
                     </div>
                   </div>
-                  
-
                 </div>
 
                 {/* Enhanced Popular Dishes Carousel Section */}
@@ -6289,7 +6312,7 @@ const FullMenuPage = () => {
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                     role="region"
-                    aria-label="Popular dishes carousel"
+                    aria-label={t.carousel?.popularDishes || 'Popular dishes carousel'}
                     aria-live="polite"
                     style={{
                       width: '100%',
@@ -6437,8 +6460,8 @@ const FullMenuPage = () => {
                           className="absolute -left-12 sm:-left-20 lg:-left-28 xl:-left-36 2xl:-left-44 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-white to-white/95 hover:from-amber-50 hover:to-white backdrop-blur-sm rounded-full p-3 sm:p-4 lg:p-5 shadow-2xl border-2 border-amber-200/60 hover:border-amber-300/80 transition-all duration-300 ease-out hover:scale-110 active:scale-95 z-30 group will-change-transform touch-manipulation hover:shadow-amber-200/50"
                           onClick={() => navigateTo((currentDishIndex - 1 + dishes.length) % dishes.length)}
                           disabled={isTransitioning}
-                          aria-label={`Previous dish: ${getText(dishes[(currentDishIndex - 1 + dishes.length) % dishes.length].name)}`}
-                          title="Previous dish (← Arrow Key)"
+                          aria-label={`${t.carousel?.previousDish || 'Previous dish'}: ${getText(dishes[(currentDishIndex - 1 + dishes.length) % dishes.length].name)}`}
+                          title={`${t.carousel?.previousDish || 'Previous dish'} (${t.carousel?.arrowKeyLeft || '← Arrow Key'})`}
                           style={{
                             minWidth: '52px',
                             minHeight: '52px'
@@ -6455,8 +6478,8 @@ const FullMenuPage = () => {
                           className="absolute -right-12 sm:-right-20 lg:-right-28 xl:-right-36 2xl:-right-44 top-1/2 transform -translate-y-1/2 bg-gradient-to-l from-white to-white/95 hover:from-amber-50 hover:to-white backdrop-blur-sm rounded-full p-3 sm:p-4 lg:p-5 shadow-2xl border-2 border-amber-200/60 hover:border-amber-300/80 transition-all duration-300 ease-out hover:scale-110 active:scale-95 z-30 group will-change-transform touch-manipulation hover:shadow-amber-200/50"
                           onClick={() => navigateTo((currentDishIndex + 1) % dishes.length)}
                           disabled={isTransitioning}
-                          aria-label={`Next dish: ${getText(dishes[(currentDishIndex + 1) % dishes.length].name)}`}
-                          title="Next dish (→ Arrow Key)"
+                          aria-label={`${t.carousel?.nextDish || 'Next dish'}: ${getText(dishes[(currentDishIndex + 1) % dishes.length].name)}`}
+                          title={`${t.carousel?.nextDish || 'Next dish'} (${t.carousel?.arrowKeyRight || '→ Arrow Key'})`}
                           style={{
                             minWidth: '52px',
                             minHeight: '52px'
@@ -6479,8 +6502,8 @@ const FullMenuPage = () => {
                       <button
                         onClick={toggleAutoPlay}
                         className="flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-amber-500/20 hover:bg-amber-500/30 transition-all duration-300 mr-1 group touch-manipulation"
-                        aria-label={isAutoPlaying ? "Pause slideshow" : "Play slideshow"}
-                        title={isAutoPlaying ? "Pause slideshow" : "Play slideshow"}
+                        aria-label={isAutoPlaying ? (t.carousel?.pauseSlideshow || "Pause slideshow") : (t.carousel?.playSlideshow || "Play slideshow")}
+                        title={isAutoPlaying ? (t.carousel?.pauseSlideshow || "Pause slideshow") : (t.carousel?.playSlideshow || "Play slideshow")}
                       >
                         {isAutoPlaying ? (
                           <svg className="w-3 h-3 text-amber-300 group-hover:text-amber-200" fill="currentColor" viewBox="0 0 20 20">
@@ -6504,7 +6527,7 @@ const FullMenuPage = () => {
                               ? "bg-amber-500/25 scale-110 shadow-lg" 
                               : "bg-transparent hover:bg-amber-400/15 scale-100"
                           )}
-                          aria-label={`Go to ${getText(dishes[index].name)} slide (${index + 1} of ${dishes.length})`}
+                          aria-label={`${t.carousel?.goToSlide || 'Go to'} ${getText(dishes[index].name)} ${t.carousel?.slideOf || 'slide'} (${index + 1} ${t.carousel?.of || 'of'} ${dishes.length})`}
                           title={getText(dishes[index].name)}
                         >
                           {/* Progress ring */}
@@ -6595,343 +6618,102 @@ const FullMenuPage = () => {
           <div className="bg-white relative z-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
 
-          {/* Enhanced Search Bar with better accessibility */}
-          <div className="mb-8 sm:mb-12">
-            <div className="max-w-lg mx-auto relative">
-              <label htmlFor="menu-search" className="sr-only">
-                {t.searchPlaceholder}
-              </label>
-              <div className={`absolute inset-y-0 ${isRTL ? 'right-0 pr-3' : 'left-0 pl-3'} flex items-center pointer-events-none`}>
-                <Search className="w-5 h-5 text-amber-500" aria-hidden="true" />
-              </div>
-              <input
-                id="menu-search"
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder={t.searchPlaceholder}
-                autoComplete="off"
-                role="searchbox"
-                aria-label={t.searchPlaceholder}
-                className={`w-full ${isRTL ? 'pr-10 pl-4' : 'pl-10 pr-4'} py-3 border-2 border-amber-200 rounded-xl focus:border-amber-500 focus:ring-2 focus:ring-amber-200 outline-none transition-all duration-300 bg-white/80 backdrop-blur-sm text-amber-900 placeholder-amber-500`}
-                style={{ direction: isRTL ? 'rtl' : 'ltr' }}
-              />
-              {searchTerm && (
-                <button
-                  onClick={() => setSearchTerm('')}
-                  className={`absolute inset-y-0 ${isRTL ? 'left-0 pl-3' : 'right-0 pr-3'} flex items-center text-amber-500 hover:text-amber-700 transition-colors`}
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              )}
-            </div>
+          {/* Category Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <button
+              onClick={() => handleCategorySelect('all')}
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
+                selectedCategory === 'all' || !selectedCategory
+                  ? 'bg-amber-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 hover:bg-amber-100 border border-gray-200'
+              }`}
+            >
+              {t.filters?.all || 'All Items'}
+            </button>
+            
+            {sortedCategories.map((category) => (
+              <button
+                key={category}
+                onClick={() => handleCategorySelect(category)}
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
+                  selectedCategory === category
+                    ? 'bg-amber-600 text-white shadow-lg transform scale-105'
+                    : 'bg-white text-gray-700 hover:bg-amber-100 border border-gray-200'
+                }`}
+              >
+                {t.filters?.[category] || category.charAt(0).toUpperCase() + category.slice(1)}
+              </button>
+            ))}
           </div>
 
-          {/* Enhanced Filters with Statistics and Accessibility */}
-          <div className={`flex flex-wrap ${isRTL ? 'justify-end' : 'justify-center'} gap-3 sm:gap-4 mb-12 p-4 sm:p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-amber-100 transition-all duration-300 hover:shadow-xl`}
-               role="tablist" 
-               aria-label="Menu category filters">
-            {Object.entries(t.filters).map(([key, label]) => {
-              const count = key === 'all' 
-                ? menuItems.length 
-                : key === 'popular' 
-                  ? menuItems.filter(item => item.popular).length
-                  : menuItems.filter(item => normalizeCategory(item.category) === key).length;
-              
-              return (
-                <button
-                  key={key}
-                  onClick={() => setActiveFilter(key)}
-                  role="tab"
-                  aria-selected={activeFilter === key}
-                  aria-controls="menu-items-grid"
-                  className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap flex items-center ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'} focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 ${
-                    activeFilter === key 
-                      ? 'bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow-lg transform scale-105 ring-2 ring-amber-400 ring-opacity-50' 
-                      : 'bg-white text-amber-800 hover:bg-amber-50 hover:shadow-md border border-amber-200 hover:border-amber-300'
-                  }`}
-                >
-                  <Filter className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
-                  <span>{label}</span>
-                  <span className={`ml-1 px-2 py-0.5 rounded-full text-xs font-semibold ${
-                    activeFilter === key 
-                      ? 'bg-white/20 text-white' 
-                      : 'bg-amber-100 text-amber-700'
-                  }`}>
-                    {count}
-                  </span>
-                  {activeFilter === key && (
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                  )}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Enhanced Menu Grid with improved accessibility and error handling */}
-          <div id="menu-items-grid" 
-               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16"
-               role="tabpanel"
-               aria-labelledby="menu-filters"
-               aria-live="polite"
-               aria-busy={filteredMenuItems.length === 0 && searchTerm ? 'true' : 'false'}>
-            {filteredMenuItems.map(item => {
-              // Safety check for item
-              if (!item || !item.id) {
-                console.warn('Invalid menu item:', item);
-                return null;
-              }
-              
-              return (
-                <article key={item.id} 
-                         className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group focus-within:ring-2 focus-within:ring-amber-500 focus-within:ring-offset-2">
-                  <div className="relative overflow-hidden">
-                    {item.image && (
-                      <Image
-                           src={item.image}
-                           alt={`${getText(item.name)}${item.description ? ` - ${getText(item.description)}` : ''}`}
-                           className="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
-                           width={600}
-                           height={576}
-                           sizes="(max-width: 1024px) 100vw, 33vw"
-                           onError={(e) => {
-                             console.warn(`Failed to load image for item ${item.id}:`, item.image);
-                             e.currentTarget.style.display = 'none';
-                           }}
-                      />
-                    )}
-                    {item.popular && (
-                      <div className="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg"
-                           aria-label="Popular item">
-                        ⭐ {t.filters.popular}
-                      </div>
-                    )}
-                    {/* Enhanced hover overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  <div className={`${isRTL ? 'text-right' : 'text-left'} p-6`}>
-                    <h3 className="text-xl font-serif font-bold text-amber-800 mb-2 group-hover:text-amber-900 transition-colors">
-                      {getText(item.name)}
-                    </h3>
-                    {item.description && (
-                      <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                        {getText(item.description)}
-                      </p>
-                    )}
-                    
-                    {/* Tags with error handling */}
-                    {Array.isArray(item.tags) && item.tags.length > 0 && (
-                      <div className={`flex flex-wrap gap-2 mb-3 ${isRTL ? 'justify-end' : 'justify-start'}`}>
-                        {item.tags.map((tag, tagIndex) => (
-                          <span key={tagIndex} className="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium">
-                            {getTagTranslation(tag)}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                    
-                    {/* Handle variants with error handling */}
-                    {Array.isArray(item.variants) && item.variants.length > 0 ? (
-                      <div className={`flex ${isRTL ? 'justify-end' : 'justify-start'} gap-3 mb-2 flex-wrap`}>
-                        {item.variants.map((variant, i) => (
-                          <span key={i} className="bg-amber-50 text-amber-700 border border-amber-200 px-3 py-2 rounded-full text-sm font-semibold hover:bg-amber-100 transition-colors">
-                            {getText(variant.label) || 'Variant'}: {variant.price || 'N/A'}
-                          </span>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className={`flex ${isRTL ? 'flex-row-reverse' : 'flex-row'} justify-between items-center mb-2`}>
-                        <span className="text-2xl font-bold text-amber-600">{item.price || 'Price TBD'}</span>
-                      </div>
-                    )}
-                    
-                    {/* Handle add-ons with error handling */}
-                    {item.addOns && item.addOns.title && Array.isArray(item.addOns.options) && (
-                      <div className="mt-4 p-3 bg-gray-50 rounded-lg">
-                        <div className="font-semibold text-amber-800 mb-2 text-sm">
-                          {getText(item.addOns.title)}
-                        </div>
-                        <div className={`flex flex-wrap gap-2 ${isRTL ? 'justify-end' : 'justify-start'}`}>
-                          {item.addOns.options.map((option, idx) => (
-                            <span key={idx} className="bg-white text-amber-700 border border-amber-200 px-2 py-1 rounded-full text-xs hover:bg-amber-50 transition-colors">
-                              {getText(option.name) || 'Option'} {option.price || ''}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Quick Actions */}
-                    <div className={`flex ${isRTL ? 'justify-start' : 'justify-end'} gap-2 mt-4 pt-4 border-t border-gray-100`}>
-                      <button 
-                        className="p-2 text-amber-600 hover:text-amber-800 hover:bg-amber-50 rounded-full transition-all duration-200 group"
-                        aria-label={`Add ${getText(item.name)} to favorites`}
-                      >
-                        <Star className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                      </button>
-                      <button 
-                        onClick={() => {
-                          try {
-                            if (typeof navigator !== 'undefined' && navigator.share) {
-                              navigator.share({
-                                title: getText(item.name),
-                                text: getText(item.description) || '',
-                                url: window.location.href
-                              });
-                            }
-                          } catch (error) {
-                            console.warn('Share failed:', error);
-                          }
-                        }}
-                        className="p-2 text-amber-600 hover:text-amber-800 hover:bg-amber-50 rounded-full transition-all duration-200 group"
-                        aria-label={`Share ${getText(item.name)}`}
-                      >
-                        <svg className="w-4 h-4 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </article>
-              );
-            }).filter(Boolean)}
-          </div>
-          
-          {/* Enhanced Empty State */}
-          {filteredMenuItems.length === 0 && (
-            <div className="text-center py-16">
-              <div className="max-w-md mx-auto">
-                <div className="w-24 h-24 mx-auto mb-6 bg-amber-100 rounded-full flex items-center justify-center">
-                  {searchTerm ? (
-                    <Search className="w-12 h-12 text-amber-400" />
-                  ) : (
-                    <Filter className="w-12 h-12 text-amber-400" />
-                  )}
-                </div>
-                <h3 className="text-xl font-semibold text-amber-800 mb-2">
-                  {searchTerm ? (
-                    t.noResults
-                  ) : (
-                    language === 'ar' ? 'لا توجد عناصر في هذه الفئة' :
-                    language === 'fa' ? 'موردی در این دسته یافت نشد' :
-                    language === 'ku' ? 'هیچ شتێک لەم جۆرە نییە' :
-                    language === 'tr' ? 'Bu kategoride öğe bulunamadı' :
-                    language === 'ur' ? 'اس کیٹگری میں کوئی آئٹم نہیں ملا' :
-                    language === 'kmr' ? 'Di vê kategoriyê de tiştek nehat dîtin' :
-                    'No items found in this category'
-                  )}
-                </h3>
-                {searchTerm && (
-                  <div className="space-y-4">
-                    <p className="text-amber-600">
-                      {language === 'ar' ? 'جرب البحث بكلمات مختلفة أو تصفح الفئات' :
-                       language === 'fa' ? 'با کلمات مختلف جستجو کنید یا دسته‌ها را مرور کنید' :
-                       language === 'ku' ? 'بە وشەی جیاواز بگەڕێ یان جۆرەکان ببینە' :
-                       language === 'tr' ? 'Farklı kelimelerle arayın veya kategorilere göz atın' :
-                       language === 'ur' ? 'مختلف الفاظ سے تلاش کریں یا کیٹگریز دیکھیں' :
-                       language === 'kmr' ? 'Bi gotinên cuda bigerin an jî kategorîyan bibînin' :
-                       'Try searching with different words or browse categories'}
-                    </p>
-                    <button
-                      onClick={() => setSearchTerm('')}
-                      className="px-6 py-2 bg-amber-600 text-white rounded-full hover:bg-amber-700 transition-colors"
-                    >
-                      {language === 'ar' ? 'مسح البحث' :
-                       language === 'fa' ? 'پاک کردن جستجو' :
-                       language === 'ku' ? 'گەڕان پاک بکەرەوە' :
-                       language === 'tr' ? 'Aramayı Temizle' :
-                       language === 'ur' ? 'تلاش صاف کریں' :
-                       language === 'kmr' ? 'Lêgerînê Paqij Bike' :
-                       'Clear Search'}
-                    </button>
+          {/* Menu Items Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredMenuItems.map((item) => (
+              <div key={item.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                {item.image && (
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={item.image} 
+                      alt={typeof item.name === 'object' ? item.name[language] || item.name.en : item.name}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                 )}
+                
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-xl font-bold text-gray-800">
+                      {typeof item.name === 'object' ? item.name[language] || item.name.en : item.name}
+                    </h3>
+                    {item.popular && (
+                      <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                        {t.popular || 'Popular'}
+                      </span>
+                    )}
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                    {typeof item.description === 'object' ? item.description[language] || item.description.en : item.description}
+                  </p>
+                  
+                  {item.variants ? (
+                    <div className="space-y-2">
+                      {item.variants.map((variant, index) => (
+                        <div key={index} className="flex justify-between items-center">
+                          <span className="text-sm text-gray-700">
+                            {typeof variant.name === 'object' ? variant.name[language] || variant.name.en : variant.name}
+                          </span>
+                          <span className="font-bold text-amber-600">{variant.price}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex justify-between items-center">
+                      <span className="text-2xl font-bold text-amber-600">{item.price}</span>
+                    </div>
+                  )}
+                  
+                  {item.tags && item.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1 mt-3">
+                      {item.tags.map((tag, index) => (
+                        <span key={index} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          )}
+            ))}
           </div>
+            </div>
           </div>
         </main>
         
-        {/* Food Safety Notice */}
-        <div className="bg-amber-50 border-t border-amber-200 py-6">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center">
-              <p className="text-sm text-gray-600 leading-relaxed">
-                <span className="font-semibold text-gray-800">{t.footer?.notice || t.notice}</span> {t.footer?.foodSafetyNotice || t.foodSafetyNotice}
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        {/* Footer */}
-  {/* Shared Footer */}
-  <Footer />
-
-        {/* Order Online Modal */}
-        {showOrderModal && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 transform transition-all">
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-2xl font-bold text-gray-800">Order Online</h3>
-                  <button
-                    onClick={() => setShowOrderModal(false)}
-                    className="text-gray-400 hover:text-gray-600 transition-colors"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
-                </div>
-                
-                <p className="text-gray-600 mb-6 text-center">
-                  Choose your preferred delivery platform for pickup or delivery
-                </p>
-                
-                <div className="space-y-3">
-                  <button
-                    onClick={() => handleDeliveryPlatform('ubereats')}
-                    className="w-full bg-black text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
-                  >
-                    Uber Eats
-                  </button>
-                  
-                  <button
-                    onClick={() => handleDeliveryPlatform('doordash')}
-                    className="w-full bg-red-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-                  >
-                    DoorDash
-                  </button>
-                  
-                  <button
-                    onClick={() => handleDeliveryPlatform('slice')}
-                    className="w-full bg-orange-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
-                  >
-                    Slice
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Scroll to top button */}
-        {isScrolled && (
-          <button
-            onClick={() => typeof window !== 'undefined' && window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="fixed bottom-6 right-6 bg-amber-600 hover:bg-amber-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-40"
-            aria-label="Scroll to top"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-            </svg>
-          </button>
-        )}
-        </div>
+        <Footer />
+      </div>
     </>
   )
 }
 
 export default FullMenuPage
-
-
-
