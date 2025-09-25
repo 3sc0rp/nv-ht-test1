@@ -290,7 +290,7 @@ const Header = ({ currentPage = '' }) => {
           <Link href="/">
             <div className={cn('flex items-center flex-shrink-0 cursor-pointer', isRTL && 'flex-row-reverse')}>
               <img 
-                src="https://naturevillagerestaurant.com/wp-content/uploads/2024/09/cropped-NatureVillage-Logo_circle-1222-2048x2048-1.webp" 
+                src="/NV.webp" 
                 alt="Nature Village Restaurant Logo" 
                 className={cn('w-10 h-10 sm:w-12 sm:h-12 object-contain transition-transform duration-200 hover:scale-105', rtlClass('mr-3', 'ml-3'))}
                 onError={(e) => {
