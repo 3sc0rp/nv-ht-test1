@@ -592,7 +592,7 @@ const FullMenuPage = () => {
         vi: 'Khai vị'
       }, 
       placeholder: 'hummus', 
-      imageUrl: '/Hummus.jpg',
+      imageUrl: '/hummuss.jpg',
       description: {
         en: 'Creamy chickpea dip with tahini, olive oil, and warm pita bread',
         ar: 'غموس الحمص الكريمي مع الطحينة وزيت الزيتون والخبز الدافئ',
