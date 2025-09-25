@@ -2369,7 +2369,7 @@ const FullMenuPage = () => {
       price: '$8.99', 
       category: 'appetizers', 
       popular: true, 
-      image: '/Hummus.jpg',
+      image: '/hummus.jpg',
       tags: ['vegetarian', 'vegan'] 
     },
     { 
