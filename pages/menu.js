@@ -6651,7 +6651,7 @@ const FullMenuPage = () => {
             {filteredMenuItems.map((item) => (
               <div key={item.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 {item.image && (
-                  <div className="h-48 overflow-hidden">
+                  <div className="h-64 sm:h-72 lg:h-80 overflow-hidden">
                     <img 
                       src={item.image} 
                       alt={typeof item.name === 'object' ? item.name[language] || item.name.en : item.name}
