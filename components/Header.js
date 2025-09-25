@@ -530,7 +530,7 @@ const Header = ({ currentPage = '' }) => {
                 {/* Enhanced Mobile Order Online Button */}
                 <div className="mt-6 pt-4 border-t border-amber-200/70">
                   <a
-                    href="https://order.online/store/nature-village-restaurant-atlanta-627533"
+                    href="https://slicelife.com/restaurants/ga/suwanee/30024/nature-village-restaurant/menu"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMenuOpen(false)}
