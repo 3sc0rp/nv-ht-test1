@@ -4,12 +4,15 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-  {/* Favicon (single source) */}
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  {/* Optional: theme color for mobile UI */}
-  <meta name="theme-color" content="#8b4513" />
-  {/* Removed references to missing apple-touch and PNG size icons to avoid 404 requests */}
+        {/* Favicon with cache busting and proper types */}
+        <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico?v=2" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+        {/* Optional: theme color for mobile UI */}
+        <meta name="theme-color" content="#8b4513" />
+        
+        {/* Default meta tags */}
+        <meta name="description" content="Nature Village - Authentic Middle Eastern Restaurant" />
         
         {/* Font Preconnections */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
