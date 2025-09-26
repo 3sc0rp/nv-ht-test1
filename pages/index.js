@@ -27,9 +27,9 @@ export default function Home() {
               },
               "telephone": "+1-470-350-1019",
               "openingHours": [
-                "Mo-Th 11:00-22:00",
-                "Fr-Sa 11:00-23:00", 
-                "Su 12:00-21:00"
+                "Mo-Th 12:00-22:00",
+                "Fr-Sa 12:00-23:00", 
+                "Su 12:00-22:00"
               ],
               "servesCuisine": "Kurdish",
               "priceRange": "$$"

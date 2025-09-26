@@ -269,20 +269,22 @@ const NatureVillageWebsite = () => {
     const currentMinute = now.getMinutes();
     const currentTime = currentHour + (currentMinute / 60);
     
-    // Restaurant hours: 11:00 AM to 10:00 PM
-    const openingTime = 11.0;
-    const closingTime = 22.0;
+    // Restaurant hours: 12:00 PM to 10:00 PM (Sun-Thu), 12:00 PM to 11:00 PM (Fri-Sat)
+    const openingTime = 12.0;
+    const day = now.getDay();
+    const isWeekend = day === 5 || day === 6; // Friday or Saturday
+    const closingTime = isWeekend ? 23.0 : 22.0;
     const isCurrentlyOpen = currentTime >= openingTime && currentTime < closingTime;
     
     let nextClosing = '';
     let nextOpening = '';
     
     if (isCurrentlyOpen) {
-      nextClosing = '10:00 PM';
+      nextClosing = isWeekend ? '11:00 PM' : '10:00 PM';
     } else if (currentTime < openingTime) {
-      nextOpening = '11:00 AM';
+      nextOpening = '12:00 PM';
     } else {
-      nextOpening = '11:00 AM Tomorrow';
+      nextOpening = '12:00 PM Tomorrow';
     }
 
     // Simple busy level based on time
@@ -403,11 +405,22 @@ const NatureVillageWebsite = () => {
       
       const nextClosing = isWeekend ? '11:00 PM' : '10:00 PM';
       
+      // Calculate next opening time
+      let nextOpening = '';
+      if (!isOpen) {
+        if (hour < 12) {
+          nextOpening = '12:00 PM';
+        } else {
+          nextOpening = '12:00 PM Tomorrow';
+        }
+      }
+      
       setRestaurantStatus({
         isOpen,
         busyLevel,
         waitTime,
         nextClosing,
+        nextOpening,
         deliveryTime
       });
     };
@@ -5879,10 +5892,10 @@ const NatureVillageWebsite = () => {
               </h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 <span className="block">
-                  {t.footer?.openDaily?.split('\n')[0] || 'SUN - THU: 12 AM - 10 PM'}
+                  {t.footer?.openDaily?.split('\n')[0] || 'SUN - THU: 12 PM - 10 PM'}
                 </span>
                 <span className="block">
-                  {t.footer?.openDaily?.split('\n')[1] || 'FRI - SAT: 12 AM - 11 PM'}
+                  {t.footer?.openDaily?.split('\n')[1] || 'FRI - SAT: 12 PM - 11 PM'}
                 </span>
                 <br />
                 <span className="text-amber-600 font-medium">7 Days a Week</span>
