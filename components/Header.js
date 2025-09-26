@@ -139,16 +139,6 @@ const Header = ({ currentPage = '' }) => {
         catering: 'Catering',
         orderOnline: 'Siparîşa Online'
       },
-      de: {
-        home: 'Startseite',
-        menu: 'Speisekarte',
-        about: 'Über Uns',
-        gallery: 'Galerie',
-        visit: 'Besuchen Sie Uns',
-        reservations: 'Reservierungen',
-        catering: 'Catering',
-        orderOnline: 'Online Bestellen'
-      },
       bn: {
         home: 'হোম',
         menu: 'মেনু',
@@ -527,23 +517,7 @@ const Header = ({ currentPage = '' }) => {
                   </Link>
                 ))}
                 
-                {/* Enhanced Mobile Order Online Button */}
-                <div className="mt-6 pt-4 border-t border-amber-200/70">
-                  <a
-                    href="https://slicelife.com/restaurants/ga/suwanee/30024/nature-village-restaurant/menu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="group relative w-full flex items-center justify-center space-x-3 px-6 py-4 rounded-xl bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 overflow-hidden"
-                  >
-                    {/* Shimmer effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                    
-                    <ChefHat className="w-6 h-6 group-hover:animate-bounce" />
-                    <span className="relative z-10">Order</span>
-                    <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
-                  </a>
-                </div>
+                {/* Mobile Order button removed - now shown in hero section */}
 
                 {/* Enhanced Mobile Language Selector */}
                 <div className="mt-6 pt-6 border-t border-amber-200/70">
