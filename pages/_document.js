@@ -4,11 +4,12 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  {/* Favicon (single source) */}
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  {/* Optional: theme color for mobile UI */}
+  <meta name="theme-color" content="#8b4513" />
+  {/* Removed references to missing apple-touch and PNG size icons to avoid 404 requests */}
         
         {/* Font Preconnections */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
