@@ -5072,6 +5072,40 @@ const FullMenuPage = () => {
       imageUrl: '/Greek Salad.jpg' 
     },
 
+    // Added custom protein sides
+    { 
+      id: 1909,
+      name: { en: 'Shrimp' },
+      price: '$6.99',
+      category: 'sides',
+      popular: false,
+      tags: ['seafood','protein','side']
+    },
+    { 
+      id: 1910,
+      name: { en: 'Falafel' },
+      price: '$5.99',
+      category: 'sides',
+      popular: false,
+      tags: ['vegetarian','protein','side']
+    },
+    { 
+      id: 1911,
+      name: { en: 'Beef' },
+      price: '$9.99',
+      category: 'sides',
+      popular: false,
+      tags: ['beef','protein','side']
+    },
+    { 
+      id: 1912,
+      name: { en: 'Chicken' },
+      price: '$8.99',
+      category: 'sides',
+      popular: false,
+      tags: ['chicken','protein','side']
+    },
+
     // DRINKS (COLD)
     { 
       id: 2001, 
