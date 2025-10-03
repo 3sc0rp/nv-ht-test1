@@ -5079,7 +5079,8 @@ const FullMenuPage = () => {
       price: '$6.99',
       category: 'sides',
       popular: false,
-      tags: ['seafood','protein','side']
+      tags: ['seafood','protein','side'],
+      imageUrl: '/sides/shrimp.jpg'
     },
     { 
       id: 1910,
@@ -5087,7 +5088,8 @@ const FullMenuPage = () => {
       price: '$5.99',
       category: 'sides',
       popular: false,
-      tags: ['vegetarian','protein','side']
+      tags: ['vegetarian','protein','side'],
+      imageUrl: '/sides/falafels.jpg'
     },
     { 
       id: 1911,
@@ -5095,7 +5097,8 @@ const FullMenuPage = () => {
       price: '$9.99',
       category: 'sides',
       popular: false,
-      tags: ['beef','protein','side']
+      tags: ['beef','protein','side'],
+      imageUrl: '/sides/beef.jpg'
     },
     { 
       id: 1912,
@@ -5103,7 +5106,8 @@ const FullMenuPage = () => {
       price: '$8.99',
       category: 'sides',
       popular: false,
-      tags: ['chicken','protein','side']
+      tags: ['chicken','protein','side'],
+      imageUrl: '/sides/chicken.jpg'
     },
 
     // DRINKS (COLD)
