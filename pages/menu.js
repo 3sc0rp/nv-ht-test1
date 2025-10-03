@@ -35,6 +35,56 @@ const FullMenuPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const reducedMotion = useReducedMotion()
 
+  // Restore selected category from session storage on mount
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined') {
+        const savedCategory = sessionStorage.getItem('selectedMenuCategory')
+        const savedScrollPosition = sessionStorage.getItem('menuScrollPosition')
+        
+        if (savedCategory) {
+          setSelectedCategory(savedCategory)
+        }
+        
+        // Restore scroll position after a brief delay to ensure DOM is ready
+        if (savedScrollPosition) {
+          setTimeout(() => {
+            window.scrollTo(0, parseInt(savedScrollPosition, 10))
+          }, 100)
+        }
+      }
+    } catch (error) {
+      console.error('Error restoring menu state:', error)
+    }
+  }, [])
+
+  // Save selected category and scroll position to session storage
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined' && isMounted) {
+        sessionStorage.setItem('selectedMenuCategory', selectedCategory)
+      }
+    } catch (error) {
+      console.error('Error saving menu category:', error)
+    }
+  }, [selectedCategory, isMounted])
+
+  // Save scroll position periodically
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined') {
+        const saveScrollPosition = () => {
+          sessionStorage.setItem('menuScrollPosition', window.scrollY.toString())
+        }
+        
+        window.addEventListener('scroll', saveScrollPosition)
+        return () => window.removeEventListener('scroll', saveScrollPosition)
+      }
+    } catch (error) {
+      console.error('Error setting up scroll position saver:', error)
+    }
+  }, [])
+
   // Use shared language config
   const languages = LANGUAGES
 
@@ -6123,9 +6173,16 @@ const FullMenuPage = () => {
     validateMenuData();
   }, [validateMenuData]);
 
-  // Handle category selection
+  // Handle category selection with session storage
   const handleCategorySelect = useCallback((category) => {
     setSelectedCategory(category);
+    try {
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('selectedMenuCategory', category)
+      }
+    } catch (error) {
+      console.error('Error saving category selection:', error)
+    }
   }, []);
 
   return (
