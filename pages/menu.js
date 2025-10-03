@@ -4946,7 +4946,7 @@ const FullMenuPage = () => {
       }, 
       category: 'fish', 
       popular: true, 
-      image: '/Masgouf.jpg',
+      image: '/masgouf.jpg',
       tags: [],
       variants: [
         {
@@ -5151,7 +5151,8 @@ const FullMenuPage = () => {
       category: 'sides',
       popular: false,
       tags: ['seafood','protein','side'],
-      imageUrl: '/sides/shrimp.jpg'
+      imageUrl: '/sides/shrimp.jpg',
+      placeholder: 'fish'
     },
     { 
       id: 1910,
@@ -5181,7 +5182,8 @@ const FullMenuPage = () => {
       category: 'sides',
       popular: false,
       tags: ['vegetarian','protein','side'],
-      imageUrl: '/sides/falafels.jpg'
+      imageUrl: '/sides/falafels.jpg',
+      placeholder: 'hummus'
     },
     { 
       id: 1911,
@@ -5211,7 +5213,8 @@ const FullMenuPage = () => {
       category: 'sides',
       popular: false,
       tags: ['beef','protein','side'],
-      imageUrl: '/sides/beef.jpg'
+      imageUrl: '/sides/beef.jpg',
+      placeholder: 'kebab'
     },
     { 
       id: 1912,
@@ -5241,7 +5244,8 @@ const FullMenuPage = () => {
       category: 'sides',
       popular: false,
       tags: ['chicken','protein','side'],
-      imageUrl: '/sides/chicken.jpg'
+      imageUrl: '/sides/chicken.jpg',
+      placeholder: 'kebab'
     },
 
     // DRINKS (COLD)
