@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nature Village - Kurdish Restaurant | Authentic Kurdish Cuisine</title>
-        <meta name="description" content="Experience authentic Kurdish flavors at Nature Village. Traditional family recipes, warm hospitality, and cultural heritage. Powered by Blunari's MenuIQ technology." />
+        <title>Nature Village Restaurant | Authentic Middle Eastern Cuisine</title>
+        <meta name="description" content="Experience authentic Middle Eastern flavors at Nature Village. Traditional family recipes, warm hospitality, and cultural heritage. Powered by Blunari's MenuIQ technology." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://naturevillage.vercel.app" />
+        <link rel="canonical" href="https://naturevillagerestaurant.com" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -31,7 +31,7 @@ export default function Home() {
                 "Fr-Sa 12:00-23:00", 
                 "Su 12:00-22:00"
               ],
-              "servesCuisine": "Kurdish",
+              "servesCuisine": "Middle Eastern",
               "priceRange": "$$"
             })
           }}

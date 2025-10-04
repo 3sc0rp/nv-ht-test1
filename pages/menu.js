@@ -6280,13 +6280,13 @@ const FullMenuPage = () => {
   return (
     <>
       <Head>
-        <title>{t.pageTitle}</title>
+        <title>Menu - Nature Village Restaurant</title>
         <meta name="description" content={t.pageDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#92400e" />
         <meta name="robots" content="index, follow" />
         <meta name="language" content={language} />
-        <meta name="keywords" content="Kurdish restaurant, Middle Eastern food, authentic cuisine, nature village, traditional recipes" />
+        <meta name="keywords" content="Middle Eastern food, authentic cuisine, nature village, traditional recipes" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`Nature Village - ${t.title || t.menuTitle}`} />
         <meta property="og:description" content={t.subtitle || t.menuSubtitle} />

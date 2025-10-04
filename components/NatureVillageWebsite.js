@@ -846,7 +846,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Our Menu',
-        subtitle: 'Powered by MenuIQ - AI-Enhanced Dining Experience',
+        subtitle: 'Powered by Blunari - Intelligent OS for Enhanced Dining Experience',
         filters: {
           all: 'All Items',
           traditional: 'Traditional',
@@ -1042,7 +1042,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'خۆراکەکانمان',
-        subtitle: 'بە MenuIQ هێزدراو - ئەزموونی خۆراک لەگەڵ زیرەکی دەستکرد',
+        subtitle: 'بە Blunari هێزدراو - سیستەمی زیرەک بۆ ئەزموونێکی باشتری خواردن',
         filters: {
           all: 'هەموو ئایتەمەکان',
           traditional: 'نەریتی',
@@ -1232,7 +1232,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'قائمتنا',
-        subtitle: 'مدعوم بـ MenuIQ - تجربة طعام محسّنة بالذكاء الاصطناعي',
+        subtitle: 'مدعوم بـ Blunari - نظام ذكي لتجربة طعام محسّنة',
         filters: {
           all: 'جميع الأطباق',
           traditional: 'تقليدي',
@@ -1419,7 +1419,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'منوی ما',
-        subtitle: 'قدرت گرفته از MenuIQ - تجربه غذایی بهبود یافته با هوش مصنوعی',
+        subtitle: 'قدرت گرفته از Blunari - سیستم هوشمند برای تجربه غذایی بهبود یافته',
         filters: {
           all: 'همه آیتم‌ها',
           traditional: 'سنتی',
@@ -1586,7 +1586,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Menümüz',
-        subtitle: 'MenuIQ tarafından desteklenir - AI Geliştirilmiş Yemek Deneyimi',
+        subtitle: 'Blunari tarafından desteklenir - Gelişmiş Yemek Deneyimi için Akıllı OS',
         filters: {
           all: 'Tüm Ürünler',
           traditional: 'Geleneksel',
@@ -1773,7 +1773,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Nuestro Menú',
-        subtitle: 'Impulsado por MenuIQ - Experiencia Gastronómica Mejorada con IA',
+        subtitle: 'Impulsado por Blunari - OS Inteligente para Experiencia Gastronómica Mejorada',
         filters: {
           all: 'Todos los Platos',
           traditional: 'Tradicional',
@@ -1956,7 +1956,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'ہمارا مینو',
-        subtitle: 'MenuIQ کی طاقت سے - AI بہتر کھانے کا تجربہ',
+        subtitle: 'Blunari کی طاقت سے - بہتر کھانے کے تجربے کے لیے ذہین OS',
         filters: {
           all: 'تمام اشیاء',
           traditional: 'روایتی',
@@ -2141,7 +2141,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Menûya Me',
-        subtitle: 'Bi MenuIQ ve têk tê - Ezmûna Xwarinê ya Baştirkirî bi AI',
+        subtitle: 'Bi Blunari ve têk tê - Sîstema Zîrek ji bo Ezmûna Xwarinê ya Baştirkirî',
         filters: {
           all: 'Hemû Tişt',
           traditional: 'Kevneşopî',
@@ -2326,7 +2326,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Наше меню',
-        subtitle: 'Работает на MenuIQ - улучшенный ИИ опыт питания',
+        subtitle: 'Работает на Blunari - Интеллектуальная ОС для улучшенного опыта питания',
         filters: {
           all: 'Все блюда',
           traditional: 'Традиционные',
@@ -2522,7 +2522,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'हमारा मेन्यू',
-        subtitle: 'MenuIQ द्वारा संचालित - AI-संवर्धित भोजन अनुभव',
+        subtitle: 'Blunari द्वारा संचालित - बेहतर भोजन अनुभव के लिए बुद्धिमान OS',
         filters: {
           all: 'सभी व्यंजन',
           traditional: 'पारंपरिक',
@@ -2718,7 +2718,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Menûya Me',
-        subtitle: 'Bi MenuIQ ve têk tê - Ezmûna Xwarinê ya Baştirkirî bi AI',
+        subtitle: 'Bi Blunari ve têk tê - Sîstema Zîrek ji bo Ezmûna Xwarinê ya Baştirkirî',
         filters: {
           all: 'Hemû Tişt',
           traditional: 'Kevneşopî',
@@ -2892,7 +2892,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Notre Menu',
-        subtitle: 'Propulsé par MenuIQ - Expérience Culinaire Améliorée par l\'IA',
+        subtitle: 'Propulsé par Blunari - OS Intelligent pour une Expérience Culinaire Améliorée',
         filters: {
           all: 'Tous les Articles',
           traditional: 'Traditionnel',
@@ -3090,7 +3090,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Menya Jonë',
-        subtitle: 'Fuqizuar nga MenuIQ - Përvojë Gatuese e Përmirësuar me AI',
+        subtitle: 'Fuqizuar nga Blunari - OS Inteligjente për Përvojë të Përmirësuar Gatuese',
         filters: {
           all: 'Të Gjitha Artikujt',
           traditional: 'Tradicionale',
@@ -3277,7 +3277,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Unsere Speisekarte',
-        subtitle: 'Powered by MenuIQ - KI-Enhanced Culinary Experience',
+        subtitle: 'Powered by Blunari - Intelligentes OS für verbessertes kulinarisches Erlebnis',
         filters: {
           all: 'Alle Gerichte',
           traditional: 'Traditionell',
@@ -3493,7 +3493,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'আমাদের মেনু',
-        subtitle: 'MenuIQ দ্বারা চালিত - AI-উন্নত ডাইনিং অভিজ্ঞতা',
+        subtitle: 'Blunari দ্বারা চালিত - উন্নত ডাইনিং অভিজ্ঞতার জন্য বুদ্ধিমান OS',
         filters: {
           all: 'সকল আইটেম',
           traditional: 'ঐতিহ্যবাহী',
@@ -3736,7 +3736,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: '메뉴',
-        subtitle: 'MenuIQ 기반 - AI 향상 다이닝 경험',
+        subtitle: 'Blunari 기반 - 향상된 다이닝 경험을 위한 인텔리전트 OS',
         filters: {
           all: '전체 메뉴',
           traditional: '전통 요리',
@@ -3923,7 +3923,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Naš meni',
-        subtitle: 'Pokretano od MenuIQ - AI poboljšano iskustvo objedovanja',
+        subtitle: 'Pokretano od Blunari - Inteligentni OS za poboljšano iskustvo objedovanja',
         filters: {
           all: 'Svi proizvodi',
           traditional: 'Tradicionalno',
@@ -4110,7 +4110,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: '我们的菜单',
-        subtitle: '由 MenuIQ 提供支持 - AI 增强的用餐体验',
+        subtitle: '由 Blunari 提供支持 - 智能操作系统，提升用餐体验',
         filters: {
           all: '全部',
           traditional: '传统',
@@ -4297,7 +4297,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Meniul Nostru',
-        subtitle: 'Powered by MenuIQ - Experiență culinară îmbunătățită cu AI',
+        subtitle: 'Powered by Blunari - OS Inteligent pentru Experiență Culinară Îmbunătățită',
         filters: {
           all: 'Toate',
           traditional: 'Tradițional',
@@ -4484,7 +4484,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Наше меню',
-        subtitle: 'Powered by MenuIQ - Удосконалений кулінарний досвід з ШІ',
+        subtitle: 'Powered by Blunari - Інтелектуальна ОС для покращеного кулінарного досвіду',
         filters: {
           all: 'Все',
           traditional: 'Традиційне',
@@ -4620,7 +4620,7 @@ const NatureVillageWebsite = () => {
       },
       menu: {
         title: 'Thực đơn của chúng tôi',
-        subtitle: 'Powered by MenuIQ - Trải nghiệm ẩm thực được nâng cao bởi AI',
+        subtitle: 'Powered by Blunari - Hệ điều hành thông minh cho trải nghiệm ẩm thực nâng cao',
         filters: {
           all: 'Tất cả',
           traditional: 'Truyền thống',
