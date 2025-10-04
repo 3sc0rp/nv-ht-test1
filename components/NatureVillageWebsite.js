@@ -5255,72 +5255,72 @@ const NatureVillageWebsite = () => {
             </div>
           </div>
           
-          {/* Feature Cards - Enhanced */}
+          {/* Feature Cards - Professional & Minimal */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white border-2 border-gray-100 rounded-2xl p-7 text-center shadow-md hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
+              <div className="w-16 h-16 bg-amber-500 rounded-xl flex items-center justify-center mx-auto mb-5">
                 <ChefHat className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-bold text-gray-900 text-xl mb-3">
+              <h4 className="font-bold text-gray-900 text-lg mb-2">
                 {t.about?.features?.chefs?.title || 'Expert Chefs'}
               </h4>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-sm text-gray-600">
                 {t.about?.features?.chefs?.description || 'Authentic Middle Eastern cuisine'}
               </p>
             </div>
             
-            <div className="bg-white border-2 border-gray-100 rounded-2xl p-7 text-center shadow-md hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
+              <div className="w-16 h-16 bg-orange-500 rounded-xl flex items-center justify-center mx-auto mb-5">
                 <Heart className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-bold text-gray-900 text-xl mb-3">
+              <h4 className="font-bold text-gray-900 text-lg mb-2">
                 {t.about?.features?.ingredients?.title || 'Fresh Ingredients'}
               </h4>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-sm text-gray-600">
                 {t.about?.features?.ingredients?.description || 'Quality sourced daily'}
               </p>
             </div>
             
-            <div className="bg-white border-2 border-gray-100 rounded-2xl p-7 text-center shadow-md hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
+              <div className="w-16 h-16 bg-red-500 rounded-xl flex items-center justify-center mx-auto mb-5">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-bold text-gray-900 text-xl mb-3">
+              <h4 className="font-bold text-gray-900 text-lg mb-2">
                 {t.about?.features?.service?.title || 'Warm Service'}
               </h4>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-sm text-gray-600">
                 {t.about?.features?.service?.description || 'Middle Eastern hospitality'}
               </p>
             </div>
           </div>
           
-          {/* Statistics Bar - Enhanced */}
-          <div className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-3xl p-10 sm:p-12 shadow-2xl">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          {/* Statistics Bar - Professional & Minimal */}
+          <div className="bg-orange-500 rounded-3xl p-10 sm:p-12 shadow-xl">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-5xl sm:text-6xl font-extrabold text-white mb-3 drop-shadow-lg">1000+</div>
-                <div className="text-sm sm:text-base font-semibold text-white uppercase tracking-wide">
+                <div className="text-5xl sm:text-6xl font-bold text-white mb-2">1000+</div>
+                <div className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
                   {t.about?.stats?.happyCustomers || 'Happy Customers'}
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="text-5xl sm:text-6xl font-extrabold text-white mb-3 drop-shadow-lg">50+</div>
-                <div className="text-sm sm:text-base font-semibold text-white uppercase tracking-wide">
+                <div className="text-5xl sm:text-6xl font-bold text-white mb-2">50+</div>
+                <div className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
                   {t.about?.stats?.authenticDishes || 'Authentic Dishes'}
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="text-5xl sm:text-6xl font-extrabold text-white mb-3 drop-shadow-lg">4.8★</div>
-                <div className="text-sm sm:text-base font-semibold text-white uppercase tracking-wide">
+                <div className="text-5xl sm:text-6xl font-bold text-white mb-2">4.8★</div>
+                <div className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
                   {t.about?.stats?.customerRating || 'Customer Rating'}
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="text-5xl sm:text-6xl font-extrabold text-white mb-3 drop-shadow-lg">100%</div>
-                <div className="text-sm sm:text-base font-semibold text-white uppercase tracking-wide">
+                <div className="text-5xl sm:text-6xl font-bold text-white mb-2">100%</div>
+                <div className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
                   {t.about?.stats?.freshIngredients || 'Fresh Ingredients'}
                 </div>
               </div>
