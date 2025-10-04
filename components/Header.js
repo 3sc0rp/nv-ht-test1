@@ -282,13 +282,13 @@ const Header = ({ currentPage = '' }) => {
               <img 
                 src="/NV.webp" 
                 alt="Nature Village Restaurant Logo" 
-                className={cn('w-10 h-10 sm:w-12 sm:h-12 object-contain', rtlClass('mr-3', 'ml-3'))}
+                className={cn('w-10 h-10 sm:w-12 sm:h-12 object-contain transition-transform duration-200 hover:scale-105', rtlClass('mr-3', 'ml-3'))}
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                 }}
               />
               <div className="flex flex-col">
-                <div className="text-lg sm:text-2xl font-serif font-bold text-amber-800">Nature Village</div>
+                <div className="text-lg sm:text-2xl font-serif font-bold text-amber-800 transition-colors duration-200 hover:text-amber-700">Nature Village</div>
                 <div className="text-xs text-amber-600 font-sans hidden sm:block">Restaurant</div>
               </div>
             </div>
@@ -302,15 +302,18 @@ const Header = ({ currentPage = '' }) => {
                   <Link key={item.key} href={item.href}>
                     <button
                       className={cn(
-                        'px-4 py-2 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2',
-                        'whitespace-nowrap',
+                        'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2',
+                        'whitespace-nowrap relative group',
                         currentPage === item.key || (currentPage === '' && item.key === 'home')
                           ? 'bg-amber-800 text-white shadow-lg' 
-                          : 'text-amber-800 bg-amber-50'
+                          : 'text-amber-800 hover:bg-amber-100 hover:text-amber-900'
                       )}
                       aria-current={currentPage === item.key ? 'page' : undefined}
                     >
                       {getNavText(item.key)}
+                      {currentPage !== item.key && (
+                        <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-amber-600 transition-all duration-200 group-hover:w-full group-hover:left-0"></span>
+                      )}
                     </button>
                   </Link>
                 ))}
@@ -319,7 +322,7 @@ const Header = ({ currentPage = '' }) => {
                 <button
                   onClick={handleOrderOnline}
                   className={cn(
-                    'flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-green-500 border border-green-400 text-white shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
+                    'flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-white/90 hover:bg-white border border-green-200 hover:border-green-300 text-green-800 hover:text-green-900 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1',
                     isRTL && 'space-x-reverse'
                   )}
                   aria-label={getNavText('orderOnline')}
