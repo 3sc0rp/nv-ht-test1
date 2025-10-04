@@ -2,7 +2,6 @@ import React, { useState, useCallback, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   X,
   ChevronLeft,
@@ -403,20 +402,18 @@ const GalleryPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-wrap justify-center gap-3">
               {categories.map((category) => (
-                <motion.button
+                <button
                   key={category.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-md ${
+                  className={`px-6 py-3 rounded-xl font-semibold shadow-md ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-amber-50 border-2 border-gray-200'
+                      : 'bg-white text-gray-700 border-2 border-gray-200'
                   }`}
                 >
                   {category.label}
                   <span className="ml-2 text-sm opacity-75">({category.count})</span>
-                </motion.button>
+                </button>
               ))}
             </div>
           </div>
@@ -424,150 +421,107 @@ const GalleryPage = () => {
 
         {/* Gallery Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={selectedCategory}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             >
               {filteredImages.map((image, index) => (
-                <motion.div
+                <div
                   key={image.id}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="group relative aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer bg-gradient-to-br from-amber-100 to-orange-100"
+                  className="relative aspect-square overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br from-amber-100 to-orange-100"
                   onClick={() => setSelectedImage(image)}
+                  style={{ cursor: 'pointer' }}
                 >
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   />
-                  
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <div className="flex items-center justify-center gap-2 text-white">
-                        <Maximize2 className="w-5 h-5" />
-                        <span className="font-semibold">{t.viewImage}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Hover border effect */}
-                  <div className="absolute inset-0 border-4 border-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
-          </AnimatePresence>
+            </div>
 
           {/* No images message */}
           {filteredImages.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-20"
-            >
+            <div className="text-center py-20">
               <Camera className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <p className="text-xl text-gray-600">No photos in this category yet.</p>
-            </motion.div>
+            </div>
           )}
         </div>
 
         {/* Lightbox Modal */}
-        <AnimatePresence>
-          {selectedImage && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
+        {selectedImage && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            {/* Close button */}
+            <button
               onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 z-10 bg-white/10 backdrop-blur-sm text-white p-3 rounded-full"
+              aria-label={t.closeGallery}
             >
-              {/* Close button */}
-              <motion.button
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-300"
-                aria-label={t.closeGallery}
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Navigation buttons */}
+            {filteredImages.findIndex(img => img.id === selectedImage.id) > 0 && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handlePrevious();
+                }}
+                className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm text-white p-3 rounded-full`}
+                aria-label={t.previous}
               >
-                <X className="w-6 h-6" />
-              </motion.button>
+                {isRTL ? <ChevronRight className="w-6 h-6" /> : <ChevronLeft className="w-6 h-6" />}
+              </button>
+            )}
 
-              {/* Navigation buttons */}
-              {filteredImages.findIndex(img => img.id === selectedImage.id) > 0 && (
-                <motion.button
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handlePrevious();
-                  }}
-                  className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-300`}
-                  aria-label={t.previous}
-                >
-                  {isRTL ? <ChevronRight className="w-6 h-6" /> : <ChevronLeft className="w-6 h-6" />}
-                </motion.button>
-              )}
-
-              {filteredImages.findIndex(img => img.id === selectedImage.id) < filteredImages.length - 1 && (
-                <motion.button
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleNext();
-                  }}
-                  className={`absolute ${isRTL ? 'left-4' : 'right-4'} top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-300`}
-                  aria-label={t.next}
-                >
-                  {isRTL ? <ChevronLeft className="w-6 h-6" /> : <ChevronRight className="w-6 h-6" />}
-                </motion.button>
-              )}
-
-              {/* Image container */}
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                transition={{ type: "spring", duration: 0.5 }}
-                className="relative max-w-7xl max-h-[90vh] w-full"
-                onClick={(e) => e.stopPropagation()}
+            {filteredImages.findIndex(img => img.id === selectedImage.id) < filteredImages.length - 1 && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleNext();
+                }}
+                className={`absolute ${isRTL ? 'left-4' : 'right-4'} top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm text-white p-3 rounded-full`}
+                aria-label={t.next}
               >
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <Image
-                    src={selectedImage.src}
-                    alt={selectedImage.alt}
-                    width={1200}
-                    height={1200}
-                    className="max-w-full max-h-[80vh] w-auto h-auto object-contain rounded-lg shadow-2xl"
-                    priority
-                  />
-                </div>
+                {isRTL ? <ChevronLeft className="w-6 h-6" /> : <ChevronRight className="w-6 h-6" />}
+              </button>
+            )}
 
-                {/* Image info */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
-                  <p className="text-white text-lg font-semibold text-center">
-                    {selectedImage.alt}
-                  </p>
-                  <p className="text-white/70 text-sm text-center mt-1">
-                    {filteredImages.findIndex(img => img.id === selectedImage.id) + 1} / {filteredImages.length}
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            {/* Image container */}
+            <div
+              className="relative max-w-7xl max-h-[90vh] w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative w-full h-full flex items-center justify-center">
+                <Image
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  width={1200}
+                  height={1200}
+                  className="max-w-full max-h-[80vh] w-auto h-auto object-contain rounded-lg shadow-2xl"
+                  priority
+                />
+              </div>
+
+              {/* Image info */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
+                <p className="text-white text-lg font-semibold text-center">
+                  {selectedImage.alt}
+                </p>
+                <p className="text-white/70 text-sm text-center mt-1">
+                  {filteredImages.findIndex(img => img.id === selectedImage.id) + 1} / {filteredImages.length}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
 
         <Footer />
       </div>
