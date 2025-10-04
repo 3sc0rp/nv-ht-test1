@@ -8,7 +8,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Camera,
-  Grid3x3,
+  Grid,
   Maximize2,
   Download,
   Share2
@@ -527,7 +527,7 @@ const GalleryPage = () => {
                 transition={{ duration: 0.6, delay: 0.9 }}
                 className="mt-8 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-amber-200"
               >
-                <Grid3x3 className="w-5 h-5 text-amber-600" />
+                <Grid className="w-5 h-5 text-amber-600" />
                 <span className="text-gray-700 font-semibold">
                   {galleryImages.length}+ {t.photoCount}
                 </span>
