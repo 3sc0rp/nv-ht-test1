@@ -358,96 +358,35 @@ const GalleryPage = () => {
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50" style={{ direction: isRTL ? 'rtl' : 'ltr' }}>
         <Header currentPage="gallery" />
 
-        {/* Enhanced Hero Section */}
-        <div className="relative pt-32 sm:pt-36 lg:pt-40 pb-20 overflow-hidden">
-          {/* Animated background patterns */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-amber-100/60 via-orange-50/40 to-transparent"></div>
-            
-            {/* Decorative circles */}
-            <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 0.1 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              className="absolute -top-40 -left-40 w-80 h-80 bg-amber-500 rounded-full blur-3xl"
-            ></motion.div>
-            <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 0.1 }}
-              transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-              className="absolute -top-20 -right-40 w-96 h-96 bg-orange-500 rounded-full blur-3xl"
-            ></motion.div>
-            
-            {/* Top gradient line */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
+        {/* Simple Hero Section */}
+        <div className="relative pt-32 sm:pt-36 lg:pt-40 pb-16">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-amber-100/40 to-transparent"></div>
           </div>
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-center"
-            >
-              {/* Main title with gradient */}
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold mb-6 leading-tight"
-              >
-                <span className="bg-gradient-to-r from-amber-700 via-orange-600 to-amber-700 bg-clip-text text-transparent drop-shadow-sm">
-                  {t.title}
-                </span>
-              </motion.h1>
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold mb-4 text-amber-800">
+                {t.title}
+              </h1>
               
-              {/* Decorative divider */}
-              <motion.div
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="flex items-center justify-center gap-3 mb-6"
-              >
-                <div className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent to-amber-400"></div>
-                <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                <div className="w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
-                <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                <div className="h-px w-12 sm:w-20 bg-gradient-to-l from-transparent to-amber-400"></div>
-              </motion.div>
+              <div className="w-24 h-1 bg-amber-600 mx-auto mb-6"></div>
               
-              {/* Subtitle with enhanced styling */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-xl sm:text-2xl lg:text-3xl text-gray-700 font-semibold mb-4 tracking-wide"
-              >
+              <p className="text-lg sm:text-xl text-gray-700 font-medium mb-3">
                 {t.subtitle}
-              </motion.p>
+              </p>
               
-              {/* Description with better typography */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.7 }}
-                className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4"
-              >
+              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-6">
                 {t.description}
-              </motion.p>
+              </p>
               
-              {/* Stats or photo count */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
-                className="mt-8 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-amber-200"
-              >
+              <div className="inline-flex items-center gap-2 bg-white px-5 py-2 rounded-full shadow-md border border-amber-200">
                 <Grid className="w-5 h-5 text-amber-600" />
                 <span className="text-gray-700 font-semibold">
                   {galleryImages.length}+ {t.photoCount}
                 </span>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
           
           {/* Bottom wave decoration */}
