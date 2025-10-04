@@ -5255,13 +5255,13 @@ const NatureVillageWebsite = () => {
             </div>
           </div>
           
-          {/* Feature Cards */}
+          {/* Feature Cards - Enhanced */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-sm">
-              <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <ChefHat className="w-7 h-7 text-white" />
+            <div className="bg-white border-2 border-gray-100 rounded-2xl p-7 text-center shadow-md hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                <ChefHat className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-bold text-gray-900 text-lg mb-2">
+              <h4 className="font-bold text-gray-900 text-xl mb-3">
                 {t.about?.features?.chefs?.title || 'Expert Chefs'}
               </h4>
               <p className="text-sm text-gray-600 leading-relaxed">
@@ -5269,11 +5269,11 @@ const NatureVillageWebsite = () => {
               </p>
             </div>
             
-            <div className="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-sm">
-              <div className="w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-7 h-7 text-white" />
+            <div className="bg-white border-2 border-gray-100 rounded-2xl p-7 text-center shadow-md hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                <Heart className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-bold text-gray-900 text-lg mb-2">
+              <h4 className="font-bold text-gray-900 text-xl mb-3">
                 {t.about?.features?.ingredients?.title || 'Fresh Ingredients'}
               </h4>
               <p className="text-sm text-gray-600 leading-relaxed">
@@ -5281,11 +5281,11 @@ const NatureVillageWebsite = () => {
               </p>
             </div>
             
-            <div className="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-sm">
-              <div className="w-14 h-14 bg-gradient-to-br from-red-400 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Users className="w-7 h-7 text-white" />
+            <div className="bg-white border-2 border-gray-100 rounded-2xl p-7 text-center shadow-md hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                <Users className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-bold text-gray-900 text-lg mb-2">
+              <h4 className="font-bold text-gray-900 text-xl mb-3">
                 {t.about?.features?.service?.title || 'Warm Service'}
               </h4>
               <p className="text-sm text-gray-600 leading-relaxed">
@@ -5294,33 +5294,33 @@ const NatureVillageWebsite = () => {
             </div>
           </div>
           
-          {/* Statistics Bar */}
-          <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 rounded-2xl p-8 sm:p-10 shadow-xl">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Statistics Bar - Enhanced */}
+          <div className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-3xl p-10 sm:p-12 shadow-2xl">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-white mb-2">1000+</div>
-                <div className="text-sm sm:text-base font-medium text-white/90">
+                <div className="text-5xl sm:text-6xl font-extrabold text-white mb-3 drop-shadow-lg">1000+</div>
+                <div className="text-sm sm:text-base font-semibold text-white uppercase tracking-wide">
                   {t.about?.stats?.happyCustomers || 'Happy Customers'}
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-white mb-2">50+</div>
-                <div className="text-sm sm:text-base font-medium text-white/90">
+                <div className="text-5xl sm:text-6xl font-extrabold text-white mb-3 drop-shadow-lg">50+</div>
+                <div className="text-sm sm:text-base font-semibold text-white uppercase tracking-wide">
                   {t.about?.stats?.authenticDishes || 'Authentic Dishes'}
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-white mb-2">4.8★</div>
-                <div className="text-sm sm:text-base font-medium text-white/90">
+                <div className="text-5xl sm:text-6xl font-extrabold text-white mb-3 drop-shadow-lg">4.8★</div>
+                <div className="text-sm sm:text-base font-semibold text-white uppercase tracking-wide">
                   {t.about?.stats?.customerRating || 'Customer Rating'}
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-white mb-2">100%</div>
-                <div className="text-sm sm:text-base font-medium text-white/90">
+                <div className="text-5xl sm:text-6xl font-extrabold text-white mb-3 drop-shadow-lg">100%</div>
+                <div className="text-sm sm:text-base font-semibold text-white uppercase tracking-wide">
                   {t.about?.stats?.freshIngredients || 'Fresh Ingredients'}
                 </div>
               </div>
