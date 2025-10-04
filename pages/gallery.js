@@ -358,34 +358,189 @@ const GalleryPage = () => {
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50" style={{ direction: isRTL ? 'rtl' : 'ltr' }}>
         <Header currentPage="gallery" />
 
-        {/* Hero Section */}
-        <div className="relative pt-24 pb-16 overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute inset-0 bg-gradient-to-b from-amber-100/50 to-transparent"></div>
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Enhanced Hero Section */}
+        <div className="relative pt-24 pb-20 overflow-hidden">
+          {/* Animated background patterns */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-amber-100/60 via-orange-50/40 to-transparent"></div>
+            
+            {/* Decorative circles */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 0.1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="absolute -top-40 -left-40 w-80 h-80 bg-amber-500 rounded-full blur-3xl"
+            ></motion.div>
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 0.1 }}
+              transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+              className="absolute -top-20 -right-40 w-96 h-96 bg-orange-500 rounded-full blur-3xl"
+            ></motion.div>
+            
+            {/* Top gradient line */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
+            
+            {/* Floating decorative elements */}
+            <motion.div
+              animate={{ 
+                y: [0, -20, 0],
+                opacity: [0.3, 0.6, 0.3]
+              }}
+              transition={{ 
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute top-32 left-1/4 w-2 h-2 bg-amber-400 rounded-full"
+            ></motion.div>
+            <motion.div
+              animate={{ 
+                y: [0, -30, 0],
+                opacity: [0.2, 0.5, 0.2]
+              }}
+              transition={{ 
+                duration: 5,
+                delay: 1,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute top-40 right-1/3 w-3 h-3 bg-orange-400 rounded-full"
+            ></motion.div>
+          </div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-center"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full mb-6 shadow-lg">
-                <Camera className="w-8 h-8 text-white" />
-              </div>
+              {/* Icon with pulse animation */}
+              <motion.div
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 0.2,
+                  type: "spring",
+                  stiffness: 200
+                }}
+                className="inline-block mb-8"
+              >
+                <div className="relative">
+                  {/* Pulse rings */}
+                  <motion.div
+                    animate={{ 
+                      scale: [1, 1.3, 1],
+                      opacity: [0.6, 0, 0.6]
+                    }}
+                    transition={{ 
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="absolute inset-0 bg-amber-400 rounded-full blur-md"
+                  ></motion.div>
+                  <motion.div
+                    animate={{ 
+                      scale: [1, 1.5, 1],
+                      opacity: [0.4, 0, 0.4]
+                    }}
+                    transition={{ 
+                      duration: 2,
+                      delay: 0.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="absolute inset-0 bg-orange-400 rounded-full blur-lg"
+                  ></motion.div>
+                  
+                  {/* Main icon container */}
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-amber-500 via-orange-500 to-orange-600 rounded-full shadow-2xl flex items-center justify-center">
+                    <motion.div
+                      animate={{ 
+                        rotate: [0, 5, 0, -5, 0]
+                      }}
+                      transition={{ 
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      <Camera className="w-10 h-10 sm:w-12 sm:h-12 text-white drop-shadow-lg" />
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
               
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-4">
-                {t.title}
-              </h1>
+              {/* Main title with gradient */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold mb-6 leading-tight"
+              >
+                <span className="bg-gradient-to-r from-amber-700 via-orange-600 to-amber-700 bg-clip-text text-transparent drop-shadow-sm">
+                  {t.title}
+                </span>
+              </motion.h1>
               
-              <p className="text-xl sm:text-2xl text-gray-700 font-medium mb-3">
+              {/* Decorative divider */}
+              <motion.div
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="flex items-center justify-center gap-3 mb-6"
+              >
+                <div className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent to-amber-400"></div>
+                <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                <div className="w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                <div className="h-px w-12 sm:w-20 bg-gradient-to-l from-transparent to-amber-400"></div>
+              </motion.div>
+              
+              {/* Subtitle with enhanced styling */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-xl sm:text-2xl lg:text-3xl text-gray-700 font-semibold mb-4 tracking-wide"
+              >
                 {t.subtitle}
-              </p>
+              </motion.p>
               
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              {/* Description with better typography */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4"
+              >
                 {t.description}
-              </p>
+              </motion.p>
+              
+              {/* Stats or photo count */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
+                className="mt-8 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-amber-200"
+              >
+                <Grid3x3 className="w-5 h-5 text-amber-600" />
+                <span className="text-gray-700 font-semibold">
+                  {galleryImages.length}+ {t.photoCount}
+                </span>
+              </motion.div>
             </motion.div>
+          </div>
+          
+          {/* Bottom wave decoration */}
+          <div className="absolute bottom-0 left-0 w-full">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+              <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="white" fillOpacity="0.5"/>
+              <path d="M0,96L48,90.7C96,85,192,75,288,74.7C384,75,480,85,576,90.7C672,96,768,96,864,90.7C960,85,1056,75,1152,74.7C1248,75,1344,85,1392,90.7L1440,96L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="white"/>
+            </svg>
           </div>
         </div>
 
