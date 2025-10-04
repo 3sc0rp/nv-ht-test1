@@ -5119,7 +5119,7 @@ const NatureVillageWebsite = () => {
             <div className="flex flex-row gap-3 items-center justify-center">
               <button 
                 onClick={() => scrollToSection('menu')}
-                className="group bg-transparent border-2 border-amber-400/80 text-amber-200 hover:bg-amber-400/10 hover:border-amber-300 hover:text-amber-100 px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-medium backdrop-blur-sm transition-colors duration-200 flex items-center justify-center gap-1.5 min-h-[48px] min-w-[150px]"
+                className="bg-amber-500 border-2 border-amber-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-semibold flex items-center justify-center gap-1.5 min-h-[48px] min-w-[150px] shadow-md"
               >
                 <ChefHat className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>{t.ui?.menu || 'Menu'}</span>
@@ -5127,7 +5127,7 @@ const NatureVillageWebsite = () => {
               
               <button 
                 onClick={() => router.push('/reservations')}
-                className="group bg-transparent border-2 border-white/60 text-white hover:bg-white/10 hover:border-white hover:text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-medium backdrop-blur-sm transition-colors duration-200 flex items-center justify-center gap-1.5 min-h-[48px] min-w-[150px]"
+                className="bg-white border-2 border-gray-200 text-red-600 px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-semibold flex items-center justify-center gap-1.5 min-h-[48px] min-w-[150px] shadow-md"
               >
                 <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>{t.ui?.reserve || 'Reserve'}</span>
@@ -5138,14 +5138,14 @@ const NatureVillageWebsite = () => {
             <div className="flex flex-row gap-3">
               <button 
                 onClick={() => window.open('tel:4703501019', '_self')}
-                className="group bg-transparent border-2 border-green-400/80 text-green-200 hover:bg-green-400/10 hover:border-green-300 hover:text-green-100 px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-medium backdrop-blur-sm transition-colors duration-200 flex items-center justify-center gap-1.5 min-h-[48px] min-w-[150px]"
+                className="bg-green-500 border-2 border-green-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-semibold flex items-center justify-center gap-1.5 min-h-[48px] min-w-[150px] shadow-md"
               >
                 <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>{t.ui?.callNow || 'Call Now'}</span>
               </button>
               <button
                 onClick={() => window.open('https://slicelife.com/restaurants/ga/suwanee/30024/nature-village-restaurant/menu', '_blank')}
-                className="group bg-transparent border-2 border-green-400/80 text-green-200 hover:bg-green-400/10 hover:border-green-300 hover:text-green-100 px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-medium backdrop-blur-sm transition-colors duration-200 flex items-center justify-center gap-1.5 min-h-[48px] min-w-[150px]"
+                className="bg-green-500 border-2 border-green-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-sm font-semibold flex items-center justify-center gap-1.5 min-h-[48px] min-w-[150px] shadow-md"
                 aria-label={t.nav?.orderOnline || 'Order Online'}
               >
                 <ChefHat className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
