@@ -5207,27 +5207,27 @@ const NatureVillageWebsite = () => {
         </div>
       </section>
 
-      {/* Our Story Section - Redesigned */}
-      <section id="about" className="py-16 sm:py-20 lg:py-24 bg-white">
+      {/* Our Story Section - Minimal */}
+      <section id="about" className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header */}
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-4xl sm:text-5xl font-serif font-bold text-amber-800 mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl font-serif font-bold text-amber-800 mb-3">
               {t.about?.title || 'Our Story'}
             </h2>
-            <div className="w-20 h-1 bg-amber-600 mx-auto mb-6"></div>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <div className="w-16 h-1 bg-orange-500 mx-auto mb-5"></div>
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               {t.about?.subtitle || 'Bringing authentic Middle Eastern flavors and warm hospitality to our community'}
             </p>
           </div>
           
           {/* Main Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-10">
             
             {/* Left Side - Image */}
-            <div className="order-2 lg:order-1">
-              <div className="relative rounded-xl overflow-hidden shadow-lg">
+            <div>
+              <div className="rounded-xl overflow-hidden shadow-md">
                 <img 
                   src="/team.jpg"
                   alt="Nature Village restaurant team"
@@ -5237,31 +5237,70 @@ const NatureVillageWebsite = () => {
             </div>
             
             {/* Right Side - Content */}
-            <div className="order-1 lg:order-2 space-y-6">
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+            <div className="space-y-5">
+              <p className="text-base text-gray-700">
                 {t.about?.story1 || 'Nature Village is dedicated to bringing you the authentic flavors of Middle Eastern cuisine in a warm and welcoming atmosphere where every guest feels like family.'}
               </p>
               
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="text-base text-gray-600">
                 {t.about?.story2 || 'Our chefs are passionate about preparing traditional Middle Eastern dishes using the finest ingredients and time-honored cooking techniques that celebrate our rich culinary heritage.'}
               </p>
               
               {/* Quote Box */}
-              <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-600 p-5 rounded-r-lg">
-                <p className="text-amber-900 italic text-base sm:text-lg font-medium leading-relaxed">
+              <div className="bg-amber-50 border-l-4 border-orange-500 p-5 rounded-r">
+                <p className="text-amber-900 italic text-base">
                   {t.about?.quote || 'Every dish is crafted with care and served with the warmth of Middle Eastern hospitality.'}
                 </p>
+              </div>
+              
+              {/* Feature Cards - Desktop Only, Smaller */}
+              <div className="hidden lg:grid grid-cols-3 gap-4 pt-4">
+                <div className="bg-white rounded-lg p-4 text-center shadow-sm">
+                  <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <ChefHat className="w-5 h-5 text-white" />
+                  </div>
+                  <h4 className="font-bold text-gray-900 text-sm mb-1">
+                    {t.about?.features?.chefs?.title || 'Expert Chefs'}
+                  </h4>
+                  <p className="text-xs text-gray-600">
+                    {t.about?.features?.chefs?.description || 'Authentic Middle Eastern cuisine'}
+                  </p>
+                </div>
+                
+                <div className="bg-white rounded-lg p-4 text-center shadow-sm">
+                  <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Heart className="w-5 h-5 text-white" />
+                  </div>
+                  <h4 className="font-bold text-gray-900 text-sm mb-1">
+                    {t.about?.features?.ingredients?.title || 'Fresh Ingredients'}
+                  </h4>
+                  <p className="text-xs text-gray-600">
+                    {t.about?.features?.ingredients?.description || 'Quality sourced daily'}
+                  </p>
+                </div>
+                
+                <div className="bg-white rounded-lg p-4 text-center shadow-sm">
+                  <div className="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Users className="w-5 h-5 text-white" />
+                  </div>
+                  <h4 className="font-bold text-gray-900 text-sm mb-1">
+                    {t.about?.features?.service?.title || 'Warm Service'}
+                  </h4>
+                  <p className="text-xs text-gray-600">
+                    {t.about?.features?.service?.description || 'Middle Eastern hospitality'}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           
-          {/* Feature Cards - Professional & Minimal */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-              <div className="w-16 h-16 bg-amber-500 rounded-xl flex items-center justify-center mx-auto mb-5">
-                <ChefHat className="w-8 h-8 text-white" />
+          {/* Feature Cards - Mobile/Tablet Only */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 lg:hidden">
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div className="w-14 h-14 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <ChefHat className="w-7 h-7 text-white" />
               </div>
-              <h4 className="font-bold text-gray-900 text-lg mb-2">
+              <h4 className="font-bold text-gray-900 mb-2">
                 {t.about?.features?.chefs?.title || 'Expert Chefs'}
               </h4>
               <p className="text-sm text-gray-600">
@@ -5269,11 +5308,11 @@ const NatureVillageWebsite = () => {
               </p>
             </div>
             
-            <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-              <div className="w-16 h-16 bg-orange-500 rounded-xl flex items-center justify-center mx-auto mb-5">
-                <Heart className="w-8 h-8 text-white" />
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div className="w-14 h-14 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-7 h-7 text-white" />
               </div>
-              <h4 className="font-bold text-gray-900 text-lg mb-2">
+              <h4 className="font-bold text-gray-900 mb-2">
                 {t.about?.features?.ingredients?.title || 'Fresh Ingredients'}
               </h4>
               <p className="text-sm text-gray-600">
@@ -5281,11 +5320,11 @@ const NatureVillageWebsite = () => {
               </p>
             </div>
             
-            <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-              <div className="w-16 h-16 bg-red-500 rounded-xl flex items-center justify-center mx-auto mb-5">
-                <Users className="w-8 h-8 text-white" />
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div className="w-14 h-14 bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Users className="w-7 h-7 text-white" />
               </div>
-              <h4 className="font-bold text-gray-900 text-lg mb-2">
+              <h4 className="font-bold text-gray-900 mb-2">
                 {t.about?.features?.service?.title || 'Warm Service'}
               </h4>
               <p className="text-sm text-gray-600">
@@ -5294,33 +5333,30 @@ const NatureVillageWebsite = () => {
             </div>
           </div>
           
-          {/* Statistics Bar - Professional & Minimal */}
-          <div className="bg-orange-500 rounded-3xl p-10 sm:p-12 shadow-xl">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-5xl sm:text-6xl font-bold text-white mb-2">1000+</div>
-                <div className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
+          {/* Statistics Bar - Minimal */}
+          <div className="bg-orange-500 rounded-2xl p-6 sm:p-8 shadow-sm">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center text-white">
+              <div>
+                <div className="text-4xl sm:text-5xl font-bold mb-1">1000+</div>
+                <div className="text-xs font-medium uppercase tracking-wide opacity-90">
                   {t.about?.stats?.happyCustomers || 'Happy Customers'}
                 </div>
               </div>
-              
-              <div className="text-center">
-                <div className="text-5xl sm:text-6xl font-bold text-white mb-2">50+</div>
-                <div className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
+              <div>
+                <div className="text-4xl sm:text-5xl font-bold mb-1">50+</div>
+                <div className="text-xs font-medium uppercase tracking-wide opacity-90">
                   {t.about?.stats?.authenticDishes || 'Authentic Dishes'}
                 </div>
               </div>
-              
-              <div className="text-center">
-                <div className="text-5xl sm:text-6xl font-bold text-white mb-2">4.8★</div>
-                <div className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
+              <div>
+                <div className="text-4xl sm:text-5xl font-bold mb-1">4.8★</div>
+                <div className="text-xs font-medium uppercase tracking-wide opacity-90">
                   {t.about?.stats?.customerRating || 'Customer Rating'}
                 </div>
               </div>
-              
-              <div className="text-center">
-                <div className="text-5xl sm:text-6xl font-bold text-white mb-2">100%</div>
-                <div className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
+              <div>
+                <div className="text-4xl sm:text-5xl font-bold mb-1">100%</div>
+                <div className="text-xs font-medium uppercase tracking-wide opacity-90">
                   {t.about?.stats?.freshIngredients || 'Fresh Ingredients'}
                 </div>
               </div>
