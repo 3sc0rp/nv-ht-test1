@@ -5207,110 +5207,126 @@ const NatureVillageWebsite = () => {
         </div>
       </section>
 
-      {/* Enhanced About Us Section */}
-      <section id="about" className="py-16 sm:py-20 lg:py-28 bg-gradient-to-b from-white via-amber-50/30 to-white relative">
-        
+      {/* Our Story Section - Redesigned */}
+      <section id="about" className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Simple Header */}
+          
+          {/* Header */}
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-amber-800 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-serif font-bold text-amber-800 mb-4">
               {t.about?.title || 'Our Story'}
             </h2>
-            <div className="w-24 h-1 bg-amber-600 mx-auto mb-6"></div>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            <div className="w-20 h-1 bg-amber-600 mx-auto mb-6"></div>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               {t.about?.subtitle || 'Bringing authentic Middle Eastern flavors and warm hospitality to our community'}
             </p>
           </div>
           
-          {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
-            {/* Image Side */}
-            <div className="order-1">
-              <div className="relative">
-                <div className="relative aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src="/team.jpg"
-                    alt="Nature Village restaurant team"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-12">
+            
+            {/* Left Side - Image */}
+            <div className="order-2 lg:order-1">
+              <div className="relative rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/team.jpg"
+                  alt="Nature Village restaurant team"
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
             
-            {/* Content Side */}
-            <div className="order-2">
-              <div className="space-y-6">
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                  {t.about?.story1 || 'Nature Village is dedicated to bringing you the authentic flavors of Middle Eastern cuisine in a warm and welcoming atmosphere where every guest feels like family.'}
+            {/* Right Side - Content */}
+            <div className="order-1 lg:order-2 space-y-6">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                {t.about?.story1 || 'Nature Village is dedicated to bringing you the authentic flavors of Middle Eastern cuisine in a warm and welcoming atmosphere where every guest feels like family.'}
+              </p>
+              
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                {t.about?.story2 || 'Our chefs are passionate about preparing traditional Middle Eastern dishes using the finest ingredients and time-honored cooking techniques that celebrate our rich culinary heritage.'}
+              </p>
+              
+              {/* Quote Box */}
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-600 p-5 rounded-r-lg">
+                <p className="text-amber-900 italic text-base sm:text-lg font-medium leading-relaxed">
+                  {t.about?.quote || 'Every dish is crafted with care and served with the warmth of Middle Eastern hospitality.'}
                 </p>
-                
-                <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                  {t.about?.story2 || 'Our chefs are passionate about preparing traditional Middle Eastern dishes using the finest ingredients and time-honored cooking techniques that celebrate our rich culinary heritage.'}
-                </p>
-                
-                {/* Simple Quote Box */}
-                <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
-                  <p className="text-amber-900 italic font-medium text-lg">
-                    {t.about?.quote || 'Every dish is crafted with care and served with the warmth of Middle Eastern hospitality.'}
-                  </p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Feature Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+            <div className="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-sm">
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <ChefHat className="w-7 h-7 text-white" />
+              </div>
+              <h4 className="font-bold text-gray-900 text-lg mb-2">
+                {t.about?.features?.chefs?.title || 'Expert Chefs'}
+              </h4>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {t.about?.features?.chefs?.description || 'Authentic Middle Eastern cuisine'}
+              </p>
+            </div>
+            
+            <div className="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-sm">
+              <div className="w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-7 h-7 text-white" />
+              </div>
+              <h4 className="font-bold text-gray-900 text-lg mb-2">
+                {t.about?.features?.ingredients?.title || 'Fresh Ingredients'}
+              </h4>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {t.about?.features?.ingredients?.description || 'Quality sourced daily'}
+              </p>
+            </div>
+            
+            <div className="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-sm">
+              <div className="w-14 h-14 bg-gradient-to-br from-red-400 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Users className="w-7 h-7 text-white" />
+              </div>
+              <h4 className="font-bold text-gray-900 text-lg mb-2">
+                {t.about?.features?.service?.title || 'Warm Service'}
+              </h4>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {t.about?.features?.service?.description || 'Middle Eastern hospitality'}
+              </p>
+            </div>
+          </div>
+          
+          {/* Statistics Bar */}
+          <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 rounded-2xl p-8 sm:p-10 shadow-xl">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold text-white mb-2">1000+</div>
+                <div className="text-sm sm:text-base font-medium text-white/90">
+                  {t.about?.stats?.happyCustomers || 'Happy Customers'}
                 </div>
               </div>
               
-              {/* Feature Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8">
-                <div className="bg-white rounded-lg p-5 text-center shadow-md">
-                  <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <ChefHat className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">{t.about?.features?.chefs?.title || 'Expert Chefs'}</h4>
-                  <p className="text-sm text-gray-600">{t.about?.features?.chefs?.description || 'Authentic Middle Eastern cuisine'}</p>
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold text-white mb-2">50+</div>
+                <div className="text-sm sm:text-base font-medium text-white/90">
+                  {t.about?.stats?.authenticDishes || 'Authentic Dishes'}
                 </div>
-                
-                <div className="bg-white rounded-lg p-5 text-center shadow-md">
-                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Heart className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">{t.about?.features?.ingredients?.title || 'Fresh Ingredients'}</h4>
-                  <p className="text-sm text-gray-600">{t.about?.features?.ingredients?.description || 'Quality sourced daily'}</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold text-white mb-2">4.8★</div>
+                <div className="text-sm sm:text-base font-medium text-white/90">
+                  {t.about?.stats?.customerRating || 'Customer Rating'}
                 </div>
-                
-                <div className="bg-white rounded-lg p-5 text-center shadow-md">
-                  <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">{t.about?.features?.service?.title || 'Warm Service'}</h4>
-                  <p className="text-sm text-gray-600">{t.about?.features?.service?.description || 'Middle Eastern hospitality'}</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold text-white mb-2">100%</div>
+                <div className="text-sm sm:text-base font-medium text-white/90">
+                  {t.about?.stats?.freshIngredients || 'Fresh Ingredients'}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        {/* Statistics */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-          <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-8 sm:p-10 shadow-lg">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-1">1000+</div>
-                <div className="text-sm font-medium text-amber-100">{t.about?.stats?.happyCustomers || 'Happy Customers'}</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-1">50+</div>
-                <div className="text-sm font-medium text-amber-100">{t.about?.stats?.authenticDishes || 'Authentic Dishes'}</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-1">4.8★</div>
-                <div className="text-sm font-medium text-amber-100">{t.about?.stats?.customerRating || 'Customer Rating'}</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-1">100%</div>
-                <div className="text-sm font-medium text-amber-100">{t.about?.stats?.freshIngredients || 'Fresh Ingredients'}</div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
 
