@@ -5206,121 +5206,309 @@ const NatureVillageWebsite = () => {
         </div>
       </section>
 
-      {/* About Us Section - Clean & Mobile-Friendly */}
-      <section id="about" className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
-        {/* Subtle Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <MiddleEasternPattern />
-        </div>
-        
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Clean Header */}
-          <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 bg-amber-50 px-4 py-2 rounded-full mb-6">
-              <Star className="w-4 h-4 text-amber-500 fill-current" />
-              <span className="text-amber-700 font-medium text-sm">{t.about?.badge || 'Our Story'}</span>
-              <Star className="w-4 h-4 text-amber-500 fill-current" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-4">
-              {t.about?.title || 'About Nature Village'}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              {t.about?.subtitle || 'Bringing authentic Middle Eastern flavors and warm hospitality to our community'}
-            </p>
+      {/* Enhanced About Us Section */}
+      <section id="about" className="py-16 sm:py-20 lg:py-28 bg-gradient-to-b from-white via-amber-50/30 to-white relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 opacity-5">
+            <MiddleEasternPattern />
           </div>
           
-          {/* Main Content - Simple Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
-            {/* Image Side - Left on desktop */}
-            <div className="order-1">
-              <div className="relative">
-                <div className="aspect-square sm:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+          {/* Floating decorative circles */}
+          <motion.div
+            animate={{ 
+              scale: [1, 1.2, 1],
+              opacity: [0.1, 0.15, 0.1]
+            }}
+            transition={{ 
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute top-20 -left-20 w-64 h-64 bg-amber-400 rounded-full blur-3xl"
+          />
+          <motion.div
+            animate={{ 
+              scale: [1, 1.3, 1],
+              opacity: [0.08, 0.12, 0.08]
+            }}
+            transition={{ 
+              duration: 10,
+              delay: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute bottom-20 -right-20 w-80 h-80 bg-orange-400 rounded-full blur-3xl"
+          />
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Enhanced Header */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12 sm:mb-20"
+          >
+            <motion.div 
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, type: "spring" }}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-100 to-orange-100 px-6 py-3 rounded-full mb-6 shadow-md"
+            >
+              <Star className="w-5 h-5 text-amber-600 fill-current" />
+              <span className="text-amber-800 font-semibold text-sm sm:text-base tracking-wide">{t.about?.badge || 'Our Story'}</span>
+              <Star className="w-5 h-5 text-amber-600 fill-current" />
+            </motion.div>
+            
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold mb-6"
+            >
+              <span className="bg-gradient-to-r from-amber-700 via-orange-600 to-amber-700 bg-clip-text text-transparent">
+                {t.about?.title || 'Our Story'}
+              </span>
+            </motion.h2>
+            
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex items-center justify-center gap-3 mb-6"
+            >
+              <div className="h-px w-16 sm:w-24 bg-gradient-to-r from-transparent to-amber-400" />
+              <div className="w-2 h-2 bg-amber-500 rounded-full" />
+              <div className="w-1.5 h-1.5 bg-orange-400 rounded-full" />
+              <div className="w-2 h-2 bg-amber-500 rounded-full" />
+              <div className="h-px w-16 sm:w-24 bg-gradient-to-l from-transparent to-amber-400" />
+            </motion.div>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t.about?.subtitle || 'Bringing authentic Middle Eastern flavors and warm hospitality to our community'}
+            </motion.p>
+          </motion.div>
+          
+          {/* Enhanced Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+            {/* Image Side with Enhanced Effects */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-1"
+            >
+              <div className="relative group">
+                {/* Main Image Container */}
+                <div className="relative aspect-square sm:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-orange-400/20 z-10" />
                   <img 
                     src="/team.jpg"
                     alt="Nature Village restaurant team"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
+                  
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10" />
                 </div>
-                {/* Simple decorative elements */}
-                <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-amber-400 rounded-full opacity-20"></div>
-                <div className="absolute -top-4 -left-4 w-6 h-6 bg-orange-400 rounded-full opacity-30"></div>
+                
+                {/* Enhanced decorative elements */}
+                <motion.div 
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full opacity-20 blur-2xl"
+                />
+                <motion.div 
+                  animate={{ rotate: [360, 0] }}
+                  transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                  className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full opacity-30 blur-xl"
+                />
+                
+                {/* Floating badge */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-xl px-6 py-4 flex items-center gap-3"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center">
+                    <Star className="w-6 h-6 text-white fill-current" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-gray-900">25+</div>
+                    <div className="text-sm text-gray-600">{t.about?.experience || 'Years Experience'}</div>
+                  </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
             
-            {/* Content Side - Right on desktop */}
-            <div className="order-2">
-              <div className="space-y-6">
-                <p className="text-lg text-gray-700 leading-relaxed">
+            {/* Content Side with Enhanced Styling */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-2"
+            >
+              <div className="space-y-8">
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-lg sm:text-xl text-gray-700 leading-relaxed font-medium"
+                >
                   {t.about?.story1 || 'Nature Village is dedicated to bringing you the authentic flavors of Middle Eastern cuisine in a warm and welcoming atmosphere where every guest feels like family.'}
-                </p>
+                </motion.p>
                 
-                <p className="text-base text-gray-600 leading-relaxed">
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="text-base sm:text-lg text-gray-600 leading-relaxed"
+                >
                   {t.about?.story2 || 'Our chefs are passionate about preparing traditional Middle Eastern dishes using the finest ingredients and time-honored cooking techniques that celebrate our rich culinary heritage.'}
-                </p>
+                </motion.p>
                 
-                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
-                  <p className="text-amber-800 italic font-medium">
-                    &quot;{t.about?.quote || 'Every dish is crafted with care and served with the warmth of Middle Eastern hospitality.'}&quot;
+                {/* Enhanced Quote Box */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="relative bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-6 rounded-r-2xl shadow-lg"
+                >
+                  <div className="absolute top-4 left-4 text-6xl text-amber-300 opacity-30 font-serif">&ldquo;</div>
+                  <p className="relative z-10 text-amber-900 italic font-semibold text-lg">
+                    {t.about?.quote || 'Every dish is crafted with care and served with the warmth of Middle Eastern hospitality.'}
                   </p>
-                </div>
+                  <div className="absolute bottom-2 right-4 text-6xl text-amber-300 opacity-30 font-serif">&rdquo;</div>
+                </motion.div>
               </div>
               
-              {/* Simple Feature Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-                <div className="bg-gray-50 rounded-xl p-4 text-center hover:bg-amber-50 transition-colors duration-200">
-                  <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <ChefHat className="w-6 h-6 text-white" />
+              {/* Enhanced Feature Cards */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-10"
+              >
+                <motion.div 
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 border border-amber-100"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-md">
+                    <ChefHat className="w-7 h-7 text-white" />
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-1">{t.about?.features?.chefs?.title || 'Expert Chefs'}</h4>
+                  <h4 className="font-bold text-gray-900 mb-2 text-lg">{t.about?.features?.chefs?.title || 'Expert Chefs'}</h4>
                   <p className="text-sm text-gray-600">{t.about?.features?.chefs?.description || 'Authentic Middle Eastern cuisine'}</p>
-                </div>
+                </motion.div>
                 
-                <div className="bg-gray-50 rounded-xl p-4 text-center hover:bg-orange-50 transition-colors duration-200">
-                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Heart className="w-6 h-6 text-white" />
+                <motion.div 
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 border border-orange-100"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-md">
+                    <Heart className="w-7 h-7 text-white" />
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-1">{t.about?.features?.ingredients?.title || 'Fresh Ingredients'}</h4>
+                  <h4 className="font-bold text-gray-900 mb-2 text-lg">{t.about?.features?.ingredients?.title || 'Fresh Ingredients'}</h4>
                   <p className="text-sm text-gray-600">{t.about?.features?.ingredients?.description || 'Quality sourced daily'}</p>
-                </div>
+                </motion.div>
                 
-                <div className="bg-gray-50 rounded-xl p-4 text-center hover:bg-red-50 transition-colors duration-200">
-                  <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Users className="w-6 h-6 text-white" />
+                <motion.div 
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 border border-red-100"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-md">
+                    <Users className="w-7 h-7 text-white" />
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-1">{t.about?.features?.service?.title || 'Warm Service'}</h4>
+                  <h4 className="font-bold text-gray-900 mb-2 text-lg">{t.about?.features?.service?.title || 'Warm Service'}</h4>
                   <p className="text-sm text-gray-600">{t.about?.features?.service?.description || 'Middle Eastern hospitality'}</p>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
         
-        {/* Clean Statistics */}
-        <div className="mt-16">
-          <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 sm:p-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">1000+</div>
-                <div className="text-sm font-medium text-gray-700">{t.about?.stats?.happyCustomers || 'Happy Customers'}</div>
-              </div>
+        {/* Enhanced Statistics with Animation */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-16"
+        >
+          <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+            {/* Decorative background pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <MiddleEasternPattern />
+            </div>
+            
+            <div className="relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
+              <motion.div 
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-center"
+              >
+                <div className="text-4xl sm:text-5xl font-bold text-white mb-2 drop-shadow-md">1000+</div>
+                <div className="text-sm sm:text-base font-semibold text-amber-100">{t.about?.stats?.happyCustomers || 'Happy Customers'}</div>
+              </motion.div>
               
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-orange-600 mb-1">50+</div>
-                <div className="text-sm font-medium text-gray-700">{t.about?.stats?.authenticDishes || 'Authentic Dishes'}</div>
-              </div>
+              <motion.div 
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-center"
+              >
+                <div className="text-4xl sm:text-5xl font-bold text-white mb-2 drop-shadow-md">50+</div>
+                <div className="text-sm sm:text-base font-semibold text-amber-100">{t.about?.stats?.authenticDishes || 'Authentic Dishes'}</div>
+              </motion.div>
               
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-red-600 mb-1">4.8★</div>
-                <div className="text-sm font-medium text-gray-700">{t.about?.stats?.customerRating || 'Customer Rating'}</div>
-              </div>
+              <motion.div 
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-center"
+              >
+                <div className="text-4xl sm:text-5xl font-bold text-white mb-2 drop-shadow-md">4.8★</div>
+                <div className="text-sm sm:text-base font-semibold text-amber-100">{t.about?.stats?.customerRating || 'Customer Rating'}</div>
+              </motion.div>
               
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">100%</div>
-                <div className="text-sm font-medium text-gray-700">{t.about?.stats?.freshIngredients || 'Fresh Ingredients'}</div>
-              </div>
+              <motion.div 
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-center"
+              >
+                <div className="text-4xl sm:text-5xl font-bold text-white mb-2 drop-shadow-md">100%</div>
+                <div className="text-sm sm:text-base font-semibold text-amber-100">{t.about?.stats?.freshIngredients || 'Fresh Ingredients'}</div>
+              </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Celebrate Your Special Moments Section */}
