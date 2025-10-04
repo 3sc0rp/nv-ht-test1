@@ -359,7 +359,7 @@ const GalleryPage = () => {
         <Header currentPage="gallery" />
 
         {/* Enhanced Hero Section */}
-        <div className="relative pt-24 pb-20 overflow-hidden">
+        <div className="relative pt-32 sm:pt-36 lg:pt-40 pb-20 overflow-hidden">
           {/* Animated background patterns */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-amber-100/60 via-orange-50/40 to-transparent"></div>
