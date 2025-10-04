@@ -5151,6 +5151,7 @@ const FullMenuPage = () => {
       category: 'sides',
       popular: false,
       tags: ['seafood','protein','side'],
+      image: '/sides/shrimp.jpg',
       imageUrl: '/sides/shrimp.jpg',
       placeholder: 'fish'
     },
@@ -5182,6 +5183,7 @@ const FullMenuPage = () => {
       category: 'sides',
       popular: false,
       tags: ['vegetarian','protein','side'],
+      image: '/sides/falafels.jpg',
       imageUrl: '/sides/falafels.jpg',
       placeholder: 'hummus'
     },
@@ -5213,6 +5215,7 @@ const FullMenuPage = () => {
       category: 'sides',
       popular: false,
       tags: ['beef','protein','side'],
+      image: '/sides/beef.jpg',
       imageUrl: '/sides/beef.jpg',
       placeholder: 'kebab'
     },
@@ -5244,6 +5247,7 @@ const FullMenuPage = () => {
       category: 'sides',
       popular: false,
       tags: ['chicken','protein','side'],
+      image: '/sides/chicken.jpg',
       imageUrl: '/sides/chicken.jpg',
       placeholder: 'kebab'
     },
