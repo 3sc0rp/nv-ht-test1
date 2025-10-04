@@ -380,33 +380,6 @@ const GalleryPage = () => {
             
             {/* Top gradient line */}
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
-            
-            {/* Floating decorative elements */}
-            <motion.div
-              animate={{ 
-                y: [0, -20, 0],
-                opacity: [0.3, 0.6, 0.3]
-              }}
-              transition={{ 
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="absolute top-32 left-1/4 w-2 h-2 bg-amber-400 rounded-full"
-            ></motion.div>
-            <motion.div
-              animate={{ 
-                y: [0, -30, 0],
-                opacity: [0.2, 0.5, 0.2]
-              }}
-              transition={{ 
-                duration: 5,
-                delay: 1,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="absolute top-40 right-1/3 w-3 h-3 bg-orange-400 rounded-full"
-            ></motion.div>
           </div>
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -416,64 +389,6 @@ const GalleryPage = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-center"
             >
-              {/* Icon with pulse animation */}
-              <motion.div
-                initial={{ scale: 0, rotate: -180 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: 0.2,
-                  type: "spring",
-                  stiffness: 200
-                }}
-                className="inline-block mb-8"
-              >
-                <div className="relative">
-                  {/* Pulse rings */}
-                  <motion.div
-                    animate={{ 
-                      scale: [1, 1.3, 1],
-                      opacity: [0.6, 0, 0.6]
-                    }}
-                    transition={{ 
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                    className="absolute inset-0 bg-amber-400 rounded-full blur-md"
-                  ></motion.div>
-                  <motion.div
-                    animate={{ 
-                      scale: [1, 1.5, 1],
-                      opacity: [0.4, 0, 0.4]
-                    }}
-                    transition={{ 
-                      duration: 2,
-                      delay: 0.5,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                    className="absolute inset-0 bg-orange-400 rounded-full blur-lg"
-                  ></motion.div>
-                  
-                  {/* Main icon container */}
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-amber-500 via-orange-500 to-orange-600 rounded-full shadow-2xl flex items-center justify-center">
-                    <motion.div
-                      animate={{ 
-                        rotate: [0, 5, 0, -5, 0]
-                      }}
-                      transition={{ 
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    >
-                      <Camera className="w-10 h-10 sm:w-12 sm:h-12 text-white drop-shadow-lg" />
-                    </motion.div>
-                  </div>
-                </div>
-              </motion.div>
-              
               {/* Main title with gradient */}
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
