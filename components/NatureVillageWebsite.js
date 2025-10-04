@@ -5399,15 +5399,6 @@ const NatureVillageWebsite = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-amber-900/20 animate-pulse"></div>
         </div>
 
-        {/* Floating Celebration Elements - positioned to avoid text overlap */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden hidden lg:block">
-          <div className="absolute top-20 left-8 text-3xl opacity-20 animate-float" style={{animationDelay: '0s'}}>🎈</div>
-          <div className="absolute top-32 right-16 text-2xl opacity-30 animate-float" style={{animationDelay: '2s'}}>🎊</div>
-          <div className="absolute bottom-40 left-1/6 text-xl opacity-40 animate-float" style={{animationDelay: '4s'}}>✨</div>
-          <div className="absolute bottom-24 right-1/4 text-2xl opacity-25 animate-float" style={{animationDelay: '1s'}}>🌟</div>
-          <div className="absolute top-1/3 left-3/4 text-xl opacity-20 animate-float" style={{animationDelay: '3s'}}>💫</div>
-        </div>
-
         <div className="relative z-10 w-full min-h-full flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Compact Header */}
           <div className="text-center mb-8">
@@ -5439,10 +5430,6 @@ const NatureVillageWebsite = () => {
                       </span>
                     ))}
                   </span>
-                  
-                  {/* Subtle sparkles - positioned away from text */}
-                  <span className="absolute -top-6 -right-8 text-amber-300 text-xl animate-pulse opacity-70 hidden sm:block">✨</span>
-                  <span className="absolute -bottom-6 -left-8 text-amber-300 text-lg animate-pulse opacity-50 hidden sm:block" style={{animationDelay: '1s'}}>✨</span>
                 </span>
               </h2>
               
@@ -5461,10 +5448,6 @@ const NatureVillageWebsite = () => {
               {/* Birthday Celebrations */}
               <div className="group text-center transform hover:scale-105 transition-all duration-500">
                 <div className="relative bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-amber-400/50 transition-all duration-500 overflow-hidden flex flex-col justify-between">
-                  {/* Floating particles inside card - positioned in corners away from text */}
-                  <div className="absolute top-4 right-4 text-amber-300 text-lg opacity-40 animate-float hidden sm:block">🎈</div>
-                  <div className="absolute bottom-4 left-4 text-yellow-300 text-sm opacity-30 animate-float hidden sm:block">✨</div>
-                  
                   <div className="mb-6">
                     {/* Enhanced icon with glow */}
                     <div className="relative mb-4">
@@ -5485,10 +5468,6 @@ const NatureVillageWebsite = () => {
               {/* Anniversary Celebrations */}
               <div className="group text-center transform hover:scale-105 transition-all duration-500">
                 <div className="relative bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-lg rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-rose-400/50 transition-all duration-500 overflow-hidden flex flex-col justify-between">
-                  {/* Floating particles inside card */}
-                  <div className="absolute top-4 right-4 text-rose-300 text-lg opacity-50 animate-float" style={{animationDelay: '0.5s'}}>🌹</div>
-                  <div className="absolute bottom-4 left-4 text-pink-300 text-sm opacity-40 animate-float" style={{animationDelay: '1.5s'}}>💕</div>
-                  
                   <div className="mb-6">
                     {/* Enhanced icon with glow */}
                     <div className="relative mb-4">
@@ -5547,12 +5526,6 @@ const NatureVillageWebsite = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-amber-500/15 via-orange-500/15 to-red-500/15 rounded-3xl blur-3xl"></div>
               
               <div className="relative bg-gradient-to-br from-white/15 to-white/10 rounded-3xl p-6 lg:p-8 border border-white/25 backdrop-blur-lg">
-                {/* Floating particles around CTA - positioned safely away from text */}
-                <div className="absolute top-3 left-3 text-amber-300 text-base opacity-25 animate-float hidden lg:block">✨</div>
-                <div className="absolute top-3 right-3 text-orange-300 text-base opacity-30 animate-float hidden lg:block" style={{animationDelay: '1s'}}>🎊</div>
-                <div className="absolute bottom-3 left-3 text-yellow-300 text-sm opacity-20 animate-float hidden lg:block" style={{animationDelay: '2s'}}>💫</div>
-                <div className="absolute bottom-3 right-3 text-red-300 text-sm opacity-25 animate-float hidden lg:block" style={{animationDelay: '0.5s'}}>✨</div>
-                
                 <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white mb-4 transform hover:scale-105 transition-transform duration-300">
                   {t.celebration?.cta?.title || 'Ready to Celebrate?'}
                 </h3>
