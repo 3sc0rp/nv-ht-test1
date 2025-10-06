@@ -5536,6 +5536,7 @@ const FullMenuPage = () => {
       price: '$3.49', 
       category: 'drinks_hot', 
       popular: true, 
+      image: '/hot-drinks/Arabic Coffee.JPG',
       tags: [] 
     },
     { 
@@ -5581,6 +5582,7 @@ const FullMenuPage = () => {
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
+      image: '/hot-drinks/Kurdish Qazwan Coffee.JPG',
       tags: [] 
     },
     { 
@@ -5631,6 +5633,7 @@ const FullMenuPage = () => {
       }, 
       price: '$3.49', 
       category: 'drinks_hot', 
+      image: '/hot-drinks/Turkish Pisctachio Coffee.JPG',
       tags: [] 
     },
     { 
@@ -5682,6 +5685,7 @@ const FullMenuPage = () => {
       price: '$2.99', 
       category: 'drinks_hot', 
       popular: true, 
+      image: '/hot-drinks/Karak Chai.jpg',
       tags: [] 
     },
     { 
@@ -5732,6 +5736,7 @@ const FullMenuPage = () => {
       }, 
       price: '$2.49', 
       category: 'drinks_hot', 
+      image: '/hot-drinks/Persian Tea.JPG',
       tags: [] 
     },
 
@@ -5990,60 +5995,6 @@ const FullMenuPage = () => {
       tags: [] 
     },
     { 
-      id: 2205, 
-      name: { 
-        en: 'Ice Cream',
-        ar: 'آيس كريم',
-        fa: 'بستنی',
-        ku: 'بەستەنی',
-        tr: 'Dondurma',
-        ur: 'آئس کریم',
-        kmr: 'Qeşa',
-        es: 'Helado',
-        ru: 'Мороженое',
-        hi: 'आइस क्रीम',
-        sq: 'Akullore',
-        fr: 'Glace',
-        de: 'Eis',
-        bn: 'আইসক্রিম',
-        ko: '아이스크림',
-        bs: 'Sladoled',
-        zh: '冰淇淋',
-        ro: 'Înghețată',
-        uk: 'Морозиво',
-        vi: 'Kem'
-      }, 
-      description: { 
-        en: 'Choose from 3 flavors: Strawberry, Chocolate, Vanilla.',
-        ar: 'اختر من 3 نكهات: فراولة، شوكولاتة، فانيليا.',
-        fa: 'از ۳ طعم انتخاب کنید: توت‌فرنگی، شکلات، وانیل.',
-        ku: 'لە ٣ تامە هەڵبژێرە: فرۆولا، شۆکولات، ڤانیلیا.',
-        tr: '3 aromadan seçin: Çilek, Çikolata, Vanilya.',
-        ur: '3 ذائقوں میں سے انتخاب کریں: اسٹرابیری، چاکلیٹ، ونیلا۔',
-        kmr: 'Ji 3 taman hilbijêre: Çilek, Çîkolata, Vanîlya.',
-        es: 'Elige entre 3 sabores: Fresa, Chocolate, Vainilla.',
-        ru: 'Выберите из 3 вкусов: Клубника, Шоколад, Ваниль.',
-        hi: '3 स्वादों में से चुनें: स्ट्रॉबेरी, चॉकलेट, वेनिला।',
-        sq: 'Zgjidhni nga 3 shijet: Luleshtrydhe, Çokollatë, Vanilë.',
-        fr: 'Choisissez parmi 3 parfums : Fraise, Chocolat, Vanille.',
-        de: 'Wählen Sie aus 3 Geschmacksrichtungen: Erdbeere, Schokolade, Vanille.',
-        bn: '৩টি স্বাদ থেকে বেছে নিন: স্ট্রবেরি, চকলেট, ভ্যানিলা।',
-        ko: '3가지 맛 중에서 선택하세요: 딸기, 초콜릿, 바닐라.',
-        bs: 'Birajte između 3 okusa: Jagoda, Čokolada, Vanila.',
-        zh: '从3种口味中选择：草莓、巧克力、香草。',
-        ro: 'Alegeți din 3 arome: Căpșuni, Ciocolată, Vanilie.',
-        uk: 'Оберіть з 3 смаків: Полуниця, Шоколад, Ваніль.',
-        vi: 'Chọn từ 3 hương vị: Dâu tây, Socola, Vani.'
-      }, 
-      price: '$2.99', 
-      category: 'dessert', 
-      popular: true, 
-      image: '/Saffron Ice Cream.jpg',
-      tags: [], 
-      variants: ['singleScoop'],
-      servingFor: { singleScoop: '1' } 
-    },
-    { 
       id: 2207, 
       name: { 
         en: 'Pistachio Cake',
@@ -6192,7 +6143,7 @@ const FullMenuPage = () => {
       }, 
       price: '$8.99', 
       category: 'dessert', 
-      image: '/Saffron Ice Cream.jpg',
+      image: '/Saffron Ice Two.jpg',
       tags: [] 
     }
   ], []) // Empty dependency array since menu items are static
