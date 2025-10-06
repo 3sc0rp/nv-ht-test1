@@ -5030,6 +5030,8 @@ const FullMenuPage = () => {
       price: '$3.99', 
       category: 'sides', 
       popular: false, 
+      image: '/sides/Rice (Side).PNG',
+      imageUrl: '/sides/Rice (Side).PNG',
       tags: ['rice', 'saffron', 'vegetarian']
     },
     { 
@@ -5059,6 +5061,8 @@ const FullMenuPage = () => {
       price: '$6.99', 
       category: 'sides', 
       popular: false, 
+      image: '/sides/Creamy Mashed Potatoes (Side).PNG',
+      imageUrl: '/sides/Creamy Mashed Potatoes (Side).PNG',
       tags: ['potato', 'vegetarian', 'creamy']
     },
     { 
@@ -5089,7 +5093,8 @@ const FullMenuPage = () => {
       category: 'sides', 
       popular: true, 
       tags: ['potato', 'fried'],
-      imageUrl: '/Fries.jpg' 
+      image: '/sides/Fries (Side).jpg',
+      imageUrl: '/sides/Fries (Side).jpg' 
     },
     { 
       id: 1908, 
@@ -5119,7 +5124,8 @@ const FullMenuPage = () => {
       category: 'sides', 
       popular: false, 
       tags: ['salad', 'fresh', 'vegetarian'],
-      imageUrl: '/Greek Salad.jpg' 
+      image: '/sides/Salad (Side).PNG',
+      imageUrl: '/sides/Salad (Side).PNG' 
     },
 
     // Added custom protein sides
