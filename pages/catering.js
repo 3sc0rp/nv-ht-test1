@@ -1,14 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Wrench, 
-  ArrowLeft,
-  Clock,
-  Phone as PhoneIcon,
-  ChefHat
-} from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 // Import components
@@ -20,139 +11,109 @@ const CateringPage = () => {
 
   const translations = {
     en: {
-      title: 'Under Maintenance',
-      subtitle: 'Catering Services',
-      message: 'We are currently updating our catering system to serve you better.',
-      expectedTime: 'Expected to be back online soon.',
-      backToHome: 'Back to Home',
-      contact: 'For immediate catering inquiries, please call us at',
-      phone: '(470) 350-1019'
+      title: 'Catering Services',
+      subtitle: 'Perfect for Your Special Events',
+      description: 'Let us cater your next event with authentic Middle Eastern cuisine. From intimate gatherings to large celebrations.',
+      pageTitle: 'Catering Services - Nature Village Restaurant',
+      pageDescription: 'Professional catering services for all occasions. Authentic Middle Eastern cuisine for your events, parties, and celebrations.',
     },
     ku: {
-      title: 'لە ژێر چاکسازیدایە',
-      subtitle: 'خزمەتگوزاری قوناغکردن',
-      message: 'ئێمە لە ئێستادا سیستەمی کەیتەرینگمان نوێ دەکەینەوە بۆ ئەوەی باشتر خزمەتتان بکەین.',
-      expectedTime: 'بە زوویی دەگەڕێتەوە.',
-      backToHome: 'گەڕانەوە بۆ ماڵەوە',
-      contact: 'بۆ پرسیاری کەیتەرینگ، تکایە پەیوەندیمان پێوە بکەن',
-      phone: '(470) 350-1019'
+      title: 'خزمەتگوزاری کەیتەرینگ',
+      subtitle: 'تەواو بۆ بۆنە تایبەتەکانتان',
+      description: 'با ئێمە بۆنەی داهاتووتان بە خۆراکی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست ئامادە بکەین. لە کۆبوونەوەی نزیکەوە تا ئاهەنگە گەورەکان.',
+      pageTitle: 'خزمەتگوزاری کەیتەرینگ - چێشتخانەی گوندی سروشت',
+      pageDescription: 'خزمەتگوزاری پیشەیی کەیتەرینگ بۆ هەموو بۆنەکان. خۆراکی ڕەسەنی ڕۆژهەڵاتی ناوەڕاست بۆ بۆنە، پارتی و ئاهەنگەکانتان.',
     },
     ar: {
-      title: 'تحت الصيانة',
-      subtitle: 'خدمات التقديم',
-      message: 'نحن نقوم حالياً بتحديث نظام التقديم لخدمتكم بشكل أفضل.',
-      expectedTime: 'متوقع العودة قريباً.',
-      backToHome: 'العودة للرئيسية',
-      contact: 'لاستفسارات التقديم الفورية، يرجى الاتصال بنا على',
-      phone: '(470) 350-1019'
+      title: 'خدمات التقديم',
+      subtitle: 'مثالي لمناسباتك الخاصة',
+      description: 'دعنا نقدم حفلتك القادمة بالمأكولات الشرق أوسطية الأصيلة. من التجمعات الحميمة إلى الاحتفالات الكبيرة.',
+      pageTitle: 'خدمات التقديم - مطعم قرية الطبيعة',
+      pageDescription: 'خدمات تقديم احترافية لجميع المناسبات. المأكولات الشرق أوسطية الأصيلة لفعالياتك وحفلاتك واحتفالاتك.',
     },
     fa: {
-      title: 'در حال تعمیر',
-      subtitle: 'خدمات پذیرایی',
-      message: 'ما در حال حاضر سیستم پذیرایی خود را برای خدمات بهتر به شما به‌روزرسانی می‌کنیم.',
-      expectedTime: 'به زودی برمی‌گردیم.',
-      backToHome: 'بازگشت به خانه',
-      contact: 'برای سؤالات فوری پذیرایی، لطفاً با ما تماس بگیرید',
-      phone: '(470) 350-1019'
+      title: 'خدمات پذیرایی',
+      subtitle: 'عالی برای رویدادهای خاص شما',
+      description: 'اجازه دهید رویداد بعدی شما را با غذای اصیل خاورمیانه برگزار کنیم. از گردهمایی‌های صمیمی تا جشن‌های بزرگ.',
+      pageTitle: 'خدمات پذیرایی - رستوران دهکده طبیعت',
+      pageDescription: 'خدمات پذیرایی حرفه‌ای برای تمام مناسبات. غذای اصیل خاورمیانه برای رویدادها، مهمانی‌ها و جشن‌های شما.',
     },
     tr: {
-      title: 'Bakım Altında',
-      subtitle: 'Catering Hizmetleri',
-      message: 'Size daha iyi hizmet verebilmek için catering sistemimizi güncelliyoruz.',
-      expectedTime: 'Yakında tekrar online olacak.',
-      backToHome: 'Ana Sayfaya Dön',
-      contact: 'Acil catering sorularınız için lütfen bizi arayın',
-      phone: '(470) 350-1019'
+      title: 'Catering Hizmetleri',
+      subtitle: 'Özel Etkinlikleriniz İçin Mükemmel',
+      description: 'Bir sonraki etkinliğinizi otantik Orta Doğu mutfağı ile sunalım. Samimi toplantılardan büyük kutlamalara kadar.',
+      pageTitle: 'Catering Hizmetleri - Nature Village Restaurant',
+      pageDescription: 'Tüm durumlar için profesyonel catering hizmetleri. Etkinlikleriniz, partileriniz ve kutlamalarınız için otantik Orta Doğu mutfağı.',
     },
     es: {
-      title: 'En Mantenimiento',
-      subtitle: 'Servicios de Catering',
-      message: 'Actualmente estamos actualizando nuestro sistema de catering para servirle mejor.',
-      expectedTime: 'Esperamos estar de vuelta en línea pronto.',
-      backToHome: 'Volver al Inicio',
-      contact: 'Para consultas inmediatas de catering, por favor llámenos al',
-      phone: '(470) 350-1019'
+      title: 'Servicios de Catering',
+      subtitle: 'Perfecto para Sus Eventos Especiales',
+      description: 'Permítanos atender su próximo evento con auténtica cocina de Oriente Medio. Desde reuniones íntimas hasta grandes celebraciones.',
+      pageTitle: 'Servicios de Catering - Nature Village Restaurant',
+      pageDescription: 'Servicios profesionales de catering para todas las ocasiones. Cocina auténtica de Oriente Medio para sus eventos, fiestas y celebraciones.',
     },
     ur: {
-      title: 'دیکھ بھال میں',
-      subtitle: 'کیٹرنگ سروسز',
-      message: 'ہم آپ کو بہتر خدمات فراہم کرنے کے لیے اپنے کیٹرنگ سسٹم کو اپڈیٹ کر رہے ہیں۔',
-      expectedTime: 'جلد ہی واپس آئیں گے۔',
-      backToHome: 'گھر واپس جائیں',
-      contact: 'فوری کیٹرنگ استفسارات کے لیے، براہ کرم ہمیں کال کریں',
-      phone: '(470) 350-1019'
+      title: 'کیٹرنگ سروسز',
+      subtitle: 'آپ کی خاص تقریبات کے لیے بہترین',
+      description: 'ہمیں اپنی اگلی تقریب میں مستند مشرق وسطیٰ کے کھانے کے ساتھ خدمات فراہم کرنے دیں۔ قریبی اجتماعات سے لے کر بڑی تقریبات تک۔',
+      pageTitle: 'کیٹرنگ سروسز - نیچر ولیج ریستوراں',
+      pageDescription: 'تمام مواقع کے لیے پیشہ ورانہ کیٹرنگ سروسز۔ آپ کی تقریبات، پارٹیوں اور جشن کے لیے مستند مشرق وسطیٰ کا کھانا۔',
     },
     kmr: {
-      title: 'Di Bin Nerîna De',
-      subtitle: 'Xizmetên Catering',
-      message: 'Em niha sîstema catering nû dikin da ku we baştir xizmetê bikin.',
-      expectedTime: 'Zû dê vegere online.',
-      backToHome: 'Vegere Malê',
-      contact: 'Ji bo pirsên catering ya bilez, ji kerema xwe bi me re têkiliyê daynin',
-      phone: '(470) 350-1019'
+      title: 'Xizmetên Catering',
+      subtitle: 'Bêkêmasî ji bo Bûyerên Taybet',
+      description: 'Bila em bûyera we ya paşîn bi xwarina resen a Rojhilatê Navîn pêşkêş bikin. Ji civînên nêzîk heya şahiyên mezin.',
+      pageTitle: 'Xizmetên Catering - Nature Village Restaurant',
+      pageDescription: 'Xizmetên catering ên profesyonel ji bo hemû derfetan. Xwarina resen a Rojhilatê Navîn ji bo bûyer, partî û şahiyên we.',
     },
     ru: {
-      title: 'На обслуживании',
-      subtitle: 'Кейтеринг услуги',
-      message: 'Мы обновляем нашу систему кейтеринга, чтобы лучше обслуживать вас.',
-      expectedTime: 'Скоро вернемся в онлайн.',
-      backToHome: 'Вернуться домой',
-      contact: 'По срочным вопросам кейтеринга, пожалуйста, звоните нам',
-      phone: '(470) 350-1019'
+      title: 'Кейтеринг услуги',
+      subtitle: 'Идеально для ваших особых мероприятий',
+      description: 'Позвольте нам организовать ваше следующее мероприятие с аутентичной ближневосточной кухней. От интимных встреч до больших торжеств.',
+      pageTitle: 'Кейтеринг услуги - Ресторан Nature Village',
+      pageDescription: 'Профессиональные кейтеринг услуги для любых случаев. Аутентичная ближневосточная кухня для ваших мероприятий, вечеринок и празднований.',
     },
     hi: {
-      title: 'रखरखाव में',
-      subtitle: 'कैटरिंग सेवाएं',
-      message: 'हम आपको बेहतर सेवा देने के लिए अपना कैटरिंग सिस्टम अपडेट कर रहे हैं।',
-      expectedTime: 'जल्द ही वापस ऑनलाइन आएंगे।',
-      backToHome: 'होम पर वापस जाएं',
-      contact: 'तत्काल कैटरिंग पूछताछ के लिए, कृपया हमें कॉल करें',
-      phone: '(470) 350-1019'
+      title: 'कैटरिंग सेवाएं',
+      subtitle: 'आपके विशेष कार्यक्रमों के लिए सही',
+      description: 'हमें अपने अगले कार्यक्रम को प्रामाणिक मध्य पूर्वी व्यंजनों के साथ कैटर करने दें। अंतरंग समारोहों से लेकर बड़े उत्सवों तक।',
+      pageTitle: 'कैटरिंग सेवाएं - नेचर विलेज रेस्तरां',
+      pageDescription: 'सभी अवसरों के लिए पेशेवर कैटरिंग सेवाएं। आपके कार्यक्रमों, पार्टियों और उत्सवों के लिए प्रामाणिक मध्य पूर्वी व्यंजन।',
     },
     sq: {
-      title: 'Në Mirëmbajtje',
-      subtitle: 'Shërbimet e Kateringut',
-      message: 'Aktualisht po përditësojmë sistemin tonë të kateringut për t\'ju shërbejmë më mirë.',
-      expectedTime: 'Presim të jemi të disponueshëm përsëri së shpejti.',
-      backToHome: 'Kthehu në Kreu',
-      contact: 'Për pyetje të menjëhershme për katering, ju lutemi na telefononi në',
-      phone: '(470) 350-1019'
+      title: 'Shërbimet e Kateringut',
+      subtitle: 'I Përsosur për Ngjarjet Tuaja të Veçanta',
+      description: 'Lejojmë të kujdesemi për ngjarjen tuaj të ardhshme me kuzhinë autentike të Lindjes së Mesme. Nga takimet intime deri te festimet e mëdha.',
+      pageTitle: 'Shërbimet e Kateringut - Nature Village Restaurant',
+      pageDescription: 'Shërbime profesionale kateringu për të gjitha rastet. Kuzhinë autentike e Lindjes së Mesme për ngjarjet, festat dhe festimet tuaja.',
     },
     fr: {
-      title: 'En Maintenance',
-      subtitle: 'Services de Traiteur',
-      message: 'Nous mettons actuellement à jour notre système de traiteur pour mieux vous servir.',
-      expectedTime: 'Nous espérons être de nouveau en ligne bientôt.',
-      backToHome: 'Retour à l\'Accueil',
-      contact: 'Pour des demandes urgentes de traiteur, veuillez nous appeler au',
-      phone: '(470) 350-1019'
+      title: 'Services de Traiteur',
+      subtitle: 'Parfait pour Vos Événements Spéciaux',
+      description: 'Laissez-nous organiser votre prochain événement avec une cuisine authentique du Moyen-Orient. Des rassemblements intimes aux grandes célébrations.',
+      pageTitle: 'Services de Traiteur - Nature Village Restaurant',
+      pageDescription: 'Services de traiteur professionnels pour toutes les occasions. Cuisine authentique du Moyen-Orient pour vos événements, fêtes et célébrations.',
     },
     de: {
-      title: 'Wartungsarbeiten',
-      subtitle: 'Catering-Services',
-      message: 'Wir aktualisieren derzeit unser Catering-System, um Sie besser bedienen zu können.',
-      expectedTime: 'Wir erwarten, bald wieder online zu sein.',
-      backToHome: 'Zurück zur Startseite',
-      contact: 'Für dringende Catering-Anfragen rufen Sie uns bitte an unter',
-      phone: '(470) 350-1019'
+      title: 'Catering-Services',
+      subtitle: 'Perfekt für Ihre besonderen Veranstaltungen',
+      description: 'Lassen Sie uns Ihre nächste Veranstaltung mit authentischer nahöstlicher Küche catern. Von intimen Zusammenkünften bis zu großen Feiern.',
+      pageTitle: 'Catering-Services - Nature Village Restaurant',
+      pageDescription: 'Professionelle Catering-Services für alle Anlässe. Authentische nahöstliche Küche für Ihre Veranstaltungen, Partys und Feiern.',
     },
     bn: {
-      title: 'রক্ষণাবেক্ষণে',
-      subtitle: 'ক্যাটারিং সেবা',
-      message: 'আপনাকে আরও ভাল সেবা দেওয়ার জন্য আমরা আমাদের ক্যাটারিং সিস্টেম আপডেট করছি।',
-      expectedTime: 'শীঘ্রই আবার অনলাইনে আসব।',
-      backToHome: 'হোমে ফিরে যান',
-      contact: 'তাৎক্ষণিক ক্যাটারিং জিজ্ঞাসার জন্য, অনুগ্রহ করে আমাদের কল করুন',
-      phone: '(470) 350-1019'
+      title: 'ক্যাটারিং সেবা',
+      subtitle: 'আপনার বিশেষ অনুষ্ঠানের জন্য নিখুঁত',
+      description: 'আমাদের আপনার পরবর্তী ইভেন্টটি খাঁটি মধ্যপ্রাচ্যের খাবারের সাথে পরিবেশন করতে দিন। ঘনিষ্ঠ সমাবেশ থেকে বড় উদযাপন পর্যন্ত।',
+      pageTitle: 'ক্যাটারিং সেবা - নেচার ভিলেজ রেস্তোরাঁ',
+      pageDescription: 'সকল উপলক্ষের জন্য পেশাদার ক্যাটারিং সেবা। আপনার ইভেন্ট, পার্টি এবং উদযাপনের জন্য খাঁটি মধ্যপ্রাচ্যের খাবার।',
     },
     ko: {
-      title: '유지보수 중',
-      subtitle: '케이터링 서비스',
-      message: '더 나은 서비스를 제공하기 위해 케이터링 시스템을 업데이트하고 있습니다.',
-      expectedTime: '곧 다시 온라인으로 돌아올 예정입니다.',
-      backToHome: '홈으로 돌아가기',
-      contact: '즉시 케이터링 문의는 전화로 연락해 주세요',
-      phone: '(470) 350-1019'
+      title: '케이터링 서비스',
+      subtitle: '특별한 행사를 위한 완벽한 선택',
+      description: '정통 중동 요리로 다음 이벤트를 케이터링하게 해주세요. 소규모 모임부터 대규모 축하 행사까지.',
+      pageTitle: '케이터링 서비스 - Nature Village 레스토랑',
+      pageDescription: '모든 행사를 위한 전문 케이터링 서비스. 이벤트, 파티 및 축하 행사를 위한 정통 중동 요리.',
     }
   };
 
@@ -161,87 +122,83 @@ const CateringPage = () => {
   return (
     <>
       <Head>
-        <title>{t.title} - {t.subtitle} - Nature Village Middle Eastern Restaurant</title>
-        <meta name="description" content="Nature Village catering services are temporarily under maintenance. We'll be back online soon!" />
-        <meta name="robots" content="noindex, nofollow" />
+        <title>{t.pageTitle}</title>
+        <meta name="description" content={t.pageDescription} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content={t.pageTitle} />
+        <meta property="og:description" content={t.pageDescription} />
+        <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100" style={{ direction: isRTL ? 'rtl' : 'ltr' }}>
-        <Header currentPage="catering" />
+      <Header currentPage="catering" />
 
-        <div className="pt-24 pb-12">
-          <div className="max-w-2xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden"
-            >
-              {/* Header */}
-              <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-8 text-center">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.2, duration: 0.5 }}
-                  className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
-                >
-                  <ChefHat className="w-8 h-8 text-white" />
-                </motion.div>
-                <h1 className="text-3xl font-serif font-bold mb-2">{t.title}</h1>
-                <p className="text-amber-100">{t.subtitle}</p>
-              </div>
+      <main className="min-h-screen bg-gradient-to-b from-amber-50 to-white pt-24 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Page Header */}
+          <div className={`text-center mb-12 ${isRTL ? 'rtl' : 'ltr'}`}>
+            <h1 className="text-4xl md:text-5xl font-bold text-amber-800 mb-4">
+              {t.title}
+            </h1>
+            <p className="text-xl text-amber-600 mb-2">
+              {t.subtitle}
+            </p>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              {t.description}
+            </p>
+          </div>
 
-              {/* Content */}
-              <div className="p-8 text-center">
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  className="space-y-6"
-                >
-                  <div className="flex items-center justify-center space-x-2 text-amber-600">
-                    <Clock className="w-5 h-5" />
-                    <span className="font-medium">Temporary Maintenance</span>
-                  </div>
+          {/* Blunari Catering Widget Container */}
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div id="catering-widget-container" className="w-full" style={{ minHeight: '800px' }}>
+              {/* Blunari Catering Widget */}
+              <iframe
+                src="https://app.blunari.ai/public-widget/catering/nature-village?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzbHVnIjoibmF0dXJlLXZpbGxhZ2UiLCJjb25maWdWZXJzaW9uIjoiMi4wIiwidGltZXN0YW1wIjoxNzYwNjU0MTc4LCJ3aWRnZXRUeXBlIjoiY2F0ZXJpbmciLCJleHAiOjE3NjA2NTc3NzgsImlhdCI6MTc2MDY1NDE3OH0.NTU3ZjdkMDYyNjcxMmQwNTY4NzEyZTA1NTM2MDdhMDM3Zjc2MDc1YTA5NTgyYzQzMDQ0ZjI4MDEwMDYwN2QwNw"
+                width="100%"
+                height="800"
+                frameBorder="0"
+                style={{ border: 'none', display: 'block', minHeight: '800px' }}
+                title="Blunari Catering Booking Widget"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
+                loading="eager"
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
+          </div>
 
-                  <p className="text-lg text-gray-700">{t.message}</p>
-                  <p className="text-gray-600">{t.expectedTime}</p>
-
-                  {/* Contact Information */}
-                  <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 my-8">
-                    <p className="text-gray-700 mb-2">{t.contact}</p>
-                    <a 
-                      href="tel:4703501019"
-                      className="inline-flex items-center space-x-2 text-amber-600 hover:text-amber-700 font-semibold text-lg transition-colors"
-                    >
-                      <PhoneIcon className="w-5 h-5" />
-                      <span>{t.phone}</span>
-                    </a>
-                  </div>
-
-                  {/* Back to Home Button */}
-                  <div className="pt-4">
-                    <Link href="/">
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className={`inline-flex items-center space-x-2 bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-xl font-semibold transition-colors shadow-lg ${
-                          isRTL ? 'flex-row-reverse space-x-reverse' : ''
-                        }`}
-                      >
-                        <ArrowLeft className="w-5 h-5" />
-                        <span>{t.backToHome}</span>
-                      </motion.button>
-                    </Link>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
+          {/* Additional Information */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg p-6 shadow-md text-center">
+              <h3 className="text-lg font-semibold text-amber-800 mb-2">
+                {language === 'ar' ? 'الهاتف' : language === 'ku' ? 'تەلەفۆن' : language === 'fa' ? 'تلفن' : 'Phone'}
+              </h3>
+              <a href="tel:4703501019" className="text-amber-600 hover:text-amber-700">
+                (470) 350-1019
+              </a>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 shadow-md text-center">
+              <h3 className="text-lg font-semibold text-amber-800 mb-2">
+                {language === 'ar' ? 'البريد الإلكتروني' : language === 'ku' ? 'ئیمەیل' : language === 'fa' ? 'ایمیل' : 'Email'}
+              </h3>
+              <a href="mailto:catering@naturevillage.com" className="text-amber-600 hover:text-amber-700 text-sm">
+                catering@naturevillage.com
+              </a>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 shadow-md text-center">
+              <h3 className="text-lg font-semibold text-amber-800 mb-2">
+                {language === 'ar' ? 'الموقع' : language === 'ku' ? 'شوێن' : language === 'fa' ? 'مکان' : 'Location'}
+              </h3>
+              <p className="text-gray-600 text-sm">
+                302 Satellite Blvd NE<br />
+                Suwanee, GA 30024
+              </p>
+            </div>
           </div>
         </div>
+      </main>
 
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 };
