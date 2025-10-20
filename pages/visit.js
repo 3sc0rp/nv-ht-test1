@@ -432,86 +432,127 @@ const VisitUsPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Page Header with Glass Effect */}
             <div className={`text-center mb-16 sm:mb-20 ${isRTL ? 'rtl' : 'ltr'}`}>
-              <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 sm:p-12 border border-white/20 shadow-2xl max-w-4xl mx-auto">
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-                  {t.title}
-                </h1>
-                <p className="text-2xl sm:text-3xl text-amber-200 mb-6 drop-shadow-lg">
-                  {t.subtitle}
-                </p>
-                <div className="w-32 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto"></div>
+              <div className="relative backdrop-blur-2xl bg-gradient-to-br from-white/20 via-white/10 to-white/5 rounded-3xl p-10 sm:p-16 border-2 border-white/30 shadow-2xl max-w-5xl mx-auto overflow-hidden group">
+                {/* Animated gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                
+                {/* Decorative elements */}
+                <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-amber-400/20 to-transparent rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-orange-400/20 to-transparent rounded-full blur-3xl"></div>
+                
+                <div className="relative">
+                  <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 drop-shadow-2xl tracking-tight">
+                    {t.title}
+                  </h1>
+                  <p className="text-2xl sm:text-3xl text-amber-100 mb-8 drop-shadow-lg font-light tracking-wide">
+                    {t.subtitle}
+                  </p>
+                  <div className="relative w-40 h-1.5 mx-auto">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-300 to-transparent blur-sm"></div>
+                    <div className="relative w-full h-full bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+                  </div>
+                </div>
               </div>
             </div>
 
           {/* Main Information Cards with Glass Morphism */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Opening Hours */}
-            <div className="backdrop-blur-lg bg-white/90 rounded-2xl p-8 shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 border border-white/50 hover:scale-105 transform">
-              <div className="text-center">
-                <div className="bg-gradient-to-br from-amber-500 to-orange-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
-                  <Clock className="w-10 h-10 text-white" />
+            <div className="group relative backdrop-blur-xl bg-gradient-to-br from-white/95 via-white/90 to-white/85 rounded-3xl p-10 shadow-2xl hover:shadow-amber-500/30 transition-all duration-500 border-2 border-white/60 hover:border-amber-300/60 hover:scale-105 transform overflow-hidden">
+              {/* Animated gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative text-center">
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 w-24 h-24 rounded-full mx-auto blur-xl opacity-50 group-hover:opacity-70 transition-opacity"></div>
+                  <div className="relative bg-gradient-to-br from-amber-500 via-orange-500 to-amber-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:rotate-12 transition-transform duration-500">
+                    <Clock className="w-12 h-12 text-white drop-shadow-lg" />
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-amber-900 mb-6">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-amber-800 to-orange-700 bg-clip-text text-transparent mb-8">
                   {t.openingHours}
                 </h3>
-                <div className="space-y-3 text-gray-800">
-                  <p className="text-lg font-semibold">{t.sunThu}</p>
-                  <p className="text-lg font-semibold">{t.friSat}</p>
-                  <p className="text-amber-600 font-bold text-xl mt-6 bg-amber-50 rounded-lg py-2">{t.sevenDays}</p>
-                  <p className="text-sm text-amber-800 italic mt-6 pt-6 border-t-2 border-amber-200">
-                    {t.kitchenNote}
-                  </p>
+                <div className="space-y-4 text-gray-800">
+                  <p className="text-lg font-bold tracking-wide">{t.sunThu}</p>
+                  <p className="text-lg font-bold tracking-wide">{t.friSat}</p>
+                  <div className="relative my-6">
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-400 rounded-xl blur opacity-30"></div>
+                    <p className="relative text-amber-700 font-black text-xl bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl py-3 shadow-inner">{t.sevenDays}</p>
+                  </div>
+                  <div className="pt-6 mt-6 border-t-2 border-gradient-to-r from-transparent via-amber-200 to-transparent">
+                    <p className="text-sm text-amber-900 italic font-medium bg-amber-50/50 rounded-lg p-3 backdrop-blur-sm">
+                      {t.kitchenNote}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Address */}
-            <div className="backdrop-blur-lg bg-white/90 rounded-2xl p-8 shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 border border-white/50 hover:scale-105 transform">
-              <div className="text-center">
-                <div className="bg-gradient-to-br from-amber-500 to-orange-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
-                  <MapPin className="w-10 h-10 text-white" />
+            <div className="group relative backdrop-blur-xl bg-gradient-to-br from-white/95 via-white/90 to-white/85 rounded-3xl p-10 shadow-2xl hover:shadow-amber-500/30 transition-all duration-500 border-2 border-white/60 hover:border-amber-300/60 hover:scale-105 transform overflow-hidden">
+              {/* Animated gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative text-center">
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 w-24 h-24 rounded-full mx-auto blur-xl opacity-50 group-hover:opacity-70 transition-opacity"></div>
+                  <div className="relative bg-gradient-to-br from-amber-500 via-orange-500 to-amber-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:rotate-12 transition-transform duration-500">
+                    <MapPin className="w-12 h-12 text-white drop-shadow-lg" />
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-amber-900 mb-6">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-amber-800 to-orange-700 bg-clip-text text-transparent mb-8">
                   {t.address}
                 </h3>
-                <div className="space-y-2 text-gray-800 mb-6">
-                  <p className="text-lg font-medium">{t.location}</p>
-                  <p className="text-lg font-medium">{t.city}</p>
+                <div className="space-y-2 text-gray-800 mb-8">
+                  <p className="text-lg font-semibold">{t.location}</p>
+                  <p className="text-lg font-semibold">{t.city}</p>
                 </div>
                 <button
                   onClick={() => window.open('https://maps.app.goo.gl/4rmfzb2YM4Usx8CQ9', '_blank')}
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:scale-110 shadow-xl text-lg"
+                  className="relative inline-flex items-center gap-3 overflow-hidden group/btn"
                 >
-                  <Navigation className="w-6 h-6" />
-                  {t.getDirections}
+                  <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-400 rounded-2xl blur opacity-50 group-hover/btn:opacity-75 transition-opacity"></div>
+                  <div className="relative bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:via-orange-600 hover:to-amber-700 text-white px-9 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-2xl text-lg flex items-center gap-3">
+                    <Navigation className="w-6 h-6" />
+                    {t.getDirections}
+                  </div>
                 </button>
               </div>
             </div>
 
             {/* Contact Information */}
-            <div className="backdrop-blur-lg bg-white/90 rounded-2xl p-8 shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 border border-white/50 hover:scale-105 transform">
-              <div className="text-center">
-                <div className="bg-gradient-to-br from-amber-500 to-orange-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
-                  <Phone className="w-10 h-10 text-white" />
+            <div className="group relative backdrop-blur-xl bg-gradient-to-br from-white/95 via-white/90 to-white/85 rounded-3xl p-10 shadow-2xl hover:shadow-amber-500/30 transition-all duration-500 border-2 border-white/60 hover:border-amber-300/60 hover:scale-105 transform overflow-hidden">
+              {/* Animated gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative text-center">
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 w-24 h-24 rounded-full mx-auto blur-xl opacity-50 group-hover:opacity-70 transition-opacity"></div>
+                  <div className="relative bg-gradient-to-br from-amber-500 via-orange-500 to-amber-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:rotate-12 transition-transform duration-500">
+                    <Phone className="w-12 h-12 text-white drop-shadow-lg" />
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-amber-900 mb-6">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-amber-800 to-orange-700 bg-clip-text text-transparent mb-8">
                   {t.contactInfo}
                 </h3>
-                <div className="space-y-4">
-                  <p className="text-gray-800 text-lg font-medium">{t.phone}:</p>
+                <div className="space-y-5">
+                  <p className="text-gray-800 text-lg font-semibold">{t.phone}:</p>
                   <a
                     href="tel:4703501019"
-                    className="inline-block text-3xl font-bold text-amber-600 hover:text-amber-800 transition-colors"
+                    className="inline-block text-3xl font-black bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 bg-clip-text text-transparent hover:from-amber-700 hover:via-orange-700 hover:to-amber-800 transition-all transform hover:scale-105"
                   >
                     (470) 350-1019
                   </a>
-                  <div className="pt-4">
+                  <div className="pt-6">
                     <a
                       href="tel:4703501019"
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:scale-110 shadow-xl text-lg"
+                      className="relative inline-flex items-center gap-3 overflow-hidden group/btn"
                     >
-                      <Phone className="w-6 h-6" />
-                      {t.callUs}
+                      <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-400 rounded-2xl blur opacity-50 group-hover/btn:opacity-75 transition-opacity"></div>
+                      <div className="relative bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:via-emerald-600 hover:to-green-700 text-white px-9 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-2xl text-lg flex items-center gap-3">
+                        <Phone className="w-6 h-6" />
+                        {t.callUs}
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -520,12 +561,15 @@ const VisitUsPage = () => {
           </div>
 
           {/* Google Maps Embed with Enhanced Styling */}
-          <div className="backdrop-blur-lg bg-white/95 rounded-3xl p-6 shadow-2xl mb-16 border-2 border-white/50">
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/95 via-white/90 to-white/85 rounded-3xl p-8 shadow-2xl mb-16 border-2 border-white/60 overflow-hidden group">
+            {/* Decorative glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white/50">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.8756284919326!2d-84.07346492376583!3d34.01619721925604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a2e8e0c0e0e0%3A0x0!2s302%20Satellite%20Blvd%20NE%20STE%20125%2C%20Suwanee%2C%20GA%2030024!5e0!3m2!1sen!2sus!4v1234567890"
                 width="100%"
-                height="500"
+                height="550"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
@@ -536,14 +580,26 @@ const VisitUsPage = () => {
 
           {/* Call to Action with Enhanced Design */}
           <div className="text-center">
-            <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 border border-white/30 inline-block">
-              <button
-                onClick={() => window.location.href = '/reservations'}
-                className="inline-flex items-center gap-4 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:via-orange-600 hover:to-amber-700 text-white px-12 py-6 rounded-2xl text-2xl font-bold transition-all transform hover:scale-110 shadow-2xl hover:shadow-amber-500/50 border-2 border-white/50"
-              >
-                <Calendar className="w-8 h-8 animate-pulse" />
-                {t.makeReservation}
-              </button>
+            <div className="relative inline-block group">
+              {/* Outer glow */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400 rounded-3xl opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-500"></div>
+              
+              {/* Glass container */}
+              <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/20 via-white/10 to-white/5 rounded-3xl p-8 border-2 border-white/40 shadow-2xl">
+                <button
+                  onClick={() => window.location.href = '/reservations'}
+                  className="relative overflow-hidden group/btn"
+                >
+                  {/* Button glow */}
+                  <div className="absolute -inset-2 bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 rounded-3xl opacity-40 blur-xl group-hover/btn:opacity-60 transition-opacity"></div>
+                  
+                  {/* Button content */}
+                  <div className="relative inline-flex items-center gap-4 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:via-orange-600 hover:to-amber-700 text-white px-14 py-7 rounded-2xl text-2xl font-black transition-all transform hover:scale-105 shadow-2xl border-2 border-white/30">
+                    <Calendar className="w-9 h-9 animate-pulse" />
+                    <span className="tracking-wide">{t.makeReservation}</span>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
