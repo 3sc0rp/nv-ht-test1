@@ -503,7 +503,7 @@ const VisitUsPage = () => {
                 </div>
                 <button
                   onClick={() => window.open('https://maps.app.goo.gl/4rmfzb2YM4Usx8CQ9', '_blank')}
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:via-orange-600 hover:to-amber-700 text-white px-9 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-xl text-lg"
+                  className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/50 hover:border-white/80 text-white px-9 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-lg text-lg"
                 >
                   <Navigation className="w-6 h-6" />
                   {t.getDirections}
@@ -534,7 +534,7 @@ const VisitUsPage = () => {
                   <div className="pt-6">
                     <a
                       href="tel:4703501019"
-                      className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:via-emerald-600 hover:to-green-700 text-white px-9 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-xl text-lg"
+                      className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/50 hover:border-white/80 text-white px-9 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-lg text-lg"
                     >
                       <Phone className="w-6 h-6" />
                       {t.callUs}
@@ -567,7 +567,7 @@ const VisitUsPage = () => {
           <div className="text-center">
             <button
               onClick={() => window.location.href = '/reservations'}
-              className="inline-flex items-center gap-4 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:via-orange-600 hover:to-amber-700 text-white px-14 py-7 rounded-2xl text-2xl font-black transition-all transform hover:scale-105 shadow-2xl border-2 border-white/30"
+              className="inline-flex items-center gap-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/50 hover:border-white/80 text-white px-14 py-7 rounded-2xl text-2xl font-black transition-all transform hover:scale-105 shadow-lg"
             >
               <Calendar className="w-9 h-9 animate-pulse" />
               <span className="tracking-wide">{t.makeReservation}</span>
