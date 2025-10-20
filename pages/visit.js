@@ -406,33 +406,59 @@ const VisitUsPage = () => {
 
       <Header currentPage="visit" />
 
-      <main className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Page Header */}
-          <div className={`text-center mb-12 sm:mb-16 ${isRTL ? 'rtl' : 'ltr'}`}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-800 mb-4">
-              {t.title}
-            </h1>
-            <p className="text-xl sm:text-2xl text-amber-600 mb-6">
-              {t.subtitle}
-            </p>
-            <div className="w-24 h-1 bg-amber-600 mx-auto"></div>
-          </div>
+      <main className="min-h-screen relative overflow-hidden">
+        {/* Video Background */}
+        <div className="fixed inset-0 z-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{
+              filter: 'brightness(0.3)',
+            }}
+          >
+            <source src="/hero.mp4" type="video/mp4" />
+          </video>
+          
+          {/* Gradient Overlays for depth */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-900/30 via-transparent to-orange-900/30" />
+        </div>
 
-          {/* Main Information Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {/* Content Container */}
+        <div className="relative z-10 pt-32 pb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Page Header with Glass Effect */}
+            <div className={`text-center mb-16 sm:mb-20 ${isRTL ? 'rtl' : 'ltr'}`}>
+              <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 sm:p-12 border border-white/20 shadow-2xl max-w-4xl mx-auto">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
+                  {t.title}
+                </h1>
+                <p className="text-2xl sm:text-3xl text-amber-200 mb-6 drop-shadow-lg">
+                  {t.subtitle}
+                </p>
+                <div className="w-32 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto"></div>
+              </div>
+            </div>
+
+          {/* Main Information Cards with Glass Morphism */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Opening Hours */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-amber-100">
+            <div className="backdrop-blur-lg bg-white/90 rounded-2xl p-8 shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 border border-white/50 hover:scale-105 transform">
               <div className="text-center">
-                <Clock className="w-16 h-16 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-amber-800 mb-6">
+                <div className="bg-gradient-to-br from-amber-500 to-orange-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                  <Clock className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-amber-900 mb-6">
                   {t.openingHours}
                 </h3>
-                <div className="space-y-3 text-gray-700">
-                  <p className="text-lg font-medium">{t.sunThu}</p>
-                  <p className="text-lg font-medium">{t.friSat}</p>
-                  <p className="text-amber-600 font-bold text-lg mt-4">{t.sevenDays}</p>
-                  <p className="text-sm text-amber-700 italic mt-4 pt-4 border-t border-amber-100">
+                <div className="space-y-3 text-gray-800">
+                  <p className="text-lg font-semibold">{t.sunThu}</p>
+                  <p className="text-lg font-semibold">{t.friSat}</p>
+                  <p className="text-amber-600 font-bold text-xl mt-6 bg-amber-50 rounded-lg py-2">{t.sevenDays}</p>
+                  <p className="text-sm text-amber-800 italic mt-6 pt-6 border-t-2 border-amber-200">
                     {t.kitchenNote}
                   </p>
                 </div>
@@ -440,47 +466,51 @@ const VisitUsPage = () => {
             </div>
 
             {/* Address */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-amber-100">
+            <div className="backdrop-blur-lg bg-white/90 rounded-2xl p-8 shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 border border-white/50 hover:scale-105 transform">
               <div className="text-center">
-                <MapPin className="w-16 h-16 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-amber-800 mb-6">
+                <div className="bg-gradient-to-br from-amber-500 to-orange-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                  <MapPin className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-amber-900 mb-6">
                   {t.address}
                 </h3>
-                <div className="space-y-2 text-gray-700 mb-6">
-                  <p className="text-lg">{t.location}</p>
-                  <p className="text-lg">{t.city}</p>
+                <div className="space-y-2 text-gray-800 mb-6">
+                  <p className="text-lg font-medium">{t.location}</p>
+                  <p className="text-lg font-medium">{t.city}</p>
                 </div>
                 <button
                   onClick={() => window.open('https://maps.app.goo.gl/4rmfzb2YM4Usx8CQ9', '_blank')}
-                  className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-md"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:scale-110 shadow-xl text-lg"
                 >
-                  <Navigation className="w-5 h-5" />
+                  <Navigation className="w-6 h-6" />
                   {t.getDirections}
                 </button>
               </div>
             </div>
 
             {/* Contact Information */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-amber-100">
+            <div className="backdrop-blur-lg bg-white/90 rounded-2xl p-8 shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 border border-white/50 hover:scale-105 transform">
               <div className="text-center">
-                <Phone className="w-16 h-16 text-amber-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-amber-800 mb-6">
+                <div className="bg-gradient-to-br from-amber-500 to-orange-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                  <Phone className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-amber-900 mb-6">
                   {t.contactInfo}
                 </h3>
                 <div className="space-y-4">
-                  <p className="text-gray-700 text-lg">{t.phone}:</p>
+                  <p className="text-gray-800 text-lg font-medium">{t.phone}:</p>
                   <a
                     href="tel:4703501019"
-                    className="inline-flex items-center gap-2 text-2xl font-bold text-amber-600 hover:text-amber-800 transition-colors"
+                    className="inline-block text-3xl font-bold text-amber-600 hover:text-amber-800 transition-colors"
                   >
                     (470) 350-1019
                   </a>
                   <div className="pt-4">
                     <a
                       href="tel:4703501019"
-                      className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-md"
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:scale-110 shadow-xl text-lg"
                     >
-                      <Phone className="w-5 h-5" />
+                      <Phone className="w-6 h-6" />
                       {t.callUs}
                     </a>
                   </div>
@@ -489,32 +519,34 @@ const VisitUsPage = () => {
             </div>
           </div>
 
-          {/* Google Maps Embed */}
-          <div className="bg-white rounded-2xl p-4 shadow-xl mb-12 border border-amber-100">
-            <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
+          {/* Google Maps Embed with Enhanced Styling */}
+          <div className="backdrop-blur-lg bg-white/95 rounded-3xl p-6 shadow-2xl mb-16 border-2 border-white/50">
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.8756284919326!2d-84.07346492376583!3d34.01619721925604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a2e8e0c0e0e0%3A0x0!2s302%20Satellite%20Blvd%20NE%20STE%20125%2C%20Suwanee%2C%20GA%2030024!5e0!3m2!1sen!2sus!4v1234567890"
                 width="100%"
-                height="450"
+                height="500"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-xl"
               ></iframe>
             </div>
           </div>
 
-          {/* Call to Action */}
+          {/* Call to Action with Enhanced Design */}
           <div className="text-center">
-            <button
-              onClick={() => window.location.href = '/reservations'}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-10 py-5 rounded-xl text-xl font-bold transition-all transform hover:scale-105 shadow-2xl"
-            >
-              <Calendar className="w-6 h-6" />
-              {t.makeReservation}
-            </button>
+            <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 border border-white/30 inline-block">
+              <button
+                onClick={() => window.location.href = '/reservations'}
+                className="inline-flex items-center gap-4 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:via-orange-600 hover:to-amber-700 text-white px-12 py-6 rounded-2xl text-2xl font-bold transition-all transform hover:scale-110 shadow-2xl hover:shadow-amber-500/50 border-2 border-white/50"
+              >
+                <Calendar className="w-8 h-8 animate-pulse" />
+                {t.makeReservation}
+              </button>
+            </div>
           </div>
+        </div>
         </div>
       </main>
 
