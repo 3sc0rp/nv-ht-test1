@@ -503,13 +503,10 @@ const VisitUsPage = () => {
                 </div>
                 <button
                   onClick={() => window.open('https://maps.app.goo.gl/4rmfzb2YM4Usx8CQ9', '_blank')}
-                  className="relative inline-flex items-center gap-3 overflow-hidden group/btn"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:via-orange-600 hover:to-amber-700 text-white px-9 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-xl text-lg"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-400 rounded-2xl blur opacity-50 group-hover/btn:opacity-75 transition-opacity"></div>
-                  <div className="relative bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:via-orange-600 hover:to-amber-700 text-white px-9 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-2xl text-lg flex items-center gap-3">
-                    <Navigation className="w-6 h-6" />
-                    {t.getDirections}
-                  </div>
+                  <Navigation className="w-6 h-6" />
+                  {t.getDirections}
                 </button>
               </div>
             </div>
@@ -537,13 +534,10 @@ const VisitUsPage = () => {
                   <div className="pt-6">
                     <a
                       href="tel:4703501019"
-                      className="relative inline-flex items-center gap-3 overflow-hidden group/btn"
+                      className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:via-emerald-600 hover:to-green-700 text-white px-9 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-xl text-lg"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-400 rounded-2xl blur opacity-50 group-hover/btn:opacity-75 transition-opacity"></div>
-                      <div className="relative bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:via-emerald-600 hover:to-green-700 text-white px-9 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-2xl text-lg flex items-center gap-3">
-                        <Phone className="w-6 h-6" />
-                        {t.callUs}
-                      </div>
+                      <Phone className="w-6 h-6" />
+                      {t.callUs}
                     </a>
                   </div>
                 </div>
@@ -571,27 +565,13 @@ const VisitUsPage = () => {
 
           {/* Call to Action with Enhanced Design */}
           <div className="text-center">
-            <div className="relative inline-block group">
-              {/* Outer glow */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400 rounded-3xl opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-500"></div>
-              
-              {/* Glass container */}
-              <div className="relative backdrop-blur-xl bg-white/10 rounded-3xl p-8 border-2 border-white/30 shadow-2xl">
-                <button
-                  onClick={() => window.location.href = '/reservations'}
-                  className="relative overflow-hidden group/btn"
-                >
-                  {/* Button glow */}
-                  <div className="absolute -inset-2 bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 rounded-3xl opacity-40 blur-xl group-hover/btn:opacity-60 transition-opacity"></div>
-                  
-                  {/* Button content */}
-                  <div className="relative inline-flex items-center gap-4 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:via-orange-600 hover:to-amber-700 text-white px-14 py-7 rounded-2xl text-2xl font-black transition-all transform hover:scale-105 shadow-2xl border-2 border-white/30">
-                    <Calendar className="w-9 h-9 animate-pulse" />
-                    <span className="tracking-wide">{t.makeReservation}</span>
-                  </div>
-                </button>
-              </div>
-            </div>
+            <button
+              onClick={() => window.location.href = '/reservations'}
+              className="inline-flex items-center gap-4 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:via-orange-600 hover:to-amber-700 text-white px-14 py-7 rounded-2xl text-2xl font-black transition-all transform hover:scale-105 shadow-2xl border-2 border-white/30"
+            >
+              <Calendar className="w-9 h-9 animate-pulse" />
+              <span className="tracking-wide">{t.makeReservation}</span>
+            </button>
           </div>
         </div>
         </div>
