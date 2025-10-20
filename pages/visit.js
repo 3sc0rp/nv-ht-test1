@@ -463,11 +463,8 @@ const VisitUsPage = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-orange-500/10 opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative text-center">
-                <div className="relative mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 w-24 h-24 rounded-full mx-auto blur-xl opacity-50 group-hover:opacity-70 transition-opacity"></div>
-                  <div className="relative bg-gradient-to-br from-amber-500 via-orange-500 to-amber-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:rotate-12 transition-transform duration-500">
-                    <Clock className="w-12 h-12 text-white drop-shadow-lg" />
-                  </div>
+                <div className="relative mb-8">
+                  <Clock className="w-16 h-16 text-white mx-auto drop-shadow-2xl group-hover:scale-110 transition-transform duration-500" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-8 drop-shadow-lg">
                   {t.openingHours}
@@ -494,11 +491,8 @@ const VisitUsPage = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-orange-500/10 opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative text-center">
-                <div className="relative mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 w-24 h-24 rounded-full mx-auto blur-xl opacity-50 group-hover:opacity-70 transition-opacity"></div>
-                  <div className="relative bg-gradient-to-br from-amber-500 via-orange-500 to-amber-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:rotate-12 transition-transform duration-500">
-                    <MapPin className="w-12 h-12 text-white drop-shadow-lg" />
-                  </div>
+                <div className="relative mb-8">
+                  <MapPin className="w-16 h-16 text-white mx-auto drop-shadow-2xl group-hover:scale-110 transition-transform duration-500" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-8 drop-shadow-lg">
                   {t.address}
@@ -526,11 +520,8 @@ const VisitUsPage = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-orange-500/10 opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative text-center">
-                <div className="relative mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 w-24 h-24 rounded-full mx-auto blur-xl opacity-50 group-hover:opacity-70 transition-opacity"></div>
-                  <div className="relative bg-gradient-to-br from-amber-500 via-orange-500 to-amber-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:rotate-12 transition-transform duration-500">
-                    <Phone className="w-12 h-12 text-white drop-shadow-lg" />
-                  </div>
+                <div className="relative mb-8">
+                  <Phone className="w-16 h-16 text-white mx-auto drop-shadow-2xl group-hover:scale-110 transition-transform duration-500" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-8 drop-shadow-lg">
                   {t.contactInfo}
