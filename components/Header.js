@@ -31,7 +31,7 @@ const Header = ({ currentPage = '' }) => {
     { key: 'menu', label: 'Menu', href: '/menu' },
     { key: 'about', label: 'About Us', href: '/#about' },
     { key: 'gallery', label: 'Gallery', href: '/gallery' },
-    { key: 'visit', label: 'Visit Us', href: '/#visit' },
+    { key: 'visit', label: 'Visit Us', href: '/visit' },
     { key: 'reservations', label: 'Reservations', href: '/reservations' },
     { key: 'catering', label: 'Catering', href: '/catering' }
   ];
