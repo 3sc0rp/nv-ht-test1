@@ -458,9 +458,9 @@ const VisitUsPage = () => {
           {/* Main Information Cards with Glass Morphism */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Opening Hours */}
-            <div className="group relative backdrop-blur-xl bg-gradient-to-br from-white/95 via-white/90 to-white/85 rounded-3xl p-10 shadow-2xl hover:shadow-amber-500/30 transition-all duration-500 border-2 border-white/60 hover:border-amber-300/60 hover:scale-105 transform overflow-hidden">
+            <div className="group relative backdrop-blur-xl bg-white/15 rounded-3xl p-10 shadow-2xl hover:shadow-amber-500/30 transition-all duration-500 border-2 border-white/40 hover:border-white/60 hover:scale-105 transform overflow-hidden">
               {/* Animated gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-orange-500/10 opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative text-center">
                 <div className="relative mb-6">
@@ -469,18 +469,18 @@ const VisitUsPage = () => {
                     <Clock className="w-12 h-12 text-white drop-shadow-lg" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-amber-800 to-orange-700 bg-clip-text text-transparent mb-8">
+                <h3 className="text-2xl font-bold text-white mb-8 drop-shadow-lg">
                   {t.openingHours}
                 </h3>
-                <div className="space-y-4 text-gray-800">
-                  <p className="text-lg font-bold tracking-wide">{t.sunThu}</p>
-                  <p className="text-lg font-bold tracking-wide">{t.friSat}</p>
+                <div className="space-y-4 text-white">
+                  <p className="text-lg font-bold tracking-wide drop-shadow-md">{t.sunThu}</p>
+                  <p className="text-lg font-bold tracking-wide drop-shadow-md">{t.friSat}</p>
                   <div className="relative my-6">
-                    <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-400 rounded-xl blur opacity-30"></div>
-                    <p className="relative text-amber-700 font-black text-xl bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl py-3 shadow-inner">{t.sevenDays}</p>
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-400 rounded-xl blur opacity-40"></div>
+                    <p className="relative text-white font-black text-xl bg-white/20 backdrop-blur-sm rounded-xl py-3 shadow-lg border border-white/30">{t.sevenDays}</p>
                   </div>
-                  <div className="pt-6 mt-6 border-t-2 border-gradient-to-r from-transparent via-amber-200 to-transparent">
-                    <p className="text-sm text-amber-900 italic font-medium bg-amber-50/50 rounded-lg p-3 backdrop-blur-sm">
+                  <div className="pt-6 mt-6 border-t-2 border-white/30">
+                    <p className="text-sm text-amber-100 italic font-medium bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
                       {t.kitchenNote}
                     </p>
                   </div>
@@ -489,9 +489,9 @@ const VisitUsPage = () => {
             </div>
 
             {/* Address */}
-            <div className="group relative backdrop-blur-xl bg-gradient-to-br from-white/95 via-white/90 to-white/85 rounded-3xl p-10 shadow-2xl hover:shadow-amber-500/30 transition-all duration-500 border-2 border-white/60 hover:border-amber-300/60 hover:scale-105 transform overflow-hidden">
+            <div className="group relative backdrop-blur-xl bg-white/15 rounded-3xl p-10 shadow-2xl hover:shadow-amber-500/30 transition-all duration-500 border-2 border-white/40 hover:border-white/60 hover:scale-105 transform overflow-hidden">
               {/* Animated gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-orange-500/10 opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative text-center">
                 <div className="relative mb-6">
@@ -500,12 +500,12 @@ const VisitUsPage = () => {
                     <MapPin className="w-12 h-12 text-white drop-shadow-lg" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-amber-800 to-orange-700 bg-clip-text text-transparent mb-8">
+                <h3 className="text-2xl font-bold text-white mb-8 drop-shadow-lg">
                   {t.address}
                 </h3>
-                <div className="space-y-2 text-gray-800 mb-8">
-                  <p className="text-lg font-semibold">{t.location}</p>
-                  <p className="text-lg font-semibold">{t.city}</p>
+                <div className="space-y-2 text-white mb-8">
+                  <p className="text-lg font-semibold drop-shadow-md">{t.location}</p>
+                  <p className="text-lg font-semibold drop-shadow-md">{t.city}</p>
                 </div>
                 <button
                   onClick={() => window.open('https://maps.app.goo.gl/4rmfzb2YM4Usx8CQ9', '_blank')}
@@ -521,9 +521,9 @@ const VisitUsPage = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="group relative backdrop-blur-xl bg-gradient-to-br from-white/95 via-white/90 to-white/85 rounded-3xl p-10 shadow-2xl hover:shadow-amber-500/30 transition-all duration-500 border-2 border-white/60 hover:border-amber-300/60 hover:scale-105 transform overflow-hidden">
+            <div className="group relative backdrop-blur-xl bg-white/15 rounded-3xl p-10 shadow-2xl hover:shadow-amber-500/30 transition-all duration-500 border-2 border-white/40 hover:border-white/60 hover:scale-105 transform overflow-hidden">
               {/* Animated gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-orange-500/10 opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative text-center">
                 <div className="relative mb-6">
@@ -532,14 +532,14 @@ const VisitUsPage = () => {
                     <Phone className="w-12 h-12 text-white drop-shadow-lg" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-amber-800 to-orange-700 bg-clip-text text-transparent mb-8">
+                <h3 className="text-2xl font-bold text-white mb-8 drop-shadow-lg">
                   {t.contactInfo}
                 </h3>
                 <div className="space-y-5">
-                  <p className="text-gray-800 text-lg font-semibold">{t.phone}:</p>
+                  <p className="text-white text-lg font-semibold drop-shadow-md">{t.phone}:</p>
                   <a
                     href="tel:4703501019"
-                    className="inline-block text-3xl font-black bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 bg-clip-text text-transparent hover:from-amber-700 hover:via-orange-700 hover:to-amber-800 transition-all transform hover:scale-105"
+                    className="inline-block text-3xl font-black text-white drop-shadow-lg hover:text-amber-200 transition-all transform hover:scale-105"
                   >
                     (470) 350-1019
                   </a>
@@ -561,11 +561,11 @@ const VisitUsPage = () => {
           </div>
 
           {/* Google Maps Embed with Enhanced Styling */}
-          <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/95 via-white/90 to-white/85 rounded-3xl p-8 shadow-2xl mb-16 border-2 border-white/60 overflow-hidden group">
+          <div className="relative backdrop-blur-xl bg-white/15 rounded-3xl p-8 shadow-2xl mb-16 border-2 border-white/40 overflow-hidden group">
             {/* Decorative glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-orange-500/10 opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
             
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white/50">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white/30">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.8756284919326!2d-84.07346492376583!3d34.01619721925604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a2e8e0c0e0e0%3A0x0!2s302%20Satellite%20Blvd%20NE%20STE%20125%2C%20Suwanee%2C%20GA%2030024!5e0!3m2!1sen!2sus!4v1234567890"
                 width="100%"
@@ -585,7 +585,7 @@ const VisitUsPage = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400 rounded-3xl opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-500"></div>
               
               {/* Glass container */}
-              <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/20 via-white/10 to-white/5 rounded-3xl p-8 border-2 border-white/40 shadow-2xl">
+              <div className="relative backdrop-blur-xl bg-white/10 rounded-3xl p-8 border-2 border-white/30 shadow-2xl">
                 <button
                   onClick={() => window.location.href = '/reservations'}
                   className="relative overflow-hidden group/btn"
