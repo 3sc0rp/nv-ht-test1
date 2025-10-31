@@ -234,28 +234,28 @@ const GiftCardPopup = () => {
               {/* Scrollable Content */}
               <div className="overflow-y-auto max-h-[95vh] sm:max-h-[90vh] scrollbar-hide">
                 {/* Header - Minimal design */}
-                <div className="relative bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 text-white px-6 py-6 sm:px-8 sm:py-8">
+                <div className="relative bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 text-white px-6 py-6 sm:px-8 sm:py-7">
                   <div className="relative z-10 text-center">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.1, duration: 0.3 }}
+                      className="mb-3"
+                    >
+                      <Gift className="w-10 h-10 sm:w-12 sm:h-12 mx-auto" />
+                    </motion.div>
+                    
                     <motion.h2 
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.1, duration: 0.4 }}
-                      className="text-xl sm:text-2xl md:text-3xl font-bold mb-1.5 tracking-tight"
+                      transition={{ delay: 0.2, duration: 0.4 }}
+                      className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight"
                       style={{ 
                         letterSpacing: '-0.02em'
                       }}
                     >
                       {t.title}
                     </motion.h2>
-                    
-                    <motion.p 
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2, duration: 0.4 }}
-                      className="text-sm sm:text-base text-white/90"
-                    >
-                      {t.subtitle}
-                    </motion.p>
                   </div>
                 </div>
 
