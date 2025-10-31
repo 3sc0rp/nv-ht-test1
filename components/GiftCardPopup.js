@@ -192,11 +192,11 @@ const GiftCardPopup = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
             style={{ pointerEvents: 'none' }}
           >
             <div
-              className={`bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto relative ${
+              className={`bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto relative ${
                 isRTL ? 'rtl' : 'ltr'
               }`}
               style={{ pointerEvents: 'auto' }}
@@ -205,32 +205,32 @@ const GiftCardPopup = () => {
               {/* Close Button */}
               <button
                 onClick={handleClose}
-                className="absolute top-4 right-4 z-10 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors"
                 aria-label={t.close}
               >
                 <X className="w-5 h-5 text-gray-600" />
               </button>
 
               {/* Header */}
-              <div className="bg-gradient-to-br from-amber-500 to-orange-600 text-white px-8 py-10 rounded-t-2xl text-center">
-                <Gift className="w-12 h-12 mx-auto mb-4" />
-                <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              <div className="bg-gradient-to-br from-amber-500 to-orange-600 text-white px-6 py-8 sm:px-8 sm:py-10 rounded-t-2xl text-center">
+                <Gift className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 px-2">
                   {t.title}
                 </h2>
-                <p className="text-lg text-white/90">
+                <p className="text-base sm:text-lg text-white/90 px-2">
                   {t.subtitle}
                 </p>
               </div>
 
               {/* Content */}
-              <div className="p-8">
-                <p className="text-gray-600 text-center mb-8 leading-relaxed">
+              <div className="p-6 sm:p-8">
+                <p className="text-sm sm:text-base text-gray-600 text-center mb-6 sm:mb-8 leading-relaxed px-2">
                   {t.description}
                 </p>
 
-                {/* Gift Card Image */}
-                <div className="mb-8">
-                  <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-lg">
+                {/* Gift Card Image with Enhanced Shadow */}
+                <div className="mb-6 sm:mb-8 px-2">
+                  <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_50px_rgba(0,0,0,0.2)] transition-shadow duration-300">
                     <Image
                       src="/nv-wide.png"
                       alt="Nature Village Gift Card"
@@ -242,17 +242,17 @@ const GiftCardPopup = () => {
                 </div>
 
                 {/* Action Button */}
-                <div className="text-center">
+                <div className="text-center px-2">
                   <button
                     onClick={handleClose}
-                    className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-8 py-3 rounded-lg transition-colors"
+                    className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-6 py-3 sm:px-8 sm:py-3 rounded-lg transition-colors text-sm sm:text-base"
                   >
                     {t.close}
                   </button>
                 </div>
 
                 {/* Contact Info */}
-                <div className="mt-6 text-center text-sm text-gray-500">
+                <div className="mt-5 sm:mt-6 text-center text-xs sm:text-sm text-gray-500 px-2">
                   <p>
                     {t.callUs}{' '}
                     <a href="tel:4703501019" className="text-amber-600 hover:text-amber-700 font-semibold transition-colors">
