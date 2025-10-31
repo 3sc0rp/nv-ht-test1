@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Gift } from 'lucide-react';
+import { X, Gift, Phone } from 'lucide-react';
 import Image from 'next/image';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -177,88 +177,176 @@ const GiftCardPopup = () => {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
+          <style jsx global>{`
+            .scrollbar-hide::-webkit-scrollbar {
+              display: none;
+            }
+            .scrollbar-hide {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            }
+          `}</style>
+
+          {/* Backdrop with refined blur */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
             onClick={handleClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-black/40 backdrop-blur-md z-50"
           />
 
           {/* Modal */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            initial={{ opacity: 0, scale: 0.96, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ type: "spring", duration: 0.5 }}
+            exit={{ opacity: 0, scale: 0.96, y: 16 }}
+            transition={{ 
+              duration: 0.4, 
+              ease: [0.4, 0, 0.2, 1],
+              opacity: { duration: 0.3 }
+            }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
             style={{ pointerEvents: 'none' }}
           >
             <div
-              className={`bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto relative ${
+              className={`bg-white rounded-3xl shadow-[0_24px_60px_-12px_rgba(0,0,0,0.25)] max-w-lg w-full max-h-[95vh] sm:max-h-[90vh] overflow-hidden relative ${
                 isRTL ? 'rtl' : 'ltr'
               }`}
               style={{ pointerEvents: 'auto' }}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button */}
-              <button
+              {/* Close Button - Refined */}
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2, duration: 0.3 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={handleClose}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors"
+                className="absolute top-4 right-4 sm:top-5 sm:right-5 z-20 bg-white/95 backdrop-blur-sm hover:bg-white rounded-full p-2.5 shadow-lg hover:shadow-xl transition-all duration-200 group"
                 aria-label={t.close}
               >
-                <X className="w-5 h-5 text-gray-600" />
-              </button>
+                <X className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 group-hover:text-gray-900 transition-colors" />
+              </motion.button>
 
-              {/* Header */}
-              <div className="bg-gradient-to-br from-amber-500 to-orange-600 text-white px-6 py-8 sm:px-8 sm:py-10 rounded-t-2xl text-center">
-                <Gift className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 px-2">
-                  {t.title}
-                </h2>
-                <p className="text-base sm:text-lg text-white/90 px-2">
-                  {t.subtitle}
-                </p>
-              </div>
-
-              {/* Content */}
-              <div className="p-6 sm:p-8">
-                <p className="text-sm sm:text-base text-gray-600 text-center mb-6 sm:mb-8 leading-relaxed px-2">
-                  {t.description}
-                </p>
-
-                {/* Gift Card Image with Enhanced Shadow */}
-                <div className="mb-6 sm:mb-8 px-2">
-                  <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_50px_rgba(0,0,0,0.2)] transition-shadow duration-300">
-                    <Image
-                      src="/nv-wide.png"
-                      alt="Nature Village Gift Card"
-                      fill
-                      className="object-cover"
-                      priority
-                    />
+              {/* Scrollable Content */}
+              <div className="overflow-y-auto max-h-[95vh] sm:max-h-[90vh] scrollbar-hide">
+                {/* Header - Refined gradient */}
+                <div className="relative bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 text-white px-6 py-10 sm:px-10 sm:py-12">
+                  {/* Subtle decorative element */}
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_50%)]" />
+                  
+                  <div className="relative z-10 text-center">
+                    <motion.div
+                      initial={{ scale: 0, rotate: -180 }}
+                      animate={{ scale: 1, rotate: 0 }}
+                      transition={{ 
+                        delay: 0.1, 
+                        duration: 0.6,
+                        type: "spring",
+                        stiffness: 200
+                      }}
+                      className="inline-block mb-4 sm:mb-5"
+                    >
+                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-3 sm:p-4">
+                        <Gift className="w-10 h-10 sm:w-12 sm:h-12 mx-auto drop-shadow-lg" />
+                      </div>
+                    </motion.div>
+                    
+                    <motion.h2 
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2, duration: 0.4 }}
+                      className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 tracking-tight"
+                      style={{ 
+                        textShadow: '0 2px 10px rgba(0,0,0,0.1)',
+                        letterSpacing: '-0.02em'
+                      }}
+                    >
+                      {t.title}
+                    </motion.h2>
+                    
+                    <motion.p 
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3, duration: 0.4 }}
+                      className="text-base sm:text-lg text-white/95 font-medium"
+                    >
+                      {t.subtitle}
+                    </motion.p>
                   </div>
                 </div>
 
-                {/* Action Button */}
-                <div className="text-center px-2">
-                  <button
-                    onClick={handleClose}
-                    className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-6 py-3 sm:px-8 sm:py-3 rounded-lg transition-colors text-sm sm:text-base"
+                {/* Content */}
+                <div className="px-6 py-8 sm:px-10 sm:py-10">
+                  <motion.p 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.4 }}
+                    className="text-sm sm:text-base text-gray-600 text-center mb-8 sm:mb-10 leading-relaxed max-w-md mx-auto"
                   >
-                    {t.close}
-                  </button>
-                </div>
+                    {t.description}
+                  </motion.p>
 
-                {/* Contact Info */}
-                <div className="mt-5 sm:mt-6 text-center text-xs sm:text-sm text-gray-500 px-2">
-                  <p>
-                    {t.callUs}{' '}
-                    <a href="tel:4703501019" className="text-amber-600 hover:text-amber-700 font-semibold transition-colors">
-                      (470) 350-1019
-                    </a>
-                  </p>
+                  {/* Gift Card Image - Enhanced presentation */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
+                    className="mb-8 sm:mb-10"
+                  >
+                    <div className="relative group">
+                      {/* Glow effect on hover */}
+                      <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500" />
+                      
+                      <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden shadow-[0_20px_60px_-12px_rgba(0,0,0,0.25)] group-hover:shadow-[0_24px_70px_-12px_rgba(0,0,0,0.3)] transition-all duration-500 ring-1 ring-black/5">
+                        <Image
+                          src="/nv-wide.png"
+                          alt="Nature Village Gift Card"
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                          priority
+                          quality={95}
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Action Button - Refined */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6, duration: 0.4 }}
+                    className="text-center mb-6 sm:mb-7"
+                  >
+                    <button
+                      onClick={handleClose}
+                      className="w-full bg-gray-50 hover:bg-gray-100 active:bg-gray-200 text-gray-700 font-semibold px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl transition-all duration-200 text-sm sm:text-base shadow-sm hover:shadow border border-gray-200 hover:border-gray-300"
+                    >
+                      {t.close}
+                    </button>
+                  </motion.div>
+
+                  {/* Contact Info - Refined */}
+                  <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.7, duration: 0.4 }}
+                    className="text-center"
+                  >
+                    <div className="inline-flex items-center gap-2 text-xs sm:text-sm text-gray-500 bg-gray-50 px-4 py-2.5 rounded-full">
+                      <Phone className="w-3.5 h-3.5 text-amber-600" />
+                      <span>{t.callUs}</span>
+                      <a 
+                        href="tel:4703501019" 
+                        className="text-amber-600 hover:text-amber-700 font-semibold transition-colors hover:underline decoration-2 underline-offset-2"
+                      >
+                        (470) 350-1019
+                      </a>
+                    </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
