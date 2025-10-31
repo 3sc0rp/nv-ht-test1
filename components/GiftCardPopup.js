@@ -233,35 +233,15 @@ const GiftCardPopup = () => {
 
               {/* Scrollable Content */}
               <div className="overflow-y-auto max-h-[95vh] sm:max-h-[90vh] scrollbar-hide">
-                {/* Header - Refined gradient */}
-                <div className="relative bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 text-white px-6 py-8 sm:px-8 sm:py-10">
-                  {/* Subtle decorative element */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_50%)]" />
-                  
+                {/* Header - Minimal design */}
+                <div className="relative bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 text-white px-6 py-6 sm:px-8 sm:py-8">
                   <div className="relative z-10 text-center">
-                    <motion.div
-                      initial={{ scale: 0, rotate: -180 }}
-                      animate={{ scale: 1, rotate: 0 }}
-                      transition={{ 
-                        delay: 0.1, 
-                        duration: 0.6,
-                        type: "spring",
-                        stiffness: 200
-                      }}
-                      className="inline-block mb-3 sm:mb-4"
-                    >
-                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2.5 sm:p-3">
-                        <Gift className="w-8 h-8 sm:w-10 sm:h-10 mx-auto drop-shadow-lg" />
-                      </div>
-                    </motion.div>
-                    
                     <motion.h2 
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2, duration: 0.4 }}
-                      className="text-xl sm:text-2xl md:text-3xl font-bold mb-1.5 sm:mb-2 tracking-tight"
+                      transition={{ delay: 0.1, duration: 0.4 }}
+                      className="text-xl sm:text-2xl md:text-3xl font-bold mb-1.5 tracking-tight"
                       style={{ 
-                        textShadow: '0 2px 10px rgba(0,0,0,0.1)',
                         letterSpacing: '-0.02em'
                       }}
                     >
@@ -271,8 +251,8 @@ const GiftCardPopup = () => {
                     <motion.p 
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3, duration: 0.4 }}
-                      className="text-sm sm:text-base text-white/95 font-medium"
+                      transition={{ delay: 0.2, duration: 0.4 }}
+                      className="text-sm sm:text-base text-white/90"
                     >
                       {t.subtitle}
                     </motion.p>
