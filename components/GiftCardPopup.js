@@ -211,7 +211,7 @@ const GiftCardPopup = () => {
             style={{ pointerEvents: 'none' }}
           >
             <div
-              className={`bg-white rounded-3xl shadow-[0_24px_60px_-12px_rgba(0,0,0,0.25)] max-w-lg w-full max-h-[95vh] sm:max-h-[90vh] overflow-hidden relative ${
+              className={`bg-white rounded-3xl shadow-[0_24px_60px_-12px_rgba(0,0,0,0.25)] max-w-md w-full max-h-[95vh] sm:max-h-[90vh] overflow-hidden relative ${
                 isRTL ? 'rtl' : 'ltr'
               }`}
               style={{ pointerEvents: 'auto' }}
@@ -234,7 +234,7 @@ const GiftCardPopup = () => {
               {/* Scrollable Content */}
               <div className="overflow-y-auto max-h-[95vh] sm:max-h-[90vh] scrollbar-hide">
                 {/* Header - Refined gradient */}
-                <div className="relative bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 text-white px-6 py-10 sm:px-10 sm:py-12">
+                <div className="relative bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 text-white px-6 py-8 sm:px-8 sm:py-10">
                   {/* Subtle decorative element */}
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_50%)]" />
                   
@@ -248,10 +248,10 @@ const GiftCardPopup = () => {
                         type: "spring",
                         stiffness: 200
                       }}
-                      className="inline-block mb-4 sm:mb-5"
+                      className="inline-block mb-3 sm:mb-4"
                     >
-                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-3 sm:p-4">
-                        <Gift className="w-10 h-10 sm:w-12 sm:h-12 mx-auto drop-shadow-lg" />
+                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2.5 sm:p-3">
+                        <Gift className="w-8 h-8 sm:w-10 sm:h-10 mx-auto drop-shadow-lg" />
                       </div>
                     </motion.div>
                     
@@ -259,7 +259,7 @@ const GiftCardPopup = () => {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2, duration: 0.4 }}
-                      className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 tracking-tight"
+                      className="text-xl sm:text-2xl md:text-3xl font-bold mb-1.5 sm:mb-2 tracking-tight"
                       style={{ 
                         textShadow: '0 2px 10px rgba(0,0,0,0.1)',
                         letterSpacing: '-0.02em'
@@ -272,7 +272,7 @@ const GiftCardPopup = () => {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3, duration: 0.4 }}
-                      className="text-base sm:text-lg text-white/95 font-medium"
+                      className="text-sm sm:text-base text-white/95 font-medium"
                     >
                       {t.subtitle}
                     </motion.p>
@@ -280,12 +280,12 @@ const GiftCardPopup = () => {
                 </div>
 
                 {/* Content */}
-                <div className="px-6 py-8 sm:px-10 sm:py-10">
+                <div className="px-6 py-6 sm:px-8 sm:py-8">
                   <motion.p 
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.4 }}
-                    className="text-sm sm:text-base text-gray-600 text-center mb-8 sm:mb-10 leading-relaxed max-w-md mx-auto"
+                    className="text-sm sm:text-base text-gray-600 text-center mb-6 sm:mb-7 leading-relaxed max-w-sm mx-auto"
                   >
                     {t.description}
                   </motion.p>
@@ -295,7 +295,7 @@ const GiftCardPopup = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.5 }}
-                    className="mb-8 sm:mb-10"
+                    className="mb-6 sm:mb-7"
                   >
                     <div className="relative group">
                       {/* Glow effect on hover */}
@@ -319,11 +319,11 @@ const GiftCardPopup = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.4 }}
-                    className="text-center mb-6 sm:mb-7"
+                    className="text-center mb-5 sm:mb-6"
                   >
                     <button
                       onClick={handleClose}
-                      className="w-full bg-gray-50 hover:bg-gray-100 active:bg-gray-200 text-gray-700 font-semibold px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl transition-all duration-200 text-sm sm:text-base shadow-sm hover:shadow border border-gray-200 hover:border-gray-300"
+                      className="w-full bg-gray-50 hover:bg-gray-100 active:bg-gray-200 text-gray-700 font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-xl transition-all duration-200 text-sm sm:text-base shadow-sm hover:shadow border border-gray-200 hover:border-gray-300"
                     >
                       {t.close}
                     </button>
