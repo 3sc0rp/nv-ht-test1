@@ -6,6 +6,7 @@ import { LANGUAGES, getText, updateDocumentLanguage } from '../lib/i18n';
 import { useLanguage } from '../contexts/LanguageContext';
 import Footer from './Footer';
 import Header from './Header';
+import GiftCardPopup from './GiftCardPopup';
 
 const NatureVillageWebsite = () => {
   const { language, setLanguage, isRTL } = useLanguage();
@@ -4982,6 +4983,7 @@ const NatureVillageWebsite = () => {
 
   return (
     <>
+      <GiftCardPopup />
       <style jsx>{`
         /* Mobile menu animations */
         @keyframes fadeIn {
