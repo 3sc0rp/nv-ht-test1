@@ -30,7 +30,7 @@ const Footer = () => {
         kitchenNote: '* Kitchen closes 30 minutes before closing time',
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
-        copyright: '© 2025 Nature Village Kurdish Restaurant. All rights reserved.',
+        copyright: '© 2025 Nature Village Middle Eastern Restaurant. All rights reserved.',
         poweredBy: 'Powered by',
         blunari: 'Blunari',
         home: 'Home',
