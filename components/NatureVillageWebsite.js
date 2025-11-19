@@ -271,22 +271,40 @@ const NatureVillageWebsite = () => {
     const currentMinute = now.getMinutes();
     const currentTime = currentHour + (currentMinute / 60);
     
-    // Restaurant hours: 12:00 PM to 10:00 PM (Sun-Thu), 12:00 PM to 11:00 PM (Fri-Sat)
-    const openingTime = 12.0;
-    const day = now.getDay();
-    const isWeekend = day === 5 || day === 6; // Friday or Saturday
-    const closingTime = isWeekend ? 23.0 : 22.0;
+    // Restaurant hours: Mon-Thu: 11:30 AM - 9:30 PM, Fri: 11:30 AM - 10:30 PM, Sat: 12:00 PM - 10:30 PM, Sun: 12:00 PM - 9:30 PM
+    const day = now.getDay(); // 0=Sun, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat
+    
+    let openingTime, closingTime;
+    if (day === 0) { // Sunday
+      openingTime = 12.0;
+      closingTime = 21.5;
+    } else if (day >= 1 && day <= 4) { // Monday-Thursday
+      openingTime = 11.5;
+      closingTime = 21.5;
+    } else if (day === 5) { // Friday
+      openingTime = 11.5;
+      closingTime = 22.5;
+    } else { // Saturday
+      openingTime = 12.0;
+      closingTime = 22.5;
+    }
+    
     const isCurrentlyOpen = currentTime >= openingTime && currentTime < closingTime;
     
     let nextClosing = '';
     let nextOpening = '';
     
     if (isCurrentlyOpen) {
-      nextClosing = isWeekend ? '11:00 PM' : '10:00 PM';
+      if (day === 0) nextClosing = '9:30 PM';
+      else if (day >= 1 && day <= 4) nextClosing = '9:30 PM';
+      else nextClosing = '10:30 PM'; // Fri & Sat
     } else if (currentTime < openingTime) {
-      nextOpening = '12:00 PM';
+      if (day === 0 || day === 6) nextOpening = '12:00 PM';
+      else nextOpening = '11:30 AM';
     } else {
-      nextOpening = '12:00 PM Tomorrow';
+      const nextDay = (day + 1) % 7;
+      if (nextDay === 0 || nextDay === 6) nextOpening = '12:00 PM Tomorrow';
+      else nextOpening = '11:30 AM Tomorrow';
     }
 
     // Simple busy level based on time
@@ -367,12 +385,27 @@ const NatureVillageWebsite = () => {
     const updateRestaurantStatus = () => {
       const now = new Date();
       const hour = now.getHours();
-      const day = now.getDay();
+      const minute = now.getMinutes();
+      const time = hour + (minute / 60);
+      const day = now.getDay(); // 0=Sun, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat
       
-      // Determine if restaurant is open (12 PM - 10 PM Sunday-Thursday, 12 PM - 11 PM Friday-Saturday)
-      const isWeekend = day === 5 || day === 6; // Friday or Saturday
-      const closingHour = isWeekend ? 23 : 22; // 11 PM or 10 PM
-      const isOpen = hour >= 12 && hour < closingHour;
+      // Determine if restaurant is open based on new hours
+      let openTime, closeTime;
+      if (day === 0) { // Sunday: 12:00 PM - 9:30 PM
+        openTime = 12.0;
+        closeTime = 21.5;
+      } else if (day >= 1 && day <= 4) { // Monday-Thursday: 11:30 AM - 9:30 PM
+        openTime = 11.5;
+        closeTime = 21.5;
+      } else if (day === 5) { // Friday: 11:30 AM - 10:30 PM
+        openTime = 11.5;
+        closeTime = 22.5;
+      } else { // Saturday: 12:00 PM - 10:30 PM
+        openTime = 12.0;
+        closeTime = 22.5;
+      }
+      
+      const isOpen = time >= openTime && time < closeTime;
       
       // Simulate busy levels based on time and day
       let busyLevel = 'low';
@@ -381,6 +414,7 @@ const NatureVillageWebsite = () => {
       
       if (isOpen) {
         // Peak hours logic
+        const isWeekend = day === 5 || day === 6;
         if ((hour >= 12 && hour <= 14) || (hour >= 18 && hour <= 21)) {
           // Lunch and dinner rush
           if (isWeekend) {
@@ -405,15 +439,23 @@ const NatureVillageWebsite = () => {
         }
       }
       
-      const nextClosing = isWeekend ? '11:00 PM' : '10:00 PM';
+      // Calculate next closing time based on day
+      let nextClosing = '';
+      if (isOpen) {
+        if (day === 0 || (day >= 1 && day <= 4)) nextClosing = '9:30 PM';
+        else nextClosing = '10:30 PM'; // Fri & Sat
+      }
       
       // Calculate next opening time
       let nextOpening = '';
       if (!isOpen) {
-        if (hour < 12) {
-          nextOpening = '12:00 PM';
+        const nextDay = (day + 1) % 7;
+        if (time < openTime) {
+          if (day === 0 || day === 6) nextOpening = '12:00 PM';
+          else nextOpening = '11:30 AM';
         } else {
-          nextOpening = '12:00 PM Tomorrow';
+          if (nextDay === 0 || nextDay === 6) nextOpening = '12:00 PM Tomorrow';
+          else nextOpening = '11:30 AM Tomorrow';
         }
       }
       

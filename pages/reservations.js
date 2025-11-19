@@ -240,8 +240,10 @@ const ReservationsPage = () => {
                   {language === 'ar' ? 'ساعات العمل' : language === 'ku' ? 'کاتی کارکردن' : language === 'fa' ? 'ساعات کاری' : language === 'tr' ? 'Çalışma Saatleri' : language === 'es' ? 'Horario' : language === 'ur' ? 'اوقات' : language === 'kmr' ? 'Demên Xebatê' : language === 'ru' ? 'Часы работы' : language === 'hi' ? 'समय' : language === 'sq' ? 'Orari' : language === 'fr' ? 'Horaires' : language === 'de' ? 'Öffnungszeiten' : language === 'bn' ? 'সময়' : language === 'ko' ? '영업시간' : language === 'bs' ? 'Radno Vrijeme' : language === 'zh' ? '营业时间' : language === 'ro' ? 'Program' : language === 'uk' ? 'Години роботи' : language === 'vi' ? 'Giờ làm việc' : 'Hours'}
                 </h3>
                 <p className="text-gray-700 text-sm leading-relaxed">
-                  Sun-Thu: 12PM-10PM<br />
-                  Fri-Sat: 12PM-11PM
+                  Mon-Thu: 11:30AM-9:30PM<br />
+                  Fri: 11:30AM-10:30PM<br />
+                  Sat: 12:00PM-10:30PM<br />
+                  Sun: 12:00PM-9:30PM
                 </p>
               </div>
               
