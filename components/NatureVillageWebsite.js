@@ -5872,10 +5872,16 @@ const NatureVillageWebsite = () => {
               </h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 <span className="block">
-                  {t.footer?.openDaily?.split('\n')[0] || 'SUN - THU: 12 PM - 10 PM'}
+                  {t.footer?.openDaily?.split('\n')[0] || 'MON - THU: 11:30 AM - 9:30 PM'}
                 </span>
                 <span className="block">
-                  {t.footer?.openDaily?.split('\n')[1] || 'FRI - SAT: 12 PM - 11 PM'}
+                  {t.footer?.openDaily?.split('\n')[1] || 'FRI: 11:30 AM - 10:30 PM'}
+                </span>
+                <span className="block">
+                  {t.footer?.openDaily?.split('\n')[2] || 'SAT: 12:00 PM - 10:30 PM'}
+                </span>
+                <span className="block">
+                  {t.footer?.openDaily?.split('\n')[3] || 'SUN: 12:00 PM - 9:30 PM'}
                 </span>
                 <br />
                 <span className="text-amber-600 font-medium">7 Days a Week</span>
