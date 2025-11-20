@@ -1124,7 +1124,7 @@ const FullMenuPage = () => {
         dessert: 'Desserts', 
         fish: 'Fish',
         popular: 'Most Popular',
-        lunch_special: 'Lunch Menu Special (12 PM - 3 PM)' 
+        lunch_special: 'Lunch Menu Special | MON - FRI (11:30 AM to 2:30 PM)' 
       },
       addProtein: 'Add Protein',
       servingFor: 'Serving for',
@@ -1199,7 +1199,7 @@ const FullMenuPage = () => {
         dessert: 'شیرینی', 
         fish: 'ماسی',
         popular: 'بەناوبانگترین',
-        lunch_special: 'مێنیوی تایبەتی نانی نیوەڕۆ (١٢ - ٣ دوای نیوەڕۆ)' 
+        lunch_special: 'مێنیوی تایبەتی نانی نیوەڕۆ | دووشەممە - هەینی (١١:٣٠ی بەیانی تا ٢:٣٠ی دوای نیوەڕۆ)' 
       },
       addProtein: 'پرۆتین زیادبکە',
       servingFor: 'بۆ',
@@ -6155,7 +6155,7 @@ const FullMenuPage = () => {
       tags: [] 
     },
 
-    // LUNCH MENU SPECIAL (12 PM - 3 PM)
+    // LUNCH MENU SPECIAL | MON - FRI (11:30 AM to 2:30 PM)
     { 
       id: 9001, 
       name: { 
