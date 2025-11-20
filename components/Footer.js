@@ -500,6 +500,8 @@ const Footer = () => {
                 <div className="text-sm">
                   <div>{getFooterText('openDaily').split('\n')[0]}</div>
                   <div>{getFooterText('openDaily').split('\n')[1]}</div>
+                  <div>{getFooterText('openDaily').split('\n')[2]}</div>
+                  <div>{getFooterText('openDaily').split('\n')[3]}</div>
                   <div className="mt-2 text-xs text-amber-300 italic">
                     {getFooterText('kitchenNote')}
                   </div>
