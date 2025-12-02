@@ -6204,6 +6204,7 @@ const FullMenuPage = () => {
       }, 
       price: '$15.99', 
       category: 'lunch_special', 
+      image: '/lunch-menu/Lunch Erbil Shish Kabab.jpg',
       tags: ['lunch', 'kabab', 'grilled']
     },
     { 
@@ -6254,6 +6255,7 @@ const FullMenuPage = () => {
       }, 
       price: '$15.99', 
       category: 'lunch_special', 
+      image: '/lunch-menu/Lunch Mahshi Kabab.jpg',
       tags: ['lunch', 'kabab', 'spicy']
     },
     { 
@@ -6304,6 +6306,7 @@ const FullMenuPage = () => {
       }, 
       price: '$14.99', 
       category: 'lunch_special', 
+      image: '/lunch-menu/Lunch Chicken Kabab.jpg',
       tags: ['lunch', 'chicken', 'kabab']
     },
     { 
@@ -6354,6 +6357,7 @@ const FullMenuPage = () => {
       }, 
       price: '$14.99', 
       category: 'lunch_special', 
+      image: '/lunch-menu/Iraqi Guss Wrap.jpg',
       tags: ['lunch', 'wrap', 'beef']
     },
     { 
@@ -6404,6 +6408,7 @@ const FullMenuPage = () => {
       }, 
       price: '$13.99', 
       category: 'lunch_special', 
+      image: '/lunch-menu/Chicken Wrap.jpg',
       tags: ['lunch', 'wrap', 'chicken']
     },
     { 
@@ -6454,6 +6459,7 @@ const FullMenuPage = () => {
       }, 
       price: '$12.99', 
       category: 'lunch_special', 
+      image: '/lunch-menu/Falafel Wrap.jpg',
       tags: ['lunch', 'wrap', 'vegetarian', 'vegan']
     }
   ], []) // Empty dependency array since menu items are static
